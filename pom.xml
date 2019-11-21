@@ -8,7 +8,7 @@
 
     <groupId>com.yandex.cloud</groupId>
     <artifactId>java-genproto</artifactId>
-    <version>1.0</version>
+    <version>1.1.0</version>
 
     <name>Java generated GRPC API for Yandex Cloud</name>
     <description>Java generated GRPC API for Yandex Cloud</description>
