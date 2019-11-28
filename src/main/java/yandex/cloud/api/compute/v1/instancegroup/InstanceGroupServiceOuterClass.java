@@ -23107,7 +23107,7 @@ public final class InstanceGroupServiceOuterClass {
       "\003(\01320.yandex.cloud.compute.v1.instancegr" +
       "oup.LogRecord\022\027\n\017next_page_token\030\002 \001(\t*(" +
       "\n\021InstanceGroupView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001" +
-      "2\310\024\n\024InstanceGroupService\022\263\001\n\003Get\022>.yand" +
+      "2\302\024\n\024InstanceGroupService\022\263\001\n\003Get\022>.yand" +
       "ex.cloud.compute.v1.instancegroup.GetIns" +
       "tanceGroupRequest\0324.yandex.cloud.compute" +
       ".v1.instancegroup.InstanceGroup\"6\202\323\344\223\0020\022" +
@@ -23138,45 +23138,45 @@ public final class InstanceGroupServiceOuterClass {
       "\032!.yandex.cloud.operation.Operation\"n\202\323\344" +
       "\223\002823/compute/v1/instanceGroups/{instanc" +
       "e_group_id}:yaml:\001*\262\322*,\n\033UpdateInstanceG" +
-      "roupMetadata\022\rInstanceGroup\022\330\001\n\004Stop\022?.y" +
+      "roupMetadata\022\rInstanceGroup\022\325\001\n\004Stop\022?.y" +
       "andex.cloud.compute.v1.instancegroup.Sto" +
       "pInstanceGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"l\202\323\344\223\0028\"3/compute/v1/in" +
-      "stanceGroups/{instance_group_id}:stop:\001*" +
-      "\262\322**\n\031StopInstanceGroupMetadata\022\rInstanc" +
-      "eGroup\022\334\001\n\005Start\022@.yandex.cloud.compute." +
-      "v1.instancegroup.StartInstanceGroupReque" +
-      "st\032!.yandex.cloud.operation.Operation\"n\202" +
-      "\323\344\223\0029\"4/compute/v1/instanceGroups/{insta" +
-      "nce_group_id}:start:\001*\262\322*+\n\032StartInstanc" +
-      "eGroupMetadata\022\rInstanceGroup\022\336\001\n\006Delete" +
-      "\022A.yandex.cloud.compute.v1.instancegroup" +
-      ".DeleteInstanceGroupRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"n\202\323\344\223\0020*./compute" +
-      "/v1/instanceGroups/{instance_group_id}\262\322" +
-      "*4\n\033DeleteInstanceGroupMetadata\022\025google." +
-      "protobuf.Empty\022\346\001\n\rListInstances\022H.yande" +
-      "x.cloud.compute.v1.instancegroup.ListIns" +
-      "tanceGroupInstancesRequest\032I.yandex.clou" +
+      "ration.Operation\"i\202\323\344\223\0025\"3/compute/v1/in" +
+      "stanceGroups/{instance_group_id}:stop\262\322*" +
+      "*\n\031StopInstanceGroupMetadata\022\rInstanceGr" +
+      "oup\022\331\001\n\005Start\022@.yandex.cloud.compute.v1." +
+      "instancegroup.StartInstanceGroupRequest\032" +
+      "!.yandex.cloud.operation.Operation\"k\202\323\344\223" +
+      "\0026\"4/compute/v1/instanceGroups/{instance" +
+      "_group_id}:start\262\322*+\n\032StartInstanceGroup" +
+      "Metadata\022\rInstanceGroup\022\336\001\n\006Delete\022A.yan" +
+      "dex.cloud.compute.v1.instancegroup.Delet" +
+      "eInstanceGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"n\202\323\344\223\0020*./compute/v1/in" +
+      "stanceGroups/{instance_group_id}\262\322*4\n\033De" +
+      "leteInstanceGroupMetadata\022\025google.protob" +
+      "uf.Empty\022\346\001\n\rListInstances\022H.yandex.clou" +
       "d.compute.v1.instancegroup.ListInstanceG" +
-      "roupInstancesResponse\"@\202\323\344\223\002:\0228/compute/" +
-      "v1/instanceGroups/{instance_group_id}/in" +
-      "stances\022\352\001\n\016ListOperations\022I.yandex.clou" +
-      "d.compute.v1.instancegroup.ListInstanceG" +
-      "roupOperationsRequest\032J.yandex.cloud.com" +
-      "pute.v1.instancegroup.ListInstanceGroupO" +
-      "perationsResponse\"A\202\323\344\223\002;\0229/compute/v1/i" +
-      "nstanceGroups/{instance_group_id}/operat" +
-      "ions\022\344\001\n\016ListLogRecords\022I.yandex.cloud.c" +
-      "ompute.v1.instancegroup.ListInstanceGrou" +
-      "pLogRecordsRequest\032J.yandex.cloud.comput" +
-      "e.v1.instancegroup.ListInstanceGroupLogR" +
-      "ecordsResponse\";\202\323\344\223\0025\0223/compute/v1/inst" +
-      "anceGroups/{instance_group_id}:logsB\204\001\n)" +
-      "yandex.cloud.api.compute.v1.instancegrou" +
-      "pZWgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/compute/v1/instancegroup;ins" +
-      "tancegroupb\006proto3"
+      "roupInstancesRequest\032I.yandex.cloud.comp" +
+      "ute.v1.instancegroup.ListInstanceGroupIn" +
+      "stancesResponse\"@\202\323\344\223\002:\0228/compute/v1/ins" +
+      "tanceGroups/{instance_group_id}/instance" +
+      "s\022\352\001\n\016ListOperations\022I.yandex.cloud.comp" +
+      "ute.v1.instancegroup.ListInstanceGroupOp" +
+      "erationsRequest\032J.yandex.cloud.compute.v" +
+      "1.instancegroup.ListInstanceGroupOperati" +
+      "onsResponse\"A\202\323\344\223\002;\0229/compute/v1/instanc" +
+      "eGroups/{instance_group_id}/operations\022\344" +
+      "\001\n\016ListLogRecords\022I.yandex.cloud.compute" +
+      ".v1.instancegroup.ListInstanceGroupLogRe" +
+      "cordsRequest\032J.yandex.cloud.compute.v1.i" +
+      "nstancegroup.ListInstanceGroupLogRecords" +
+      "Response\";\202\323\344\223\0025\0223/compute/v1/instanceGr" +
+      "oups/{instance_group_id}:logsB\204\001\n)yandex" +
+      ".cloud.api.compute.v1.instancegroupZWgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/compute/v1/instancegroup;instanceg" +
+      "roupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

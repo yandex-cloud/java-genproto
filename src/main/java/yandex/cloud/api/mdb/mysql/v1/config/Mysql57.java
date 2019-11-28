@@ -793,8 +793,9 @@ public final class Mysql57 {
        */
       MYSQL_NATIVE_PASSWORD(1),
       /**
-       * <code>CACHING_SHA2_PASSWORD = 2;</code>
+       * <code>CACHING_SHA2_PASSWORD = 2 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       CACHING_SHA2_PASSWORD(2),
       /**
        * <code>SHA256_PASSWORD = 3;</code>
@@ -812,7 +813,7 @@ public final class Mysql57 {
        */
       public static final int MYSQL_NATIVE_PASSWORD_VALUE = 1;
       /**
-       * <code>CACHING_SHA2_PASSWORD = 2;</code>
+       * <code>CACHING_SHA2_PASSWORD = 2 [deprecated = true];</code>
        */
       public static final int CACHING_SHA2_PASSWORD_VALUE = 2;
       /**
@@ -4191,7 +4192,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\230\n\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\234\n\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -4221,19 +4222,19 @@ public final class Mysql57 {
       "\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRAD" +
       "ITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031" +
       "\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022" +
-      "\016\n\nPOSTGRESQL\020\035\"t\n\nAuthPlugin\022\033\n\027AUTH_PL" +
+      "\016\n\nPOSTGRESQL\020\035\"x\n\nAuthPlugin\022\033\n\027AUTH_PL" +
       "UGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSW" +
-      "ORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA2" +
-      "56_PASSWORD\020\003\"\360\001\n\021MysqlConfigSet5_7\022J\n\020e" +
-      "ffective_config\030\001 \001(\01320.yandex.cloud.mdb" +
-      ".mysql.v1.config.MysqlConfig5_7\022E\n\013user_" +
-      "config\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1" +
-      ".config.MysqlConfig5_7\022H\n\016default_config" +
-      "\030\003 \001(\01320.yandex.cloud.mdb.mysql.v1.confi" +
-      "g.MysqlConfig5_7Br\n$yandex.cloud.api.mdb" +
-      ".mysql.v1.configZJgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/mysql/v1/" +
-      "config;mysqlb\006proto3"
+      "ORD\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017" +
+      "SHA256_PASSWORD\020\003\"\360\001\n\021MysqlConfigSet5_7\022" +
+      "J\n\020effective_config\030\001 \001(\01320.yandex.cloud" +
+      ".mdb.mysql.v1.config.MysqlConfig5_7\022E\n\013u" +
+      "ser_config\030\002 \001(\01320.yandex.cloud.mdb.mysq" +
+      "l.v1.config.MysqlConfig5_7\022H\n\016default_co" +
+      "nfig\030\003 \001(\01320.yandex.cloud.mdb.mysql.v1.c" +
+      "onfig.MysqlConfig5_7Br\n$yandex.cloud.api" +
+      ".mdb.mysql.v1.configZJgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/mysql" +
+      "/v1/config;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

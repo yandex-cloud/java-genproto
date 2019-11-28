@@ -13368,6 +13368,592 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface AutoUpgradeMasterMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata}
+   */
+  public  static final class AutoUpgradeMasterMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
+      AutoUpgradeMasterMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoUpgradeMasterMetadata.newBuilder() to construct.
+    private AutoUpgradeMasterMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoUpgradeMasterMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoUpgradeMasterMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata build() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata(this);
+        result.clusterId_ = clusterId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.AutoUpgradeMasterMetadata)
+    private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoUpgradeMasterMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AutoUpgradeMasterMetadata>() {
+      @java.lang.Override
+      public AutoUpgradeMasterMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoUpgradeMasterMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoUpgradeMasterMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoUpgradeMasterMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.AutoUpgradeMasterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListClusterOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.ListClusterOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -23168,6 +23754,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_CreateClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_ListClusterOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -23285,79 +23876,80 @@ public final class ClusterServiceOuterClass {
       ".cloud.k8s.v1.ReleaseChannel\032-\n\013LabelsEn" +
       "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020i" +
       "nternet_gateway\"+\n\025CreateClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClusterOper" +
-      "ationsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212" +
-      "\3101\006<=1000\"o\n\035ListClusterOperationsRespon" +
-      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
-      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\"\222\001\n\034ListClusterNodeGroupsRequest\022\030\n\nc" +
-      "luster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListC" +
-      "lusterNodeGroupsResponse\0223\n\013node_groups\030" +
-      "\001 \003(\0132\036.yandex.cloud.k8s.v1.NodeGroup\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\210\002\n\nMasterSpec\022A\n" +
-      "\021zonal_master_spec\030\001 \001(\0132$.yandex.cloud." +
-      "k8s.v1.ZonalMasterSpecH\000\022G\n\024regional_mas" +
-      "ter_spec\030\002 \001(\0132\'.yandex.cloud.k8s.v1.Reg" +
-      "ionalMasterSpecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022ma" +
-      "intenance_policy\030\004 \001(\0132,.yandex.cloud.k8" +
-      "s.v1.MasterMaintenancePolicyB\023\n\013master_t" +
-      "ype\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec" +
-      "\030\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAdd" +
-      "ressSpec\022J\n\030external_v4_address_spec\030\003 \001" +
-      "(\0132(.yandex.cloud.k8s.v1.ExternalAddress" +
-      "Spec\"\261\001\n\022RegionalMasterSpec\022\027\n\tregion_id" +
-      "\030\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex" +
-      ".cloud.k8s.v1.MasterLocation\022J\n\030external" +
-      "_v4_address_spec\030\003 \001(\0132(.yandex.cloud.k8" +
-      "s.v1.ExternalAddressSpec\"(\n\023InternalAddr" +
-      "essSpec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n\023ExternalAd" +
-      "dressSpec\"s\n\016MasterLocation\022\025\n\007zone_id\030\001" +
-      " \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002" +
-      " \001(\0132(.yandex.cloud.k8s.v1.InternalAddre" +
-      "ssSpec2\244\013\n\016ClusterService\022\201\001\n\003Get\022&.yand" +
-      "ex.cloud.k8s.v1.GetClusterRequest\032\034.yand" +
-      "ex.cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/manage" +
-      "d-kubernetes/v1/clusters/{cluster_id}\022\204\001" +
-      "\n\004List\022(.yandex.cloud.k8s.v1.ListCluster" +
-      "sRequest\032).yandex.cloud.k8s.v1.ListClust" +
-      "ersResponse\"\'\202\323\344\223\002!\022\037/managed-kubernetes" +
-      "/v1/clusters\022\246\001\n\006Create\022).yandex.cloud.k" +
-      "8s.v1.CreateClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"N\202\323\344\223\002$\"\037/managed-" +
-      "kubernetes/v1/clusters:\001*\262\322* \n\025CreateClu" +
-      "sterMetadata\022\007Cluster\022\263\001\n\006Update\022).yande" +
-      "x.cloud.k8s.v1.UpdateClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"[\202\323\344\223\00212," +
-      "/managed-kubernetes/v1/clusters/{cluster" +
-      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
-      "ter\022\276\001\n\006Delete\022).yandex.cloud.k8s.v1.Del" +
-      "eteClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"f\202\323\344\223\002.*,/managed-kubernete" +
-      "s/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
-      "usterMetadata\022\025google.protobuf.Empty\022v\n\004" +
-      "Stop\022\'.yandex.cloud.k8s.v1.StopClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\"\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022y\n\005" +
-      "Start\022(.yandex.cloud.k8s.v1.StartCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"#\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022" +
-      "\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s.v1" +
-      ".ListClusterNodeGroupsRequest\0322.yandex.c" +
-      "loud.k8s.v1.ListClusterNodeGroupsRespons" +
-      "e\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/cluste" +
-      "rs/{cluster_id}/nodeGroups\022\270\001\n\016ListOpera" +
-      "tions\0221.yandex.cloud.k8s.v1.ListClusterO" +
-      "perationsRequest\0322.yandex.cloud.k8s.v1.L" +
-      "istClusterOperationsResponse\"?\202\323\344\223\0029\0227/m" +
-      "anaged-kubernetes/v1/clusters/{cluster_i" +
-      "d}/operationsBV\n\027yandex.cloud.api.k8s.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/k8s/v1;k8sb\006proto3"
+      "\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMaste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListCl" +
+      "usterOperationsRequest\022\030\n\ncluster_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter" +
+      "\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsReq" +
+      "uest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
+      "\"m\n\035ListClusterNodeGroupsResponse\0223\n\013nod" +
+      "e_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1.Nod" +
+      "eGroup\022\027\n\017next_page_token\030\002 \001(\t\"\210\002\n\nMast" +
+      "erSpec\022A\n\021zonal_master_spec\030\001 \001(\0132$.yand" +
+      "ex.cloud.k8s.v1.ZonalMasterSpecH\000\022G\n\024reg" +
+      "ional_master_spec\030\002 \001(\0132\'.yandex.cloud.k" +
+      "8s.v1.RegionalMasterSpecH\000\022\017\n\007version\030\003 " +
+      "\001(\t\022H\n\022maintenance_policy\030\004 \001(\0132,.yandex" +
+      ".cloud.k8s.v1.MasterMaintenancePolicyB\023\n" +
+      "\013master_type\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025" +
+      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_add" +
+      "ress_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.In" +
+      "ternalAddressSpec\022J\n\030external_v4_address" +
+      "_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.Extern" +
+      "alAddressSpec\"\261\001\n\022RegionalMasterSpec\022\027\n\t" +
+      "region_id\030\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\013" +
+      "2#.yandex.cloud.k8s.v1.MasterLocation\022J\n" +
+      "\030external_v4_address_spec\030\003 \001(\0132(.yandex" +
+      ".cloud.k8s.v1.ExternalAddressSpec\"(\n\023Int" +
+      "ernalAddressSpec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n\023E" +
+      "xternalAddressSpec\"s\n\016MasterLocation\022\025\n\007" +
+      "zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_addre" +
+      "ss_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Inte" +
+      "rnalAddressSpec2\244\013\n\016ClusterService\022\201\001\n\003G" +
+      "et\022&.yandex.cloud.k8s.v1.GetClusterReque" +
+      "st\032\034.yandex.cloud.k8s.v1.Cluster\"4\202\323\344\223\002." +
+      "\022,/managed-kubernetes/v1/clusters/{clust" +
+      "er_id}\022\204\001\n\004List\022(.yandex.cloud.k8s.v1.Li" +
+      "stClustersRequest\032).yandex.cloud.k8s.v1." +
+      "ListClustersResponse\"\'\202\323\344\223\002!\022\037/managed-k" +
+      "ubernetes/v1/clusters\022\246\001\n\006Create\022).yande" +
+      "x.cloud.k8s.v1.CreateClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"N\202\323\344\223\002$\"\037" +
+      "/managed-kubernetes/v1/clusters:\001*\262\322* \n\025" +
+      "CreateClusterMetadata\022\007Cluster\022\263\001\n\006Updat" +
+      "e\022).yandex.cloud.k8s.v1.UpdateClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "[\202\323\344\223\00212,/managed-kubernetes/v1/clusters" +
+      "/{cluster_id}:\001*\262\322* \n\025UpdateClusterMetad" +
+      "ata\022\007Cluster\022\276\001\n\006Delete\022).yandex.cloud.k" +
+      "8s.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"f\202\323\344\223\002.*,/managed-" +
+      "kubernetes/v1/clusters/{cluster_id}\262\322*.\n" +
+      "\025DeleteClusterMetadata\022\025google.protobuf." +
+      "Empty\022v\n\004Stop\022\'.yandex.cloud.k8s.v1.Stop" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"\"\262\322*\036\n\023StopClusterMetadata\022\007Cl" +
+      "uster\022y\n\005Start\022(.yandex.cloud.k8s.v1.Sta" +
+      "rtClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"#\262\322*\037\n\024StartClusterMetadata\022" +
+      "\007Cluster\022\270\001\n\016ListNodeGroups\0221.yandex.clo" +
+      "ud.k8s.v1.ListClusterNodeGroupsRequest\0322" +
+      ".yandex.cloud.k8s.v1.ListClusterNodeGrou" +
+      "psResponse\"?\202\323\344\223\0029\0227/managed-kubernetes/" +
+      "v1/clusters/{cluster_id}/nodeGroups\022\270\001\n\016" +
+      "ListOperations\0221.yandex.cloud.k8s.v1.Lis" +
+      "tClusterOperationsRequest\0322.yandex.cloud" +
+      ".k8s.v1.ListClusterOperationsResponse\"?\202" +
+      "\323\344\223\0029\0227/managed-kubernetes/v1/clusters/{" +
+      "cluster_id}/operationsBV\n\027yandex.cloud.a" +
+      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23475,62 +24067,68 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
-    internal_static_yandex_cloud_k8s_v1_ListClusterOperationsRequest_descriptor =
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_AutoUpgradeMasterMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_k8s_v1_ListClusterOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_k8s_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_k8s_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_k8s_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListClusterNodeGroupsResponse_descriptor,
         new java.lang.String[] { "NodeGroups", "NextPageToken", });
     internal_static_yandex_cloud_k8s_v1_MasterSpec_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_k8s_v1_MasterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterSpec_descriptor,
         new java.lang.String[] { "ZonalMasterSpec", "RegionalMasterSpec", "Version", "MaintenancePolicy", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_descriptor,
         new java.lang.String[] { "ZoneId", "InternalV4AddressSpec", "ExternalV4AddressSpec", });
     internal_static_yandex_cloud_k8s_v1_RegionalMasterSpec_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_k8s_v1_RegionalMasterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_RegionalMasterSpec_descriptor,
         new java.lang.String[] { "RegionId", "Locations", "ExternalV4AddressSpec", });
     internal_static_yandex_cloud_k8s_v1_InternalAddressSpec_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_k8s_v1_InternalAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_InternalAddressSpec_descriptor,
         new java.lang.String[] { "SubnetId", });
     internal_static_yandex_cloud_k8s_v1_ExternalAddressSpec_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_k8s_v1_ExternalAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ExternalAddressSpec_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_k8s_v1_MasterLocation_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_k8s_v1_MasterLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterLocation_descriptor,

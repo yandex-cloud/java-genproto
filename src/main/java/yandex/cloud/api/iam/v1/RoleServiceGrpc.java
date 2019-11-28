@@ -127,7 +127,7 @@ public final class RoleServiceGrpc {
     /**
      * <pre>
      * Returns the specified Role resource.
-     * To get the list of available Role resources, use a [List] request.
+     * To get the list of available Role resources, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request,
@@ -189,7 +189,7 @@ public final class RoleServiceGrpc {
     /**
      * <pre>
      * Returns the specified Role resource.
-     * To get the list of available Role resources, use a [List] request.
+     * To get the list of available Role resources, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request,
@@ -234,7 +234,7 @@ public final class RoleServiceGrpc {
     /**
      * <pre>
      * Returns the specified Role resource.
-     * To get the list of available Role resources, use a [List] request.
+     * To get the list of available Role resources, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.iam.v1.RoleOuterClass.Role get(yandex.cloud.api.iam.v1.RoleServiceOuterClass.GetRoleRequest request) {
@@ -277,7 +277,7 @@ public final class RoleServiceGrpc {
     /**
      * <pre>
      * Returns the specified Role resource.
-     * To get the list of available Role resources, use a [List] request.
+     * To get the list of available Role resources, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.RoleOuterClass.Role> get(

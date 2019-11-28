@@ -147,6 +147,8 @@ public final class Access {
      * It can contain one of the following values:
      * * `allAuthenticatedUsers`: A special system identifier that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
+     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
@@ -160,6 +162,8 @@ public final class Access {
      * It can contain one of the following values:
      * * `allAuthenticatedUsers`: A special system identifier that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
+     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
@@ -173,9 +177,10 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `system`: System group. This type represents several accounts with a common system identifier.
-     * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+     * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+     * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+     * * `system`: System group. This type represents several accounts with a common system identifier.
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
@@ -186,9 +191,10 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `system`: System group. This type represents several accounts with a common system identifier.
-     * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+     * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+     * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+     * * `system`: System group. This type represents several accounts with a common system identifier.
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
@@ -290,6 +296,8 @@ public final class Access {
      * It can contain one of the following values:
      * * `allAuthenticatedUsers`: A special system identifier that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
+     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
@@ -314,6 +322,8 @@ public final class Access {
      * It can contain one of the following values:
      * * `allAuthenticatedUsers`: A special system identifier that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
+     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
@@ -340,9 +350,10 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `system`: System group. This type represents several accounts with a common system identifier.
-     * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+     * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+     * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+     * * `system`: System group. This type represents several accounts with a common system identifier.
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
@@ -364,9 +375,10 @@ public final class Access {
      * <pre>
      * Type of the subject.
      * It can contain one of the following values:
-     * * `system`: System group. This type represents several accounts with a common system identifier.
-     * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+     * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
      * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+     * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+     * * `system`: System group. This type represents several accounts with a common system identifier.
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
@@ -713,6 +725,8 @@ public final class Access {
        * It can contain one of the following values:
        * * `allAuthenticatedUsers`: A special system identifier that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
+       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
@@ -737,6 +751,8 @@ public final class Access {
        * It can contain one of the following values:
        * * `allAuthenticatedUsers`: A special system identifier that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
+       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
@@ -762,6 +778,8 @@ public final class Access {
        * It can contain one of the following values:
        * * `allAuthenticatedUsers`: A special system identifier that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
+       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
@@ -784,6 +802,8 @@ public final class Access {
        * It can contain one of the following values:
        * * `allAuthenticatedUsers`: A special system identifier that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
+       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
@@ -802,6 +822,8 @@ public final class Access {
        * It can contain one of the following values:
        * * `allAuthenticatedUsers`: A special system identifier that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
+       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
@@ -825,9 +847,10 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `system`: System group. This type represents several accounts with a common system identifier.
-       * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+       * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+       * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+       * * `system`: System group. This type represents several accounts with a common system identifier.
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
@@ -849,9 +872,10 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `system`: System group. This type represents several accounts with a common system identifier.
-       * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+       * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+       * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+       * * `system`: System group. This type represents several accounts with a common system identifier.
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
@@ -874,9 +898,10 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `system`: System group. This type represents several accounts with a common system identifier.
-       * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+       * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+       * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+       * * `system`: System group. This type represents several accounts with a common system identifier.
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
@@ -896,9 +921,10 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `system`: System group. This type represents several accounts with a common system identifier.
-       * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+       * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+       * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+       * * `system`: System group. This type represents several accounts with a common system identifier.
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
@@ -914,9 +940,10 @@ public final class Access {
        * <pre>
        * Type of the subject.
        * It can contain one of the following values:
-       * * `system`: System group. This type represents several accounts with a common system identifier.
-       * * `userAccount`: An user account (for example, "alice.the.girl&#64;yandex.ru"). This type represents the [yandex.cloud.iam.v1.UserAccount] resource.
+       * * `userAccount`: An account on Yandex or [Yandex.Connect](https://connect.yandex.com), added to Yandex.Cloud.
        * * `serviceAccount`: A service account. This type represents the [yandex.cloud.iam.v1.ServiceAccount] resource.
+       * * `federatedUser`: A federated account. This type represents a user from an identity federation, like Active Directory.
+       * * `system`: System group. This type represents several accounts with a common system identifier.
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *

@@ -351,7 +351,7 @@ public final class ServiceAccountServiceGrpc {
     /**
      * <pre>
      * Returns the specified ServiceAccount resource.
-     * To get the list of available ServiceAccount resources, use a [List] request.
+     * To get the list of available ServiceAccount resources, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.iam.v1.ServiceAccountServiceOuterClass.GetServiceAccountRequest request,
@@ -532,7 +532,7 @@ public final class ServiceAccountServiceGrpc {
     /**
      * <pre>
      * Returns the specified ServiceAccount resource.
-     * To get the list of available ServiceAccount resources, use a [List] request.
+     * To get the list of available ServiceAccount resources, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.iam.v1.ServiceAccountServiceOuterClass.GetServiceAccountRequest request,
@@ -654,7 +654,7 @@ public final class ServiceAccountServiceGrpc {
     /**
      * <pre>
      * Returns the specified ServiceAccount resource.
-     * To get the list of available ServiceAccount resources, use a [List] request.
+     * To get the list of available ServiceAccount resources, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.iam.v1.ServiceAccountOuterClass.ServiceAccount get(yandex.cloud.api.iam.v1.ServiceAccountServiceOuterClass.GetServiceAccountRequest request) {
@@ -767,7 +767,7 @@ public final class ServiceAccountServiceGrpc {
     /**
      * <pre>
      * Returns the specified ServiceAccount resource.
-     * To get the list of available ServiceAccount resources, use a [List] request.
+     * To get the list of available ServiceAccount resources, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ServiceAccountOuterClass.ServiceAccount> get(

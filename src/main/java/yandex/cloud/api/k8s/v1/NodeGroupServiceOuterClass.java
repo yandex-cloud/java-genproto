@@ -10725,6 +10725,592 @@ public final class NodeGroupServiceOuterClass {
 
   }
 
+  public interface AutoUpgradeNodeGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the node group that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string node_group_id = 1;</code>
+     */
+    java.lang.String getNodeGroupId();
+    /**
+     * <pre>
+     * ID of the node group that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string node_group_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNodeGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata}
+   */
+  public  static final class AutoUpgradeNodeGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata)
+      AutoUpgradeNodeGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoUpgradeNodeGroupMetadata.newBuilder() to construct.
+    private AutoUpgradeNodeGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoUpgradeNodeGroupMetadata() {
+      nodeGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoUpgradeNodeGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nodeGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.class, yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.Builder.class);
+    }
+
+    public static final int NODE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nodeGroupId_;
+    /**
+     * <pre>
+     * ID of the node group that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string node_group_id = 1;</code>
+     */
+    public java.lang.String getNodeGroupId() {
+      java.lang.Object ref = nodeGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the node group that is being auto upgraded.
+     * </pre>
+     *
+     * <code>string node_group_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNodeGroupIdBytes() {
+      java.lang.Object ref = nodeGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNodeGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nodeGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNodeGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nodeGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata other = (yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata) obj;
+
+      boolean result = true;
+      result = result && getNodeGroupId()
+          .equals(other.getNodeGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NODE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata)
+        yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.class, yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        nodeGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata build() {
+        yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata buildPartial() {
+        yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata result = new yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata(this);
+        result.nodeGroupId_ = nodeGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata other) {
+        if (other == yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getNodeGroupId().isEmpty()) {
+          nodeGroupId_ = other.nodeGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object nodeGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the node group that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string node_group_id = 1;</code>
+       */
+      public java.lang.String getNodeGroupId() {
+        java.lang.Object ref = nodeGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the node group that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string node_group_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNodeGroupIdBytes() {
+        java.lang.Object ref = nodeGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the node group that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string node_group_id = 1;</code>
+       */
+      public Builder setNodeGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nodeGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the node group that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string node_group_id = 1;</code>
+       */
+      public Builder clearNodeGroupId() {
+        
+        nodeGroupId_ = getDefaultInstance().getNodeGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the node group that is being auto upgraded.
+       * </pre>
+       *
+       * <code>string node_group_id = 1;</code>
+       */
+      public Builder setNodeGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nodeGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.AutoUpgradeNodeGroupMetadata)
+    private static final yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata();
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoUpgradeNodeGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AutoUpgradeNodeGroupMetadata>() {
+      @java.lang.Override
+      public AutoUpgradeNodeGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoUpgradeNodeGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoUpgradeNodeGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoUpgradeNodeGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeGroupServiceOuterClass.AutoUpgradeNodeGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListNodeGroupOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.ListNodeGroupOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -12927,6 +13513,11 @@ public final class NodeGroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_CreateNodeGroupMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12999,43 +13590,45 @@ public final class NodeGroupServiceOuterClass {
       "GroupMaintenancePolicy\022\036\n\026allowed_unsafe" +
       "_sysctls\030\n \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
       "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027CreateNodeGroup" +
-      "Metadata\022\025\n\rnode_group_id\030\001 \001(\t\"\227\001\n\036List" +
-      "NodeGroupOperationsRequest\022\033\n\rnode_group" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "0-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n" +
-      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037ListNodeGro" +
-      "upOperationsResponse\0225\n\noperations\030\001 \003(\013" +
-      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t2\254\010\n\020NodeGroupServic" +
-      "e\022\212\001\n\003Get\022(.yandex.cloud.k8s.v1.GetNodeG" +
-      "roupRequest\032\036.yandex.cloud.k8s.v1.NodeGr" +
-      "oup\"9\202\323\344\223\0023\0221/managed-kubernetes/v1/node" +
-      "Groups/{node_group_id}\022\212\001\n\004List\022*.yandex" +
-      ".cloud.k8s.v1.ListNodeGroupsRequest\032+.ya" +
-      "ndex.cloud.k8s.v1.ListNodeGroupsResponse" +
-      "\")\202\323\344\223\002#\022!/managed-kubernetes/v1/nodeGro" +
-      "ups\022\256\001\n\006Create\022+.yandex.cloud.k8s.v1.Cre" +
-      "ateNodeGroupRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"T\202\323\344\223\002&\"!/managed-kuberne" +
-      "tes/v1/nodeGroups:\001*\262\322*$\n\027CreateNodeGrou" +
-      "pMetadata\022\tNodeGroup\022\276\001\n\006Update\022+.yandex" +
-      ".cloud.k8s.v1.UpdateNodeGroupRequest\032!.y" +
-      "andex.cloud.operation.Operation\"d\202\323\344\223\00262" +
-      "1/managed-kubernetes/v1/nodeGroups/{node" +
-      "_group_id}:\001*\262\322*$\n\027UpdateNodeGroupMetada" +
-      "ta\022\tNodeGroup\022\307\001\n\006Delete\022+.yandex.cloud." +
-      "k8s.v1.DeleteNodeGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"m\202\323\344\223\0023*1/manag" +
-      "ed-kubernetes/v1/nodeGroups/{node_group_" +
-      "id}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google" +
-      ".protobuf.Empty\022\301\001\n\016ListOperations\0223.yan" +
-      "dex.cloud.k8s.v1.ListNodeGroupOperations" +
-      "Request\0324.yandex.cloud.k8s.v1.ListNodeGr" +
-      "oupOperationsResponse\"D\202\323\344\223\002>\022</managed-" +
-      "kubernetes/v1/nodeGroups/{node_group_id}" +
-      "/operationsBV\n\027yandex.cloud.api.k8s.v1Z;" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/k8s/v1;k8sb\006proto3"
+      "Metadata\022\025\n\rnode_group_id\030\001 \001(\t\"5\n\034AutoU" +
+      "pgradeNodeGroupMetadata\022\025\n\rnode_group_id" +
+      "\030\001 \001(\t\"\227\001\n\036ListNodeGroupOperationsReques" +
+      "t\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
+      "\"q\n\037ListNodeGroupOperationsResponse\0225\n\no" +
+      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
+      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\254\010\n\020" +
+      "NodeGroupService\022\212\001\n\003Get\022(.yandex.cloud." +
+      "k8s.v1.GetNodeGroupRequest\032\036.yandex.clou" +
+      "d.k8s.v1.NodeGroup\"9\202\323\344\223\0023\0221/managed-kub" +
+      "ernetes/v1/nodeGroups/{node_group_id}\022\212\001" +
+      "\n\004List\022*.yandex.cloud.k8s.v1.ListNodeGro" +
+      "upsRequest\032+.yandex.cloud.k8s.v1.ListNod" +
+      "eGroupsResponse\")\202\323\344\223\002#\022!/managed-kubern" +
+      "etes/v1/nodeGroups\022\256\001\n\006Create\022+.yandex.c" +
+      "loud.k8s.v1.CreateNodeGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"T\202\323\344\223\002&\"!/" +
+      "managed-kubernetes/v1/nodeGroups:\001*\262\322*$\n" +
+      "\027CreateNodeGroupMetadata\022\tNodeGroup\022\276\001\n\006" +
+      "Update\022+.yandex.cloud.k8s.v1.UpdateNodeG" +
+      "roupRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"d\202\323\344\223\002621/managed-kubernetes/v1/n" +
+      "odeGroups/{node_group_id}:\001*\262\322*$\n\027Update" +
+      "NodeGroupMetadata\022\tNodeGroup\022\307\001\n\006Delete\022" +
+      "+.yandex.cloud.k8s.v1.DeleteNodeGroupReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "m\202\323\344\223\0023*1/managed-kubernetes/v1/nodeGrou" +
+      "ps/{node_group_id}\262\322*0\n\027DeleteNodeGroupM" +
+      "etadata\022\025google.protobuf.Empty\022\301\001\n\016ListO" +
+      "perations\0223.yandex.cloud.k8s.v1.ListNode" +
+      "GroupOperationsRequest\0324.yandex.cloud.k8" +
+      "s.v1.ListNodeGroupOperationsResponse\"D\202\323" +
+      "\344\223\002>\022</managed-kubernetes/v1/nodeGroups/" +
+      "{node_group_id}/operationsBV\n\027yandex.clo" +
+      "ud.api.k8s.v1Z;github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/k8s/v1;k8sb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13122,14 +13715,20 @@ public final class NodeGroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateNodeGroupMetadata_descriptor,
         new java.lang.String[] { "NodeGroupId", });
-    internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsRequest_descriptor =
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_AutoUpgradeNodeGroupMetadata_descriptor,
+        new java.lang.String[] { "NodeGroupId", });
+    internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsRequest_descriptor,
         new java.lang.String[] { "NodeGroupId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ListNodeGroupOperationsResponse_descriptor,
