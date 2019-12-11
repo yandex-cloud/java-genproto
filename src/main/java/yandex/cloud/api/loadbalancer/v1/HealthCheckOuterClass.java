@@ -313,7 +313,7 @@ public final class HealthCheckOuterClass {
        * Port to use for TCP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       long getPort();
     }
@@ -405,7 +405,7 @@ public final class HealthCheckOuterClass {
        * Port to use for TCP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public long getPort() {
         return port_;
@@ -725,7 +725,7 @@ public final class HealthCheckOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public long getPort() {
           return port_;
@@ -735,7 +735,7 @@ public final class HealthCheckOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder setPort(long value) {
           
@@ -748,7 +748,7 @@ public final class HealthCheckOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder clearPort() {
           
@@ -818,7 +818,7 @@ public final class HealthCheckOuterClass {
        * Port to use for HTTP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       long getPort();
 
@@ -937,7 +937,7 @@ public final class HealthCheckOuterClass {
        * Port to use for HTTP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public long getPort() {
         return port_;
@@ -1318,7 +1318,7 @@ public final class HealthCheckOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public long getPort() {
           return port_;
@@ -1328,7 +1328,7 @@ public final class HealthCheckOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder setPort(long value) {
           
@@ -1341,7 +1341,7 @@ public final class HealthCheckOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder clearPort() {
           
@@ -3138,8 +3138,8 @@ public final class HealthCheckOuterClass {
       ".TcpOptionsH\000\022M\n\014http_options\030\007 \001(\01325.ya" +
       "ndex.cloud.loadbalancer.v1.HealthCheck.H" +
       "ttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003" +
-      "B\013\372\3071\0071-32767\0326\n\013HttpOptions\022\031\n\004port\030\001 \001" +
-      "(\003B\013\372\3071\0071-32767\022\014\n\004path\030\002 \001(\tB\017\n\007options" +
+      "B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001" +
+      "(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\017\n\007options" +
       "\022\004\300\3011\001Bq\n yandex.cloud.api.loadbalancer." +
       "v1ZMgithub.com/yandex-cloud/go-genproto/" +
       "yandex/cloud/loadbalancer/v1;loadbalance" +

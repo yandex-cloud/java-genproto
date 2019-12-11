@@ -22995,7 +22995,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
      * Port for incoming traffic.
      * </pre>
      *
-     * <code>int64 port = 2 [(.yandex.cloud.value) = "1-32767"];</code>
+     * <code>int64 port = 2 [(.yandex.cloud.value) = "1-65535"];</code>
      */
     long getPort();
 
@@ -23044,7 +23044,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     /**
      * <pre>
      * Port of a target.
-     * Acceptable values are 1 to 32767, inclusive.
+     * Acceptable values are 1 to 65535, inclusive.
      * </pre>
      *
      * <code>int64 target_port = 5;</code>
@@ -23253,7 +23253,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
      * Port for incoming traffic.
      * </pre>
      *
-     * <code>int64 port = 2 [(.yandex.cloud.value) = "1-32767"];</code>
+     * <code>int64 port = 2 [(.yandex.cloud.value) = "1-65535"];</code>
      */
     public long getPort() {
       return port_;
@@ -23327,7 +23327,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     /**
      * <pre>
      * Port of a target.
-     * Acceptable values are 1 to 32767, inclusive.
+     * Acceptable values are 1 to 65535, inclusive.
      * </pre>
      *
      * <code>int64 target_port = 5;</code>
@@ -23850,7 +23850,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
        * Port for incoming traffic.
        * </pre>
        *
-       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public long getPort() {
         return port_;
@@ -23860,7 +23860,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
        * Port for incoming traffic.
        * </pre>
        *
-       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public Builder setPort(long value) {
         
@@ -23873,7 +23873,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
        * Port for incoming traffic.
        * </pre>
        *
-       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 2 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public Builder clearPort() {
         
@@ -24123,7 +24123,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       /**
        * <pre>
        * Port of a target.
-       * Acceptable values are 1 to 32767, inclusive.
+       * Acceptable values are 1 to 65535, inclusive.
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
@@ -24134,7 +24134,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       /**
        * <pre>
        * Port of a target.
-       * Acceptable values are 1 to 32767, inclusive.
+       * Acceptable values are 1 to 65535, inclusive.
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
@@ -24148,7 +24148,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       /**
        * <pre>
        * Port of a target.
-       * Acceptable values are 1 to 32767, inclusive.
+       * Acceptable values are 1 to 65535, inclusive.
        * </pre>
        *
        * <code>int64 target_port = 5;</code>
@@ -24471,7 +24471,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       "dex.cloud.loadbalancer.v1.IpVersion\"\233\002\n\014" +
       "ListenerSpec\0223\n\004name\030\001 \001(\tB%\350\3071\001\362\3071\035|[a-" +
       "z][-a-z0-9]{1,61}[a-z0-9]\022\031\n\004port\030\002 \001(\003B" +
-      "\013\372\3071\0071-32767\022G\n\010protocol\030\003 \001(\0162/.yandex." +
+      "\013\372\3071\0071-65535\022G\n\010protocol\030\003 \001(\0162/.yandex." +
       "cloud.loadbalancer.v1.Listener.ProtocolB" +
       "\004\350\3071\001\022R\n\025external_address_spec\030\004 \001(\01321.y" +
       "andex.cloud.loadbalancer.v1.ExternalAddr" +

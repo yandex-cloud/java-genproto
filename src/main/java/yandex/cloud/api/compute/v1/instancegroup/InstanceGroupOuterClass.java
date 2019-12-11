@@ -27876,7 +27876,7 @@ public final class InstanceGroupOuterClass {
        * Port to use for TCP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       long getPort();
     }
@@ -27964,7 +27964,7 @@ public final class InstanceGroupOuterClass {
        * Port to use for TCP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public long getPort() {
         return port_;
@@ -28280,7 +28280,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public long getPort() {
           return port_;
@@ -28290,7 +28290,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder setPort(long value) {
           
@@ -28303,7 +28303,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for TCP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder clearPort() {
           
@@ -28373,7 +28373,7 @@ public final class InstanceGroupOuterClass {
        * Port to use for HTTP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       long getPort();
 
@@ -28486,7 +28486,7 @@ public final class InstanceGroupOuterClass {
        * Port to use for HTTP health checks.
        * </pre>
        *
-       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+       * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
        */
       public long getPort() {
         return port_;
@@ -28861,7 +28861,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public long getPort() {
           return port_;
@@ -28871,7 +28871,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder setPort(long value) {
           
@@ -28884,7 +28884,7 @@ public final class InstanceGroupOuterClass {
          * Port to use for HTTP health checks.
          * </pre>
          *
-         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-32767"];</code>
+         * <code>int64 port = 1 [(.yandex.cloud.value) = "1-65535"];</code>
          */
         public Builder clearPort() {
           
@@ -37341,8 +37341,8 @@ public final class InstanceGroupOuterClass {
       "Spec.TcpOptionsH\000\022Z\n\014http_options\030\006 \001(\0132" +
       "B.yandex.cloud.compute.v1.instancegroup." +
       "HealthCheckSpec.HttpOptionsH\000\032\'\n\nTcpOpti" +
-      "ons\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-32767\0326\n\013HttpOp" +
-      "tions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-32767\022\014\n\004path" +
+      "ons\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOp" +
+      "tions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path" +
       "\030\002 \001(\tB\034\n\024health_check_options\022\004\300\3011\001\"\250\005\n" +
       "\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002" +
       " \001(\0162=.yandex.cloud.compute.v1.instanceg" +

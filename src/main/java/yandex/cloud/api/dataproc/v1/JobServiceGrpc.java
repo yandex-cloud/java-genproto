@@ -1,4 +1,4 @@
-package yandex.cloud.dataproc.v1;
+package yandex.cloud.api.dataproc.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -30,30 +30,30 @@ public final class JobServiceGrpc {
   public static final String SERVICE_NAME = "yandex.cloud.dataproc.v1.JobService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.ListJobsRequest,
-      yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> getListMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest,
+      yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
-      requestType = yandex.cloud.dataproc.v1.PHJS.ListJobsRequest.class,
-      responseType = yandex.cloud.dataproc.v1.PHJS.ListJobsResponse.class,
+      requestType = yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest.class,
+      responseType = yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.ListJobsRequest,
-      yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> getListMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.ListJobsRequest, yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> getListMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest,
+      yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest, yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> getListMethod;
     if ((getListMethod = JobServiceGrpc.getListMethod) == null) {
       synchronized (JobServiceGrpc.class) {
         if ((getListMethod = JobServiceGrpc.getListMethod) == null) {
           JobServiceGrpc.getListMethod = getListMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.dataproc.v1.PHJS.ListJobsRequest, yandex.cloud.dataproc.v1.PHJS.ListJobsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest, yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.dataproc.v1.JobService", "List"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.dataproc.v1.PHJS.ListJobsRequest.getDefaultInstance()))
+                  yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.dataproc.v1.PHJS.ListJobsResponse.getDefaultInstance()))
+                  yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("List"))
                   .build();
           }
@@ -62,28 +62,28 @@ public final class JobServiceGrpc {
      return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.CreateJobRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = yandex.cloud.dataproc.v1.PHJS.CreateJobRequest.class,
+      requestType = yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.CreateJobRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.CreateJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
     if ((getCreateMethod = JobServiceGrpc.getCreateMethod) == null) {
       synchronized (JobServiceGrpc.class) {
         if ((getCreateMethod = JobServiceGrpc.getCreateMethod) == null) {
           JobServiceGrpc.getCreateMethod = getCreateMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.dataproc.v1.PHJS.CreateJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.dataproc.v1.JobService", "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.dataproc.v1.PHJS.CreateJobRequest.getDefaultInstance()))
+                  yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("Create"))
@@ -94,30 +94,30 @@ public final class JobServiceGrpc {
      return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.GetJobRequest,
-      yandex.cloud.dataproc.v1.PHJ.Job> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest,
+      yandex.cloud.api.dataproc.v1.PHJ.Job> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
-      requestType = yandex.cloud.dataproc.v1.PHJS.GetJobRequest.class,
-      responseType = yandex.cloud.dataproc.v1.PHJ.Job.class,
+      requestType = yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest.class,
+      responseType = yandex.cloud.api.dataproc.v1.PHJ.Job.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.GetJobRequest,
-      yandex.cloud.dataproc.v1.PHJ.Job> getGetMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.dataproc.v1.PHJS.GetJobRequest, yandex.cloud.dataproc.v1.PHJ.Job> getGetMethod;
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest,
+      yandex.cloud.api.dataproc.v1.PHJ.Job> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest, yandex.cloud.api.dataproc.v1.PHJ.Job> getGetMethod;
     if ((getGetMethod = JobServiceGrpc.getGetMethod) == null) {
       synchronized (JobServiceGrpc.class) {
         if ((getGetMethod = JobServiceGrpc.getGetMethod) == null) {
           JobServiceGrpc.getGetMethod = getGetMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.dataproc.v1.PHJS.GetJobRequest, yandex.cloud.dataproc.v1.PHJ.Job>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest, yandex.cloud.api.dataproc.v1.PHJ.Job>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.dataproc.v1.JobService", "Get"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.dataproc.v1.PHJS.GetJobRequest.getDefaultInstance()))
+                  yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.dataproc.v1.PHJ.Job.getDefaultInstance()))
+                  yandex.cloud.api.dataproc.v1.PHJ.Job.getDefaultInstance()))
                   .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("Get"))
                   .build();
           }
@@ -161,8 +161,8 @@ public final class JobServiceGrpc {
      * Retrieves a list of jobs for Dataproc cluster.
      * </pre>
      */
-    public void list(yandex.cloud.dataproc.v1.PHJS.ListJobsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> responseObserver) {
+    public void list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
@@ -171,7 +171,7 @@ public final class JobServiceGrpc {
      * Creates a job for Dataproc cluster.
      * </pre>
      */
-    public void create(yandex.cloud.dataproc.v1.PHJS.CreateJobRequest request,
+    public void create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
@@ -181,8 +181,8 @@ public final class JobServiceGrpc {
      * Returns the specified Dataproc cluster.
      * </pre>
      */
-    public void get(yandex.cloud.dataproc.v1.PHJS.GetJobRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJ.Job> responseObserver) {
+    public void get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJ.Job> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
@@ -192,22 +192,22 @@ public final class JobServiceGrpc {
             getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.dataproc.v1.PHJS.ListJobsRequest,
-                yandex.cloud.dataproc.v1.PHJS.ListJobsResponse>(
+                yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest,
+                yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse>(
                   this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.dataproc.v1.PHJS.CreateJobRequest,
+                yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.dataproc.v1.PHJS.GetJobRequest,
-                yandex.cloud.dataproc.v1.PHJ.Job>(
+                yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest,
+                yandex.cloud.api.dataproc.v1.PHJ.Job>(
                   this, METHODID_GET)))
           .build();
     }
@@ -239,8 +239,8 @@ public final class JobServiceGrpc {
      * Retrieves a list of jobs for Dataproc cluster.
      * </pre>
      */
-    public void list(yandex.cloud.dataproc.v1.PHJS.ListJobsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> responseObserver) {
+    public void list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
@@ -250,7 +250,7 @@ public final class JobServiceGrpc {
      * Creates a job for Dataproc cluster.
      * </pre>
      */
-    public void create(yandex.cloud.dataproc.v1.PHJS.CreateJobRequest request,
+    public void create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
@@ -261,8 +261,8 @@ public final class JobServiceGrpc {
      * Returns the specified Dataproc cluster.
      * </pre>
      */
-    public void get(yandex.cloud.dataproc.v1.PHJS.GetJobRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJ.Job> responseObserver) {
+    public void get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJ.Job> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -294,7 +294,7 @@ public final class JobServiceGrpc {
      * Retrieves a list of jobs for Dataproc cluster.
      * </pre>
      */
-    public yandex.cloud.dataproc.v1.PHJS.ListJobsResponse list(yandex.cloud.dataproc.v1.PHJS.ListJobsRequest request) {
+    public yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
@@ -304,7 +304,7 @@ public final class JobServiceGrpc {
      * Creates a job for Dataproc cluster.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.dataproc.v1.PHJS.CreateJobRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
@@ -314,7 +314,7 @@ public final class JobServiceGrpc {
      * Returns the specified Dataproc cluster.
      * </pre>
      */
-    public yandex.cloud.dataproc.v1.PHJ.Job get(yandex.cloud.dataproc.v1.PHJS.GetJobRequest request) {
+    public yandex.cloud.api.dataproc.v1.PHJ.Job get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
@@ -346,8 +346,8 @@ public final class JobServiceGrpc {
      * Retrieves a list of jobs for Dataproc cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.dataproc.v1.PHJS.ListJobsResponse> list(
-        yandex.cloud.dataproc.v1.PHJS.ListJobsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> list(
+        yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
@@ -358,7 +358,7 @@ public final class JobServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
-        yandex.cloud.dataproc.v1.PHJS.CreateJobRequest request) {
+        yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
@@ -368,8 +368,8 @@ public final class JobServiceGrpc {
      * Returns the specified Dataproc cluster.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.dataproc.v1.PHJ.Job> get(
-        yandex.cloud.dataproc.v1.PHJS.GetJobRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.PHJ.Job> get(
+        yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
@@ -397,16 +397,16 @@ public final class JobServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LIST:
-          serviceImpl.list((yandex.cloud.dataproc.v1.PHJS.ListJobsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJS.ListJobsResponse>) responseObserver);
+          serviceImpl.list((yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse>) responseObserver);
           break;
         case METHODID_CREATE:
-          serviceImpl.create((yandex.cloud.dataproc.v1.PHJS.CreateJobRequest) request,
+          serviceImpl.create((yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET:
-          serviceImpl.get((yandex.cloud.dataproc.v1.PHJS.GetJobRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.dataproc.v1.PHJ.Job>) responseObserver);
+          serviceImpl.get((yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJ.Job>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -430,7 +430,7 @@ public final class JobServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return yandex.cloud.dataproc.v1.PHJS.getDescriptor();
+      return yandex.cloud.api.dataproc.v1.PHJS.getDescriptor();
     }
 
     @java.lang.Override
