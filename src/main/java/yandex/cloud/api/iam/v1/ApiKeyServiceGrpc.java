@@ -127,21 +127,21 @@ public final class ApiKeyServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest,
-      com.google.protobuf.Empty> getDeleteMethod;
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
       requestType = yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest.class,
-      responseType = com.google.protobuf.Empty.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest,
-      com.google.protobuf.Empty> getDeleteMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest, com.google.protobuf.Empty> getDeleteMethod;
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
     if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
       synchronized (ApiKeyServiceGrpc.class) {
         if ((getDeleteMethod = ApiKeyServiceGrpc.getDeleteMethod) == null) {
           ApiKeyServiceGrpc.getDeleteMethod = getDeleteMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.iam.v1.ApiKeyService", "Delete"))
@@ -149,13 +149,45 @@ public final class ApiKeyServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("Delete"))
                   .build();
           }
         }
      }
      return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest,
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> getListOperationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOperations",
+      requestType = yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.class,
+      responseType = yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest,
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> getListOperationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> getListOperationsMethod;
+    if ((getListOperationsMethod = ApiKeyServiceGrpc.getListOperationsMethod) == null) {
+      synchronized (ApiKeyServiceGrpc.class) {
+        if ((getListOperationsMethod = ApiKeyServiceGrpc.getListOperationsMethod) == null) {
+          ApiKeyServiceGrpc.getListOperationsMethod = getListOperationsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.iam.v1.ApiKeyService", "ListOperations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ApiKeyServiceMethodDescriptorSupplier("ListOperations"))
+                  .build();
+          }
+        }
+     }
+     return getListOperationsMethod;
   }
 
   /**
@@ -225,8 +257,18 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public void delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of operations for the specified API key.
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -257,8 +299,15 @@ public final class ApiKeyServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest,
-                com.google.protobuf.Empty>(
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getListOperationsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest,
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse>(
+                  this, METHODID_LIST_OPERATIONS)))
           .build();
     }
   }
@@ -324,9 +373,20 @@ public final class ApiKeyServiceGrpc {
      * </pre>
      */
     public void delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of operations for the specified API key.
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -387,9 +447,19 @@ public final class ApiKeyServiceGrpc {
      * Deletes the specified API key.
      * </pre>
      */
-    public com.google.protobuf.Empty delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of operations for the specified API key.
+     * </pre>
+     */
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse listOperations(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -453,10 +523,21 @@ public final class ApiKeyServiceGrpc {
      * Deletes the specified API key.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of operations for the specified API key.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse> listOperations(
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
   }
 
@@ -464,6 +545,7 @@ public final class ApiKeyServiceGrpc {
   private static final int METHODID_GET = 1;
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST_OPERATIONS = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -496,7 +578,11 @@ public final class ApiKeyServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_OPERATIONS:
+          serviceImpl.listOperations((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -563,6 +649,7 @@ public final class ApiKeyServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getCreateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getListOperationsMethod())
               .build();
         }
       }

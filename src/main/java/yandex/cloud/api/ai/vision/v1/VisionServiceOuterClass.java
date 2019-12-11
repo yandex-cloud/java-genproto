@@ -1229,6 +1229,16 @@ public final class VisionServiceOuterClass {
     com.google.protobuf.ByteString getContent();
 
     /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     */
+    java.lang.String getSignature();
+    /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
+
+    /**
      * <pre>
      * Requested features to use for analysis.
      * Max count of requested features for one file is 8.
@@ -1344,9 +1354,9 @@ public final class VisionServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 features_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000004;
               }
               features_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.parser(), extensionRegistry));
@@ -1356,6 +1366,12 @@ public final class VisionServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               mimeType_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              sourceCase_ = 5;
+              source_ = s;
               break;
             }
             default: {
@@ -1373,7 +1389,7 @@ public final class VisionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           features_ = java.util.Collections.unmodifiableList(features_);
         }
         this.unknownFields = unknownFields.build();
@@ -1399,6 +1415,7 @@ public final class VisionServiceOuterClass {
     public enum SourceCase
         implements com.google.protobuf.Internal.EnumLite {
       CONTENT(1),
+      SIGNATURE(5),
       SOURCE_NOT_SET(0);
       private final int value;
       private SourceCase(int value) {
@@ -1415,6 +1432,7 @@ public final class VisionServiceOuterClass {
       public static SourceCase forNumber(int value) {
         switch (value) {
           case 1: return CONTENT;
+          case 5: return SIGNATURE;
           case 0: return SOURCE_NOT_SET;
           default: return null;
         }
@@ -1444,6 +1462,49 @@ public final class VisionServiceOuterClass {
         return (com.google.protobuf.ByteString) source_;
       }
       return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 5;
+    /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     */
+    public java.lang.String getSignature() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 5) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (sourceCase_ == 5) {
+          source_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 5) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (sourceCase_ == 5) {
+          source_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int FEATURES_FIELD_NUMBER = 3;
@@ -1572,6 +1633,9 @@ public final class VisionServiceOuterClass {
       if (!getMimeTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mimeType_);
       }
+      if (sourceCase_ == 5) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, source_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1592,6 +1656,9 @@ public final class VisionServiceOuterClass {
       }
       if (!getMimeTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mimeType_);
+      }
+      if (sourceCase_ == 5) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, source_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1621,6 +1688,10 @@ public final class VisionServiceOuterClass {
           result = result && getContent()
               .equals(other.getContent());
           break;
+        case 5:
+          result = result && getSignature()
+              .equals(other.getSignature());
+          break;
         case 0:
         default:
       }
@@ -1645,6 +1716,10 @@ public final class VisionServiceOuterClass {
         case 1:
           hash = (37 * hash) + CONTENT_FIELD_NUMBER;
           hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+          hash = (53 * hash) + getSignature().hashCode();
           break;
         case 0:
         default:
@@ -1785,7 +1860,7 @@ public final class VisionServiceOuterClass {
         super.clear();
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           featuresBuilder_.clear();
         }
@@ -1824,10 +1899,13 @@ public final class VisionServiceOuterClass {
         if (sourceCase_ == 1) {
           result.source_ = source_;
         }
+        if (sourceCase_ == 5) {
+          result.source_ = source_;
+        }
         if (featuresBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             features_ = java.util.Collections.unmodifiableList(features_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.features_ = features_;
         } else {
@@ -1888,7 +1966,7 @@ public final class VisionServiceOuterClass {
           if (!other.features_.isEmpty()) {
             if (features_.isEmpty()) {
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureFeaturesIsMutable();
               features_.addAll(other.features_);
@@ -1901,7 +1979,7 @@ public final class VisionServiceOuterClass {
               featuresBuilder_.dispose();
               featuresBuilder_ = null;
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               featuresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeaturesFieldBuilder() : null;
@@ -1917,6 +1995,12 @@ public final class VisionServiceOuterClass {
         switch (other.getSourceCase()) {
           case CONTENT: {
             setContent(other.getContent());
+            break;
+          }
+          case SIGNATURE: {
+            sourceCase_ = 5;
+            source_ = other.source_;
+            onChanged();
             break;
           }
           case SOURCE_NOT_SET: {
@@ -2016,12 +2100,92 @@ public final class VisionServiceOuterClass {
         return this;
       }
 
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 5) {
+          ref = source_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (sourceCase_ == 5) {
+            source_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 5) {
+          ref = source_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (sourceCase_ == 5) {
+            source_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  sourceCase_ = 5;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       */
+      public Builder clearSignature() {
+        if (sourceCase_ == 5) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string signature = 5 [(.yandex.cloud.length) = "&lt;=16384"];</code>
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        sourceCase_ = 5;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.util.List<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature> features_ =
         java.util.Collections.emptyList();
       private void ensureFeaturesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           features_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature>(features_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2226,7 +2390,7 @@ public final class VisionServiceOuterClass {
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           featuresBuilder_.clear();
@@ -2338,7 +2502,7 @@ public final class VisionServiceOuterClass {
           featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.Feature.Builder, yandex.cloud.api.ai.vision.v1.VisionServiceOuterClass.FeatureOrBuilder>(
                   features_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           features_ = null;
@@ -2699,6 +2863,14 @@ public final class VisionServiceOuterClass {
        * <code>FACE_DETECTION = 3;</code>
        */
       FACE_DETECTION(3),
+      /**
+       * <pre>
+       * Image copy search.
+       * </pre>
+       *
+       * <code>IMAGE_COPY_SEARCH = 4;</code>
+       */
+      IMAGE_COPY_SEARCH(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -2730,6 +2902,14 @@ public final class VisionServiceOuterClass {
        * <code>FACE_DETECTION = 3;</code>
        */
       public static final int FACE_DETECTION_VALUE = 3;
+      /**
+       * <pre>
+       * Image copy search.
+       * </pre>
+       *
+       * <code>IMAGE_COPY_SEARCH = 4;</code>
+       */
+      public static final int IMAGE_COPY_SEARCH_VALUE = 4;
 
 
       public final int getNumber() {
@@ -2754,6 +2934,7 @@ public final class VisionServiceOuterClass {
           case 1: return TEXT_DETECTION;
           case 2: return CLASSIFICATION;
           case 3: return FACE_DETECTION;
+          case 4: return IMAGE_COPY_SEARCH;
           default: return null;
         }
       }
@@ -3800,7 +3981,7 @@ public final class VisionServiceOuterClass {
 
     /**
      * <pre>
-     * The model to use for the image analysis.
+     * Model to use for image classification.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -3808,7 +3989,7 @@ public final class VisionServiceOuterClass {
     java.lang.String getModel();
     /**
      * <pre>
-     * The model to use for the image analysis.
+     * Model to use for image classification.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -3898,7 +4079,7 @@ public final class VisionServiceOuterClass {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * The model to use for the image analysis.
+     * Model to use for image classification.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -3917,7 +4098,7 @@ public final class VisionServiceOuterClass {
     }
     /**
      * <pre>
-     * The model to use for the image analysis.
+     * Model to use for image classification.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4242,7 +4423,7 @@ public final class VisionServiceOuterClass {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * The model to use for the image analysis.
+       * Model to use for image classification.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4261,7 +4442,7 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * The model to use for the image analysis.
+       * Model to use for image classification.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4281,7 +4462,7 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * The model to use for the image analysis.
+       * Model to use for image classification.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4298,7 +4479,7 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * The model to use for the image analysis.
+       * Model to use for image classification.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4311,7 +4492,7 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * The model to use for the image analysis.
+       * Model to use for image classification.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -4425,7 +4606,10 @@ public final class VisionServiceOuterClass {
 
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model to use for text detection.
+     * Possible values:
+     * * page (default) — this model is suitable for detecting multiple text entries in an image.
+     * * line — this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4433,7 +4617,10 @@ public final class VisionServiceOuterClass {
     java.lang.String getModel();
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model to use for text detection.
+     * Possible values:
+     * * page (default) — this model is suitable for detecting multiple text entries in an image.
+     * * line — this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4586,7 +4773,10 @@ public final class VisionServiceOuterClass {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model to use for text detection.
+     * Possible values:
+     * * page (default) — this model is suitable for detecting multiple text entries in an image.
+     * * line — this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4605,7 +4795,10 @@ public final class VisionServiceOuterClass {
     }
     /**
      * <pre>
-     * Do not specify this field, custom models are not supported yet.
+     * Model to use for text detection.
+     * Possible values:
+     * * page (default) — this model is suitable for detecting multiple text entries in an image.
+     * * line — this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5107,7 +5300,10 @@ public final class VisionServiceOuterClass {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model to use for text detection.
+       * Possible values:
+       * * page (default) — this model is suitable for detecting multiple text entries in an image.
+       * * line — this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5126,7 +5322,10 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model to use for text detection.
+       * Possible values:
+       * * page (default) — this model is suitable for detecting multiple text entries in an image.
+       * * line — this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5146,7 +5345,10 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model to use for text detection.
+       * Possible values:
+       * * page (default) — this model is suitable for detecting multiple text entries in an image.
+       * * line — this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5163,7 +5365,10 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model to use for text detection.
+       * Possible values:
+       * * page (default) — this model is suitable for detecting multiple text entries in an image.
+       * * line — this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5176,7 +5381,10 @@ public final class VisionServiceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, custom models are not supported yet.
+       * Model to use for text detection.
+       * Possible values:
+       * * page (default) — this model is suitable for detecting multiple text entries in an image.
+       * * line — this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7427,6 +7635,31 @@ public final class VisionServiceOuterClass {
 
     /**
      * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    boolean hasImageCopySearch();
+    /**
+     * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch();
+    /**
+     * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder getImageCopySearchOrBuilder();
+
+    /**
+     * <pre>
      * Return error in case of error during the specified feature processing.
      * </pre>
      *
@@ -7546,6 +7779,20 @@ public final class VisionServiceOuterClass {
               featureCase_ = 4;
               break;
             }
+            case 42: {
+              yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder subBuilder = null;
+              if (featureCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_).toBuilder();
+              }
+              feature_ =
+                  input.readMessage(yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_);
+                feature_ = subBuilder.buildPartial();
+              }
+              featureCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7585,6 +7832,7 @@ public final class VisionServiceOuterClass {
       TEXT_DETECTION(2),
       CLASSIFICATION(3),
       FACE_DETECTION(4),
+      IMAGE_COPY_SEARCH(5),
       FEATURE_NOT_SET(0);
       private final int value;
       private FeatureCase(int value) {
@@ -7603,6 +7851,7 @@ public final class VisionServiceOuterClass {
           case 2: return TEXT_DETECTION;
           case 3: return CLASSIFICATION;
           case 4: return FACE_DETECTION;
+          case 5: return IMAGE_COPY_SEARCH;
           case 0: return FEATURE_NOT_SET;
           default: return null;
         }
@@ -7732,6 +7981,44 @@ public final class VisionServiceOuterClass {
       return yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation.getDefaultInstance();
     }
 
+    public static final int IMAGE_COPY_SEARCH_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    public boolean hasImageCopySearch() {
+      return featureCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch() {
+      if (featureCase_ == 5) {
+         return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
+      }
+      return yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Image Copy Search result.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+     */
+    public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder getImageCopySearchOrBuilder() {
+      if (featureCase_ == 5) {
+         return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
+      }
+      return yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+    }
+
     public static final int ERROR_FIELD_NUMBER = 1;
     private com.google.rpc.Status error_;
     /**
@@ -7791,6 +8078,9 @@ public final class VisionServiceOuterClass {
       if (featureCase_ == 4) {
         output.writeMessage(4, (yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation) feature_);
       }
+      if (featureCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7815,6 +8105,10 @@ public final class VisionServiceOuterClass {
       if (featureCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (yandex.cloud.api.ai.vision.v1.FaceDetection.FaceAnnotation) feature_);
+      }
+      if (featureCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7853,6 +8147,10 @@ public final class VisionServiceOuterClass {
           result = result && getFaceDetection()
               .equals(other.getFaceDetection());
           break;
+        case 5:
+          result = result && getImageCopySearch()
+              .equals(other.getImageCopySearch());
+          break;
         case 0:
         default:
       }
@@ -7883,6 +8181,10 @@ public final class VisionServiceOuterClass {
         case 4:
           hash = (37 * hash) + FACE_DETECTION_FIELD_NUMBER;
           hash = (53 * hash) + getFaceDetection().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + IMAGE_COPY_SEARCH_FIELD_NUMBER;
+          hash = (53 * hash) + getImageCopySearch().hashCode();
           break;
         case 0:
         default:
@@ -8075,6 +8377,13 @@ public final class VisionServiceOuterClass {
             result.feature_ = faceDetectionBuilder_.build();
           }
         }
+        if (featureCase_ == 5) {
+          if (imageCopySearchBuilder_ == null) {
+            result.feature_ = feature_;
+          } else {
+            result.feature_ = imageCopySearchBuilder_.build();
+          }
+        }
         if (errorBuilder_ == null) {
           result.error_ = error_;
         } else {
@@ -8143,6 +8452,10 @@ public final class VisionServiceOuterClass {
           }
           case FACE_DETECTION: {
             mergeFaceDetection(other.getFaceDetection());
+            break;
+          }
+          case IMAGE_COPY_SEARCH: {
+            mergeImageCopySearch(other.getImageCopySearch());
             break;
           }
           case FEATURE_NOT_SET: {
@@ -8709,6 +9022,178 @@ public final class VisionServiceOuterClass {
         return faceDetectionBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder> imageCopySearchBuilder_;
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public boolean hasImageCopySearch() {
+        return featureCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation getImageCopySearch() {
+        if (imageCopySearchBuilder_ == null) {
+          if (featureCase_ == 5) {
+            return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
+          }
+          return yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+        } else {
+          if (featureCase_ == 5) {
+            return imageCopySearchBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public Builder setImageCopySearch(yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation value) {
+        if (imageCopySearchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feature_ = value;
+          onChanged();
+        } else {
+          imageCopySearchBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public Builder setImageCopySearch(
+          yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder builderForValue) {
+        if (imageCopySearchBuilder_ == null) {
+          feature_ = builderForValue.build();
+          onChanged();
+        } else {
+          imageCopySearchBuilder_.setMessage(builderForValue.build());
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public Builder mergeImageCopySearch(yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation value) {
+        if (imageCopySearchBuilder_ == null) {
+          if (featureCase_ == 5 &&
+              feature_ != yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance()) {
+            feature_ = yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.newBuilder((yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            feature_ = value;
+          }
+          onChanged();
+        } else {
+          if (featureCase_ == 5) {
+            imageCopySearchBuilder_.mergeFrom(value);
+          }
+          imageCopySearchBuilder_.setMessage(value);
+        }
+        featureCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public Builder clearImageCopySearch() {
+        if (imageCopySearchBuilder_ == null) {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+            onChanged();
+          }
+        } else {
+          if (featureCase_ == 5) {
+            featureCase_ = 0;
+            feature_ = null;
+          }
+          imageCopySearchBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder getImageCopySearchBuilder() {
+        return getImageCopySearchFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder getImageCopySearchOrBuilder() {
+        if ((featureCase_ == 5) && (imageCopySearchBuilder_ != null)) {
+          return imageCopySearchBuilder_.getMessageOrBuilder();
+        } else {
+          if (featureCase_ == 5) {
+            return (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_;
+          }
+          return yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Image Copy Search result.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.vision.v1.ImageCopySearchAnnotation image_copy_search = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder> 
+          getImageCopySearchFieldBuilder() {
+        if (imageCopySearchBuilder_ == null) {
+          if (!(featureCase_ == 5)) {
+            feature_ = yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.getDefaultInstance();
+          }
+          imageCopySearchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation.Builder, yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotationOrBuilder>(
+                  (yandex.cloud.api.ai.vision.v1.ImageCopySearch.ImageCopySearchAnnotation) feature_,
+                  getParentForChildren(),
+                  isClean());
+          feature_ = null;
+        }
+        featureCase_ = 5;
+        onChanged();;
+        return imageCopySearchBuilder_;
+      }
+
       private com.google.rpc.Status error_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorBuilder_;
@@ -8968,47 +9453,52 @@ public final class VisionServiceOuterClass {
       "dex/cloud/ai/vision/v1/text_detection.pr" +
       "oto\032.yandex/cloud/ai/vision/v1/classific" +
       "ation.proto\032.yandex/cloud/ai/vision/v1/f" +
-      "ace_detection.proto\032\035yandex/cloud/valida" +
-      "tion.proto\032\034google/api/annotations.proto" +
-      "\032\027google/rpc/status.proto\"z\n\023BatchAnalyz" +
-      "eRequest\022F\n\ranalyze_specs\030\001 \003(\0132&.yandex" +
-      ".cloud.ai.vision.v1.AnalyzeSpecB\007\202\3101\0031-8" +
-      "\022\033\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50\"\235\001\n\013Analyz" +
-      "eSpec\022!\n\007content\030\001 \001(\014B\016\212\3101\n<=10485760H\000" +
-      "\022=\n\010features\030\003 \003(\0132\".yandex.cloud.ai.vis" +
-      "ion.v1.FeatureB\007\202\3101\0031-8\022\034\n\tmime_type\030\004 \001" +
-      "(\tB\t\212\3101\005<=255B\016\n\006source\022\004\300\3011\001\"\325\002\n\007Featur" +
-      "e\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.ai.vision" +
-      ".v1.Feature.Type\022W\n\025classification_confi" +
-      "g\030\002 \001(\01326.yandex.cloud.ai.vision.v1.Feat" +
-      "ureClassificationConfigH\000\022V\n\025text_detect" +
-      "ion_config\030\003 \001(\01325.yandex.cloud.ai.visio" +
-      "n.v1.FeatureTextDetectionConfigH\000\"X\n\004Typ" +
-      "e\022\024\n\020TYPE_UNSPECIFIED\020\000\022\022\n\016TEXT_DETECTIO" +
-      "N\020\001\022\022\n\016CLASSIFICATION\020\002\022\022\n\016FACE_DETECTIO" +
-      "N\020\003B\010\n\006config\"7\n\033FeatureClassificationCo" +
-      "nfig\022\030\n\005model\030\001 \001(\tB\t\212\3101\005<=256\"]\n\032Featur" +
-      "eTextDetectionConfig\022&\n\016language_codes\030\001" +
-      " \003(\tB\016\202\3101\0031-8\212\3101\003<=3\022\027\n\005model\030\002 \001(\tB\010\212\3101" +
-      "\004<=50\"Q\n\024BatchAnalyzeResponse\0229\n\007results" +
-      "\030\001 \003(\0132(.yandex.cloud.ai.vision.v1.Analy" +
-      "zeResult\"m\n\rAnalyzeResult\0229\n\007results\030\002 \003" +
-      "(\0132(.yandex.cloud.ai.vision.v1.FeatureRe" +
-      "sult\022!\n\005error\030\001 \001(\0132\022.google.rpc.Status\"" +
-      "\215\002\n\rFeatureResult\022C\n\016text_detection\030\002 \001(" +
-      "\0132).yandex.cloud.ai.vision.v1.TextAnnota" +
-      "tionH\000\022D\n\016classification\030\003 \001(\0132*.yandex." +
-      "cloud.ai.vision.v1.ClassAnnotationH\000\022C\n\016" +
-      "face_detection\030\004 \001(\0132).yandex.cloud.ai.v" +
-      "ision.v1.FaceAnnotationH\000\022!\n\005error\030\001 \001(\013" +
-      "2\022.google.rpc.StatusB\t\n\007feature2\245\001\n\rVisi" +
-      "onService\022\223\001\n\014BatchAnalyze\022..yandex.clou" +
-      "d.ai.vision.v1.BatchAnalyzeRequest\032/.yan" +
-      "dex.cloud.ai.vision.v1.BatchAnalyzeRespo" +
-      "nse\"\"\202\323\344\223\002\034\"\027/vision/v1/batchAnalyze:\001*B" +
-      "e\n\035yandex.cloud.api.ai.vision.v1ZDgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/ai/vision/v1;visionb\006proto3"
+      "ace_detection.proto\0321yandex/cloud/ai/vis" +
+      "ion/v1/image_copy_search.proto\032\035yandex/c" +
+      "loud/validation.proto\032\034google/api/annota" +
+      "tions.proto\032\027google/rpc/status.proto\"z\n\023" +
+      "BatchAnalyzeRequest\022F\n\ranalyze_specs\030\001 \003" +
+      "(\0132&.yandex.cloud.ai.vision.v1.AnalyzeSp" +
+      "ecB\007\202\3101\0031-8\022\033\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50" +
+      "\"\277\001\n\013AnalyzeSpec\022!\n\007content\030\001 \001(\014B\016\212\3101\n<" +
+      "=10485760H\000\022 \n\tsignature\030\005 \001(\tB\013\212\3101\007<=16" +
+      "384H\000\022=\n\010features\030\003 \003(\0132\".yandex.cloud.a" +
+      "i.vision.v1.FeatureB\007\202\3101\0031-8\022\034\n\tmime_typ" +
+      "e\030\004 \001(\tB\t\212\3101\005<=255B\016\n\006source\022\004\300\3011\001\"\354\002\n\007F" +
+      "eature\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.ai.v" +
+      "ision.v1.Feature.Type\022W\n\025classification_" +
+      "config\030\002 \001(\01326.yandex.cloud.ai.vision.v1" +
+      ".FeatureClassificationConfigH\000\022V\n\025text_d" +
+      "etection_config\030\003 \001(\01325.yandex.cloud.ai." +
+      "vision.v1.FeatureTextDetectionConfigH\000\"o" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\022\n\016TEXT_DET" +
+      "ECTION\020\001\022\022\n\016CLASSIFICATION\020\002\022\022\n\016FACE_DET" +
+      "ECTION\020\003\022\025\n\021IMAGE_COPY_SEARCH\020\004B\010\n\006confi" +
+      "g\"7\n\033FeatureClassificationConfig\022\030\n\005mode" +
+      "l\030\001 \001(\tB\t\212\3101\005<=256\"]\n\032FeatureTextDetecti" +
+      "onConfig\022&\n\016language_codes\030\001 \003(\tB\016\202\3101\0031-" +
+      "8\212\3101\003<=3\022\027\n\005model\030\002 \001(\tB\010\212\3101\004<=50\"Q\n\024Bat" +
+      "chAnalyzeResponse\0229\n\007results\030\001 \003(\0132(.yan" +
+      "dex.cloud.ai.vision.v1.AnalyzeResult\"m\n\r" +
+      "AnalyzeResult\0229\n\007results\030\002 \003(\0132(.yandex." +
+      "cloud.ai.vision.v1.FeatureResult\022!\n\005erro" +
+      "r\030\001 \001(\0132\022.google.rpc.Status\"\340\002\n\rFeatureR" +
+      "esult\022C\n\016text_detection\030\002 \001(\0132).yandex.c" +
+      "loud.ai.vision.v1.TextAnnotationH\000\022D\n\016cl" +
+      "assification\030\003 \001(\0132*.yandex.cloud.ai.vis" +
+      "ion.v1.ClassAnnotationH\000\022C\n\016face_detecti" +
+      "on\030\004 \001(\0132).yandex.cloud.ai.vision.v1.Fac" +
+      "eAnnotationH\000\022Q\n\021image_copy_search\030\005 \001(\013" +
+      "24.yandex.cloud.ai.vision.v1.ImageCopySe" +
+      "archAnnotationH\000\022!\n\005error\030\001 \001(\0132\022.google" +
+      ".rpc.StatusB\t\n\007feature2\245\001\n\rVisionService" +
+      "\022\223\001\n\014BatchAnalyze\022..yandex.cloud.ai.visi" +
+      "on.v1.BatchAnalyzeRequest\032/.yandex.cloud" +
+      ".ai.vision.v1.BatchAnalyzeResponse\"\"\202\323\344\223" +
+      "\002\034\"\027/vision/v1/batchAnalyze:\001*Be\n\035yandex" +
+      ".cloud.api.ai.vision.v1ZDgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/ai/vis" +
+      "ion/v1;visionb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9024,6 +9514,7 @@ public final class VisionServiceOuterClass {
           yandex.cloud.api.ai.vision.v1.TextDetection.getDescriptor(),
           yandex.cloud.api.ai.vision.v1.Classification.getDescriptor(),
           yandex.cloud.api.ai.vision.v1.FaceDetection.getDescriptor(),
+          yandex.cloud.api.ai.vision.v1.ImageCopySearch.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
@@ -9039,7 +9530,7 @@ public final class VisionServiceOuterClass {
     internal_static_yandex_cloud_ai_vision_v1_AnalyzeSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_AnalyzeSpec_descriptor,
-        new java.lang.String[] { "Content", "Features", "MimeType", "Source", });
+        new java.lang.String[] { "Content", "Signature", "Features", "MimeType", "Source", });
     internal_static_yandex_cloud_ai_vision_v1_Feature_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_vision_v1_Feature_fieldAccessorTable = new
@@ -9075,7 +9566,7 @@ public final class VisionServiceOuterClass {
     internal_static_yandex_cloud_ai_vision_v1_FeatureResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_FeatureResult_descriptor,
-        new java.lang.String[] { "TextDetection", "Classification", "FaceDetection", "Error", "Feature", });
+        new java.lang.String[] { "TextDetection", "Classification", "FaceDetection", "ImageCopySearch", "Error", "Feature", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -9087,6 +9578,7 @@ public final class VisionServiceOuterClass {
     yandex.cloud.api.ai.vision.v1.TextDetection.getDescriptor();
     yandex.cloud.api.ai.vision.v1.Classification.getDescriptor();
     yandex.cloud.api.ai.vision.v1.FaceDetection.getDescriptor();
+    yandex.cloud.api.ai.vision.v1.ImageCopySearch.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();

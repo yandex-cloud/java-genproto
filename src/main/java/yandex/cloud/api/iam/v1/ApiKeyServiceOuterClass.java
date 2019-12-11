@@ -4835,6 +4835,2561 @@ public final class ApiKeyServiceOuterClass {
 
   }
 
+  public interface DeleteApiKeyMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.DeleteApiKeyMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the API key that is being deleted.
+     * </pre>
+     *
+     * <code>string api_key_id = 1;</code>
+     */
+    java.lang.String getApiKeyId();
+    /**
+     * <pre>
+     * ID of the API key that is being deleted.
+     * </pre>
+     *
+     * <code>string api_key_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getApiKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.DeleteApiKeyMetadata}
+   */
+  public  static final class DeleteApiKeyMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.DeleteApiKeyMetadata)
+      DeleteApiKeyMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteApiKeyMetadata.newBuilder() to construct.
+    private DeleteApiKeyMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteApiKeyMetadata() {
+      apiKeyId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteApiKeyMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiKeyId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.Builder.class);
+    }
+
+    public static final int API_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiKeyId_;
+    /**
+     * <pre>
+     * ID of the API key that is being deleted.
+     * </pre>
+     *
+     * <code>string api_key_id = 1;</code>
+     */
+    public java.lang.String getApiKeyId() {
+      java.lang.Object ref = apiKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the API key that is being deleted.
+     * </pre>
+     *
+     * <code>string api_key_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiKeyIdBytes() {
+      java.lang.Object ref = apiKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiKeyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiKeyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata other = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata) obj;
+
+      boolean result = true;
+      result = result && getApiKeyId()
+          .equals(other.getApiKeyId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiKeyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.DeleteApiKeyMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.DeleteApiKeyMetadata)
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiKeyId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata build() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata buildPartial() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata(this);
+        result.apiKeyId_ = apiKeyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata other) {
+        if (other == yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata.getDefaultInstance()) return this;
+        if (!other.getApiKeyId().isEmpty()) {
+          apiKeyId_ = other.apiKeyId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the API key that is being deleted.
+       * </pre>
+       *
+       * <code>string api_key_id = 1;</code>
+       */
+      public java.lang.String getApiKeyId() {
+        java.lang.Object ref = apiKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API key that is being deleted.
+       * </pre>
+       *
+       * <code>string api_key_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiKeyIdBytes() {
+        java.lang.Object ref = apiKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API key that is being deleted.
+       * </pre>
+       *
+       * <code>string api_key_id = 1;</code>
+       */
+      public Builder setApiKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API key that is being deleted.
+       * </pre>
+       *
+       * <code>string api_key_id = 1;</code>
+       */
+      public Builder clearApiKeyId() {
+        
+        apiKeyId_ = getDefaultInstance().getApiKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API key that is being deleted.
+       * </pre>
+       *
+       * <code>string api_key_id = 1;</code>
+       */
+      public Builder setApiKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.DeleteApiKeyMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.DeleteApiKeyMetadata)
+    private static final yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata();
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteApiKeyMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteApiKeyMetadata>() {
+      @java.lang.Override
+      public DeleteApiKeyMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteApiKeyMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteApiKeyMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteApiKeyMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.DeleteApiKeyMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListApiKeyOperationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.ListApiKeyOperationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the key to list operations for.
+     * </pre>
+     *
+     * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getApiKeyId();
+    /**
+     * <pre>
+     * ID of the key to list operations for.
+     * </pre>
+     *
+     * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getApiKeyIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListApiKeyOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyOperationsRequest}
+   */
+  public  static final class ListApiKeyOperationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ListApiKeyOperationsRequest)
+      ListApiKeyOperationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListApiKeyOperationsRequest.newBuilder() to construct.
+    private ListApiKeyOperationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListApiKeyOperationsRequest() {
+      apiKeyId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListApiKeyOperationsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiKeyId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.Builder.class);
+    }
+
+    public static final int API_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiKeyId_;
+    /**
+     * <pre>
+     * ID of the key to list operations for.
+     * </pre>
+     *
+     * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getApiKeyId() {
+      java.lang.Object ref = apiKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the key to list operations for.
+     * </pre>
+     *
+     * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiKeyIdBytes() {
+      java.lang.Object ref = apiKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListApiKeyOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiKeyId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiKeyId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest other = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest) obj;
+
+      boolean result = true;
+      result = result && getApiKeyId()
+          .equals(other.getApiKeyId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiKeyId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyOperationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.ListApiKeyOperationsRequest)
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiKeyId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest build() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest buildPartial() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest(this);
+        result.apiKeyId_ = apiKeyId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest other) {
+        if (other == yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest.getDefaultInstance()) return this;
+        if (!other.getApiKeyId().isEmpty()) {
+          apiKeyId_ = other.apiKeyId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the key to list operations for.
+       * </pre>
+       *
+       * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getApiKeyId() {
+        java.lang.Object ref = apiKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to list operations for.
+       * </pre>
+       *
+       * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiKeyIdBytes() {
+        java.lang.Object ref = apiKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the key to list operations for.
+       * </pre>
+       *
+       * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setApiKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to list operations for.
+       * </pre>
+       *
+       * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearApiKeyId() {
+        
+        apiKeyId_ = getDefaultInstance().getApiKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the key to list operations for.
+       * </pre>
+       *
+       * <code>string api_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setApiKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiKeyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.ListApiKeyOperationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.ListApiKeyOperationsRequest)
+    private static final yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest();
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListApiKeyOperationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListApiKeyOperationsRequest>() {
+      @java.lang.Override
+      public ListApiKeyOperationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListApiKeyOperationsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListApiKeyOperationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListApiKeyOperationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListApiKeyOperationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.ListApiKeyOperationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
+        getOperationsList();
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    int getOperationsCount();
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList();
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyOperationsResponse}
+   */
+  public  static final class ListApiKeyOperationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ListApiKeyOperationsResponse)
+      ListApiKeyOperationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListApiKeyOperationsResponse.newBuilder() to construct.
+    private ListApiKeyOperationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListApiKeyOperationsResponse() {
+      operations_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListApiKeyOperationsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              operations_.add(
+                  input.readMessage(yandex.cloud.api.operation.OperationOuterClass.Operation.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          operations_ = java.util.Collections.unmodifiableList(operations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int OPERATIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    public int getOperationsCount() {
+      return operations_.size();
+    }
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+      return operations_.get(index);
+    }
+    /**
+     * <pre>
+     * List of operations for the specified API key.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index) {
+      return operations_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operations_.size(); i++) {
+        output.writeMessage(1, operations_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operations_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse other = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse) obj;
+
+      boolean result = true;
+      result = result && getOperationsList()
+          .equals(other.getOperationsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperationsCount() > 0) {
+        hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyOperationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.ListApiKeyOperationsResponse)
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOperationsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          operationsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse build() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse buildPartial() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (operationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            operations_ = java.util.Collections.unmodifiableList(operations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operations_ = operations_;
+        } else {
+          result.operations_ = operationsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse other) {
+        if (other == yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse.getDefaultInstance()) return this;
+        if (operationsBuilder_ == null) {
+          if (!other.operations_.isEmpty()) {
+            if (operations_.isEmpty()) {
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperationsIsMutable();
+              operations_.addAll(other.operations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operations_.isEmpty()) {
+            if (operationsBuilder_.isEmpty()) {
+              operationsBuilder_.dispose();
+              operationsBuilder_ = null;
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperationsFieldBuilder() : null;
+            } else {
+              operationsBuilder_.addAllMessages(other.operations_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
+        java.util.Collections.emptyList();
+      private void ensureOperationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
+
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+        if (operationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operations_);
+        } else {
+          return operationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public int getOperationsCount() {
+        if (operationsBuilder_ == null) {
+          return operations_.size();
+        } else {
+          return operationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);
+        } else {
+          return operationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.set(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addAllOperations(
+          java.lang.Iterable<? extends yandex.cloud.api.operation.OperationOuterClass.Operation> values) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operations_);
+          onChanged();
+        } else {
+          operationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder clearOperations() {
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder removeOperations(int index) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.remove(index);
+          onChanged();
+        } else {
+          operationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+          int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);  } else {
+          return operationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+           getOperationsOrBuilderList() {
+        if (operationsBuilder_ != null) {
+          return operationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operations_);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
+        return getOperationsFieldBuilder().addBuilder(
+            yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified API key.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
+           getOperationsBuilderList() {
+        return getOperationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+          getOperationsFieldBuilder() {
+        if (operationsBuilder_ == null) {
+          operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
+                  operations_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          operations_ = null;
+        }
+        return operationsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyOperationsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyOperationsRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.ListApiKeyOperationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.ListApiKeyOperationsResponse)
+    private static final yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse();
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListApiKeyOperationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListApiKeyOperationsResponse>() {
+      @java.lang.Override
+      public ListApiKeyOperationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListApiKeyOperationsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListApiKeyOperationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListApiKeyOperationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyOperationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_GetApiKeyRequest_descriptor;
   private static final 
@@ -4865,6 +7420,21 @@ public final class ApiKeyServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_DeleteApiKeyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4876,36 +7446,50 @@ public final class ApiKeyServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/iam/v1/api_key_service.pr" +
       "oto\022\023yandex.cloud.iam.v1\032\034google/api/ann" +
-      "otations.proto\032\033google/protobuf/empty.pr" +
-      "oto\032!yandex/cloud/iam/v1/api_key.proto\032\035" +
-      "yandex/cloud/validation.proto\"4\n\020GetApiK" +
-      "eyRequest\022 \n\napi_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"x\n\022ListApiKeysRequest\022$\n\022service_acc" +
-      "ount_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"]\n\023ListApiKeysResponse\022-\n\010api_keys" +
-      "\030\001 \003(\0132\033.yandex.cloud.iam.v1.ApiKey\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"[\n\023CreateApiKeyRequ" +
-      "est\022$\n\022service_account_id\030\001 \001(\tB\010\212\3101\004<=5" +
-      "0\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\"T\n\024Cre" +
-      "ateApiKeyResponse\022,\n\007api_key\030\001 \001(\0132\033.yan" +
-      "dex.cloud.iam.v1.ApiKey\022\016\n\006secret\030\002 \001(\t\"" +
-      "7\n\023DeleteApiKeyRequest\022 \n\napi_key_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=502\341\003\n\rApiKeyService\022r\n\004Li" +
-      "st\022\'.yandex.cloud.iam.v1.ListApiKeysRequ" +
-      "est\032(.yandex.cloud.iam.v1.ListApiKeysRes" +
-      "ponse\"\027\202\323\344\223\002\021\022\017/iam/v1/apiKeys\022o\n\003Get\022%." +
-      "yandex.cloud.iam.v1.GetApiKeyRequest\032\033.y" +
-      "andex.cloud.iam.v1.ApiKey\"$\202\323\344\223\002\036\022\034/iam/" +
-      "v1/apiKeys/{api_key_id}\022y\n\006Create\022(.yand" +
-      "ex.cloud.iam.v1.CreateApiKeyRequest\032).ya" +
-      "ndex.cloud.iam.v1.CreateApiKeyResponse\"\032" +
-      "\202\323\344\223\002\024\"\017/iam/v1/apiKeys:\001*\022p\n\006Delete\022(.y" +
-      "andex.cloud.iam.v1.DeleteApiKeyRequest\032\026" +
-      ".google.protobuf.Empty\"$\202\323\344\223\002\036*\034/iam/v1/" +
-      "apiKeys/{api_key_id}BV\n\027yandex.cloud.api" +
-      ".iam.v1Z;github.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/iam/v1;iamb\006proto3"
+      "otations.proto\032 yandex/cloud/api/operati" +
+      "on.proto\032!yandex/cloud/iam/v1/api_key.pr" +
+      "oto\032&yandex/cloud/operation/operation.pr" +
+      "oto\032\035yandex/cloud/validation.proto\"4\n\020Ge" +
+      "tApiKeyRequest\022 \n\napi_key_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"x\n\022ListApiKeysRequest\022$\n\022servic" +
+      "e_account_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"]\n\023ListApiKeysResponse\022-\n\010api" +
+      "_keys\030\001 \003(\0132\033.yandex.cloud.iam.v1.ApiKey" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"[\n\023CreateApiKe" +
+      "yRequest\022$\n\022service_account_id\030\001 \001(\tB\010\212\310" +
+      "1\004<=50\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\"T" +
+      "\n\024CreateApiKeyResponse\022,\n\007api_key\030\001 \001(\0132" +
+      "\033.yandex.cloud.iam.v1.ApiKey\022\016\n\006secret\030\002" +
+      " \001(\t\"7\n\023DeleteApiKeyRequest\022 \n\napi_key_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024DeleteApiKeyMet" +
+      "adata\022\022\n\napi_key_id\030\001 \001(\t\"}\n\033ListApiKeyO" +
+      "perationsRequest\022 \n\napi_key_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034List" +
+      "ApiKeyOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t2\307\005\n\rApiKeyServi" +
+      "ce\022r\n\004List\022\'.yandex.cloud.iam.v1.ListApi" +
+      "KeysRequest\032(.yandex.cloud.iam.v1.ListAp" +
+      "iKeysResponse\"\027\202\323\344\223\002\021\022\017/iam/v1/apiKeys\022o" +
+      "\n\003Get\022%.yandex.cloud.iam.v1.GetApiKeyReq" +
+      "uest\032\033.yandex.cloud.iam.v1.ApiKey\"$\202\323\344\223\002" +
+      "\036\022\034/iam/v1/apiKeys/{api_key_id}\022y\n\006Creat" +
+      "e\022(.yandex.cloud.iam.v1.CreateApiKeyRequ" +
+      "est\032).yandex.cloud.iam.v1.CreateApiKeyRe" +
+      "sponse\"\032\202\323\344\223\002\024\"\017/iam/v1/apiKeys:\001*\022\254\001\n\006D" +
+      "elete\022(.yandex.cloud.iam.v1.DeleteApiKey" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"U\202\323\344\223\002\036*\034/iam/v1/apiKeys/{api_key_id}" +
+      "\262\322*-\n\024DeleteApiKeyMetadata\022\025google.proto" +
+      "buf.Empty\022\246\001\n\016ListOperations\0220.yandex.cl" +
+      "oud.iam.v1.ListApiKeyOperationsRequest\0321" +
+      ".yandex.cloud.iam.v1.ListApiKeyOperation" +
+      "sResponse\"/\202\323\344\223\002)\022\'/iam/v1/apiKeys/{api_" +
+      "key_id}/operationsBV\n\027yandex.cloud.api.i" +
+      "am.v1Z;github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/iam/v1;iamb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4919,8 +7503,9 @@ public final class ApiKeyServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iam.v1.ApiKeyOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_iam_v1_GetApiKeyRequest_descriptor =
@@ -4959,17 +7544,37 @@ public final class ApiKeyServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_DeleteApiKeyRequest_descriptor,
         new java.lang.String[] { "ApiKeyId", });
+    internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_DeleteApiKeyMetadata_descriptor,
+        new java.lang.String[] { "ApiKeyId", });
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsRequest_descriptor,
+        new java.lang.String[] { "ApiKeyId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor,
+        new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.EmptyProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iam.v1.ApiKeyOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

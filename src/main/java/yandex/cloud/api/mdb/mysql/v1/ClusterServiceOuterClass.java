@@ -35967,14 +35967,26 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7OrBuilder getMysqlConfig57OrBuilder();
 
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     boolean hasMysqlConfig80();
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getMysqlConfig80();
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getMysqlConfig80OrBuilder();
@@ -36327,12 +36339,20 @@ public final class ClusterServiceOuterClass {
 
     public static final int MYSQL_CONFIG_8_0_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     public boolean hasMysqlConfig80() {
       return mysqlConfigCase_ == 6;
     }
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getMysqlConfig80() {
@@ -36342,6 +36362,10 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Configuration for a MySQL 8.0 cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getMysqlConfig80OrBuilder() {
@@ -37208,12 +37232,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder> mysqlConfig80Builder_;
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public boolean hasMysqlConfig80() {
         return mysqlConfigCase_ == 6;
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 getMysqlConfig80() {
@@ -37230,6 +37262,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public Builder setMysqlConfig80(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 value) {
@@ -37246,6 +37282,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public Builder setMysqlConfig80(
@@ -37260,6 +37300,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public Builder mergeMysqlConfig80(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0 value) {
@@ -37282,6 +37326,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public Builder clearMysqlConfig80() {
@@ -37301,12 +37349,20 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.Builder getMysqlConfig80Builder() {
         return getMysqlConfig80FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0OrBuilder getMysqlConfig80OrBuilder() {
@@ -37320,6 +37376,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration for a MySQL 8.0 cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0 mysql_config_8_0 = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

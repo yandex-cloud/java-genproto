@@ -234,10 +234,18 @@ public final class Mysql80 {
     com.google.protobuf.Int64ValueOrBuilder getMaxAllowedPacketOrBuilder();
 
     /**
+     * <pre>
+     * Authentication plugin used in the managed MySQL cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
      */
     int getDefaultAuthenticationPluginValue();
     /**
+     * <pre>
+     * Authentication plugin used in the managed MySQL cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin();
@@ -708,14 +716,26 @@ public final class Mysql80 {
        */
       AUTH_PLUGIN_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Using [Native Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>MYSQL_NATIVE_PASSWORD = 1;</code>
        */
       MYSQL_NATIVE_PASSWORD(1),
       /**
+       * <pre>
+       * Using [Caching SHA-2 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>CACHING_SHA2_PASSWORD = 2;</code>
        */
       CACHING_SHA2_PASSWORD(2),
       /**
+       * <pre>
+       * Using [SHA-256 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/sha256-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>SHA256_PASSWORD = 3;</code>
        */
       SHA256_PASSWORD(3),
@@ -727,14 +747,26 @@ public final class Mysql80 {
        */
       public static final int AUTH_PLUGIN_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Using [Native Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>MYSQL_NATIVE_PASSWORD = 1;</code>
        */
       public static final int MYSQL_NATIVE_PASSWORD_VALUE = 1;
       /**
+       * <pre>
+       * Using [Caching SHA-2 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>CACHING_SHA2_PASSWORD = 2;</code>
        */
       public static final int CACHING_SHA2_PASSWORD_VALUE = 2;
       /**
+       * <pre>
+       * Using [SHA-256 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/sha256-pluggable-authentication.html).
+       * </pre>
+       *
        * <code>SHA256_PASSWORD = 3;</code>
        */
       public static final int SHA256_PASSWORD_VALUE = 3;
@@ -1105,12 +1137,20 @@ public final class Mysql80 {
     public static final int DEFAULT_AUTHENTICATION_PLUGIN_FIELD_NUMBER = 8;
     private int defaultAuthenticationPlugin_;
     /**
+     * <pre>
+     * Authentication plugin used in the managed MySQL cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
      */
     public int getDefaultAuthenticationPluginValue() {
       return defaultAuthenticationPlugin_;
     }
     /**
+     * <pre>
+     * Authentication plugin used in the managed MySQL cluster.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin() {
@@ -2803,12 +2843,20 @@ public final class Mysql80 {
 
       private int defaultAuthenticationPlugin_ = 0;
       /**
+       * <pre>
+       * Authentication plugin used in the managed MySQL cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
        */
       public int getDefaultAuthenticationPluginValue() {
         return defaultAuthenticationPlugin_;
       }
       /**
+       * <pre>
+       * Authentication plugin used in the managed MySQL cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
        */
       public Builder setDefaultAuthenticationPluginValue(int value) {
@@ -2817,6 +2865,10 @@ public final class Mysql80 {
         return this;
       }
       /**
+       * <pre>
+       * Authentication plugin used in the managed MySQL cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin getDefaultAuthenticationPlugin() {
@@ -2825,6 +2877,10 @@ public final class Mysql80 {
         return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Authentication plugin used in the managed MySQL cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
        */
       public Builder setDefaultAuthenticationPlugin(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfig8_0.AuthPlugin value) {
@@ -2837,6 +2893,10 @@ public final class Mysql80 {
         return this;
       }
       /**
+       * <pre>
+       * Authentication plugin used in the managed MySQL cluster.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
        */
       public Builder clearDefaultAuthenticationPlugin() {

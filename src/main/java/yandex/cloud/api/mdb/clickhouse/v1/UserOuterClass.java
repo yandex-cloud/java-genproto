@@ -1482,6 +1482,30 @@ public final class UserOuterClass {
      */
     com.google.protobuf.ByteString
         getDatabaseNameBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> 
+        getDataFiltersList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDataFilters(int index);
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    int getDataFiltersCount();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder> 
+        getDataFiltersOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder getDataFiltersOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Permission}
@@ -1497,6 +1521,7 @@ public final class UserOuterClass {
     }
     private Permission() {
       databaseName_ = "";
+      dataFilters_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1529,6 +1554,15 @@ public final class UserOuterClass {
               databaseName_ = s;
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                dataFilters_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              dataFilters_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1544,6 +1578,9 @@ public final class UserOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          dataFilters_ = java.util.Collections.unmodifiableList(dataFilters_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1561,6 +1598,694 @@ public final class UserOuterClass {
               yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.Builder.class);
     }
 
+    public interface DataFilterOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string table_name = 1;</code>
+       */
+      java.lang.String getTableName();
+      /**
+       * <code>string table_name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getTableNameBytes();
+
+      /**
+       * <code>string filter = 2;</code>
+       */
+      java.lang.String getFilter();
+      /**
+       * <code>string filter = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getFilterBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter}
+     */
+    public  static final class DataFilter extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter)
+        DataFilterOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DataFilter.newBuilder() to construct.
+      private DataFilter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DataFilter() {
+        tableName_ = "";
+        filter_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DataFilter(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                tableName_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                filter_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder.class);
+      }
+
+      public static final int TABLE_NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object tableName_;
+      /**
+       * <code>string table_name = 1;</code>
+       */
+      public java.lang.String getTableName() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tableName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTableNameBytes() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FILTER_FIELD_NUMBER = 2;
+      private volatile java.lang.Object filter_;
+      /**
+       * <code>string filter = 2;</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string filter = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getTableNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tableName_);
+        }
+        if (!getFilterBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getTableNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tableName_);
+        }
+        if (!getFilterBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter) obj;
+
+        boolean result = true;
+        result = result && getTableName()
+            .equals(other.getTableName());
+        result = result && getFilter()
+            .equals(other.getFilter());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TABLE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getTableName().hashCode();
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter)
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          tableName_ = "";
+
+          filter_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter build() {
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter buildPartial() {
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter(this);
+          result.tableName_ = tableName_;
+          result.filter_ = filter_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter) {
+            return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter other) {
+          if (other == yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.getDefaultInstance()) return this;
+          if (!other.getTableName().isEmpty()) {
+            tableName_ = other.tableName_;
+            onChanged();
+          }
+          if (!other.getFilter().isEmpty()) {
+            filter_ = other.filter_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object tableName_ = "";
+        /**
+         * <code>string table_name = 1;</code>
+         */
+        public java.lang.String getTableName() {
+          java.lang.Object ref = tableName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            tableName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string table_name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getTableNameBytes() {
+          java.lang.Object ref = tableName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            tableName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string table_name = 1;</code>
+         */
+        public Builder setTableName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          tableName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string table_name = 1;</code>
+         */
+        public Builder clearTableName() {
+          
+          tableName_ = getDefaultInstance().getTableName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string table_name = 1;</code>
+         */
+        public Builder setTableNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          tableName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object filter_ = "";
+        /**
+         * <code>string filter = 2;</code>
+         */
+        public java.lang.String getFilter() {
+          java.lang.Object ref = filter_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            filter_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string filter = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getFilterBytes() {
+          java.lang.Object ref = filter_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            filter_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string filter = 2;</code>
+         */
+        public Builder setFilter(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string filter = 2;</code>
+         */
+        public Builder clearFilter() {
+          
+          filter_ = getDefaultInstance().getFilter();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string filter = 2;</code>
+         */
+        public Builder setFilterBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          filter_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter)
+      private static final yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter();
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DataFilter>
+          PARSER = new com.google.protobuf.AbstractParser<DataFilter>() {
+        @java.lang.Override
+        public DataFilter parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DataFilter(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DataFilter> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DataFilter> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
     public static final int DATABASE_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object databaseName_;
     /**
@@ -1603,6 +2328,41 @@ public final class UserOuterClass {
       }
     }
 
+    public static final int DATA_FILTERS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> dataFilters_;
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> getDataFiltersList() {
+      return dataFilters_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder> 
+        getDataFiltersOrBuilderList() {
+      return dataFilters_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    public int getDataFiltersCount() {
+      return dataFilters_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDataFilters(int index) {
+      return dataFilters_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder getDataFiltersOrBuilder(
+        int index) {
+      return dataFilters_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1620,6 +2380,9 @@ public final class UserOuterClass {
       if (!getDatabaseNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, databaseName_);
       }
+      for (int i = 0; i < dataFilters_.size(); i++) {
+        output.writeMessage(2, dataFilters_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1631,6 +2394,10 @@ public final class UserOuterClass {
       size = 0;
       if (!getDatabaseNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, databaseName_);
+      }
+      for (int i = 0; i < dataFilters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, dataFilters_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1650,6 +2417,8 @@ public final class UserOuterClass {
       boolean result = true;
       result = result && getDatabaseName()
           .equals(other.getDatabaseName());
+      result = result && getDataFiltersList()
+          .equals(other.getDataFiltersList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1663,6 +2432,10 @@ public final class UserOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatabaseName().hashCode();
+      if (getDataFiltersCount() > 0) {
+        hash = (37 * hash) + DATA_FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataFiltersList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1791,6 +2564,7 @@ public final class UserOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDataFiltersFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1798,6 +2572,12 @@ public final class UserOuterClass {
         super.clear();
         databaseName_ = "";
 
+        if (dataFiltersBuilder_ == null) {
+          dataFilters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          dataFiltersBuilder_.clear();
+        }
         return this;
       }
 
@@ -1824,7 +2604,19 @@ public final class UserOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.databaseName_ = databaseName_;
+        if (dataFiltersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            dataFilters_ = java.util.Collections.unmodifiableList(dataFilters_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.dataFilters_ = dataFilters_;
+        } else {
+          result.dataFilters_ = dataFiltersBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1877,6 +2669,32 @@ public final class UserOuterClass {
           databaseName_ = other.databaseName_;
           onChanged();
         }
+        if (dataFiltersBuilder_ == null) {
+          if (!other.dataFilters_.isEmpty()) {
+            if (dataFilters_.isEmpty()) {
+              dataFilters_ = other.dataFilters_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDataFiltersIsMutable();
+              dataFilters_.addAll(other.dataFilters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataFilters_.isEmpty()) {
+            if (dataFiltersBuilder_.isEmpty()) {
+              dataFiltersBuilder_.dispose();
+              dataFiltersBuilder_ = null;
+              dataFilters_ = other.dataFilters_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              dataFiltersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataFiltersFieldBuilder() : null;
+            } else {
+              dataFiltersBuilder_.addAllMessages(other.dataFilters_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1905,6 +2723,7 @@ public final class UserOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object databaseName_ = "";
       /**
@@ -1993,6 +2812,246 @@ public final class UserOuterClass {
         databaseName_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> dataFilters_ =
+        java.util.Collections.emptyList();
+      private void ensureDataFiltersIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          dataFilters_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter>(dataFilters_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder> dataFiltersBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> getDataFiltersList() {
+        if (dataFiltersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataFilters_);
+        } else {
+          return dataFiltersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public int getDataFiltersCount() {
+        if (dataFiltersBuilder_ == null) {
+          return dataFilters_.size();
+        } else {
+          return dataFiltersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter getDataFilters(int index) {
+        if (dataFiltersBuilder_ == null) {
+          return dataFilters_.get(index);
+        } else {
+          return dataFiltersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder setDataFilters(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter value) {
+        if (dataFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataFiltersIsMutable();
+          dataFilters_.set(index, value);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder setDataFilters(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder builderForValue) {
+        if (dataFiltersBuilder_ == null) {
+          ensureDataFiltersIsMutable();
+          dataFilters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataFiltersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder addDataFilters(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter value) {
+        if (dataFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataFiltersIsMutable();
+          dataFilters_.add(value);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder addDataFilters(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter value) {
+        if (dataFiltersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataFiltersIsMutable();
+          dataFilters_.add(index, value);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder addDataFilters(
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder builderForValue) {
+        if (dataFiltersBuilder_ == null) {
+          ensureDataFiltersIsMutable();
+          dataFilters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataFiltersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder addDataFilters(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder builderForValue) {
+        if (dataFiltersBuilder_ == null) {
+          ensureDataFiltersIsMutable();
+          dataFilters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataFiltersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder addAllDataFilters(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter> values) {
+        if (dataFiltersBuilder_ == null) {
+          ensureDataFiltersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataFilters_);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder clearDataFilters() {
+        if (dataFiltersBuilder_ == null) {
+          dataFilters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public Builder removeDataFilters(int index) {
+        if (dataFiltersBuilder_ == null) {
+          ensureDataFiltersIsMutable();
+          dataFilters_.remove(index);
+          onChanged();
+        } else {
+          dataFiltersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder getDataFiltersBuilder(
+          int index) {
+        return getDataFiltersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder getDataFiltersOrBuilder(
+          int index) {
+        if (dataFiltersBuilder_ == null) {
+          return dataFilters_.get(index);  } else {
+          return dataFiltersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder> 
+           getDataFiltersOrBuilderList() {
+        if (dataFiltersBuilder_ != null) {
+          return dataFiltersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataFilters_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder addDataFiltersBuilder() {
+        return getDataFiltersFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder addDataFiltersBuilder(
+          int index) {
+        return getDataFiltersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.Permission.DataFilter data_filters = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder> 
+           getDataFiltersBuilderList() {
+        return getDataFiltersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder> 
+          getDataFiltersFieldBuilder() {
+        if (dataFiltersBuilder_ == null) {
+          dataFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilter.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.Permission.DataFilterOrBuilder>(
+                  dataFilters_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          dataFilters_ = null;
+        }
+        return dataFiltersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23402,6 +24461,11 @@ public final class UserOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -23427,168 +24491,171 @@ public final class UserOuterClass {
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003" +
       "(\0132*.yandex.cloud.mdb.clickhouse.v1.Perm" +
       "ission\022>\n\010settings\030\004 \001(\0132,.yandex.cloud." +
-      "mdb.clickhouse.v1.UserSettings\"#\n\nPermis" +
-      "sion\022\025\n\rdatabase_name\030\001 \001(\t\"\331\001\n\010UserSpec" +
-      "\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0" +
-      "-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022?" +
-      "\n\013permissions\030\003 \003(\0132*.yandex.cloud.mdb.c" +
-      "lickhouse.v1.Permission\022>\n\010settings\030\004 \001(" +
-      "\0132,.yandex.cloud.mdb.clickhouse.v1.UserS" +
-      "ettings\"\230/\n\014UserSettings\0226\n\010readonly\030\001 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\0030-2" +
-      "\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\017connect_" +
-      "timeout\030\' \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\006\372\3071\002>0\022<\n\017receive_timeout\030( \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\006\372\3071\002>0\0229\n\014send" +
-      "_timeout\030) \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022F\n\025insert_quorum_timeout\030\004 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\n\372\3071\006>=1" +
-      "000\022A\n\035select_sequential_consistency\030\005 \001" +
-      "(\0132\032.google.protobuf.BoolValue\022Z\n)max_re" +
-      "plica_delay_for_distributed_queries\030\006 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\n\372\3071\006>=10" +
-      "00\022V\n2fallback_to_stale_replicas_for_dis" +
-      "tributed_queries\030\007 \001(\0132\032.google.protobuf" +
-      ".BoolValue\022O\n!replication_alter_partitio" +
-      "ns_sync\030* \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\0030-2\022e\n\030distributed_product_mode\030" +
-      "+ \001(\0162C.yandex.cloud.mdb.clickhouse.v1.U" +
-      "serSettings.DistributedProductMode\022L\n(di" +
-      "stributed_aggregation_memory_efficient\030H" +
-      " \001(\0132\032.google.protobuf.BoolValue\022A\n\034dist" +
-      "ributed_ddl_task_timeout\030I \001(\0132\033.google." +
-      "protobuf.Int64Value\022+\n\007compile\030, \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022B\n\024min_count_to" +
-      "_compile\030- \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\0227\n\023compile_expressions\030. \001(" +
-      "\0132\032.google.protobuf.BoolValue\022M\n\037min_cou" +
-      "nt_to_compile_expression\030/ \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_bloc" +
-      "k_size\030\t \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022H\n\032min_insert_block_size_rows\030" +
-      "0 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\022I\n\033min_insert_block_size_bytes\0301 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022B" +
-      "\n\025max_insert_block_size\030\n \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\006\372\3071\002>0\022H\n\032min_bytes_" +
-      "to_use_direct_io\0302 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022:\n\026use_uncompressed" +
-      "_cache\0303 \001(\0132\032.google.protobuf.BoolValue" +
-      "\022M\n merge_tree_max_rows_to_use_cache\0304 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022" +
-      "N\n!merge_tree_max_bytes_to_use_cache\0305 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022" +
-      "T\n\'merge_tree_min_rows_for_concurrent_re" +
-      "ad\0306 \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
-      "\3071\002>0\022U\n(merge_tree_min_bytes_for_concur" +
-      "rent_read\0307 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\006\372\3071\002>0\022G\n\"max_bytes_before_externa" +
-      "l_group_by\030J \001(\0132\033.google.protobuf.Int64" +
-      "Value\022C\n\036max_bytes_before_external_sort\030" +
-      "K \001(\0132\033.google.protobuf.Int64Value\022A\n\034gr" +
-      "oup_by_two_level_threshold\030L \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022G\n\"group_by_two_le" +
-      "vel_threshold_bytes\030M \001(\0132\033.google.proto" +
-      "buf.Int64Value\0226\n\010priority\0308 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\013max_th" +
-      "reads\030\010 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\006\372\3071\002>0\022>\n\020max_memory_usage\030\013 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022G\n\031max_" +
-      "memory_usage_for_user\030\014 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022:\n\025max_network" +
-      "_bandwidth\0309 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022C\n\036max_network_bandwidth_for_user\030" +
-      ": \001(\0132\033.google.protobuf.Int64Value\0227\n\023fo" +
-      "rce_index_by_date\030; \001(\0132\032.google.protobu" +
-      "f.BoolValue\0225\n\021force_primary_key\030< \001(\0132\032" +
-      ".google.protobuf.BoolValue\022>\n\020max_rows_t" +
-      "o_read\030\r \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030\016 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022r" +
-      "ead_overflow_mode\030\017 \001(\01629.yandex.cloud.m" +
-      "db.clickhouse.v1.UserSettings.OverflowMo" +
-      "de\022B\n\024max_rows_to_group_by\030\020 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n\026group_" +
-      "by_overflow_mode\030\021 \001(\0162@.yandex.cloud.md" +
-      "b.clickhouse.v1.UserSettings.GroupByOver" +
-      "flowMode\022>\n\020max_rows_to_sort\030\022 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021max_" +
-      "bytes_to_sort\030\023 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022U\n\022sort_overflow_mode\030" +
-      "\024 \001(\01629.yandex.cloud.mdb.clickhouse.v1.U" +
-      "serSettings.OverflowMode\022=\n\017max_result_r" +
-      "ows\030\025 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n\024resul" +
-      "t_overflow_mode\030\027 \001(\01629.yandex.cloud.mdb" +
-      ".clickhouse.v1.UserSettings.OverflowMode" +
-      "\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_byte" +
-      "s_in_distinct\030\031 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022Y\n\026distinct_overflow_m" +
-      "ode\030\032 \001(\01629.yandex.cloud.mdb.clickhouse." +
-      "v1.UserSettings.OverflowMode\022B\n\024max_rows" +
-      "_to_transfer\030\033 \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to_transfe" +
-      "r\030\034 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022Y\n\026transfer_overflow_mode\030\035 \001(\01629." +
-      "yandex.cloud.mdb.clickhouse.v1.UserSetti" +
-      "ngs.OverflowMode\022@\n\022max_execution_time\030\036" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022X\n\025timeout_overflow_mode\030\037 \001(\01629.yand" +
-      "ex.cloud.mdb.clickhouse.v1.UserSettings." +
-      "OverflowMode\022A\n\023max_columns_to_read\030  \001(" +
+      "mdb.clickhouse.v1.UserSettings\"\242\001\n\nPermi" +
+      "ssion\022\025\n\rdatabase_name\030\001 \001(\t\022K\n\014data_fil" +
+      "ters\030\002 \003(\01325.yandex.cloud.mdb.clickhouse" +
+      ".v1.Permission.DataFilter\0320\n\nDataFilter\022" +
+      "\022\n\ntable_name\030\001 \001(\t\022\016\n\006filter\030\002 \001(\t\"\331\001\n\010" +
+      "UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r" +
+      "[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101" +
+      "\0058-128\022?\n\013permissions\030\003 \003(\0132*.yandex.clo" +
+      "ud.mdb.clickhouse.v1.Permission\022>\n\010setti" +
+      "ngs\030\004 \001(\0132,.yandex.cloud.mdb.clickhouse." +
+      "v1.UserSettings\"\230/\n\014UserSettings\0226\n\010read" +
+      "only\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\017" +
+      "connect_timeout\030\' \001(\0132\033.google.protobuf." +
+      "Int64ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
+      "\0229\n\014send_timeout\030) \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\006\372\3071\002>0\022F\n\025insert_quorum_tim" +
+      "eout\030\004 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\n\372\3071\006>=1000\022A\n\035select_sequential_consist" +
+      "ency\030\005 \001(\0132\032.google.protobuf.BoolValue\022Z" +
+      "\n)max_replica_delay_for_distributed_quer" +
+      "ies\030\006 \001(\0132\033.google.protobuf.Int64ValueB\n" +
+      "\372\3071\006>=1000\022V\n2fallback_to_stale_replicas" +
+      "_for_distributed_queries\030\007 \001(\0132\032.google." +
+      "protobuf.BoolValue\022O\n!replication_alter_" +
+      "partitions_sync\030* \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\0030-2\022e\n\030distributed_produ" +
+      "ct_mode\030+ \001(\0162C.yandex.cloud.mdb.clickho" +
+      "use.v1.UserSettings.DistributedProductMo" +
+      "de\022L\n(distributed_aggregation_memory_eff" +
+      "icient\030H \001(\0132\032.google.protobuf.BoolValue" +
+      "\022A\n\034distributed_ddl_task_timeout\030I \001(\0132\033" +
+      ".google.protobuf.Int64Value\022+\n\007compile\030," +
+      " \001(\0132\032.google.protobuf.BoolValue\022B\n\024min_" +
+      "count_to_compile\030- \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\0227\n\023compile_expressi" +
+      "ons\030. \001(\0132\032.google.protobuf.BoolValue\022M\n" +
+      "\037min_count_to_compile_expression\030/ \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016" +
+      "max_block_size\030\t \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022H\n\032min_insert_block_si" +
+      "ze_rows\0300 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022I\n\033min_insert_block_size_byt" +
+      "es\0301 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022B\n\025max_insert_block_size\030\n \001(\0132\033." +
+      "google.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032mi" +
+      "n_bytes_to_use_direct_io\0302 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\026use_unco" +
+      "mpressed_cache\0303 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022M\n merge_tree_max_rows_to_use_c" +
+      "ache\0304 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\022N\n!merge_tree_max_bytes_to_use_c" +
+      "ache\0305 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\022T\n\'merge_tree_min_rows_for_concu" +
+      "rrent_read\0306 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\006\372\3071\002>0\022U\n(merge_tree_min_bytes_fo" +
+      "r_concurrent_read\0307 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\006\372\3071\002>0\022G\n\"max_bytes_before" +
+      "_external_group_by\030J \001(\0132\033.google.protob" +
+      "uf.Int64Value\022C\n\036max_bytes_before_extern" +
+      "al_sort\030K \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022A\n\034group_by_two_level_threshold\030L \001(\013" +
+      "2\033.google.protobuf.Int64Value\022G\n\"group_b" +
+      "y_two_level_threshold_bytes\030M \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0226\n\010priority\0308 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0228" +
+      "\n\013max_threads\030\010 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\006\372\3071\002>0\022>\n\020max_memory_usage\030\013 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\022G\n\031max_memory_usage_for_user\030\014 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\025max" +
+      "_network_bandwidth\0309 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022C\n\036max_network_bandwidth_f" +
+      "or_user\030: \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0227\n\023force_index_by_date\030; \001(\0132\032.google" +
+      ".protobuf.BoolValue\0225\n\021force_primary_key" +
+      "\030< \001(\0132\032.google.protobuf.BoolValue\022>\n\020ma" +
+      "x_rows_to_read\030\r \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030" +
+      "\016 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\022U\n\022read_overflow_mode\030\017 \001(\01629.yandex" +
+      ".cloud.mdb.clickhouse.v1.UserSettings.Ov" +
+      "erflowMode\022B\n\024max_rows_to_group_by\030\020 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022`" +
+      "\n\026group_by_overflow_mode\030\021 \001(\0162@.yandex." +
+      "cloud.mdb.clickhouse.v1.UserSettings.Gro" +
+      "upByOverflowMode\022>\n\020max_rows_to_sort\030\022 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\022?\n\021max_bytes_to_sort\030\023 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022sort_overfl" +
+      "ow_mode\030\024 \001(\01629.yandex.cloud.mdb.clickho" +
+      "use.v1.UserSettings.OverflowMode\022=\n\017max_" +
+      "result_rows\030\025 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(" +
       "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "C\n\025max_temporary_columns\030! \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037max_temp" +
-      "orary_non_const_columns\030\" \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_query" +
-      "_size\030# \001(\0132\033.google.protobuf.Int64Value" +
-      "B\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020max_ast_" +
-      "elements\030% \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022F\n\031max_expanded_ast_elements" +
-      "\030& \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
-      "\002>0\022M\n)input_format_values_interpret_exp" +
-      "ressions\030= \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022L\n(input_format_defaults_for_omitted_" +
-      "fields\030> \001(\0132\032.google.protobuf.BoolValue" +
-      "\022K\n\'output_format_json_quote_64bit_integ" +
-      "ers\030? \001(\0132\032.google.protobuf.BoolValue\022F\n" +
-      "\"output_format_json_quote_denormals\030@ \001(" +
-      "\0132\032.google.protobuf.BoolValue\022J\n&low_car" +
-      "dinality_allow_in_native_format\030N \001(\0132\032." +
-      "google.protobuf.BoolValue\022M\n)empty_resul" +
-      "t_for_aggregation_by_empty_set\030O \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022<\n\027http_connect" +
-      "ion_timeout\030A \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0229\n\024http_receive_timeout\030B \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0226\n\021http_send_t" +
-      "imeout\030C \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022;\n\027enable_http_compression\030D \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022A\n\035send_progress_" +
-      "in_http_headers\030E \001(\0132\032.google.protobuf." +
-      "BoolValue\022C\n\036http_headers_progress_inter" +
-      "val\030F \001(\0132\033.google.protobuf.Int64Value\0228" +
-      "\n\024add_http_cors_header\030G \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\"_\n\014OverflowMode\022\035\n\031OVER" +
-      "FLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MODE" +
-      "_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023Gr" +
-      "oupByOverflowMode\022&\n\"GROUP_BY_OVERFLOW_M" +
-      "ODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW_M" +
-      "ODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_BR" +
-      "EAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"\322\001" +
-      "\n\026DistributedProductMode\022(\n$DISTRIBUTED_" +
-      "PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRIBUTE" +
-      "D_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED_PRO" +
-      "DUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRODUCT" +
-      "_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUCT_MO" +
-      "DE_ALLOW\020\004Bs\n\"yandex.cloud.api.mdb.click" +
-      "house.v1ZMgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
-      "ckhouseb\006proto3"
+      "W\n\024result_overflow_mode\030\027 \001(\01629.yandex.c" +
+      "loud.mdb.clickhouse.v1.UserSettings.Over" +
+      "flowMode\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025" +
+      "max_bytes_in_distinct\030\031 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\022Y\n\026distinct_ov" +
+      "erflow_mode\030\032 \001(\01629.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.UserSettings.OverflowMode\022B\n\024" +
+      "max_rows_to_transfer\030\033 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to" +
+      "_transfer\030\034 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022Y\n\026transfer_overflow_mode\030" +
+      "\035 \001(\01629.yandex.cloud.mdb.clickhouse.v1.U" +
+      "serSettings.OverflowMode\022@\n\022max_executio" +
+      "n_time\030\036 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022X\n\025timeout_overflow_mode\030\037 \001(" +
+      "\01629.yandex.cloud.mdb.clickhouse.v1.UserS" +
+      "ettings.OverflowMode\022A\n\023max_columns_to_r" +
+      "ead\030  \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\022C\n\025max_temporary_columns\030! \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037" +
+      "max_temporary_non_const_columns\030\" \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016m" +
+      "ax_query_size\030# \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020" +
+      "max_ast_elements\030% \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\006\372\3071\002>0\022F\n\031max_expanded_ast_" +
+      "elements\030& \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\006\372\3071\002>0\022M\n)input_format_values_inter" +
+      "pret_expressions\030= \001(\0132\032.google.protobuf" +
+      ".BoolValue\022L\n(input_format_defaults_for_" +
+      "omitted_fields\030> \001(\0132\032.google.protobuf.B" +
+      "oolValue\022K\n\'output_format_json_quote_64b" +
+      "it_integers\030? \001(\0132\032.google.protobuf.Bool" +
+      "Value\022F\n\"output_format_json_quote_denorm" +
+      "als\030@ \001(\0132\032.google.protobuf.BoolValue\022J\n" +
+      "&low_cardinality_allow_in_native_format\030" +
+      "N \001(\0132\032.google.protobuf.BoolValue\022M\n)emp" +
+      "ty_result_for_aggregation_by_empty_set\030O" +
+      " \001(\0132\032.google.protobuf.BoolValue\022<\n\027http" +
+      "_connection_timeout\030A \001(\0132\033.google.proto" +
+      "buf.Int64Value\0229\n\024http_receive_timeout\030B" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021htt" +
+      "p_send_timeout\030C \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022;\n\027enable_http_compression\030D \001" +
+      "(\0132\032.google.protobuf.BoolValue\022A\n\035send_p" +
+      "rogress_in_http_headers\030E \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022C\n\036http_headers_progre" +
+      "ss_interval\030F \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\024add_http_cors_header\030G \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\"_\n\014OverflowMode" +
+      "\022\035\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERF" +
+      "LOW_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020" +
+      "\002\"\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OV" +
+      "ERFLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OV" +
+      "ERFLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW" +
+      "_MODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_" +
+      "ANY\020\003\"\322\001\n\026DistributedProductMode\022(\n$DIST" +
+      "RIBUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DI" +
+      "STRIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIB" +
+      "UTED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED" +
+      "_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PR" +
+      "ODUCT_MODE_ALLOW\020\004Bs\n\"yandex.cloud.api.m" +
+      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/clickhous" +
+      "e/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23615,7 +24682,13 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_descriptor,
-        new java.lang.String[] { "DatabaseName", });
+        new java.lang.String[] { "DatabaseName", "DataFilters", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor =
+      internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_DataFilter_descriptor,
+        new java.lang.String[] { "TableName", "Filter", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSpec_fieldAccessorTable = new

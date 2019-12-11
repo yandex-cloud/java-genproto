@@ -10975,8 +10975,8 @@ public final class Clickhouse {
 
         /**
          * <pre>
-         * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+         * Mode of SSL TCP/IP connection to the PostgreSQL host.
+         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -10984,8 +10984,8 @@ public final class Clickhouse {
         int getSslModeValue();
         /**
          * <pre>
-         * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+         * Mode of SSL TCP/IP connection to the PostgreSQL host.
+         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -11134,22 +11134,42 @@ public final class Clickhouse {
            */
           SSL_MODE_UNSPECIFIED(0),
           /**
+           * <pre>
+           * Only try a non-SSL connection.
+           * </pre>
+           *
            * <code>DISABLE = 1;</code>
            */
           DISABLE(1),
           /**
+           * <pre>
+           * First try a non-SSL connection; if that fails, try an SSL connection.
+           * </pre>
+           *
            * <code>ALLOW = 2;</code>
            */
           ALLOW(2),
           /**
+           * <pre>
+           * First try an SSL connection; if that fails, try a non-SSL connection.
+           * </pre>
+           *
            * <code>PREFER = 3;</code>
            */
           PREFER(3),
           /**
+           * <pre>
+           * Only try an SSL connection, and verify that the server certificate is issued by a trusted certificate authority (CA).
+           * </pre>
+           *
            * <code>VERIFY_CA = 4;</code>
            */
           VERIFY_CA(4),
           /**
+           * <pre>
+           * Only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.
+           * </pre>
+           *
            * <code>VERIFY_FULL = 5;</code>
            */
           VERIFY_FULL(5),
@@ -11161,22 +11181,42 @@ public final class Clickhouse {
            */
           public static final int SSL_MODE_UNSPECIFIED_VALUE = 0;
           /**
+           * <pre>
+           * Only try a non-SSL connection.
+           * </pre>
+           *
            * <code>DISABLE = 1;</code>
            */
           public static final int DISABLE_VALUE = 1;
           /**
+           * <pre>
+           * First try a non-SSL connection; if that fails, try an SSL connection.
+           * </pre>
+           *
            * <code>ALLOW = 2;</code>
            */
           public static final int ALLOW_VALUE = 2;
           /**
+           * <pre>
+           * First try an SSL connection; if that fails, try a non-SSL connection.
+           * </pre>
+           *
            * <code>PREFER = 3;</code>
            */
           public static final int PREFER_VALUE = 3;
           /**
+           * <pre>
+           * Only try an SSL connection, and verify that the server certificate is issued by a trusted certificate authority (CA).
+           * </pre>
+           *
            * <code>VERIFY_CA = 4;</code>
            */
           public static final int VERIFY_CA_VALUE = 4;
           /**
+           * <pre>
+           * Only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.
+           * </pre>
+           *
            * <code>VERIFY_FULL = 5;</code>
            */
           public static final int VERIFY_FULL_VALUE = 5;
@@ -11533,8 +11573,8 @@ public final class Clickhouse {
         private int sslMode_;
         /**
          * <pre>
-         * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+         * Mode of SSL TCP/IP connection to the PostgreSQL host.
+         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -11544,8 +11584,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+         * Mode of SSL TCP/IP connection to the PostgreSQL host.
+         * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
          * </pre>
          *
          * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -12620,8 +12660,8 @@ public final class Clickhouse {
           private int sslMode_ = 0;
           /**
            * <pre>
-           * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+           * Mode of SSL TCP/IP connection to the PostgreSQL host.
+           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -12631,8 +12671,8 @@ public final class Clickhouse {
           }
           /**
            * <pre>
-           * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+           * Mode of SSL TCP/IP connection to the PostgreSQL host.
+           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -12644,8 +12684,8 @@ public final class Clickhouse {
           }
           /**
            * <pre>
-           * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+           * Mode of SSL TCP/IP connection to the PostgreSQL host.
+           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -12657,8 +12697,8 @@ public final class Clickhouse {
           }
           /**
            * <pre>
-           * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+           * Mode of SSL TCP/IP connection to the PostgreSQL host.
+           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>
@@ -12674,8 +12714,8 @@ public final class Clickhouse {
           }
           /**
            * <pre>
-           * Mode of SSL TCP/IP connection to the PostgreSQL host. There are six modes: `disable`, `allow`, `prefer` (default), `require`, `verify-ca`, `verify-full`.
-           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS).
+           * Mode of SSL TCP/IP connection to the PostgreSQL host.
+           * For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html).
            * </pre>
            *
            * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.PostgresqlSource.SslMode ssl_mode = 8;</code>

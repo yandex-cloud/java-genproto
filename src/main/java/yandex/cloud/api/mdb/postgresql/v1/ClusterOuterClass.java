@@ -9392,6 +9392,10 @@ public final class ClusterOuterClass {
        * <code>SYNC = 2;</code>
        */
       SYNC(2),
+      /**
+       * <code>QUORUM = 3;</code>
+       */
+      QUORUM(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -9411,6 +9415,10 @@ public final class ClusterOuterClass {
        * <code>SYNC = 2;</code>
        */
       public static final int SYNC_VALUE = 2;
+      /**
+       * <code>QUORUM = 3;</code>
+       */
+      public static final int QUORUM_VALUE = 3;
 
 
       public final int getNumber() {
@@ -9434,6 +9442,7 @@ public final class ClusterOuterClass {
           case 0: return REPLICA_TYPE_UNKNOWN;
           case 1: return ASYNC;
           case 2: return SYNC;
+          case 3: return QUORUM;
           default: return null;
         }
       }
@@ -16503,7 +16512,7 @@ public final class ClusterOuterClass {
       "\n\014pool_discard\030\002 \001(\0132\032.google.protobuf.B" +
       "oolValue\"X\n\013PoolingMode\022\034\n\030POOLING_MODE_" +
       "UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTIO" +
-      "N\020\002\022\r\n\tSTATEMENT\020\003\"\326\005\n\004Host\022\014\n\004name\030\001 \001(" +
+      "N\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n\004name\030\001 \001(" +
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<" +
       "\n\tresources\030\004 \001(\0132).yandex.cloud.mdb.pos" +
       "tgresql.v1.Resources\0227\n\004role\030\005 \001(\0162).yan" +
@@ -16518,35 +16527,35 @@ public final class ClusterOuterClass {
       "n_public_ip\030\014 \001(\010\022F\n\014replica_type\030\r \001(\0162" +
       "0.yandex.cloud.mdb.postgresql.v1.Host.Re" +
       "plicaType\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006M" +
-      "ASTER\020\001\022\013\n\007REPLICA\020\002\"<\n\013ReplicaType\022\030\n\024R" +
+      "ASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024R" +
       "EPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC" +
-      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\204\004\n\nHostConf" +
-      "ig\022_\n\025postgresql_config_9_6\030\001 \001(\0132>.yand" +
-      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
-      "esqlHostConfig9_6H\000\022c\n\027postgresql_config" +
-      "_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlHostConfig10_1CH\000" +
-      "\022]\n\024postgresql_config_10\030\002 \001(\0132=.yandex." +
-      "cloud.mdb.postgresql.v1.config.Postgresq" +
-      "lHostConfig10H\000\022]\n\024postgresql_config_11\030" +
-      "\003 \001(\0132=.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlHostConfig11H\000\022]\n\024postgr" +
-      "esql_config_12\030\005 \001(\0132=.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlHostConfi" +
-      "g12H\000B\023\n\021postgresql_config\"\362\001\n\007Service\022:" +
-      "\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.postgres" +
-      "ql.v1.Service.Type\022>\n\006health\030\002 \001(\0162..yan" +
-      "dex.cloud.mdb.postgresql.v1.Service.Heal" +
-      "th\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nPOST" +
-      "GRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Health\022\022\n\016HEALTH" +
-      "_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResou" +
-      "rces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk" +
-      "_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Acc" +
-      "ess\022\021\n\tdata_lens\030\001 \001(\010Bs\n\"yandex.cloud.a" +
-      "pi.mdb.postgresql.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/postg" +
-      "resql/v1;postgresqlb\006proto3"
+      "\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
+      "\204\004\n\nHostConfig\022_\n\025postgresql_config_9_6\030" +
+      "\001 \001(\0132>.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlHostConfig9_6H\000\022c\n\027postg" +
+      "resql_config_10_1c\030\004 \001(\0132@.yandex.cloud." +
+      "mdb.postgresql.v1.config.PostgresqlHostC" +
+      "onfig10_1CH\000\022]\n\024postgresql_config_10\030\002 \001" +
+      "(\0132=.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlHostConfig10H\000\022]\n\024postgresq" +
+      "l_config_11\030\003 \001(\0132=.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlHostConfig11" +
+      "H\000\022]\n\024postgresql_config_12\030\005 \001(\0132=.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig12H\000B\023\n\021postgresql_config\"\362" +
+      "\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud." +
+      "mdb.postgresql.v1.Service.Type\022>\n\006health" +
+      "\030\002 \001(\0162..yandex.cloud.mdb.postgresql.v1." +
+      "Service.Health\"8\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
+      "ED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Heal" +
+      "th\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEA" +
+      "D\020\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001" +
+      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030" +
+      "\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bs\n\"ya" +
+      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
