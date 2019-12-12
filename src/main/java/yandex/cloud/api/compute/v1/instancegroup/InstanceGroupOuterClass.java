@@ -15241,7 +15241,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -15249,7 +15249,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -15264,7 +15264,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -15273,7 +15273,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -15284,7 +15284,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -15830,7 +15830,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -15850,7 +15850,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -15861,7 +15861,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -15877,7 +15877,7 @@ public final class InstanceGroupOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -17031,7 +17031,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -17051,7 +17051,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -17062,7 +17062,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -17078,7 +17078,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -17102,7 +17102,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -17125,7 +17125,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -17141,7 +17141,7 @@ public final class InstanceGroupOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=128", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -37263,123 +37263,123 @@ public final class InstanceGroupOuterClass {
       "onB\t\372\3071\0050m-1h\"\207\001\n\020AllocationPolicy\022T\n\005zo" +
       "nes\030\001 \003(\0132<.yandex.cloud.compute.v1.inst" +
       "ancegroup.AllocationPolicy.ZoneB\007\202\3101\003>=1" +
-      "\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"\257\007\n\020Inst" +
+      "\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"\241\007\n\020Inst" +
       "anceTemplate\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<" +
-      "=256\022\224\001\n\006labels\030\002 \003(\0132C.yandex.cloud.com" +
+      "=256\022\206\001\n\006labels\030\002 \003(\0132C.yandex.cloud.com" +
       "pute.v1.instancegroup.InstanceTemplate.L" +
-      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\023\n\013p" +
-      "latform_id\030\003 \001(\t\022R\n\016resources_spec\030\004 \001(\013" +
-      "24.yandex.cloud.compute.v1.instancegroup" +
-      ".ResourcesSpecB\004\350\3071\001\022\216\001\n\010metadata\030\005 \003(\0132" +
-      "E.yandex.cloud.compute.v1.instancegroup." +
-      "InstanceTemplate.MetadataEntryB5\202\3101\005<=12" +
-      "8\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
-      "a-z]*\022U\n\016boot_disk_spec\030\006 \001(\01327.yandex.c" +
-      "loud.compute.v1.instancegroup.AttachedDi" +
-      "skSpecB\004\350\3071\001\022^\n\024secondary_disk_specs\030\007 \003" +
-      "(\01327.yandex.cloud.compute.v1.instancegro" +
-      "up.AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027network_" +
-      "interface_specs\030\010 \003(\0132;.yandex.cloud.com" +
-      "pute.v1.instancegroup.NetworkInterfaceSp" +
-      "ecB\005\202\3101\0011\022R\n\021scheduling_policy\030\t \001(\01327.y" +
-      "andex.cloud.compute.v1.instancegroup.Sch" +
-      "edulingPolicy\022\032\n\022service_account_id\030\n \001(" +
-      "\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006m" +
-      "emory\030\001 \001(\003B\022\372\3071\016<=274877906944\022[\n\005cores" +
-      "\030\002 \001(\003BL\372\3071H1,2,4,6,8,10,12,14,16,18,20," +
-      "22,24,26,28,30,32,34,36,40,44,48,52,56,6" +
-      "0,64\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20," +
-      "50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020At" +
-      "tachedDiskSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cl" +
+      "abelsEntryB1\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022\023\n\013platform_id\030\003 \001" +
+      "(\t\022R\n\016resources_spec\030\004 \001(\01324.yandex.clou" +
+      "d.compute.v1.instancegroup.ResourcesSpec" +
+      "B\004\350\3071\001\022\216\001\n\010metadata\030\005 \003(\0132E.yandex.cloud" +
+      ".compute.v1.instancegroup.InstanceTempla" +
+      "te.MetadataEntryB5\202\3101\005<=128\212\3101\010<=262144\262" +
+      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_" +
+      "disk_spec\030\006 \001(\01327.yandex.cloud.compute.v" +
+      "1.instancegroup.AttachedDiskSpecB\004\350\3071\001\022^" +
+      "\n\024secondary_disk_specs\030\007 \003(\01327.yandex.cl" +
       "oud.compute.v1.instancegroup.AttachedDis" +
-      "kSpec.ModeB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362" +
-      "\3071\026|[a-z][-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003" +
-      " \001(\0132@.yandex.cloud.compute.v1.instanceg" +
-      "roup.AttachedDiskSpec.DiskSpecB\004\350\3071\001\032\271\001\n" +
-      "\010DiskSpec\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=25" +
-      "6\022\025\n\007type_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031" +
-      "\372\3071\0254194304-4398046511104\022\034\n\010image_id\030\004 " +
-      "\001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\310" +
-      "1\004<=50H\000B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE" +
-      "_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WR" +
-      "ITE\020\002\"\366\001\n\024NetworkInterfaceSpec\022\022\n\nnetwor" +
-      "k_id\030\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primar" +
-      "y_v4_address_spec\030\003 \001(\01329.yandex.cloud.c" +
-      "ompute.v1.instancegroup.PrimaryAddressSp" +
-      "ec\022Z\n\027primary_v6_address_spec\030\004 \001(\01329.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Prim" +
-      "aryAddressSpec\"i\n\022PrimaryAddressSpec\022S\n\023" +
-      "one_to_one_nat_spec\030\001 \001(\01326.yandex.cloud" +
-      ".compute.v1.instancegroup.OneToOneNatSpe" +
-      "c\"W\n\017OneToOneNatSpec\022D\n\nip_version\030\001 \001(\016" +
-      "20.yandex.cloud.compute.v1.instancegroup" +
-      ".IpVersion\"\'\n\020SchedulingPolicy\022\023\n\013preemp" +
-      "tible\030\001 \001(\010\"e\n\020LoadBalancerSpec\022Q\n\021targe" +
-      "t_group_spec\030\001 \001(\01326.yandex.cloud.comput" +
-      "e.v1.instancegroup.TargetGroupSpec\"\247\002\n\017T" +
-      "argetGroupSpec\022/\n\004name\030\001 \001(\tB!\362\3071\035|[a-z]" +
-      "[-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\002" +
-      " \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\003 \003(\0132B.yande" +
-      "x.cloud.compute.v1.instancegroup.TargetG" +
-      "roupSpec.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
-      "a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"o\n\020HealthChecksSpec\022[\n\022heal" +
-      "th_check_specs\030\001 \003(\01326.yandex.cloud.comp" +
-      "ute.v1.instancegroup.HealthCheckSpecB\007\202\310" +
-      "1\003>=1\"\244\004\n\017HealthCheckSpec\0228\n\010interval\030\001 " +
-      "\001(\0132\031.google.protobuf.DurationB\013\372\3071\0071s-3" +
-      "00s\0226\n\007timeout\030\002 \001(\0132\031.google.protobuf.D" +
-      "urationB\n\372\3071\0061s-60s\0225\n\023unhealthy_thresho" +
-      "ld\030\003 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\0223\n\021he" +
-      "althy_threshold\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7" +
-      ",8,9,10\022X\n\013tcp_options\030\005 \001(\0132A.yandex.cl" +
-      "oud.compute.v1.instancegroup.HealthCheck" +
-      "Spec.TcpOptionsH\000\022Z\n\014http_options\030\006 \001(\0132" +
-      "B.yandex.cloud.compute.v1.instancegroup." +
-      "HealthCheckSpec.HttpOptionsH\000\032\'\n\nTcpOpti" +
-      "ons\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOp" +
-      "tions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path" +
-      "\030\002 \001(\tB\034\n\024health_check_options\022\004\300\3011\001\"\250\005\n" +
-      "\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002" +
-      " \001(\0162=.yandex.cloud.compute.v1.instanceg" +
-      "roup.ManagedInstance.Status\022\023\n\013instance_" +
-      "id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016" +
-      "status_message\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n" +
-      "\022network_interfaces\030\010 \003(\01327.yandex.cloud" +
-      ".compute.v1.instancegroup.NetworkInterfa" +
-      "ce\0225\n\021status_changed_at\030\t \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\"\323\002\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021U" +
-      "PDATING_INSTANCE\020\014\022\025\n\021DELETING_INSTANCE\020" +
-      "\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPING_INS" +
-      "TANCE\020\017\022\035\n\031AWAITING_STARTUP_DURATION\020\020\022\023" +
-      "\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022" +
-      "\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017CLOSIN" +
-      "G_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNI" +
-      "NG_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\"" +
-      "\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013m" +
-      "ac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022p" +
-      "rimary_v4_address\030\004 \001(\01325.yandex.cloud.c" +
-      "ompute.v1.instancegroup.PrimaryAddress\022Q" +
-      "\n\022primary_v6_address\030\005 \001(\01325.yandex.clou" +
-      "d.compute.v1.instancegroup.PrimaryAddres" +
-      "s\"m\n\016PrimaryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016" +
-      "one_to_one_nat\030\002 \001(\01322.yandex.cloud.comp" +
-      "ute.v1.instancegroup.OneToOneNat\"d\n\013OneT" +
-      "oOneNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_version\030\002" +
-      " \001(\01620.yandex.cloud.compute.v1.instanceg" +
-      "roup.IpVersion\"K\n\tLogRecord\022-\n\ttimestamp" +
-      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007me" +
-      "ssage\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_U" +
-      "NSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yan" +
-      "dex.cloud.api.compute.v1.instancegroupZW" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/compute/v1/instancegroup;instan" +
-      "cegroupb\006proto3"
+      "kSpecB\007\202\3101\003<=3\022c\n\027network_interface_spec" +
+      "s\030\010 \003(\0132;.yandex.cloud.compute.v1.instan" +
+      "cegroup.NetworkInterfaceSpecB\005\202\3101\0011\022R\n\021s" +
+      "cheduling_policy\030\t \001(\01327.yandex.cloud.co" +
+      "mpute.v1.instancegroup.SchedulingPolicy\022" +
+      "\032\n\022service_account_id\030\n \001(\t\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMe" +
+      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372" +
+      "\3071\016<=274877906944\022[\n\005cores\030\002 \001(\003BL\372\3071H1," +
+      "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30" +
+      ",32,34,36,40,44,48,52,56,60,64\022(\n\rcore_f" +
+      "raction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus" +
+      "\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020AttachedDiskSpec" +
+      "\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1" +
+      ".instancegroup.AttachedDiskSpec.ModeB\004\350\307" +
+      "1\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-" +
+      "9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex." +
+      "cloud.compute.v1.instancegroup.AttachedD" +
+      "iskSpec.DiskSpecB\004\350\3071\001\032\271\001\n\010DiskSpec\022\036\n\013d" +
+      "escription\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002" +
+      " \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\0254194304-43" +
+      "98046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H" +
+      "\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B\016\n\014so" +
+      "urce_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000" +
+      "\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n\024Netw" +
+      "orkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\n" +
+      "subnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_s" +
+      "pec\030\003 \001(\01329.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddressSpec\022Z\n\027primary_" +
+      "v6_address_spec\030\004 \001(\01329.yandex.cloud.com" +
+      "pute.v1.instancegroup.PrimaryAddressSpec" +
+      "\"i\n\022PrimaryAddressSpec\022S\n\023one_to_one_nat" +
+      "_spec\030\001 \001(\01326.yandex.cloud.compute.v1.in" +
+      "stancegroup.OneToOneNatSpec\"W\n\017OneToOneN" +
+      "atSpec\022D\n\nip_version\030\001 \001(\01620.yandex.clou" +
+      "d.compute.v1.instancegroup.IpVersion\"\'\n\020" +
+      "SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"e\n" +
+      "\020LoadBalancerSpec\022Q\n\021target_group_spec\030\001" +
+      " \001(\01326.yandex.cloud.compute.v1.instanceg" +
+      "roup.TargetGroupSpec\"\247\002\n\017TargetGroupSpec" +
+      "\022/\n\004name\030\001 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61" +
+      "}[a-z0-9]\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=25" +
+      "6\022\223\001\n\006labels\030\003 \003(\0132B.yandex.cloud.comput" +
+      "e.v1.instancegroup.TargetGroupSpec.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o" +
+      "\n\020HealthChecksSpec\022[\n\022health_check_specs" +
+      "\030\001 \003(\01326.yandex.cloud.compute.v1.instanc" +
+      "egroup.HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017Heal" +
+      "thCheckSpec\0228\n\010interval\030\001 \001(\0132\031.google.p" +
+      "rotobuf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout" +
+      "\030\002 \001(\0132\031.google.protobuf.DurationB\n\372\3071\0061" +
+      "s-60s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\024" +
+      "0,2,3,4,5,6,7,8,9,10\0223\n\021healthy_threshol" +
+      "d\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp" +
+      "_options\030\005 \001(\0132A.yandex.cloud.compute.v1" +
+      ".instancegroup.HealthCheckSpec.TcpOption" +
+      "sH\000\022Z\n\014http_options\030\006 \001(\0132B.yandex.cloud" +
+      ".compute.v1.instancegroup.HealthCheckSpe" +
+      "c.HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 " +
+      "\001(\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030" +
+      "\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024heal" +
+      "th_check_options\022\004\300\3011\001\"\250\005\n\017ManagedInstan" +
+      "ce\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex." +
+      "cloud.compute.v1.instancegroup.ManagedIn" +
+      "stance.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fq" +
+      "dn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message" +
+      "\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_inter" +
+      "faces\030\010 \003(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.NetworkInterface\0225\n\021status_c" +
+      "hanged_at\030\t \001(\0132\032.google.protobuf.Timest" +
+      "amp\"\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025" +
+      "\n\021CREATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTAN" +
+      "CE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_" +
+      "INSTANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWA" +
+      "ITING_STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEA" +
+      "LTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_W" +
+      "ARMUP_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n" +
+      "\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022" +
+      "\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInt" +
+      "erface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001" +
+      "(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_addr" +
+      "ess\030\004 \001(\01325.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddress\022Q\n\022primary_v6_a" +
+      "ddress\030\005 \001(\01325.yandex.cloud.compute.v1.i" +
+      "nstancegroup.PrimaryAddress\"m\n\016PrimaryAd" +
+      "dress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat" +
+      "\030\002 \001(\01322.yandex.cloud.compute.v1.instanc" +
+      "egroup.OneToOneNat\"d\n\013OneToOneNat\022\017\n\007add" +
+      "ress\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex." +
+      "cloud.compute.v1.instancegroup.IpVersion" +
+      "\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n" +
+      "\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010" +
+      "\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api." +
+      "compute.v1.instancegroupZWgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/compu" +
+      "te/v1/instancegroup;instancegroupb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
