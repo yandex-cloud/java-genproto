@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing jobs for Dataproc cluster.
+ * A set of methods for managing Data Proc jobs.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -151,14 +151,14 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing jobs for Dataproc cluster.
+   * A set of methods for managing Data Proc jobs.
    * </pre>
    */
   public static abstract class JobServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request,
@@ -168,7 +168,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Creates a job for Dataproc cluster.
+     * Creates a job for a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request,
@@ -178,7 +178,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified job.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request,
@@ -215,7 +215,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing jobs for Dataproc cluster.
+   * A set of methods for managing Data Proc jobs.
    * </pre>
    */
   public static final class JobServiceStub extends io.grpc.stub.AbstractStub<JobServiceStub> {
@@ -236,7 +236,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for a cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request,
@@ -247,7 +247,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Creates a job for Dataproc cluster.
+     * Creates a job for a cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request,
@@ -258,7 +258,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified job.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request,
@@ -270,7 +270,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing jobs for Dataproc cluster.
+   * A set of methods for managing Data Proc jobs.
    * </pre>
    */
   public static final class JobServiceBlockingStub extends io.grpc.stub.AbstractStub<JobServiceBlockingStub> {
@@ -291,7 +291,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for a cluster.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse list(yandex.cloud.api.dataproc.v1.PHJS.ListJobsRequest request) {
@@ -301,7 +301,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Creates a job for Dataproc cluster.
+     * Creates a job for a cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dataproc.v1.PHJS.CreateJobRequest request) {
@@ -311,7 +311,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified job.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.Job get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request) {
@@ -322,7 +322,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing jobs for Dataproc cluster.
+   * A set of methods for managing Data Proc jobs.
    * </pre>
    */
   public static final class JobServiceFutureStub extends io.grpc.stub.AbstractStub<JobServiceFutureStub> {
@@ -343,7 +343,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.PHJS.ListJobsResponse> list(
@@ -354,7 +354,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Creates a job for Dataproc cluster.
+     * Creates a job for a cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -365,7 +365,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified job.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.PHJ.Job> get(

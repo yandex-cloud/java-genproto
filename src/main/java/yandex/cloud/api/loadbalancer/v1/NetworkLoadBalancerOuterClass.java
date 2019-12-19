@@ -882,6 +882,14 @@ public final class NetworkLoadBalancerOuterClass {
        * <code>EXTERNAL = 1;</code>
        */
       EXTERNAL(1),
+      /**
+       * <pre>
+       * Internal network load balancer.
+       * </pre>
+       *
+       * <code>INTERNAL = 2;</code>
+       */
+      INTERNAL(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -897,6 +905,14 @@ public final class NetworkLoadBalancerOuterClass {
        * <code>EXTERNAL = 1;</code>
        */
       public static final int EXTERNAL_VALUE = 1;
+      /**
+       * <pre>
+       * Internal network load balancer.
+       * </pre>
+       *
+       * <code>INTERNAL = 2;</code>
+       */
+      public static final int INTERNAL_VALUE = 2;
 
 
       public final int getNumber() {
@@ -919,6 +935,7 @@ public final class NetworkLoadBalancerOuterClass {
         switch (value) {
           case 0: return TYPE_UNSPECIFIED;
           case 1: return EXTERNAL;
+          case 2: return INTERNAL;
           default: return null;
         }
       }
@@ -5019,6 +5036,24 @@ public final class NetworkLoadBalancerOuterClass {
      * <code>int64 target_port = 5;</code>
      */
     long getTargetPort();
+
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 6;</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
   }
   /**
    * <pre>
@@ -5042,6 +5077,7 @@ public final class NetworkLoadBalancerOuterClass {
       port_ = 0L;
       protocol_ = 0;
       targetPort_ = 0L;
+      subnetId_ = "";
     }
 
     @java.lang.Override
@@ -5096,6 +5132,12 @@ public final class NetworkLoadBalancerOuterClass {
               targetPort_ = input.readInt64();
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5145,6 +5187,10 @@ public final class NetworkLoadBalancerOuterClass {
        * <code>TCP = 1;</code>
        */
       TCP(1),
+      /**
+       * <code>UDP = 2;</code>
+       */
+      UDP(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -5156,6 +5202,10 @@ public final class NetworkLoadBalancerOuterClass {
        * <code>TCP = 1;</code>
        */
       public static final int TCP_VALUE = 1;
+      /**
+       * <code>UDP = 2;</code>
+       */
+      public static final int UDP_VALUE = 2;
 
 
       public final int getNumber() {
@@ -5178,6 +5228,7 @@ public final class NetworkLoadBalancerOuterClass {
         switch (value) {
           case 0: return PROTOCOL_UNSPECIFIED;
           case 1: return TCP;
+          case 2: return UDP;
           default: return null;
         }
       }
@@ -5365,6 +5416,48 @@ public final class NetworkLoadBalancerOuterClass {
       return targetPort_;
     }
 
+    public static final int SUBNET_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 6;</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5394,6 +5487,9 @@ public final class NetworkLoadBalancerOuterClass {
       if (targetPort_ != 0L) {
         output.writeInt64(5, targetPort_);
       }
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subnetId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5421,6 +5517,9 @@ public final class NetworkLoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, targetPort_);
       }
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subnetId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5446,6 +5545,8 @@ public final class NetworkLoadBalancerOuterClass {
       result = result && protocol_ == other.protocol_;
       result = result && (getTargetPort()
           == other.getTargetPort());
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5469,6 +5570,8 @@ public final class NetworkLoadBalancerOuterClass {
       hash = (37 * hash) + TARGET_PORT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTargetPort());
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5616,6 +5719,8 @@ public final class NetworkLoadBalancerOuterClass {
 
         targetPort_ = 0L;
 
+        subnetId_ = "";
+
         return this;
       }
 
@@ -5647,6 +5752,7 @@ public final class NetworkLoadBalancerOuterClass {
         result.port_ = port_;
         result.protocol_ = protocol_;
         result.targetPort_ = targetPort_;
+        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -5711,6 +5817,10 @@ public final class NetworkLoadBalancerOuterClass {
         }
         if (other.getTargetPort() != 0L) {
           setTargetPort(other.getTargetPort());
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6056,6 +6166,95 @@ public final class NetworkLoadBalancerOuterClass {
       public Builder clearTargetPort() {
         
         targetPort_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 6;</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 6;</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 6;</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 6;</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
         onChanged();
         return this;
       }
@@ -7226,7 +7425,7 @@ public final class NetworkLoadBalancerOuterClass {
       "ancer.v1\032\037google/protobuf/timestamp.prot" +
       "o\032\035yandex/cloud/validation.proto\032/yandex" +
       "/cloud/loadbalancer/v1/health_check.prot" +
-      "o\"\217\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "o\"\235\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022M\n\006labels\030\006 \003(\0132=.ya" +
@@ -7245,29 +7444,30 @@ public final class NetworkLoadBalancerOuterClass {
       " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\177\n\006Status\022\026\n\022STA" +
       "TUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010START" +
       "ING\020\002\022\n\n\006ACTIVE\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPP" +
-      "ED\020\005\022\014\n\010DELETING\020\006\022\014\n\010INACTIVE\020\007\"*\n\004Type" +
-      "\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010EXTERNAL\020\001\"M\n\017" +
-      "SessionAffinity\022 \n\034SESSION_AFFINITY_UNSP" +
-      "ECIFIED\020\000\022\030\n\024CLIENT_IP_PORT_PROTO\020\001\"\205\001\n\023" +
-      "AttachedTargetGroup\022%\n\017target_group_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\rhealth_checks\030\002 \003(" +
-      "\0132).yandex.cloud.loadbalancer.v1.HealthC" +
-      "heckB\005\202\3101\0011\"\276\001\n\010Listener\022\014\n\004name\030\001 \001(\t\022\017" +
-      "\n\007address\030\002 \001(\t\022\014\n\004port\030\003 \001(\003\022A\n\010protoco" +
-      "l\030\004 \001(\0162/.yandex.cloud.loadbalancer.v1.L" +
-      "istener.Protocol\022\023\n\013target_port\030\005 \001(\003\"-\n" +
-      "\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\007\n\003T" +
-      "CP\020\001\"\332\001\n\013TargetState\022\021\n\tsubnet_id\030\001 \001(\t\022" +
-      "\017\n\007address\030\002 \001(\t\022@\n\006status\030\003 \001(\01620.yande" +
-      "x.cloud.loadbalancer.v1.TargetState.Stat" +
-      "us\"e\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007" +
-      "INITIAL\020\001\022\013\n\007HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n" +
-      "\010DRAINING\020\004\022\014\n\010INACTIVE\020\005*;\n\tIpVersion\022\032" +
-      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
-      "IPV6\020\002Bq\n yandex.cloud.api.loadbalancer." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/loadbalancer/v1;loadbalance" +
-      "rb\006proto3"
+      "ED\020\005\022\014\n\010DELETING\020\006\022\014\n\010INACTIVE\020\007\"8\n\004Type" +
+      "\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010EXTERNAL\020\001\022\014\n\010" +
+      "INTERNAL\020\002\"M\n\017SessionAffinity\022 \n\034SESSION" +
+      "_AFFINITY_UNSPECIFIED\020\000\022\030\n\024CLIENT_IP_POR" +
+      "T_PROTO\020\001\"\205\001\n\023AttachedTargetGroup\022%\n\017tar" +
+      "get_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\rheal" +
+      "th_checks\030\002 \003(\0132).yandex.cloud.loadbalan" +
+      "cer.v1.HealthCheckB\005\202\3101\0011\"\332\001\n\010Listener\022\014" +
+      "\n\004name\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022\014\n\004port\030\003 " +
+      "\001(\003\022A\n\010protocol\030\004 \001(\0162/.yandex.cloud.loa" +
+      "dbalancer.v1.Listener.Protocol\022\023\n\013target" +
+      "_port\030\005 \001(\003\022\021\n\tsubnet_id\030\006 \001(\t\"6\n\010Protoc" +
+      "ol\022\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\007\n\003TCP\020\001\022\007\n" +
+      "\003UDP\020\002\"\332\001\n\013TargetState\022\021\n\tsubnet_id\030\001 \001(" +
+      "\t\022\017\n\007address\030\002 \001(\t\022@\n\006status\030\003 \001(\01620.yan" +
+      "dex.cloud.loadbalancer.v1.TargetState.St" +
+      "atus\"e\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013" +
+      "\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022" +
+      "\014\n\010DRAINING\020\004\022\014\n\010INACTIVE\020\005*;\n\tIpVersion" +
+      "\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010" +
+      "\n\004IPV6\020\002Bq\n yandex.cloud.api.loadbalance" +
+      "r.v1ZMgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/loadbalancer/v1;loadbalan" +
+      "cerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7307,7 +7507,7 @@ public final class NetworkLoadBalancerOuterClass {
     internal_static_yandex_cloud_loadbalancer_v1_Listener_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadbalancer_v1_Listener_descriptor,
-        new java.lang.String[] { "Name", "Address", "Port", "Protocol", "TargetPort", });
+        new java.lang.String[] { "Name", "Address", "Port", "Protocol", "TargetPort", "SubnetId", });
     internal_static_yandex_cloud_loadbalancer_v1_TargetState_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_loadbalancer_v1_TargetState_fieldAccessorTable = new

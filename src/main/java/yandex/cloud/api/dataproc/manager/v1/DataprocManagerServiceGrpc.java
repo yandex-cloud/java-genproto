@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Dataproc manager service defifnition
+ * Data Proc manager service defifnition
  * </pre>
  */
 @javax.annotation.Generated(
@@ -87,7 +87,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Dataproc manager service defifnition
+   * Data Proc manager service defifnition
    * </pre>
    */
   public static abstract class DataprocManagerServiceImplBase implements io.grpc.BindableService {
@@ -117,7 +117,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Dataproc manager service defifnition
+   * Data Proc manager service defifnition
    * </pre>
    */
   public static final class DataprocManagerServiceStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceStub> {
@@ -150,7 +150,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Dataproc manager service defifnition
+   * Data Proc manager service defifnition
    * </pre>
    */
   public static final class DataprocManagerServiceBlockingStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Dataproc manager service defifnition
+   * Data Proc manager service defifnition
    * </pre>
    */
   public static final class DataprocManagerServiceFutureStub extends io.grpc.stub.AbstractStub<DataprocManagerServiceFutureStub> {

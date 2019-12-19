@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing serverless functions.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -595,10 +598,17 @@ public final class FunctionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless functions.
+   * </pre>
    */
   public static abstract class FunctionServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified function.
+     * To get the list of all available functions, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> responseObserver) {
@@ -606,6 +616,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of functions in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> responseObserver) {
@@ -613,6 +626,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a function in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -620,6 +636,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified function.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -627,6 +646,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified function.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -634,6 +656,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified version of a function.
+     * To get the list of available version, make a [ListVersions] request.
+     * </pre>
      */
     public void getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
@@ -641,6 +667,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns all versions with the specified tag.
+     * To get the list of all available versions, make a [ListVersions] request.
+     * </pre>
      */
     public void getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
@@ -648,6 +678,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of versions for the specified function, or of all function versions
+     * in the specified folder.
+     * </pre>
      */
     public void listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> responseObserver) {
@@ -655,6 +689,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Set a tag for the specified version of a function.
+     * </pre>
      */
     public void setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -662,6 +699,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Remove a tag from the specified version of a function.
+     * </pre>
      */
     public void removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -669,6 +709,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the log of tags assigned to versions of the specified function.
+     * </pre>
      */
     public void listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> responseObserver) {
@@ -676,6 +719,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a version for the specified function.
+     * </pre>
      */
     public void createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -683,6 +729,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists available runtime environments for the specified function.
+     * </pre>
      */
     public void listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> responseObserver) {
@@ -690,6 +739,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified function.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> responseObserver) {
@@ -697,6 +749,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified function.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -704,6 +759,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the function.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -711,6 +769,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified function.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -843,6 +904,9 @@ public final class FunctionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless functions.
+   * </pre>
    */
   public static final class FunctionServiceStub extends io.grpc.stub.AbstractStub<FunctionServiceStub> {
     private FunctionServiceStub(io.grpc.Channel channel) {
@@ -861,6 +925,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified function.
+     * To get the list of all available functions, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> responseObserver) {
@@ -869,6 +937,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of functions in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> responseObserver) {
@@ -877,6 +948,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a function in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -885,6 +959,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified function.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -893,6 +970,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified function.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -901,6 +981,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified version of a function.
+     * To get the list of available version, make a [ListVersions] request.
+     * </pre>
      */
     public void getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
@@ -909,6 +993,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns all versions with the specified tag.
+     * To get the list of all available versions, make a [ListVersions] request.
+     * </pre>
      */
     public void getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> responseObserver) {
@@ -917,6 +1005,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of versions for the specified function, or of all function versions
+     * in the specified folder.
+     * </pre>
      */
     public void listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> responseObserver) {
@@ -925,6 +1017,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Set a tag for the specified version of a function.
+     * </pre>
      */
     public void setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -933,6 +1028,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Remove a tag from the specified version of a function.
+     * </pre>
      */
     public void removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -941,6 +1039,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the log of tags assigned to versions of the specified function.
+     * </pre>
      */
     public void listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> responseObserver) {
@@ -949,6 +1050,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a version for the specified function.
+     * </pre>
      */
     public void createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -957,6 +1061,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists available runtime environments for the specified function.
+     * </pre>
      */
     public void listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> responseObserver) {
@@ -965,6 +1072,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified function.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> responseObserver) {
@@ -973,6 +1083,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified function.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -981,6 +1094,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the function.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -989,6 +1105,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified function.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -998,6 +1117,9 @@ public final class FunctionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless functions.
+   * </pre>
    */
   public static final class FunctionServiceBlockingStub extends io.grpc.stub.AbstractStub<FunctionServiceBlockingStub> {
     private FunctionServiceBlockingStub(io.grpc.Channel channel) {
@@ -1016,6 +1138,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified function.
+     * To get the list of all available functions, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function get(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request) {
       return blockingUnaryCall(
@@ -1023,6 +1149,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of functions in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse list(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request) {
       return blockingUnaryCall(
@@ -1030,6 +1159,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a function in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request) {
       return blockingUnaryCall(
@@ -1037,6 +1169,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request) {
       return blockingUnaryCall(
@@ -1044,6 +1179,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request) {
       return blockingUnaryCall(
@@ -1051,6 +1189,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified version of a function.
+     * To get the list of available version, make a [ListVersions] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request) {
       return blockingUnaryCall(
@@ -1058,6 +1200,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns all versions with the specified tag.
+     * To get the list of all available versions, make a [ListVersions] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersionByTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request) {
       return blockingUnaryCall(
@@ -1065,6 +1211,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of versions for the specified function, or of all function versions
+     * in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse listVersions(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request) {
       return blockingUnaryCall(
@@ -1072,6 +1222,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Set a tag for the specified version of a function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request) {
       return blockingUnaryCall(
@@ -1079,6 +1232,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Remove a tag from the specified version of a function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeTag(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request) {
       return blockingUnaryCall(
@@ -1086,6 +1242,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the log of tags assigned to versions of the specified function.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse listTagHistory(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request) {
       return blockingUnaryCall(
@@ -1093,6 +1252,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a version for the specified function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation createVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request) {
       return blockingUnaryCall(
@@ -1100,6 +1262,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists available runtime environments for the specified function.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse listRuntimes(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request) {
       return blockingUnaryCall(
@@ -1107,6 +1272,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified function.
+     * </pre>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse listOperations(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request) {
       return blockingUnaryCall(
@@ -1114,6 +1282,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified function.
+     * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -1121,6 +1292,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -1128,6 +1302,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified function.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -1136,6 +1313,9 @@ public final class FunctionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing serverless functions.
+   * </pre>
    */
   public static final class FunctionServiceFutureStub extends io.grpc.stub.AbstractStub<FunctionServiceFutureStub> {
     private FunctionServiceFutureStub(io.grpc.Channel channel) {
@@ -1154,6 +1334,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified function.
+     * To get the list of all available functions, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> get(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionRequest request) {
@@ -1162,6 +1346,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of functions in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsResponse> list(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsRequest request) {
@@ -1170,6 +1357,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a function in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionRequest request) {
@@ -1178,6 +1368,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.UpdateFunctionRequest request) {
@@ -1186,6 +1379,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionRequest request) {
@@ -1194,6 +1390,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified version of a function.
+     * To get the list of available version, make a [ListVersions] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersion(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionRequest request) {
@@ -1202,6 +1402,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns all versions with the specified tag.
+     * To get the list of all available versions, make a [ListVersions] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersionByTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.GetFunctionVersionByTagRequest request) {
@@ -1210,6 +1414,10 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of versions for the specified function, or of all function versions
+     * in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> listVersions(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest request) {
@@ -1218,6 +1426,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Set a tag for the specified version of a function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest request) {
@@ -1226,6 +1437,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Remove a tag from the specified version of a function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeTag(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveFunctionTagRequest request) {
@@ -1234,6 +1448,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the log of tags assigned to versions of the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse> listTagHistory(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryRequest request) {
@@ -1242,6 +1459,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a version for the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createVersion(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest request) {
@@ -1250,6 +1470,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists available runtime environments for the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesResponse> listRuntimes(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListRuntimesRequest request) {
@@ -1258,6 +1481,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsResponse> listOperations(
         yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionOperationsRequest request) {
@@ -1266,6 +1492,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -1274,6 +1503,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -1282,6 +1514,9 @@ public final class FunctionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified function.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {

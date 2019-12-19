@@ -20,23 +20,20 @@ public final class SubclusterOuterClass {
   public enum Role
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <pre>
-     * Host have undefined role
-     * </pre>
-     *
      * <code>ROLE_UNSPECIFIED = 0;</code>
      */
     ROLE_UNSPECIFIED(0),
     /**
      * <pre>
-     * Masternode includes these services (depends on given component list)
-     * * HDFS Namenode, Secondary Namenode,
-     * * YARN ResorceManager, Timeline Server,
-     * * Zookeeper,
-     * * Hive Server, Hive Metastore, HCatalog
-     * * HBase Master,
-     * * Spark History Server,
+     * The subcluster fulfills the master role.
+     * Master can run the following services, depending on the requested components:
+     * * HDFS: Namenode, Secondary Namenode
+     * * YARN: ResourceManager, Timeline Server
+     * * HBase Master
+     * * Hive: Server, Metastore, HCatalog
+     * * Spark History Server
      * * Zeppelin
+     * * Zookeeper
      * </pre>
      *
      * <code>MASTERNODE = 1;</code>
@@ -44,8 +41,9 @@ public final class SubclusterOuterClass {
     MASTERNODE(1),
     /**
      * <pre>
-     * Datanode includes these services (depends on given component list)
-     * * HDFS Datanode,
+     * The subcluster is a DATANODE in a Data Proc cluster.
+     * DATANODE can run the following services, depending on the requested components:
+     * * HDFS DataNode,
      * * YARN NodeManager,
      * * HBase RegionServer,
      * * Spark libraries.
@@ -56,7 +54,8 @@ public final class SubclusterOuterClass {
     DATANODE(2),
     /**
      * <pre>
-     * Computenodes includes these services (depends on given component list)
+     * The subcluster is a COMPUTENODE in a Data Proc cluster.
+     * COMPUTENODE can run the following services, depending on the requested components:
      * * YARN NodeManager.
      * * Spark libraries.
      * </pre>
@@ -68,23 +67,20 @@ public final class SubclusterOuterClass {
     ;
 
     /**
-     * <pre>
-     * Host have undefined role
-     * </pre>
-     *
      * <code>ROLE_UNSPECIFIED = 0;</code>
      */
     public static final int ROLE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Masternode includes these services (depends on given component list)
-     * * HDFS Namenode, Secondary Namenode,
-     * * YARN ResorceManager, Timeline Server,
-     * * Zookeeper,
-     * * Hive Server, Hive Metastore, HCatalog
-     * * HBase Master,
-     * * Spark History Server,
+     * The subcluster fulfills the master role.
+     * Master can run the following services, depending on the requested components:
+     * * HDFS: Namenode, Secondary Namenode
+     * * YARN: ResourceManager, Timeline Server
+     * * HBase Master
+     * * Hive: Server, Metastore, HCatalog
+     * * Spark History Server
      * * Zeppelin
+     * * Zookeeper
      * </pre>
      *
      * <code>MASTERNODE = 1;</code>
@@ -92,8 +88,9 @@ public final class SubclusterOuterClass {
     public static final int MASTERNODE_VALUE = 1;
     /**
      * <pre>
-     * Datanode includes these services (depends on given component list)
-     * * HDFS Datanode,
+     * The subcluster is a DATANODE in a Data Proc cluster.
+     * DATANODE can run the following services, depending on the requested components:
+     * * HDFS DataNode,
      * * YARN NodeManager,
      * * HBase RegionServer,
      * * Spark libraries.
@@ -104,7 +101,8 @@ public final class SubclusterOuterClass {
     public static final int DATANODE_VALUE = 2;
     /**
      * <pre>
-     * Computenodes includes these services (depends on given component list)
+     * The subcluster is a COMPUTENODE in a Data Proc cluster.
+     * COMPUTENODE can run the following services, depending on the requested components:
      * * YARN NodeManager.
      * * Spark libraries.
      * </pre>
@@ -194,8 +192,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+     * ID of the subcluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -203,8 +200,7 @@ public final class SubclusterOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+     * ID of the subcluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -214,8 +210,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -223,8 +218,7 @@ public final class SubclusterOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -234,7 +228,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -242,7 +236,7 @@ public final class SubclusterOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -250,7 +244,7 @@ public final class SubclusterOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -259,27 +253,25 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc subcluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the subcluster. The name is unique within the cluster.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc subcluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the subcluster. The name is unique within the cluster.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <pre>
-     * Role of all hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -287,7 +279,7 @@ public final class SubclusterOuterClass {
     int getRoleValue();
     /**
      * <pre>
-     * Role of all hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -296,7 +288,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -304,7 +296,7 @@ public final class SubclusterOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -312,7 +304,7 @@ public final class SubclusterOuterClass {
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -321,7 +313,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
@@ -329,7 +321,7 @@ public final class SubclusterOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
@@ -339,7 +331,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 8;</code>
@@ -348,8 +340,7 @@ public final class SubclusterOuterClass {
   }
   /**
    * <pre>
-   * A Dataproc Subcluster resource. For more information, see
-   * the [Concepts](/docs/data-proc/concepts) section of the documentation.
+   * A Data Proc subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Subcluster}
@@ -493,8 +484,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+     * ID of the subcluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -513,8 +503,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+     * ID of the subcluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -537,8 +526,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -557,8 +545,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -581,7 +568,7 @@ public final class SubclusterOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -591,7 +578,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -601,7 +588,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -614,11 +601,10 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc subcluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the subcluster. The name is unique within the cluster.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -634,11 +620,10 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc subcluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the subcluster. The name is unique within the cluster.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -658,7 +643,7 @@ public final class SubclusterOuterClass {
     private int role_;
     /**
      * <pre>
-     * Role of all hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -668,7 +653,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Role of all hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -683,7 +668,7 @@ public final class SubclusterOuterClass {
     private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -693,7 +678,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -703,7 +688,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -716,7 +701,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
@@ -735,7 +720,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 7;</code>
@@ -758,7 +743,7 @@ public final class SubclusterOuterClass {
     private long hostsCount_;
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 8;</code>
@@ -1008,8 +993,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * A Dataproc Subcluster resource. For more information, see
-     * the [Concepts](/docs/data-proc/concepts) section of the documentation.
+     * A Data Proc subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Subcluster}
@@ -1223,8 +1207,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+       * ID of the subcluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1243,8 +1226,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+       * ID of the subcluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1264,8 +1246,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+       * ID of the subcluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1282,8 +1263,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+       * ID of the subcluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1296,8 +1276,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc subcluster.
+       * ID of the subcluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1317,8 +1296,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1337,8 +1315,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1358,8 +1335,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1376,8 +1352,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1390,8 +1365,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc in the process of creating Dataproc cluster.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1413,7 +1387,7 @@ public final class SubclusterOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1423,7 +1397,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1437,7 +1411,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1457,7 +1431,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1475,7 +1449,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1497,7 +1471,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1515,7 +1489,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1527,7 +1501,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1542,7 +1516,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1564,11 +1538,10 @@ public final class SubclusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc subcluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the subcluster. The name is unique within the cluster.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1584,11 +1557,10 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the subcluster. The name is unique within the cluster.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1605,11 +1577,10 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the subcluster. The name is unique within the cluster.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -1623,11 +1594,10 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the subcluster. The name is unique within the cluster.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder clearName() {
         
@@ -1637,11 +1607,10 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the subcluster. The name is unique within the cluster.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1658,7 +1627,7 @@ public final class SubclusterOuterClass {
       private int role_ = 0;
       /**
        * <pre>
-       * Role of all hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -1668,7 +1637,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of all hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -1680,7 +1649,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of all hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -1692,7 +1661,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of all hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -1708,7 +1677,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of all hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -1725,7 +1694,7 @@ public final class SubclusterOuterClass {
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1735,7 +1704,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1749,7 +1718,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1769,7 +1738,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1787,7 +1756,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1809,7 +1778,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1827,7 +1796,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1839,7 +1808,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1854,7 +1823,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 6;</code>
@@ -1876,7 +1845,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
@@ -1895,7 +1864,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
@@ -1915,7 +1884,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
@@ -1932,7 +1901,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
@@ -1945,7 +1914,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 7;</code>
@@ -1965,7 +1934,7 @@ public final class SubclusterOuterClass {
       private long hostsCount_ ;
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 8;</code>
@@ -1975,7 +1944,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 8;</code>
@@ -1988,7 +1957,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 8;</code>
@@ -2058,9 +2027,9 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-     * 1-63 characters long.
-     * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+     * and cannot be changed. The name is generated to be unique across all existing Data Proc
+     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2068,9 +2037,9 @@ public final class SubclusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-     * 1-63 characters long.
-     * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+     * and cannot be changed. The name is generated to be unique across all existing Data Proc
+     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2080,7 +2049,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -2088,7 +2057,7 @@ public final class SubclusterOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -2098,7 +2067,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Host status code.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -2106,7 +2075,7 @@ public final class SubclusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Host status code.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -2115,7 +2084,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of compute instance appropriated to the Dataproc host.
+     * ID of the Compute virtual machine that is used as the Data Proc host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -2123,7 +2092,7 @@ public final class SubclusterOuterClass {
     java.lang.String getComputeInstanceId();
     /**
      * <pre>
-     * ID of compute instance appropriated to the Dataproc host.
+     * ID of the Compute virtual machine that is used as the Data Proc host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -2133,7 +2102,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Role of current host in cluster.
+     * Role of the host in the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -2141,7 +2110,7 @@ public final class SubclusterOuterClass {
     int getRoleValue();
     /**
      * <pre>
-     * Role of current host in cluster.
+     * Role of the host in the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -2150,8 +2119,7 @@ public final class SubclusterOuterClass {
   }
   /**
    * <pre>
-   * A Dataproc Host resource. For more information, see
-   * the [Concepts](/docs/data-proc/concepts) section of the documentation.
+   * A Data Proc host resource. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Host}
@@ -2263,9 +2231,9 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-     * 1-63 characters long.
-     * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+     * and cannot be changed. The name is generated to be unique across all existing Data Proc
+     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2284,9 +2252,9 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-     * 1-63 characters long.
-     * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+     * and cannot be changed. The name is generated to be unique across all existing Data Proc
+     * hosts in Yandex.Cloud, as it defines the FQDN of the host.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -2309,7 +2277,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -2328,7 +2296,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -2351,7 +2319,7 @@ public final class SubclusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Host status code.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -2361,7 +2329,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Host status code.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -2376,7 +2344,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object computeInstanceId_;
     /**
      * <pre>
-     * ID of compute instance appropriated to the Dataproc host.
+     * ID of the Compute virtual machine that is used as the Data Proc host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -2395,7 +2363,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of compute instance appropriated to the Dataproc host.
+     * ID of the Compute virtual machine that is used as the Data Proc host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -2418,7 +2386,7 @@ public final class SubclusterOuterClass {
     private int role_;
     /**
      * <pre>
-     * Role of current host in cluster.
+     * Role of the host in the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -2428,7 +2396,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Role of current host in cluster.
+     * Role of the host in the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -2636,8 +2604,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * A Dataproc Host resource. For more information, see
-     * the [Concepts](/docs/data-proc/concepts) section of the documentation.
+     * A Data Proc host resource. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Host}
@@ -2816,9 +2783,9 @@ public final class SubclusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-       * 1-63 characters long.
-       * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+       * and cannot be changed. The name is generated to be unique across all existing Data Proc
+       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2837,9 +2804,9 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-       * 1-63 characters long.
-       * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+       * and cannot be changed. The name is generated to be unique across all existing Data Proc
+       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2859,9 +2826,9 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-       * 1-63 characters long.
-       * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+       * and cannot be changed. The name is generated to be unique across all existing Data Proc
+       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2878,9 +2845,9 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-       * 1-63 characters long.
-       * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+       * and cannot be changed. The name is generated to be unique across all existing Data Proc
+       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2893,9 +2860,9 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc host. The host name is assigned by Dataproc at creation time, and cannot be changed.
-       * 1-63 characters long.
-       * The name is unique across all existing Dataproc hosts in Yandex.Cloud, as it defines the FQDN of the host.
+       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
+       * and cannot be changed. The name is generated to be unique across all existing Data Proc
+       * hosts in Yandex.Cloud, as it defines the FQDN of the host.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2915,7 +2882,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -2934,7 +2901,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -2954,7 +2921,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -2971,7 +2938,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -2984,7 +2951,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of Dataproc subcluster host. The ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -3004,7 +2971,7 @@ public final class SubclusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Host status code.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -3014,7 +2981,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Host status code.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -3026,7 +2993,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Host status code.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -3038,7 +3005,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Host status code.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -3054,7 +3021,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Host status code.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Health health = 3;</code>
@@ -3069,7 +3036,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object computeInstanceId_ = "";
       /**
        * <pre>
-       * ID of compute instance appropriated to the Dataproc host.
+       * ID of the Compute virtual machine that is used as the Data Proc host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -3088,7 +3055,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of compute instance appropriated to the Dataproc host.
+       * ID of the Compute virtual machine that is used as the Data Proc host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -3108,7 +3075,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of compute instance appropriated to the Dataproc host.
+       * ID of the Compute virtual machine that is used as the Data Proc host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -3125,7 +3092,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of compute instance appropriated to the Dataproc host.
+       * ID of the Compute virtual machine that is used as the Data Proc host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -3138,7 +3105,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of compute instance appropriated to the Dataproc host.
+       * ID of the Compute virtual machine that is used as the Data Proc host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -3158,7 +3125,7 @@ public final class SubclusterOuterClass {
       private int role_ = 0;
       /**
        * <pre>
-       * Role of current host in cluster.
+       * Role of the host in the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -3168,7 +3135,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of current host in cluster.
+       * Role of the host in the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -3180,7 +3147,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of current host in cluster.
+       * Role of the host in the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -3192,7 +3159,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of current host in cluster.
+       * Role of the host in the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -3208,7 +3175,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Role of current host in cluster.
+       * Role of the host in the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 5;</code>
@@ -3294,22 +3261,23 @@ public final class SubclusterOuterClass {
       "\n)yandex/cloud/dataproc/v1/subcluster.pr" +
       "oto\022\030yandex.cloud.dataproc.v1\032\037google/pr" +
       "otobuf/timestamp.proto\032%yandex/cloud/dat" +
-      "aproc/v1/common.proto\"\370\001\n\nSubcluster\022\n\n\002" +
-      "id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_" +
-      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
-      "name\030\004 \001(\t\022,\n\004role\030\005 \001(\0162\036.yandex.cloud." +
-      "dataproc.v1.Role\0226\n\tresources\030\006 \001(\0132#.ya" +
-      "ndex.cloud.dataproc.v1.Resources\022\021\n\tsubn" +
-      "et_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\"\250\001\n\004Hos" +
-      "t\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\0220" +
-      "\n\006health\030\003 \001(\0162 .yandex.cloud.dataproc.v" +
-      "1.Health\022\033\n\023compute_instance_id\030\004 \001(\t\022,\n" +
-      "\004role\030\005 \001(\0162\036.yandex.cloud.dataproc.v1.R" +
-      "ole*K\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMAS" +
-      "TERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020\003" +
-      "Be\n\034yandex.cloud.api.dataproc.v1ZEgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/dataproc/v1;dataprocb\006proto3"
+      "aproc/v1/common.proto\032\035yandex/cloud/vali" +
+      "dation.proto\"\202\002\n\nSubcluster\022\n\n\002id\030\001 \001(\t\022" +
+      "\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\026\n\004name\030\004 \001(" +
+      "\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex.cloud" +
+      ".dataproc.v1.Role\0226\n\tresources\030\006 \001(\0132#.y" +
+      "andex.cloud.dataproc.v1.Resources\022\021\n\tsub" +
+      "net_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\"\250\001\n\004Ho" +
+      "st\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\022" +
+      "0\n\006health\030\003 \001(\0162 .yandex.cloud.dataproc." +
+      "v1.Health\022\033\n\023compute_instance_id\030\004 \001(\t\022," +
+      "\n\004role\030\005 \001(\0162\036.yandex.cloud.dataproc.v1." +
+      "Role*K\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMA" +
+      "STERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020" +
+      "\003Be\n\034yandex.cloud.api.dataproc.v1ZEgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/dataproc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3324,6 +3292,7 @@ public final class SubclusterOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.dataproc.v1.Common.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3337,8 +3306,14 @@ public final class SubclusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Host_descriptor,
         new java.lang.String[] { "Name", "SubclusterId", "Health", "ComputeInstanceId", "Role", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.dataproc.v1.Common.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

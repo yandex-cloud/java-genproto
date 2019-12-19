@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing Dataproc subclusters.
+ * A set of methods for managing Data Proc subclusters.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -215,15 +215,15 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc subclusters.
+   * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
   public static abstract class SubclusterServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Dataproc subcluster resource.
-     * To get the list of available Dataproc subcluster resources, make a [List] request.
+     * Returns the specified subcluster.
+     * To get the list of all available subclusters, make a [SubclusterService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request,
@@ -233,7 +233,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc subcluster.
+     * Retrieves a list of subclusters in the specified cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request,
@@ -243,7 +243,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc subcluster in the specified cluster.
+     * Creates a subcluster in the specified cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request,
@@ -253,7 +253,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc subcluster.
+     * Updates the specified subcluster.
      * </pre>
      */
     public void update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request,
@@ -263,7 +263,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc subcluster.
+     * Deletes the specified subcluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request,
@@ -314,7 +314,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc subclusters.
+   * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
   public static final class SubclusterServiceStub extends io.grpc.stub.AbstractStub<SubclusterServiceStub> {
@@ -335,8 +335,8 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc subcluster resource.
-     * To get the list of available Dataproc subcluster resources, make a [List] request.
+     * Returns the specified subcluster.
+     * To get the list of all available subclusters, make a [SubclusterService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request,
@@ -347,7 +347,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc subcluster.
+     * Retrieves a list of subclusters in the specified cluster.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request,
@@ -358,7 +358,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc subcluster in the specified cluster.
+     * Creates a subcluster in the specified cluster.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request,
@@ -369,7 +369,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc subcluster.
+     * Updates the specified subcluster.
      * </pre>
      */
     public void update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request,
@@ -380,7 +380,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc subcluster.
+     * Deletes the specified subcluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request,
@@ -392,7 +392,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc subclusters.
+   * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
   public static final class SubclusterServiceBlockingStub extends io.grpc.stub.AbstractStub<SubclusterServiceBlockingStub> {
@@ -413,8 +413,8 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc subcluster resource.
-     * To get the list of available Dataproc subcluster resources, make a [List] request.
+     * Returns the specified subcluster.
+     * To get the list of all available subclusters, make a [SubclusterService.List] request.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster get(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.GetSubclusterRequest request) {
@@ -424,7 +424,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc subcluster.
+     * Retrieves a list of subclusters in the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse list(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersRequest request) {
@@ -434,7 +434,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc subcluster in the specified cluster.
+     * Creates a subcluster in the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.CreateSubclusterRequest request) {
@@ -444,7 +444,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc subcluster.
+     * Updates the specified subcluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.UpdateSubclusterRequest request) {
@@ -454,7 +454,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc subcluster.
+     * Deletes the specified subcluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.DeleteSubclusterRequest request) {
@@ -465,7 +465,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc subclusters.
+   * A set of methods for managing Data Proc subclusters.
    * </pre>
    */
   public static final class SubclusterServiceFutureStub extends io.grpc.stub.AbstractStub<SubclusterServiceFutureStub> {
@@ -486,8 +486,8 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc subcluster resource.
-     * To get the list of available Dataproc subcluster resources, make a [List] request.
+     * Returns the specified subcluster.
+     * To get the list of all available subclusters, make a [SubclusterService.List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> get(
@@ -498,7 +498,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc subcluster.
+     * Retrieves a list of subclusters in the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.SubclusterServiceOuterClass.ListSubclustersResponse> list(
@@ -509,7 +509,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc subcluster in the specified cluster.
+     * Creates a subcluster in the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -520,7 +520,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc subcluster.
+     * Updates the specified subcluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -531,7 +531,7 @@ public final class SubclusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc subcluster.
+     * Deletes the specified subcluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(

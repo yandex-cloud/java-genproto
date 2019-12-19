@@ -110,6 +110,50 @@ public final class UserOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> 
+        getQuotasList();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index);
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    int getQuotasCount();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -132,6 +176,7 @@ public final class UserOuterClass {
       name_ = "";
       clusterId_ = "";
       permissions_ = java.util.Collections.emptyList();
+      quotas_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -192,6 +237,15 @@ public final class UserOuterClass {
 
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              quotas_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -209,6 +263,9 @@ public final class UserOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          quotas_ = java.util.Collections.unmodifiableList(quotas_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -388,6 +445,61 @@ public final class UserOuterClass {
       return getSettings();
     }
 
+    public static final int QUOTAS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_;
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+      return quotas_;
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList() {
+      return quotas_;
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public int getQuotasCount() {
+      return quotas_.size();
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+      return quotas_.get(index);
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index) {
+      return quotas_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -414,6 +526,9 @@ public final class UserOuterClass {
       if (settings_ != null) {
         output.writeMessage(4, getSettings());
       }
+      for (int i = 0; i < quotas_.size(); i++) {
+        output.writeMessage(5, quotas_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -436,6 +551,10 @@ public final class UserOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSettings());
+      }
+      for (int i = 0; i < quotas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, quotas_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -464,6 +583,8 @@ public final class UserOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && getQuotasList()
+          .equals(other.getQuotasList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -486,6 +607,10 @@ public final class UserOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (getQuotasCount() > 0) {
+        hash = (37 * hash) + QUOTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getQuotasList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -621,6 +746,7 @@ public final class UserOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getPermissionsFieldBuilder();
+          getQuotasFieldBuilder();
         }
       }
       @java.lang.Override
@@ -641,6 +767,12 @@ public final class UserOuterClass {
         } else {
           settings_ = null;
           settingsBuilder_ = null;
+        }
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          quotasBuilder_.clear();
         }
         return this;
       }
@@ -685,6 +817,15 @@ public final class UserOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (quotasBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            quotas_ = java.util.Collections.unmodifiableList(quotas_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.quotas_ = quotas_;
+        } else {
+          result.quotas_ = quotasBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -771,6 +912,32 @@ public final class UserOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (quotasBuilder_ == null) {
+          if (!other.quotas_.isEmpty()) {
+            if (quotas_.isEmpty()) {
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureQuotasIsMutable();
+              quotas_.addAll(other.quotas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.quotas_.isEmpty()) {
+            if (quotasBuilder_.isEmpty()) {
+              quotasBuilder_.dispose();
+              quotasBuilder_ = null;
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              quotasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQuotasFieldBuilder() : null;
+            } else {
+              quotasBuilder_.addAllMessages(other.quotas_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1407,6 +1574,318 @@ public final class UserOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_ =
+        java.util.Collections.emptyList();
+      private void ensureQuotasIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>(quotas_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> quotasBuilder_;
+
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+        if (quotasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(quotas_);
+        } else {
+          return quotasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public int getQuotasCount() {
+        if (quotasBuilder_ == null) {
+          return quotas_.size();
+        } else {
+          return quotasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);
+        } else {
+          return quotasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.set(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addAllQuotas(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> values) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, quotas_);
+          onChanged();
+        } else {
+          quotasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder clearQuotas() {
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          quotasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder removeQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.remove(index);
+          onChanged();
+        } else {
+          quotasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder getQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+          int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);  } else {
+          return quotasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+           getQuotasOrBuilderList() {
+        if (quotasBuilder_ != null) {
+          return quotasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(quotas_);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder() {
+        return getQuotasFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder> 
+           getQuotasBuilderList() {
+        return getQuotasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+          getQuotasFieldBuilder() {
+        if (quotasBuilder_ == null) {
+          quotasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder>(
+                  quotas_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          quotas_ = null;
+        }
+        return quotasBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3202,6 +3681,50 @@ public final class UserOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 4;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> 
+        getQuotasList();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index);
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    int getQuotasCount();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList();
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserSpec}
@@ -3219,6 +3742,7 @@ public final class UserOuterClass {
       name_ = "";
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
+      quotas_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3279,6 +3803,15 @@ public final class UserOuterClass {
 
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              quotas_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3296,6 +3829,9 @@ public final class UserOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          quotas_ = java.util.Collections.unmodifiableList(quotas_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3475,6 +4011,61 @@ public final class UserOuterClass {
       return getSettings();
     }
 
+    public static final int QUOTAS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_;
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+      return quotas_;
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList() {
+      return quotas_;
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public int getQuotasCount() {
+      return quotas_.size();
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+      return quotas_.get(index);
+    }
+    /**
+     * <pre>
+     * Set of quotas assigned to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index) {
+      return quotas_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3501,6 +4092,9 @@ public final class UserOuterClass {
       if (settings_ != null) {
         output.writeMessage(4, getSettings());
       }
+      for (int i = 0; i < quotas_.size(); i++) {
+        output.writeMessage(5, quotas_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3523,6 +4117,10 @@ public final class UserOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSettings());
+      }
+      for (int i = 0; i < quotas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, quotas_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3551,6 +4149,8 @@ public final class UserOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && getQuotasList()
+          .equals(other.getQuotasList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3573,6 +4173,10 @@ public final class UserOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (getQuotasCount() > 0) {
+        hash = (37 * hash) + QUOTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getQuotasList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3703,6 +4307,7 @@ public final class UserOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getPermissionsFieldBuilder();
+          getQuotasFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3723,6 +4328,12 @@ public final class UserOuterClass {
         } else {
           settings_ = null;
           settingsBuilder_ = null;
+        }
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          quotasBuilder_.clear();
         }
         return this;
       }
@@ -3767,6 +4378,15 @@ public final class UserOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (quotasBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            quotas_ = java.util.Collections.unmodifiableList(quotas_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.quotas_ = quotas_;
+        } else {
+          result.quotas_ = quotasBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3853,6 +4473,32 @@ public final class UserOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (quotasBuilder_ == null) {
+          if (!other.quotas_.isEmpty()) {
+            if (quotas_.isEmpty()) {
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureQuotasIsMutable();
+              quotas_.addAll(other.quotas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.quotas_.isEmpty()) {
+            if (quotasBuilder_.isEmpty()) {
+              quotasBuilder_.dispose();
+              quotasBuilder_ = null;
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              quotasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQuotasFieldBuilder() : null;
+            } else {
+              quotasBuilder_.addAllMessages(other.quotas_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4489,6 +5135,318 @@ public final class UserOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_ =
+        java.util.Collections.emptyList();
+      private void ensureQuotasIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>(quotas_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> quotasBuilder_;
+
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+        if (quotasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(quotas_);
+        } else {
+          return quotasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public int getQuotasCount() {
+        if (quotasBuilder_ == null) {
+          return quotas_.size();
+        } else {
+          return quotasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);
+        } else {
+          return quotasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.set(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder addAllQuotas(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> values) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, quotas_);
+          onChanged();
+        } else {
+          quotasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder clearQuotas() {
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          quotasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public Builder removeQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.remove(index);
+          onChanged();
+        } else {
+          quotasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder getQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+          int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);  } else {
+          return quotasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+           getQuotasOrBuilderList() {
+        if (quotasBuilder_ != null) {
+          return quotasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(quotas_);
+        }
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder() {
+        return getQuotasFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Set of quotas assigned to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder> 
+           getQuotasBuilderList() {
+        return getQuotasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+          getQuotasFieldBuilder() {
+        if (quotasBuilder_ == null) {
+          quotasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder>(
+                  quotas_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          quotas_ = null;
+        }
+        return quotasBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -24450,6 +25408,2043 @@ public final class UserOuterClass {
 
   }
 
+  public interface UserQuotaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.UserQuota)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    boolean hasIntervalDuration();
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    com.google.protobuf.Int64Value getIntervalDuration();
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder();
+
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasQueries();
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getQueries();
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueriesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasErrors();
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getErrors();
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getErrorsOrBuilder();
+
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasResultRows();
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getResultRows();
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getResultRowsOrBuilder();
+
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasReadRows();
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getReadRows();
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getReadRowsOrBuilder();
+
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasExecutionTime();
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getExecutionTime();
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getExecutionTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClickHouse quota representation. Each quota associated with an user and limits it resource usage for an interval.
+   * See in-depth description [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/quotas/).
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserQuota}
+   */
+  public  static final class UserQuota extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UserQuota)
+      UserQuotaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserQuota.newBuilder() to construct.
+    private UserQuota(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserQuota() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserQuota(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (intervalDuration_ != null) {
+                subBuilder = intervalDuration_.toBuilder();
+              }
+              intervalDuration_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(intervalDuration_);
+                intervalDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queries_ != null) {
+                subBuilder = queries_.toBuilder();
+              }
+              queries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queries_);
+                queries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (errors_ != null) {
+                subBuilder = errors_.toBuilder();
+              }
+              errors_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errors_);
+                errors_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (resultRows_ != null) {
+                subBuilder = resultRows_.toBuilder();
+              }
+              resultRows_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resultRows_);
+                resultRows_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (readRows_ != null) {
+                subBuilder = readRows_.toBuilder();
+              }
+              readRows_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(readRows_);
+                readRows_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (executionTime_ != null) {
+                subBuilder = executionTime_.toBuilder();
+              }
+              executionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(executionTime_);
+                executionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder.class);
+    }
+
+    public static final int INTERVAL_DURATION_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value intervalDuration_;
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    public boolean hasIntervalDuration() {
+      return intervalDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    public com.google.protobuf.Int64Value getIntervalDuration() {
+      return intervalDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : intervalDuration_;
+    }
+    /**
+     * <pre>
+     * Duration of interval for quota in milliseconds.
+     * Minimal value is 1 minute.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder() {
+      return getIntervalDuration();
+    }
+
+    public static final int QUERIES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value queries_;
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasQueries() {
+      return queries_ != null;
+    }
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getQueries() {
+      return queries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queries_;
+    }
+    /**
+     * <pre>
+     * The total number of queries.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getQueriesOrBuilder() {
+      return getQueries();
+    }
+
+    public static final int ERRORS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value errors_;
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasErrors() {
+      return errors_ != null;
+    }
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getErrors() {
+      return errors_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errors_;
+    }
+    /**
+     * <pre>
+     * The number of queries that threw exception.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getErrorsOrBuilder() {
+      return getErrors();
+    }
+
+    public static final int RESULT_ROWS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value resultRows_;
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasResultRows() {
+      return resultRows_ != null;
+    }
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getResultRows() {
+      return resultRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : resultRows_;
+    }
+    /**
+     * <pre>
+     * The total number of rows given as the result..
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getResultRowsOrBuilder() {
+      return getResultRows();
+    }
+
+    public static final int READ_ROWS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value readRows_;
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasReadRows() {
+      return readRows_ != null;
+    }
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getReadRows() {
+      return readRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readRows_;
+    }
+    /**
+     * <pre>
+     * The total number of source rows read from tables for running the query, on all remote servers.
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getReadRowsOrBuilder() {
+      return getReadRows();
+    }
+
+    public static final int EXECUTION_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value executionTime_;
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasExecutionTime() {
+      return executionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getExecutionTime() {
+      return executionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executionTime_;
+    }
+    /**
+     * <pre>
+     * The total query execution time, in milliseconds (wall time).
+     * 0 - unlimited.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getExecutionTimeOrBuilder() {
+      return getExecutionTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (intervalDuration_ != null) {
+        output.writeMessage(1, getIntervalDuration());
+      }
+      if (queries_ != null) {
+        output.writeMessage(2, getQueries());
+      }
+      if (errors_ != null) {
+        output.writeMessage(3, getErrors());
+      }
+      if (resultRows_ != null) {
+        output.writeMessage(4, getResultRows());
+      }
+      if (readRows_ != null) {
+        output.writeMessage(5, getReadRows());
+      }
+      if (executionTime_ != null) {
+        output.writeMessage(6, getExecutionTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (intervalDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIntervalDuration());
+      }
+      if (queries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getQueries());
+      }
+      if (errors_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getErrors());
+      }
+      if (resultRows_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getResultRows());
+      }
+      if (readRows_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getReadRows());
+      }
+      if (executionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getExecutionTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota other = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota) obj;
+
+      boolean result = true;
+      result = result && (hasIntervalDuration() == other.hasIntervalDuration());
+      if (hasIntervalDuration()) {
+        result = result && getIntervalDuration()
+            .equals(other.getIntervalDuration());
+      }
+      result = result && (hasQueries() == other.hasQueries());
+      if (hasQueries()) {
+        result = result && getQueries()
+            .equals(other.getQueries());
+      }
+      result = result && (hasErrors() == other.hasErrors());
+      if (hasErrors()) {
+        result = result && getErrors()
+            .equals(other.getErrors());
+      }
+      result = result && (hasResultRows() == other.hasResultRows());
+      if (hasResultRows()) {
+        result = result && getResultRows()
+            .equals(other.getResultRows());
+      }
+      result = result && (hasReadRows() == other.hasReadRows());
+      if (hasReadRows()) {
+        result = result && getReadRows()
+            .equals(other.getReadRows());
+      }
+      result = result && (hasExecutionTime() == other.hasExecutionTime());
+      if (hasExecutionTime()) {
+        result = result && getExecutionTime()
+            .equals(other.getExecutionTime());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIntervalDuration()) {
+        hash = (37 * hash) + INTERVAL_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getIntervalDuration().hashCode();
+      }
+      if (hasQueries()) {
+        hash = (37 * hash) + QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueries().hashCode();
+      }
+      if (hasErrors()) {
+        hash = (37 * hash) + ERRORS_FIELD_NUMBER;
+        hash = (53 * hash) + getErrors().hashCode();
+      }
+      if (hasResultRows()) {
+        hash = (37 * hash) + RESULT_ROWS_FIELD_NUMBER;
+        hash = (53 * hash) + getResultRows().hashCode();
+      }
+      if (hasReadRows()) {
+        hash = (37 * hash) + READ_ROWS_FIELD_NUMBER;
+        hash = (53 * hash) + getReadRows().hashCode();
+      }
+      if (hasExecutionTime()) {
+        hash = (37 * hash) + EXECUTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getExecutionTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClickHouse quota representation. Each quota associated with an user and limits it resource usage for an interval.
+     * See in-depth description [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/quotas/).
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UserQuota}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.UserQuota)
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.class, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (intervalDurationBuilder_ == null) {
+          intervalDuration_ = null;
+        } else {
+          intervalDuration_ = null;
+          intervalDurationBuilder_ = null;
+        }
+        if (queriesBuilder_ == null) {
+          queries_ = null;
+        } else {
+          queries_ = null;
+          queriesBuilder_ = null;
+        }
+        if (errorsBuilder_ == null) {
+          errors_ = null;
+        } else {
+          errors_ = null;
+          errorsBuilder_ = null;
+        }
+        if (resultRowsBuilder_ == null) {
+          resultRows_ = null;
+        } else {
+          resultRows_ = null;
+          resultRowsBuilder_ = null;
+        }
+        if (readRowsBuilder_ == null) {
+          readRows_ = null;
+        } else {
+          readRows_ = null;
+          readRowsBuilder_ = null;
+        }
+        if (executionTimeBuilder_ == null) {
+          executionTime_ = null;
+        } else {
+          executionTime_ = null;
+          executionTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota build() {
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota result = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota(this);
+        if (intervalDurationBuilder_ == null) {
+          result.intervalDuration_ = intervalDuration_;
+        } else {
+          result.intervalDuration_ = intervalDurationBuilder_.build();
+        }
+        if (queriesBuilder_ == null) {
+          result.queries_ = queries_;
+        } else {
+          result.queries_ = queriesBuilder_.build();
+        }
+        if (errorsBuilder_ == null) {
+          result.errors_ = errors_;
+        } else {
+          result.errors_ = errorsBuilder_.build();
+        }
+        if (resultRowsBuilder_ == null) {
+          result.resultRows_ = resultRows_;
+        } else {
+          result.resultRows_ = resultRowsBuilder_.build();
+        }
+        if (readRowsBuilder_ == null) {
+          result.readRows_ = readRows_;
+        } else {
+          result.readRows_ = readRowsBuilder_.build();
+        }
+        if (executionTimeBuilder_ == null) {
+          result.executionTime_ = executionTime_;
+        } else {
+          result.executionTime_ = executionTimeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance()) return this;
+        if (other.hasIntervalDuration()) {
+          mergeIntervalDuration(other.getIntervalDuration());
+        }
+        if (other.hasQueries()) {
+          mergeQueries(other.getQueries());
+        }
+        if (other.hasErrors()) {
+          mergeErrors(other.getErrors());
+        }
+        if (other.hasResultRows()) {
+          mergeResultRows(other.getResultRows());
+        }
+        if (other.hasReadRows()) {
+          mergeReadRows(other.getReadRows());
+        }
+        if (other.hasExecutionTime()) {
+          mergeExecutionTime(other.getExecutionTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value intervalDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> intervalDurationBuilder_;
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public boolean hasIntervalDuration() {
+        return intervalDurationBuilder_ != null || intervalDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public com.google.protobuf.Int64Value getIntervalDuration() {
+        if (intervalDurationBuilder_ == null) {
+          return intervalDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : intervalDuration_;
+        } else {
+          return intervalDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public Builder setIntervalDuration(com.google.protobuf.Int64Value value) {
+        if (intervalDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          intervalDuration_ = value;
+          onChanged();
+        } else {
+          intervalDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public Builder setIntervalDuration(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (intervalDurationBuilder_ == null) {
+          intervalDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          intervalDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public Builder mergeIntervalDuration(com.google.protobuf.Int64Value value) {
+        if (intervalDurationBuilder_ == null) {
+          if (intervalDuration_ != null) {
+            intervalDuration_ =
+              com.google.protobuf.Int64Value.newBuilder(intervalDuration_).mergeFrom(value).buildPartial();
+          } else {
+            intervalDuration_ = value;
+          }
+          onChanged();
+        } else {
+          intervalDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public Builder clearIntervalDuration() {
+        if (intervalDurationBuilder_ == null) {
+          intervalDuration_ = null;
+          onChanged();
+        } else {
+          intervalDuration_ = null;
+          intervalDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getIntervalDurationBuilder() {
+        
+        onChanged();
+        return getIntervalDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder() {
+        if (intervalDurationBuilder_ != null) {
+          return intervalDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return intervalDuration_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : intervalDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration of interval for quota in milliseconds.
+       * Minimal value is 1 minute.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getIntervalDurationFieldBuilder() {
+        if (intervalDurationBuilder_ == null) {
+          intervalDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getIntervalDuration(),
+                  getParentForChildren(),
+                  isClean());
+          intervalDuration_ = null;
+        }
+        return intervalDurationBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queries_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queriesBuilder_;
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasQueries() {
+        return queriesBuilder_ != null || queries_ != null;
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getQueries() {
+        if (queriesBuilder_ == null) {
+          return queries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queries_;
+        } else {
+          return queriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueries(com.google.protobuf.Int64Value value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queries_ = value;
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          queries_ = builderForValue.build();
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueries(com.google.protobuf.Int64Value value) {
+        if (queriesBuilder_ == null) {
+          if (queries_ != null) {
+            queries_ =
+              com.google.protobuf.Int64Value.newBuilder(queries_).mergeFrom(value).buildPartial();
+          } else {
+            queries_ = value;
+          }
+          onChanged();
+        } else {
+          queriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueries() {
+        if (queriesBuilder_ == null) {
+          queries_ = null;
+          onChanged();
+        } else {
+          queries_ = null;
+          queriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueriesBuilder() {
+        
+        onChanged();
+        return getQueriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueriesOrBuilder() {
+        if (queriesBuilder_ != null) {
+          return queriesBuilder_.getMessageOrBuilder();
+        } else {
+          return queries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queries_;
+        }
+      }
+      /**
+       * <pre>
+       * The total number of queries.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value queries = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueriesFieldBuilder() {
+        if (queriesBuilder_ == null) {
+          queriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueries(),
+                  getParentForChildren(),
+                  isClean());
+          queries_ = null;
+        }
+        return queriesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value errors_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> errorsBuilder_;
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasErrors() {
+        return errorsBuilder_ != null || errors_ != null;
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getErrors() {
+        if (errorsBuilder_ == null) {
+          return errors_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : errors_;
+        } else {
+          return errorsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setErrors(com.google.protobuf.Int64Value value) {
+        if (errorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errors_ = value;
+          onChanged();
+        } else {
+          errorsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setErrors(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (errorsBuilder_ == null) {
+          errors_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeErrors(com.google.protobuf.Int64Value value) {
+        if (errorsBuilder_ == null) {
+          if (errors_ != null) {
+            errors_ =
+              com.google.protobuf.Int64Value.newBuilder(errors_).mergeFrom(value).buildPartial();
+          } else {
+            errors_ = value;
+          }
+          onChanged();
+        } else {
+          errorsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearErrors() {
+        if (errorsBuilder_ == null) {
+          errors_ = null;
+          onChanged();
+        } else {
+          errors_ = null;
+          errorsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getErrorsBuilder() {
+        
+        onChanged();
+        return getErrorsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getErrorsOrBuilder() {
+        if (errorsBuilder_ != null) {
+          return errorsBuilder_.getMessageOrBuilder();
+        } else {
+          return errors_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : errors_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of queries that threw exception.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value errors = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getErrorsFieldBuilder() {
+        if (errorsBuilder_ == null) {
+          errorsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getErrors(),
+                  getParentForChildren(),
+                  isClean());
+          errors_ = null;
+        }
+        return errorsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value resultRows_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> resultRowsBuilder_;
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasResultRows() {
+        return resultRowsBuilder_ != null || resultRows_ != null;
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getResultRows() {
+        if (resultRowsBuilder_ == null) {
+          return resultRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : resultRows_;
+        } else {
+          return resultRowsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setResultRows(com.google.protobuf.Int64Value value) {
+        if (resultRowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resultRows_ = value;
+          onChanged();
+        } else {
+          resultRowsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setResultRows(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (resultRowsBuilder_ == null) {
+          resultRows_ = builderForValue.build();
+          onChanged();
+        } else {
+          resultRowsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeResultRows(com.google.protobuf.Int64Value value) {
+        if (resultRowsBuilder_ == null) {
+          if (resultRows_ != null) {
+            resultRows_ =
+              com.google.protobuf.Int64Value.newBuilder(resultRows_).mergeFrom(value).buildPartial();
+          } else {
+            resultRows_ = value;
+          }
+          onChanged();
+        } else {
+          resultRowsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearResultRows() {
+        if (resultRowsBuilder_ == null) {
+          resultRows_ = null;
+          onChanged();
+        } else {
+          resultRows_ = null;
+          resultRowsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getResultRowsBuilder() {
+        
+        onChanged();
+        return getResultRowsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getResultRowsOrBuilder() {
+        if (resultRowsBuilder_ != null) {
+          return resultRowsBuilder_.getMessageOrBuilder();
+        } else {
+          return resultRows_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : resultRows_;
+        }
+      }
+      /**
+       * <pre>
+       * The total number of rows given as the result..
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value result_rows = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getResultRowsFieldBuilder() {
+        if (resultRowsBuilder_ == null) {
+          resultRowsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getResultRows(),
+                  getParentForChildren(),
+                  isClean());
+          resultRows_ = null;
+        }
+        return resultRowsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value readRows_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readRowsBuilder_;
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasReadRows() {
+        return readRowsBuilder_ != null || readRows_ != null;
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getReadRows() {
+        if (readRowsBuilder_ == null) {
+          return readRows_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : readRows_;
+        } else {
+          return readRowsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setReadRows(com.google.protobuf.Int64Value value) {
+        if (readRowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          readRows_ = value;
+          onChanged();
+        } else {
+          readRowsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setReadRows(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (readRowsBuilder_ == null) {
+          readRows_ = builderForValue.build();
+          onChanged();
+        } else {
+          readRowsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeReadRows(com.google.protobuf.Int64Value value) {
+        if (readRowsBuilder_ == null) {
+          if (readRows_ != null) {
+            readRows_ =
+              com.google.protobuf.Int64Value.newBuilder(readRows_).mergeFrom(value).buildPartial();
+          } else {
+            readRows_ = value;
+          }
+          onChanged();
+        } else {
+          readRowsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearReadRows() {
+        if (readRowsBuilder_ == null) {
+          readRows_ = null;
+          onChanged();
+        } else {
+          readRows_ = null;
+          readRowsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getReadRowsBuilder() {
+        
+        onChanged();
+        return getReadRowsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getReadRowsOrBuilder() {
+        if (readRowsBuilder_ != null) {
+          return readRowsBuilder_.getMessageOrBuilder();
+        } else {
+          return readRows_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : readRows_;
+        }
+      }
+      /**
+       * <pre>
+       * The total number of source rows read from tables for running the query, on all remote servers.
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value read_rows = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getReadRowsFieldBuilder() {
+        if (readRowsBuilder_ == null) {
+          readRowsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getReadRows(),
+                  getParentForChildren(),
+                  isClean());
+          readRows_ = null;
+        }
+        return readRowsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value executionTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> executionTimeBuilder_;
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasExecutionTime() {
+        return executionTimeBuilder_ != null || executionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getExecutionTime() {
+        if (executionTimeBuilder_ == null) {
+          return executionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executionTime_;
+        } else {
+          return executionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setExecutionTime(com.google.protobuf.Int64Value value) {
+        if (executionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          executionTime_ = value;
+          onChanged();
+        } else {
+          executionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setExecutionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (executionTimeBuilder_ == null) {
+          executionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          executionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeExecutionTime(com.google.protobuf.Int64Value value) {
+        if (executionTimeBuilder_ == null) {
+          if (executionTime_ != null) {
+            executionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(executionTime_).mergeFrom(value).buildPartial();
+          } else {
+            executionTime_ = value;
+          }
+          onChanged();
+        } else {
+          executionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearExecutionTime() {
+        if (executionTimeBuilder_ == null) {
+          executionTime_ = null;
+          onChanged();
+        } else {
+          executionTime_ = null;
+          executionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getExecutionTimeBuilder() {
+        
+        onChanged();
+        return getExecutionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getExecutionTimeOrBuilder() {
+        if (executionTimeBuilder_ != null) {
+          return executionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return executionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : executionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The total query execution time, in milliseconds (wall time).
+       * 0 - unlimited.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value execution_time = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getExecutionTimeFieldBuilder() {
+        if (executionTimeBuilder_ == null) {
+          executionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getExecutionTime(),
+                  getParentForChildren(),
+                  isClean());
+          executionTime_ = null;
+        }
+        return executionTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.UserQuota)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.UserQuota)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserQuota>
+        PARSER = new com.google.protobuf.AbstractParser<UserQuota>() {
+      @java.lang.Override
+      public UserQuota parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserQuota(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserQuota> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserQuota> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_User_descriptor;
   private static final 
@@ -24475,6 +27470,11 @@ public final class UserOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24487,175 +27487,187 @@ public final class UserOuterClass {
       "\n)yandex/cloud/mdb/clickhouse/v1/user.pr" +
       "oto\022\036yandex.cloud.mdb.clickhouse.v1\032\036goo" +
       "gle/protobuf/wrappers.proto\032\035yandex/clou" +
-      "d/validation.proto\"\251\001\n\004User\022\014\n\004name\030\001 \001(" +
+      "d/validation.proto\"\344\001\n\004User\022\014\n\004name\030\001 \001(" +
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003" +
       "(\0132*.yandex.cloud.mdb.clickhouse.v1.Perm" +
       "ission\022>\n\010settings\030\004 \001(\0132,.yandex.cloud." +
-      "mdb.clickhouse.v1.UserSettings\"\242\001\n\nPermi" +
-      "ssion\022\025\n\rdatabase_name\030\001 \001(\t\022K\n\014data_fil" +
-      "ters\030\002 \003(\01325.yandex.cloud.mdb.clickhouse" +
-      ".v1.Permission.DataFilter\0320\n\nDataFilter\022" +
-      "\022\n\ntable_name\030\001 \001(\t\022\016\n\006filter\030\002 \001(\t\"\331\001\n\010" +
-      "UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r" +
-      "[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101" +
-      "\0058-128\022?\n\013permissions\030\003 \003(\0132*.yandex.clo" +
-      "ud.mdb.clickhouse.v1.Permission\022>\n\010setti" +
-      "ngs\030\004 \001(\0132,.yandex.cloud.mdb.clickhouse." +
-      "v1.UserSettings\"\230/\n\014UserSettings\0226\n\010read" +
-      "only\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\017" +
-      "connect_timeout\030\' \001(\0132\033.google.protobuf." +
-      "Int64ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
-      "\0229\n\014send_timeout\030) \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\006\372\3071\002>0\022F\n\025insert_quorum_tim" +
-      "eout\030\004 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\n\372\3071\006>=1000\022A\n\035select_sequential_consist" +
-      "ency\030\005 \001(\0132\032.google.protobuf.BoolValue\022Z" +
-      "\n)max_replica_delay_for_distributed_quer" +
-      "ies\030\006 \001(\0132\033.google.protobuf.Int64ValueB\n" +
-      "\372\3071\006>=1000\022V\n2fallback_to_stale_replicas" +
-      "_for_distributed_queries\030\007 \001(\0132\032.google." +
-      "protobuf.BoolValue\022O\n!replication_alter_" +
-      "partitions_sync\030* \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\0030-2\022e\n\030distributed_produ" +
-      "ct_mode\030+ \001(\0162C.yandex.cloud.mdb.clickho" +
-      "use.v1.UserSettings.DistributedProductMo" +
-      "de\022L\n(distributed_aggregation_memory_eff" +
-      "icient\030H \001(\0132\032.google.protobuf.BoolValue" +
-      "\022A\n\034distributed_ddl_task_timeout\030I \001(\0132\033" +
-      ".google.protobuf.Int64Value\022+\n\007compile\030," +
-      " \001(\0132\032.google.protobuf.BoolValue\022B\n\024min_" +
-      "count_to_compile\030- \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\0227\n\023compile_expressi" +
-      "ons\030. \001(\0132\032.google.protobuf.BoolValue\022M\n" +
-      "\037min_count_to_compile_expression\030/ \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016" +
-      "max_block_size\030\t \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\006\372\3071\002>0\022H\n\032min_insert_block_si" +
-      "ze_rows\0300 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\022I\n\033min_insert_block_size_byt" +
-      "es\0301 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022B\n\025max_insert_block_size\030\n \001(\0132\033." +
-      "google.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032mi" +
-      "n_bytes_to_use_direct_io\0302 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\026use_unco" +
-      "mpressed_cache\0303 \001(\0132\032.google.protobuf.B" +
-      "oolValue\022M\n merge_tree_max_rows_to_use_c" +
-      "ache\0304 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\006\372\3071\002>0\022N\n!merge_tree_max_bytes_to_use_c" +
-      "ache\0305 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\006\372\3071\002>0\022T\n\'merge_tree_min_rows_for_concu" +
-      "rrent_read\0306 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\006\372\3071\002>0\022U\n(merge_tree_min_bytes_fo" +
-      "r_concurrent_read\0307 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\006\372\3071\002>0\022G\n\"max_bytes_before" +
-      "_external_group_by\030J \001(\0132\033.google.protob" +
-      "uf.Int64Value\022C\n\036max_bytes_before_extern" +
-      "al_sort\030K \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022A\n\034group_by_two_level_threshold\030L \001(\013" +
-      "2\033.google.protobuf.Int64Value\022G\n\"group_b" +
-      "y_two_level_threshold_bytes\030M \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0226\n\010priority\0308 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0228" +
-      "\n\013max_threads\030\010 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\006\372\3071\002>0\022>\n\020max_memory_usage\030\013 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\022G\n\031max_memory_usage_for_user\030\014 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\025max" +
-      "_network_bandwidth\0309 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022C\n\036max_network_bandwidth_f" +
-      "or_user\030: \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0227\n\023force_index_by_date\030; \001(\0132\032.google" +
-      ".protobuf.BoolValue\0225\n\021force_primary_key" +
-      "\030< \001(\0132\032.google.protobuf.BoolValue\022>\n\020ma" +
-      "x_rows_to_read\030\r \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030" +
-      "\016 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\022U\n\022read_overflow_mode\030\017 \001(\01629.yandex" +
-      ".cloud.mdb.clickhouse.v1.UserSettings.Ov" +
-      "erflowMode\022B\n\024max_rows_to_group_by\030\020 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022`" +
-      "\n\026group_by_overflow_mode\030\021 \001(\0162@.yandex." +
-      "cloud.mdb.clickhouse.v1.UserSettings.Gro" +
-      "upByOverflowMode\022>\n\020max_rows_to_sort\030\022 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\022?\n\021max_bytes_to_sort\030\023 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022sort_overfl" +
-      "ow_mode\030\024 \001(\01629.yandex.cloud.mdb.clickho" +
-      "use.v1.UserSettings.OverflowMode\022=\n\017max_" +
-      "result_rows\030\025 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "W\n\024result_overflow_mode\030\027 \001(\01629.yandex.c" +
+      "mdb.clickhouse.v1.UserSettings\0229\n\006quotas" +
+      "\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v1." +
+      "UserQuota\"\242\001\n\nPermission\022\025\n\rdatabase_nam" +
+      "e\030\001 \001(\t\022K\n\014data_filters\030\002 \003(\01325.yandex.c" +
+      "loud.mdb.clickhouse.v1.Permission.DataFi" +
+      "lter\0320\n\nDataFilter\022\022\n\ntable_name\030\001 \001(\t\022\016" +
+      "\n\006filter\030\002 \001(\t\"\224\002\n\010UserSpec\022+\n\004name\030\001 \001(" +
+      "\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022\037\n\010pass" +
+      "word\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022?\n\013permissions" +
+      "\030\003 \003(\0132*.yandex.cloud.mdb.clickhouse.v1." +
+      "Permission\022>\n\010settings\030\004 \001(\0132,.yandex.cl" +
+      "oud.mdb.clickhouse.v1.UserSettings\0229\n\006qu" +
+      "otas\030\005 \003(\0132).yandex.cloud.mdb.clickhouse" +
+      ".v1.UserQuota\"\230/\n\014UserSettings\0226\n\010readon" +
+      "ly\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\017co" +
+      "nnect_timeout\030\' \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\0229" +
+      "\n\014send_timeout\030) \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022F\n\025insert_quorum_timeo" +
+      "ut\030\004 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
+      "\3071\006>=1000\022A\n\035select_sequential_consisten" +
+      "cy\030\005 \001(\0132\032.google.protobuf.BoolValue\022Z\n)" +
+      "max_replica_delay_for_distributed_querie" +
+      "s\030\006 \001(\0132\033.google.protobuf.Int64ValueB\n\372\307" +
+      "1\006>=1000\022V\n2fallback_to_stale_replicas_f" +
+      "or_distributed_queries\030\007 \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022O\n!replication_alter_pa" +
+      "rtitions_sync\030* \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\0030-2\022e\n\030distributed_product" +
+      "_mode\030+ \001(\0162C.yandex.cloud.mdb.clickhous" +
+      "e.v1.UserSettings.DistributedProductMode" +
+      "\022L\n(distributed_aggregation_memory_effic" +
+      "ient\030H \001(\0132\032.google.protobuf.BoolValue\022A" +
+      "\n\034distributed_ddl_task_timeout\030I \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022+\n\007compile\030, \001" +
+      "(\0132\032.google.protobuf.BoolValue\022B\n\024min_co" +
+      "unt_to_compile\030- \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\0227\n\023compile_expression" +
+      "s\030. \001(\0132\032.google.protobuf.BoolValue\022M\n\037m" +
+      "in_count_to_compile_expression\030/ \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016ma" +
+      "x_block_size\030\t \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\006\372\3071\002>0\022H\n\032min_insert_block_size" +
+      "_rows\0300 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022I\n\033min_insert_block_size_bytes" +
+      "\0301 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022B\n\025max_insert_block_size\030\n \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032min_" +
+      "bytes_to_use_direct_io\0302 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\022:\n\026use_uncomp" +
+      "ressed_cache\0303 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022M\n merge_tree_max_rows_to_use_cac" +
+      "he\0304 \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
+      "\3071\002>0\022N\n!merge_tree_max_bytes_to_use_cac" +
+      "he\0305 \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
+      "\3071\002>0\022T\n\'merge_tree_min_rows_for_concurr" +
+      "ent_read\0306 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\006\372\3071\002>0\022U\n(merge_tree_min_bytes_for_" +
+      "concurrent_read\0307 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\006\372\3071\002>0\022G\n\"max_bytes_before_e" +
+      "xternal_group_by\030J \001(\0132\033.google.protobuf" +
+      ".Int64Value\022C\n\036max_bytes_before_external" +
+      "_sort\030K \001(\0132\033.google.protobuf.Int64Value" +
+      "\022A\n\034group_by_two_level_threshold\030L \001(\0132\033" +
+      ".google.protobuf.Int64Value\022G\n\"group_by_" +
+      "two_level_threshold_bytes\030M \001(\0132\033.google" +
+      ".protobuf.Int64Value\0226\n\010priority\0308 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\013" +
+      "max_threads\030\010 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\006\372\3071\002>0\022>\n\020max_memory_usage\030\013 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022G" +
+      "\n\031max_memory_usage_for_user\030\014 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\025max_n" +
+      "etwork_bandwidth\0309 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022C\n\036max_network_bandwidth_for" +
+      "_user\030: \001(\0132\033.google.protobuf.Int64Value" +
+      "\0227\n\023force_index_by_date\030; \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\0225\n\021force_primary_key\030<" +
+      " \001(\0132\032.google.protobuf.BoolValue\022>\n\020max_" +
+      "rows_to_read\030\r \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030\016 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022U\n\022read_overflow_mode\030\017 \001(\01629.yandex.c" +
       "loud.mdb.clickhouse.v1.UserSettings.Over" +
-      "flowMode\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025" +
-      "max_bytes_in_distinct\030\031 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022Y\n\026distinct_ov" +
-      "erflow_mode\030\032 \001(\01629.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.UserSettings.OverflowMode\022B\n\024" +
-      "max_rows_to_transfer\030\033 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to" +
-      "_transfer\030\034 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022Y\n\026transfer_overflow_mode\030" +
-      "\035 \001(\01629.yandex.cloud.mdb.clickhouse.v1.U" +
-      "serSettings.OverflowMode\022@\n\022max_executio" +
-      "n_time\030\036 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022X\n\025timeout_overflow_mode\030\037 \001(" +
-      "\01629.yandex.cloud.mdb.clickhouse.v1.UserS" +
-      "ettings.OverflowMode\022A\n\023max_columns_to_r" +
-      "ead\030  \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022C\n\025max_temporary_columns\030! \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037" +
-      "max_temporary_non_const_columns\030\" \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016m" +
-      "ax_query_size\030# \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020" +
-      "max_ast_elements\030% \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\006\372\3071\002>0\022F\n\031max_expanded_ast_" +
-      "elements\030& \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022M\n)input_format_values_inter" +
-      "pret_expressions\030= \001(\0132\032.google.protobuf" +
-      ".BoolValue\022L\n(input_format_defaults_for_" +
-      "omitted_fields\030> \001(\0132\032.google.protobuf.B" +
-      "oolValue\022K\n\'output_format_json_quote_64b" +
-      "it_integers\030? \001(\0132\032.google.protobuf.Bool" +
-      "Value\022F\n\"output_format_json_quote_denorm" +
-      "als\030@ \001(\0132\032.google.protobuf.BoolValue\022J\n" +
-      "&low_cardinality_allow_in_native_format\030" +
-      "N \001(\0132\032.google.protobuf.BoolValue\022M\n)emp" +
-      "ty_result_for_aggregation_by_empty_set\030O" +
-      " \001(\0132\032.google.protobuf.BoolValue\022<\n\027http" +
-      "_connection_timeout\030A \001(\0132\033.google.proto" +
-      "buf.Int64Value\0229\n\024http_receive_timeout\030B" +
-      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021htt" +
-      "p_send_timeout\030C \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022;\n\027enable_http_compression\030D \001" +
-      "(\0132\032.google.protobuf.BoolValue\022A\n\035send_p" +
-      "rogress_in_http_headers\030E \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022C\n\036http_headers_progre" +
-      "ss_interval\030F \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0228\n\024add_http_cors_header\030G \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\"_\n\014OverflowMode" +
-      "\022\035\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERF" +
-      "LOW_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020" +
-      "\002\"\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OV" +
-      "ERFLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OV" +
-      "ERFLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW" +
-      "_MODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_" +
-      "ANY\020\003\"\322\001\n\026DistributedProductMode\022(\n$DIST" +
-      "RIBUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DI" +
-      "STRIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIB" +
-      "UTED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED" +
-      "_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PR" +
-      "ODUCT_MODE_ALLOW\020\004Bs\n\"yandex.cloud.api.m" +
-      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/clickhous" +
-      "e/v1;clickhouseb\006proto3"
+      "flowMode\022B\n\024max_rows_to_group_by\030\020 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n\026" +
+      "group_by_overflow_mode\030\021 \001(\0162@.yandex.cl" +
+      "oud.mdb.clickhouse.v1.UserSettings.Group" +
+      "ByOverflowMode\022>\n\020max_rows_to_sort\030\022 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022?" +
+      "\n\021max_bytes_to_sort\030\023 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022U\n\022sort_overflow" +
+      "_mode\030\024 \001(\01629.yandex.cloud.mdb.clickhous" +
+      "e.v1.UserSettings.OverflowMode\022=\n\017max_re" +
+      "sult_rows\030\025 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n" +
+      "\024result_overflow_mode\030\027 \001(\01629.yandex.clo" +
+      "ud.mdb.clickhouse.v1.UserSettings.Overfl" +
+      "owMode\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025ma" +
+      "x_bytes_in_distinct\030\031 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022Y\n\026distinct_over" +
+      "flow_mode\030\032 \001(\01629.yandex.cloud.mdb.click" +
+      "house.v1.UserSettings.OverflowMode\022B\n\024ma" +
+      "x_rows_to_transfer\030\033 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to_t" +
+      "ransfer\030\034 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022Y\n\026transfer_overflow_mode\030\035 " +
+      "\001(\01629.yandex.cloud.mdb.clickhouse.v1.Use" +
+      "rSettings.OverflowMode\022@\n\022max_execution_" +
+      "time\030\036 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022X\n\025timeout_overflow_mode\030\037 \001(\0162" +
+      "9.yandex.cloud.mdb.clickhouse.v1.UserSet" +
+      "tings.OverflowMode\022A\n\023max_columns_to_rea" +
+      "d\030  \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022C\n\025max_temporary_columns\030! \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037ma" +
+      "x_temporary_non_const_columns\030\" \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max" +
+      "_query_size\030# \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132\033." +
+      "google.protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020ma" +
+      "x_ast_elements\030% \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022F\n\031max_expanded_ast_el" +
+      "ements\030& \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\022M\n)input_format_values_interpr" +
+      "et_expressions\030= \001(\0132\032.google.protobuf.B" +
+      "oolValue\022L\n(input_format_defaults_for_om" +
+      "itted_fields\030> \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022K\n\'output_format_json_quote_64bit" +
+      "_integers\030? \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022F\n\"output_format_json_quote_denormal" +
+      "s\030@ \001(\0132\032.google.protobuf.BoolValue\022J\n&l" +
+      "ow_cardinality_allow_in_native_format\030N " +
+      "\001(\0132\032.google.protobuf.BoolValue\022M\n)empty" +
+      "_result_for_aggregation_by_empty_set\030O \001" +
+      "(\0132\032.google.protobuf.BoolValue\022<\n\027http_c" +
+      "onnection_timeout\030A \001(\0132\033.google.protobu" +
+      "f.Int64Value\0229\n\024http_receive_timeout\030B \001" +
+      "(\0132\033.google.protobuf.Int64Value\0226\n\021http_" +
+      "send_timeout\030C \001(\0132\033.google.protobuf.Int" +
+      "64Value\022;\n\027enable_http_compression\030D \001(\013" +
+      "2\032.google.protobuf.BoolValue\022A\n\035send_pro" +
+      "gress_in_http_headers\030E \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022C\n\036http_headers_progress" +
+      "_interval\030F \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0228\n\024add_http_cors_header\030G \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\"_\n\014OverflowMode\022\035" +
+      "\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLO" +
+      "W_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"" +
+      "\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OVER" +
+      "FLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVER" +
+      "FLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_M" +
+      "ODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_AN" +
+      "Y\020\003\"\322\001\n\026DistributedProductMode\022(\n$DISTRI" +
+      "BUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DIST" +
+      "RIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUT" +
+      "ED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_P" +
+      "RODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PROD" +
+      "UCT_MODE_ALLOW\020\004\"\357\002\n\tUserQuota\022C\n\021interv" +
+      "al_duration\030\001 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\013\372\3071\007>=60000\0225\n\007queries\030\002 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006er" +
+      "rors\030\003 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows" +
+      "\030\005 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.clo" +
+      "ud.api.mdb.clickhouse.v1ZMgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/c" +
+      "lickhouse/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24676,7 +27688,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "Settings", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "Settings", "Quotas", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Permission_fieldAccessorTable = new
@@ -24694,13 +27706,19 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "Settings", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "Settings", "Quotas", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
         new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor,
+        new java.lang.String[] { "IntervalDuration", "Queries", "Errors", "ResultRows", "ReadRows", "ExecutionTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

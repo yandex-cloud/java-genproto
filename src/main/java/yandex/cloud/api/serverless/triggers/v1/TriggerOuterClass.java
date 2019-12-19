@@ -24,14 +24,27 @@ public final class TriggerOuterClass {
      */
     TRIGGER_TYPE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * The trigger is activated on a timer.
+     * </pre>
+     *
      * <code>TIMER = 2;</code>
      */
     TIMER(2),
     /**
+     * <pre>
+     * The trigger is activated by messages from a message queue.
+     * Only Yandex Message Queue is currently supported.
+     * </pre>
+     *
      * <code>MESSAGE_QUEUE = 3;</code>
      */
     MESSAGE_QUEUE(3),
     /**
+     * <pre>
+     * The trigger is activated by messages from Yandex IoT Core.
+     * </pre>
+     *
      * <code>IOT_MESSAGE = 4;</code>
      */
     IOT_MESSAGE(4),
@@ -47,14 +60,27 @@ public final class TriggerOuterClass {
      */
     public static final int TRIGGER_TYPE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * The trigger is activated on a timer.
+     * </pre>
+     *
      * <code>TIMER = 2;</code>
      */
     public static final int TIMER_VALUE = 2;
     /**
+     * <pre>
+     * The trigger is activated by messages from a message queue.
+     * Only Yandex Message Queue is currently supported.
+     * </pre>
+     *
      * <code>MESSAGE_QUEUE = 3;</code>
      */
     public static final int MESSAGE_QUEUE_VALUE = 3;
     /**
+     * <pre>
+     * The trigger is activated by messages from Yandex IoT Core.
+     * </pre>
+     *
      * <code>IOT_MESSAGE = 4;</code>
      */
     public static final int IOT_MESSAGE_VALUE = 4;
@@ -145,7 +171,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * ID of the trigger.
+     * ID of the trigger. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -153,7 +179,7 @@ public final class TriggerOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the trigger.
+     * ID of the trigger. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -181,7 +207,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -189,7 +215,7 @@ public final class TriggerOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -197,7 +223,7 @@ public final class TriggerOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -209,7 +235,7 @@ public final class TriggerOuterClass {
      * Name of the trigger.
      * </pre>
      *
-     * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     java.lang.String getName();
     /**
@@ -217,7 +243,7 @@ public final class TriggerOuterClass {
      * Name of the trigger.
      * </pre>
      *
-     * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -227,7 +253,7 @@ public final class TriggerOuterClass {
      * Description of the trigger.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     java.lang.String getDescription();
     /**
@@ -235,14 +261,14 @@ public final class TriggerOuterClass {
      * Description of the trigger.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -250,7 +276,7 @@ public final class TriggerOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -265,7 +291,7 @@ public final class TriggerOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -274,7 +300,7 @@ public final class TriggerOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -285,7 +311,7 @@ public final class TriggerOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -296,7 +322,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -304,7 +330,7 @@ public final class TriggerOuterClass {
     boolean hasRule();
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -312,7 +338,7 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule();
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -320,6 +346,10 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder();
   }
   /**
+   * <pre>
+   * A trigger to invoke a serverless function. For more information, see [Triggers](/docs/functions/concepts/trigger).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger}
    */
   public  static final class Trigger extends
@@ -590,40 +620,76 @@ public final class TriggerOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       boolean hasTimer();
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer();
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder getTimerOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       boolean hasMessageQueue();
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue();
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder getMessageQueueOrBuilder();
 
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       boolean hasIotMessage();
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage();
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder();
@@ -644,6 +710,10 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.RuleCase getRuleCase();
     }
     /**
+     * <pre>
+     * Description of a rule for trigger activation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Rule}
      */
     public  static final class Rule extends
@@ -814,12 +884,20 @@ public final class TriggerOuterClass {
 
       public static final int TIMER_FIELD_NUMBER = 2;
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       public boolean hasTimer() {
         return ruleCase_ == 2;
       }
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer() {
@@ -829,6 +907,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a timed trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder getTimerOrBuilder() {
@@ -840,12 +922,20 @@ public final class TriggerOuterClass {
 
       public static final int MESSAGE_QUEUE_FIELD_NUMBER = 3;
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       public boolean hasMessageQueue() {
         return ruleCase_ == 3;
       }
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue() {
@@ -855,6 +945,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a message queue trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder getMessageQueueOrBuilder() {
@@ -866,12 +960,20 @@ public final class TriggerOuterClass {
 
       public static final int IOT_MESSAGE_FIELD_NUMBER = 4;
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       public boolean hasIotMessage() {
         return ruleCase_ == 4;
       }
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage() {
@@ -881,6 +983,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Rule for a Yandex IoT Core trigger.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder() {
@@ -1133,6 +1239,10 @@ public final class TriggerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Description of a rule for trigger activation.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Rule}
        */
       public static final class Builder extends
@@ -1343,12 +1453,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder> timerBuilder_;
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public boolean hasTimer() {
           return ruleCase_ == 2;
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer getTimer() {
@@ -1365,6 +1483,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public Builder setTimer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer value) {
@@ -1381,6 +1503,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public Builder setTimer(
@@ -1395,6 +1521,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public Builder mergeTimer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer value) {
@@ -1417,6 +1547,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public Builder clearTimer() {
@@ -1436,12 +1570,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.Builder getTimerBuilder() {
           return getTimerFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.TimerOrBuilder getTimerOrBuilder() {
@@ -1455,6 +1597,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a timed trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Timer timer = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -1479,12 +1625,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder> messageQueueBuilder_;
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public boolean hasMessageQueue() {
           return ruleCase_ == 3;
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue getMessageQueue() {
@@ -1501,6 +1655,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public Builder setMessageQueue(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue value) {
@@ -1517,6 +1675,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public Builder setMessageQueue(
@@ -1531,6 +1693,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public Builder mergeMessageQueue(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue value) {
@@ -1553,6 +1719,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public Builder clearMessageQueue() {
@@ -1572,12 +1742,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.Builder getMessageQueueBuilder() {
           return getMessageQueueFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueueOrBuilder getMessageQueueOrBuilder() {
@@ -1591,6 +1769,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a message queue trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue message_queue = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -1615,12 +1797,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder> iotMessageBuilder_;
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public boolean hasIotMessage() {
           return ruleCase_ == 4;
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage getIotMessage() {
@@ -1637,6 +1827,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public Builder setIotMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage value) {
@@ -1653,6 +1847,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public Builder setIotMessage(
@@ -1667,6 +1865,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public Builder mergeIotMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage value) {
@@ -1689,6 +1891,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public Builder clearIotMessage() {
@@ -1708,12 +1914,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.Builder getIotMessageBuilder() {
           return getIotMessageFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessageOrBuilder getIotMessageOrBuilder() {
@@ -1727,6 +1941,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Rule for a Yandex IoT Core trigger.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage iot_message = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -1942,10 +2160,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-       * * ("all values") - to select all values within a field.
-       * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-       * see http://man7.org/linux/man-pages/man5/crontab.5.html
+       * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1953,10 +2168,7 @@ public final class TriggerOuterClass {
       java.lang.String getCronExpression();
       /**
        * <pre>
-       * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-       * * ("all values") - to select all values within a field.
-       * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-       * see http://man7.org/linux/man-pages/man5/crontab.5.html
+       * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1965,14 +2177,26 @@ public final class TriggerOuterClass {
           getCronExpressionBytes();
 
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       boolean hasInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder();
@@ -1980,6 +2204,10 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.ActionCase getActionCase();
     }
     /**
+     * <pre>
+     * Rule for activating a timed trigger.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Timer}
      */
     public  static final class Timer extends
@@ -2111,10 +2339,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object cronExpression_;
       /**
        * <pre>
-       * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-       * * ("all values") - to select all values within a field.
-       * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-       * see http://man7.org/linux/man-pages/man5/crontab.5.html
+       * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2133,10 +2358,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-       * * ("all values") - to select all values within a field.
-       * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-       * see http://man7.org/linux/man-pages/man5/crontab.5.html
+       * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
        * </pre>
        *
        * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2157,12 +2379,20 @@ public final class TriggerOuterClass {
 
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
@@ -2172,6 +2402,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
@@ -2363,6 +2597,10 @@ public final class TriggerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Rule for activating a timed trigger.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.Timer}
        */
       public static final class Builder extends
@@ -2547,10 +2785,7 @@ public final class TriggerOuterClass {
         private java.lang.Object cronExpression_ = "";
         /**
          * <pre>
-         * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-         * * ("all values") - to select all values within a field.
-         * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-         * see http://man7.org/linux/man-pages/man5/crontab.5.html
+         * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2569,10 +2804,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-         * * ("all values") - to select all values within a field.
-         * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-         * see http://man7.org/linux/man-pages/man5/crontab.5.html
+         * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2592,10 +2824,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-         * * ("all values") - to select all values within a field.
-         * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-         * see http://man7.org/linux/man-pages/man5/crontab.5.html
+         * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2612,10 +2841,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-         * * ("all values") - to select all values within a field.
-         * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-         * see http://man7.org/linux/man-pages/man5/crontab.5.html
+         * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2628,10 +2854,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Format: Minutes Hours Day-of-Month Month Day-of-week (Year)
-         * * ("all values") - to select all values within a field.
-         * ? ("no specific value") - placeholder for "any": you can't specify the Day-of-Month and Day-of-Week fields in the same cron expression, so if you specify a value in one of the fields, you must use a "?" in the other.
-         * see http://man7.org/linux/man-pages/man5/crontab.5.html
+         * Description of a schedule as a [cron expression](/docs/functions/concepts/trigger/timer).
          * </pre>
          *
          * <code>string cron_expression = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2651,12 +2874,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder> invokeFunctionBuilder_;
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
@@ -2673,6 +2904,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
@@ -2689,6 +2924,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(
@@ -2703,6 +2942,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
@@ -2725,6 +2968,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder clearInvokeFunction() {
@@ -2744,12 +2991,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder getInvokeFunctionBuilder() {
           return getInvokeFunctionFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
@@ -2763,6 +3018,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -2842,25 +3101,25 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * ID of the queue.
+       * ID of the message queue in Yandex Message Queue.
        * </pre>
        *
-       * <code>string queue_id = 11;</code>
+       * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
        */
       java.lang.String getQueueId();
       /**
        * <pre>
-       * ID of the queue.
+       * ID of the message queue in Yandex Message Queue.
        * </pre>
        *
-       * <code>string queue_id = 11;</code>
+       * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
        */
       com.google.protobuf.ByteString
           getQueueIdBytes();
 
       /**
        * <pre>
-       * SA which has read access to the queue.
+       * ID of the service account which has read access to the message queue.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2868,7 +3127,7 @@ public final class TriggerOuterClass {
       java.lang.String getServiceAccountId();
       /**
        * <pre>
-       * SA which has read access to the queue.
+       * ID of the service account which has read access to the message queue.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2878,7 +3137,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -2886,7 +3145,7 @@ public final class TriggerOuterClass {
       boolean hasBatchSettings();
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -2894,7 +3153,7 @@ public final class TriggerOuterClass {
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -2927,14 +3186,26 @@ public final class TriggerOuterClass {
       com.google.protobuf.DurationOrBuilder getVisibilityTimeoutOrBuilder();
 
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       boolean hasInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder();
@@ -2942,6 +3213,10 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.ActionCase getActionCase();
     }
     /**
+     * <pre>
+     * Rule for activating a message queue trigger.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue}
      */
     public  static final class MessageQueue extends
@@ -3106,10 +3381,10 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object queueId_;
       /**
        * <pre>
-       * ID of the queue.
+       * ID of the message queue in Yandex Message Queue.
        * </pre>
        *
-       * <code>string queue_id = 11;</code>
+       * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getQueueId() {
         java.lang.Object ref = queueId_;
@@ -3125,10 +3400,10 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the queue.
+       * ID of the message queue in Yandex Message Queue.
        * </pre>
        *
-       * <code>string queue_id = 11;</code>
+       * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
           getQueueIdBytes() {
@@ -3148,7 +3423,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object serviceAccountId_;
       /**
        * <pre>
-       * SA which has read access to the queue.
+       * ID of the service account which has read access to the message queue.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3167,7 +3442,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has read access to the queue.
+       * ID of the service account which has read access to the message queue.
        * </pre>
        *
        * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3190,7 +3465,7 @@ public final class TriggerOuterClass {
       private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3200,7 +3475,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3210,7 +3485,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch settings for YMQ client.
+       * Batch settings for processing messages in the queue.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3254,12 +3529,20 @@ public final class TriggerOuterClass {
 
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
@@ -3269,6 +3552,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function once.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
@@ -3502,6 +3789,10 @@ public final class TriggerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Rule for activating a message queue trigger.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.MessageQueue}
        */
       public static final class Builder extends
@@ -3721,10 +4012,10 @@ public final class TriggerOuterClass {
         private java.lang.Object queueId_ = "";
         /**
          * <pre>
-         * ID of the queue.
+         * ID of the message queue in Yandex Message Queue.
          * </pre>
          *
-         * <code>string queue_id = 11;</code>
+         * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
          */
         public java.lang.String getQueueId() {
           java.lang.Object ref = queueId_;
@@ -3740,10 +4031,10 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the queue.
+         * ID of the message queue in Yandex Message Queue.
          * </pre>
          *
-         * <code>string queue_id = 11;</code>
+         * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
          */
         public com.google.protobuf.ByteString
             getQueueIdBytes() {
@@ -3760,10 +4051,10 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the queue.
+         * ID of the message queue in Yandex Message Queue.
          * </pre>
          *
-         * <code>string queue_id = 11;</code>
+         * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setQueueId(
             java.lang.String value) {
@@ -3777,10 +4068,10 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the queue.
+         * ID of the message queue in Yandex Message Queue.
          * </pre>
          *
-         * <code>string queue_id = 11;</code>
+         * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearQueueId() {
           
@@ -3790,10 +4081,10 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * ID of the queue.
+         * ID of the message queue in Yandex Message Queue.
          * </pre>
          *
-         * <code>string queue_id = 11;</code>
+         * <code>string queue_id = 11 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setQueueIdBytes(
             com.google.protobuf.ByteString value) {
@@ -3810,7 +4101,7 @@ public final class TriggerOuterClass {
         private java.lang.Object serviceAccountId_ = "";
         /**
          * <pre>
-         * SA which has read access to the queue.
+         * ID of the service account which has read access to the message queue.
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3829,7 +4120,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * SA which has read access to the queue.
+         * ID of the service account which has read access to the message queue.
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3849,7 +4140,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * SA which has read access to the queue.
+         * ID of the service account which has read access to the message queue.
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3866,7 +4157,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * SA which has read access to the queue.
+         * ID of the service account which has read access to the message queue.
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3879,7 +4170,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * SA which has read access to the queue.
+         * ID of the service account which has read access to the message queue.
          * </pre>
          *
          * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3901,7 +4192,7 @@ public final class TriggerOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3911,7 +4202,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3925,7 +4216,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3945,7 +4236,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3963,7 +4254,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -3985,7 +4276,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -4003,7 +4294,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -4015,7 +4306,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -4030,7 +4321,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Batch settings for YMQ client.
+         * Batch settings for processing messages in the queue.
          * </pre>
          *
          * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4 [(.yandex.cloud.required) = true];</code>
@@ -4205,12 +4496,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder> invokeFunctionBuilder_;
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce getInvokeFunction() {
@@ -4227,6 +4526,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
@@ -4243,6 +4546,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(
@@ -4257,6 +4564,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce value) {
@@ -4279,6 +4590,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public Builder clearInvokeFunction() {
@@ -4298,12 +4613,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnce.Builder getInvokeFunctionBuilder() {
           return getInvokeFunctionFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionOnceOrBuilder getInvokeFunctionOrBuilder() {
@@ -4317,6 +4640,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function once.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce invoke_function = 101;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -4395,44 +4722,80 @@ public final class TriggerOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * ID of the Yandex IoT Core registry.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       java.lang.String getRegistryId();
       /**
+       * <pre>
+       * ID of the Yandex IoT Core registry.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       com.google.protobuf.ByteString
           getRegistryIdBytes();
 
       /**
+       * <pre>
+       * ID of the Yandex IoT Core device in the registry.
+       * </pre>
+       *
        * <code>string device_id = 2;</code>
        */
       java.lang.String getDeviceId();
       /**
+       * <pre>
+       * ID of the Yandex IoT Core device in the registry.
+       * </pre>
+       *
        * <code>string device_id = 2;</code>
        */
       com.google.protobuf.ByteString
           getDeviceIdBytes();
 
       /**
+       * <pre>
+       * MQTT topic whose messages activate the trigger.
+       * </pre>
+       *
        * <code>string mqtt_topic = 3;</code>
        */
       java.lang.String getMqttTopic();
       /**
+       * <pre>
+       * MQTT topic whose messages activate the trigger.
+       * </pre>
+       *
        * <code>string mqtt_topic = 3;</code>
        */
       com.google.protobuf.ByteString
           getMqttTopicBytes();
 
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       boolean hasInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder();
@@ -4440,6 +4803,10 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.ActionCase getActionCase();
     }
     /**
+     * <pre>
+     * Rule for activating a Yandex IoT Core trigger.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage}
      */
     public  static final class IoTMessage extends
@@ -4584,6 +4951,10 @@ public final class TriggerOuterClass {
       public static final int REGISTRY_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object registryId_;
       /**
+       * <pre>
+       * ID of the Yandex IoT Core registry.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRegistryId() {
@@ -4599,6 +4970,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Yandex IoT Core registry.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4618,6 +4993,10 @@ public final class TriggerOuterClass {
       public static final int DEVICE_ID_FIELD_NUMBER = 2;
       private volatile java.lang.Object deviceId_;
       /**
+       * <pre>
+       * ID of the Yandex IoT Core device in the registry.
+       * </pre>
+       *
        * <code>string device_id = 2;</code>
        */
       public java.lang.String getDeviceId() {
@@ -4633,6 +5012,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Yandex IoT Core device in the registry.
+       * </pre>
+       *
        * <code>string device_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -4652,6 +5035,10 @@ public final class TriggerOuterClass {
       public static final int MQTT_TOPIC_FIELD_NUMBER = 3;
       private volatile java.lang.Object mqttTopic_;
       /**
+       * <pre>
+       * MQTT topic whose messages activate the trigger.
+       * </pre>
+       *
        * <code>string mqtt_topic = 3;</code>
        */
       public java.lang.String getMqttTopic() {
@@ -4667,6 +5054,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * MQTT topic whose messages activate the trigger.
+       * </pre>
+       *
        * <code>string mqtt_topic = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -4685,12 +5076,20 @@ public final class TriggerOuterClass {
 
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public boolean hasInvokeFunction() {
         return actionCase_ == 101;
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
@@ -4700,6 +5099,10 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
       }
       /**
+       * <pre>
+       * Instructions for invoking a function with retries as needed.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
@@ -4911,6 +5314,10 @@ public final class TriggerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Rule for activating a Yandex IoT Core trigger.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger.IoTMessage}
        */
       public static final class Builder extends
@@ -5108,6 +5515,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object registryId_ = "";
         /**
+         * <pre>
+         * ID of the Yandex IoT Core registry.
+         * </pre>
+         *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public java.lang.String getRegistryId() {
@@ -5123,6 +5534,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core registry.
+         * </pre>
+         *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public com.google.protobuf.ByteString
@@ -5139,6 +5554,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core registry.
+         * </pre>
+         *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setRegistryId(
@@ -5152,6 +5571,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core registry.
+         * </pre>
+         *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearRegistryId() {
@@ -5161,6 +5584,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core registry.
+         * </pre>
+         *
          * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setRegistryIdBytes(
@@ -5177,6 +5604,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object deviceId_ = "";
         /**
+         * <pre>
+         * ID of the Yandex IoT Core device in the registry.
+         * </pre>
+         *
          * <code>string device_id = 2;</code>
          */
         public java.lang.String getDeviceId() {
@@ -5192,6 +5623,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core device in the registry.
+         * </pre>
+         *
          * <code>string device_id = 2;</code>
          */
         public com.google.protobuf.ByteString
@@ -5208,6 +5643,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core device in the registry.
+         * </pre>
+         *
          * <code>string device_id = 2;</code>
          */
         public Builder setDeviceId(
@@ -5221,6 +5660,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core device in the registry.
+         * </pre>
+         *
          * <code>string device_id = 2;</code>
          */
         public Builder clearDeviceId() {
@@ -5230,6 +5673,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the Yandex IoT Core device in the registry.
+         * </pre>
+         *
          * <code>string device_id = 2;</code>
          */
         public Builder setDeviceIdBytes(
@@ -5246,6 +5693,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object mqttTopic_ = "";
         /**
+         * <pre>
+         * MQTT topic whose messages activate the trigger.
+         * </pre>
+         *
          * <code>string mqtt_topic = 3;</code>
          */
         public java.lang.String getMqttTopic() {
@@ -5261,6 +5712,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * MQTT topic whose messages activate the trigger.
+         * </pre>
+         *
          * <code>string mqtt_topic = 3;</code>
          */
         public com.google.protobuf.ByteString
@@ -5277,6 +5732,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * MQTT topic whose messages activate the trigger.
+         * </pre>
+         *
          * <code>string mqtt_topic = 3;</code>
          */
         public Builder setMqttTopic(
@@ -5290,6 +5749,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * MQTT topic whose messages activate the trigger.
+         * </pre>
+         *
          * <code>string mqtt_topic = 3;</code>
          */
         public Builder clearMqttTopic() {
@@ -5299,6 +5762,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * MQTT topic whose messages activate the trigger.
+         * </pre>
+         *
          * <code>string mqtt_topic = 3;</code>
          */
         public Builder setMqttTopicBytes(
@@ -5316,12 +5783,20 @@ public final class TriggerOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public boolean hasInvokeFunction() {
           return actionCase_ == 101;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
@@ -5338,6 +5813,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -5354,6 +5833,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public Builder setInvokeFunction(
@@ -5368,6 +5851,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
@@ -5390,6 +5877,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public Builder clearInvokeFunction() {
@@ -5409,12 +5900,20 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder getInvokeFunctionBuilder() {
           return getInvokeFunctionFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
@@ -5428,6 +5927,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Instructions for invoking a function with retries as needed.
+         * </pre>
+         *
          * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -7001,7 +7504,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the trigger.
+     * ID of the trigger. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -7020,7 +7523,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * ID of the trigger.
+     * ID of the trigger. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -7085,7 +7588,7 @@ public final class TriggerOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7095,7 +7598,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7105,7 +7608,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Timestamp when the trigger was created.
+     * Creation timestamp for the trigger.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7121,7 +7624,7 @@ public final class TriggerOuterClass {
      * Name of the trigger.
      * </pre>
      *
-     * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -7140,7 +7643,7 @@ public final class TriggerOuterClass {
      * Name of the trigger.
      * </pre>
      *
-     * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -7163,7 +7666,7 @@ public final class TriggerOuterClass {
      * Description of the trigger.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -7182,7 +7685,7 @@ public final class TriggerOuterClass {
      * Description of the trigger.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -7226,7 +7729,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -7246,7 +7749,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -7257,7 +7760,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -7273,7 +7776,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Trigger labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -7294,7 +7797,7 @@ public final class TriggerOuterClass {
     private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_;
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -7304,7 +7807,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -7314,7 +7817,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Defines trigger rule (is always consistent with type filed)
+     * Rule for trigger activation (always consistent with the trigger type).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -7563,6 +8066,10 @@ public final class TriggerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A trigger to invoke a serverless function. For more information, see [Triggers](/docs/functions/concepts/trigger).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.Trigger}
      */
     public static final class Builder extends
@@ -7793,7 +8300,7 @@ public final class TriggerOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the trigger.
+       * ID of the trigger. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -7812,7 +8319,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the trigger.
+       * ID of the trigger. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -7832,7 +8339,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the trigger.
+       * ID of the trigger. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -7849,7 +8356,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the trigger.
+       * ID of the trigger. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -7862,7 +8369,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * ID of the trigger.
+       * ID of the trigger. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -7973,7 +8480,7 @@ public final class TriggerOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7983,7 +8490,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7997,7 +8504,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8017,7 +8524,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8035,7 +8542,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8057,7 +8564,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8075,7 +8582,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8087,7 +8594,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8102,7 +8609,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Timestamp when the trigger was created.
+       * Creation timestamp for the trigger.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8127,7 +8634,7 @@ public final class TriggerOuterClass {
        * Name of the trigger.
        * </pre>
        *
-       * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8146,7 +8653,7 @@ public final class TriggerOuterClass {
        * Name of the trigger.
        * </pre>
        *
-       * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8166,7 +8673,7 @@ public final class TriggerOuterClass {
        * Name of the trigger.
        * </pre>
        *
-       * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -8183,7 +8690,7 @@ public final class TriggerOuterClass {
        * Name of the trigger.
        * </pre>
        *
-       * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder clearName() {
         
@@ -8196,7 +8703,7 @@ public final class TriggerOuterClass {
        * Name of the trigger.
        * </pre>
        *
-       * <code>string name = 4 [(.yandex.cloud.required) = true];</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8216,7 +8723,7 @@ public final class TriggerOuterClass {
        * Description of the trigger.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8235,7 +8742,7 @@ public final class TriggerOuterClass {
        * Description of the trigger.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8255,7 +8762,7 @@ public final class TriggerOuterClass {
        * Description of the trigger.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -8272,7 +8779,7 @@ public final class TriggerOuterClass {
        * Description of the trigger.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder clearDescription() {
         
@@ -8285,7 +8792,7 @@ public final class TriggerOuterClass {
        * Description of the trigger.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -8327,7 +8834,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8347,7 +8854,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8358,7 +8865,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8374,7 +8881,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8398,7 +8905,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8421,7 +8928,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8437,7 +8944,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Trigger labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -8455,7 +8962,7 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder> ruleBuilder_;
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8465,7 +8972,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8479,7 +8986,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8499,7 +9006,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8517,7 +9024,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8539,7 +9046,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8557,7 +9064,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8569,7 +9076,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8584,7 +9091,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Defines trigger rule (is always consistent with type filed)
+       * Rule for trigger activation (always consistent with the trigger type).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
@@ -8660,20 +9167,36 @@ public final class TriggerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     java.lang.String getFunctionTag();
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -8681,7 +9204,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * SA which should be used to call a function, optional.
+     * ID of the service account that should be used to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -8689,7 +9212,7 @@ public final class TriggerOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * SA which should be used to call a function, optional.
+     * ID of the service account that should be used to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -8698,6 +9221,10 @@ public final class TriggerOuterClass {
         getServiceAccountIdBytes();
   }
   /**
+   * <pre>
+   * A single function invocation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce}
    */
   public  static final class InvokeFunctionOnce extends
@@ -8792,6 +9319,10 @@ public final class TriggerOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFunctionId() {
@@ -8807,6 +9338,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8826,6 +9361,10 @@ public final class TriggerOuterClass {
     public static final int FUNCTION_TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object functionTag_;
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     public java.lang.String getFunctionTag() {
@@ -8841,6 +9380,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -8861,7 +9404,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * SA which should be used to call a function, optional.
+     * ID of the service account that should be used to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -8880,7 +9423,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * SA which should be used to call a function, optional.
+     * ID of the service account that should be used to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -9075,6 +9618,10 @@ public final class TriggerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A single function invocation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionOnce}
      */
     public static final class Builder extends
@@ -9238,6 +9785,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFunctionId() {
@@ -9253,6 +9804,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9269,6 +9824,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFunctionId(
@@ -9282,6 +9841,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFunctionId() {
@@ -9291,6 +9854,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFunctionIdBytes(
@@ -9307,6 +9874,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object functionTag_ = "";
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public java.lang.String getFunctionTag() {
@@ -9322,6 +9893,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -9338,6 +9913,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder setFunctionTag(
@@ -9351,6 +9930,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder clearFunctionTag() {
@@ -9360,6 +9943,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder setFunctionTagBytes(
@@ -9377,7 +9964,7 @@ public final class TriggerOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * SA which should be used to call a function, optional.
+       * ID of the service account that should be used to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -9396,7 +9983,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which should be used to call a function, optional.
+       * ID of the service account that should be used to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -9416,7 +10003,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which should be used to call a function, optional.
+       * ID of the service account that should be used to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -9433,7 +10020,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which should be used to call a function, optional.
+       * ID of the service account that should be used to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -9446,7 +10033,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which should be used to call a function, optional.
+       * ID of the service account that should be used to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -9520,20 +10107,36 @@ public final class TriggerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     java.lang.String getFunctionTag();
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -9541,7 +10144,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * SA which has call permission on the function, optional.
+     * ID of the service account which has permission to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -9549,7 +10152,7 @@ public final class TriggerOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * SA which has call permission on the function, optional.
+     * ID of the service account which has permission to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -9559,7 +10162,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -9567,7 +10170,7 @@ public final class TriggerOuterClass {
     boolean hasRetrySettings();
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -9575,7 +10178,7 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings getRetrySettings();
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -9583,6 +10186,10 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder getRetrySettingsOrBuilder();
   }
   /**
+   * <pre>
+   * A function invocation with retries.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry}
    */
   public  static final class InvokeFunctionWithRetry extends
@@ -9690,6 +10297,10 @@ public final class TriggerOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFunctionId() {
@@ -9705,6 +10316,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to invoke.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9724,6 +10339,10 @@ public final class TriggerOuterClass {
     public static final int FUNCTION_TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object functionTag_;
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     public java.lang.String getFunctionTag() {
@@ -9739,6 +10358,10 @@ public final class TriggerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Tag of the function version to execute.
+     * </pre>
+     *
      * <code>string function_tag = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -9759,7 +10382,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * SA which has call permission on the function, optional.
+     * ID of the service account which has permission to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -9778,7 +10401,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * SA which has call permission on the function, optional.
+     * ID of the service account which has permission to invoke the function.
      * </pre>
      *
      * <code>string service_account_id = 3;</code>
@@ -9801,7 +10424,7 @@ public final class TriggerOuterClass {
     private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings retrySettings_;
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -9811,7 +10434,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -9821,7 +10444,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Retry policy, optional (no value means no retry).
+     * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10022,6 +10645,10 @@ public final class TriggerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A function invocation with retries.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry}
      */
     public static final class Builder extends
@@ -10199,6 +10826,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFunctionId() {
@@ -10214,6 +10845,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10230,6 +10865,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFunctionId(
@@ -10243,6 +10882,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFunctionId() {
@@ -10252,6 +10895,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to invoke.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFunctionIdBytes(
@@ -10268,6 +10915,10 @@ public final class TriggerOuterClass {
 
       private java.lang.Object functionTag_ = "";
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public java.lang.String getFunctionTag() {
@@ -10283,6 +10934,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -10299,6 +10954,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder setFunctionTag(
@@ -10312,6 +10971,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder clearFunctionTag() {
@@ -10321,6 +10984,10 @@ public final class TriggerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag of the function version to execute.
+       * </pre>
+       *
        * <code>string function_tag = 2;</code>
        */
       public Builder setFunctionTagBytes(
@@ -10338,7 +11005,7 @@ public final class TriggerOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * SA which has call permission on the function, optional.
+       * ID of the service account which has permission to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -10357,7 +11024,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has call permission on the function, optional.
+       * ID of the service account which has permission to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -10377,7 +11044,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has call permission on the function, optional.
+       * ID of the service account which has permission to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -10394,7 +11061,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has call permission on the function, optional.
+       * ID of the service account which has permission to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -10407,7 +11074,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has call permission on the function, optional.
+       * ID of the service account which has permission to invoke the function.
        * </pre>
        *
        * <code>string service_account_id = 3;</code>
@@ -10429,7 +11096,7 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.RetrySettingsOrBuilder> retrySettingsBuilder_;
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10439,7 +11106,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10453,7 +11120,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10473,7 +11140,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10491,7 +11158,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10513,7 +11180,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10531,7 +11198,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10543,7 +11210,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10558,7 +11225,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Retry policy, optional (no value means no retry).
+       * Retry policy. If the field is not specified, or the value is empty, no retries will be attempted.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.RetrySettings retry_settings = 4;</code>
@@ -10635,7 +11302,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if number of events exceeds this value.
+     * Batch size. Trigger will send the batch of messages to the associated function
+     * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -10644,7 +11312,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10652,7 +11321,8 @@ public final class TriggerOuterClass {
     boolean hasCutoff();
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10660,7 +11330,8 @@ public final class TriggerOuterClass {
     com.google.protobuf.Duration getCutoff();
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10668,6 +11339,10 @@ public final class TriggerOuterClass {
     com.google.protobuf.DurationOrBuilder getCutoffOrBuilder();
   }
   /**
+   * <pre>
+   * Settings for batch processing of messages in a queue.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.BatchSettings}
    */
   public  static final class BatchSettings extends
@@ -10761,7 +11436,8 @@ public final class TriggerOuterClass {
     private long size_;
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if number of events exceeds this value.
+     * Batch size. Trigger will send the batch of messages to the associated function
+     * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -10774,7 +11450,8 @@ public final class TriggerOuterClass {
     private com.google.protobuf.Duration cutoff_;
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10784,7 +11461,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10794,7 +11472,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -10977,6 +11656,10 @@ public final class TriggerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Settings for batch processing of messages in a queue.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.BatchSettings}
      */
     public static final class Builder extends
@@ -11140,7 +11823,8 @@ public final class TriggerOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if number of events exceeds this value.
+       * Batch size. Trigger will send the batch of messages to the associated function
+       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -11150,7 +11834,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if number of events exceeds this value.
+       * Batch size. Trigger will send the batch of messages to the associated function
+       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -11163,7 +11848,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if number of events exceeds this value.
+       * Batch size. Trigger will send the batch of messages to the associated function
+       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -11180,7 +11866,8 @@ public final class TriggerOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11190,7 +11877,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11204,7 +11892,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11224,7 +11913,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11242,7 +11932,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11264,7 +11955,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11282,7 +11974,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11294,7 +11987,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11309,7 +12003,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum batch size: trigger will send a batch if its lifetime exceeds this value.
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -11386,7 +12081,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Maximum number of retries (extra calls) before an action fails.
+     * Maximum number of retries (extra invokes) before the action is considered failed.
      * </pre>
      *
      * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
@@ -11395,7 +12090,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11403,7 +12098,7 @@ public final class TriggerOuterClass {
     boolean hasInterval();
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11411,7 +12106,7 @@ public final class TriggerOuterClass {
     com.google.protobuf.Duration getInterval();
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11419,6 +12114,10 @@ public final class TriggerOuterClass {
     com.google.protobuf.DurationOrBuilder getIntervalOrBuilder();
   }
   /**
+   * <pre>
+   * Settings for retrying to invoke a function.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.RetrySettings}
    */
   public  static final class RetrySettings extends
@@ -11512,7 +12211,7 @@ public final class TriggerOuterClass {
     private long retryAttempts_;
     /**
      * <pre>
-     * Maximum number of retries (extra calls) before an action fails.
+     * Maximum number of retries (extra invokes) before the action is considered failed.
      * </pre>
      *
      * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
@@ -11525,7 +12224,7 @@ public final class TriggerOuterClass {
     private com.google.protobuf.Duration interval_;
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11535,7 +12234,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11545,7 +12244,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Interval between tries.
+     * Time in seconds to wait between individual retries.
      * </pre>
      *
      * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11728,6 +12427,10 @@ public final class TriggerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Settings for retrying to invoke a function.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.triggers.v1.RetrySettings}
      */
     public static final class Builder extends
@@ -11891,7 +12594,7 @@ public final class TriggerOuterClass {
       private long retryAttempts_ ;
       /**
        * <pre>
-       * Maximum number of retries (extra calls) before an action fails.
+       * Maximum number of retries (extra invokes) before the action is considered failed.
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
@@ -11901,7 +12604,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of retries (extra calls) before an action fails.
+       * Maximum number of retries (extra invokes) before the action is considered failed.
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
@@ -11914,7 +12617,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum number of retries (extra calls) before an action fails.
+       * Maximum number of retries (extra invokes) before the action is considered failed.
        * </pre>
        *
        * <code>int64 retry_attempts = 1 [(.yandex.cloud.value) = "1-5"];</code>
@@ -11931,7 +12634,7 @@ public final class TriggerOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> intervalBuilder_;
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11941,7 +12644,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11955,7 +12658,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11975,7 +12678,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -11993,7 +12696,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -12015,7 +12718,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -12033,7 +12736,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -12045,7 +12748,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -12060,7 +12763,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Interval between tries.
+       * Time in seconds to wait between individual retries.
        * </pre>
        *
        * <code>.google.protobuf.Duration interval = 2 [(.yandex.cloud.required) = true];</code>
@@ -12199,71 +12902,71 @@ public final class TriggerOuterClass {
       "igger.proto\022#yandex.cloud.serverless.tri" +
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\035yande" +
-      "x/cloud/validation.proto\"\226\016\n\007Trigger\022\n\n\002" +
+      "x/cloud/validation.proto\"\253\016\n\007Trigger\022\n\n\002" +
       "id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
-      "Timestamp\022\022\n\004name\030\004 \001(\tB\004\350\3071\001\022\023\n\013descrip" +
-      "tion\030\005 \001(\t\022H\n\006labels\030\006 \003(\01328.yandex.clou" +
-      "d.serverless.triggers.v1.Trigger.LabelsE" +
-      "ntry\022E\n\004rule\030\010 \001(\01321.yandex.cloud.server" +
-      "less.triggers.v1.Trigger.RuleB\004\350\3071\001\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\032\323\002\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex.clou" +
-      "d.serverless.triggers.v1.Trigger.TimerH\000" +
-      "\022R\n\rmessage_queue\030\003 \001(\01329.yandex.cloud.s" +
-      "erverless.triggers.v1.Trigger.MessageQue" +
-      "ueH\000\022N\n\013iot_message\030\004 \001(\01327.yandex.cloud" +
-      ".serverless.triggers.v1.Trigger.IoTMessa" +
-      "geH\000\022T\n\016object_storage\030\005 \001(\0132:.yandex.cl" +
-      "oud.serverless.triggers.v1.Trigger.Objec" +
-      "tStorageH\000B\014\n\004rule\022\004\300\3011\001\032\223\001\n\005Timer\022&\n\017cr" +
-      "on_expression\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022R\n\017in" +
-      "voke_function\030e \001(\01327.yandex.cloud.serve" +
-      "rless.triggers.v1.InvokeFunctionOnceH\000B\016" +
-      "\n\006action\022\004\300\3011\001\032\302\002\n\014MessageQueue\022\020\n\010queue" +
-      "_id\030\013 \001(\t\022(\n\022service_account_id\030\003 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022P\n\016batch_settings\030\004 \001(\01322.ya" +
-      "ndex.cloud.serverless.triggers.v1.BatchS" +
-      "ettingsB\004\350\3071\001\022@\n\022visibility_timeout\030\005 \001(" +
-      "\0132\031.google.protobuf.DurationB\t\372\3071\005<=12h\022" +
-      "R\n\017invoke_function\030e \001(\01327.yandex.cloud." +
-      "serverless.triggers.v1.InvokeFunctionOnc" +
-      "eH\000B\016\n\006action\022\004\300\3011\001\032\267\001\n\nIoTMessage\022\031\n\013re" +
-      "gistry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(\t" +
-      "\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017invoke_function\030" +
-      "e \001(\0132<.yandex.cloud.serverless.triggers" +
-      ".v1.InvokeFunctionWithRetryH\000B\016\n\006action\022" +
-      "\004\300\3011\001\032\214\002\n\rObjectStorage\022_\n\nevent_type\030\003 " +
-      "\003(\0162C.yandex.cloud.serverless.triggers.v" +
-      "1.Trigger.ObjectStorageEventTypeB\006\202\3101\002>0" +
-      "\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006s" +
-      "uffix\030\007 \001(\t\022W\n\017invoke_function\030e \001(\0132<.y" +
-      "andex.cloud.serverless.triggers.v1.Invok" +
-      "eFunctionWithRetryH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n" +
-      "\026ObjectStorageEventType\022)\n%OBJECT_STORAG" +
-      "E_EVENT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJECT_STO" +
-      "RAGE_EVENT_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJEC" +
-      "T_STORAGE_EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'" +
-      "OBJECT_STORAGE_EVENT_TYPE_DELETE_OBJECT\020" +
-      "\003\"i\n\022InvokeFunctionOnce\022!\n\013function_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t" +
-      "\022\032\n\022service_account_id\030\003 \001(\t\"\272\001\n\027InvokeF" +
-      "unctionWithRetry\022!\n\013function_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022ser" +
-      "vice_account_id\030\003 \001(\t\022J\n\016retry_settings\030" +
-      "\004 \001(\01322.yandex.cloud.serverless.triggers" +
-      ".v1.RetrySettings\"X\n\rBatchSettings\022\026\n\004si" +
-      "ze\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030\002 \001(\0132\031.goo" +
-      "gle.protobuf.DurationB\004\350\3071\001\"c\n\rRetrySett" +
-      "ings\022\037\n\016retry_attempts\030\001 \001(\003B\007\372\3071\0031-5\0221\n" +
-      "\010interval\030\002 \001(\0132\031.google.protobuf.Durati" +
-      "onB\004\350\3071\001*n\n\013TriggerType\022\034\n\030TRIGGER_TYPE_" +
-      "UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEU" +
-      "E\020\003\022\017\n\013IOT_MESSAGE\020\004\022\022\n\016OBJECT_STORAGE\020\005" +
-      "B{\n\'yandex.cloud.api.serverless.triggers" +
-      ".v1ZPgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/serverless/triggers/v1;tri" +
-      "ggersb\006proto3"
+      "Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013des" +
+      "cription\030\005 \001(\tB\t\212\3101\0050-256\022H\n\006labels\030\006 \003(" +
+      "\01328.yandex.cloud.serverless.triggers.v1." +
+      "Trigger.LabelsEntry\022E\n\004rule\030\010 \001(\01321.yand" +
+      "ex.cloud.serverless.triggers.v1.Trigger." +
+      "RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\032\323\002\n\004Rule\022C\n\005timer\030\002 \001(" +
+      "\01322.yandex.cloud.serverless.triggers.v1." +
+      "Trigger.TimerH\000\022R\n\rmessage_queue\030\003 \001(\01329" +
+      ".yandex.cloud.serverless.triggers.v1.Tri" +
+      "gger.MessageQueueH\000\022N\n\013iot_message\030\004 \001(\013" +
+      "27.yandex.cloud.serverless.triggers.v1.T" +
+      "rigger.IoTMessageH\000\022T\n\016object_storage\030\005 " +
+      "\001(\0132:.yandex.cloud.serverless.triggers.v" +
+      "1.Trigger.ObjectStorageH\000B\014\n\004rule\022\004\300\3011\001\032" +
+      "\223\001\n\005Timer\022&\n\017cron_expression\030\001 \001(\tB\r\350\3071\001" +
+      "\212\3101\005<=100\022R\n\017invoke_function\030e \001(\01327.yan" +
+      "dex.cloud.serverless.triggers.v1.InvokeF" +
+      "unctionOnceH\000B\016\n\006action\022\004\300\3011\001\032\310\002\n\014Messag" +
+      "eQueue\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022servic" +
+      "e_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batc" +
+      "h_settings\030\004 \001(\01322.yandex.cloud.serverle" +
+      "ss.triggers.v1.BatchSettingsB\004\350\3071\001\022@\n\022vi" +
+      "sibility_timeout\030\005 \001(\0132\031.google.protobuf" +
+      ".DurationB\t\372\3071\005<=12h\022R\n\017invoke_function\030" +
+      "e \001(\01327.yandex.cloud.serverless.triggers" +
+      ".v1.InvokeFunctionOnceH\000B\016\n\006action\022\004\300\3011\001" +
+      "\032\267\001\n\nIoTMessage\022\031\n\013registry_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nmqtt_topic\030\003 \001(" +
+      "\t\022W\n\017invoke_function\030e \001(\0132<.yandex.clou" +
+      "d.serverless.triggers.v1.InvokeFunctionW" +
+      "ithRetryH\000B\016\n\006action\022\004\300\3011\001\032\214\002\n\rObjectSto" +
+      "rage\022_\n\nevent_type\030\003 \003(\0162C.yandex.cloud." +
+      "serverless.triggers.v1.Trigger.ObjectSto" +
+      "rageEventTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t" +
+      "\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022W\n\017invo" +
+      "ke_function\030e \001(\0132<.yandex.cloud.serverl" +
+      "ess.triggers.v1.InvokeFunctionWithRetryH" +
+      "\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorageEvent" +
+      "Type\022)\n%OBJECT_STORAGE_EVENT_TYPE_UNSPEC" +
+      "IFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYPE_CRE" +
+      "ATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVENT_TYP" +
+      "E_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE_EVEN" +
+      "T_TYPE_DELETE_OBJECT\020\003\"i\n\022InvokeFunction" +
+      "Once\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\024\n\014function_tag\030\002 \001(\t\022\032\n\022service_account" +
+      "_id\030\003 \001(\t\"\272\001\n\027InvokeFunctionWithRetry\022!\n" +
+      "\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014func" +
+      "tion_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001" +
+      "(\t\022J\n\016retry_settings\030\004 \001(\01322.yandex.clou" +
+      "d.serverless.triggers.v1.RetrySettings\"X" +
+      "\n\rBatchSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022" +
+      "/\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Durati" +
+      "onB\004\350\3071\001\"c\n\rRetrySettings\022\037\n\016retry_attem" +
+      "pts\030\001 \001(\003B\007\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\004\350\3071\001*n\n\013Trigger" +
+      "Type\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TI" +
+      "MER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020" +
+      "\004\022\022\n\016OBJECT_STORAGE\020\005B{\n\'yandex.cloud.ap" +
+      "i.serverless.triggers.v1ZPgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/serve" +
+      "rless/triggers/v1;triggersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

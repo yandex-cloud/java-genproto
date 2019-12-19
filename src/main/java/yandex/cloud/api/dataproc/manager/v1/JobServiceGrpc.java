@@ -120,7 +120,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for Data Proc cluster.
      * </pre>
      */
     public void listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request,
@@ -178,7 +178,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for Data Proc cluster.
      * </pre>
      */
     public void listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request,
@@ -219,7 +219,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for Data Proc cluster.
      * </pre>
      */
     public yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse listActive(yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsRequest request) {
@@ -258,7 +258,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of jobs for Dataproc cluster.
+     * Retrieves a list of jobs for Data Proc cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.manager.v1.JobServiceOuterClass.ListJobsResponse> listActive(

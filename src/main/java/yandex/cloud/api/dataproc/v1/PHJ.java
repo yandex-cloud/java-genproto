@@ -20,8 +20,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc job.
-     * This ID is assigned by MDB in the process of creating Dataproc job.
+     * ID of the job. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,8 +28,7 @@ public final class PHJ {
     java.lang.String getId();
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc job.
-     * This ID is assigned by MDB in the process of creating Dataproc job.
+     * ID of the job. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +38,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc cluster.
+     * Unique ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -48,7 +46,7 @@ public final class PHJ {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc cluster.
+     * Unique ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -58,7 +56,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -66,7 +64,7 @@ public final class PHJ {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -74,7 +72,7 @@ public final class PHJ {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -83,7 +81,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -91,7 +89,7 @@ public final class PHJ {
     boolean hasStartedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -99,7 +97,7 @@ public final class PHJ {
     com.google.protobuf.Timestamp getStartedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -108,7 +106,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -116,7 +114,7 @@ public final class PHJ {
     boolean hasFinishedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -124,7 +122,7 @@ public final class PHJ {
     com.google.protobuf.Timestamp getFinishedAt();
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -133,7 +131,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Name of the Dataproc job.
+     * Name of the job, specified in the [JobService.Create] request.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -141,7 +139,7 @@ public final class PHJ {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc job.
+     * Name of the job, specified in the [JobService.Create] request.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -151,7 +149,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Status.
+     * Job status.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -159,7 +157,7 @@ public final class PHJ {
     int getStatusValue();
     /**
      * <pre>
-     * Status.
+     * Job status.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -167,53 +165,101 @@ public final class PHJ {
     yandex.cloud.api.dataproc.v1.PHJ.Job.Status getStatus();
 
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     boolean hasMapreduceJob();
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob();
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     boolean hasSparkJob();
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob();
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     boolean hasPysparkJob();
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob();
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     boolean hasHiveJob();
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob();
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder();
@@ -222,7 +268,7 @@ public final class PHJ {
   }
   /**
    * <pre>
-   * Dataproc job.
+   * A Data Proc job. For details about the concept, see [documentation](/docs/dataproc/concepts/jobs).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
@@ -429,7 +475,7 @@ public final class PHJ {
       STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Job created in metadb and is waiting agent to acquire.
+       * Job is logged in the database and is waiting for the agent to run it.
        * </pre>
        *
        * <code>PROVISIONING = 1;</code>
@@ -437,7 +483,7 @@ public final class PHJ {
       PROVISIONING(1),
       /**
        * <pre>
-       * Job acquired by agent and is waiting for execution.
+       * Job is acquired by the agent and is in the queue for execution.
        * </pre>
        *
        * <code>PENDING = 2;</code>
@@ -445,7 +491,7 @@ public final class PHJ {
       PENDING(2),
       /**
        * <pre>
-       * Job is running.
+       * Job is being run in the cluster.
        * </pre>
        *
        * <code>RUNNING = 3;</code>
@@ -453,7 +499,7 @@ public final class PHJ {
       RUNNING(3),
       /**
        * <pre>
-       * Job failed.
+       * Job failed to finish the run properly.
        * </pre>
        *
        * <code>ERROR = 4;</code>
@@ -461,7 +507,7 @@ public final class PHJ {
       ERROR(4),
       /**
        * <pre>
-       * Job finished.
+       * Job is finished
        * </pre>
        *
        * <code>DONE = 5;</code>
@@ -476,7 +522,7 @@ public final class PHJ {
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Job created in metadb and is waiting agent to acquire.
+       * Job is logged in the database and is waiting for the agent to run it.
        * </pre>
        *
        * <code>PROVISIONING = 1;</code>
@@ -484,7 +530,7 @@ public final class PHJ {
       public static final int PROVISIONING_VALUE = 1;
       /**
        * <pre>
-       * Job acquired by agent and is waiting for execution.
+       * Job is acquired by the agent and is in the queue for execution.
        * </pre>
        *
        * <code>PENDING = 2;</code>
@@ -492,7 +538,7 @@ public final class PHJ {
       public static final int PENDING_VALUE = 2;
       /**
        * <pre>
-       * Job is running.
+       * Job is being run in the cluster.
        * </pre>
        *
        * <code>RUNNING = 3;</code>
@@ -500,7 +546,7 @@ public final class PHJ {
       public static final int RUNNING_VALUE = 3;
       /**
        * <pre>
-       * Job failed.
+       * Job failed to finish the run properly.
        * </pre>
        *
        * <code>ERROR = 4;</code>
@@ -508,7 +554,7 @@ public final class PHJ {
       public static final int ERROR_VALUE = 4;
       /**
        * <pre>
-       * Job finished.
+       * Job is finished
        * </pre>
        *
        * <code>DONE = 5;</code>
@@ -638,8 +684,7 @@ public final class PHJ {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc job.
-     * This ID is assigned by MDB in the process of creating Dataproc job.
+     * ID of the job. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -658,8 +703,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc job.
-     * This ID is assigned by MDB in the process of creating Dataproc job.
+     * ID of the job. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -682,7 +726,7 @@ public final class PHJ {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc cluster.
+     * Unique ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -701,7 +745,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Dataproc cluster.
+     * Unique ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -724,7 +768,7 @@ public final class PHJ {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -734,7 +778,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -744,7 +788,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -757,7 +801,7 @@ public final class PHJ {
     private com.google.protobuf.Timestamp startedAt_;
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -767,7 +811,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -777,7 +821,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was started.
+     * The time when the job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -790,7 +834,7 @@ public final class PHJ {
     private com.google.protobuf.Timestamp finishedAt_;
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -800,7 +844,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -810,7 +854,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The time when the Dataproc job was finished.
+     * The time when the job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -823,7 +867,7 @@ public final class PHJ {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc job.
+     * Name of the job, specified in the [JobService.Create] request.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -842,7 +886,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Name of the Dataproc job.
+     * Name of the job, specified in the [JobService.Create] request.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -865,7 +909,7 @@ public final class PHJ {
     private int status_;
     /**
      * <pre>
-     * Status.
+     * Job status.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -875,7 +919,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Status.
+     * Job status.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -888,12 +932,20 @@ public final class PHJ {
 
     public static final int MAPREDUCE_JOB_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     public boolean hasMapreduceJob() {
       return jobSpecCase_ == 8;
     }
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
@@ -903,6 +955,10 @@ public final class PHJ {
       return yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
@@ -914,12 +970,20 @@ public final class PHJ {
 
     public static final int SPARK_JOB_FIELD_NUMBER = 9;
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     public boolean hasSparkJob() {
       return jobSpecCase_ == 9;
     }
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
@@ -929,6 +993,10 @@ public final class PHJ {
       return yandex.cloud.api.dataproc.v1.PHJ.SparkJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
@@ -940,12 +1008,20 @@ public final class PHJ {
 
     public static final int PYSPARK_JOB_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     public boolean hasPysparkJob() {
       return jobSpecCase_ == 10;
     }
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
@@ -955,6 +1031,10 @@ public final class PHJ {
       return yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
@@ -966,12 +1046,20 @@ public final class PHJ {
 
     public static final int HIVE_JOB_FIELD_NUMBER = 11;
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     public boolean hasHiveJob() {
       return jobSpecCase_ == 11;
     }
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
@@ -981,6 +1069,10 @@ public final class PHJ {
       return yandex.cloud.api.dataproc.v1.PHJ.HiveJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
@@ -1296,7 +1388,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Dataproc job.
+     * A Data Proc job. For details about the concept, see [documentation](/docs/dataproc/concepts/jobs).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
@@ -1578,8 +1670,7 @@ public final class PHJ {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc job.
-       * This ID is assigned by MDB in the process of creating Dataproc job.
+       * ID of the job. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1598,8 +1689,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc job.
-       * This ID is assigned by MDB in the process of creating Dataproc job.
+       * ID of the job. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1619,8 +1709,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc job.
-       * This ID is assigned by MDB in the process of creating Dataproc job.
+       * ID of the job. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1637,8 +1726,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc job.
-       * This ID is assigned by MDB in the process of creating Dataproc job.
+       * ID of the job. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1651,8 +1739,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc job.
-       * This ID is assigned by MDB in the process of creating Dataproc job.
+       * ID of the job. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1672,7 +1759,7 @@ public final class PHJ {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc cluster.
+       * Unique ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1691,7 +1778,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc cluster.
+       * Unique ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1711,7 +1798,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc cluster.
+       * Unique ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1728,7 +1815,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc cluster.
+       * Unique ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1741,7 +1828,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Dataproc cluster.
+       * Unique ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1763,7 +1850,7 @@ public final class PHJ {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1773,7 +1860,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1787,7 +1874,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1807,7 +1894,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1825,7 +1912,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1847,7 +1934,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1865,7 +1952,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1877,7 +1964,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1892,7 +1979,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1916,7 +2003,7 @@ public final class PHJ {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -1926,7 +2013,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -1940,7 +2027,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -1960,7 +2047,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -1978,7 +2065,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2000,7 +2087,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2018,7 +2105,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2030,7 +2117,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2045,7 +2132,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was started.
+       * The time when the job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2069,7 +2156,7 @@ public final class PHJ {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2079,7 +2166,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2093,7 +2180,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2113,7 +2200,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2131,7 +2218,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2153,7 +2240,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2171,7 +2258,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2183,7 +2270,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2198,7 +2285,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The time when the Dataproc job was finished.
+       * The time when the job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2220,7 +2307,7 @@ public final class PHJ {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc job.
+       * Name of the job, specified in the [JobService.Create] request.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2239,7 +2326,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Name of the Dataproc job.
+       * Name of the job, specified in the [JobService.Create] request.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2259,7 +2346,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Name of the Dataproc job.
+       * Name of the job, specified in the [JobService.Create] request.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2276,7 +2363,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Name of the Dataproc job.
+       * Name of the job, specified in the [JobService.Create] request.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2289,7 +2376,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Name of the Dataproc job.
+       * Name of the job, specified in the [JobService.Create] request.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2309,7 +2396,7 @@ public final class PHJ {
       private int status_ = 0;
       /**
        * <pre>
-       * Status.
+       * Job status.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -2319,7 +2406,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Status.
+       * Job status.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -2331,7 +2418,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Status.
+       * Job status.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -2343,7 +2430,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Status.
+       * Job status.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -2359,7 +2446,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Status.
+       * Job status.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Job.Status status = 7;</code>
@@ -2374,12 +2461,20 @@ public final class PHJ {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob, yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder> mapreduceJobBuilder_;
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public boolean hasMapreduceJob() {
         return jobSpecCase_ == 8;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
@@ -2396,6 +2491,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public Builder setMapreduceJob(yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob value) {
@@ -2412,6 +2511,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public Builder setMapreduceJob(
@@ -2426,6 +2529,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public Builder mergeMapreduceJob(yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob value) {
@@ -2448,6 +2555,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public Builder clearMapreduceJob() {
@@ -2467,12 +2578,20 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.Builder getMapreduceJobBuilder() {
         return getMapreduceJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
@@ -2486,6 +2605,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2510,12 +2633,20 @@ public final class PHJ {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.SparkJob, yandex.cloud.api.dataproc.v1.PHJ.SparkJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder> sparkJobBuilder_;
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public boolean hasSparkJob() {
         return jobSpecCase_ == 9;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
@@ -2532,6 +2663,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public Builder setSparkJob(yandex.cloud.api.dataproc.v1.PHJ.SparkJob value) {
@@ -2548,6 +2683,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public Builder setSparkJob(
@@ -2562,6 +2701,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public Builder mergeSparkJob(yandex.cloud.api.dataproc.v1.PHJ.SparkJob value) {
@@ -2584,6 +2727,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public Builder clearSparkJob() {
@@ -2603,12 +2750,20 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob.Builder getSparkJobBuilder() {
         return getSparkJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
@@ -2622,6 +2777,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2646,12 +2805,20 @@ public final class PHJ {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.PysparkJob, yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder> pysparkJobBuilder_;
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public boolean hasPysparkJob() {
         return jobSpecCase_ == 10;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
@@ -2668,6 +2835,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public Builder setPysparkJob(yandex.cloud.api.dataproc.v1.PHJ.PysparkJob value) {
@@ -2684,6 +2855,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public Builder setPysparkJob(
@@ -2698,6 +2873,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public Builder mergePysparkJob(yandex.cloud.api.dataproc.v1.PHJ.PysparkJob value) {
@@ -2720,6 +2899,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public Builder clearPysparkJob() {
@@ -2739,12 +2922,20 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.Builder getPysparkJobBuilder() {
         return getPysparkJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
@@ -2758,6 +2949,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2782,12 +2977,20 @@ public final class PHJ {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.HiveJob, yandex.cloud.api.dataproc.v1.PHJ.HiveJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder> hiveJobBuilder_;
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public boolean hasHiveJob() {
         return jobSpecCase_ == 11;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
@@ -2804,6 +3007,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public Builder setHiveJob(yandex.cloud.api.dataproc.v1.PHJ.HiveJob value) {
@@ -2820,6 +3027,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public Builder setHiveJob(
@@ -2834,6 +3045,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public Builder mergeHiveJob(yandex.cloud.api.dataproc.v1.PHJ.HiveJob value) {
@@ -2856,6 +3071,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public Builder clearHiveJob() {
@@ -2875,12 +3094,20 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob.Builder getHiveJobBuilder() {
         return getHiveJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
@@ -2894,6 +3121,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2973,7 +3204,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -2982,7 +3213,7 @@ public final class PHJ {
         getArgsList();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -2990,7 +3221,7 @@ public final class PHJ {
     int getArgsCount();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -2998,7 +3229,7 @@ public final class PHJ {
     java.lang.String getArgs(int index);
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -3008,7 +3239,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3017,7 +3248,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3025,7 +3256,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3033,7 +3264,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3043,7 +3274,8 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3052,7 +3284,8 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3060,7 +3293,8 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3068,7 +3302,8 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3078,7 +3313,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3087,7 +3322,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3095,7 +3330,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3103,7 +3338,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3113,7 +3348,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3121,7 +3356,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3136,7 +3371,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3145,7 +3380,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3156,7 +3391,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3167,7 +3402,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * HCFS URI of the .jar file containing the driver class.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -3175,7 +3410,7 @@ public final class PHJ {
     java.lang.String getMainJarFileUri();
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * HCFS URI of the .jar file containing the driver class.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -3185,7 +3420,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -3193,7 +3428,7 @@ public final class PHJ {
     java.lang.String getMainClass();
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -3406,7 +3641,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList args_;
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -3417,7 +3652,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -3427,7 +3662,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -3437,7 +3672,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -3451,7 +3686,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3462,7 +3697,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3472,7 +3707,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3482,7 +3717,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of file to run.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -3496,7 +3731,8 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3507,7 +3743,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3517,7 +3754,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3527,7 +3765,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -3541,7 +3780,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3552,7 +3791,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3562,7 +3801,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3572,7 +3811,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -3610,7 +3849,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3630,7 +3869,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3641,7 +3880,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3657,7 +3896,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -3677,7 +3916,7 @@ public final class PHJ {
     public static final int MAIN_JAR_FILE_URI_FIELD_NUMBER = 6;
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * HCFS URI of the .jar file containing the driver class.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -3701,7 +3940,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * HCFS URI of the .jar file containing the driver class.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -3728,7 +3967,7 @@ public final class PHJ {
     public static final int MAIN_CLASS_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -3752,7 +3991,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -4340,7 +4579,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4351,7 +4590,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4361,7 +4600,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4371,7 +4610,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4382,7 +4621,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4399,7 +4638,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4416,7 +4655,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4431,7 +4670,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4444,7 +4683,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -4470,7 +4709,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4481,7 +4720,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4491,7 +4730,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4501,7 +4740,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4512,7 +4751,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4529,7 +4768,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4546,7 +4785,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4561,7 +4800,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4574,7 +4813,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of file to run.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -4600,7 +4839,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4611,7 +4851,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4621,7 +4862,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4631,7 +4873,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4642,7 +4885,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4659,7 +4903,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4676,7 +4921,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4691,7 +4937,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4704,7 +4951,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -4730,7 +4978,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4741,7 +4989,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4751,7 +4999,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4761,7 +5009,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4772,7 +5020,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4789,7 +5037,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4806,7 +5054,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4821,7 +5069,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4834,7 +5082,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -4879,7 +5127,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4899,7 +5147,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4910,7 +5158,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4926,7 +5174,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4950,7 +5198,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4973,7 +5221,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -4989,7 +5237,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5004,7 +5252,7 @@ public final class PHJ {
 
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * HCFS URI of the .jar file containing the driver class.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -5028,7 +5276,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * HCFS URI of the .jar file containing the driver class.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -5053,7 +5301,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * HCFS URI of the .jar file containing the driver class.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -5070,7 +5318,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * HCFS URI of the .jar file containing the driver class.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -5085,7 +5333,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * HCFS URI of the .jar file containing the driver class.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -5104,7 +5352,7 @@ public final class PHJ {
 
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -5128,7 +5376,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -5153,7 +5401,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -5170,7 +5418,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -5185,7 +5433,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -5260,7 +5508,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5269,7 +5517,7 @@ public final class PHJ {
         getArgsList();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5277,7 +5525,7 @@ public final class PHJ {
     int getArgsCount();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5285,7 +5533,7 @@ public final class PHJ {
     java.lang.String getArgs(int index);
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5295,7 +5543,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5304,7 +5552,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5312,7 +5560,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5320,7 +5568,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5330,7 +5578,8 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5339,7 +5588,8 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5347,7 +5597,8 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5355,7 +5606,8 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5365,7 +5617,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5374,7 +5626,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5382,7 +5634,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5390,7 +5642,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5400,7 +5652,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5408,7 +5660,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5423,7 +5675,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5432,7 +5684,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5443,7 +5695,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5454,7 +5706,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * The HCFS URI of the jar file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -5462,7 +5714,7 @@ public final class PHJ {
     java.lang.String getMainJarFileUri();
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * The HCFS URI of the jar file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -5472,7 +5724,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -5480,7 +5732,7 @@ public final class PHJ {
     java.lang.String getMainClass();
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -5655,7 +5907,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList args_;
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5666,7 +5918,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5676,7 +5928,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5686,7 +5938,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -5700,7 +5952,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5711,7 +5963,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5721,7 +5973,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5731,7 +5983,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5745,7 +5997,8 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5756,7 +6009,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5766,7 +6020,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5776,7 +6031,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5790,7 +6046,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5801,7 +6057,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5811,7 +6067,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5821,7 +6077,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5859,7 +6115,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5879,7 +6135,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5890,7 +6146,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5906,7 +6162,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5927,7 +6183,7 @@ public final class PHJ {
     private volatile java.lang.Object mainJarFileUri_;
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * The HCFS URI of the jar file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -5946,7 +6202,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the main class.
+     * The HCFS URI of the jar file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -5969,7 +6225,7 @@ public final class PHJ {
     private volatile java.lang.Object mainClass_;
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -5988,7 +6244,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The name of the driver's main class.
+     * The name of the driver class.
      * </pre>
      *
      * <code>string main_class = 7;</code>
@@ -6525,7 +6781,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6536,7 +6792,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6546,7 +6802,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6556,7 +6812,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6567,7 +6823,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6584,7 +6840,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6601,7 +6857,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6616,7 +6872,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6629,7 +6885,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -6655,7 +6911,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6666,7 +6922,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6676,7 +6932,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6686,7 +6942,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6697,7 +6953,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6714,7 +6970,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6731,7 +6987,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6746,7 +7002,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6759,7 +7015,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -6785,7 +7041,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6796,7 +7053,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6806,7 +7064,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6816,7 +7075,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6827,7 +7087,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6844,7 +7105,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6861,7 +7123,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6876,7 +7139,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6889,7 +7153,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -6915,7 +7180,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6926,7 +7191,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6936,7 +7201,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6946,7 +7211,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6957,7 +7222,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6974,7 +7239,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -6991,7 +7256,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7006,7 +7271,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7019,7 +7284,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7064,7 +7329,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7084,7 +7349,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7095,7 +7360,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7111,7 +7376,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7135,7 +7400,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7158,7 +7423,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7174,7 +7439,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7190,7 +7455,7 @@ public final class PHJ {
       private java.lang.Object mainJarFileUri_ = "";
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * The HCFS URI of the jar file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7209,7 +7474,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * The HCFS URI of the jar file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7229,7 +7494,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * The HCFS URI of the jar file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7246,7 +7511,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * The HCFS URI of the jar file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7259,7 +7524,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the main class.
+       * The HCFS URI of the jar file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7279,7 +7544,7 @@ public final class PHJ {
       private java.lang.Object mainClass_ = "";
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -7298,7 +7563,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -7318,7 +7583,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -7335,7 +7600,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -7348,7 +7613,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The name of the driver's main class.
+       * The name of the driver class.
        * </pre>
        *
        * <code>string main_class = 7;</code>
@@ -7423,7 +7688,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7432,7 +7697,7 @@ public final class PHJ {
         getArgsList();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7440,7 +7705,7 @@ public final class PHJ {
     int getArgsCount();
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7448,7 +7713,7 @@ public final class PHJ {
     java.lang.String getArgs(int index);
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7458,7 +7723,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7467,7 +7732,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7475,7 +7740,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7483,7 +7748,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7493,7 +7758,8 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7502,7 +7768,8 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7510,7 +7777,8 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7518,7 +7786,8 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7528,7 +7797,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7537,7 +7806,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7545,7 +7814,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7553,7 +7822,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7563,7 +7832,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7571,7 +7840,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7586,7 +7855,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7595,7 +7864,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7606,7 +7875,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7617,7 +7886,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URI of the main Python file to use as the driver. Must be a .py file.
+     * URI of the file with the driver code. Must be a .py file.
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
@@ -7625,7 +7894,7 @@ public final class PHJ {
     java.lang.String getMainPythonFileUri();
     /**
      * <pre>
-     * URI of the main Python file to use as the driver. Must be a .py file.
+     * URI of the file with the driver code. Must be a .py file.
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
@@ -7841,7 +8110,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList args_;
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7852,7 +8121,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7862,7 +8131,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7872,7 +8141,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Optional arguments to the driver.
+     * Optional arguments to pass to the driver.
      * </pre>
      *
      * <code>repeated string args = 1;</code>
@@ -7886,7 +8155,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7897,7 +8166,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7907,7 +8176,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7917,7 +8186,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -7931,7 +8200,8 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7942,7 +8212,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7952,7 +8223,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7962,7 +8234,8 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * and distributed Hadoop tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -7976,7 +8249,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7987,7 +8260,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -7997,7 +8270,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8007,7 +8280,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8045,7 +8318,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8065,7 +8338,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8076,7 +8349,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8092,7 +8365,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Dataproc.
+     * Property names and values, used to configure Data Proc and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8113,7 +8386,7 @@ public final class PHJ {
     private volatile java.lang.Object mainPythonFileUri_;
     /**
      * <pre>
-     * URI of the main Python file to use as the driver. Must be a .py file.
+     * URI of the file with the driver code. Must be a .py file.
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
@@ -8132,7 +8405,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URI of the main Python file to use as the driver. Must be a .py file.
+     * URI of the file with the driver code. Must be a .py file.
      * </pre>
      *
      * <code>string main_python_file_uri = 6;</code>
@@ -8731,7 +9004,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8742,7 +9015,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8752,7 +9025,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8762,7 +9035,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8773,7 +9046,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8790,7 +9063,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8807,7 +9080,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8822,7 +9095,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8835,7 +9108,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Optional arguments to the driver.
+       * Optional arguments to pass to the driver.
        * </pre>
        *
        * <code>repeated string args = 1;</code>
@@ -8861,7 +9134,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8872,7 +9145,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8882,7 +9155,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8892,7 +9165,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8903,7 +9176,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8920,7 +9193,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8937,7 +9210,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8952,7 +9225,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8965,7 +9238,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Dataproc driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -8991,7 +9264,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9002,7 +9276,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9012,7 +9287,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9022,7 +9298,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9033,7 +9310,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9050,7 +9328,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9067,7 +9346,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9082,7 +9362,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9095,7 +9376,8 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Dataproc drivers and distributed tasks.
+       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * and distributed Hadoop tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -9121,7 +9403,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9132,7 +9414,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9142,7 +9424,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9152,7 +9434,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9163,7 +9445,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9180,7 +9462,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9197,7 +9479,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9212,7 +9494,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9225,7 +9507,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Dataproc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -9270,7 +9552,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9290,7 +9572,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9301,7 +9583,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9317,7 +9599,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9341,7 +9623,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9364,7 +9646,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9380,7 +9662,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Dataproc.
+       * Property names and values, used to configure Data Proc and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9396,7 +9678,7 @@ public final class PHJ {
       private java.lang.Object mainPythonFileUri_ = "";
       /**
        * <pre>
-       * URI of the main Python file to use as the driver. Must be a .py file.
+       * URI of the file with the driver code. Must be a .py file.
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
@@ -9415,7 +9697,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the main Python file to use as the driver. Must be a .py file.
+       * URI of the file with the driver code. Must be a .py file.
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
@@ -9435,7 +9717,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the main Python file to use as the driver. Must be a .py file.
+       * URI of the file with the driver code. Must be a .py file.
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
@@ -9452,7 +9734,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the main Python file to use as the driver. Must be a .py file.
+       * URI of the file with the driver code. Must be a .py file.
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
@@ -9465,7 +9747,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the main Python file to use as the driver. Must be a .py file.
+       * URI of the file with the driver code. Must be a .py file.
        * </pre>
        *
        * <code>string main_python_file_uri = 6;</code>
@@ -9669,19 +9951,35 @@ public final class PHJ {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     java.util.List<java.lang.String>
         getQueriesList();
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     int getQueriesCount();
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     java.lang.String getQueries(int index);
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -9774,6 +10072,10 @@ public final class PHJ {
     public static final int QUERIES_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList queries_;
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -9781,18 +10083,30 @@ public final class PHJ {
       return queries_;
     }
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     public int getQueriesCount() {
       return queries_.size();
     }
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     public java.lang.String getQueries(int index) {
       return queries_.get(index);
     }
     /**
+     * <pre>
+     * List of Hive queries.
+     * </pre>
+     *
      * <code>repeated string queries = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -10130,6 +10444,10 @@ public final class PHJ {
          }
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -10137,18 +10455,30 @@ public final class PHJ {
         return queries_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public int getQueriesCount() {
         return queries_.size();
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public java.lang.String getQueries(int index) {
         return queries_.get(index);
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -10156,6 +10486,10 @@ public final class PHJ {
         return queries_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public Builder setQueries(
@@ -10169,6 +10503,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public Builder addQueries(
@@ -10182,6 +10520,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public Builder addAllQueries(
@@ -10193,6 +10535,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public Builder clearQueries() {
@@ -10202,6 +10548,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries.
+       * </pre>
+       *
        * <code>repeated string queries = 1;</code>
        */
       public Builder addQueriesBytes(
@@ -10274,7 +10624,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10282,7 +10632,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10297,7 +10647,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10306,7 +10656,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10317,7 +10667,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10328,7 +10678,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Whether to continue executing queries if a query fails.
+     * Flag indicating whether a job should continue to run if a query fails.
      * </pre>
      *
      * <code>bool continue_on_failure = 2;</code>
@@ -10337,7 +10687,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10345,7 +10695,7 @@ public final class PHJ {
     int getScriptVariablesCount();
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10360,7 +10710,7 @@ public final class PHJ {
     getScriptVariables();
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10369,7 +10719,7 @@ public final class PHJ {
     getScriptVariablesMap();
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10380,7 +10730,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10391,7 +10741,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10400,7 +10750,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10408,7 +10758,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10416,7 +10766,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10426,7 +10776,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URI of the script that contains Hive queries.
+     * URI of the script with all the necessary Hive queries.
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
@@ -10434,7 +10784,7 @@ public final class PHJ {
     java.lang.String getQueryFileUri();
     /**
      * <pre>
-     * URI of the script that contains Hive queries.
+     * URI of the script with all the necessary Hive queries.
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
@@ -10443,14 +10793,26 @@ public final class PHJ {
         getQueryFileUriBytes();
 
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     boolean hasQueryList();
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList();
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder getQueryListOrBuilder();
@@ -10674,7 +11036,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10694,7 +11056,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10705,7 +11067,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10721,7 +11083,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Hive.
+     * Property names and values, used to configure Data Proc and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -10742,7 +11104,7 @@ public final class PHJ {
     private boolean continueOnFailure_;
     /**
      * <pre>
-     * Whether to continue executing queries if a query fails.
+     * Flag indicating whether a job should continue to run if a query fails.
      * </pre>
      *
      * <code>bool continue_on_failure = 2;</code>
@@ -10779,7 +11141,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10799,7 +11161,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10810,7 +11172,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10826,7 +11188,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Mapping of query variable names to values.
+     * Query variables and their values.
      * </pre>
      *
      * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -10847,7 +11209,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10858,7 +11220,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10868,7 +11230,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10878,7 +11240,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+     * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 4;</code>
@@ -10891,7 +11253,7 @@ public final class PHJ {
     public static final int QUERY_FILE_URI_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * URI of the script that contains Hive queries.
+     * URI of the script with all the necessary Hive queries.
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
@@ -10915,7 +11277,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URI of the script that contains Hive queries.
+     * URI of the script with all the necessary Hive queries.
      * </pre>
      *
      * <code>string query_file_uri = 5;</code>
@@ -10941,12 +11303,20 @@ public final class PHJ {
 
     public static final int QUERY_LIST_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     public boolean hasQueryList() {
       return queryTypeCase_ == 6;
     }
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList() {
@@ -10956,6 +11326,10 @@ public final class PHJ {
       return yandex.cloud.api.dataproc.v1.PHJ.QueryList.getDefaultInstance();
     }
     /**
+     * <pre>
+     * List of Hive queries to be used in the job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder getQueryListOrBuilder() {
@@ -11498,7 +11872,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11518,7 +11892,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11529,7 +11903,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11545,7 +11919,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11569,7 +11943,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11592,7 +11966,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11608,7 +11982,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Hive.
+       * Property names and values, used to configure Data Proc and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -11624,7 +11998,7 @@ public final class PHJ {
       private boolean continueOnFailure_ ;
       /**
        * <pre>
-       * Whether to continue executing queries if a query fails.
+       * Flag indicating whether a job should continue to run if a query fails.
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
@@ -11634,7 +12008,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Whether to continue executing queries if a query fails.
+       * Flag indicating whether a job should continue to run if a query fails.
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
@@ -11647,7 +12021,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Whether to continue executing queries if a query fails.
+       * Flag indicating whether a job should continue to run if a query fails.
        * </pre>
        *
        * <code>bool continue_on_failure = 2;</code>
@@ -11687,7 +12061,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11707,7 +12081,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11718,7 +12092,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11734,7 +12108,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11758,7 +12132,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11781,7 +12155,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11797,7 +12171,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Mapping of query variable names to values.
+       * Query variables and their values.
        * </pre>
        *
        * <code>map&lt;string, string&gt; script_variables = 3;</code>
@@ -11819,7 +12193,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11830,7 +12204,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11840,7 +12214,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11850,7 +12224,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11861,7 +12235,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11878,7 +12252,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11895,7 +12269,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11910,7 +12284,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11923,7 +12297,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Hive driver and tasks.
+       * JAR file URIs to add to CLASSPATH of the Hive driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 4;</code>
@@ -11942,7 +12316,7 @@ public final class PHJ {
 
       /**
        * <pre>
-       * URI of the script that contains Hive queries.
+       * URI of the script with all the necessary Hive queries.
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
@@ -11966,7 +12340,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the script that contains Hive queries.
+       * URI of the script with all the necessary Hive queries.
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
@@ -11991,7 +12365,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the script that contains Hive queries.
+       * URI of the script with all the necessary Hive queries.
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
@@ -12008,7 +12382,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the script that contains Hive queries.
+       * URI of the script with all the necessary Hive queries.
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
@@ -12023,7 +12397,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URI of the script that contains Hive queries.
+       * URI of the script with all the necessary Hive queries.
        * </pre>
        *
        * <code>string query_file_uri = 5;</code>
@@ -12043,12 +12417,20 @@ public final class PHJ {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.QueryList, yandex.cloud.api.dataproc.v1.PHJ.QueryList.Builder, yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder> queryListBuilder_;
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public boolean hasQueryList() {
         return queryTypeCase_ == 6;
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.QueryList getQueryList() {
@@ -12065,6 +12447,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public Builder setQueryList(yandex.cloud.api.dataproc.v1.PHJ.QueryList value) {
@@ -12081,6 +12467,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public Builder setQueryList(
@@ -12095,6 +12485,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public Builder mergeQueryList(yandex.cloud.api.dataproc.v1.PHJ.QueryList value) {
@@ -12117,6 +12511,10 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public Builder clearQueryList() {
@@ -12136,12 +12534,20 @@ public final class PHJ {
         return this;
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.QueryList.Builder getQueryListBuilder() {
         return getQueryListFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.QueryListOrBuilder getQueryListOrBuilder() {
@@ -12155,6 +12561,10 @@ public final class PHJ {
         }
       }
       /**
+       * <pre>
+       * List of Hive queries to be used in the job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.QueryList query_list = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

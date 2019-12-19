@@ -20,8 +20,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -29,8 +28,7 @@ public final class ClusterOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -40,7 +38,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -48,7 +46,7 @@ public final class ClusterOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -58,7 +56,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -66,7 +64,7 @@ public final class ClusterOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -74,7 +72,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -83,58 +81,54 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc cluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the cluster. The name is unique within the folder.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc cluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the cluster. The name is unique within the folder.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -146,21 +140,19 @@ public final class ClusterOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -168,11 +160,10 @@ public final class ClusterOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -180,7 +171,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -189,7 +180,7 @@ public final class ClusterOuterClass {
         getMonitoringList();
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -197,7 +188,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.Monitoring getMonitoring(int index);
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -205,7 +196,7 @@ public final class ClusterOuterClass {
     int getMonitoringCount();
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -214,7 +205,7 @@ public final class ClusterOuterClass {
         getMonitoringOrBuilderList();
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -224,7 +215,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -232,7 +223,7 @@ public final class ClusterOuterClass {
     boolean hasConfig();
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -240,7 +231,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.ClusterConfig getConfig();
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -283,7 +274,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster resides.
      * </pre>
      *
      * <code>string zone_id = 11;</code>
@@ -291,7 +282,7 @@ public final class ClusterOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster resides.
      * </pre>
      *
      * <code>string zone_id = 11;</code>
@@ -301,7 +292,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of service account for Dataproc manager agent.
+     * ID of service account for the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -309,7 +300,7 @@ public final class ClusterOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of service account for Dataproc manager agent.
+     * ID of service account for the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -319,7 +310,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Object storage bucket name for Dataproc jobs.
+     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -327,7 +318,7 @@ public final class ClusterOuterClass {
     java.lang.String getBucket();
     /**
      * <pre>
-     * Object storage bucket name for Dataproc jobs.
+     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -337,8 +328,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Description of a Dataproc cluster. For more information, see
-   * the Yandex Dataproc [documentation](/docs/data-proc/concepts/).
+   * A Data Proc cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Cluster}
@@ -742,8 +732,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -762,8 +751,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -786,7 +774,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -805,7 +793,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder that the cluster belongs to.
      * </pre>
      *
      * <code>string folder_id = 2;</code>
@@ -828,7 +816,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -838,7 +826,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -848,7 +836,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -861,11 +849,10 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc cluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the cluster. The name is unique within the folder.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -881,11 +868,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc cluster.
-     * The name is unique within the folder. 1-64 characters long.
+     * Name of the cluster. The name is unique within the folder.
      * </pre>
      *
-     * <code>string name = 4;</code>
+     * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -905,10 +891,10 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -924,10 +910,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -971,11 +957,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public boolean containsLabels(
@@ -992,11 +977,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -1004,11 +988,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -1021,11 +1004,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -1043,7 +1025,7 @@ public final class ClusterOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.Monitoring> monitoring_;
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -1053,7 +1035,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -1064,7 +1046,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -1074,7 +1056,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -1084,7 +1066,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Monitoring systems relevant to the Dataproc cluster.
+     * Monitoring systems relevant to the cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -1098,7 +1080,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterOuterClass.ClusterConfig config_;
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -1108,7 +1090,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -1118,7 +1100,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the Dataproc cluster.
+     * Configuration of the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -1181,7 +1163,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster resides.
      * </pre>
      *
      * <code>string zone_id = 11;</code>
@@ -1200,7 +1182,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster resides.
      * </pre>
      *
      * <code>string zone_id = 11;</code>
@@ -1223,7 +1205,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of service account for Dataproc manager agent.
+     * ID of service account for the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -1242,7 +1224,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of service account for Dataproc manager agent.
+     * ID of service account for the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -1265,7 +1247,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object bucket_;
     /**
      * <pre>
-     * Object storage bucket name for Dataproc jobs.
+     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -1284,7 +1266,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Object storage bucket name for Dataproc jobs.
+     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -1607,8 +1589,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of a Dataproc cluster. For more information, see
-     * the Yandex Dataproc [documentation](/docs/data-proc/concepts/).
+     * A Data Proc cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Cluster}
@@ -1916,8 +1897,7 @@ public final class ClusterOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1936,8 +1916,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1957,8 +1936,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1975,8 +1953,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1989,8 +1966,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2010,7 +1986,7 @@ public final class ClusterOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2029,7 +2005,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2049,7 +2025,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2066,7 +2042,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2079,7 +2055,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder that the cluster belongs to.
        * </pre>
        *
        * <code>string folder_id = 2;</code>
@@ -2101,7 +2077,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2111,7 +2087,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2125,7 +2101,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2145,7 +2121,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2163,7 +2139,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2185,7 +2161,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2203,7 +2179,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2215,7 +2191,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2230,7 +2206,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2252,11 +2228,10 @@ public final class ClusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc cluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the cluster. The name is unique within the folder.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2272,11 +2247,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the cluster. The name is unique within the folder.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2293,11 +2267,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the cluster. The name is unique within the folder.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -2311,11 +2284,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the cluster. The name is unique within the folder.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder clearName() {
         
@@ -2325,11 +2297,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster.
-       * The name is unique within the folder. 1-64 characters long.
+       * Name of the cluster. The name is unique within the folder.
        * </pre>
        *
-       * <code>string name = 4;</code>
+       * <code>string name = 4 [(.yandex.cloud.length) = "1-63"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2346,10 +2317,10 @@ public final class ClusterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -2365,10 +2336,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -2385,10 +2356,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -2402,10 +2373,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder clearDescription() {
         
@@ -2415,10 +2386,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
-       * <code>string description = 5;</code>
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -2460,11 +2431,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public boolean containsLabels(
@@ -2481,11 +2451,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -2493,11 +2462,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -2510,11 +2478,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -2535,11 +2502,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public Builder removeLabels(
@@ -2559,11 +2525,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -2576,11 +2541,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public Builder putAllLabels(
@@ -2604,7 +2568,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2618,7 +2582,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2632,7 +2596,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2646,7 +2610,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2667,7 +2631,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2685,7 +2649,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2705,7 +2669,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2726,7 +2690,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2744,7 +2708,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2762,7 +2726,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2781,7 +2745,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2798,7 +2762,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2815,7 +2779,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2826,7 +2790,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2840,7 +2804,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2855,7 +2819,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2866,7 +2830,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2878,7 +2842,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Monitoring systems relevant to the Dataproc cluster.
+       * Monitoring systems relevant to the cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Monitoring monitoring = 7;</code>
@@ -2907,7 +2871,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterOuterClass.ClusterConfig, yandex.cloud.api.dataproc.v1.ClusterOuterClass.ClusterConfig.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.ClusterConfigOrBuilder> configBuilder_;
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -2917,7 +2881,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -2931,7 +2895,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -2951,7 +2915,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -2969,7 +2933,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -2991,7 +2955,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -3009,7 +2973,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -3021,7 +2985,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -3036,7 +3000,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the Dataproc cluster.
+       * Configuration of the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.ClusterConfig config = 8;</code>
@@ -3188,7 +3152,7 @@ public final class ClusterOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster resides.
        * </pre>
        *
        * <code>string zone_id = 11;</code>
@@ -3207,7 +3171,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster resides.
        * </pre>
        *
        * <code>string zone_id = 11;</code>
@@ -3227,7 +3191,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster resides.
        * </pre>
        *
        * <code>string zone_id = 11;</code>
@@ -3244,7 +3208,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster resides.
        * </pre>
        *
        * <code>string zone_id = 11;</code>
@@ -3257,7 +3221,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster resides.
        * </pre>
        *
        * <code>string zone_id = 11;</code>
@@ -3277,7 +3241,7 @@ public final class ClusterOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of service account for Dataproc manager agent.
+       * ID of service account for the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -3296,7 +3260,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for Dataproc manager agent.
+       * ID of service account for the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -3316,7 +3280,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for Dataproc manager agent.
+       * ID of service account for the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -3333,7 +3297,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for Dataproc manager agent.
+       * ID of service account for the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -3346,7 +3310,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for Dataproc manager agent.
+       * ID of service account for the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -3366,7 +3330,7 @@ public final class ClusterOuterClass {
       private java.lang.Object bucket_ = "";
       /**
        * <pre>
-       * Object storage bucket name for Dataproc jobs.
+       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -3385,7 +3349,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object storage bucket name for Dataproc jobs.
+       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -3405,7 +3369,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object storage bucket name for Dataproc jobs.
+       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -3422,7 +3386,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object storage bucket name for Dataproc jobs.
+       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -3435,7 +3399,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object storage bucket name for Dataproc jobs.
+       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -3564,7 +3528,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Monitoring system.
+   * Metadata of a monitoring system for a Data Proc cluster.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Monitoring}
@@ -3961,7 +3925,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Monitoring system.
+     * Metadata of a monitoring system for a Data Proc cluster.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Monitoring}
@@ -4450,7 +4414,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4458,7 +4422,7 @@ public final class ClusterOuterClass {
     java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig.Service> getServicesList();
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4466,7 +4430,7 @@ public final class ClusterOuterClass {
     int getServicesCount();
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4474,7 +4438,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig.Service getServices(int index);
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4483,7 +4447,7 @@ public final class ClusterOuterClass {
     getServicesValueList();
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4492,9 +4456,10 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4502,9 +4467,10 @@ public final class ClusterOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4519,9 +4485,10 @@ public final class ClusterOuterClass {
     getProperties();
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4530,9 +4497,10 @@ public final class ClusterOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4543,9 +4511,10 @@ public final class ClusterOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4556,7 +4525,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -4565,7 +4534,7 @@ public final class ClusterOuterClass {
         getSshPublicKeysList();
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -4573,7 +4542,7 @@ public final class ClusterOuterClass {
     int getSshPublicKeysCount();
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -4581,7 +4550,7 @@ public final class ClusterOuterClass {
     java.lang.String getSshPublicKeys(int index);
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -4591,7 +4560,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Configuration, that describes application logic of installed services,
+   * Hadoop configuration that describes services installed in a cluster,
    * their properties and settings.
    * </pre>
    *
@@ -4941,7 +4910,7 @@ public final class ClusterOuterClass {
             };
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4952,7 +4921,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4962,7 +4931,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4972,7 +4941,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -4983,7 +4952,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of used services in cluster (for default use empty)
+     * Set of services used in the cluster (if empty, the default set is used).
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5021,9 +4990,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5043,9 +5013,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5056,9 +5027,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5074,9 +5046,10 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Properties passed to all hosts *-site.xml configurations.
-     * In key you need to use prefix 'hdfs:dfs.replication' for setting
-     * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+     * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+     * the service and the property.
+     * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+     * in `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5097,7 +5070,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.LazyStringList sshPublicKeys_;
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -5108,7 +5081,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -5118,7 +5091,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -5128,7 +5101,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of ssh public keys to access to cluster hosts.
+     * List of public SSH keys to access to cluster hosts.
      * </pre>
      *
      * <code>repeated string ssh_public_keys = 3;</code>
@@ -5349,7 +5322,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Configuration, that describes application logic of installed services,
+     * Hadoop configuration that describes services installed in a cluster,
      * their properties and settings.
      * </pre>
      *
@@ -5566,7 +5539,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5577,7 +5550,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5587,7 +5560,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5597,7 +5570,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5614,7 +5587,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5630,7 +5603,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5646,7 +5619,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5659,7 +5632,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5670,7 +5643,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5680,7 +5653,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5694,7 +5667,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5707,7 +5680,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of used services in cluster (for default use empty)
+       * Set of services used in the cluster (if empty, the default set is used).
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.HadoopConfig.Service services = 1;</code>
@@ -5750,9 +5723,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5772,9 +5746,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5785,9 +5760,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5803,9 +5779,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5829,9 +5806,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5854,9 +5832,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5872,9 +5851,10 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Properties passed to all hosts *-site.xml configurations.
-       * In key you need to use prefix 'hdfs:dfs.replication' for setting
-       * property 'dfs.replication' in /etc/hadoop/conf/hdfs-site.xml
+       * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
+       * the service and the property.
+       * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
+       * in `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5896,7 +5876,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5907,7 +5887,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5917,7 +5897,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5927,7 +5907,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5938,7 +5918,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5955,7 +5935,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5972,7 +5952,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -5987,7 +5967,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -6000,7 +5980,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of ssh public keys to access to cluster hosts.
+       * List of public SSH keys to access to cluster hosts.
        * </pre>
        *
        * <code>repeated string ssh_public_keys = 3;</code>
@@ -6075,7 +6055,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of image for cluster provisioning.
+     * Image version for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
      * </pre>
      *
@@ -6084,7 +6064,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersionId();
     /**
      * <pre>
-     * Version of image for cluster provisioning.
+     * Image version for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
      * </pre>
      *
@@ -6095,7 +6075,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6103,7 +6083,7 @@ public final class ClusterOuterClass {
     boolean hasHadoop();
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6111,7 +6091,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig getHadoop();
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6213,7 +6193,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object versionId_;
     /**
      * <pre>
-     * Version of image for cluster provisioning.
+     * Image version for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
      * </pre>
      *
@@ -6233,7 +6213,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of image for cluster provisioning.
+     * Image version for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
      * </pre>
      *
@@ -6257,7 +6237,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig hadoop_;
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6267,7 +6247,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6277,7 +6257,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Dataproc specific options
+     * Data Proc specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6622,7 +6602,7 @@ public final class ClusterOuterClass {
       private java.lang.Object versionId_ = "";
       /**
        * <pre>
-       * Version of image for cluster provisioning.
+       * Image version for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
        * </pre>
        *
@@ -6642,7 +6622,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of image for cluster provisioning.
+       * Image version for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
        * </pre>
        *
@@ -6663,7 +6643,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of image for cluster provisioning.
+       * Image version for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
        * </pre>
        *
@@ -6681,7 +6661,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of image for cluster provisioning.
+       * Image version for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
        * </pre>
        *
@@ -6695,7 +6675,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of image for cluster provisioning.
+       * Image version for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/managed-hadoop/concepts/image-versions).
        * </pre>
        *
@@ -6718,7 +6698,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfigOrBuilder> hadoopBuilder_;
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6728,7 +6708,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6742,7 +6722,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6762,7 +6742,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6780,7 +6760,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6802,7 +6782,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6820,7 +6800,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6832,7 +6812,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6847,7 +6827,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options
+       * Data Proc specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6960,40 +6940,41 @@ public final class ClusterOuterClass {
       "\n&yandex/cloud/dataproc/v1/cluster.proto" +
       "\022\030yandex.cloud.dataproc.v1\032\037google/proto" +
       "buf/timestamp.proto\032%yandex/cloud/datapr" +
-      "oc/v1/common.proto\"\362\004\n\007Cluster\022\n\n\002id\030\001 \001" +
-      "(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004 " +
-      "\001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(\013" +
-      "2-.yandex.cloud.dataproc.v1.Cluster.Labe" +
-      "lsEntry\0228\n\nmonitoring\030\007 \003(\0132$.yandex.clo" +
-      "ud.dataproc.v1.Monitoring\0227\n\006config\030\010 \001(" +
-      "\0132\'.yandex.cloud.dataproc.v1.ClusterConf" +
-      "ig\0220\n\006health\030\t \001(\0162 .yandex.cloud.datapr" +
-      "oc.v1.Health\0228\n\006status\030\n \001(\0162(.yandex.cl" +
-      "oud.dataproc.v1.Cluster.Status\022\017\n\007zone_i" +
-      "d\030\013 \001(\t\022\032\n\022service_account_id\030\014 \001(\t\022\016\n\006b" +
-      "ucket\030\r \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"k\n\006Status\022\022\n\016STATUS_U" +
-      "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
-      "RROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STA" +
-      "RTING\020\006\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
-      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\227\003\n\014Hadoo" +
-      "pConfig\022@\n\010services\030\001 \003(\0162..yandex.cloud" +
-      ".dataproc.v1.HadoopConfig.Service\022J\n\npro" +
-      "perties\030\002 \003(\01326.yandex.cloud.dataproc.v1" +
-      ".HadoopConfig.PropertiesEntry\022\027\n\017ssh_pub" +
-      "lic_keys\030\003 \003(\t\0321\n\017PropertiesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\007Service\022\027\n" +
-      "\023SERVICE_UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN" +
-      "\020\002\022\r\n\tMAPREDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\t" +
-      "ZOOKEEPER\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLU" +
-      "ME\020\t\022\t\n\005SPARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014" +
-      "\"[\n\rClusterConfig\022\022\n\nversion_id\030\001 \001(\t\0226\n" +
-      "\006hadoop\030\002 \001(\0132&.yandex.cloud.dataproc.v1" +
-      ".HadoopConfigBe\n\034yandex.cloud.api.datapr" +
-      "oc.v1ZEgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/dataproc/v1;dataprocb\006pr" +
-      "oto3"
+      "oc/v1/common.proto\032\035yandex/cloud/validat" +
+      "ion.proto\"\221\005\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\004" +
+      "1-63\022\036\n\013description\030\005 \001(\tB\t\212\3101\0050-256\022G\n\006" +
+      "labels\030\006 \003(\0132-.yandex.cloud.dataproc.v1." +
+      "Cluster.LabelsEntryB\010\202\3101\004<=64\0228\n\nmonitor" +
+      "ing\030\007 \003(\0132$.yandex.cloud.dataproc.v1.Mon" +
+      "itoring\0227\n\006config\030\010 \001(\0132\'.yandex.cloud.d" +
+      "ataproc.v1.ClusterConfig\0220\n\006health\030\t \001(\016" +
+      "2 .yandex.cloud.dataproc.v1.Health\0228\n\006st" +
+      "atus\030\n \001(\0162(.yandex.cloud.dataproc.v1.Cl" +
+      "uster.Status\022\017\n\007zone_id\030\013 \001(\t\022\032\n\022service" +
+      "_account_id\030\014 \001(\t\022\016\n\006bucket\030\r \001(\t\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"k\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATI" +
+      "NG\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING" +
+      "\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\"=\n\nMonitor" +
+      "ing\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014" +
+      "\n\004link\030\003 \001(\t\"\227\003\n\014HadoopConfig\022@\n\010service" +
+      "s\030\001 \003(\0162..yandex.cloud.dataproc.v1.Hadoo" +
+      "pConfig.Service\022J\n\nproperties\030\002 \003(\01326.ya" +
+      "ndex.cloud.dataproc.v1.HadoopConfig.Prop" +
+      "ertiesEntry\022\027\n\017ssh_public_keys\030\003 \003(\t\0321\n\017" +
+      "PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"\254\001\n\007Service\022\027\n\023SERVICE_UNSPECIFI" +
+      "ED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN\020\002\022\r\n\tMAPREDUCE\020\003\022" +
+      "\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\tZOOKEEPER\020\006\022\t\n\005HBA" +
+      "SE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLUME\020\t\022\t\n\005SPARK\020\n\022\014\n" +
+      "\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014\"[\n\rClusterConfig\022" +
+      "\022\n\nversion_id\030\001 \001(\t\0226\n\006hadoop\030\002 \001(\0132&.ya" +
+      "ndex.cloud.dataproc.v1.HadoopConfigBe\n\034y" +
+      "andex.cloud.api.dataproc.v1ZEgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/da" +
+      "taproc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7008,6 +6989,7 @@ public final class ClusterOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.dataproc.v1.Common.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7045,8 +7027,15 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_ClusterConfig_descriptor,
         new java.lang.String[] { "VersionId", "Hadoop", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.size);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.dataproc.v1.Common.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -20,8 +20,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster.
+     * To get a cluster ID make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,8 +29,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster.
+     * To get a cluster ID make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -120,8 +120,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster.
+     * To get a cluster ID make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -140,8 +140,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster.
+     * To get a cluster ID make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -466,8 +466,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster.
+       * To get a cluster ID make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -486,8 +486,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster.
+       * To get a cluster ID make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -507,8 +507,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster.
+       * To get a cluster ID make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -525,8 +525,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster.
+       * To get a cluster ID make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -539,8 +539,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster.
+       * To get a cluster ID make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -615,7 +615,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to list clusters in.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -623,7 +624,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to list clusters in.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -633,10 +635,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListClusters requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -645,8 +647,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -654,8 +656,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -665,7 +667,12 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters clusters listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-cluster`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -673,7 +680,12 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters clusters listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-cluster`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -783,7 +795,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to list clusters in.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -802,7 +815,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to list clusters in.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -825,10 +839,10 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListClusters requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -841,8 +855,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -861,8 +875,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -885,7 +899,12 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters clusters listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-cluster`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -904,7 +923,12 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters clusters listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-cluster`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1281,7 +1305,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to list clusters in.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1300,7 +1325,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to list clusters in.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1320,7 +1346,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to list clusters in.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1337,7 +1364,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to list clusters in.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1350,7 +1378,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to list clusters in.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1370,10 +1399,10 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1383,10 +1412,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1399,10 +1428,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1417,8 +1446,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1437,8 +1466,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1458,8 +1487,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1476,8 +1505,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1490,8 +1519,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1511,7 +1540,12 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters clusters listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-cluster`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1530,7 +1564,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters clusters listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-cluster`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1550,7 +1589,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters clusters listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-cluster`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1567,7 +1611,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters clusters listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-cluster`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1580,7 +1629,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters clusters listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-cluster`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1655,7 +1709,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1664,7 +1718,7 @@ public final class ClusterServiceOuterClass {
         getClustersList();
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1672,7 +1726,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster getClusters(int index);
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1680,7 +1734,7 @@ public final class ClusterServiceOuterClass {
     int getClustersCount();
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1689,7 +1743,7 @@ public final class ClusterServiceOuterClass {
         getClustersOrBuilderList();
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1699,11 +1753,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1711,11 +1764,10 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1819,7 +1871,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster> clusters_;
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1829,7 +1881,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1840,7 +1892,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1850,7 +1902,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1860,7 +1912,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Dataproc clusters.
+     * List of clusters in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -1874,11 +1926,10 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1897,11 +1948,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListClustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2296,7 +2346,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2310,7 +2360,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2324,7 +2374,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2338,7 +2388,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2359,7 +2409,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2377,7 +2427,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2397,7 +2447,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2418,7 +2468,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2436,7 +2486,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2454,7 +2504,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2473,7 +2523,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2490,7 +2540,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2507,7 +2557,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2518,7 +2568,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2532,7 +2582,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2547,7 +2597,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2558,7 +2608,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2570,7 +2620,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Dataproc clusters.
+       * List of clusters in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Cluster clusters = 1;</code>
@@ -2597,11 +2647,10 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2620,11 +2669,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2644,11 +2692,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2665,11 +2712,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2682,11 +2728,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListClustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2761,7 +2806,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -2769,7 +2814,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -2779,7 +2824,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role of the subcluster in the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -2787,7 +2832,7 @@ public final class ClusterServiceOuterClass {
     int getRoleValue();
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role of the subcluster in the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -2796,7 +2841,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -2804,7 +2849,7 @@ public final class ClusterServiceOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -2812,7 +2857,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -2821,7 +2866,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2829,7 +2874,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2839,7 +2884,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Number of hosts in subcluster
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -2961,7 +3006,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -2980,7 +3025,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3003,7 +3048,7 @@ public final class ClusterServiceOuterClass {
     private int role_;
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role of the subcluster in the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3013,7 +3058,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role of the subcluster in the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3028,7 +3073,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3038,7 +3083,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3048,7 +3093,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for hosts in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3061,7 +3106,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3080,7 +3125,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3103,7 +3148,7 @@ public final class ClusterServiceOuterClass {
     private long hostsCount_;
     /**
      * <pre>
-     * Number of hosts in subcluster
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3499,7 +3544,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3518,7 +3563,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3538,7 +3583,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3555,7 +3600,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3568,7 +3613,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3588,7 +3633,7 @@ public final class ClusterServiceOuterClass {
       private int role_ = 0;
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role of the subcluster in the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3598,7 +3643,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role of the subcluster in the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3610,7 +3655,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role of the subcluster in the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3622,7 +3667,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role of the subcluster in the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3638,7 +3683,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role of the subcluster in the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 2 [(.yandex.cloud.required) = true];</code>
@@ -3655,7 +3700,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3665,7 +3710,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3679,7 +3724,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3699,7 +3744,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3717,7 +3762,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3739,7 +3784,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3757,7 +3802,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3769,7 +3814,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3784,7 +3829,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for hosts in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3 [(.yandex.cloud.required) = true];</code>
@@ -3806,7 +3851,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3825,7 +3870,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3845,7 +3890,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3862,7 +3907,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3875,7 +3920,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3895,7 +3940,7 @@ public final class ClusterServiceOuterClass {
       private long hostsCount_ ;
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3905,7 +3950,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3918,7 +3963,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3988,8 +4033,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the subcluster to update.
+     * To get the subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -3997,8 +4042,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the subcluster to update.
+     * To get the subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -4008,7 +4053,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4016,7 +4061,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4026,7 +4071,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4034,7 +4079,7 @@ public final class ClusterServiceOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4042,7 +4087,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4051,7 +4096,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Number of hosts in subcluster
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 4 [(.yandex.cloud.value) = "&gt;=1"];</code>
@@ -4166,8 +4211,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the subcluster to update.
+     * To get the subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -4186,8 +4231,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the subcluster to update.
+     * To get the subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -4210,7 +4255,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4229,7 +4274,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of Dataproc subcluster.
+     * Name of the subcluster.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4252,7 +4297,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4262,7 +4307,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4272,7 +4317,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource configuration for hosts in subcluster.
+     * Resource configuration for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4285,7 +4330,7 @@ public final class ClusterServiceOuterClass {
     private long hostsCount_;
     /**
      * <pre>
-     * Number of hosts in subcluster
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 4 [(.yandex.cloud.value) = "&gt;=1"];</code>
@@ -4665,8 +4710,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the subcluster to update.
+       * To get the subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -4685,8 +4730,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the subcluster to update.
+       * To get the subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -4706,8 +4751,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the subcluster to update.
+       * To get the subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -4724,8 +4769,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the subcluster to update.
+       * To get the subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -4738,8 +4783,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the subcluster to update.
+       * To get the subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -4759,7 +4804,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4778,7 +4823,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4798,7 +4843,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4815,7 +4860,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4828,7 +4873,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of Dataproc subcluster.
+       * Name of the subcluster.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4850,7 +4895,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4860,7 +4905,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4874,7 +4919,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4894,7 +4939,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4912,7 +4957,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4934,7 +4979,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4952,7 +4997,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4964,7 +5009,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -4979,7 +5024,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource configuration for hosts in subcluster.
+       * Resource configuration for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 3;</code>
@@ -5001,7 +5046,7 @@ public final class ClusterServiceOuterClass {
       private long hostsCount_ ;
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 4 [(.yandex.cloud.value) = "&gt;=1"];</code>
@@ -5011,7 +5056,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 4 [(.yandex.cloud.value) = "&gt;=1"];</code>
@@ -5024,7 +5069,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 4 [(.yandex.cloud.value) = "&gt;=1"];</code>
@@ -5094,7 +5139,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Vesion of image for cluster provisioning.
+     * Version of the image for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
      * </pre>
      *
@@ -5103,7 +5148,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getVersionId();
     /**
      * <pre>
-     * Vesion of image for cluster provisioning.
+     * Version of the image for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
      * </pre>
      *
@@ -5114,7 +5159,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5122,7 +5167,7 @@ public final class ClusterServiceOuterClass {
     boolean hasHadoop();
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5130,7 +5175,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig getHadoop();
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5139,7 +5184,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5148,7 +5193,7 @@ public final class ClusterServiceOuterClass {
         getSubclustersSpecList();
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5156,7 +5201,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateSubclusterConfigSpec getSubclustersSpec(int index);
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5164,7 +5209,7 @@ public final class ClusterServiceOuterClass {
     int getSubclustersSpecCount();
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5173,7 +5218,7 @@ public final class ClusterServiceOuterClass {
         getSubclustersSpecOrBuilderList();
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5290,7 +5335,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object versionId_;
     /**
      * <pre>
-     * Vesion of image for cluster provisioning.
+     * Version of the image for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
      * </pre>
      *
@@ -5310,7 +5355,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Vesion of image for cluster provisioning.
+     * Version of the image for cluster provisioning.
      * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
      * </pre>
      *
@@ -5334,7 +5379,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig hadoop_;
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5344,7 +5389,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5354,7 +5399,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Dataproc specific options.
+     * Data Proc specific options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5367,7 +5412,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateSubclusterConfigSpec> subclustersSpec_;
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5377,7 +5422,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5388,7 +5433,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5398,7 +5443,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5408,7 +5453,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * Specification for creating subclusters.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -5813,7 +5858,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object versionId_ = "";
       /**
        * <pre>
-       * Vesion of image for cluster provisioning.
+       * Version of the image for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
        * </pre>
        *
@@ -5833,7 +5878,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Vesion of image for cluster provisioning.
+       * Version of the image for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
        * </pre>
        *
@@ -5854,7 +5899,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Vesion of image for cluster provisioning.
+       * Version of the image for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
        * </pre>
        *
@@ -5872,7 +5917,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Vesion of image for cluster provisioning.
+       * Version of the image for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
        * </pre>
        *
@@ -5886,7 +5931,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Vesion of image for cluster provisioning.
+       * Version of the image for cluster provisioning.
        * All available versions are listed in the [documentation](/docs/data-proc/concepts/image-versions).
        * </pre>
        *
@@ -5909,7 +5954,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfigOrBuilder> hadoopBuilder_;
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5919,7 +5964,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5933,7 +5978,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5953,7 +5998,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5971,7 +6016,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -5993,7 +6038,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6011,7 +6056,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6023,7 +6068,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6038,7 +6083,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Dataproc specific options.
+       * Data Proc specific options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -6071,7 +6116,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6085,7 +6130,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6099,7 +6144,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6113,7 +6158,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6134,7 +6179,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6152,7 +6197,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6172,7 +6217,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6193,7 +6238,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6211,7 +6256,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6229,7 +6274,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6248,7 +6293,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6265,7 +6310,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6282,7 +6327,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6293,7 +6338,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6307,7 +6352,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6322,7 +6367,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6333,7 +6378,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6345,7 +6390,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * Specification for creating subclusters.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.CreateSubclusterConfigSpec subclusters_spec = 3;</code>
@@ -6427,7 +6472,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6436,7 +6481,7 @@ public final class ClusterServiceOuterClass {
         getSubclustersSpecList();
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6444,7 +6489,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateSubclusterConfigSpec getSubclustersSpec(int index);
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6452,7 +6497,7 @@ public final class ClusterServiceOuterClass {
     int getSubclustersSpecCount();
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6461,7 +6506,7 @@ public final class ClusterServiceOuterClass {
         getSubclustersSpecOrBuilderList();
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6557,7 +6602,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateSubclusterConfigSpec> subclustersSpec_;
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6567,7 +6612,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6578,7 +6623,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6588,7 +6633,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6598,7 +6643,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Subclusters configuration.
+     * New configuration for subclusters in a cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6965,7 +7010,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6979,7 +7024,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -6993,7 +7038,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7007,7 +7052,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7028,7 +7073,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7046,7 +7091,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7066,7 +7111,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7087,7 +7132,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7105,7 +7150,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7123,7 +7168,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7142,7 +7187,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7159,7 +7204,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7176,7 +7221,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7187,7 +7232,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7201,7 +7246,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7216,7 +7261,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7227,7 +7272,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7239,7 +7284,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Subclusters configuration.
+       * New configuration for subclusters in a cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.UpdateSubclusterConfigSpec subclusters_spec = 1;</code>
@@ -7321,7 +7366,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to create a cluster in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7329,7 +7375,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to create a cluster in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7339,9 +7386,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * Name of the cluster. The name must be unique within the folder.
+     * The name can’t be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -7349,9 +7395,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * Name of the cluster. The name must be unique within the folder.
+     * The name can’t be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -7361,7 +7406,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7369,7 +7414,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7379,8 +7424,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7388,8 +7432,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7404,8 +7447,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7414,8 +7456,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7426,8 +7467,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7438,7 +7478,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7446,7 +7486,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7454,7 +7494,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterConfigSpec getConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7463,7 +7503,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster should be placed.
+     * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7471,7 +7512,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster should be placed.
+     * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7481,7 +7523,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the service account for Dataproc manager agent
+     * ID of the service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -7489,7 +7531,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of the service account for Dataproc manager agent
+     * ID of the service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -7499,7 +7541,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of object storage bucket for Dataproc jobs.
+     * Name of the Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 9;</code>
@@ -7507,7 +7549,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getBucket();
     /**
      * <pre>
-     * Name of object storage bucket for Dataproc jobs.
+     * Name of the Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 9;</code>
@@ -7671,7 +7713,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to create a cluster in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7690,7 +7733,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the Dataproc cluster belongs to.
+     * ID of the folder to create a cluster in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7713,9 +7757,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * Name of the cluster. The name must be unique within the folder.
+     * The name can’t be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -7734,9 +7777,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * Name of the cluster. The name must be unique within the folder.
+     * The name can’t be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -7759,7 +7801,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7778,7 +7820,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * Description of the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -7825,8 +7867,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7846,8 +7887,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7858,8 +7898,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7875,8 +7914,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * Cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7897,7 +7935,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterConfigSpec configSpec_;
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7907,7 +7945,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7917,7 +7955,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -7930,7 +7968,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster should be placed.
+     * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7949,7 +7988,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the availability zone.
+     * ID of the availability zone where the cluster should be placed.
+     * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
      * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7972,7 +8012,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of the service account for Dataproc manager agent
+     * ID of the service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -7991,7 +8031,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the service account for Dataproc manager agent
+     * ID of the service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -8014,7 +8054,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object bucket_;
     /**
      * <pre>
-     * Name of object storage bucket for Dataproc jobs.
+     * Name of the Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 9;</code>
@@ -8033,7 +8073,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of object storage bucket for Dataproc jobs.
+     * Name of the Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 9;</code>
@@ -8526,7 +8566,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to create a cluster in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8545,7 +8586,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to create a cluster in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8565,7 +8607,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to create a cluster in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8582,7 +8625,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to create a cluster in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8595,7 +8639,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the Dataproc cluster belongs to.
+       * ID of the folder to create a cluster in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8615,9 +8660,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * Name of the cluster. The name must be unique within the folder.
+       * The name can’t be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8636,9 +8680,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * Name of the cluster. The name must be unique within the folder.
+       * The name can’t be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8658,9 +8701,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * Name of the cluster. The name must be unique within the folder.
+       * The name can’t be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8677,9 +8719,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * Name of the cluster. The name must be unique within the folder.
+       * The name can’t be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8692,9 +8733,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * Name of the cluster. The name must be unique within the folder.
+       * The name can’t be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8714,7 +8754,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8733,7 +8773,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8753,7 +8793,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8770,7 +8810,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8783,7 +8823,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * Description of the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -8828,8 +8868,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8849,8 +8888,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8861,8 +8899,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8878,8 +8915,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8903,8 +8939,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8927,8 +8962,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8944,8 +8978,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * Cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -8963,7 +8996,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterConfigSpec, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterConfigSpec.Builder, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -8973,7 +9006,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -8987,7 +9020,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9007,7 +9040,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9025,7 +9058,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9047,7 +9080,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9065,7 +9098,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9077,7 +9110,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9092,7 +9125,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.CreateClusterConfigSpec config_spec = 6 [(.yandex.cloud.required) = true];</code>
@@ -9114,7 +9147,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster should be placed.
+       * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9133,7 +9167,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster should be placed.
+       * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9153,7 +9188,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster should be placed.
+       * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9170,7 +9206,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster should be placed.
+       * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9183,7 +9220,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the availability zone.
+       * ID of the availability zone where the cluster should be placed.
+       * To get the list of available zones make a [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
        * <code>string zone_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9203,7 +9241,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of the service account for Dataproc manager agent
+       * ID of the service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -9222,7 +9260,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account for Dataproc manager agent
+       * ID of the service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -9242,7 +9280,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account for Dataproc manager agent
+       * ID of the service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -9259,7 +9297,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account for Dataproc manager agent
+       * ID of the service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -9272,7 +9310,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the service account for Dataproc manager agent
+       * ID of the service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 8 [(.yandex.cloud.required) = true];</code>
@@ -9292,7 +9330,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object bucket_ = "";
       /**
        * <pre>
-       * Name of object storage bucket for Dataproc jobs.
+       * Name of the Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 9;</code>
@@ -9311,7 +9349,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of object storage bucket for Dataproc jobs.
+       * Name of the Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 9;</code>
@@ -9331,7 +9369,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of object storage bucket for Dataproc jobs.
+       * Name of the Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 9;</code>
@@ -9348,7 +9386,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of object storage bucket for Dataproc jobs.
+       * Name of the Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 9;</code>
@@ -9361,7 +9399,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of object storage bucket for Dataproc jobs.
+       * Name of the Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 9;</code>
@@ -9436,8 +9474,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9445,8 +9482,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9536,8 +9572,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9556,8 +9591,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being created.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -9882,8 +9916,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9902,8 +9935,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9923,8 +9955,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9941,8 +9972,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -9955,8 +9985,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being created.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -10031,8 +10060,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10040,8 +10069,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10051,7 +10080,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10059,7 +10088,7 @@ public final class ClusterServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10067,7 +10096,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10076,7 +10105,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * New description for the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -10084,7 +10113,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * New description for the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -10094,8 +10123,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10103,8 +10131,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10119,8 +10146,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10129,8 +10155,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10141,8 +10166,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10153,7 +10177,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10161,7 +10185,7 @@ public final class ClusterServiceOuterClass {
     boolean hasConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10169,7 +10193,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterConfigSpec getConfigSpec();
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10178,9 +10202,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * New name for the Data Proc cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -10188,9 +10210,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * New name for the Data Proc cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -10200,7 +10220,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Identifier of the new service account for the cluster.
+     * ID of the new service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
@@ -10208,7 +10228,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * Identifier of the new service account for the cluster.
+     * ID of the new service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
@@ -10218,7 +10238,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the new object storage bucket for Dataproc jobs.
+     * Name of the new Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 8;</code>
@@ -10226,7 +10246,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getBucket();
     /**
      * <pre>
-     * Name of the new object storage bucket for Dataproc jobs.
+     * Name of the new Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 8;</code>
@@ -10396,8 +10416,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10416,8 +10436,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10440,7 +10460,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10450,7 +10470,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10460,7 +10480,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+     * Field mask that specifies which attributes of the cluster should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -10473,7 +10493,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * New description for the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -10492,7 +10512,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the Dataproc cluster. 0-256 characters long.
+     * New description for the cluster.
      * </pre>
      *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -10539,8 +10559,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10560,8 +10579,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10572,8 +10590,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10589,8 +10606,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-     * Maximum 64 per resource.
+     * A new set of cluster labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10611,7 +10627,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterConfigSpec configSpec_;
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10621,7 +10637,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10631,7 +10647,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration and resources for hosts that should be created for the Dataproc cluster.
+     * Configuration and resources for hosts that should be created with the Data Proc cluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -10644,9 +10660,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * New name for the Data Proc cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -10665,9 +10679,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc cluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc cluster is created.
+     * New name for the Data Proc cluster. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -10690,7 +10702,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * Identifier of the new service account for the cluster.
+     * ID of the new service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
@@ -10709,7 +10721,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Identifier of the new service account for the cluster.
+     * ID of the new service account to be used by the Data Proc manager agent.
      * </pre>
      *
      * <code>string service_account_id = 7;</code>
@@ -10732,7 +10744,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object bucket_;
     /**
      * <pre>
-     * Name of the new object storage bucket for Dataproc jobs.
+     * Name of the new Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 8;</code>
@@ -10751,7 +10763,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the new object storage bucket for Dataproc jobs.
+     * Name of the new Object Storage bucket to use for Data Proc jobs.
      * </pre>
      *
      * <code>string bucket = 8;</code>
@@ -11257,8 +11269,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11277,8 +11289,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11298,8 +11310,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11316,8 +11328,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11330,8 +11342,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -11353,7 +11365,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11363,7 +11375,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11377,7 +11389,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11397,7 +11409,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11415,7 +11427,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11437,7 +11449,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11455,7 +11467,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11467,7 +11479,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11482,7 +11494,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Dataproc Cluster resource should be updated.
+       * Field mask that specifies which attributes of the cluster should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -11504,7 +11516,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * New description for the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -11523,7 +11535,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * New description for the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -11543,7 +11555,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * New description for the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -11560,7 +11572,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * New description for the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -11573,7 +11585,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the Dataproc cluster. 0-256 characters long.
+       * New description for the cluster.
        * </pre>
        *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -11618,8 +11630,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11639,8 +11650,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11651,8 +11661,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11668,8 +11677,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11693,8 +11701,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11717,8 +11724,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11734,8 +11740,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the Dataproc cluster as `` key:value `` pairs.
-       * Maximum 64 per resource.
+       * A new set of cluster labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -11753,7 +11758,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterConfigSpec, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterConfigSpec.Builder, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterConfigSpecOrBuilder> configSpecBuilder_;
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11763,7 +11768,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11777,7 +11782,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11797,7 +11802,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11815,7 +11820,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11837,7 +11842,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11855,7 +11860,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11867,7 +11872,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11882,7 +11887,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration and resources for hosts that should be created for the Dataproc cluster.
+       * Configuration and resources for hosts that should be created with the Data Proc cluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.UpdateClusterConfigSpec config_spec = 5;</code>
@@ -11904,9 +11909,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * New name for the Data Proc cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -11925,9 +11928,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * New name for the Data Proc cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -11947,9 +11948,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * New name for the Data Proc cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -11966,9 +11965,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * New name for the Data Proc cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -11981,9 +11978,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc cluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc cluster is created.
+       * New name for the Data Proc cluster. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 6 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -12003,7 +11998,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * Identifier of the new service account for the cluster.
+       * ID of the new service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
@@ -12022,7 +12017,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Identifier of the new service account for the cluster.
+       * ID of the new service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
@@ -12042,7 +12037,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Identifier of the new service account for the cluster.
+       * ID of the new service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
@@ -12059,7 +12054,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Identifier of the new service account for the cluster.
+       * ID of the new service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
@@ -12072,7 +12067,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Identifier of the new service account for the cluster.
+       * ID of the new service account to be used by the Data Proc manager agent.
        * </pre>
        *
        * <code>string service_account_id = 7;</code>
@@ -12092,7 +12087,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object bucket_ = "";
       /**
        * <pre>
-       * Name of the new object storage bucket for Dataproc jobs.
+       * Name of the new Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 8;</code>
@@ -12111,7 +12106,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new object storage bucket for Dataproc jobs.
+       * Name of the new Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 8;</code>
@@ -12131,7 +12126,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new object storage bucket for Dataproc jobs.
+       * Name of the new Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 8;</code>
@@ -12148,7 +12143,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new object storage bucket for Dataproc jobs.
+       * Name of the new Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 8;</code>
@@ -12161,7 +12156,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the new object storage bucket for Dataproc jobs.
+       * Name of the new Object Storage bucket to use for Data Proc jobs.
        * </pre>
        *
        * <code>string bucket = 8;</code>
@@ -12236,8 +12231,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12245,8 +12239,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12336,8 +12329,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12356,8 +12348,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster that is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -12682,8 +12673,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12702,8 +12692,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12723,8 +12712,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12741,8 +12729,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12755,8 +12742,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster that is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -12831,8 +12817,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to delete.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12840,8 +12826,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to delete.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12931,8 +12917,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to delete.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -12951,8 +12937,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to delete.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13277,8 +13263,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to delete.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13297,8 +13283,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to delete.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13318,8 +13304,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to delete.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13336,8 +13322,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to delete.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13350,8 +13336,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to delete.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -13426,8 +13412,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -13435,8 +13420,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -13526,8 +13510,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -13546,8 +13529,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -13872,8 +13854,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13892,8 +13873,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13913,8 +13893,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13931,8 +13910,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -13945,8 +13923,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -14021,8 +13998,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to start.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14030,8 +14007,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to start.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14121,8 +14098,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to start.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14141,8 +14118,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to start.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14467,8 +14444,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to start.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14487,8 +14464,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to start.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14508,8 +14485,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to start.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14526,8 +14503,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to start.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14540,8 +14517,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to start.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -14616,8 +14593,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -14625,8 +14601,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -14716,8 +14691,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -14736,8 +14710,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being started.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15062,8 +15035,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -15082,8 +15054,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -15103,8 +15074,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -15121,8 +15091,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -15135,8 +15104,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being started.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -15211,8 +15179,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to stop.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15220,8 +15188,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to stop.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15311,8 +15279,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to stop.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15331,8 +15299,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to stop.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15657,8 +15625,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to stop.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15677,8 +15645,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to stop.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15698,8 +15666,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to stop.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15716,8 +15684,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to stop.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15730,8 +15698,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to stop.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15806,8 +15774,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15815,8 +15782,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15906,8 +15872,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -15926,8 +15891,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the Data Proc cluster that is being stopped.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -16252,8 +16216,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16272,8 +16235,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16293,8 +16255,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16311,8 +16272,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16325,8 +16285,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the Data Proc cluster that is being stopped.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -16401,8 +16360,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16410,8 +16368,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16421,10 +16378,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListOperations requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -16433,8 +16390,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16442,8 +16399,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16546,8 +16503,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16566,8 +16522,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list operations for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16590,10 +16545,10 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListOperations requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -16606,8 +16561,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16626,8 +16581,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -16987,8 +16942,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17007,8 +16961,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17028,8 +16981,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17046,8 +16998,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17060,8 +17011,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list operations for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17081,10 +17031,10 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListOperations requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17094,10 +17044,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListOperations requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17110,10 +17060,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListOperations requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -17128,8 +17078,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17148,8 +17098,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17169,8 +17119,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17187,8 +17137,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17201,8 +17151,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListOperations
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -17276,24 +17226,44 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -17301,11 +17271,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListOperations requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17313,11 +17282,10 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListOperations requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17420,12 +17388,20 @@ public final class ClusterServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -17433,18 +17409,30 @@ public final class ClusterServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -17456,11 +17444,10 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListOperations requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17479,11 +17466,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListOperations requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17877,6 +17863,10 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -17887,6 +17877,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -17897,6 +17891,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -17907,6 +17905,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -17924,6 +17926,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -17938,6 +17944,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -17954,6 +17964,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17971,6 +17985,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17985,6 +18003,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -17999,6 +18021,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -18014,6 +18040,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -18027,6 +18057,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -18040,6 +18074,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -18047,6 +18085,10 @@ public final class ClusterServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -18057,6 +18099,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -18068,6 +18114,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -18075,6 +18125,10 @@ public final class ClusterServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -18083,6 +18137,10 @@ public final class ClusterServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -18107,11 +18165,10 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListOperations requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18130,11 +18187,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListOperations requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18154,11 +18210,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListOperations requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18175,11 +18230,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListOperations requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18192,11 +18246,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListOperations requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListOperations request. Subsequent ListOperations
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18271,8 +18324,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list hosts for.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18280,8 +18333,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list hosts for.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18291,10 +18344,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListClusterHosts requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -18303,8 +18356,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -18312,8 +18365,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -18323,7 +18376,12 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters hosts listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-host`
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -18331,7 +18389,12 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters hosts listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-host`
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -18441,8 +18504,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list hosts for.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18461,8 +18524,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
-     * This ID is assigned by Dataproc at creation time.
+     * ID of the cluster to list hosts for.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18485,10 +18548,10 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListClusterHosts requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -18501,8 +18564,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -18521,8 +18584,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -18545,7 +18608,12 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters hosts listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-host`
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -18564,7 +18632,12 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters hosts listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-host`
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -18941,8 +19014,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list hosts for.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18961,8 +19034,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list hosts for.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18982,8 +19055,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list hosts for.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -19000,8 +19073,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list hosts for.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -19014,8 +19087,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
-       * This ID is assigned by Dataproc at creation time.
+       * ID of the cluster to list hosts for.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -19035,10 +19108,10 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusterHosts requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19048,10 +19121,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusterHosts requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19064,10 +19137,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListClusterHosts requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -19082,8 +19155,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19102,8 +19175,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19123,8 +19196,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19141,8 +19214,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19155,8 +19228,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListClusterHosts
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListClusterHostsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -19176,7 +19249,12 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters hosts listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-host`
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -19195,7 +19273,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters hosts listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-host`
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -19215,7 +19298,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters hosts listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-host`
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -19232,7 +19320,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters hosts listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-host`
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -19245,7 +19338,12 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters hosts listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Cluster.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-host`
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -19364,11 +19462,10 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusterHosts requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19376,11 +19473,10 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusterHosts requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19539,11 +19635,10 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusterHosts requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -19562,11 +19657,10 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListClusterHosts requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -20262,11 +20356,10 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusterHosts requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20285,11 +20378,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusterHosts requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20309,11 +20401,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusterHosts requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20330,11 +20421,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusterHosts requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -20347,11 +20437,10 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListClusterHosts requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListSubclusterHosts request. Subsequent ListClusterHosts
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListClusterHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListClusterHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

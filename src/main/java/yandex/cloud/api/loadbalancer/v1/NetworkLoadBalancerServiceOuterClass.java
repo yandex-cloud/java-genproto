@@ -22968,6 +22968,903 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
   }
 
+  public interface InternalAddressSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadbalancer.v1.InternalAddressSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Internal IP address for a listener.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Internal IP address for a listener.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * IP version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+     */
+    int getIpVersionValue();
+    /**
+     * <pre>
+     * IP version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+     */
+    yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion();
+  }
+  /**
+   * <pre>
+   * Internal address specification that is used by [ListenerSpec].
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.loadbalancer.v1.InternalAddressSpec}
+   */
+  public  static final class InternalAddressSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadbalancer.v1.InternalAddressSpec)
+      InternalAddressSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InternalAddressSpec.newBuilder() to construct.
+    private InternalAddressSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InternalAddressSpec() {
+      address_ = "";
+      subnetId_ = "";
+      ipVersion_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private InternalAddressSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              ipVersion_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.class, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object address_;
+    /**
+     * <pre>
+     * Internal IP address for a listener.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Internal IP address for a listener.
+     * </pre>
+     *
+     * <code>string address = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_VERSION_FIELD_NUMBER = 3;
+    private int ipVersion_;
+    /**
+     * <pre>
+     * IP version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+     */
+    public int getIpVersionValue() {
+      return ipVersion_;
+    }
+    /**
+     * <pre>
+     * IP version.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+     */
+    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.valueOf(ipVersion_);
+      return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
+      }
+      if (ipVersion_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, ipVersion_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
+      }
+      if (ipVersion_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, ipVersion_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec other = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) obj;
+
+      boolean result = true;
+      result = result && getAddress()
+          .equals(other.getAddress());
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && ipVersion_ == other.ipVersion_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + IP_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + ipVersion_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Internal address specification that is used by [ListenerSpec].
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.loadbalancer.v1.InternalAddressSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadbalancer.v1.InternalAddressSpec)
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.class, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        address_ = "";
+
+        subnetId_ = "";
+
+        ipVersion_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec build() {
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec buildPartial() {
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec result = new yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec(this);
+        result.address_ = address_;
+        result.subnetId_ = subnetId_;
+        result.ipVersion_ = ipVersion_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) {
+          return mergeFrom((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec other) {
+        if (other == yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (other.ipVersion_ != 0) {
+          setIpVersionValue(other.getIpVersionValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Internal IP address for a listener.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal IP address for a listener.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal IP address for a listener.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address for a listener.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address for a listener.
+       * </pre>
+       *
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int ipVersion_ = 0;
+      /**
+       * <pre>
+       * IP version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+       */
+      public int getIpVersionValue() {
+        return ipVersion_;
+      }
+      /**
+       * <pre>
+       * IP version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+       */
+      public Builder setIpVersionValue(int value) {
+        ipVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IP version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+       */
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion getIpVersion() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion result = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.valueOf(ipVersion_);
+        return result == null ? yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * IP version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+       */
+      public Builder setIpVersion(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.IpVersion value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        ipVersion_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IP version.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.IpVersion ip_version = 3;</code>
+       */
+      public Builder clearIpVersion() {
+        
+        ipVersion_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadbalancer.v1.InternalAddressSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadbalancer.v1.InternalAddressSpec)
+    private static final yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec();
+    }
+
+    public static yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InternalAddressSpec>
+        PARSER = new com.google.protobuf.AbstractParser<InternalAddressSpec>() {
+      @java.lang.Override
+      public InternalAddressSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new InternalAddressSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<InternalAddressSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InternalAddressSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListenerSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.loadbalancer.v1.ListenerSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -23040,6 +23937,31 @@ public final class NetworkLoadBalancerServiceOuterClass {
      * <code>.yandex.cloud.loadbalancer.v1.ExternalAddressSpec external_address_spec = 4;</code>
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ExternalAddressSpecOrBuilder getExternalAddressSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    boolean hasInternalAddressSpec();
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getInternalAddressSpec();
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder getInternalAddressSpecOrBuilder();
 
     /**
      * <pre>
@@ -23136,6 +24058,20 @@ public final class NetworkLoadBalancerServiceOuterClass {
               targetPort_ = input.readInt64();
               break;
             }
+            case 50: {
+              yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder subBuilder = null;
+              if (addressCase_ == 6) {
+                subBuilder = ((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_).toBuilder();
+              }
+              address_ =
+                  input.readMessage(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_);
+                address_ = subBuilder.buildPartial();
+              }
+              addressCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23173,6 +24109,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
     public enum AddressCase
         implements com.google.protobuf.Internal.EnumLite {
       EXTERNAL_ADDRESS_SPEC(4),
+      INTERNAL_ADDRESS_SPEC(6),
       ADDRESS_NOT_SET(0);
       private final int value;
       private AddressCase(int value) {
@@ -23189,6 +24126,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       public static AddressCase forNumber(int value) {
         switch (value) {
           case 4: return EXTERNAL_ADDRESS_SPEC;
+          case 6: return INTERNAL_ADDRESS_SPEC;
           case 0: return ADDRESS_NOT_SET;
           default: return null;
         }
@@ -23322,6 +24260,44 @@ public final class NetworkLoadBalancerServiceOuterClass {
       return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.ExternalAddressSpec.getDefaultInstance();
     }
 
+    public static final int INTERNAL_ADDRESS_SPEC_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    public boolean hasInternalAddressSpec() {
+      return addressCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getInternalAddressSpec() {
+      if (addressCase_ == 6) {
+         return (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_;
+      }
+      return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Internal IP address specification.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+     */
+    public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder getInternalAddressSpecOrBuilder() {
+      if (addressCase_ == 6) {
+         return (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_;
+      }
+      return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+    }
+
     public static final int TARGET_PORT_FIELD_NUMBER = 5;
     private long targetPort_;
     /**
@@ -23365,6 +24341,9 @@ public final class NetworkLoadBalancerServiceOuterClass {
       if (targetPort_ != 0L) {
         output.writeInt64(5, targetPort_);
       }
+      if (addressCase_ == 6) {
+        output.writeMessage(6, (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23392,6 +24371,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       if (targetPort_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, targetPort_);
+      }
+      if (addressCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -23424,6 +24407,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
           result = result && getExternalAddressSpec()
               .equals(other.getExternalAddressSpec());
           break;
+        case 6:
+          result = result && getInternalAddressSpec()
+              .equals(other.getInternalAddressSpec());
+          break;
         case 0:
         default:
       }
@@ -23452,6 +24439,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
         case 4:
           hash = (37 * hash) + EXTERNAL_ADDRESS_SPEC_FIELD_NUMBER;
           hash = (53 * hash) + getExternalAddressSpec().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + INTERNAL_ADDRESS_SPEC_FIELD_NUMBER;
+          hash = (53 * hash) + getInternalAddressSpec().hashCode();
           break;
         case 0:
         default:
@@ -23639,6 +24630,13 @@ public final class NetworkLoadBalancerServiceOuterClass {
             result.address_ = externalAddressSpecBuilder_.build();
           }
         }
+        if (addressCase_ == 6) {
+          if (internalAddressSpecBuilder_ == null) {
+            result.address_ = address_;
+          } else {
+            result.address_ = internalAddressSpecBuilder_.build();
+          }
+        }
         result.targetPort_ = targetPort_;
         result.addressCase_ = addressCase_;
         onBuilt();
@@ -23705,6 +24703,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
         switch (other.getAddressCase()) {
           case EXTERNAL_ADDRESS_SPEC: {
             mergeExternalAddressSpec(other.getExternalAddressSpec());
+            break;
+          }
+          case INTERNAL_ADDRESS_SPEC: {
+            mergeInternalAddressSpec(other.getInternalAddressSpec());
             break;
           }
           case ADDRESS_NOT_SET: {
@@ -24119,6 +25121,178 @@ public final class NetworkLoadBalancerServiceOuterClass {
         return externalAddressSpecBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder> internalAddressSpecBuilder_;
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public boolean hasInternalAddressSpec() {
+        return addressCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec getInternalAddressSpec() {
+        if (internalAddressSpecBuilder_ == null) {
+          if (addressCase_ == 6) {
+            return (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_;
+          }
+          return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+        } else {
+          if (addressCase_ == 6) {
+            return internalAddressSpecBuilder_.getMessage();
+          }
+          return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public Builder setInternalAddressSpec(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec value) {
+        if (internalAddressSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          internalAddressSpecBuilder_.setMessage(value);
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public Builder setInternalAddressSpec(
+          yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder builderForValue) {
+        if (internalAddressSpecBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          internalAddressSpecBuilder_.setMessage(builderForValue.build());
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public Builder mergeInternalAddressSpec(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec value) {
+        if (internalAddressSpecBuilder_ == null) {
+          if (addressCase_ == 6 &&
+              address_ != yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance()) {
+            address_ = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.newBuilder((yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          if (addressCase_ == 6) {
+            internalAddressSpecBuilder_.mergeFrom(value);
+          }
+          internalAddressSpecBuilder_.setMessage(value);
+        }
+        addressCase_ = 6;
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public Builder clearInternalAddressSpec() {
+        if (internalAddressSpecBuilder_ == null) {
+          if (addressCase_ == 6) {
+            addressCase_ = 0;
+            address_ = null;
+            onChanged();
+          }
+        } else {
+          if (addressCase_ == 6) {
+            addressCase_ = 0;
+            address_ = null;
+          }
+          internalAddressSpecBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder getInternalAddressSpecBuilder() {
+        return getInternalAddressSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder getInternalAddressSpecOrBuilder() {
+        if ((addressCase_ == 6) && (internalAddressSpecBuilder_ != null)) {
+          return internalAddressSpecBuilder_.getMessageOrBuilder();
+        } else {
+          if (addressCase_ == 6) {
+            return (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_;
+          }
+          return yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Internal IP address specification.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadbalancer.v1.InternalAddressSpec internal_address_spec = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder> 
+          getInternalAddressSpecFieldBuilder() {
+        if (internalAddressSpecBuilder_ == null) {
+          if (!(addressCase_ == 6)) {
+            address_ = yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.getDefaultInstance();
+          }
+          internalAddressSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec.Builder, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpecOrBuilder>(
+                  (yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceOuterClass.InternalAddressSpec) address_,
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        addressCase_ = 6;
+        onChanged();;
+        return internalAddressSpecBuilder_;
+      }
+
       private long targetPort_ ;
       /**
        * <pre>
@@ -24353,6 +25527,11 @@ public final class NetworkLoadBalancerServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadbalancer_v1_ExternalAddressSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadbalancer_v1_ListenerSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24468,99 +25647,104 @@ public final class NetworkLoadBalancerServiceOuterClass {
       "tates\030\001 \003(\0132).yandex.cloud.loadbalancer." +
       "v1.TargetState\"c\n\023ExternalAddressSpec\022\017\n" +
       "\007address\030\001 \001(\t\022;\n\nip_version\030\002 \001(\0162\'.yan" +
-      "dex.cloud.loadbalancer.v1.IpVersion\"\233\002\n\014" +
+      "dex.cloud.loadbalancer.v1.IpVersion\"v\n\023I" +
+      "nternalAddressSpec\022\017\n\007address\030\001 \001(\t\022\021\n\ts" +
+      "ubnet_id\030\002 \001(\t\022;\n\nip_version\030\003 \001(\0162\'.yan" +
+      "dex.cloud.loadbalancer.v1.IpVersion\"\357\002\n\014" +
       "ListenerSpec\0223\n\004name\030\001 \001(\tB%\350\3071\001\362\3071\035|[a-" +
       "z][-a-z0-9]{1,61}[a-z0-9]\022\031\n\004port\030\002 \001(\003B" +
       "\013\372\3071\0071-65535\022G\n\010protocol\030\003 \001(\0162/.yandex." +
       "cloud.loadbalancer.v1.Listener.ProtocolB" +
       "\004\350\3071\001\022R\n\025external_address_spec\030\004 \001(\01321.y" +
       "andex.cloud.loadbalancer.v1.ExternalAddr" +
-      "essSpecH\000\022\023\n\013target_port\030\005 \001(\003B\t\n\007addres" +
-      "s2\271\031\n\032NetworkLoadBalancerService\022\300\001\n\003Get" +
-      "\022;.yandex.cloud.loadbalancer.v1.GetNetwo" +
-      "rkLoadBalancerRequest\0321.yandex.cloud.loa" +
-      "dbalancer.v1.NetworkLoadBalancer\"I\202\323\344\223\002C" +
-      "\022A/load-balancer/v1/networkLoadBalancers" +
-      "/{network_load_balancer_id}\022\265\001\n\004List\022=.y" +
-      "andex.cloud.loadbalancer.v1.ListNetworkL" +
-      "oadBalancersRequest\032>.yandex.cloud.loadb" +
-      "alancer.v1.ListNetworkLoadBalancersRespo" +
-      "nse\".\202\323\344\223\002(\022&/load-balancer/v1/networkLo" +
-      "adBalancers\022\332\001\n\006Create\022>.yandex.cloud.lo" +
-      "adbalancer.v1.CreateNetworkLoadBalancerR" +
+      "essSpecH\000\022R\n\025internal_address_spec\030\006 \001(\013" +
+      "21.yandex.cloud.loadbalancer.v1.Internal" +
+      "AddressSpecH\000\022\023\n\013target_port\030\005 \001(\003B\t\n\007ad" +
+      "dress2\271\031\n\032NetworkLoadBalancerService\022\300\001\n" +
+      "\003Get\022;.yandex.cloud.loadbalancer.v1.GetN" +
+      "etworkLoadBalancerRequest\0321.yandex.cloud" +
+      ".loadbalancer.v1.NetworkLoadBalancer\"I\202\323" +
+      "\344\223\002C\022A/load-balancer/v1/networkLoadBalan" +
+      "cers/{network_load_balancer_id}\022\265\001\n\004List" +
+      "\022=.yandex.cloud.loadbalancer.v1.ListNetw" +
+      "orkLoadBalancersRequest\032>.yandex.cloud.l" +
+      "oadbalancer.v1.ListNetworkLoadBalancersR" +
+      "esponse\".\202\323\344\223\002(\022&/load-balancer/v1/netwo" +
+      "rkLoadBalancers\022\332\001\n\006Create\022>.yandex.clou" +
+      "d.loadbalancer.v1.CreateNetworkLoadBalan" +
+      "cerRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"m\202\323\344\223\002+\"&/load-balancer/v1/network" +
+      "LoadBalancers:\001*\262\322*8\n!CreateNetworkLoadB" +
+      "alancerMetadata\022\023NetworkLoadBalancer\022\366\001\n" +
+      "\006Update\022>.yandex.cloud.loadbalancer.v1.U" +
+      "pdateNetworkLoadBalancerRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\210\001\202\323\344\223\002F2A/lo" +
+      "ad-balancer/v1/networkLoadBalancers/{net" +
+      "work_load_balancer_id}:\001*\262\322*8\n!UpdateNet" +
+      "workLoadBalancerMetadata\022\023NetworkLoadBal" +
+      "ancer\022\365\001\n\006Delete\022>.yandex.cloud.loadbala" +
+      "ncer.v1.DeleteNetworkLoadBalancerRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\207\001\202\323" +
+      "\344\223\002C*A/load-balancer/v1/networkLoadBalan" +
+      "cers/{network_load_balancer_id}\262\322*:\n!Del" +
+      "eteNetworkLoadBalancerMetadata\022\025google.p" +
+      "rotobuf.Empty\022\370\001\n\005Start\022=.yandex.cloud.l" +
+      "oadbalancer.v1.StartNetworkLoadBalancerR" +
       "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"m\202\323\344\223\002+\"&/load-balancer/v1/networkLoad" +
-      "Balancers:\001*\262\322*8\n!CreateNetworkLoadBalan" +
-      "cerMetadata\022\023NetworkLoadBalancer\022\366\001\n\006Upd" +
-      "ate\022>.yandex.cloud.loadbalancer.v1.Updat" +
-      "eNetworkLoadBalancerRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\210\001\202\323\344\223\002F2A/load-b" +
-      "alancer/v1/networkLoadBalancers/{network" +
-      "_load_balancer_id}:\001*\262\322*8\n!UpdateNetwork" +
-      "LoadBalancerMetadata\022\023NetworkLoadBalance" +
-      "r\022\365\001\n\006Delete\022>.yandex.cloud.loadbalancer" +
-      ".v1.DeleteNetworkLoadBalancerRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\207\001\202\323\344\223\002C" +
-      "*A/load-balancer/v1/networkLoadBalancers" +
-      "/{network_load_balancer_id}\262\322*:\n!DeleteN" +
-      "etworkLoadBalancerMetadata\022\025google.proto" +
-      "buf.Empty\022\370\001\n\005Start\022=.yandex.cloud.loadb" +
-      "alancer.v1.StartNetworkLoadBalancerReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\214\001" +
-      "\202\323\344\223\002I\"G/load-balancer/v1/networkLoadBal" +
-      "ancers/{network_load_balancer_id}:start\262" +
-      "\322*9\n StartNetworkLoadBalancerMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\364\001\n\004Stop\022<.yandex.c" +
-      "loud.loadbalancer.v1.StopNetworkLoadBala" +
-      "ncerRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\212\001\202\323\344\223\002H\"F/load-balancer/v1/netwo" +
-      "rkLoadBalancers/{network_load_balancer_i" +
-      "d}:stop\262\322*8\n\037StopNetworkLoadBalancerMeta" +
-      "data\022\025google.protobuf.Empty\022\251\002\n\021AttachTa" +
-      "rgetGroup\022I.yandex.cloud.loadbalancer.v1" +
-      ".AttachNetworkLoadBalancerTargetGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\245\001\202\323\344\223\002X\"S/load-balancer/v1/networkLoadB" +
-      "alancers/{network_load_balancer_id}:atta" +
-      "chTargetGroup:\001*\262\322*C\n,AttachNetworkLoadB" +
-      "alancerTargetGroupMetadata\022\023NetworkLoadB" +
-      "alancer\022\251\002\n\021DetachTargetGroup\022I.yandex.c" +
-      "loud.loadbalancer.v1.DetachNetworkLoadBa" +
-      "lancerTargetGroupRequest\032!.yandex.cloud." +
-      "operation.Operation\"\245\001\202\323\344\223\002X\"S/load-bala" +
-      "ncer/v1/networkLoadBalancers/{network_lo" +
-      "ad_balancer_id}:detachTargetGroup:\001*\262\322*C" +
-      "\n,DetachNetworkLoadBalancerTargetGroupMe" +
-      "tadata\022\023NetworkLoadBalancer\022\331\001\n\017GetTarge" +
-      "tStates\0224.yandex.cloud.loadbalancer.v1.G" +
-      "etTargetStatesRequest\0325.yandex.cloud.loa" +
-      "dbalancer.v1.GetTargetStatesResponse\"Y\202\323" +
-      "\344\223\002S\022Q/load-balancer/v1/networkLoadBalan" +
-      "cers/{network_load_balancer_id}:getTarge" +
-      "tStates\022\221\002\n\013AddListener\022C.yandex.cloud.l" +
-      "oadbalancer.v1.AddNetworkLoadBalancerLis" +
-      "tenerRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\231\001\202\323\344\223\002R\"M/load-balancer/v1/netw" +
-      "orkLoadBalancers/{network_load_balancer_" +
-      "id}:addListener:\001*\262\322*=\n&AddNetworkLoadBa" +
-      "lancerListenerMetadata\022\023NetworkLoadBalan" +
-      "cer\022\235\002\n\016RemoveListener\022F.yandex.cloud.lo" +
-      "adbalancer.v1.RemoveNetworkLoadBalancerL" +
-      "istenerRequest\032!.yandex.cloud.operation." +
-      "Operation\"\237\001\202\323\344\223\002U\"P/load-balancer/v1/ne" +
-      "tworkLoadBalancers/{network_load_balance" +
-      "r_id}:removeListener:\001*\262\322*@\n)RemoveNetwo" +
-      "rkLoadBalancerListenerMetadata\022\023NetworkL" +
-      "oadBalancer\022\367\001\n\016ListOperations\022F.yandex." +
-      "cloud.loadbalancer.v1.ListNetworkLoadBal" +
-      "ancerOperationsRequest\032G.yandex.cloud.lo" +
-      "adbalancer.v1.ListNetworkLoadBalancerOpe" +
-      "rationsResponse\"T\202\323\344\223\002N\022L/load-balancer/" +
-      "v1/networkLoadBalancers/{network_load_ba" +
-      "lancer_id}/operationsBq\n yandex.cloud.ap" +
-      "i.loadbalancer.v1ZMgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/loadbalancer" +
-      "/v1;loadbalancerb\006proto3"
+      "n\"\214\001\202\323\344\223\002I\"G/load-balancer/v1/networkLoa" +
+      "dBalancers/{network_load_balancer_id}:st" +
+      "art\262\322*9\n StartNetworkLoadBalancerMetadat" +
+      "a\022\025google.protobuf.Empty\022\364\001\n\004Stop\022<.yand" +
+      "ex.cloud.loadbalancer.v1.StopNetworkLoad" +
+      "BalancerRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\212\001\202\323\344\223\002H\"F/load-balancer/v1/n" +
+      "etworkLoadBalancers/{network_load_balanc" +
+      "er_id}:stop\262\322*8\n\037StopNetworkLoadBalancer" +
+      "Metadata\022\025google.protobuf.Empty\022\251\002\n\021Atta" +
+      "chTargetGroup\022I.yandex.cloud.loadbalance" +
+      "r.v1.AttachNetworkLoadBalancerTargetGrou" +
+      "pRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\245\001\202\323\344\223\002X\"S/load-balancer/v1/networkL" +
+      "oadBalancers/{network_load_balancer_id}:" +
+      "attachTargetGroup:\001*\262\322*C\n,AttachNetworkL" +
+      "oadBalancerTargetGroupMetadata\022\023NetworkL" +
+      "oadBalancer\022\251\002\n\021DetachTargetGroup\022I.yand" +
+      "ex.cloud.loadbalancer.v1.DetachNetworkLo" +
+      "adBalancerTargetGroupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\245\001\202\323\344\223\002X\"S/load-" +
+      "balancer/v1/networkLoadBalancers/{networ" +
+      "k_load_balancer_id}:detachTargetGroup:\001*" +
+      "\262\322*C\n,DetachNetworkLoadBalancerTargetGro" +
+      "upMetadata\022\023NetworkLoadBalancer\022\331\001\n\017GetT" +
+      "argetStates\0224.yandex.cloud.loadbalancer." +
+      "v1.GetTargetStatesRequest\0325.yandex.cloud" +
+      ".loadbalancer.v1.GetTargetStatesResponse" +
+      "\"Y\202\323\344\223\002S\022Q/load-balancer/v1/networkLoadB" +
+      "alancers/{network_load_balancer_id}:getT" +
+      "argetStates\022\221\002\n\013AddListener\022C.yandex.clo" +
+      "ud.loadbalancer.v1.AddNetworkLoadBalance" +
+      "rListenerRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\231\001\202\323\344\223\002R\"M/load-balancer/v1/" +
+      "networkLoadBalancers/{network_load_balan" +
+      "cer_id}:addListener:\001*\262\322*=\n&AddNetworkLo" +
+      "adBalancerListenerMetadata\022\023NetworkLoadB" +
+      "alancer\022\235\002\n\016RemoveListener\022F.yandex.clou" +
+      "d.loadbalancer.v1.RemoveNetworkLoadBalan" +
+      "cerListenerRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\237\001\202\323\344\223\002U\"P/load-balancer/v" +
+      "1/networkLoadBalancers/{network_load_bal" +
+      "ancer_id}:removeListener:\001*\262\322*@\n)RemoveN" +
+      "etworkLoadBalancerListenerMetadata\022\023Netw" +
+      "orkLoadBalancer\022\367\001\n\016ListOperations\022F.yan" +
+      "dex.cloud.loadbalancer.v1.ListNetworkLoa" +
+      "dBalancerOperationsRequest\032G.yandex.clou" +
+      "d.loadbalancer.v1.ListNetworkLoadBalance" +
+      "rOperationsResponse\"T\202\323\344\223\002N\022L/load-balan" +
+      "cer/v1/networkLoadBalancers/{network_loa" +
+      "d_balancer_id}/operationsBq\n yandex.clou" +
+      "d.api.loadbalancer.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/loadbala" +
+      "ncer/v1;loadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24748,12 +25932,18 @@ public final class NetworkLoadBalancerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadbalancer_v1_ExternalAddressSpec_descriptor,
         new java.lang.String[] { "Address", "IpVersion", });
-    internal_static_yandex_cloud_loadbalancer_v1_ListenerSpec_descriptor =
+    internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor =
       getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadbalancer_v1_InternalAddressSpec_descriptor,
+        new java.lang.String[] { "Address", "SubnetId", "IpVersion", });
+    internal_static_yandex_cloud_loadbalancer_v1_ListenerSpec_descriptor =
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_loadbalancer_v1_ListenerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadbalancer_v1_ListenerSpec_descriptor,
-        new java.lang.String[] { "Name", "Port", "Protocol", "ExternalAddressSpec", "TargetPort", "Address", });
+        new java.lang.String[] { "Name", "Port", "Protocol", "ExternalAddressSpec", "InternalAddressSpec", "TargetPort", "Address", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

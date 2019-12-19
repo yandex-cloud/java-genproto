@@ -20,7 +20,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * ID of the cluster to request a job from.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28,7 +28,7 @@ public final class PHJS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * ID of the cluster to request a job from.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38,7 +38,8 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the Dataproc job to return.
+     * ID of the job to return.
+     * To get a job ID make a [JobService.List] request.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -46,7 +47,8 @@ public final class PHJS {
     java.lang.String getJobId();
     /**
      * <pre>
-     * Required. ID of the Dataproc job to return.
+     * ID of the job to return.
+     * To get a job ID make a [JobService.List] request.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -143,7 +145,7 @@ public final class PHJS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * ID of the cluster to request a job from.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -162,7 +164,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * ID of the cluster to request a job from.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -185,7 +187,8 @@ public final class PHJS {
     private volatile java.lang.Object jobId_;
     /**
      * <pre>
-     * Required. ID of the Dataproc job to return.
+     * ID of the job to return.
+     * To get a job ID make a [JobService.List] request.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -204,7 +207,8 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the Dataproc job to return.
+     * ID of the job to return.
+     * To get a job ID make a [JobService.List] request.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -546,7 +550,7 @@ public final class PHJS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * ID of the cluster to request a job from.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -565,7 +569,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * ID of the cluster to request a job from.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -585,7 +589,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * ID of the cluster to request a job from.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -602,7 +606,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * ID of the cluster to request a job from.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -615,7 +619,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * ID of the cluster to request a job from.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -635,7 +639,8 @@ public final class PHJS {
       private java.lang.Object jobId_ = "";
       /**
        * <pre>
-       * Required. ID of the Dataproc job to return.
+       * ID of the job to return.
+       * To get a job ID make a [JobService.List] request.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -654,7 +659,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to return.
+       * ID of the job to return.
+       * To get a job ID make a [JobService.List] request.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -674,7 +680,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to return.
+       * ID of the job to return.
+       * To get a job ID make a [JobService.List] request.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -691,7 +698,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to return.
+       * ID of the job to return.
+       * To get a job ID make a [JobService.List] request.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -704,7 +712,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to return.
+       * ID of the job to return.
+       * To get a job ID make a [JobService.List] request.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -779,28 +788,28 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the cluster to list Dataproc jobs of.
+     * ID of the cluster to list jobs for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster to list Dataproc jobs of.
+     * ID of the cluster to list jobs for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListJobs requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListJobsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -809,8 +818,8 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListJobsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -818,8 +827,8 @@ public final class PHJS {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListJobsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -829,7 +838,12 @@ public final class PHJS {
 
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters jobs listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Job.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-job`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -837,7 +851,12 @@ public final class PHJS {
     java.lang.String getFilter();
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters jobs listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Job.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-job`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -947,10 +966,10 @@ public final class PHJS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster to list Dataproc jobs of.
+     * ID of the cluster to list jobs for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
@@ -966,10 +985,10 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the cluster to list Dataproc jobs of.
+     * ID of the cluster to list jobs for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
@@ -989,10 +1008,10 @@ public final class PHJS {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListJobs requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListJobsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1005,8 +1024,8 @@ public final class PHJS {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListJobsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1025,8 +1044,8 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListJobsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1049,7 +1068,12 @@ public final class PHJS {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters jobs listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Job.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-job`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1068,7 +1092,12 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * String that describes a display filter.
+     * A filter expression that filters jobs listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Job.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=my-job`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1445,10 +1474,10 @@ public final class PHJS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster to list Dataproc jobs of.
+       * ID of the cluster to list jobs for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1464,10 +1493,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Dataproc jobs of.
+       * ID of the cluster to list jobs for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1484,10 +1513,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Dataproc jobs of.
+       * ID of the cluster to list jobs for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -1501,10 +1530,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Dataproc jobs of.
+       * ID of the cluster to list jobs for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
         
@@ -1514,10 +1543,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Dataproc jobs of.
+       * ID of the cluster to list jobs for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1534,10 +1563,10 @@ public final class PHJS {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListJobs requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListJobsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1547,10 +1576,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListJobs requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListJobsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1563,10 +1592,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListJobs requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListJobsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1581,8 +1610,8 @@ public final class PHJS {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListJobsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1601,8 +1630,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListJobsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1622,8 +1651,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListJobsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1640,8 +1669,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListJobsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1654,8 +1683,8 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListJobs
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListJobsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1675,7 +1704,12 @@ public final class PHJS {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters jobs listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Job.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-job`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1694,7 +1728,12 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters jobs listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Job.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-job`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1714,7 +1753,12 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters jobs listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Job.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-job`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1731,7 +1775,12 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters jobs listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Job.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-job`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1744,7 +1793,12 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * String that describes a display filter.
+       * A filter expression that filters jobs listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Job.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=my-job`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1819,7 +1873,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1828,7 +1882,7 @@ public final class PHJS {
         getJobsList();
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1836,7 +1890,7 @@ public final class PHJS {
     yandex.cloud.api.dataproc.v1.PHJ.Job getJobs(int index);
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1844,7 +1898,7 @@ public final class PHJS {
     int getJobsCount();
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1853,7 +1907,7 @@ public final class PHJS {
         getJobsOrBuilderList();
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1863,11 +1917,10 @@ public final class PHJS {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListJobs requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+     * for the [ListJobsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1875,11 +1928,10 @@ public final class PHJS {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListJobs requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+     * for the [ListJobsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1983,7 +2035,7 @@ public final class PHJS {
     private java.util.List<yandex.cloud.api.dataproc.v1.PHJ.Job> jobs_;
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -1993,7 +2045,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2004,7 +2056,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2014,7 +2066,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2024,7 +2076,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Requested list of Dataproc jobs.
+     * List of jobs for the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2038,11 +2090,10 @@ public final class PHJS {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListJobs requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+     * for the [ListJobsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2061,11 +2112,10 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListJobs requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+     * for the [ListJobsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2460,7 +2510,7 @@ public final class PHJS {
 
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2474,7 +2524,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2488,7 +2538,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2502,7 +2552,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2523,7 +2573,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2541,7 +2591,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2561,7 +2611,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2582,7 +2632,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2600,7 +2650,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2618,7 +2668,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2637,7 +2687,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2654,7 +2704,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2671,7 +2721,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2682,7 +2732,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2696,7 +2746,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2711,7 +2761,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2722,7 +2772,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2734,7 +2784,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested list of Dataproc jobs.
+       * List of jobs for the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Job jobs = 1;</code>
@@ -2761,11 +2811,10 @@ public final class PHJS {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListJobs requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+       * for the [ListJobsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2784,11 +2833,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListJobs requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+       * for the [ListJobsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2808,11 +2856,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListJobs requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+       * for the [ListJobsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2829,11 +2876,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListJobs requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+       * for the [ListJobsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2846,11 +2892,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListJobs requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListJobsRequest.page_size], use `next_page_token` as the value
+       * for the [ListJobsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2925,25 +2970,25 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the cluster to create Dataproc job in.
+     * ID of the cluster to create a job for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster to create Dataproc job in.
+     * ID of the cluster to create a job for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <pre>
-     * Optional. Name of the job.
+     * Name of the job.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -2951,7 +2996,7 @@ public final class PHJS {
     java.lang.String getName();
     /**
      * <pre>
-     * Optional. Name of the job.
+     * Name of the job.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -2960,53 +3005,101 @@ public final class PHJS {
         getNameBytes();
 
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     boolean hasMapreduceJob();
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob();
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     boolean hasSparkJob();
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob();
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     boolean hasPysparkJob();
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob();
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder();
 
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     boolean hasHiveJob();
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob();
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder();
@@ -3200,10 +3293,10 @@ public final class PHJS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster to create Dataproc job in.
+     * ID of the cluster to create a job for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
@@ -3219,10 +3312,10 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the cluster to create Dataproc job in.
+     * ID of the cluster to create a job for.
      * </pre>
      *
-     * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
@@ -3242,7 +3335,7 @@ public final class PHJS {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Optional. Name of the job.
+     * Name of the job.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3261,7 +3354,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Optional. Name of the job.
+     * Name of the job.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3282,12 +3375,20 @@ public final class PHJS {
 
     public static final int MAPREDUCE_JOB_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     public boolean hasMapreduceJob() {
       return jobSpecCase_ == 3;
     }
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
@@ -3297,6 +3398,10 @@ public final class PHJS {
       return yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a MapReduce job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
@@ -3308,12 +3413,20 @@ public final class PHJS {
 
     public static final int SPARK_JOB_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     public boolean hasSparkJob() {
       return jobSpecCase_ == 4;
     }
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
@@ -3323,6 +3436,10 @@ public final class PHJS {
       return yandex.cloud.api.dataproc.v1.PHJ.SparkJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a Spark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
@@ -3334,12 +3451,20 @@ public final class PHJS {
 
     public static final int PYSPARK_JOB_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     public boolean hasPysparkJob() {
       return jobSpecCase_ == 5;
     }
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
@@ -3349,6 +3474,10 @@ public final class PHJS {
       return yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a PySpark job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
@@ -3360,12 +3489,20 @@ public final class PHJS {
 
     public static final int HIVE_JOB_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     public boolean hasHiveJob() {
       return jobSpecCase_ == 6;
     }
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
@@ -3375,6 +3512,10 @@ public final class PHJS {
       return yandex.cloud.api.dataproc.v1.PHJ.HiveJob.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification for a Hive job.
+     * </pre>
+     *
      * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
      */
     public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
@@ -3845,10 +3986,10 @@ public final class PHJS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster to create Dataproc job in.
+       * ID of the cluster to create a job for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -3864,10 +4005,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to create Dataproc job in.
+       * ID of the cluster to create a job for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -3884,10 +4025,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to create Dataproc job in.
+       * ID of the cluster to create a job for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
           java.lang.String value) {
@@ -3901,10 +4042,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to create Dataproc job in.
+       * ID of the cluster to create a job for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
         
@@ -3914,10 +4055,10 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to create Dataproc job in.
+       * ID of the cluster to create a job for.
        * </pre>
        *
-       * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3934,7 +4075,7 @@ public final class PHJS {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Optional. Name of the job.
+       * Name of the job.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3953,7 +4094,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Optional. Name of the job.
+       * Name of the job.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3973,7 +4114,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Optional. Name of the job.
+       * Name of the job.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3990,7 +4131,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Optional. Name of the job.
+       * Name of the job.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4003,7 +4144,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Optional. Name of the job.
+       * Name of the job.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -4023,12 +4164,20 @@ public final class PHJS {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob, yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder> mapreduceJobBuilder_;
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public boolean hasMapreduceJob() {
         return jobSpecCase_ == 3;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob getMapreduceJob() {
@@ -4045,6 +4194,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public Builder setMapreduceJob(yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob value) {
@@ -4061,6 +4214,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public Builder setMapreduceJob(
@@ -4075,6 +4232,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public Builder mergeMapreduceJob(yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob value) {
@@ -4097,6 +4258,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public Builder clearMapreduceJob() {
@@ -4116,12 +4281,20 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJob.Builder getMapreduceJobBuilder() {
         return getMapreduceJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.MapreduceJobOrBuilder getMapreduceJobOrBuilder() {
@@ -4135,6 +4308,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a MapReduce job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.MapreduceJob mapreduce_job = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4159,12 +4336,20 @@ public final class PHJS {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.SparkJob, yandex.cloud.api.dataproc.v1.PHJ.SparkJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder> sparkJobBuilder_;
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public boolean hasSparkJob() {
         return jobSpecCase_ == 4;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob getSparkJob() {
@@ -4181,6 +4366,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public Builder setSparkJob(yandex.cloud.api.dataproc.v1.PHJ.SparkJob value) {
@@ -4197,6 +4386,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public Builder setSparkJob(
@@ -4211,6 +4404,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public Builder mergeSparkJob(yandex.cloud.api.dataproc.v1.PHJ.SparkJob value) {
@@ -4233,6 +4430,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public Builder clearSparkJob() {
@@ -4252,12 +4453,20 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJob.Builder getSparkJobBuilder() {
         return getSparkJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.SparkJobOrBuilder getSparkJobOrBuilder() {
@@ -4271,6 +4480,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a Spark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.SparkJob spark_job = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4295,12 +4508,20 @@ public final class PHJS {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.PysparkJob, yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder> pysparkJobBuilder_;
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public boolean hasPysparkJob() {
         return jobSpecCase_ == 5;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob getPysparkJob() {
@@ -4317,6 +4538,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public Builder setPysparkJob(yandex.cloud.api.dataproc.v1.PHJ.PysparkJob value) {
@@ -4333,6 +4558,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public Builder setPysparkJob(
@@ -4347,6 +4576,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public Builder mergePysparkJob(yandex.cloud.api.dataproc.v1.PHJ.PysparkJob value) {
@@ -4369,6 +4602,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public Builder clearPysparkJob() {
@@ -4388,12 +4625,20 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJob.Builder getPysparkJobBuilder() {
         return getPysparkJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.PysparkJobOrBuilder getPysparkJobOrBuilder() {
@@ -4407,6 +4652,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a PySpark job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.PysparkJob pyspark_job = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4431,12 +4680,20 @@ public final class PHJS {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dataproc.v1.PHJ.HiveJob, yandex.cloud.api.dataproc.v1.PHJ.HiveJob.Builder, yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder> hiveJobBuilder_;
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public boolean hasHiveJob() {
         return jobSpecCase_ == 6;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob getHiveJob() {
@@ -4453,6 +4710,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public Builder setHiveJob(yandex.cloud.api.dataproc.v1.PHJ.HiveJob value) {
@@ -4469,6 +4730,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public Builder setHiveJob(
@@ -4483,6 +4748,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public Builder mergeHiveJob(yandex.cloud.api.dataproc.v1.PHJ.HiveJob value) {
@@ -4505,6 +4774,10 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public Builder clearHiveJob() {
@@ -4524,12 +4797,20 @@ public final class PHJS {
         return this;
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJob.Builder getHiveJobBuilder() {
         return getHiveJobFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       public yandex.cloud.api.dataproc.v1.PHJ.HiveJobOrBuilder getHiveJobOrBuilder() {
@@ -4543,6 +4824,10 @@ public final class PHJS {
         }
       }
       /**
+       * <pre>
+       * Specification for a Hive job.
+       * </pre>
+       *
        * <code>.yandex.cloud.dataproc.v1.HiveJob hive_job = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4622,7 +4907,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster.
+     * ID of the cluster that the job is being created for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4630,7 +4915,7 @@ public final class PHJS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster.
+     * ID of the cluster that the job is being created for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4640,7 +4925,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * ID of the Dataproc job.
+     * ID of the job being created.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4648,7 +4933,7 @@ public final class PHJS {
     java.lang.String getJobId();
     /**
      * <pre>
-     * ID of the Dataproc job.
+     * ID of the job being created.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4745,7 +5030,7 @@ public final class PHJS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster.
+     * ID of the cluster that the job is being created for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4764,7 +5049,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster.
+     * ID of the cluster that the job is being created for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4787,7 +5072,7 @@ public final class PHJS {
     private volatile java.lang.Object jobId_;
     /**
      * <pre>
-     * ID of the Dataproc job.
+     * ID of the job being created.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4806,7 +5091,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * ID of the Dataproc job.
+     * ID of the job being created.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5148,7 +5433,7 @@ public final class PHJS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster.
+       * ID of the cluster that the job is being created for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5167,7 +5452,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
+       * ID of the cluster that the job is being created for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5187,7 +5472,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
+       * ID of the cluster that the job is being created for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5204,7 +5489,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
+       * ID of the cluster that the job is being created for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5217,7 +5502,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster.
+       * ID of the cluster that the job is being created for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5237,7 +5522,7 @@ public final class PHJS {
       private java.lang.Object jobId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc job.
+       * ID of the job being created.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5256,7 +5541,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc job.
+       * ID of the job being created.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5276,7 +5561,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc job.
+       * ID of the job being created.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5293,7 +5578,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc job.
+       * ID of the job being created.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5306,7 +5591,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * ID of the Dataproc job.
+       * ID of the job being created.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5417,38 +5702,38 @@ public final class PHJS {
       "n.proto\032 yandex/cloud/api/operation.prot" +
       "o\"O\n\rGetJobRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
       "\350\3071\001\212\3101\004<=50\022\034\n\006job_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"\211\001\n\017ListJobsRequest\022\034\n\ncluster_id\030\001 \001" +
-      "(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
-      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"X\n\020ListJobsRespon" +
-      "se\022+\n\004jobs\030\001 \003(\0132\035.yandex.cloud.dataproc" +
-      ".v1.Job\022\027\n\017next_page_token\030\002 \001(\t\"\333\002\n\020Cre" +
-      "ateJobRequest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<" +
-      "=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1" +
-      ",61}[a-z0-9]\022?\n\rmapreduce_job\030\003 \001(\0132&.ya" +
-      "ndex.cloud.dataproc.v1.MapreduceJobH\000\0227\n" +
-      "\tspark_job\030\004 \001(\0132\".yandex.cloud.dataproc" +
-      ".v1.SparkJobH\000\022;\n\013pyspark_job\030\005 \001(\0132$.ya" +
-      "ndex.cloud.dataproc.v1.PysparkJobH\000\0225\n\010h" +
-      "ive_job\030\006 \001(\0132!.yandex.cloud.dataproc.v1" +
-      ".HiveJobH\000B\n\n\010job_spec\"O\n\021CreateJobMetad" +
-      "ata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n" +
-      "\006job_id\030\002 \001(\tB\010\212\3101\004<=502\321\003\n\nJobService\022\216" +
-      "\001\n\004List\022).yandex.cloud.dataproc.v1.ListJ" +
-      "obsRequest\032*.yandex.cloud.dataproc.v1.Li" +
-      "stJobsResponse\"/\202\323\344\223\002)\022\'/dataproc/v1/clu" +
-      "sters/{cluster_id}/jobs\022\247\001\n\006Create\022*.yan" +
-      "dex.cloud.dataproc.v1.CreateJobRequest\032!" +
-      ".yandex.cloud.operation.Operation\"N\202\323\344\223\002" +
-      ",\"\'/dataproc/v1/clusters/{cluster_id}/jo" +
-      "bs:\001*\262\322*\030\n\021CreateJobMetadata\022\003Job\022\207\001\n\003Ge" +
-      "t\022\'.yandex.cloud.dataproc.v1.GetJobReque" +
-      "st\032\035.yandex.cloud.dataproc.v1.Job\"8\202\323\344\223\002" +
-      "2\0220/dataproc/v1/clusters/{cluster_id}/jo" +
-      "bs/{job_id}Bk\n\034yandex.cloud.api.dataproc" +
-      ".v1B\004PHJSZEgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/dataproc/v1;dataproc" +
-      "b\006proto3"
+      "50\"\215\001\n\017ListJobsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
+      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"X\n\020ListJobsRe" +
+      "sponse\022+\n\004jobs\030\001 \003(\0132\035.yandex.cloud.data" +
+      "proc.v1.Job\022\027\n\017next_page_token\030\002 \001(\t\"\337\002\n" +
+      "\020CreateJobRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a" +
+      "-z0-9]{1,61}[a-z0-9]\022?\n\rmapreduce_job\030\003 " +
+      "\001(\0132&.yandex.cloud.dataproc.v1.Mapreduce" +
+      "JobH\000\0227\n\tspark_job\030\004 \001(\0132\".yandex.cloud." +
+      "dataproc.v1.SparkJobH\000\022;\n\013pyspark_job\030\005 " +
+      "\001(\0132$.yandex.cloud.dataproc.v1.PysparkJo" +
+      "bH\000\0225\n\010hive_job\030\006 \001(\0132!.yandex.cloud.dat" +
+      "aproc.v1.HiveJobH\000B\n\n\010job_spec\"O\n\021Create" +
+      "JobMetadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\030\n\006job_id\030\002 \001(\tB\010\212\3101\004<=502\321\003\n\nJobS" +
+      "ervice\022\216\001\n\004List\022).yandex.cloud.dataproc." +
+      "v1.ListJobsRequest\032*.yandex.cloud.datapr" +
+      "oc.v1.ListJobsResponse\"/\202\323\344\223\002)\022\'/datapro" +
+      "c/v1/clusters/{cluster_id}/jobs\022\247\001\n\006Crea" +
+      "te\022*.yandex.cloud.dataproc.v1.CreateJobR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"N\202\323\344\223\002,\"\'/dataproc/v1/clusters/{cluste" +
+      "r_id}/jobs:\001*\262\322*\030\n\021CreateJobMetadata\022\003Jo" +
+      "b\022\207\001\n\003Get\022\'.yandex.cloud.dataproc.v1.Get" +
+      "JobRequest\032\035.yandex.cloud.dataproc.v1.Jo" +
+      "b\"8\202\323\344\223\0022\0220/dataproc/v1/clusters/{cluste" +
+      "r_id}/jobs/{job_id}Bk\n\034yandex.cloud.api." +
+      "dataproc.v1B\004PHJSZEgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/dataproc/v1;" +
+      "dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -19,10 +19,20 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to return.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to return.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to return.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -124,6 +139,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to return.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to return.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -460,6 +485,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to return.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to return.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -489,6 +524,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to return.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -498,6 +538,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to return.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -569,10 +614,20 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the version to return.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the version to return.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -659,6 +714,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the version to return.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -674,6 +734,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version to return.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -995,6 +1060,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the version to return.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -1010,6 +1080,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to return.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1026,6 +1101,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to return.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionId(
@@ -1039,6 +1119,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to return.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionVersionId() {
@@ -1048,6 +1133,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to return.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -1119,20 +1209,40 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function whose versions should be listed.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function whose versions should be listed.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Version tag.
+     * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     java.lang.String getTag();
     /**
+     * <pre>
+     * Version tag.
+     * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     com.google.protobuf.ByteString
@@ -1226,6 +1336,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function whose versions should be listed.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -1241,6 +1356,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function whose versions should be listed.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -1260,6 +1380,11 @@ public final class FunctionServiceOuterClass {
     public static final int TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object tag_;
     /**
+     * <pre>
+     * Version tag.
+     * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public java.lang.String getTag() {
@@ -1275,6 +1400,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version tag.
+     * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1613,6 +1743,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function whose versions should be listed.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -1628,6 +1763,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function whose versions should be listed.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1644,6 +1784,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function whose versions should be listed.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -1657,6 +1802,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function whose versions should be listed.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -1666,6 +1816,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function whose versions should be listed.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -1682,6 +1837,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object tag_ = "";
       /**
+       * <pre>
+       * Version tag.
+       * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public java.lang.String getTag() {
@@ -1697,6 +1857,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version tag.
+       * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1713,6 +1878,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version tag.
+       * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTag(
@@ -1726,6 +1896,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tag.
+       * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder clearTag() {
@@ -1735,6 +1910,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tag.
+       * To get the history of version tags make a [FunctionService.ListTagHistory] request.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTagBytes(
@@ -1806,35 +1986,82 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list functions in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list functions in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters functions listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters functions listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -1941,6 +2168,11 @@ public final class FunctionServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list functions in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -1956,6 +2188,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list functions in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -1975,6 +2212,13 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     public long getPageSize() {
@@ -1984,6 +2228,11 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     public java.lang.String getPageToken() {
@@ -1999,6 +2248,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -2018,6 +2272,16 @@ public final class FunctionServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters functions listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public java.lang.String getFilter() {
@@ -2033,6 +2297,16 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters functions listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -2406,6 +2680,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list functions in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -2421,6 +2700,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list functions in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -2437,6 +2721,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list functions in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -2450,6 +2739,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list functions in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -2459,6 +2753,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list functions in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -2475,12 +2774,26 @@ public final class FunctionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder setPageSize(long value) {
@@ -2490,6 +2803,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder clearPageSize() {
@@ -2501,6 +2821,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public java.lang.String getPageToken() {
@@ -2516,6 +2841,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -2532,6 +2862,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder setPageToken(
@@ -2545,6 +2880,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder clearPageToken() {
@@ -2554,6 +2894,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder setPageTokenBytes(
@@ -2570,6 +2915,16 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters functions listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public java.lang.String getFilter() {
@@ -2585,6 +2940,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters functions listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -2601,6 +2966,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters functions listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilter(
@@ -2614,6 +2989,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters functions listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder clearFilter() {
@@ -2623,6 +3008,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters functions listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilterBytes(
@@ -2694,34 +3089,68 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> 
         getFunctionsList();
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function getFunctions(int index);
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     int getFunctionsCount();
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder> 
         getFunctionsOrBuilderList();
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder getFunctionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -2822,12 +3251,20 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> functions_;
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> getFunctionsList() {
       return functions_;
     }
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder> 
@@ -2835,18 +3272,30 @@ public final class FunctionServiceOuterClass {
       return functions_;
     }
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     public int getFunctionsCount() {
       return functions_.size();
     }
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function getFunctions(int index) {
       return functions_.get(index);
     }
     /**
+     * <pre>
+     * List of functions in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder getFunctionsOrBuilder(
@@ -2857,6 +3306,13 @@ public final class FunctionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -2872,6 +3328,13 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -3263,6 +3726,10 @@ public final class FunctionServiceOuterClass {
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder> functionsBuilder_;
 
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function> getFunctionsList() {
@@ -3273,6 +3740,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public int getFunctionsCount() {
@@ -3283,6 +3754,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function getFunctions(int index) {
@@ -3293,6 +3768,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder setFunctions(
@@ -3310,6 +3789,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder setFunctions(
@@ -3324,6 +3807,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder addFunctions(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function value) {
@@ -3340,6 +3827,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder addFunctions(
@@ -3357,6 +3848,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder addFunctions(
@@ -3371,6 +3866,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder addFunctions(
@@ -3385,6 +3884,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder addAllFunctions(
@@ -3400,6 +3903,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder clearFunctions() {
@@ -3413,6 +3920,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public Builder removeFunctions(int index) {
@@ -3426,6 +3937,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder getFunctionsBuilder(
@@ -3433,6 +3948,10 @@ public final class FunctionServiceOuterClass {
         return getFunctionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder getFunctionsOrBuilder(
@@ -3443,6 +3962,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.FunctionOrBuilder> 
@@ -3454,6 +3977,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder addFunctionsBuilder() {
@@ -3461,6 +3988,10 @@ public final class FunctionServiceOuterClass {
             yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder addFunctionsBuilder(
@@ -3469,6 +4000,10 @@ public final class FunctionServiceOuterClass {
             index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of functions in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Function functions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Builder> 
@@ -3492,6 +4027,13 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -3507,6 +4049,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3523,6 +4072,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -3536,6 +4092,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -3545,6 +4108,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -3616,40 +4186,76 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a function in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a function in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3661,11 +4267,19 @@ public final class FunctionServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3673,6 +4287,10 @@ public final class FunctionServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3800,6 +4418,11 @@ public final class FunctionServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a function in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -3815,6 +4438,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a function in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3834,6 +4462,11 @@ public final class FunctionServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -3849,6 +4482,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3868,6 +4506,10 @@ public final class FunctionServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3883,6 +4525,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3926,6 +4572,10 @@ public final class FunctionServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3942,6 +4592,10 @@ public final class FunctionServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3949,6 +4603,10 @@ public final class FunctionServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3961,6 +4619,10 @@ public final class FunctionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4367,6 +5029,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a function in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -4382,6 +5049,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a function in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4398,6 +5070,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a function in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -4411,6 +5088,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a function in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -4420,6 +5102,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a function in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -4436,6 +5123,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -4451,6 +5143,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4467,6 +5164,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -4480,6 +5182,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -4489,6 +5196,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -4505,6 +5217,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4520,6 +5236,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4536,6 +5256,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4549,6 +5273,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4558,6 +5286,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4599,6 +5331,10 @@ public final class FunctionServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4615,6 +5351,10 @@ public final class FunctionServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4622,6 +5362,10 @@ public final class FunctionServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4634,6 +5378,10 @@ public final class FunctionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4654,6 +5402,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4673,6 +5425,10 @@ public final class FunctionServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4685,6 +5441,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4752,10 +5512,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function that is being created.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function that is being created.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4842,6 +5610,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function that is being created.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public java.lang.String getFunctionId() {
@@ -4857,6 +5629,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function that is being created.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5178,6 +5954,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function that is being created.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public java.lang.String getFunctionId() {
@@ -5193,6 +5973,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being created.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5209,6 +5993,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being created.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionId(
@@ -5222,6 +6010,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being created.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder clearFunctionId() {
@@ -5231,6 +6023,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being created.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionIdBytes(
@@ -5302,53 +6098,105 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to update.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to update.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description for the function.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description for the function.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5360,11 +6208,23 @@ public final class FunctionServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5372,6 +6232,12 @@ public final class FunctionServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5512,6 +6378,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to update.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -5527,6 +6398,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to update.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5546,18 +6422,30 @@ public final class FunctionServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5567,6 +6455,11 @@ public final class FunctionServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -5582,6 +6475,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the function.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5601,6 +6499,10 @@ public final class FunctionServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description for the function.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -5616,6 +6518,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description for the function.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5659,6 +6565,12 @@ public final class FunctionServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5675,6 +6587,12 @@ public final class FunctionServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5682,6 +6600,12 @@ public final class FunctionServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5694,6 +6618,12 @@ public final class FunctionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6130,6 +7060,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to update.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -6145,6 +7080,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to update.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6161,6 +7101,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to update.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -6174,6 +7119,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to update.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -6183,6 +7133,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to update.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -6201,12 +7156,20 @@ public final class FunctionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6217,6 +7180,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6233,6 +7200,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -6247,6 +7218,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6265,6 +7240,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -6279,6 +7258,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6287,6 +7270,10 @@ public final class FunctionServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6298,6 +7285,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6316,6 +7307,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -6331,6 +7327,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6347,6 +7348,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -6360,6 +7366,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -6369,6 +7380,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the function.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -6385,6 +7401,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description for the function.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6400,6 +7420,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the function.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6416,6 +7440,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description for the function.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6429,6 +7457,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the function.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6438,6 +7470,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description for the function.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6479,6 +7515,12 @@ public final class FunctionServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6495,6 +7537,12 @@ public final class FunctionServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6502,6 +7550,12 @@ public final class FunctionServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6514,6 +7568,12 @@ public final class FunctionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6534,6 +7594,12 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6553,6 +7619,12 @@ public final class FunctionServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -6565,6 +7637,12 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6632,10 +7710,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function that is being updated.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function that is being updated.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6722,6 +7808,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function that is being updated.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public java.lang.String getFunctionId() {
@@ -6737,6 +7827,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function that is being updated.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7058,6 +8152,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function that is being updated.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public java.lang.String getFunctionId() {
@@ -7073,6 +8171,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being updated.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7089,6 +8191,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being updated.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionId(
@@ -7102,6 +8208,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being updated.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder clearFunctionId() {
@@ -7111,6 +8221,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being updated.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionIdBytes(
@@ -7182,10 +8296,20 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to delete.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to delete.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -7272,6 +8396,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to delete.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -7287,6 +8416,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to delete.
+     * To get a function ID make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -7608,6 +8742,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to delete.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -7623,6 +8762,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to delete.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -7639,6 +8783,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to delete.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -7652,6 +8801,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to delete.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -7661,6 +8815,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to delete.
+       * To get a function ID make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -7732,10 +8891,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function that is being deleted.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function that is being deleted.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7822,6 +8989,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function that is being deleted.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public java.lang.String getFunctionId() {
@@ -7837,6 +9008,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function that is being deleted.
+     * </pre>
+     *
      * <code>string function_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -8158,6 +9333,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function that is being deleted.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public java.lang.String getFunctionId() {
@@ -8173,6 +9352,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being deleted.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -8189,6 +9372,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that is being deleted.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionId(
@@ -8202,6 +9389,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being deleted.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder clearFunctionId() {
@@ -8211,6 +9402,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that is being deleted.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public Builder setFunctionIdBytes(
@@ -8694,19 +9889,35 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     java.util.List<java.lang.String>
         getRuntimesList();
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     int getRuntimesCount();
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     java.lang.String getRuntimes(int index);
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -8799,6 +10010,10 @@ public final class FunctionServiceOuterClass {
     public static final int RUNTIMES_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList runtimes_;
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -8806,18 +10021,30 @@ public final class FunctionServiceOuterClass {
       return runtimes_;
     }
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     public int getRuntimesCount() {
       return runtimes_.size();
     }
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     public java.lang.String getRuntimes(int index) {
       return runtimes_.get(index);
     }
     /**
+     * <pre>
+     * Runtime environments available for the specified function.
+     * </pre>
+     *
      * <code>repeated string runtimes = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9155,6 +10382,10 @@ public final class FunctionServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -9162,18 +10393,30 @@ public final class FunctionServiceOuterClass {
         return runtimes_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public int getRuntimesCount() {
         return runtimes_.size();
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public java.lang.String getRuntimes(int index) {
         return runtimes_.get(index);
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -9181,6 +10424,10 @@ public final class FunctionServiceOuterClass {
         return runtimes_.getByteString(index);
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public Builder setRuntimes(
@@ -9194,6 +10441,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public Builder addRuntimes(
@@ -9207,6 +10458,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public Builder addAllRuntimes(
@@ -9218,6 +10473,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public Builder clearRuntimes() {
@@ -9227,6 +10486,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environments available for the specified function.
+       * </pre>
+       *
        * <code>repeated string runtimes = 1;</code>
        */
       public Builder addRuntimesBytes(
@@ -9298,45 +10561,102 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available results
+     * is larger than `pageSize`, the service returns a [ListFunctionsVersionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -9487,6 +10807,11 @@ public final class FunctionServiceOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      */
     public java.lang.String getFolderId() {
@@ -9507,6 +10832,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list function versions for.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9530,6 +10860,11 @@ public final class FunctionServiceOuterClass {
 
     public static final int FUNCTION_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     public java.lang.String getFunctionId() {
@@ -9550,6 +10885,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to list versions for.
+     * To get a function ID use a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -9574,6 +10914,13 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 3;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available results
+     * is larger than `pageSize`, the service returns a [ListFunctionsVersionsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -9583,6 +10930,11 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -9598,6 +10950,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9617,6 +10974,16 @@ public final class FunctionServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 5;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -9632,6 +10999,16 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10067,6 +11444,11 @@ public final class FunctionServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        */
       public java.lang.String getFolderId() {
@@ -10087,6 +11469,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -10108,6 +11495,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        */
       public Builder setFolderId(
@@ -10121,6 +11513,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        */
       public Builder clearFolderId() {
@@ -10132,6 +11529,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list function versions for.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        */
       public Builder setFolderIdBytes(
@@ -10147,6 +11549,11 @@ public final class FunctionServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public java.lang.String getFunctionId() {
@@ -10167,6 +11574,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -10188,6 +11600,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder setFunctionId(
@@ -10201,6 +11618,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder clearFunctionId() {
@@ -10212,6 +11634,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to list versions for.
+       * To get a function ID use a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder setFunctionIdBytes(
@@ -10228,12 +11655,26 @@ public final class FunctionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListFunctionsVersionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListFunctionsVersionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -10243,6 +11684,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available results
+       * is larger than `pageSize`, the service returns a [ListFunctionsVersionsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -10254,6 +11702,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -10269,6 +11722,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10285,6 +11743,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -10298,6 +11761,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -10307,6 +11775,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionsVersionsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -10323,6 +11796,16 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -10338,6 +11821,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10354,6 +11847,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -10367,6 +11870,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -10376,6 +11889,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -10447,34 +11970,68 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> 
         getVersionsList();
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersions(int index);
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     int getVersionsCount();
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder> 
         getVersionsOrBuilderList();
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder getVersionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -10575,12 +12132,20 @@ public final class FunctionServiceOuterClass {
     public static final int VERSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> versions_;
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersionsList() {
       return versions_;
     }
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder> 
@@ -10588,18 +12153,30 @@ public final class FunctionServiceOuterClass {
       return versions_;
     }
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     public int getVersionsCount() {
       return versions_.size();
     }
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersions(int index) {
       return versions_.get(index);
     }
     /**
+     * <pre>
+     * List of versions for the specified folder or function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder getVersionsOrBuilder(
@@ -10610,6 +12187,13 @@ public final class FunctionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -10625,6 +12209,13 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -11016,6 +12607,10 @@ public final class FunctionServiceOuterClass {
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder> versionsBuilder_;
 
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version> getVersionsList() {
@@ -11026,6 +12621,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public int getVersionsCount() {
@@ -11036,6 +12635,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version getVersions(int index) {
@@ -11046,6 +12649,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder setVersions(
@@ -11063,6 +12670,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder setVersions(
@@ -11077,6 +12688,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder addVersions(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version value) {
@@ -11093,6 +12708,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder addVersions(
@@ -11110,6 +12729,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder addVersions(
@@ -11124,6 +12747,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder addVersions(
@@ -11138,6 +12765,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder addAllVersions(
@@ -11153,6 +12784,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder clearVersions() {
@@ -11166,6 +12801,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public Builder removeVersions(int index) {
@@ -11179,6 +12818,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder getVersionsBuilder(
@@ -11186,6 +12829,10 @@ public final class FunctionServiceOuterClass {
         return getVersionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder getVersionsOrBuilder(
@@ -11196,6 +12843,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.VersionOrBuilder> 
@@ -11207,6 +12858,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder addVersionsBuilder() {
@@ -11214,6 +12869,10 @@ public final class FunctionServiceOuterClass {
             yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder addVersionsBuilder(
@@ -11222,6 +12881,10 @@ public final class FunctionServiceOuterClass {
             index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of versions for the specified folder or function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.Version versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Builder> 
@@ -11245,6 +12908,13 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -11260,6 +12930,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -11276,6 +12953,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -11289,6 +12973,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -11298,6 +12989,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionsVersionsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionsVersionsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -11369,35 +13067,80 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to list operations for.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to list operations for.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -11504,6 +13247,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to list operations for.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -11519,6 +13266,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to list operations for.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -11538,6 +13289,13 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -11547,6 +13305,11 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -11562,6 +13325,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11581,6 +13349,16 @@ public final class FunctionServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -11596,6 +13374,16 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11969,6 +13757,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to list operations for.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -11984,6 +13776,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to list operations for.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12000,6 +13796,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to list operations for.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -12013,6 +13813,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to list operations for.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -12022,6 +13826,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to list operations for.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -12038,12 +13846,26 @@ public final class FunctionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -12053,6 +13875,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -12064,6 +13893,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -12079,6 +13913,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12095,6 +13934,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -12108,6 +13952,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -12117,6 +13966,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -12133,6 +13987,16 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -12148,6 +14012,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12164,6 +14038,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -12177,6 +14061,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -12186,6 +14080,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -12257,34 +14161,68 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -12385,12 +14323,20 @@ public final class FunctionServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -12398,18 +14344,30 @@ public final class FunctionServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified function.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -12420,6 +14378,13 @@ public final class FunctionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -12435,6 +14400,13 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -12826,6 +14798,10 @@ public final class FunctionServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -12836,6 +14812,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -12846,6 +14826,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -12856,6 +14840,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -12873,6 +14861,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -12887,6 +14879,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -12903,6 +14899,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -12920,6 +14920,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -12934,6 +14938,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -12948,6 +14956,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -12963,6 +14975,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -12976,6 +14992,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -12989,6 +15009,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -12996,6 +15020,10 @@ public final class FunctionServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -13006,6 +15034,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -13017,6 +15049,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -13024,6 +15060,10 @@ public final class FunctionServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -13032,6 +15072,10 @@ public final class FunctionServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified function.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -13055,6 +15099,13 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -13070,6 +15121,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -13086,6 +15144,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -13099,6 +15164,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -13108,6 +15180,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -13179,104 +15258,197 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to create a version for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to create a version for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Runtime environment for the version.
+     * </pre>
+     *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getRuntime();
     /**
+     * <pre>
+     * Runtime environment for the version.
+     * </pre>
+     *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getRuntimeBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Entrypoint of the version.
+     * </pre>
+     *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getEntrypoint();
     /**
+     * <pre>
+     * Entrypoint of the version.
+     * </pre>
+     *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
 
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasResources();
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources();
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.Duration getExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * ID of the service account to associate with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * ID of the service account to associate with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     boolean hasPackage();
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage();
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder getPackageOrBuilder();
 
     /**
+     * <pre>
+     * Content of the deployment package.
+     * </pre>
+     *
      * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
      */
     com.google.protobuf.ByteString getContent();
 
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getEnvironmentCount();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsEnvironment(
@@ -13288,11 +15460,19 @@ public final class FunctionServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironment();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironmentMap();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -13300,6 +15480,10 @@ public final class FunctionServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -13526,6 +15710,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to create a version for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -13541,6 +15730,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to create a version for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -13560,6 +15754,10 @@ public final class FunctionServiceOuterClass {
     public static final int RUNTIME_FIELD_NUMBER = 2;
     private volatile java.lang.Object runtime_;
     /**
+     * <pre>
+     * Runtime environment for the version.
+     * </pre>
+     *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getRuntime() {
@@ -13575,6 +15773,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Runtime environment for the version.
+     * </pre>
+     *
      * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -13594,7 +15796,11 @@ public final class FunctionServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -13609,7 +15815,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -13628,6 +15838,10 @@ public final class FunctionServiceOuterClass {
     public static final int ENTRYPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object entrypoint_;
     /**
+     * <pre>
+     * Entrypoint of the version.
+     * </pre>
+     *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getEntrypoint() {
@@ -13643,6 +15857,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entrypoint of the version.
+     * </pre>
+     *
      * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -13662,18 +15880,30 @@ public final class FunctionServiceOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 5;
     private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources resources_;
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasResources() {
       return resources_ != null;
     }
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.getDefaultInstance() : resources_;
     }
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -13683,18 +15913,33 @@ public final class FunctionServiceOuterClass {
     public static final int EXECUTION_TIMEOUT_FIELD_NUMBER = 6;
     private com.google.protobuf.Duration executionTimeout_;
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasExecutionTimeout() {
       return executionTimeout_ != null;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.Duration getExecutionTimeout() {
       return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -13704,6 +15949,10 @@ public final class FunctionServiceOuterClass {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * ID of the service account to associate with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      */
     public java.lang.String getServiceAccountId() {
@@ -13719,6 +15968,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the service account to associate with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -13737,12 +15990,20 @@ public final class FunctionServiceOuterClass {
 
     public static final int PACKAGE_FIELD_NUMBER = 9;
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     public boolean hasPackage() {
       return packageSourceCase_ == 9;
     }
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage() {
@@ -13752,6 +16013,10 @@ public final class FunctionServiceOuterClass {
       return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Functions deployment package.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder getPackageOrBuilder() {
@@ -13763,6 +16028,10 @@ public final class FunctionServiceOuterClass {
 
     public static final int CONTENT_FIELD_NUMBER = 10;
     /**
+     * <pre>
+     * Content of the deployment package.
+     * </pre>
+     *
      * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
      */
     public com.google.protobuf.ByteString getContent() {
@@ -13799,6 +16068,10 @@ public final class FunctionServiceOuterClass {
       return internalGetEnvironment().getMap().size();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -13815,6 +16088,10 @@ public final class FunctionServiceOuterClass {
       return getEnvironmentMap();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -13822,6 +16099,10 @@ public final class FunctionServiceOuterClass {
       return internalGetEnvironment().getMap();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -13834,6 +16115,10 @@ public final class FunctionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -14418,6 +16703,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to create a version for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -14433,6 +16723,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to create a version for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -14449,6 +16744,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to create a version for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -14462,6 +16762,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to create a version for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -14471,6 +16776,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to create a version for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -14487,6 +16797,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object runtime_ = "";
       /**
+       * <pre>
+       * Runtime environment for the version.
+       * </pre>
+       *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRuntime() {
@@ -14502,6 +16816,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Runtime environment for the version.
+       * </pre>
+       *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -14518,6 +16836,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Runtime environment for the version.
+       * </pre>
+       *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRuntime(
@@ -14531,6 +16853,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environment for the version.
+       * </pre>
+       *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRuntime() {
@@ -14540,6 +16866,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Runtime environment for the version.
+       * </pre>
+       *
        * <code>string runtime = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRuntimeBytes(
@@ -14556,7 +16886,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -14571,7 +16905,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -14587,7 +16925,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -14600,7 +16942,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder clearDescription() {
         
@@ -14609,7 +16955,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -14625,6 +16975,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object entrypoint_ = "";
       /**
+       * <pre>
+       * Entrypoint of the version.
+       * </pre>
+       *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getEntrypoint() {
@@ -14640,6 +16994,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entrypoint of the version.
+       * </pre>
+       *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -14656,6 +17014,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entrypoint of the version.
+       * </pre>
+       *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setEntrypoint(
@@ -14669,6 +17031,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entrypoint of the version.
+       * </pre>
+       *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearEntrypoint() {
@@ -14678,6 +17044,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entrypoint of the version.
+       * </pre>
+       *
        * <code>string entrypoint = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setEntrypointBytes(
@@ -14696,12 +17066,20 @@ public final class FunctionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
@@ -14712,6 +17090,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setResources(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources value) {
@@ -14728,6 +17110,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setResources(
@@ -14742,6 +17128,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeResources(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources value) {
@@ -14760,6 +17150,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearResources() {
@@ -14774,6 +17168,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.Builder getResourcesBuilder() {
@@ -14782,6 +17180,10 @@ public final class FunctionServiceOuterClass {
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -14793,6 +17195,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 5 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -14813,12 +17219,22 @@ public final class FunctionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasExecutionTimeout() {
         return executionTimeoutBuilder_ != null || executionTimeout_ != null;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
@@ -14829,6 +17245,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
@@ -14845,6 +17266,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setExecutionTimeout(
@@ -14859,6 +17285,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
@@ -14877,6 +17308,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearExecutionTimeout() {
@@ -14891,6 +17327,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
@@ -14899,6 +17340,11 @@ public final class FunctionServiceOuterClass {
         return getExecutionTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -14910,6 +17356,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 6 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -14928,6 +17379,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * ID of the service account to associate with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        */
       public java.lang.String getServiceAccountId() {
@@ -14943,6 +17398,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -14959,6 +17418,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        */
       public Builder setServiceAccountId(
@@ -14972,6 +17435,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        */
       public Builder clearServiceAccountId() {
@@ -14981,6 +17448,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account to associate with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 7;</code>
        */
       public Builder setServiceAccountIdBytes(
@@ -14998,12 +17469,20 @@ public final class FunctionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder> packageBuilder_;
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public boolean hasPackage() {
         return packageSourceCase_ == 9;
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package getPackage() {
@@ -15020,6 +17499,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public Builder setPackage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package value) {
@@ -15036,6 +17519,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public Builder setPackage(
@@ -15050,6 +17537,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public Builder mergePackage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package value) {
@@ -15072,6 +17563,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public Builder clearPackage() {
@@ -15091,12 +17586,20 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Package.Builder getPackageBuilder() {
         return getPackageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.PackageOrBuilder getPackageOrBuilder() {
@@ -15110,6 +17613,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Functions deployment package.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Package package = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15132,6 +17639,10 @@ public final class FunctionServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Content of the deployment package.
+       * </pre>
+       *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
        */
       public com.google.protobuf.ByteString getContent() {
@@ -15141,6 +17652,10 @@ public final class FunctionServiceOuterClass {
         return com.google.protobuf.ByteString.EMPTY;
       }
       /**
+       * <pre>
+       * Content of the deployment package.
+       * </pre>
+       *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
@@ -15153,6 +17668,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Content of the deployment package.
+       * </pre>
+       *
        * <code>bytes content = 10 [(.yandex.cloud.length) = "&lt;=52428800"];</code>
        */
       public Builder clearContent() {
@@ -15191,6 +17710,10 @@ public final class FunctionServiceOuterClass {
         return internalGetEnvironment().getMap().size();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15207,6 +17730,10 @@ public final class FunctionServiceOuterClass {
         return getEnvironmentMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15214,6 +17741,10 @@ public final class FunctionServiceOuterClass {
         return internalGetEnvironment().getMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15226,6 +17757,10 @@ public final class FunctionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15246,6 +17781,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15265,6 +17804,10 @@ public final class FunctionServiceOuterClass {
         return internalGetMutableEnvironment().getMutableMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putEnvironment(
@@ -15277,6 +17820,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 12 [(.yandex.cloud.length) = "&lt;=4096", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -15344,10 +17891,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the version that is being created.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the version that is being created.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -15434,6 +17989,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the version that is being created.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -15449,6 +18008,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version that is being created.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -15770,6 +18333,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the version that is being created.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -15785,6 +18352,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version that is being created.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -15801,6 +18372,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version that is being created.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionId(
@@ -15814,6 +18389,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version that is being created.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder clearFunctionVersionId() {
@@ -15823,6 +18402,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version that is being created.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -15894,20 +18477,38 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the version to set the tag for.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the version to set the tag for.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
 
     /**
+     * <pre>
+     * Tag to set for the version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     java.lang.String getTag();
     /**
+     * <pre>
+     * Tag to set for the version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     com.google.protobuf.ByteString
@@ -16001,6 +18602,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the version to set the tag for.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -16016,6 +18622,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version to set the tag for.
+     * To get a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -16035,6 +18646,10 @@ public final class FunctionServiceOuterClass {
     public static final int TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object tag_;
     /**
+     * <pre>
+     * Tag to set for the version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     public java.lang.String getTag() {
@@ -16050,6 +18665,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Tag to set for the version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16388,6 +19007,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the version to set the tag for.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -16403,6 +19027,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to set the tag for.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -16419,6 +19048,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to set the tag for.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionId(
@@ -16432,6 +19066,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to set the tag for.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionVersionId() {
@@ -16441,6 +19080,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to set the tag for.
+       * To get a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -16457,6 +19101,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object tag_ = "";
       /**
+       * <pre>
+       * Tag to set for the version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public java.lang.String getTag() {
@@ -16472,6 +19120,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag to set for the version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16488,6 +19140,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag to set for the version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder setTag(
@@ -16501,6 +19157,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag to set for the version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder clearTag() {
@@ -16510,6 +19170,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag to set for the version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder setTagBytes(
@@ -16581,20 +19245,38 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the version to remove a tag from.
+     * To get the a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the version to remove a tag from.
+     * To get the a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionVersionIdBytes();
 
     /**
+     * <pre>
+     * Tag to remove from the specified version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     java.lang.String getTag();
     /**
+     * <pre>
+     * Tag to remove from the specified version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     com.google.protobuf.ByteString
@@ -16688,6 +19370,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the version to remove a tag from.
+     * To get the a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -16703,6 +19390,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version to remove a tag from.
+     * To get the a version ID make a [FunctionService.ListVersions] request.
+     * </pre>
+     *
      * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -16722,6 +19414,10 @@ public final class FunctionServiceOuterClass {
     public static final int TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object tag_;
     /**
+     * <pre>
+     * Tag to remove from the specified version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     public java.lang.String getTag() {
@@ -16737,6 +19433,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Tag to remove from the specified version.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
      */
     public com.google.protobuf.ByteString
@@ -17075,6 +19775,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the version to remove a tag from.
+       * To get the a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -17090,6 +19795,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to remove a tag from.
+       * To get the a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -17106,6 +19816,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version to remove a tag from.
+       * To get the a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionId(
@@ -17119,6 +19834,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to remove a tag from.
+       * To get the a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionVersionId() {
@@ -17128,6 +19848,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version to remove a tag from.
+       * To get the a version ID make a [FunctionService.ListVersions] request.
+       * </pre>
+       *
        * <code>string function_version_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -17144,6 +19869,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object tag_ = "";
       /**
+       * <pre>
+       * Tag to remove from the specified version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public java.lang.String getTag() {
@@ -17159,6 +19888,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag to remove from the specified version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public com.google.protobuf.ByteString
@@ -17175,6 +19908,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag to remove from the specified version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder setTag(
@@ -17188,6 +19925,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag to remove from the specified version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder clearTag() {
@@ -17197,6 +19938,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag to remove from the specified version.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
        */
       public Builder setTagBytes(
@@ -17268,10 +20013,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function versions that is being tagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the function versions that is being tagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -17358,6 +20111,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the function versions that is being tagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -17373,6 +20130,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function versions that is being tagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -17694,6 +20455,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the function versions that is being tagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -17709,6 +20474,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function versions that is being tagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -17725,6 +20494,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function versions that is being tagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionId(
@@ -17738,6 +20511,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function versions that is being tagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder clearFunctionVersionId() {
@@ -17747,6 +20524,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function versions that is being tagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -17818,10 +20599,18 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function versions that is being untagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     java.lang.String getFunctionVersionId();
     /**
+     * <pre>
+     * ID of the function versions that is being untagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -17908,6 +20697,10 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionVersionId_;
     /**
+     * <pre>
+     * ID of the function versions that is being untagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public java.lang.String getFunctionVersionId() {
@@ -17923,6 +20716,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function versions that is being untagged.
+     * </pre>
+     *
      * <code>string function_version_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -18244,6 +21041,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionVersionId_ = "";
       /**
+       * <pre>
+       * ID of the function versions that is being untagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -18259,6 +21060,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function versions that is being untagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -18275,6 +21080,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function versions that is being untagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionId(
@@ -18288,6 +21097,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function versions that is being untagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder clearFunctionVersionId() {
@@ -18297,6 +21110,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function versions that is being untagged.
+       * </pre>
+       *
        * <code>string function_version_id = 1;</code>
        */
       public Builder setFunctionVersionIdBytes(
@@ -18368,45 +21185,100 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function to retrieve tag history for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function to retrieve tag history for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
+     * <pre>
+     * Specific tag that history should be limited to.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     java.lang.String getTag();
     /**
+     * <pre>
+     * Specific tag that history should be limited to.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     com.google.protobuf.ByteString
         getTagBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * For example, `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * For example, `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -18520,6 +21392,11 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function to retrieve tag history for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFunctionId() {
@@ -18535,6 +21412,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function to retrieve tag history for.
+     * To get a function ID, make a [FunctionService.List] request.
+     * </pre>
+     *
      * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -18554,6 +21436,10 @@ public final class FunctionServiceOuterClass {
     public static final int TAG_FIELD_NUMBER = 2;
     private volatile java.lang.Object tag_;
     /**
+     * <pre>
+     * Specific tag that history should be limited to.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public java.lang.String getTag() {
@@ -18569,6 +21455,10 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Specific tag that history should be limited to.
+     * </pre>
+     *
      * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public com.google.protobuf.ByteString
@@ -18588,6 +21478,13 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 3;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -18597,6 +21494,11 @@ public final class FunctionServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -18612,6 +21514,11 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -18631,6 +21538,16 @@ public final class FunctionServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 5;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * For example, `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -18646,6 +21563,16 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * For example, `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -19036,6 +21963,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function to retrieve tag history for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFunctionId() {
@@ -19051,6 +21983,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to retrieve tag history for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -19067,6 +22004,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function to retrieve tag history for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionId(
@@ -19080,6 +22022,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to retrieve tag history for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFunctionId() {
@@ -19089,6 +22036,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function to retrieve tag history for.
+       * To get a function ID, make a [FunctionService.List] request.
+       * </pre>
+       *
        * <code>string function_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFunctionIdBytes(
@@ -19105,6 +22057,10 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object tag_ = "";
       /**
+       * <pre>
+       * Specific tag that history should be limited to.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public java.lang.String getTag() {
@@ -19120,6 +22076,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specific tag that history should be limited to.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public com.google.protobuf.ByteString
@@ -19136,6 +22096,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specific tag that history should be limited to.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTag(
@@ -19149,6 +22113,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specific tag that history should be limited to.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder clearTag() {
@@ -19158,6 +22126,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specific tag that history should be limited to.
+       * </pre>
+       *
        * <code>string tag = 2 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTagBytes(
@@ -19174,12 +22146,26 @@ public final class FunctionServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -19189,6 +22175,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListFunctionOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -19200,6 +22193,11 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -19215,6 +22213,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -19231,6 +22234,11 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -19244,6 +22252,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -19253,6 +22266,11 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListFunctionOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -19269,6 +22287,16 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * For example, `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -19284,6 +22312,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * For example, `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -19300,6 +22338,16 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * For example, `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -19313,6 +22361,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * For example, `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -19322,6 +22380,16 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Function.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * For example, `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -19393,34 +22461,68 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> 
         getFunctionTagHistoryRecordList();
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord getFunctionTagHistoryRecord(int index);
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     int getFunctionTagHistoryRecordCount();
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder> 
         getFunctionTagHistoryRecordOrBuilderList();
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder getFunctionTagHistoryRecordOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -19522,62 +22624,114 @@ public final class FunctionServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * ID of the function that the record is about.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       java.lang.String getFunctionId();
       /**
+       * <pre>
+       * ID of the function that the record is about.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       com.google.protobuf.ByteString
           getFunctionIdBytes();
 
       /**
+       * <pre>
+       * ID of the function version that the record is about.
+       * </pre>
+       *
        * <code>string function_version_id = 3;</code>
        */
       java.lang.String getFunctionVersionId();
       /**
+       * <pre>
+       * ID of the function version that the record is about.
+       * </pre>
+       *
        * <code>string function_version_id = 3;</code>
        */
       com.google.protobuf.ByteString
           getFunctionVersionIdBytes();
 
       /**
+       * <pre>
+       * Tag that was set for the version at some point.
+       * </pre>
+       *
        * <code>string tag = 2;</code>
        */
       java.lang.String getTag();
       /**
+       * <pre>
+       * Tag that was set for the version at some point.
+       * </pre>
+       *
        * <code>string tag = 2;</code>
        */
       com.google.protobuf.ByteString
           getTagBytes();
 
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       boolean hasEffectiveFrom();
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       com.google.protobuf.Timestamp getEffectiveFrom();
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       com.google.protobuf.TimestampOrBuilder getEffectiveFromOrBuilder();
 
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       boolean hasEffectiveTo();
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       com.google.protobuf.Timestamp getEffectiveTo();
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       com.google.protobuf.TimestampOrBuilder getEffectiveToOrBuilder();
     }
     /**
+     * <pre>
+     * A record in the tag history.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord}
      */
     public  static final class FunctionTagHistoryRecord extends
@@ -19698,6 +22852,10 @@ public final class FunctionServiceOuterClass {
       public static final int FUNCTION_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object functionId_;
       /**
+       * <pre>
+       * ID of the function that the record is about.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public java.lang.String getFunctionId() {
@@ -19713,6 +22871,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that the record is about.
+       * </pre>
+       *
        * <code>string function_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -19732,6 +22894,10 @@ public final class FunctionServiceOuterClass {
       public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 3;
       private volatile java.lang.Object functionVersionId_;
       /**
+       * <pre>
+       * ID of the function version that the record is about.
+       * </pre>
+       *
        * <code>string function_version_id = 3;</code>
        */
       public java.lang.String getFunctionVersionId() {
@@ -19747,6 +22913,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function version that the record is about.
+       * </pre>
+       *
        * <code>string function_version_id = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -19766,6 +22936,10 @@ public final class FunctionServiceOuterClass {
       public static final int TAG_FIELD_NUMBER = 2;
       private volatile java.lang.Object tag_;
       /**
+       * <pre>
+       * Tag that was set for the version at some point.
+       * </pre>
+       *
        * <code>string tag = 2;</code>
        */
       public java.lang.String getTag() {
@@ -19781,6 +22955,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag that was set for the version at some point.
+       * </pre>
+       *
        * <code>string tag = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -19800,18 +22978,30 @@ public final class FunctionServiceOuterClass {
       public static final int EFFECTIVE_FROM_FIELD_NUMBER = 4;
       private com.google.protobuf.Timestamp effectiveFrom_;
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       public boolean hasEffectiveFrom() {
         return effectiveFrom_ != null;
       }
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       public com.google.protobuf.Timestamp getEffectiveFrom() {
         return effectiveFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveFrom_;
       }
       /**
+       * <pre>
+       * Timestamp when the tag started being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_from = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEffectiveFromOrBuilder() {
@@ -19821,18 +23011,30 @@ public final class FunctionServiceOuterClass {
       public static final int EFFECTIVE_TO_FIELD_NUMBER = 5;
       private com.google.protobuf.Timestamp effectiveTo_;
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       public boolean hasEffectiveTo() {
         return effectiveTo_ != null;
       }
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       public com.google.protobuf.Timestamp getEffectiveTo() {
         return effectiveTo_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : effectiveTo_;
       }
       /**
+       * <pre>
+       * Timestamp when the tag stopped being active for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp effective_to = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEffectiveToOrBuilder() {
@@ -20047,6 +23249,10 @@ public final class FunctionServiceOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * A record in the tag history.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord}
        */
       public static final class Builder extends
@@ -20238,6 +23444,10 @@ public final class FunctionServiceOuterClass {
 
         private java.lang.Object functionId_ = "";
         /**
+         * <pre>
+         * ID of the function that the record is about.
+         * </pre>
+         *
          * <code>string function_id = 1;</code>
          */
         public java.lang.String getFunctionId() {
@@ -20253,6 +23463,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the function that the record is about.
+         * </pre>
+         *
          * <code>string function_id = 1;</code>
          */
         public com.google.protobuf.ByteString
@@ -20269,6 +23483,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the function that the record is about.
+         * </pre>
+         *
          * <code>string function_id = 1;</code>
          */
         public Builder setFunctionId(
@@ -20282,6 +23500,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the function that the record is about.
+         * </pre>
+         *
          * <code>string function_id = 1;</code>
          */
         public Builder clearFunctionId() {
@@ -20291,6 +23513,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the function that the record is about.
+         * </pre>
+         *
          * <code>string function_id = 1;</code>
          */
         public Builder setFunctionIdBytes(
@@ -20307,6 +23533,10 @@ public final class FunctionServiceOuterClass {
 
         private java.lang.Object functionVersionId_ = "";
         /**
+         * <pre>
+         * ID of the function version that the record is about.
+         * </pre>
+         *
          * <code>string function_version_id = 3;</code>
          */
         public java.lang.String getFunctionVersionId() {
@@ -20322,6 +23552,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the function version that the record is about.
+         * </pre>
+         *
          * <code>string function_version_id = 3;</code>
          */
         public com.google.protobuf.ByteString
@@ -20338,6 +23572,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the function version that the record is about.
+         * </pre>
+         *
          * <code>string function_version_id = 3;</code>
          */
         public Builder setFunctionVersionId(
@@ -20351,6 +23589,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the function version that the record is about.
+         * </pre>
+         *
          * <code>string function_version_id = 3;</code>
          */
         public Builder clearFunctionVersionId() {
@@ -20360,6 +23602,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the function version that the record is about.
+         * </pre>
+         *
          * <code>string function_version_id = 3;</code>
          */
         public Builder setFunctionVersionIdBytes(
@@ -20376,6 +23622,10 @@ public final class FunctionServiceOuterClass {
 
         private java.lang.Object tag_ = "";
         /**
+         * <pre>
+         * Tag that was set for the version at some point.
+         * </pre>
+         *
          * <code>string tag = 2;</code>
          */
         public java.lang.String getTag() {
@@ -20391,6 +23641,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Tag that was set for the version at some point.
+         * </pre>
+         *
          * <code>string tag = 2;</code>
          */
         public com.google.protobuf.ByteString
@@ -20407,6 +23661,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Tag that was set for the version at some point.
+         * </pre>
+         *
          * <code>string tag = 2;</code>
          */
         public Builder setTag(
@@ -20420,6 +23678,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Tag that was set for the version at some point.
+         * </pre>
+         *
          * <code>string tag = 2;</code>
          */
         public Builder clearTag() {
@@ -20429,6 +23691,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Tag that was set for the version at some point.
+         * </pre>
+         *
          * <code>string tag = 2;</code>
          */
         public Builder setTagBytes(
@@ -20447,12 +23713,20 @@ public final class FunctionServiceOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveFromBuilder_;
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public boolean hasEffectiveFrom() {
           return effectiveFromBuilder_ != null || effectiveFrom_ != null;
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public com.google.protobuf.Timestamp getEffectiveFrom() {
@@ -20463,6 +23737,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public Builder setEffectiveFrom(com.google.protobuf.Timestamp value) {
@@ -20479,6 +23757,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public Builder setEffectiveFrom(
@@ -20493,6 +23775,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public Builder mergeEffectiveFrom(com.google.protobuf.Timestamp value) {
@@ -20511,6 +23797,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public Builder clearEffectiveFrom() {
@@ -20525,6 +23815,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public com.google.protobuf.Timestamp.Builder getEffectiveFromBuilder() {
@@ -20533,6 +23827,10 @@ public final class FunctionServiceOuterClass {
           return getEffectiveFromFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         public com.google.protobuf.TimestampOrBuilder getEffectiveFromOrBuilder() {
@@ -20544,6 +23842,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Timestamp when the tag started being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_from = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -20564,12 +23866,20 @@ public final class FunctionServiceOuterClass {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> effectiveToBuilder_;
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public boolean hasEffectiveTo() {
           return effectiveToBuilder_ != null || effectiveTo_ != null;
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public com.google.protobuf.Timestamp getEffectiveTo() {
@@ -20580,6 +23890,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public Builder setEffectiveTo(com.google.protobuf.Timestamp value) {
@@ -20596,6 +23910,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public Builder setEffectiveTo(
@@ -20610,6 +23928,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public Builder mergeEffectiveTo(com.google.protobuf.Timestamp value) {
@@ -20628,6 +23950,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public Builder clearEffectiveTo() {
@@ -20642,6 +23968,10 @@ public final class FunctionServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public com.google.protobuf.Timestamp.Builder getEffectiveToBuilder() {
@@ -20650,6 +23980,10 @@ public final class FunctionServiceOuterClass {
           return getEffectiveToFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         public com.google.protobuf.TimestampOrBuilder getEffectiveToOrBuilder() {
@@ -20661,6 +23995,10 @@ public final class FunctionServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Timestamp when the tag stopped being active for the function.
+         * </pre>
+         *
          * <code>.google.protobuf.Timestamp effective_to = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -20733,12 +24071,20 @@ public final class FunctionServiceOuterClass {
     public static final int FUNCTION_TAG_HISTORY_RECORD_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> functionTagHistoryRecord_;
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> getFunctionTagHistoryRecordList() {
       return functionTagHistoryRecord_;
     }
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder> 
@@ -20746,18 +24092,30 @@ public final class FunctionServiceOuterClass {
       return functionTagHistoryRecord_;
     }
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     public int getFunctionTagHistoryRecordCount() {
       return functionTagHistoryRecord_.size();
     }
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord getFunctionTagHistoryRecord(int index) {
       return functionTagHistoryRecord_.get(index);
     }
     /**
+     * <pre>
+     * Set of relevant tag history records.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder getFunctionTagHistoryRecordOrBuilder(
@@ -20768,6 +24126,13 @@ public final class FunctionServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -20783,6 +24148,13 @@ public final class FunctionServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+     * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -21174,6 +24546,10 @@ public final class FunctionServiceOuterClass {
           yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder> functionTagHistoryRecordBuilder_;
 
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord> getFunctionTagHistoryRecordList() {
@@ -21184,6 +24560,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public int getFunctionTagHistoryRecordCount() {
@@ -21194,6 +24574,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord getFunctionTagHistoryRecord(int index) {
@@ -21204,6 +24588,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder setFunctionTagHistoryRecord(
@@ -21221,6 +24609,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder setFunctionTagHistoryRecord(
@@ -21235,6 +24627,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder addFunctionTagHistoryRecord(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord value) {
@@ -21251,6 +24647,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder addFunctionTagHistoryRecord(
@@ -21268,6 +24668,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder addFunctionTagHistoryRecord(
@@ -21282,6 +24686,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder addFunctionTagHistoryRecord(
@@ -21296,6 +24704,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder addAllFunctionTagHistoryRecord(
@@ -21311,6 +24723,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder clearFunctionTagHistoryRecord() {
@@ -21324,6 +24740,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public Builder removeFunctionTagHistoryRecord(int index) {
@@ -21337,6 +24757,10 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder getFunctionTagHistoryRecordBuilder(
@@ -21344,6 +24768,10 @@ public final class FunctionServiceOuterClass {
         return getFunctionTagHistoryRecordFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder getFunctionTagHistoryRecordOrBuilder(
@@ -21354,6 +24782,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecordOrBuilder> 
@@ -21365,6 +24797,10 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder addFunctionTagHistoryRecordBuilder() {
@@ -21372,6 +24808,10 @@ public final class FunctionServiceOuterClass {
             yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder addFunctionTagHistoryRecordBuilder(
@@ -21380,6 +24820,10 @@ public final class FunctionServiceOuterClass {
             index, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of relevant tag history records.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.functions.v1.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord function_tag_history_record = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionTagHistoryResponse.FunctionTagHistoryRecord.Builder> 
@@ -21403,6 +24847,13 @@ public final class FunctionServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -21418,6 +24869,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -21434,6 +24892,13 @@ public final class FunctionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -21447,6 +24912,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -21456,6 +24928,13 @@ public final class FunctionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFunctionTagHistoryRequest.page_size], use `nextPageToken` as the value
+       * for the [ListFunctionTagHistoryRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -21736,133 +25215,134 @@ public final class FunctionServiceOuterClass {
       "\212\3101\006<=1000\"p\n\036ListFunctionOperationsResp" +
       "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
       "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\352\004\n\034CreateFunctionVersionRequest\022\031\n" +
+      " \001(\t\"\365\004\n\034CreateFunctionVersionRequest\022\031\n" +
       "\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(" +
-      "\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\030\n\nentrypoi" +
-      "nt\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005 \001(\0132/.yand" +
-      "ex.cloud.serverless.functions.v1.Resourc" +
-      "esB\004\350\3071\001\022:\n\021execution_timeout\030\006 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\004\350\3071\001\022\032\n\022service_" +
-      "account_id\030\007 \001(\t\022@\n\007package\030\t \001(\0132-.yand" +
-      "ex.cloud.serverless.functions.v1.Package" +
-      "H\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=52428800H\000\022\217\001" +
-      "\n\013environment\030\014 \003(\0132S.yandex.cloud.serve" +
-      "rless.functions.v1.CreateFunctionVersion" +
-      "Request.EnvironmentEntryB%\212\3101\006<=4096\262\3101\027" +
-      "\022\025[a-zA-Z][a-zA-Z0-9_]*\0322\n\020EnvironmentEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\026\n\016p" +
-      "ackage_source\022\004\300\3011\001J\004\010\010\020\t\"<\n\035CreateFunct" +
-      "ionVersionMetadata\022\033\n\023function_version_i" +
-      "d\030\001 \001(\t\"]\n\025SetFunctionTagRequest\022!\n\023func" +
-      "tion_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\t" +
-      "B\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030RemoveFunction" +
-      "TagRequest\022!\n\023function_version_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*" +
-      "\"5\n\026SetFunctionTagMetadata\022\033\n\023function_v" +
-      "ersion_id\030\001 \001(\t\"8\n\031RemoveFunctionTagMeta" +
-      "data\022\033\n\023function_version_id\030\001 \001(\t\"\301\001\n\035Li" +
-      "stFunctionTagHistoryRequest\022\031\n\013function_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[a-z][-" +
-      "_0-9a-z]*|[$]latest\022\035\n\tpage_size\030\003 \001(\003B\n" +
-      "\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=10" +
-      "0\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"\200\003\n\036ListFu" +
-      "nctionTagHistoryResponse\022\202\001\n\033function_ta" +
-      "g_history_record\030\001 \003(\0132].yandex.cloud.se" +
-      "rverless.functions.v1.ListFunctionTagHis" +
-      "toryResponse.FunctionTagHistoryRecord\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\032\277\001\n\030FunctionTagHi" +
-      "storyRecord\022\023\n\013function_id\030\001 \001(\t\022\033\n\023func" +
-      "tion_version_id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t\0222\n\016ef" +
-      "fective_from\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\0220\n\014effective_to\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp2\235\032\n\017FunctionService\022\236\001\n" +
-      "\003Get\0228.yandex.cloud.serverless.functions" +
-      ".v1.GetFunctionRequest\032..yandex.cloud.se" +
-      "rverless.functions.v1.Function\"-\202\323\344\223\002\'\022%" +
-      "/functions/v1/functions/{function_id}\022\240\001" +
-      "\n\004List\022:.yandex.cloud.serverless.functio" +
-      "ns.v1.ListFunctionsRequest\032;.yandex.clou" +
-      "d.serverless.functions.v1.ListFunctionsR" +
-      "esponse\"\037\202\323\344\223\002\031\022\027/functions/v1/functions" +
-      "\022\262\001\n\006Create\022;.yandex.cloud.serverless.fu" +
-      "nctions.v1.CreateFunctionRequest\032!.yande" +
-      "x.cloud.operation.Operation\"H\202\323\344\223\002\034\"\027/fu" +
-      "nctions/v1/functions:\001*\262\322*\"\n\026CreateFunct" +
-      "ionMetadata\022\010Function\022\300\001\n\006Update\022;.yande" +
-      "x.cloud.serverless.functions.v1.UpdateFu" +
-      "nctionRequest\032!.yandex.cloud.operation.O" +
-      "peration\"V\202\323\344\223\002*2%/functions/v1/function" +
-      "s/{function_id}:\001*\262\322*\"\n\026UpdateFunctionMe" +
-      "tadata\022\010Function\022\312\001\n\006Delete\022;.yandex.clo" +
-      "ud.serverless.functions.v1.DeleteFunctio" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"`\202\323\344\223\002\'*%/functions/v1/functions/{fu" +
-      "nction_id}\262\322*/\n\026DeleteFunctionMetadata\022\025" +
-      "google.protobuf.Empty\022\262\001\n\nGetVersion\022?.y" +
-      "andex.cloud.serverless.functions.v1.GetF" +
-      "unctionVersionRequest\032-.yandex.cloud.ser" +
-      "verless.functions.v1.Version\"4\202\323\344\223\002.\022,/f" +
-      "unctions/v1/versions/{function_version_i" +
-      "d}\022\254\001\n\017GetVersionByTag\022D.yandex.cloud.se" +
-      "rverless.functions.v1.GetFunctionVersion" +
-      "ByTagRequest\032-.yandex.cloud.serverless.f" +
-      "unctions.v1.Version\"$\202\323\344\223\002\036\022\034/functions/" +
-      "v1/versions:byTag\022\267\001\n\014ListVersions\022B.yan" +
-      "dex.cloud.serverless.functions.v1.ListFu" +
-      "nctionsVersionsRequest\032C.yandex.cloud.se" +
-      "rverless.functions.v1.ListFunctionsVersi" +
-      "onsResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/versi" +
-      "ons\022\315\001\n\006SetTag\022;.yandex.cloud.serverless" +
-      ".functions.v1.SetFunctionTagRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"c\202\323\344\223\0028\"3" +
-      "/functions/v1/versions/{function_version" +
-      "_id}:setTag:\001*\262\322*!\n\026SetFunctionTagMetada" +
-      "ta\022\007Version\022\331\001\n\tRemoveTag\022>.yandex.cloud" +
-      ".serverless.functions.v1.RemoveFunctionT" +
-      "agRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"i\202\323\344\223\002;\"6/functions/v1/versions/{fu" +
-      "nction_version_id}:removeTag:\001*\262\322*$\n\031Rem" +
-      "oveFunctionTagMetadata\022\007Version\022\325\001\n\016List" +
-      "TagHistory\022C.yandex.cloud.serverless.fun" +
-      "ctions.v1.ListFunctionTagHistoryRequest\032" +
-      "D.yandex.cloud.serverless.functions.v1.L" +
-      "istFunctionTagHistoryResponse\"8\202\323\344\223\0022\0220/" +
-      "functions/v1/functions/{function_id}:tag" +
-      "History\022\305\001\n\rCreateVersion\022B.yandex.cloud" +
-      ".serverless.functions.v1.CreateFunctionV" +
-      "ersionRequest\032!.yandex.cloud.operation.O" +
-      "peration\"M\202\323\344\223\002\033\"\026/functions/v1/versions" +
-      ":\001*\262\322*(\n\035CreateFunctionVersionMetadata\022\007" +
-      "Version\022\245\001\n\014ListRuntimes\0229.yandex.cloud." +
-      "serverless.functions.v1.ListRuntimesRequ" +
-      "est\032:.yandex.cloud.serverless.functions." +
-      "v1.ListRuntimesResponse\"\036\202\323\344\223\002\030\022\026/functi" +
-      "ons/v1/runtimes\022\325\001\n\016ListOperations\022C.yan" +
-      "dex.cloud.serverless.functions.v1.ListFu" +
-      "nctionOperationsRequest\032D.yandex.cloud.s" +
-      "erverless.functions.v1.ListFunctionOpera" +
-      "tionsResponse\"8\202\323\344\223\0022\0220/functions/v1/fun" +
-      "ctions/{function_id}/operations\022\267\001\n\022List" +
-      "AccessBindings\022..yandex.cloud.access.Lis" +
-      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
-      "cess.ListAccessBindingsResponse\"@\202\323\344\223\002:\022" +
-      "8/functions/v1/functions/{resource_id}:l" +
-      "istAccessBindings\022\346\001\n\021SetAccessBindings\022" +
-      "-.yandex.cloud.access.SetAccessBindingsR" +
+      "\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022" +
+      "\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005" +
+      " \001(\0132/.yandex.cloud.serverless.functions" +
+      ".v1.ResourcesB\004\350\3071\001\022:\n\021execution_timeout" +
+      "\030\006 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022" +
+      "\032\n\022service_account_id\030\007 \001(\t\022@\n\007package\030\t" +
+      " \001(\0132-.yandex.cloud.serverless.functions" +
+      ".v1.PackageH\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=52" +
+      "428800H\000\022\217\001\n\013environment\030\014 \003(\0132S.yandex." +
+      "cloud.serverless.functions.v1.CreateFunc" +
+      "tionVersionRequest.EnvironmentEntryB%\212\3101" +
+      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\0322\n\020En" +
+      "vironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001B\026\n\016package_source\022\004\300\3011\001J\004\010\010\020\t\"<\n\035" +
+      "CreateFunctionVersionMetadata\022\033\n\023functio" +
+      "n_version_id\030\001 \001(\t\"]\n\025SetFunctionTagRequ" +
+      "est\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022!" +
+      "\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030Rem" +
+      "oveFunctionTagRequest\022!\n\023function_versio" +
+      "n_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z]" +
+      "[-_0-9a-z]*\"5\n\026SetFunctionTagMetadata\022\033\n" +
+      "\023function_version_id\030\001 \001(\t\"8\n\031RemoveFunc" +
+      "tionTagMetadata\022\033\n\023function_version_id\030\001" +
+      " \001(\t\"\301\001\n\035ListFunctionTagHistoryRequest\022\031" +
+      "\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036" +
+      "\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tpage_s" +
+      "ize\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000" +
+      "\"\200\003\n\036ListFunctionTagHistoryResponse\022\202\001\n\033" +
+      "function_tag_history_record\030\001 \003(\0132].yand" +
+      "ex.cloud.serverless.functions.v1.ListFun" +
+      "ctionTagHistoryResponse.FunctionTagHisto" +
+      "ryRecord\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030Fu" +
+      "nctionTagHistoryRecord\022\023\n\013function_id\030\001 " +
+      "\001(\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n\003tag\030" +
+      "\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\0220\n\014effective_to\030\005 \001(\0132" +
+      "\032.google.protobuf.Timestamp2\235\032\n\017Function" +
+      "Service\022\236\001\n\003Get\0228.yandex.cloud.serverles" +
+      "s.functions.v1.GetFunctionRequest\032..yand" +
+      "ex.cloud.serverless.functions.v1.Functio" +
+      "n\"-\202\323\344\223\002\'\022%/functions/v1/functions/{func" +
+      "tion_id}\022\240\001\n\004List\022:.yandex.cloud.serverl" +
+      "ess.functions.v1.ListFunctionsRequest\032;." +
+      "yandex.cloud.serverless.functions.v1.Lis" +
+      "tFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functions/v" +
+      "1/functions\022\262\001\n\006Create\022;.yandex.cloud.se" +
+      "rverless.functions.v1.CreateFunctionRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"H" +
+      "\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262\322*\"\n\026" +
+      "CreateFunctionMetadata\022\010Function\022\300\001\n\006Upd" +
+      "ate\022;.yandex.cloud.serverless.functions." +
+      "v1.UpdateFunctionRequest\032!.yandex.cloud." +
+      "operation.Operation\"V\202\323\344\223\002*2%/functions/" +
+      "v1/functions/{function_id}:\001*\262\322*\"\n\026Updat" +
+      "eFunctionMetadata\022\010Function\022\312\001\n\006Delete\022;" +
+      ".yandex.cloud.serverless.functions.v1.De" +
+      "leteFunctionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"`\202\323\344\223\002\'*%/functions/v1/fu" +
+      "nctions/{function_id}\262\322*/\n\026DeleteFunctio" +
+      "nMetadata\022\025google.protobuf.Empty\022\262\001\n\nGet" +
+      "Version\022?.yandex.cloud.serverless.functi" +
+      "ons.v1.GetFunctionVersionRequest\032-.yande" +
+      "x.cloud.serverless.functions.v1.Version\"" +
+      "4\202\323\344\223\002.\022,/functions/v1/versions/{functio" +
+      "n_version_id}\022\254\001\n\017GetVersionByTag\022D.yand" +
+      "ex.cloud.serverless.functions.v1.GetFunc" +
+      "tionVersionByTagRequest\032-.yandex.cloud.s" +
+      "erverless.functions.v1.Version\"$\202\323\344\223\002\036\022\034" +
+      "/functions/v1/versions:byTag\022\267\001\n\014ListVer" +
+      "sions\022B.yandex.cloud.serverless.function" +
+      "s.v1.ListFunctionsVersionsRequest\032C.yand" +
+      "ex.cloud.serverless.functions.v1.ListFun" +
+      "ctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/functio" +
+      "ns/v1/versions\022\315\001\n\006SetTag\022;.yandex.cloud" +
+      ".serverless.functions.v1.SetFunctionTagR" +
       "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\177\202\323\344\223\002<\"7/functions/v1/functions/{reso" +
-      "urce_id}:setAccessBindings:\001*\262\322*9\n acces" +
-      "s.SetAccessBindingsMetadata\022\025google.prot" +
-      "obuf.Empty\022\363\001\n\024UpdateAccessBindings\0220.ya" +
-      "ndex.cloud.access.UpdateAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\205\001\202\323\344\223\002?\":/functions/v1/functions/{reso" +
-      "urce_id}:updateAccessBindings:\001*\262\322*<\n#ac" +
-      "cess.UpdateAccessBindingsMetadata\022\025googl" +
-      "e.protobuf.EmptyB~\n(yandex.cloud.api.ser" +
-      "verless.functions.v1ZRgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/serverles" +
-      "s/functions/v1;functionsb\006proto3"
+      "n\"c\202\323\344\223\0028\"3/functions/v1/versions/{funct" +
+      "ion_version_id}:setTag:\001*\262\322*!\n\026SetFuncti" +
+      "onTagMetadata\022\007Version\022\331\001\n\tRemoveTag\022>.y" +
+      "andex.cloud.serverless.functions.v1.Remo" +
+      "veFunctionTagRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"i\202\323\344\223\002;\"6/functions/v1/v" +
+      "ersions/{function_version_id}:removeTag:" +
+      "\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007Versi" +
+      "on\022\325\001\n\016ListTagHistory\022C.yandex.cloud.ser" +
+      "verless.functions.v1.ListFunctionTagHist" +
+      "oryRequest\032D.yandex.cloud.serverless.fun" +
+      "ctions.v1.ListFunctionTagHistoryResponse" +
+      "\"8\202\323\344\223\0022\0220/functions/v1/functions/{funct" +
+      "ion_id}:tagHistory\022\305\001\n\rCreateVersion\022B.y" +
+      "andex.cloud.serverless.functions.v1.Crea" +
+      "teFunctionVersionRequest\032!.yandex.cloud." +
+      "operation.Operation\"M\202\323\344\223\002\033\"\026/functions/" +
+      "v1/versions:\001*\262\322*(\n\035CreateFunctionVersio" +
+      "nMetadata\022\007Version\022\245\001\n\014ListRuntimes\0229.ya" +
+      "ndex.cloud.serverless.functions.v1.ListR" +
+      "untimesRequest\032:.yandex.cloud.serverless" +
+      ".functions.v1.ListRuntimesResponse\"\036\202\323\344\223" +
+      "\002\030\022\026/functions/v1/runtimes\022\325\001\n\016ListOpera" +
+      "tions\022C.yandex.cloud.serverless.function" +
+      "s.v1.ListFunctionOperationsRequest\032D.yan" +
+      "dex.cloud.serverless.functions.v1.ListFu" +
+      "nctionOperationsResponse\"8\202\323\344\223\0022\0220/funct" +
+      "ions/v1/functions/{function_id}/operatio" +
+      "ns\022\267\001\n\022ListAccessBindings\022..yandex.cloud" +
+      ".access.ListAccessBindingsRequest\032/.yand" +
+      "ex.cloud.access.ListAccessBindingsRespon" +
+      "se\"@\202\323\344\223\002:\0228/functions/v1/functions/{res" +
+      "ource_id}:listAccessBindings\022\346\001\n\021SetAcce" +
+      "ssBindings\022-.yandex.cloud.access.SetAcce" +
+      "ssBindingsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\177\202\323\344\223\002<\"7/functions/v1/func" +
+      "tions/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
+      "google.protobuf.Empty\022\363\001\n\024UpdateAccessBi" +
+      "ndings\0220.yandex.cloud.access.UpdateAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\205\001\202\323\344\223\002?\":/functions/v1/func" +
+      "tions/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.EmptyB~\n(yandex.cl" +
+      "oud.api.serverless.functions.v1ZRgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/serverless/functions/v1;functionsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

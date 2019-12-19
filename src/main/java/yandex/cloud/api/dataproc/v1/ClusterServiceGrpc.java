@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing Dataproc clusters.
+ * A set of methods for managing Data Proc clusters.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -343,14 +343,15 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc clusters.
+   * A set of methods for managing Data Proc clusters.
    * </pre>
    */
   public static abstract class ClusterServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified cluster.
+     * To get the list of all available clusters, make a [ClusterService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -360,7 +361,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc clusters.
+     * Retrieves the list of clusters in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClustersRequest request,
@@ -370,7 +371,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc cluster.
+     * Creates a cluster in the specified folder.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterRequest request,
@@ -380,7 +381,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc cluster.
+     * Updates the configuration of the specified cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
@@ -390,7 +391,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc cluster.
+     * Deletes the specified cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
@@ -400,7 +401,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start the specified Dataproc cluster.
+     * Starts the specified cluster.
      * </pre>
      */
     public void start(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StartClusterRequest request,
@@ -410,7 +411,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stop the specified Dataproc cluster.
+     * Stops the specified cluster.
      * </pre>
      */
     public void stop(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest request,
@@ -419,6 +420,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified cluster.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
@@ -427,7 +431,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts.
+     * Retrieves the list of hosts in the specified cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
@@ -506,7 +510,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc clusters.
+   * A set of methods for managing Data Proc clusters.
    * </pre>
    */
   public static final class ClusterServiceStub extends io.grpc.stub.AbstractStub<ClusterServiceStub> {
@@ -527,7 +531,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified cluster.
+     * To get the list of all available clusters, make a [ClusterService.List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.GetClusterRequest request,
@@ -538,7 +543,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc clusters.
+     * Retrieves the list of clusters in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClustersRequest request,
@@ -549,7 +554,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc cluster.
+     * Creates a cluster in the specified folder.
      * </pre>
      */
     public void create(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterRequest request,
@@ -560,7 +565,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc cluster.
+     * Updates the configuration of the specified cluster.
      * </pre>
      */
     public void update(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterRequest request,
@@ -571,7 +576,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc cluster.
+     * Deletes the specified cluster.
      * </pre>
      */
     public void delete(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest request,
@@ -582,7 +587,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start the specified Dataproc cluster.
+     * Starts the specified cluster.
      * </pre>
      */
     public void start(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StartClusterRequest request,
@@ -593,7 +598,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stop the specified Dataproc cluster.
+     * Stops the specified cluster.
      * </pre>
      */
     public void stop(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest request,
@@ -603,6 +608,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified cluster.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> responseObserver) {
@@ -612,7 +620,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts.
+     * Retrieves the list of hosts in the specified cluster.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest request,
@@ -624,7 +632,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc clusters.
+   * A set of methods for managing Data Proc clusters.
    * </pre>
    */
   public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractStub<ClusterServiceBlockingStub> {
@@ -645,7 +653,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified cluster.
+     * To get the list of all available clusters, make a [ClusterService.List] request.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster get(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.GetClusterRequest request) {
@@ -655,7 +664,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc clusters.
+     * Retrieves the list of clusters in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClustersResponse list(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClustersRequest request) {
@@ -665,7 +674,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc cluster.
+     * Creates a cluster in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.CreateClusterRequest request) {
@@ -675,7 +684,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc cluster.
+     * Updates the configuration of the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.UpdateClusterRequest request) {
@@ -685,7 +694,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc cluster.
+     * Deletes the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest request) {
@@ -695,7 +704,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start the specified Dataproc cluster.
+     * Starts the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StartClusterRequest request) {
@@ -705,7 +714,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stop the specified Dataproc cluster.
+     * Stops the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest request) {
@@ -714,6 +723,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified cluster.
+     * </pre>
      */
     public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsResponse listOperations(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
       return blockingUnaryCall(
@@ -722,7 +734,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts.
+     * Retrieves the list of hosts in the specified cluster.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsResponse listHosts(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
@@ -733,7 +745,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Dataproc clusters.
+   * A set of methods for managing Data Proc clusters.
    * </pre>
    */
   public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractStub<ClusterServiceFutureStub> {
@@ -754,7 +766,8 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Dataproc cluster.
+     * Returns the specified cluster.
+     * To get the list of all available clusters, make a [ClusterService.List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterOuterClass.Cluster> get(
@@ -765,7 +778,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of Dataproc clusters.
+     * Retrieves the list of clusters in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClustersResponse> list(
@@ -776,7 +789,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Creates a Dataproc cluster.
+     * Creates a cluster in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -787,7 +800,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Updates configuration of the specified Dataproc cluster.
+     * Updates the configuration of the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -798,7 +811,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Deletes the specified Dataproc cluster.
+     * Deletes the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
@@ -809,7 +822,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Start the specified Dataproc cluster.
+     * Starts the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
@@ -820,7 +833,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Stop the specified Dataproc cluster.
+     * Stops the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
@@ -830,6 +843,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> listOperations(
         yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
@@ -839,7 +855,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of hosts.
+     * Retrieves the list of hosts in the specified cluster.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsResponse> listHosts(

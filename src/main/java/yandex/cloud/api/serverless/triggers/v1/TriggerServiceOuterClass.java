@@ -19,10 +19,20 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger to return.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger to return.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger to return.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -124,6 +139,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger to return.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger to return.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -460,6 +485,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to return.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to return.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -489,6 +524,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to return.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -498,6 +538,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to return.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -569,35 +614,82 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list triggers in.
+     * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list triggers in.
+     * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListTriggersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters triggers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-trigger`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters triggers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-trigger`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -704,6 +796,11 @@ public final class TriggerServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list triggers in.
+     * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -719,6 +816,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list triggers in.
+     * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -738,6 +840,13 @@ public final class TriggerServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListTriggersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     public long getPageSize() {
@@ -747,6 +856,11 @@ public final class TriggerServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     public java.lang.String getPageToken() {
@@ -762,6 +876,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -781,6 +900,16 @@ public final class TriggerServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters triggers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-trigger`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public java.lang.String getFilter() {
@@ -796,6 +925,16 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters triggers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-trigger`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -1169,6 +1308,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list triggers in.
+       * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -1184,6 +1328,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list triggers in.
+       * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1200,6 +1349,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list triggers in.
+       * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -1213,6 +1367,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list triggers in.
+       * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -1222,6 +1381,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list triggers in.
+       * To get a folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -1238,12 +1402,26 @@ public final class TriggerServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder setPageSize(long value) {
@@ -1253,6 +1431,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder clearPageSize() {
@@ -1264,6 +1449,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public java.lang.String getPageToken() {
@@ -1279,6 +1469,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -1295,6 +1490,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder setPageToken(
@@ -1308,6 +1508,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder clearPageToken() {
@@ -1317,6 +1522,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        */
       public Builder setPageTokenBytes(
@@ -1333,6 +1543,16 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters triggers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-trigger`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public java.lang.String getFilter() {
@@ -1348,6 +1568,16 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters triggers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-trigger`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1594,16 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters triggers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-trigger`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilter(
@@ -1377,6 +1617,16 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters triggers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-trigger`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder clearFilter() {
@@ -1386,6 +1636,16 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters triggers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-trigger`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilterBytes(
@@ -1457,34 +1717,68 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> 
         getTriggersList();
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger getTriggers(int index);
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     int getTriggersCount();
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder> 
         getTriggersOrBuilderList();
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder getTriggersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1879,20 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> triggers_;
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> getTriggersList() {
       return triggers_;
     }
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder> 
@@ -1598,18 +1900,30 @@ public final class TriggerServiceOuterClass {
       return triggers_;
     }
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     public int getTriggersCount() {
       return triggers_.size();
     }
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger getTriggers(int index) {
       return triggers_.get(index);
     }
     /**
+     * <pre>
+     * List of triggers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder getTriggersOrBuilder(
@@ -1620,6 +1934,13 @@ public final class TriggerServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1956,13 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2354,10 @@ public final class TriggerServiceOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder> triggersBuilder_;
 
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> getTriggersList() {
@@ -2036,6 +2368,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public int getTriggersCount() {
@@ -2046,6 +2382,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger getTriggers(int index) {
@@ -2056,6 +2396,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder setTriggers(
@@ -2073,6 +2417,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder setTriggers(
@@ -2087,6 +2435,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder addTriggers(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger value) {
@@ -2103,6 +2455,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder addTriggers(
@@ -2120,6 +2476,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder addTriggers(
@@ -2134,6 +2494,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder addTriggers(
@@ -2148,6 +2512,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder addAllTriggers(
@@ -2163,6 +2531,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder clearTriggers() {
@@ -2176,6 +2548,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public Builder removeTriggers(int index) {
@@ -2189,6 +2565,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Builder getTriggersBuilder(
@@ -2196,6 +2576,10 @@ public final class TriggerServiceOuterClass {
         return getTriggersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder getTriggersOrBuilder(
@@ -2206,6 +2590,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.TriggerOrBuilder> 
@@ -2217,6 +2605,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Builder addTriggersBuilder() {
@@ -2224,6 +2616,10 @@ public final class TriggerServiceOuterClass {
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Builder addTriggersBuilder(
@@ -2232,6 +2628,10 @@ public final class TriggerServiceOuterClass {
             index, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of triggers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.triggers.v1.Trigger triggers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Builder> 
@@ -2255,6 +2655,13 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2677,13 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2700,13 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2720,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2736,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggersRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,40 +2814,76 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a trigger in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a trigger in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the trigger.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the trigger.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2424,11 +2895,19 @@ public final class TriggerServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2436,6 +2915,10 @@ public final class TriggerServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2443,14 +2926,26 @@ public final class TriggerServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasRule();
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule();
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder();
@@ -2589,6 +3084,11 @@ public final class TriggerServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a trigger in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -2604,6 +3104,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a trigger in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2623,6 +3128,11 @@ public final class TriggerServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -2638,6 +3148,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2657,6 +3172,10 @@ public final class TriggerServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the trigger.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -2672,6 +3191,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the trigger.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2715,6 +3238,10 @@ public final class TriggerServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2731,6 +3258,10 @@ public final class TriggerServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2738,6 +3269,10 @@ public final class TriggerServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2750,6 +3285,10 @@ public final class TriggerServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2767,18 +3306,30 @@ public final class TriggerServiceOuterClass {
     public static final int RULE_FIELD_NUMBER = 5;
     private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_;
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasRule() {
       return rule_ != null;
     }
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
       return rule_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.getDefaultInstance() : rule_;
     }
     /**
+     * <pre>
+     * Trigger type.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder() {
@@ -3207,6 +3758,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a trigger in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -3222,6 +3778,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a trigger in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -3238,6 +3799,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a trigger in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -3251,6 +3817,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a trigger in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -3260,6 +3831,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a trigger in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -3276,6 +3852,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -3291,6 +3872,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3307,6 +3893,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -3320,6 +3911,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -3329,6 +3925,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -3345,6 +3946,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the trigger.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -3360,6 +3965,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the trigger.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3376,6 +3985,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the trigger.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -3389,6 +4002,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the trigger.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -3398,6 +4015,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the trigger.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -3439,6 +4060,10 @@ public final class TriggerServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3455,6 +4080,10 @@ public final class TriggerServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3462,6 +4091,10 @@ public final class TriggerServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3474,6 +4107,10 @@ public final class TriggerServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3494,6 +4131,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3513,6 +4154,10 @@ public final class TriggerServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -3525,6 +4170,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3539,12 +4188,20 @@ public final class TriggerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder> ruleBuilder_;
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasRule() {
         return ruleBuilder_ != null || rule_ != null;
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
@@ -3555,6 +4212,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRule(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule value) {
@@ -3571,6 +4232,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRule(
@@ -3585,6 +4250,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeRule(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule value) {
@@ -3603,6 +4272,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRule() {
@@ -3617,6 +4290,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder getRuleBuilder() {
@@ -3625,6 +4302,10 @@ public final class TriggerServiceOuterClass {
         return getRuleFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder() {
@@ -3636,6 +4317,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Trigger type.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 5 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3709,10 +4394,18 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger that is being created.
+     * </pre>
+     *
      * <code>string trigger_id = 1;</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger that is being created.
+     * </pre>
+     *
      * <code>string trigger_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -3799,6 +4492,10 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger that is being created.
+     * </pre>
+     *
      * <code>string trigger_id = 1;</code>
      */
     public java.lang.String getTriggerId() {
@@ -3814,6 +4511,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger that is being created.
+     * </pre>
+     *
      * <code>string trigger_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -4135,6 +4836,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger that is being created.
+       * </pre>
+       *
        * <code>string trigger_id = 1;</code>
        */
       public java.lang.String getTriggerId() {
@@ -4150,6 +4855,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being created.
+       * </pre>
+       *
        * <code>string trigger_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -4166,6 +4875,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being created.
+       * </pre>
+       *
        * <code>string trigger_id = 1;</code>
        */
       public Builder setTriggerId(
@@ -4179,6 +4892,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being created.
+       * </pre>
+       *
        * <code>string trigger_id = 1;</code>
        */
       public Builder clearTriggerId() {
@@ -4188,6 +4905,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being created.
+       * </pre>
+       *
        * <code>string trigger_id = 1;</code>
        */
       public Builder setTriggerIdBytes(
@@ -4259,53 +4980,105 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger to update.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger to update.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getTriggerIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the trigger.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the trigger.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -4317,11 +5090,23 @@ public final class TriggerServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4329,6 +5114,12 @@ public final class TriggerServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4469,6 +5260,11 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger to update.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -4484,6 +5280,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger to update.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -4503,18 +5304,30 @@ public final class TriggerServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the trigger should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4524,6 +5337,11 @@ public final class TriggerServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -4539,6 +5357,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the trigger.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4558,6 +5381,10 @@ public final class TriggerServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the trigger.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -4573,6 +5400,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the trigger.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4616,6 +5447,12 @@ public final class TriggerServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4632,6 +5469,12 @@ public final class TriggerServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4639,6 +5482,12 @@ public final class TriggerServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4651,6 +5500,12 @@ public final class TriggerServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Trigger labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5087,6 +5942,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger to update.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -5102,6 +5962,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to update.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -5118,6 +5983,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to update.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -5131,6 +6001,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to update.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -5140,6 +6015,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to update.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -5158,12 +6038,20 @@ public final class TriggerServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -5174,6 +6062,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5190,6 +6082,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -5204,6 +6100,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5222,6 +6122,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -5236,6 +6140,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -5244,6 +6152,10 @@ public final class TriggerServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5255,6 +6167,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the trigger should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5273,6 +6189,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -5288,6 +6209,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5304,6 +6230,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -5317,6 +6248,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -5326,6 +6262,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the trigger.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -5342,6 +6283,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the trigger.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -5357,6 +6302,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the trigger.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5373,6 +6322,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the trigger.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -5386,6 +6339,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the trigger.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -5395,6 +6352,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the trigger.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -5436,6 +6397,12 @@ public final class TriggerServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5452,6 +6419,12 @@ public final class TriggerServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5459,6 +6432,12 @@ public final class TriggerServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5471,6 +6450,12 @@ public final class TriggerServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5491,6 +6476,12 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5510,6 +6501,12 @@ public final class TriggerServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -5522,6 +6519,12 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Trigger labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5589,10 +6592,18 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger that is being updated.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger that is being updated.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -5679,6 +6690,10 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger that is being updated.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -5694,6 +6709,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger that is being updated.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -6015,6 +7034,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger that is being updated.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -6030,6 +7053,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being updated.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6046,6 +7073,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being updated.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -6059,6 +7090,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being updated.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -6068,6 +7103,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being updated.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -6139,10 +7178,20 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger to delete.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger to delete.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -6229,6 +7278,11 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger to delete.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -6244,6 +7298,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger to delete.
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -6565,6 +7624,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger to delete.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -6580,6 +7644,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to delete.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6596,6 +7665,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to delete.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -6609,6 +7683,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to delete.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -6618,6 +7697,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to delete.
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -6689,10 +7773,18 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger that is being deleted.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger that is being deleted.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -6779,6 +7871,10 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger that is being deleted.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -6794,6 +7890,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger that is being deleted.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -7115,6 +8215,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger that is being deleted.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -7130,6 +8234,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being deleted.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -7146,6 +8254,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger that is being deleted.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -7159,6 +8271,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being deleted.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -7168,6 +8284,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger that is being deleted.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -7239,35 +8359,80 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the trigger to list operations for.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTriggerId();
     /**
+     * <pre>
+     * ID of the trigger to list operations for.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getTriggerIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListTriggerOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -7374,6 +8539,10 @@ public final class TriggerServiceOuterClass {
     public static final int TRIGGER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object triggerId_;
     /**
+     * <pre>
+     * ID of the trigger to list operations for.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTriggerId() {
@@ -7389,6 +8558,10 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the trigger to list operations for.
+     * </pre>
+     *
      * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -7408,6 +8581,13 @@ public final class TriggerServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `pageSize`, the service returns a [ListTriggerOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -7417,6 +8597,11 @@ public final class TriggerServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -7432,6 +8617,11 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `pageToken` to the
+     * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7451,6 +8641,16 @@ public final class TriggerServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -7466,6 +8666,16 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-function`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7839,6 +9049,10 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object triggerId_ = "";
       /**
+       * <pre>
+       * ID of the trigger to list operations for.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTriggerId() {
@@ -7854,6 +9068,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to list operations for.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -7870,6 +9088,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the trigger to list operations for.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerId(
@@ -7883,6 +9105,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to list operations for.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTriggerId() {
@@ -7892,6 +9118,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the trigger to list operations for.
+       * </pre>
+       *
        * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTriggerIdBytes(
@@ -7908,12 +9138,26 @@ public final class TriggerServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -7923,6 +9167,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `pageSize`, the service returns a [ListTriggerOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -7934,6 +9185,11 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -7949,6 +9205,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7965,6 +9226,11 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -7978,6 +9244,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -7987,6 +9258,11 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `pageToken` to the
+       * [ListTriggerOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -8003,6 +9279,16 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -8018,6 +9304,16 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8034,6 +9330,16 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -8047,6 +9353,16 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -8056,6 +9372,16 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Trigger.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-function`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -8127,34 +9453,68 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -8255,12 +9615,20 @@ public final class TriggerServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -8268,18 +9636,30 @@ public final class TriggerServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified trigger.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -8290,6 +9670,13 @@ public final class TriggerServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -8305,6 +9692,13 @@ public final class TriggerServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+     * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -8696,6 +10090,10 @@ public final class TriggerServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -8706,6 +10104,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -8716,6 +10118,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -8726,6 +10132,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -8743,6 +10153,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -8757,6 +10171,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -8773,6 +10191,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -8790,6 +10212,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -8804,6 +10230,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -8818,6 +10248,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -8833,6 +10267,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -8846,6 +10284,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -8859,6 +10301,10 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -8866,6 +10312,10 @@ public final class TriggerServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -8876,6 +10326,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -8887,6 +10341,10 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -8894,6 +10352,10 @@ public final class TriggerServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -8902,6 +10364,10 @@ public final class TriggerServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified trigger.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -8925,6 +10391,13 @@ public final class TriggerServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -8940,6 +10413,13 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -8956,6 +10436,13 @@ public final class TriggerServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -8969,6 +10456,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -8978,6 +10472,13 @@ public final class TriggerServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTriggerOperationsRequest.page_size], use `nextPageToken` as the value
+       * for the [ListTriggerOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `nextPageToken` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(

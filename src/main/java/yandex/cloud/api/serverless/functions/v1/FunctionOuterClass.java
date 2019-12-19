@@ -19,64 +19,116 @@ public final class FunctionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the function. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the function. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the function belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the function belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>string name = 4;</code>
+     * <pre>
+     * Name of the function. The name is unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 4;</code>
+     * <pre>
+     * Name of the function. The name is unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 5;</code>
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 5;</code>
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -87,54 +139,94 @@ public final class FunctionOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
 
     /**
+     * <pre>
+     * ID of the log group for the function.
+     * </pre>
+     *
      * <code>string log_group_id = 7;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group for the function.
+     * </pre>
+     *
      * <code>string log_group_id = 7;</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * URL that needs to be requested to invoke the function.
+     * </pre>
+     *
      * <code>string http_invoke_url = 8;</code>
      */
     java.lang.String getHttpInvokeUrl();
     /**
+     * <pre>
+     * URL that needs to be requested to invoke the function.
+     * </pre>
+     *
      * <code>string http_invoke_url = 8;</code>
      */
     com.google.protobuf.ByteString
         getHttpInvokeUrlBytes();
 
     /**
+     * <pre>
+     * Status of the function.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the function.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Status getStatus();
   }
   /**
+   * <pre>
+   * A serverless function. For details about the concept, see [Functions](/docs/functions/concepts/function).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.Function}
    */
   public  static final class Function extends
@@ -302,18 +394,34 @@ public final class FunctionOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Function is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Function is ready to be invoked.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Function is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       DELETING(3),
       /**
+       * <pre>
+       * Function failed.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       ERROR(4),
@@ -325,18 +433,34 @@ public final class FunctionOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Function is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Function is ready to be invoked.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Function is being deleted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       public static final int DELETING_VALUE = 3;
       /**
+       * <pre>
+       * Function failed.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       public static final int ERROR_VALUE = 4;
@@ -421,6 +545,10 @@ public final class FunctionOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the function. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -436,6 +564,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -455,6 +587,10 @@ public final class FunctionOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the function belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public java.lang.String getFolderId() {
@@ -470,6 +606,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the function belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -489,18 +629,30 @@ public final class FunctionOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp for the function.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -510,7 +662,11 @@ public final class FunctionOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 4;</code>
+     * <pre>
+     * Name of the function. The name is unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -525,7 +681,11 @@ public final class FunctionOuterClass {
       }
     }
     /**
-     * <code>string name = 4;</code>
+     * <pre>
+     * Name of the function. The name is unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -544,7 +704,11 @@ public final class FunctionOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 5;</code>
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -559,7 +723,11 @@ public final class FunctionOuterClass {
       }
     }
     /**
-     * <code>string description = 5;</code>
+     * <pre>
+     * Description of the function.
+     * </pre>
+     *
+     * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -602,7 +770,11 @@ public final class FunctionOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public boolean containsLabels(
@@ -618,14 +790,22 @@ public final class FunctionOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -637,7 +817,11 @@ public final class FunctionOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 6;</code>
+     * <pre>
+     * Function labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -654,6 +838,10 @@ public final class FunctionOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group for the function.
+     * </pre>
+     *
      * <code>string log_group_id = 7;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -669,6 +857,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group for the function.
+     * </pre>
+     *
      * <code>string log_group_id = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -688,6 +880,10 @@ public final class FunctionOuterClass {
     public static final int HTTP_INVOKE_URL_FIELD_NUMBER = 8;
     private volatile java.lang.Object httpInvokeUrl_;
     /**
+     * <pre>
+     * URL that needs to be requested to invoke the function.
+     * </pre>
+     *
      * <code>string http_invoke_url = 8;</code>
      */
     public java.lang.String getHttpInvokeUrl() {
@@ -703,6 +899,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL that needs to be requested to invoke the function.
+     * </pre>
+     *
      * <code>string http_invoke_url = 8;</code>
      */
     public com.google.protobuf.ByteString
@@ -722,12 +922,20 @@ public final class FunctionOuterClass {
     public static final int STATUS_FIELD_NUMBER = 9;
     private int status_;
     /**
+     * <pre>
+     * Status of the function.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the function.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Status getStatus() {
@@ -990,6 +1198,10 @@ public final class FunctionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A serverless function. For details about the concept, see [Functions](/docs/functions/concepts/function).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.Function}
      */
     public static final class Builder extends
@@ -1225,6 +1437,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the function. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -1240,6 +1456,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1256,6 +1476,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -1269,6 +1493,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1278,6 +1506,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1294,6 +1526,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the function belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public java.lang.String getFolderId() {
@@ -1309,6 +1545,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the function belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1325,6 +1565,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the function belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderId(
@@ -1338,6 +1582,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the function belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder clearFolderId() {
@@ -1347,6 +1595,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the function belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderIdBytes(
@@ -1365,12 +1617,20 @@ public final class FunctionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1381,6 +1641,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1397,6 +1661,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1411,6 +1679,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1429,6 +1701,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1443,6 +1719,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1451,6 +1731,10 @@ public final class FunctionOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1462,6 +1746,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the function.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1480,7 +1768,11 @@ public final class FunctionOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 4;</code>
+       * <pre>
+       * Name of the function. The name is unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1495,7 +1787,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string name = 4;</code>
+       * <pre>
+       * Name of the function. The name is unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1511,7 +1807,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string name = 4;</code>
+       * <pre>
+       * Name of the function. The name is unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -1524,7 +1824,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string name = 4;</code>
+       * <pre>
+       * Name of the function. The name is unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder clearName() {
         
@@ -1533,7 +1837,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string name = 4;</code>
+       * <pre>
+       * Name of the function. The name is unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 4 [(.yandex.cloud.length) = "3-63"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1549,7 +1857,11 @@ public final class FunctionOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 5;</code>
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -1564,7 +1876,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string description = 5;</code>
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -1580,7 +1896,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string description = 5;</code>
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -1593,7 +1913,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string description = 5;</code>
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder clearDescription() {
         
@@ -1602,7 +1926,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string description = 5;</code>
+       * <pre>
+       * Description of the function.
+       * </pre>
+       *
+       * <code>string description = 5 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -1643,7 +1971,11 @@ public final class FunctionOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public boolean containsLabels(
@@ -1659,14 +1991,22 @@ public final class FunctionOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -1678,7 +2018,11 @@ public final class FunctionOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -1698,7 +2042,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public Builder removeLabels(
@@ -1717,7 +2065,11 @@ public final class FunctionOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -1729,7 +2081,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 6;</code>
+       * <pre>
+       * Function labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.size) = "&lt;=64"];</code>
        */
 
       public Builder putAllLabels(
@@ -1741,6 +2097,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group for the function.
+       * </pre>
+       *
        * <code>string log_group_id = 7;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -1756,6 +2116,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group for the function.
+       * </pre>
+       *
        * <code>string log_group_id = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -1772,6 +2136,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group for the function.
+       * </pre>
+       *
        * <code>string log_group_id = 7;</code>
        */
       public Builder setLogGroupId(
@@ -1785,6 +2153,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group for the function.
+       * </pre>
+       *
        * <code>string log_group_id = 7;</code>
        */
       public Builder clearLogGroupId() {
@@ -1794,6 +2166,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group for the function.
+       * </pre>
+       *
        * <code>string log_group_id = 7;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -1810,6 +2186,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object httpInvokeUrl_ = "";
       /**
+       * <pre>
+       * URL that needs to be requested to invoke the function.
+       * </pre>
+       *
        * <code>string http_invoke_url = 8;</code>
        */
       public java.lang.String getHttpInvokeUrl() {
@@ -1825,6 +2205,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that needs to be requested to invoke the function.
+       * </pre>
+       *
        * <code>string http_invoke_url = 8;</code>
        */
       public com.google.protobuf.ByteString
@@ -1841,6 +2225,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL that needs to be requested to invoke the function.
+       * </pre>
+       *
        * <code>string http_invoke_url = 8;</code>
        */
       public Builder setHttpInvokeUrl(
@@ -1854,6 +2242,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that needs to be requested to invoke the function.
+       * </pre>
+       *
        * <code>string http_invoke_url = 8;</code>
        */
       public Builder clearHttpInvokeUrl() {
@@ -1863,6 +2255,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL that needs to be requested to invoke the function.
+       * </pre>
+       *
        * <code>string http_invoke_url = 8;</code>
        */
       public Builder setHttpInvokeUrlBytes(
@@ -1879,12 +2275,20 @@ public final class FunctionOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the function.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the function.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
        */
       public Builder setStatusValue(int value) {
@@ -1893,6 +2297,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the function.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Status getStatus() {
@@ -1901,6 +2309,10 @@ public final class FunctionOuterClass {
         return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the function.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
        */
       public Builder setStatus(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Function.Status value) {
@@ -1913,6 +2325,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the function.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Function.Status status = 9;</code>
        */
       public Builder clearStatus() {
@@ -1979,152 +2395,287 @@ public final class FunctionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the function that the version belongs to.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     java.lang.String getFunctionId();
     /**
+     * <pre>
+     * ID of the function that the version belongs to.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFunctionIdBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * ID of the runtime environment for the function.
+     * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+     * </pre>
+     *
      * <code>string runtime = 6;</code>
      */
     java.lang.String getRuntime();
     /**
+     * <pre>
+     * ID of the runtime environment for the function.
+     * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+     * </pre>
+     *
      * <code>string runtime = 6;</code>
      */
     com.google.protobuf.ByteString
         getRuntimeBytes();
 
     /**
+     * <pre>
+     * Entrypoint for the function: the name of the function to be called as the handler.
+     * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+     * </pre>
+     *
      * <code>string entrypoint = 7;</code>
      */
     java.lang.String getEntrypoint();
     /**
+     * <pre>
+     * Entrypoint for the function: the name of the function to be called as the handler.
+     * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+     * </pre>
+     *
      * <code>string entrypoint = 7;</code>
      */
     com.google.protobuf.ByteString
         getEntrypointBytes();
 
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     boolean hasResources();
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources();
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
 
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     boolean hasExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     com.google.protobuf.Duration getExecutionTimeout();
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * ID of the service account associated with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 10;</code>
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * ID of the service account associated with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 10;</code>
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Final size of the deployment package after unpacking.
+     * </pre>
+     *
      * <code>int64 image_size = 12;</code>
      */
     long getImageSize();
 
     /**
+     * <pre>
+     * Status of the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Status getStatus();
 
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     int getTagsCount();
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     java.lang.String getTags(int index);
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
+     * <pre>
+     * ID of the log group for the version.
+     * </pre>
+     *
      * <code>string log_group_id = 15;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group for the version.
+     * </pre>
+     *
      * <code>string log_group_id = 15;</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
     int getEnvironmentCount();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
     boolean containsEnvironment(
@@ -2136,11 +2687,19 @@ public final class FunctionOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironment();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getEnvironmentMap();
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -2148,6 +2707,10 @@ public final class FunctionOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -2155,6 +2718,10 @@ public final class FunctionOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Version of a function. For details about the concept, see [Function versions](/docs/functions/concepts/function#version).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.Version}
    */
   public  static final class Version extends
@@ -2374,10 +2941,18 @@ public final class FunctionOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Version is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Version is ready to use.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
@@ -2389,10 +2964,18 @@ public final class FunctionOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Version is being created.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Version is ready to use.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
@@ -2475,6 +3058,10 @@ public final class FunctionOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -2490,6 +3077,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2509,6 +3100,10 @@ public final class FunctionOuterClass {
     public static final int FUNCTION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object functionId_;
     /**
+     * <pre>
+     * ID of the function that the version belongs to.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     public java.lang.String getFunctionId() {
@@ -2524,6 +3119,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the function that the version belongs to.
+     * </pre>
+     *
      * <code>string function_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2543,7 +3142,11 @@ public final class FunctionOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -2558,7 +3161,11 @@ public final class FunctionOuterClass {
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the version.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -2577,18 +3184,30 @@ public final class FunctionOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp for the version.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2598,6 +3217,11 @@ public final class FunctionOuterClass {
     public static final int RUNTIME_FIELD_NUMBER = 6;
     private volatile java.lang.Object runtime_;
     /**
+     * <pre>
+     * ID of the runtime environment for the function.
+     * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+     * </pre>
+     *
      * <code>string runtime = 6;</code>
      */
     public java.lang.String getRuntime() {
@@ -2613,6 +3237,11 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the runtime environment for the function.
+     * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+     * </pre>
+     *
      * <code>string runtime = 6;</code>
      */
     public com.google.protobuf.ByteString
@@ -2632,6 +3261,11 @@ public final class FunctionOuterClass {
     public static final int ENTRYPOINT_FIELD_NUMBER = 7;
     private volatile java.lang.Object entrypoint_;
     /**
+     * <pre>
+     * Entrypoint for the function: the name of the function to be called as the handler.
+     * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+     * </pre>
+     *
      * <code>string entrypoint = 7;</code>
      */
     public java.lang.String getEntrypoint() {
@@ -2647,6 +3281,11 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entrypoint for the function: the name of the function to be called as the handler.
+     * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+     * </pre>
+     *
      * <code>string entrypoint = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -2666,18 +3305,30 @@ public final class FunctionOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 8;
     private yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources resources_;
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     public boolean hasResources() {
       return resources_ != null;
     }
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
       return resources_ == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.getDefaultInstance() : resources_;
     }
     /**
+     * <pre>
+     * Resources allocated to the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -2687,18 +3338,33 @@ public final class FunctionOuterClass {
     public static final int EXECUTION_TIMEOUT_FIELD_NUMBER = 9;
     private com.google.protobuf.Duration executionTimeout_;
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     public boolean hasExecutionTimeout() {
       return executionTimeout_ != null;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     public com.google.protobuf.Duration getExecutionTimeout() {
       return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
     }
     /**
+     * <pre>
+     * Timeout for the execution of the version.
+     * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration execution_timeout = 9;</code>
      */
     public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -2708,6 +3374,10 @@ public final class FunctionOuterClass {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 10;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * ID of the service account associated with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 10;</code>
      */
     public java.lang.String getServiceAccountId() {
@@ -2723,6 +3393,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the service account associated with the version.
+     * </pre>
+     *
      * <code>string service_account_id = 10;</code>
      */
     public com.google.protobuf.ByteString
@@ -2742,6 +3416,10 @@ public final class FunctionOuterClass {
     public static final int IMAGE_SIZE_FIELD_NUMBER = 12;
     private long imageSize_;
     /**
+     * <pre>
+     * Final size of the deployment package after unpacking.
+     * </pre>
+     *
      * <code>int64 image_size = 12;</code>
      */
     public long getImageSize() {
@@ -2751,12 +3429,20 @@ public final class FunctionOuterClass {
     public static final int STATUS_FIELD_NUMBER = 13;
     private int status_;
     /**
+     * <pre>
+     * Status of the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the version.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
      */
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Status getStatus() {
@@ -2768,6 +3454,10 @@ public final class FunctionOuterClass {
     public static final int TAGS_FIELD_NUMBER = 14;
     private com.google.protobuf.LazyStringList tags_;
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -2775,18 +3465,30 @@ public final class FunctionOuterClass {
       return tags_;
     }
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
+     * <pre>
+     * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
      * <code>repeated string tags = 14;</code>
      */
     public com.google.protobuf.ByteString
@@ -2797,6 +3499,10 @@ public final class FunctionOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 15;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group for the version.
+     * </pre>
+     *
      * <code>string log_group_id = 15;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -2812,6 +3518,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group for the version.
+     * </pre>
+     *
      * <code>string log_group_id = 15;</code>
      */
     public com.google.protobuf.ByteString
@@ -2855,6 +3565,10 @@ public final class FunctionOuterClass {
       return internalGetEnvironment().getMap().size();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -2871,6 +3585,10 @@ public final class FunctionOuterClass {
       return getEnvironmentMap();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -2878,6 +3596,10 @@ public final class FunctionOuterClass {
       return internalGetEnvironment().getMap();
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -2890,6 +3612,10 @@ public final class FunctionOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Environment settings for the version.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; environment = 16;</code>
      */
 
@@ -3229,6 +3955,10 @@ public final class FunctionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Version of a function. For details about the concept, see [Function versions](/docs/functions/concepts/function#version).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.Version}
      */
     public static final class Builder extends
@@ -3522,6 +4252,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -3537,6 +4271,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3553,6 +4291,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -3566,6 +4308,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -3575,6 +4321,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -3591,6 +4341,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object functionId_ = "";
       /**
+       * <pre>
+       * ID of the function that the version belongs to.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public java.lang.String getFunctionId() {
@@ -3606,6 +4360,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that the version belongs to.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3622,6 +4380,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the function that the version belongs to.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder setFunctionId(
@@ -3635,6 +4397,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that the version belongs to.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder clearFunctionId() {
@@ -3644,6 +4410,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the function that the version belongs to.
+       * </pre>
+       *
        * <code>string function_id = 2;</code>
        */
       public Builder setFunctionIdBytes(
@@ -3660,7 +4430,11 @@ public final class FunctionOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -3675,7 +4449,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -3691,7 +4469,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -3704,7 +4486,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder clearDescription() {
         
@@ -3713,7 +4499,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the version.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "0-256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3731,12 +4521,20 @@ public final class FunctionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -3747,6 +4545,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3763,6 +4565,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder setCreatedAt(
@@ -3777,6 +4583,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3795,6 +4605,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public Builder clearCreatedAt() {
@@ -3809,6 +4623,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -3817,6 +4635,10 @@ public final class FunctionOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -3828,6 +4650,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp for the version.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3846,6 +4672,11 @@ public final class FunctionOuterClass {
 
       private java.lang.Object runtime_ = "";
       /**
+       * <pre>
+       * ID of the runtime environment for the function.
+       * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+       * </pre>
+       *
        * <code>string runtime = 6;</code>
        */
       public java.lang.String getRuntime() {
@@ -3861,6 +4692,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the runtime environment for the function.
+       * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+       * </pre>
+       *
        * <code>string runtime = 6;</code>
        */
       public com.google.protobuf.ByteString
@@ -3877,6 +4713,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the runtime environment for the function.
+       * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+       * </pre>
+       *
        * <code>string runtime = 6;</code>
        */
       public Builder setRuntime(
@@ -3890,6 +4731,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the runtime environment for the function.
+       * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+       * </pre>
+       *
        * <code>string runtime = 6;</code>
        */
       public Builder clearRuntime() {
@@ -3899,6 +4745,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the runtime environment for the function.
+       * Supported environments and their identifiers are listed in the [Runtime environments](/docs/functions/concepts/runtime).
+       * </pre>
+       *
        * <code>string runtime = 6;</code>
        */
       public Builder setRuntimeBytes(
@@ -3915,6 +4766,11 @@ public final class FunctionOuterClass {
 
       private java.lang.Object entrypoint_ = "";
       /**
+       * <pre>
+       * Entrypoint for the function: the name of the function to be called as the handler.
+       * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+       * </pre>
+       *
        * <code>string entrypoint = 7;</code>
        */
       public java.lang.String getEntrypoint() {
@@ -3930,6 +4786,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entrypoint for the function: the name of the function to be called as the handler.
+       * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+       * </pre>
+       *
        * <code>string entrypoint = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -3946,6 +4807,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entrypoint for the function: the name of the function to be called as the handler.
+       * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+       * </pre>
+       *
        * <code>string entrypoint = 7;</code>
        */
       public Builder setEntrypoint(
@@ -3959,6 +4825,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entrypoint for the function: the name of the function to be called as the handler.
+       * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+       * </pre>
+       *
        * <code>string entrypoint = 7;</code>
        */
       public Builder clearEntrypoint() {
@@ -3968,6 +4839,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entrypoint for the function: the name of the function to be called as the handler.
+       * Specified in the format `&lt;function file name&gt;.&lt;handler name&gt;`, for example, `index.myFunction`.
+       * </pre>
+       *
        * <code>string entrypoint = 7;</code>
        */
       public Builder setEntrypointBytes(
@@ -3986,12 +4862,20 @@ public final class FunctionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public boolean hasResources() {
         return resourcesBuilder_ != null || resources_ != null;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources getResources() {
@@ -4002,6 +4886,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public Builder setResources(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources value) {
@@ -4018,6 +4906,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public Builder setResources(
@@ -4032,6 +4924,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public Builder mergeResources(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources value) {
@@ -4050,6 +4946,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public Builder clearResources() {
@@ -4064,6 +4964,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Resources.Builder getResourcesBuilder() {
@@ -4072,6 +4976,10 @@ public final class FunctionOuterClass {
         return getResourcesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
@@ -4083,6 +4991,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resources allocated to the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Resources resources = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4103,12 +5015,22 @@ public final class FunctionOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public boolean hasExecutionTimeout() {
         return executionTimeoutBuilder_ != null || executionTimeout_ != null;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public com.google.protobuf.Duration getExecutionTimeout() {
@@ -4119,6 +5041,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
@@ -4135,6 +5062,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public Builder setExecutionTimeout(
@@ -4149,6 +5081,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
@@ -4167,6 +5104,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public Builder clearExecutionTimeout() {
@@ -4181,6 +5123,11 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
@@ -4189,6 +5136,11 @@ public final class FunctionOuterClass {
         return getExecutionTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
@@ -4200,6 +5152,11 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timeout for the execution of the version.
+       * If the timeout is exceeded, Cloud Functions responds with a 504 HTTP code.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration execution_timeout = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4218,6 +5175,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * ID of the service account associated with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 10;</code>
        */
       public java.lang.String getServiceAccountId() {
@@ -4233,6 +5194,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account associated with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 10;</code>
        */
       public com.google.protobuf.ByteString
@@ -4249,6 +5214,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account associated with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 10;</code>
        */
       public Builder setServiceAccountId(
@@ -4262,6 +5231,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account associated with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 10;</code>
        */
       public Builder clearServiceAccountId() {
@@ -4271,6 +5244,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account associated with the version.
+       * </pre>
+       *
        * <code>string service_account_id = 10;</code>
        */
       public Builder setServiceAccountIdBytes(
@@ -4287,12 +5264,20 @@ public final class FunctionOuterClass {
 
       private long imageSize_ ;
       /**
+       * <pre>
+       * Final size of the deployment package after unpacking.
+       * </pre>
+       *
        * <code>int64 image_size = 12;</code>
        */
       public long getImageSize() {
         return imageSize_;
       }
       /**
+       * <pre>
+       * Final size of the deployment package after unpacking.
+       * </pre>
+       *
        * <code>int64 image_size = 12;</code>
        */
       public Builder setImageSize(long value) {
@@ -4302,6 +5287,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Final size of the deployment package after unpacking.
+       * </pre>
+       *
        * <code>int64 image_size = 12;</code>
        */
       public Builder clearImageSize() {
@@ -4313,12 +5302,20 @@ public final class FunctionOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
        */
       public Builder setStatusValue(int value) {
@@ -4327,6 +5324,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
        */
       public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Status getStatus() {
@@ -4335,6 +5336,10 @@ public final class FunctionOuterClass {
         return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
        */
       public Builder setStatus(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Version.Status value) {
@@ -4347,6 +5352,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the version.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.functions.v1.Version.Status status = 13;</code>
        */
       public Builder clearStatus() {
@@ -4364,6 +5373,10 @@ public final class FunctionOuterClass {
          }
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -4371,18 +5384,30 @@ public final class FunctionOuterClass {
         return tags_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public com.google.protobuf.ByteString
@@ -4390,6 +5415,10 @@ public final class FunctionOuterClass {
         return tags_.getByteString(index);
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public Builder setTags(
@@ -4403,6 +5432,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public Builder addTags(
@@ -4416,6 +5449,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public Builder addAllTags(
@@ -4427,6 +5464,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public Builder clearTags() {
@@ -4436,6 +5477,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
        * <code>repeated string tags = 14;</code>
        */
       public Builder addTagsBytes(
@@ -4452,6 +5497,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group for the version.
+       * </pre>
+       *
        * <code>string log_group_id = 15;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -4467,6 +5516,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group for the version.
+       * </pre>
+       *
        * <code>string log_group_id = 15;</code>
        */
       public com.google.protobuf.ByteString
@@ -4483,6 +5536,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group for the version.
+       * </pre>
+       *
        * <code>string log_group_id = 15;</code>
        */
       public Builder setLogGroupId(
@@ -4496,6 +5553,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group for the version.
+       * </pre>
+       *
        * <code>string log_group_id = 15;</code>
        */
       public Builder clearLogGroupId() {
@@ -4505,6 +5566,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group for the version.
+       * </pre>
+       *
        * <code>string log_group_id = 15;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -4546,6 +5611,10 @@ public final class FunctionOuterClass {
         return internalGetEnvironment().getMap().size();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4562,6 +5631,10 @@ public final class FunctionOuterClass {
         return getEnvironmentMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4569,6 +5642,10 @@ public final class FunctionOuterClass {
         return internalGetEnvironment().getMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4581,6 +5658,10 @@ public final class FunctionOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4601,6 +5682,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4620,6 +5705,10 @@ public final class FunctionOuterClass {
         return internalGetMutableEnvironment().getMutableMap();
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
       public Builder putEnvironment(
@@ -4632,6 +5721,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Environment settings for the version.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; environment = 16;</code>
        */
 
@@ -4699,11 +5792,19 @@ public final class FunctionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Amount of memory available to the version, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
      */
     long getMemory();
   }
   /**
+   * <pre>
+   * Resources allocated to a version.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.Resources}
    */
   public  static final class Resources extends
@@ -4783,6 +5884,10 @@ public final class FunctionOuterClass {
     public static final int MEMORY_FIELD_NUMBER = 1;
     private long memory_;
     /**
+     * <pre>
+     * Amount of memory available to the version, specified in bytes.
+     * </pre>
+     *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
      */
     public long getMemory() {
@@ -4947,6 +6052,10 @@ public final class FunctionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Resources allocated to a version.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.Resources}
      */
     public static final class Builder extends
@@ -5095,12 +6204,20 @@ public final class FunctionOuterClass {
 
       private long memory_ ;
       /**
+       * <pre>
+       * Amount of memory available to the version, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
        */
       public long getMemory() {
         return memory_;
       }
       /**
+       * <pre>
+       * Amount of memory available to the version, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
        */
       public Builder setMemory(long value) {
@@ -5110,6 +6227,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Amount of memory available to the version, specified in bytes.
+       * </pre>
+       *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
        */
       public Builder clearMemory() {
@@ -5176,36 +6297,64 @@ public final class FunctionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBucketName();
     /**
+     * <pre>
+     * Name of the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBucketNameBytes();
 
     /**
+     * <pre>
+     * Name of the object in the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getObjectName();
     /**
+     * <pre>
+     * Name of the object in the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getObjectNameBytes();
 
     /**
+     * <pre>
+     * SHA256 hash of the version deployment package.
+     * </pre>
+     *
      * <code>string sha256 = 3;</code>
      */
     java.lang.String getSha256();
     /**
+     * <pre>
+     * SHA256 hash of the version deployment package.
+     * </pre>
+     *
      * <code>string sha256 = 3;</code>
      */
     com.google.protobuf.ByteString
         getSha256Bytes();
   }
   /**
+   * <pre>
+   * Version deployment package.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.Package}
    */
   public  static final class Package extends
@@ -5300,6 +6449,10 @@ public final class FunctionOuterClass {
     public static final int BUCKET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object bucketName_;
     /**
+     * <pre>
+     * Name of the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBucketName() {
@@ -5315,6 +6468,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5334,6 +6491,10 @@ public final class FunctionOuterClass {
     public static final int OBJECT_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object objectName_;
     /**
+     * <pre>
+     * Name of the object in the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getObjectName() {
@@ -5349,6 +6510,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the object in the bucket that stores the code for the version.
+     * </pre>
+     *
      * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5368,6 +6533,10 @@ public final class FunctionOuterClass {
     public static final int SHA256_FIELD_NUMBER = 3;
     private volatile java.lang.Object sha256_;
     /**
+     * <pre>
+     * SHA256 hash of the version deployment package.
+     * </pre>
+     *
      * <code>string sha256 = 3;</code>
      */
     public java.lang.String getSha256() {
@@ -5383,6 +6552,10 @@ public final class FunctionOuterClass {
       }
     }
     /**
+     * <pre>
+     * SHA256 hash of the version deployment package.
+     * </pre>
+     *
      * <code>string sha256 = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -5575,6 +6748,10 @@ public final class FunctionOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Version deployment package.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.serverless.functions.v1.Package}
      */
     public static final class Builder extends
@@ -5738,6 +6915,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object bucketName_ = "";
       /**
+       * <pre>
+       * Name of the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBucketName() {
@@ -5753,6 +6934,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -5769,6 +6954,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBucketName(
@@ -5782,6 +6971,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBucketName() {
@@ -5791,6 +6984,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string bucket_name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBucketNameBytes(
@@ -5807,6 +7004,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object objectName_ = "";
       /**
+       * <pre>
+       * Name of the object in the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getObjectName() {
@@ -5822,6 +7023,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the object in the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -5838,6 +7043,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the object in the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setObjectName(
@@ -5851,6 +7060,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the object in the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearObjectName() {
@@ -5860,6 +7073,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the object in the bucket that stores the code for the version.
+       * </pre>
+       *
        * <code>string object_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setObjectNameBytes(
@@ -5876,6 +7093,10 @@ public final class FunctionOuterClass {
 
       private java.lang.Object sha256_ = "";
       /**
+       * <pre>
+       * SHA256 hash of the version deployment package.
+       * </pre>
+       *
        * <code>string sha256 = 3;</code>
        */
       public java.lang.String getSha256() {
@@ -5891,6 +7112,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * SHA256 hash of the version deployment package.
+       * </pre>
+       *
        * <code>string sha256 = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -5907,6 +7132,10 @@ public final class FunctionOuterClass {
         }
       }
       /**
+       * <pre>
+       * SHA256 hash of the version deployment package.
+       * </pre>
+       *
        * <code>string sha256 = 3;</code>
        */
       public Builder setSha256(
@@ -5920,6 +7149,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SHA256 hash of the version deployment package.
+       * </pre>
+       *
        * <code>string sha256 = 3;</code>
        */
       public Builder clearSha256() {
@@ -5929,6 +7162,10 @@ public final class FunctionOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SHA256 hash of the version deployment package.
+       * </pre>
+       *
        * <code>string sha256 = 3;</code>
        */
       public Builder setSha256Bytes(
@@ -6038,41 +7275,42 @@ public final class FunctionOuterClass {
       "unction.proto\022$yandex.cloud.serverless.f" +
       "unctions.v1\032\036google/protobuf/duration.pr" +
       "oto\032\037google/protobuf/timestamp.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"\302\003\n\010Function" +
+      "ndex/cloud/validation.proto\"\341\003\n\010Function" +
       "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022J\n\006la" +
-      "bels\030\006 \003(\0132:.yandex.cloud.serverless.fun" +
-      "ctions.v1.Function.LabelsEntry\022\024\n\014log_gr" +
-      "oup_id\030\007 \001(\t\022\027\n\017http_invoke_url\030\010 \001(\t\022E\n" +
-      "\006status\030\t \001(\01625.yandex.cloud.serverless." +
-      "functions.v1.Function.Status\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006S" +
-      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATIN" +
-      "G\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004" +
-      "\"\363\004\n\007Version\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030" +
-      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022.\n\ncreated_at" +
-      "\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007ru" +
-      "ntime\030\006 \001(\t\022\022\n\nentrypoint\030\007 \001(\t\022B\n\tresou" +
-      "rces\030\010 \001(\0132/.yandex.cloud.serverless.fun" +
-      "ctions.v1.Resources\0224\n\021execution_timeout" +
-      "\030\t \001(\0132\031.google.protobuf.Duration\022\032\n\022ser" +
-      "vice_account_id\030\n \001(\t\022\022\n\nimage_size\030\014 \001(" +
-      "\003\022D\n\006status\030\r \001(\01624.yandex.cloud.serverl" +
-      "ess.functions.v1.Version.Status\022\014\n\004tags\030" +
-      "\016 \003(\t\022\024\n\014log_group_id\030\017 \001(\t\022S\n\013environme" +
-      "nt\030\020 \003(\0132>.yandex.cloud.serverless.funct" +
-      "ions.v1.Version.EnvironmentEntry\0322\n\020Envi" +
-      "ronmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014\"4\n\tResour" +
-      "ces\022\'\n\006memory\030\001 \001(\003B\027\372\3071\02333554432-107374" +
-      "1824\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\307" +
-      "1\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030" +
-      "\003 \001(\tB~\n(yandex.cloud.api.serverless.fun" +
-      "ctions.v1ZRgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/serverless/functions" +
-      "/v1;functionsb\006proto3"
+      "\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013description\030\005" +
+      " \001(\tB\t\212\3101\0050-256\022T\n\006labels\030\006 \003(\0132:.yandex" +
+      ".cloud.serverless.functions.v1.Function." +
+      "LabelsEntryB\010\202\3101\004<=64\022\024\n\014log_group_id\030\007 " +
+      "\001(\t\022\027\n\017http_invoke_url\030\010 \001(\t\022E\n\006status\030\t" +
+      " \001(\01625.yandex.cloud.serverless.functions" +
+      ".v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006AC" +
+      "TIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\376\004\n\007Vers" +
+      "ion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n\013" +
+      "description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated_" +
+      "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007" +
+      "runtime\030\006 \001(\t\022\022\n\nentrypoint\030\007 \001(\t\022B\n\tres" +
+      "ources\030\010 \001(\0132/.yandex.cloud.serverless.f" +
+      "unctions.v1.Resources\0224\n\021execution_timeo" +
+      "ut\030\t \001(\0132\031.google.protobuf.Duration\022\032\n\022s" +
+      "ervice_account_id\030\n \001(\t\022\022\n\nimage_size\030\014 " +
+      "\001(\003\022D\n\006status\030\r \001(\01624.yandex.cloud.serve" +
+      "rless.functions.v1.Version.Status\022\014\n\004tag" +
+      "s\030\016 \003(\t\022\024\n\014log_group_id\030\017 \001(\t\022S\n\013environ" +
+      "ment\030\020 \003(\0132>.yandex.cloud.serverless.fun" +
+      "ctions.v1.Version.EnvironmentEntry\0322\n\020En" +
+      "vironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
+      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014\"4\n\tReso" +
+      "urces\022\'\n\006memory\030\001 \001(\003B\027\372\3071\02333554432-1073" +
+      "741824\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004" +
+      "\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha25" +
+      "6\030\003 \001(\tB~\n(yandex.cloud.api.serverless.f" +
+      "unctions.v1ZRgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/serverless/functio" +
+      "ns/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6127,7 +7365,9 @@ public final class FunctionOuterClass {
         new java.lang.String[] { "BucketName", "ObjectName", "Sha256", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

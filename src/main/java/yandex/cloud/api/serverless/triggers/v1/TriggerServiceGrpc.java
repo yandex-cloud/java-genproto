@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing triggers for serverless functions.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -243,10 +246,17 @@ public final class TriggerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing triggers for serverless functions.
+   * </pre>
    */
   public static abstract class TriggerServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified trigger.
+     * To get the list of all available triggers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> responseObserver) {
@@ -254,6 +264,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of triggers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> responseObserver) {
@@ -261,6 +274,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a trigger in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -268,6 +284,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified trigger.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -275,6 +294,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified trigger.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -282,6 +304,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified trigger.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> responseObserver) {
@@ -337,6 +362,9 @@ public final class TriggerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing triggers for serverless functions.
+   * </pre>
    */
   public static final class TriggerServiceStub extends io.grpc.stub.AbstractStub<TriggerServiceStub> {
     private TriggerServiceStub(io.grpc.Channel channel) {
@@ -355,6 +383,10 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified trigger.
+     * To get the list of all available triggers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> responseObserver) {
@@ -363,6 +395,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of triggers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> responseObserver) {
@@ -371,6 +406,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a trigger in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -379,6 +417,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified trigger.
+     * </pre>
      */
     public void update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -387,6 +428,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified trigger.
+     * </pre>
      */
     public void delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -395,6 +439,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified trigger.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> responseObserver) {
@@ -404,6 +451,9 @@ public final class TriggerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing triggers for serverless functions.
+   * </pre>
    */
   public static final class TriggerServiceBlockingStub extends io.grpc.stub.AbstractStub<TriggerServiceBlockingStub> {
     private TriggerServiceBlockingStub(io.grpc.Channel channel) {
@@ -422,6 +472,10 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified trigger.
+     * To get the list of all available triggers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger get(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request) {
       return blockingUnaryCall(
@@ -429,6 +483,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of triggers in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse list(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request) {
       return blockingUnaryCall(
@@ -436,6 +493,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a trigger in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request) {
       return blockingUnaryCall(
@@ -443,6 +503,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified trigger.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request) {
       return blockingUnaryCall(
@@ -450,6 +513,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified trigger.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request) {
       return blockingUnaryCall(
@@ -457,6 +523,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified trigger.
+     * </pre>
      */
     public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse listOperations(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request) {
       return blockingUnaryCall(
@@ -465,6 +534,9 @@ public final class TriggerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing triggers for serverless functions.
+   * </pre>
    */
   public static final class TriggerServiceFutureStub extends io.grpc.stub.AbstractStub<TriggerServiceFutureStub> {
     private TriggerServiceFutureStub(io.grpc.Channel channel) {
@@ -483,6 +555,10 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified trigger.
+     * To get the list of all available triggers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger> get(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.GetTriggerRequest request) {
@@ -491,6 +567,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of triggers in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersResponse> list(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggersRequest request) {
@@ -499,6 +578,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a trigger in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.CreateTriggerRequest request) {
@@ -507,6 +589,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified trigger.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.UpdateTriggerRequest request) {
@@ -515,6 +600,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified trigger.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request) {
@@ -523,6 +611,9 @@ public final class TriggerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified trigger.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> listOperations(
         yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest request) {

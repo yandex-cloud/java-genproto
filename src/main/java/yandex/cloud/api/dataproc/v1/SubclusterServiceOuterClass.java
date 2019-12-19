@@ -20,7 +20,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subcluster from.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -28,7 +28,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subcluster from.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -38,8 +38,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to return.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to return.
+     * To get a subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -47,8 +47,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to return.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to return.
+     * To get a subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -145,7 +145,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subcluster from.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -164,7 +164,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subcluster from.
+     * ID of the Data Proc cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -187,8 +187,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to return.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to return.
+     * To get a subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -207,8 +207,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to return.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to return.
+     * To get a subcluster ID make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -550,7 +550,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subcluster from.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -569,7 +569,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subcluster from.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -589,7 +589,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subcluster from.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -606,7 +606,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subcluster from.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -619,7 +619,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subcluster from.
+       * ID of the Data Proc cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -639,8 +639,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to return.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to return.
+       * To get a subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -659,8 +659,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to return.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to return.
+       * To get a subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -680,8 +680,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to return.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to return.
+       * To get a subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -698,8 +698,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to return.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to return.
+       * To get a subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -712,8 +712,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to return.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to return.
+       * To get a subcluster ID make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -788,7 +788,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subclusters from.
+     * ID of the Data Proc cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -796,7 +796,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subclusters from.
+     * ID of the Data Proc cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -806,10 +806,10 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListSubclusters requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListSubclustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -818,8 +818,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListSubclustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -827,8 +827,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListSubclustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -838,11 +838,12 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters subclusters listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=dataproc123_subcluster456`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -850,11 +851,12 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters subclusters listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=dataproc123_subcluster456`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -964,7 +966,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subclusters from.
+     * ID of the Data Proc cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -983,7 +985,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster to get subclusters from.
+     * ID of the Data Proc cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1006,10 +1008,10 @@ public final class SubclusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-     * to get the next page of results in subsequent ListSubclusters requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListSubclustersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1022,8 +1024,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListSubclustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1042,8 +1044,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-     * request to get the next page of results.
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListSubclustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1066,11 +1068,12 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters subclusters listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=dataproc123_subcluster456`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1089,11 +1092,12 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters subclusters listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+     * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+     * Example of a filter: `name=dataproc123_subcluster456`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1470,7 +1474,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subclusters from.
+       * ID of the Data Proc cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1489,7 +1493,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subclusters from.
+       * ID of the Data Proc cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1509,7 +1513,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subclusters from.
+       * ID of the Data Proc cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1526,7 +1530,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subclusters from.
+       * ID of the Data Proc cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1539,7 +1543,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to get subclusters from.
+       * ID of the Data Proc cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1559,10 +1563,10 @@ public final class SubclusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListSubclusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSubclustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1572,10 +1576,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListSubclusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSubclustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1588,10 +1592,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
-       * to get the next page of results in subsequent ListSubclusters requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSubclustersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
@@ -1606,8 +1610,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListSubclustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1626,8 +1630,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListSubclustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1647,8 +1651,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListSubclustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1665,8 +1669,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListSubclustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1679,8 +1683,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListSubclusters
-       * request to get the next page of results.
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListSubclustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1700,11 +1704,12 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters subclusters listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=dataproc123_subcluster456`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1723,11 +1728,12 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters subclusters listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=dataproc123_subcluster456`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1747,11 +1753,12 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters subclusters listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=dataproc123_subcluster456`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1768,11 +1775,12 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters subclusters listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=dataproc123_subcluster456`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1785,11 +1793,12 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters subclusters listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently you can only use filtering with the [Cluster.name] field.
+       * 1. The field name. Currently you can use filtering only on [Subcluster.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9].
+       * Example of a filter: `name=dataproc123_subcluster456`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1864,7 +1873,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -1873,7 +1882,7 @@ public final class SubclusterServiceOuterClass {
         getSubclustersList();
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -1881,7 +1890,7 @@ public final class SubclusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster getSubclusters(int index);
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -1889,7 +1898,7 @@ public final class SubclusterServiceOuterClass {
     int getSubclustersCount();
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -1898,7 +1907,7 @@ public final class SubclusterServiceOuterClass {
         getSubclustersOrBuilderList();
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -1908,11 +1917,10 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListSubclusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1920,11 +1928,10 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListSubclusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2028,7 +2035,7 @@ public final class SubclusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.v1.SubclusterOuterClass.Subcluster> subclusters_;
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2038,7 +2045,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2049,7 +2056,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2059,7 +2066,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2069,7 +2076,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Dataproc subclusters.
+     * List of subclusters in the specified cluster.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2083,11 +2090,10 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListSubclusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2106,11 +2112,10 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for ListSubclusters requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+     * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2505,7 +2510,7 @@ public final class SubclusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2519,7 +2524,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2533,7 +2538,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2547,7 +2552,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2568,7 +2573,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2586,7 +2591,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2606,7 +2611,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2627,7 +2632,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2645,7 +2650,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2663,7 +2668,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2682,7 +2687,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2699,7 +2704,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2716,7 +2721,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2727,7 +2732,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2741,7 +2746,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2756,7 +2761,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2767,7 +2772,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2779,7 +2784,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Dataproc subclusters.
+       * List of subclusters in the specified cluster.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.v1.Subcluster subclusters = 1;</code>
@@ -2806,11 +2811,10 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListSubclusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2829,11 +2833,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListSubclusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2853,11 +2856,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListSubclusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2874,11 +2876,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListSubclusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2891,11 +2892,10 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for ListSubclusters requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListClusters request. Subsequent ListClusters
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSubclustersRequest.page_size], use `next_page_token` as the value
+       * for the [ListSubclustersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2970,8 +2970,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster to create create subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the Data Proc cluster to create a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2979,8 +2979,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster to create create subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the Data Proc cluster to create a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2990,9 +2990,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc subcluster is created.
+     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * changed when the subcluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3000,9 +2999,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc subcluster is created.
+     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * changed when the subcluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3012,7 +3010,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -3020,7 +3018,7 @@ public final class SubclusterServiceOuterClass {
     int getRoleValue();
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -3029,7 +3027,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3037,7 +3035,7 @@ public final class SubclusterServiceOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3045,7 +3043,7 @@ public final class SubclusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3054,7 +3052,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3062,7 +3060,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3072,7 +3070,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3201,8 +3199,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster to create create subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the Data Proc cluster to create a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3221,8 +3219,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster to create create subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the Data Proc cluster to create a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3245,9 +3243,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc subcluster is created.
+     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * changed when the subcluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3266,9 +3263,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
-     * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-     * The name can’t be changed after the Dataproc subcluster is created.
+     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * changed when the subcluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3291,7 +3287,7 @@ public final class SubclusterServiceOuterClass {
     private int role_;
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -3301,7 +3297,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Role of hosts in subcluster.
+     * Role that is fulfilled by hosts of the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -3316,7 +3312,7 @@ public final class SubclusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3326,7 +3322,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3336,7 +3332,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * Resources allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -3349,7 +3345,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3368,7 +3364,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of using compute subnet for hosts in subcluster.
+     * ID of the VPC subnet used for hosts in the subcluster.
      * </pre>
      *
      * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3391,7 +3387,7 @@ public final class SubclusterServiceOuterClass {
     private long hostsCount_;
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * Number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -3804,8 +3800,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster to create create subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the Data Proc cluster to create a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3824,8 +3820,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to create create subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the Data Proc cluster to create a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3845,8 +3841,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to create create subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the Data Proc cluster to create a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3863,8 +3859,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to create create subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the Data Proc cluster to create a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3877,8 +3873,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to create create subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the Data Proc cluster to create a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3898,9 +3894,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc subcluster is created.
+       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * changed when the subcluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3919,9 +3914,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc subcluster is created.
+       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * changed when the subcluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3941,9 +3935,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc subcluster is created.
+       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * changed when the subcluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3960,9 +3953,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc subcluster is created.
+       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * changed when the subcluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3975,9 +3967,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
-       * The name must be 1-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
-       * The name can’t be changed after the Dataproc subcluster is created.
+       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * changed when the subcluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -3997,7 +3988,7 @@ public final class SubclusterServiceOuterClass {
       private int role_ = 0;
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -4007,7 +3998,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -4019,7 +4010,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -4031,7 +4022,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -4047,7 +4038,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Role of hosts in subcluster.
+       * Role that is fulfilled by hosts of the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Role role = 3 [(.yandex.cloud.required) = true];</code>
@@ -4064,7 +4055,7 @@ public final class SubclusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4074,7 +4065,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4088,7 +4079,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4108,7 +4099,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4126,7 +4117,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4148,7 +4139,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4166,7 +4157,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4178,7 +4169,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4193,7 +4184,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * Resources allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4 [(.yandex.cloud.required) = true];</code>
@@ -4215,7 +4206,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4234,7 +4225,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4254,7 +4245,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4271,7 +4262,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4284,7 +4275,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of using compute subnet for hosts in subcluster.
+       * ID of the VPC subnet used for hosts in the subcluster.
        * </pre>
        *
        * <code>string subnet_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4304,7 +4295,7 @@ public final class SubclusterServiceOuterClass {
       private long hostsCount_ ;
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -4314,7 +4305,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -4327,7 +4318,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * Number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -4397,7 +4388,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster that the subcluster is being added to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4405,7 +4396,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster that the subcluster is being added to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4415,7 +4406,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
+     * ID of the subcluster that is being created.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4423,7 +4414,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
+     * ID of the subcluster that is being created.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4520,7 +4511,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster that the subcluster is being added to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4539,7 +4530,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster that the subcluster is being added to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4562,7 +4553,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
+     * ID of the subcluster that is being created.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4581,7 +4572,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
+     * ID of the subcluster that is being created.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4923,7 +4914,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster that the subcluster is being added to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4942,7 +4933,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster that the subcluster is being added to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4962,7 +4953,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster that the subcluster is being added to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4979,7 +4970,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster that the subcluster is being added to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4992,7 +4983,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster that the subcluster is being added to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5012,7 +5003,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
+       * ID of the subcluster that is being created.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5031,7 +5022,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
+       * ID of the subcluster that is being created.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5051,7 +5042,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
+       * ID of the subcluster that is being created.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5068,7 +5059,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
+       * ID of the subcluster that is being created.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5081,7 +5072,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
+       * ID of the subcluster that is being created.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5156,8 +5147,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster to update subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5165,8 +5156,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster to update subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5176,8 +5167,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to update.
+     * To get a subcluster ID, make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5185,8 +5176,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to update.
+     * To get a subcluster ID, make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5195,21 +5186,33 @@ public final class SubclusterServiceOuterClass {
         getSubclusterIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5217,7 +5220,7 @@ public final class SubclusterServiceOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5225,7 +5228,7 @@ public final class SubclusterServiceOuterClass {
     yandex.cloud.api.dataproc.v1.Common.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5234,7 +5237,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
+     * New name for the subcluster. The name must be unique within the cluster.
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -5242,7 +5245,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
+     * New name for the subcluster. The name must be unique within the cluster.
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -5252,7 +5255,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * New number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -5387,8 +5390,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster to update subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5407,8 +5410,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster to update subcluster to.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to update a subcluster in.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5431,8 +5434,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to update.
+     * To get a subcluster ID, make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5451,8 +5454,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource.
-     * To get the subcluster ID use a [SubclusterService.List] request.
+     * ID of the subcluster to update.
+     * To get a subcluster ID, make a [SubclusterService.List] request.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5474,18 +5477,30 @@ public final class SubclusterServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 3;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the subcluster should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5496,7 +5511,7 @@ public final class SubclusterServiceOuterClass {
     private yandex.cloud.api.dataproc.v1.Common.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5506,7 +5521,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5516,7 +5531,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to hosts in subcluster.
+     * New configuration of resources that should be allocated for each host in the subcluster.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -5529,7 +5544,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
+     * New name for the subcluster. The name must be unique within the cluster.
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -5548,7 +5563,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the Dataproc subcluster. The name must be unique within the folder.
+     * New name for the subcluster. The name must be unique within the cluster.
      * </pre>
      *
      * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -5571,7 +5586,7 @@ public final class SubclusterServiceOuterClass {
     private long hostsCount_;
     /**
      * <pre>
-     * Number of hosts in subcluster.
+     * New number of hosts in the subcluster.
      * </pre>
      *
      * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -5998,8 +6013,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster to update subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6018,8 +6033,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to update subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6039,8 +6054,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to update subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6057,8 +6072,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to update subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6071,8 +6086,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to update subcluster to.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to update a subcluster in.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6092,8 +6107,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to update.
+       * To get a subcluster ID, make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6112,8 +6127,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to update.
+       * To get a subcluster ID, make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6133,8 +6148,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to update.
+       * To get a subcluster ID, make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6151,8 +6166,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to update.
+       * To get a subcluster ID, make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6165,8 +6180,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource.
-       * To get the subcluster ID use a [SubclusterService.List] request.
+       * ID of the subcluster to update.
+       * To get a subcluster ID, make a [SubclusterService.List] request.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6187,12 +6202,20 @@ public final class SubclusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6203,6 +6226,10 @@ public final class SubclusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6219,6 +6246,10 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(
@@ -6233,6 +6264,10 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6251,6 +6286,10 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder clearUpdateMask() {
@@ -6265,6 +6304,10 @@ public final class SubclusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6273,6 +6316,10 @@ public final class SubclusterServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6284,6 +6331,10 @@ public final class SubclusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the subcluster should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6305,7 +6356,7 @@ public final class SubclusterServiceOuterClass {
           yandex.cloud.api.dataproc.v1.Common.Resources, yandex.cloud.api.dataproc.v1.Common.Resources.Builder, yandex.cloud.api.dataproc.v1.Common.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6315,7 +6366,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6329,7 +6380,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6349,7 +6400,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6367,7 +6418,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6389,7 +6440,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6407,7 +6458,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6419,7 +6470,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6434,7 +6485,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to hosts in subcluster.
+       * New configuration of resources that should be allocated for each host in the subcluster.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.Resources resources = 4;</code>
@@ -6456,7 +6507,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
+       * New name for the subcluster. The name must be unique within the cluster.
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -6475,7 +6526,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
+       * New name for the subcluster. The name must be unique within the cluster.
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -6495,7 +6546,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
+       * New name for the subcluster. The name must be unique within the cluster.
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -6512,7 +6563,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
+       * New name for the subcluster. The name must be unique within the cluster.
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -6525,7 +6576,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the Dataproc subcluster. The name must be unique within the folder.
+       * New name for the subcluster. The name must be unique within the cluster.
        * </pre>
        *
        * <code>string name = 5 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -6545,7 +6596,7 @@ public final class SubclusterServiceOuterClass {
       private long hostsCount_ ;
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * New number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -6555,7 +6606,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * New number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -6568,7 +6619,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of hosts in subcluster.
+       * New number of hosts in the subcluster.
        * </pre>
        *
        * <code>int64 hosts_count = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "&gt;=1"];</code>
@@ -6638,7 +6689,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6646,7 +6697,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6656,7 +6707,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to update.
+     * ID of the subcluster that is being updated.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6664,7 +6715,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to update.
+     * ID of the subcluster that is being updated.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6761,7 +6812,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6780,7 +6831,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being updated.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6803,7 +6854,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to update.
+     * ID of the subcluster that is being updated.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6822,7 +6873,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to update.
+     * ID of the subcluster that is being updated.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7164,7 +7215,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7183,7 +7234,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7203,7 +7254,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7220,7 +7271,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7233,7 +7284,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being updated.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7253,7 +7304,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to update.
+       * ID of the subcluster that is being updated.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7272,7 +7323,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to update.
+       * ID of the subcluster that is being updated.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7292,7 +7343,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to update.
+       * ID of the subcluster that is being updated.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7309,7 +7360,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to update.
+       * ID of the subcluster that is being updated.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7322,7 +7373,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to update.
+       * ID of the subcluster that is being updated.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7397,8 +7448,8 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster to delete subcluster from.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to remove a subcluster from.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7406,8 +7457,8 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster to delete subcluster from.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to remove a subcluster from.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7417,7 +7468,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the subcluster to delete.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7425,7 +7476,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the subcluster to delete.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7522,8 +7573,8 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster to delete subcluster from.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to remove a subcluster from.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7542,8 +7593,8 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster to delete subcluster from.
-     * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+     * ID of the cluster to remove a subcluster from.
+     * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7566,7 +7617,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the subcluster to delete.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7585,7 +7636,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the subcluster to delete.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7927,8 +7978,8 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster to delete subcluster from.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to remove a subcluster from.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7947,8 +7998,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to delete subcluster from.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to remove a subcluster from.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7968,8 +8019,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to delete subcluster from.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to remove a subcluster from.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7986,8 +8037,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to delete subcluster from.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to remove a subcluster from.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8000,8 +8051,8 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster to delete subcluster from.
-       * To get the Dataproc cluster ID, use a [ClusterService.List] request.
+       * ID of the cluster to remove a subcluster from.
+       * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8021,7 +8072,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the subcluster to delete.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8040,7 +8091,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the subcluster to delete.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8060,7 +8111,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the subcluster to delete.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8077,7 +8128,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the subcluster to delete.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8090,7 +8141,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the subcluster to delete.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8165,7 +8216,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8173,7 +8224,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8183,7 +8234,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the ubcluster resource that is being to deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8191,7 +8242,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the ubcluster resource that is being to deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8288,7 +8339,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8307,7 +8358,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc cluster resource to return.
+     * ID of the cluster whose subcluster is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8330,7 +8381,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the ubcluster resource that is being to deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8349,7 +8400,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Dataproc subcluster resource to delete.
+     * ID of the ubcluster resource that is being to deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8691,7 +8742,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8710,7 +8761,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8730,7 +8781,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8747,7 +8798,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8760,7 +8811,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc cluster resource to return.
+       * ID of the cluster whose subcluster is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8780,7 +8831,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the ubcluster resource that is being to deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8799,7 +8850,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the ubcluster resource that is being to deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8819,7 +8870,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the ubcluster resource that is being to deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8836,7 +8887,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the ubcluster resource that is being to deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8849,7 +8900,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Dataproc subcluster resource to delete.
+       * ID of the ubcluster resource that is being to deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
