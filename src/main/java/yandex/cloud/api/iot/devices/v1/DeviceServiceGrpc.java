@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing devices.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -435,10 +438,17 @@ public final class DeviceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing devices.
+   * </pre>
    */
   public static abstract class DeviceServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified device.
+     * To get the list of available devices, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
@@ -446,6 +456,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of devices in the specified registry.
+     * </pre>
      */
     public void list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> responseObserver) {
@@ -453,6 +466,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a device in the specified registry.
+     * </pre>
      */
     public void create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -460,6 +476,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified device.
+     * </pre>
      */
     public void update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -467,6 +486,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device.
+     * </pre>
      */
     public void delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -474,6 +496,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device certificates for the specified device.
+     * </pre>
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> responseObserver) {
@@ -481,6 +506,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -488,6 +516,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device certificate.
+     * </pre>
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -495,6 +526,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified device.
+     * </pre>
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> responseObserver) {
@@ -502,6 +536,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified device.
+     * </pre>
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -509,6 +546,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -516,6 +556,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified device.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> responseObserver) {
@@ -613,6 +656,9 @@ public final class DeviceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing devices.
+   * </pre>
    */
   public static final class DeviceServiceStub extends io.grpc.stub.AbstractStub<DeviceServiceStub> {
     private DeviceServiceStub(io.grpc.Channel channel) {
@@ -631,6 +677,10 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified device.
+     * To get the list of available devices, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
@@ -639,6 +689,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of devices in the specified registry.
+     * </pre>
      */
     public void list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> responseObserver) {
@@ -647,6 +700,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a device in the specified registry.
+     * </pre>
      */
     public void create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -655,6 +711,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified device.
+     * </pre>
      */
     public void update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -663,6 +722,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device.
+     * </pre>
      */
     public void delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -671,6 +733,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device certificates for the specified device.
+     * </pre>
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> responseObserver) {
@@ -679,6 +744,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -687,6 +755,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device certificate.
+     * </pre>
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -695,6 +766,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified device.
+     * </pre>
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> responseObserver) {
@@ -703,6 +777,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified device.
+     * </pre>
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -711,6 +788,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -719,6 +799,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified device.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> responseObserver) {
@@ -728,6 +811,9 @@ public final class DeviceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing devices.
+   * </pre>
    */
   public static final class DeviceServiceBlockingStub extends io.grpc.stub.AbstractStub<DeviceServiceBlockingStub> {
     private DeviceServiceBlockingStub(io.grpc.Channel channel) {
@@ -746,6 +832,10 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified device.
+     * To get the list of available devices, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device get(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request) {
       return blockingUnaryCall(
@@ -753,6 +843,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of devices in the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse list(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request) {
       return blockingUnaryCall(
@@ -760,6 +853,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a device in the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request) {
       return blockingUnaryCall(
@@ -767,6 +863,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified device.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request) {
       return blockingUnaryCall(
@@ -774,6 +873,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request) {
       return blockingUnaryCall(
@@ -781,6 +883,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device certificates for the specified device.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse listCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request) {
       return blockingUnaryCall(
@@ -788,6 +893,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request) {
       return blockingUnaryCall(
@@ -795,6 +903,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device certificate.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteCertificate(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request) {
       return blockingUnaryCall(
@@ -802,6 +913,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified device.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse listPasswords(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request) {
       return blockingUnaryCall(
@@ -809,6 +923,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified device.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addPassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request) {
       return blockingUnaryCall(
@@ -816,6 +933,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deletePassword(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request) {
       return blockingUnaryCall(
@@ -823,6 +943,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified device.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse listOperations(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request) {
       return blockingUnaryCall(
@@ -831,6 +954,9 @@ public final class DeviceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing devices.
+   * </pre>
    */
   public static final class DeviceServiceFutureStub extends io.grpc.stub.AbstractStub<DeviceServiceFutureStub> {
     private DeviceServiceFutureStub(io.grpc.Channel channel) {
@@ -849,6 +975,10 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified device.
+     * To get the list of available devices, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> get(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest request) {
@@ -857,6 +987,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of devices in the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> list(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest request) {
@@ -865,6 +998,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a device in the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest request) {
@@ -873,6 +1009,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.UpdateDeviceRequest request) {
@@ -881,6 +1020,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceRequest request) {
@@ -889,6 +1031,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device certificates for the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesResponse> listCertificates(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceCertificatesRequest request) {
@@ -897,6 +1042,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCertificate(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDeviceCertificateRequest request) {
@@ -905,6 +1053,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified device certificate.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteCertificate(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDeviceCertificateRequest request) {
@@ -913,6 +1064,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsResponse> listPasswords(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicePasswordsRequest request) {
@@ -921,6 +1075,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addPassword(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.AddDevicePasswordRequest request) {
@@ -929,6 +1086,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deletePassword(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.DeleteDevicePasswordRequest request) {
@@ -937,6 +1097,9 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified device.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsResponse> listOperations(
         yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDeviceOperationsRequest request) {

@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing registry.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -467,10 +470,17 @@ public final class RegistryServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing registry.
+   * </pre>
    */
   public static abstract class RegistryServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified registry.
+     * To get the list of available registries, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
@@ -478,6 +488,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registries in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> responseObserver) {
@@ -485,6 +498,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a registry in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -492,6 +508,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified registry.
+     * </pre>
      */
     public void update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -499,6 +518,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry.
+     * </pre>
      */
     public void delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -506,6 +528,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registry certificates for the specified registry.
+     * </pre>
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> responseObserver) {
@@ -513,6 +538,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -520,6 +548,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry certificate.
+     * </pre>
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -527,6 +558,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified registry.
+     * </pre>
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> responseObserver) {
@@ -534,6 +568,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified registry.
+     * </pre>
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -541,6 +578,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -548,6 +588,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device topic aliases for the specified registry.
+     * </pre>
      */
     public void listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> responseObserver) {
@@ -555,6 +598,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified registry.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> responseObserver) {
@@ -659,6 +705,9 @@ public final class RegistryServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing registry.
+   * </pre>
    */
   public static final class RegistryServiceStub extends io.grpc.stub.AbstractStub<RegistryServiceStub> {
     private RegistryServiceStub(io.grpc.Channel channel) {
@@ -677,6 +726,10 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified registry.
+     * To get the list of available registries, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
@@ -685,6 +738,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registries in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> responseObserver) {
@@ -693,6 +749,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a registry in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -701,6 +760,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified registry.
+     * </pre>
      */
     public void update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -709,6 +771,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry.
+     * </pre>
      */
     public void delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -717,6 +782,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registry certificates for the specified registry.
+     * </pre>
      */
     public void listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> responseObserver) {
@@ -725,6 +793,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public void addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -733,6 +804,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry certificate.
+     * </pre>
      */
     public void deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -741,6 +815,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified registry.
+     * </pre>
      */
     public void listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> responseObserver) {
@@ -749,6 +826,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified registry.
+     * </pre>
      */
     public void addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -757,6 +837,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public void deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -765,6 +848,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device topic aliases for the specified registry.
+     * </pre>
      */
     public void listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> responseObserver) {
@@ -773,6 +859,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified registry.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> responseObserver) {
@@ -782,6 +871,9 @@ public final class RegistryServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing registry.
+   * </pre>
    */
   public static final class RegistryServiceBlockingStub extends io.grpc.stub.AbstractStub<RegistryServiceBlockingStub> {
     private RegistryServiceBlockingStub(io.grpc.Channel channel) {
@@ -800,6 +892,10 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified registry.
+     * To get the list of available registries, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry get(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
       return blockingUnaryCall(
@@ -807,6 +903,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registries in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse list(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request) {
       return blockingUnaryCall(
@@ -814,6 +913,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a registry in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request) {
       return blockingUnaryCall(
@@ -821,6 +923,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request) {
       return blockingUnaryCall(
@@ -828,6 +933,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
       return blockingUnaryCall(
@@ -835,6 +943,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registry certificates for the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse listCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request) {
       return blockingUnaryCall(
@@ -842,6 +953,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request) {
       return blockingUnaryCall(
@@ -849,6 +963,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry certificate.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteCertificate(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request) {
       return blockingUnaryCall(
@@ -856,6 +973,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse listPasswords(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request) {
       return blockingUnaryCall(
@@ -863,6 +983,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addPassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request) {
       return blockingUnaryCall(
@@ -870,6 +993,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deletePassword(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request) {
       return blockingUnaryCall(
@@ -877,6 +1003,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device topic aliases for the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse listDeviceTopicAliases(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request) {
       return blockingUnaryCall(
@@ -884,6 +1013,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified registry.
+     * </pre>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request) {
       return blockingUnaryCall(
@@ -892,6 +1024,9 @@ public final class RegistryServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing registry.
+   * </pre>
    */
   public static final class RegistryServiceFutureStub extends io.grpc.stub.AbstractStub<RegistryServiceFutureStub> {
     private RegistryServiceFutureStub(io.grpc.Channel channel) {
@@ -910,6 +1045,10 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified registry.
+     * To get the list of available registries, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> get(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest request) {
@@ -918,6 +1057,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registries in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> list(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest request) {
@@ -926,6 +1068,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a registry in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest request) {
@@ -934,6 +1079,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.UpdateRegistryRequest request) {
@@ -942,6 +1090,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryRequest request) {
@@ -950,6 +1101,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of registry certificates for the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesResponse> listCertificates(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryCertificatesRequest request) {
@@ -958,6 +1112,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a certificate.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addCertificate(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryCertificateRequest request) {
@@ -966,6 +1123,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified registry certificate.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteCertificate(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryCertificateRequest request) {
@@ -974,6 +1134,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of passwords for the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsResponse> listPasswords(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryPasswordsRequest request) {
@@ -982,6 +1145,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds password for the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addPassword(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.AddRegistryPasswordRequest request) {
@@ -990,6 +1156,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified password.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deletePassword(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DeleteRegistryPasswordRequest request) {
@@ -998,6 +1167,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of device topic aliases for the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesResponse> listDeviceTopicAliases(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListDeviceTopicAliasesRequest request) {
@@ -1006,6 +1178,9 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified registry.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse> listOperations(
         yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request) {

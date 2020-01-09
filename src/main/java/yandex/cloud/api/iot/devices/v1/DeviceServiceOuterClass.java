@@ -19,10 +19,20 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to return.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to return.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to return.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -124,6 +139,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to return.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to return.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -460,6 +485,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to return.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to return.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -489,6 +524,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to return.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -498,6 +538,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to return.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -569,35 +614,72 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDevicesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDevicesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDevicesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -741,6 +823,11 @@ public final class DeviceServiceOuterClass {
 
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -761,6 +848,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list devices in.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -784,6 +876,11 @@ public final class DeviceServiceOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
@@ -804,6 +901,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list devices in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -828,6 +930,13 @@ public final class DeviceServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 3;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDevicesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -837,6 +946,11 @@ public final class DeviceServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDevicesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -852,6 +966,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDevicesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1270,6 +1389,11 @@ public final class DeviceServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -1290,6 +1414,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1311,6 +1440,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -1324,6 +1458,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -1335,6 +1474,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list devices in.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -1350,6 +1494,11 @@ public final class DeviceServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
@@ -1370,6 +1519,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1391,6 +1545,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
@@ -1404,6 +1563,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
@@ -1415,6 +1579,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list devices in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
@@ -1431,12 +1600,26 @@ public final class DeviceServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDevicesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDevicesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1446,6 +1629,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDevicesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1457,6 +1647,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDevicesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1472,6 +1667,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDevicesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1488,6 +1688,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDevicesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1501,6 +1706,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDevicesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1510,6 +1720,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDevicesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1581,34 +1796,68 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> 
         getDevicesList();
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getDevices(int index);
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     int getDevicesCount();
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder> 
         getDevicesOrBuilderList();
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder getDevicesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDevicesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDevicesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1709,12 +1958,20 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> devices_;
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getDevicesList() {
       return devices_;
     }
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder> 
@@ -1722,18 +1979,30 @@ public final class DeviceServiceOuterClass {
       return devices_;
     }
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     public int getDevicesCount() {
       return devices_.size();
     }
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getDevices(int index) {
       return devices_.get(index);
     }
     /**
+     * <pre>
+     * List of devices.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder getDevicesOrBuilder(
@@ -1744,6 +2013,13 @@ public final class DeviceServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDevicesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1759,6 +2035,13 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDevicesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2150,6 +2433,10 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder> devicesBuilder_;
 
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getDevicesList() {
@@ -2160,6 +2447,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public int getDevicesCount() {
@@ -2170,6 +2461,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getDevices(int index) {
@@ -2180,6 +2475,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder setDevices(
@@ -2197,6 +2496,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder setDevices(
@@ -2211,6 +2514,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder addDevices(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device value) {
@@ -2227,6 +2534,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder addDevices(
@@ -2244,6 +2555,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder addDevices(
@@ -2258,6 +2573,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder addDevices(
@@ -2272,6 +2591,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder addAllDevices(
@@ -2287,6 +2610,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder clearDevices() {
@@ -2300,6 +2627,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public Builder removeDevices(int index) {
@@ -2313,6 +2644,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder getDevicesBuilder(
@@ -2320,6 +2655,10 @@ public final class DeviceServiceOuterClass {
         return getDevicesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder getDevicesOrBuilder(
@@ -2330,6 +2669,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceOrBuilder> 
@@ -2341,6 +2684,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder addDevicesBuilder() {
@@ -2348,6 +2695,10 @@ public final class DeviceServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder addDevicesBuilder(
@@ -2356,6 +2707,10 @@ public final class DeviceServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of devices.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Device devices = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder> 
@@ -2379,6 +2734,13 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDevicesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2394,6 +2756,13 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDevicesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2410,6 +2779,13 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDevicesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2423,6 +2799,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDevicesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2432,6 +2815,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDevicesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDevicesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2503,54 +2893,100 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to create a device in.
+     * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to create a device in.
+     * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> 
         getCertificatesList();
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate getCertificates(int index);
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     int getCertificatesCount();
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder> 
         getCertificatesOrBuilderList();
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -2558,7 +2994,8 @@ public final class DeviceServiceOuterClass {
 
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -2566,7 +3003,8 @@ public final class DeviceServiceOuterClass {
     int getTopicAliasesCount();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -2581,7 +3019,8 @@ public final class DeviceServiceOuterClass {
     getTopicAliases();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -2590,7 +3029,8 @@ public final class DeviceServiceOuterClass {
     getTopicAliasesMap();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -2601,7 +3041,8 @@ public final class DeviceServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -2612,7 +3053,8 @@ public final class DeviceServiceOuterClass {
 
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Device password.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -2620,7 +3062,8 @@ public final class DeviceServiceOuterClass {
     java.lang.String getPassword();
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Device password.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -2770,16 +3213,28 @@ public final class DeviceServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Public part of the device certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       java.lang.String getCertificateData();
       /**
+       * <pre>
+       * Public part of the device certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       com.google.protobuf.ByteString
           getCertificateDataBytes();
     }
     /**
+     * <pre>
+     * Specification of a device certificate.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate}
      */
     public  static final class Certificate extends
@@ -2860,6 +3315,10 @@ public final class DeviceServiceOuterClass {
       public static final int CERTIFICATE_DATA_FIELD_NUMBER = 1;
       private volatile java.lang.Object certificateData_;
       /**
+       * <pre>
+       * Public part of the device certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       public java.lang.String getCertificateData() {
@@ -2875,6 +3334,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the device certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3047,6 +3510,10 @@ public final class DeviceServiceOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Specification of a device certificate.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate}
        */
       public static final class Builder extends
@@ -3196,6 +3663,10 @@ public final class DeviceServiceOuterClass {
 
         private java.lang.Object certificateData_ = "";
         /**
+         * <pre>
+         * Public part of the device certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public java.lang.String getCertificateData() {
@@ -3211,6 +3682,10 @@ public final class DeviceServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Public part of the device certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public com.google.protobuf.ByteString
@@ -3227,6 +3702,10 @@ public final class DeviceServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Public part of the device certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder setCertificateData(
@@ -3240,6 +3719,10 @@ public final class DeviceServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Public part of the device certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder clearCertificateData() {
@@ -3249,6 +3732,10 @@ public final class DeviceServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Public part of the device certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder setCertificateDataBytes(
@@ -3319,6 +3806,11 @@ public final class DeviceServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to create a device in.
+     * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -3334,6 +3826,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to create a device in.
+     * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3353,6 +3850,10 @@ public final class DeviceServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getName() {
@@ -3368,6 +3869,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3387,6 +3892,10 @@ public final class DeviceServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3402,6 +3911,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3421,12 +3934,20 @@ public final class DeviceServiceOuterClass {
     public static final int CERTIFICATES_FIELD_NUMBER = 4;
     private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> certificates_;
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> getCertificatesList() {
       return certificates_;
     }
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder> 
@@ -3434,18 +3955,30 @@ public final class DeviceServiceOuterClass {
       return certificates_;
     }
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     public int getCertificatesCount() {
       return certificates_.size();
     }
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate getCertificates(int index) {
       return certificates_.get(index);
     }
     /**
+     * <pre>
+     * Device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -3481,7 +4014,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -3501,7 +4035,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -3512,7 +4047,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -3528,7 +4064,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -3549,7 +4086,8 @@ public final class DeviceServiceOuterClass {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Device password.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -3568,7 +4106,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Device password.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -4051,6 +4590,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to create a device in.
+       * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -4066,6 +4610,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to create a device in.
+       * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4082,6 +4631,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to create a device in.
+       * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -4095,6 +4649,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to create a device in.
+       * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -4104,6 +4663,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to create a device in.
+       * To get a registry ID, make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -4120,6 +4684,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getName() {
@@ -4135,6 +4703,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4151,6 +4723,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setName(
@@ -4164,6 +4740,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearName() {
@@ -4173,6 +4753,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setNameBytes(
@@ -4189,6 +4773,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4204,6 +4792,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4220,6 +4812,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4233,6 +4829,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4242,6 +4842,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4269,6 +4873,10 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder> certificatesBuilder_;
 
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate> getCertificatesList() {
@@ -4279,6 +4887,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public int getCertificatesCount() {
@@ -4289,6 +4901,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate getCertificates(int index) {
@@ -4299,6 +4915,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder setCertificates(
@@ -4316,6 +4936,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder setCertificates(
@@ -4330,6 +4954,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder addCertificates(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate value) {
@@ -4346,6 +4974,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder addCertificates(
@@ -4363,6 +4995,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder addCertificates(
@@ -4377,6 +5013,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder addCertificates(
@@ -4391,6 +5031,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder addAllCertificates(
@@ -4406,6 +5050,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder clearCertificates() {
@@ -4419,6 +5067,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public Builder removeCertificates(int index) {
@@ -4432,6 +5084,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder getCertificatesBuilder(
@@ -4439,6 +5095,10 @@ public final class DeviceServiceOuterClass {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -4449,6 +5109,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.CertificateOrBuilder> 
@@ -4460,6 +5124,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder addCertificatesBuilder() {
@@ -4467,6 +5135,10 @@ public final class DeviceServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder addCertificatesBuilder(
@@ -4475,6 +5147,10 @@ public final class DeviceServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateDeviceRequest.Certificate certificates = 4;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.CreateDeviceRequest.Certificate.Builder> 
@@ -4524,7 +5200,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4544,7 +5221,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4555,7 +5233,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4571,7 +5250,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4595,7 +5275,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4618,7 +5299,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4634,7 +5316,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/{id}/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -4650,7 +5333,8 @@ public final class DeviceServiceOuterClass {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Device password.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4669,7 +5353,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Device password.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4689,7 +5374,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Device password.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4706,7 +5392,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Device password.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4719,7 +5406,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Device password.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4793,10 +5481,18 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device that is being created.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device that is being created.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4883,6 +5579,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device that is being created.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -4898,6 +5598,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device that is being created.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5219,6 +5923,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device that is being created.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -5234,6 +5942,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being created.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5250,6 +5962,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being created.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -5263,6 +5979,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being created.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -5272,6 +5992,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being created.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -5343,43 +6067,81 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to update.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to update.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
@@ -5387,7 +6149,8 @@ public final class DeviceServiceOuterClass {
 
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5395,7 +6158,8 @@ public final class DeviceServiceOuterClass {
     int getTopicAliasesCount();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5410,7 +6174,8 @@ public final class DeviceServiceOuterClass {
     getTopicAliases();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5419,7 +6184,8 @@ public final class DeviceServiceOuterClass {
     getTopicAliasesMap();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5430,7 +6196,8 @@ public final class DeviceServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5573,6 +6340,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to update.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -5588,6 +6360,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to update.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5607,18 +6384,30 @@ public final class DeviceServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the device are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5628,6 +6417,10 @@ public final class DeviceServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getName() {
@@ -5643,6 +6436,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the device. The name must be unique within the registry.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5662,6 +6459,10 @@ public final class DeviceServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -5677,6 +6478,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the device.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5721,7 +6526,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5741,7 +6547,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5752,7 +6559,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -5768,7 +6576,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6207,6 +7016,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to update.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -6222,6 +7036,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to update.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6238,6 +7057,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to update.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -6251,6 +7075,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to update.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -6260,6 +7089,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to update.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -6278,12 +7112,20 @@ public final class DeviceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6294,6 +7136,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6310,6 +7156,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -6324,6 +7174,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6342,6 +7196,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -6356,6 +7214,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6364,6 +7226,10 @@ public final class DeviceServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6375,6 +7241,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the device are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6393,6 +7263,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getName() {
@@ -6408,6 +7282,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6424,6 +7302,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setName(
@@ -6437,6 +7319,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearName() {
@@ -6446,6 +7332,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name must be unique within the registry.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setNameBytes(
@@ -6462,6 +7352,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6477,6 +7371,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6493,6 +7391,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6506,6 +7408,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6515,6 +7421,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6557,7 +7467,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6577,7 +7488,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6588,7 +7500,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6604,7 +7517,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6628,7 +7542,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6651,7 +7566,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6667,7 +7583,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/{id}/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 5;</code>
@@ -6737,10 +7654,18 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device that is being updated.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device that is being updated.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6827,6 +7752,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device that is being updated.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -6842,6 +7771,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device that is being updated.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7163,6 +8096,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device that is being updated.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -7178,6 +8115,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being updated.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7194,6 +8135,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being updated.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -7207,6 +8152,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being updated.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -7216,6 +8165,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being updated.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -7287,10 +8240,20 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to delete.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to delete.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -7377,6 +8340,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to delete.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -7392,6 +8360,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to delete.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7713,6 +8686,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to delete.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -7728,6 +8706,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7744,6 +8727,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -7757,6 +8745,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -7766,6 +8759,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -7837,10 +8835,18 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7927,6 +8933,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -7942,6 +8952,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -8263,6 +9277,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -8278,6 +9296,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -8294,6 +9316,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -8307,6 +9333,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -8316,6 +9346,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -8387,10 +9421,18 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to list certificates for.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to list certificates for.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -8477,6 +9519,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to list certificates for.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -8492,6 +9538,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to list certificates for.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8813,6 +9863,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to list certificates for.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -8828,6 +9882,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to list certificates for.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8844,6 +9902,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to list certificates for.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -8857,6 +9919,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to list certificates for.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -8866,6 +9932,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to list certificates for.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -8937,24 +10007,44 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> 
         getCertificatesList();
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate getCertificates(int index);
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     int getCertificatesCount();
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder> 
         getCertificatesOrBuilderList();
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder getCertificatesOrBuilder(
@@ -9047,12 +10137,20 @@ public final class DeviceServiceOuterClass {
     public static final int CERTIFICATES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> certificates_;
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> getCertificatesList() {
       return certificates_;
     }
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder> 
@@ -9060,18 +10158,30 @@ public final class DeviceServiceOuterClass {
       return certificates_;
     }
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     public int getCertificatesCount() {
       return certificates_.size();
     }
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate getCertificates(int index) {
       return certificates_.get(index);
     }
     /**
+     * <pre>
+     * List of certificates for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder getCertificatesOrBuilder(
@@ -9435,6 +10545,10 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder> certificatesBuilder_;
 
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate> getCertificatesList() {
@@ -9445,6 +10559,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public int getCertificatesCount() {
@@ -9455,6 +10573,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate getCertificates(int index) {
@@ -9465,6 +10587,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder setCertificates(
@@ -9482,6 +10608,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder setCertificates(
@@ -9496,6 +10626,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder addCertificates(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate value) {
@@ -9512,6 +10646,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9529,6 +10667,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9543,6 +10685,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9557,6 +10703,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder addAllCertificates(
@@ -9572,6 +10722,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder clearCertificates() {
@@ -9585,6 +10739,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public Builder removeCertificates(int index) {
@@ -9598,6 +10756,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder getCertificatesBuilder(
@@ -9605,6 +10767,10 @@ public final class DeviceServiceOuterClass {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder getCertificatesOrBuilder(
@@ -9615,6 +10781,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificateOrBuilder> 
@@ -9626,6 +10796,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder addCertificatesBuilder() {
@@ -9633,6 +10807,10 @@ public final class DeviceServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder addCertificatesBuilder(
@@ -9641,6 +10819,10 @@ public final class DeviceServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of certificates for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceCertificate certificates = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceCertificate.Builder> 
@@ -9719,20 +10901,38 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device for which the certificate is being added.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device for which the certificate is being added.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     java.lang.String getCertificateData();
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     com.google.protobuf.ByteString
@@ -9826,6 +11026,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device for which the certificate is being added.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -9841,6 +11046,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device for which the certificate is being added.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9860,6 +11070,10 @@ public final class DeviceServiceOuterClass {
     public static final int CERTIFICATE_DATA_FIELD_NUMBER = 3;
     private volatile java.lang.Object certificateData_;
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public java.lang.String getCertificateData() {
@@ -9875,6 +11089,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -10213,6 +11431,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device for which the certificate is being added.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -10228,6 +11451,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the certificate is being added.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10244,6 +11472,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the certificate is being added.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -10257,6 +11490,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the certificate is being added.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -10266,6 +11504,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the certificate is being added.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -10282,6 +11525,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object certificateData_ = "";
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public java.lang.String getCertificateData() {
@@ -10297,6 +11544,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -10313,6 +11564,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateData(
@@ -10326,6 +11581,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder clearCertificateData() {
@@ -10335,6 +11594,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateDataBytes(
@@ -10406,20 +11669,36 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device certificate that is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device certificate that is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -10513,6 +11792,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device certificate that is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -10528,6 +11811,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device certificate that is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -10547,6 +11834,10 @@ public final class DeviceServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public java.lang.String getFingerprint() {
@@ -10562,6 +11853,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -10900,6 +12195,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device certificate that is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -10915,6 +12214,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -10931,6 +12234,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -10944,6 +12251,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -10953,6 +12264,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -10969,6 +12284,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public java.lang.String getFingerprint() {
@@ -10984,6 +12303,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -11000,6 +12323,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprint(
@@ -11013,6 +12340,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder clearFingerprint() {
@@ -11022,6 +12353,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprintBytes(
@@ -11093,20 +12428,38 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to delete a certificate for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to delete a certificate for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate to delete.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate to delete.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -11200,6 +12553,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to delete a certificate for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -11215,6 +12573,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to delete a certificate for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11234,6 +12597,10 @@ public final class DeviceServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate to delete.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFingerprint() {
@@ -11249,6 +12616,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate to delete.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11587,6 +12958,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to delete a certificate for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -11602,6 +12978,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete a certificate for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11618,6 +12999,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete a certificate for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -11631,6 +13017,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete a certificate for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -11640,6 +13031,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete a certificate for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -11656,6 +13052,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate to delete.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFingerprint() {
@@ -11671,6 +13071,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to delete.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11687,6 +13091,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to delete.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprint(
@@ -11700,6 +13108,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to delete.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFingerprint() {
@@ -11709,6 +13121,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to delete.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprintBytes(
@@ -11780,20 +13196,36 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device certificate that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device certificate that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -11887,6 +13319,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device certificate that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -11902,6 +13338,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device certificate that is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11921,6 +13361,10 @@ public final class DeviceServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFingerprint() {
@@ -11936,6 +13380,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12274,6 +13722,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device certificate that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -12289,6 +13741,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12305,6 +13761,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -12318,6 +13778,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -12327,6 +13791,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device certificate that is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -12343,6 +13811,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFingerprint() {
@@ -12358,6 +13830,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12374,6 +13850,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprint(
@@ -12387,6 +13867,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFingerprint() {
@@ -12396,6 +13880,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprintBytes(
@@ -12467,10 +13955,20 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -12557,6 +14055,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -12572,6 +14075,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12893,6 +14401,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -12908,6 +14421,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12924,6 +14442,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -12937,6 +14460,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -12946,6 +14474,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -13017,24 +14550,44 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> 
         getPasswordsList();
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword getPasswords(int index);
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     int getPasswordsCount();
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder> 
         getPasswordsOrBuilderList();
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder getPasswordsOrBuilder(
@@ -13127,12 +14680,20 @@ public final class DeviceServiceOuterClass {
     public static final int PASSWORDS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> passwords_;
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> getPasswordsList() {
       return passwords_;
     }
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder> 
@@ -13140,18 +14701,30 @@ public final class DeviceServiceOuterClass {
       return passwords_;
     }
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     public int getPasswordsCount() {
       return passwords_.size();
     }
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword getPasswords(int index) {
       return passwords_.get(index);
     }
     /**
+     * <pre>
+     * List of passwords for the specified device.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder getPasswordsOrBuilder(
@@ -13515,6 +15088,10 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder> passwordsBuilder_;
 
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword> getPasswordsList() {
@@ -13525,6 +15102,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public int getPasswordsCount() {
@@ -13535,6 +15116,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword getPasswords(int index) {
@@ -13545,6 +15130,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder setPasswords(
@@ -13562,6 +15151,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder setPasswords(
@@ -13576,6 +15169,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder addPasswords(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword value) {
@@ -13592,6 +15189,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13609,6 +15210,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13623,6 +15228,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13637,6 +15246,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder addAllPasswords(
@@ -13652,6 +15265,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder clearPasswords() {
@@ -13665,6 +15282,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public Builder removePasswords(int index) {
@@ -13678,6 +15299,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder getPasswordsBuilder(
@@ -13685,6 +15310,10 @@ public final class DeviceServiceOuterClass {
         return getPasswordsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder getPasswordsOrBuilder(
@@ -13695,6 +15324,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePasswordOrBuilder> 
@@ -13706,6 +15339,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder addPasswordsBuilder() {
@@ -13713,6 +15350,10 @@ public final class DeviceServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder addPasswordsBuilder(
@@ -13721,6 +15362,10 @@ public final class DeviceServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of passwords for the specified device.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DevicePassword passwords = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DevicePassword.Builder> 
@@ -13799,10 +15444,20 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to add a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to add a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -13810,7 +15465,8 @@ public final class DeviceServiceOuterClass {
 
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the device.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13818,7 +15474,8 @@ public final class DeviceServiceOuterClass {
     java.lang.String getPassword();
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the device.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13914,6 +15571,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to add a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -13929,6 +15591,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to add a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -13949,7 +15616,8 @@ public final class DeviceServiceOuterClass {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the device.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13968,7 +15636,8 @@ public final class DeviceServiceOuterClass {
     }
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the device.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14309,6 +15978,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to add a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -14324,6 +15998,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to add a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -14340,6 +16019,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to add a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -14353,6 +16037,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to add a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -14362,6 +16051,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to add a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -14379,7 +16073,8 @@ public final class DeviceServiceOuterClass {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the device.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14398,7 +16093,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the device.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14418,7 +16114,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the device.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14435,7 +16132,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the device.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14448,7 +16146,8 @@ public final class DeviceServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the device.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14522,20 +16221,36 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device for which the password is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device for which the password is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * ID of the password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of the password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -14629,6 +16344,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device for which the password is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -14644,6 +16363,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device for which the password is being added.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -14663,6 +16386,10 @@ public final class DeviceServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of the password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     public java.lang.String getPasswordId() {
@@ -14678,6 +16405,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -15016,6 +16747,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device for which the password is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -15031,6 +16766,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -15047,6 +16786,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -15060,6 +16803,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -15069,6 +16816,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being added.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -15085,6 +16836,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of the password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public java.lang.String getPasswordId() {
@@ -15100,6 +16855,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -15116,6 +16875,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder setPasswordId(
@@ -15129,6 +16892,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder clearPasswordId() {
@@ -15138,6 +16905,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder setPasswordIdBytes(
@@ -15209,20 +16980,40 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to delete a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to delete a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [DeviceService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [DeviceService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -15316,6 +17107,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to delete a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -15331,6 +17127,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to delete a password for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15350,6 +17151,11 @@ public final class DeviceServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [DeviceService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getPasswordId() {
@@ -15365,6 +17171,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [DeviceService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15703,6 +17514,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to delete a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -15718,6 +17534,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15734,6 +17555,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to delete a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -15747,6 +17573,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -15756,6 +17587,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to delete a password for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -15772,6 +17608,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [DeviceService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getPasswordId() {
@@ -15787,6 +17628,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [DeviceService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15803,6 +17649,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [DeviceService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordId(
@@ -15816,6 +17667,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [DeviceService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearPasswordId() {
@@ -15825,6 +17681,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [DeviceService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordIdBytes(
@@ -15896,20 +17757,36 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device for which the password is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device for which the password is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * ID of the password that is being deleted.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of the password that is being deleted.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -16003,6 +17880,10 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device for which the password is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDeviceId() {
@@ -16018,6 +17899,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device for which the password is being deleted.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16037,6 +17922,10 @@ public final class DeviceServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of the password that is being deleted.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getPasswordId() {
@@ -16052,6 +17941,10 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password that is being deleted.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16390,6 +18283,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device for which the password is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDeviceId() {
@@ -16405,6 +18302,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16421,6 +18322,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceId(
@@ -16434,6 +18339,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDeviceId() {
@@ -16443,6 +18352,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device for which the password is being deleted.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDeviceIdBytes(
@@ -16459,6 +18372,10 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of the password that is being deleted.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getPasswordId() {
@@ -16474,6 +18391,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password that is being deleted.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16490,6 +18411,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password that is being deleted.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordId(
@@ -16503,6 +18428,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password that is being deleted.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearPasswordId() {
@@ -16512,6 +18441,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password that is being deleted.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordIdBytes(
@@ -16583,35 +18516,72 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device to list operations for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device to list operations for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDeviceOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Device.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Device.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -16718,6 +18688,11 @@ public final class DeviceServiceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device to list operations for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getDeviceId() {
@@ -16733,6 +18708,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device to list operations for.
+     * To get a device ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -16752,6 +18732,13 @@ public final class DeviceServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDeviceOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -16761,6 +18748,11 @@ public final class DeviceServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -16776,6 +18768,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16795,6 +18792,11 @@ public final class DeviceServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Device.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -16810,6 +18812,11 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Device.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -17183,6 +19190,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device to list operations for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getDeviceId() {
@@ -17198,6 +19210,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to list operations for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -17214,6 +19231,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device to list operations for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDeviceId(
@@ -17227,6 +19249,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to list operations for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearDeviceId() {
@@ -17236,6 +19263,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device to list operations for.
+       * To get a device ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string device_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDeviceIdBytes(
@@ -17252,12 +19284,26 @@ public final class DeviceServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -17267,6 +19313,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -17278,6 +19331,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -17293,6 +19351,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -17309,6 +19372,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -17322,6 +19390,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -17331,6 +19404,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -17347,6 +19425,11 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Device.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -17362,6 +19445,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Device.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -17378,6 +19466,11 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Device.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -17391,6 +19484,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Device.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -17400,6 +19498,11 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Device.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -17471,34 +19574,68 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -17599,12 +19736,20 @@ public final class DeviceServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -17612,18 +19757,30 @@ public final class DeviceServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified device certificate.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -17634,6 +19791,13 @@ public final class DeviceServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -17649,6 +19813,13 @@ public final class DeviceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -18040,6 +20211,10 @@ public final class DeviceServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -18050,6 +20225,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -18060,6 +20239,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -18070,6 +20253,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -18087,6 +20274,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -18101,6 +20292,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -18117,6 +20312,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -18134,6 +20333,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -18148,6 +20351,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -18162,6 +20369,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -18177,6 +20388,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -18190,6 +20405,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -18203,6 +20422,10 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -18210,6 +20433,10 @@ public final class DeviceServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -18220,6 +20447,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -18231,6 +20462,10 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -18238,6 +20473,10 @@ public final class DeviceServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -18246,6 +20485,10 @@ public final class DeviceServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified device certificate.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -18269,6 +20512,13 @@ public final class DeviceServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -18284,6 +20534,13 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -18300,6 +20557,13 @@ public final class DeviceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -18313,6 +20577,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -18322,6 +20593,13 @@ public final class DeviceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(

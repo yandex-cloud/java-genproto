@@ -19,10 +19,20 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to return.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to return.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to return.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -124,6 +139,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to return.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to return.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -460,6 +485,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to return.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to return.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -489,6 +524,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to return.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -498,6 +538,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to return.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -569,25 +614,52 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list registries in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list registries in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListRegistriesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -687,6 +759,11 @@ public final class RegistryServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list registries in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
@@ -702,6 +779,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list registries in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -721,6 +803,13 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListRegistriesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -730,6 +819,11 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -745,6 +839,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1101,6 +1200,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list registries in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
@@ -1116,6 +1220,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list registries in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1132,6 +1241,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list registries in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
@@ -1145,6 +1259,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list registries in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
@@ -1154,6 +1273,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list registries in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
@@ -1170,12 +1294,26 @@ public final class RegistryServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistriesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistriesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1185,6 +1323,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistriesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1196,6 +1341,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1211,6 +1361,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1227,6 +1382,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1240,6 +1400,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1249,6 +1414,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistriesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1320,34 +1490,68 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> 
         getRegistriesList();
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getRegistries(int index);
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     int getRegistriesCount();
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder> 
         getRegistriesOrBuilderList();
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1448,12 +1652,20 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> registries_;
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getRegistriesList() {
       return registries_;
     }
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder> 
@@ -1461,18 +1673,30 @@ public final class RegistryServiceOuterClass {
       return registries_;
     }
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     public int getRegistriesCount() {
       return registries_.size();
     }
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getRegistries(int index) {
       return registries_.get(index);
     }
     /**
+     * <pre>
+     * List of registries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
@@ -1483,6 +1707,13 @@ public final class RegistryServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1498,6 +1729,13 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -1889,6 +2127,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder> registriesBuilder_;
 
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getRegistriesList() {
@@ -1899,6 +2141,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public int getRegistriesCount() {
@@ -1909,6 +2155,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getRegistries(int index) {
@@ -1919,6 +2169,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder setRegistries(
@@ -1936,6 +2190,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder setRegistries(
@@ -1950,6 +2208,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry value) {
@@ -1966,6 +2228,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
@@ -1983,6 +2249,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
@@ -1997,6 +2267,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder addRegistries(
@@ -2011,6 +2285,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder addAllRegistries(
@@ -2026,6 +2304,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder clearRegistries() {
@@ -2039,6 +2321,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public Builder removeRegistries(int index) {
@@ -2052,6 +2338,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder getRegistriesBuilder(
@@ -2059,6 +2349,10 @@ public final class RegistryServiceOuterClass {
         return getRegistriesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder getRegistriesOrBuilder(
@@ -2069,6 +2363,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryOrBuilder> 
@@ -2080,6 +2378,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder addRegistriesBuilder() {
@@ -2087,6 +2389,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder addRegistriesBuilder(
@@ -2095,6 +2401,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of registries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.Registry registries = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.Builder> 
@@ -2118,6 +2428,13 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2133,6 +2450,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2149,6 +2473,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2162,6 +2493,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2171,6 +2509,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistriesRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistriesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2242,40 +2587,74 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a registry in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a registry in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2287,11 +2666,19 @@ public final class RegistryServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2299,6 +2686,10 @@ public final class RegistryServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2306,24 +2697,44 @@ public final class RegistryServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> 
         getCertificatesList();
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate getCertificates(int index);
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     int getCertificatesCount();
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder> 
         getCertificatesOrBuilderList();
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -2331,7 +2742,8 @@ public final class RegistryServiceOuterClass {
 
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Registry passwords.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -2339,7 +2751,8 @@ public final class RegistryServiceOuterClass {
     java.lang.String getPassword();
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Registry passwords.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -2489,16 +2902,28 @@ public final class RegistryServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Public part of the registry certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       java.lang.String getCertificateData();
       /**
+       * <pre>
+       * Public part of the registry certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       com.google.protobuf.ByteString
           getCertificateDataBytes();
     }
     /**
+     * <pre>
+     * Specification of a registry certificate.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate}
      */
     public  static final class Certificate extends
@@ -2579,6 +3004,10 @@ public final class RegistryServiceOuterClass {
       public static final int CERTIFICATE_DATA_FIELD_NUMBER = 1;
       private volatile java.lang.Object certificateData_;
       /**
+       * <pre>
+       * Public part of the registry certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       public java.lang.String getCertificateData() {
@@ -2594,6 +3023,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the registry certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2766,6 +3199,10 @@ public final class RegistryServiceOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Specification of a registry certificate.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate}
        */
       public static final class Builder extends
@@ -2915,6 +3352,10 @@ public final class RegistryServiceOuterClass {
 
         private java.lang.Object certificateData_ = "";
         /**
+         * <pre>
+         * Public part of the registry certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public java.lang.String getCertificateData() {
@@ -2930,6 +3371,10 @@ public final class RegistryServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Public part of the registry certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public com.google.protobuf.ByteString
@@ -2946,6 +3391,10 @@ public final class RegistryServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Public part of the registry certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder setCertificateData(
@@ -2959,6 +3408,10 @@ public final class RegistryServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Public part of the registry certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder clearCertificateData() {
@@ -2968,6 +3421,10 @@ public final class RegistryServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Public part of the registry certificate.
+         * </pre>
+         *
          * <code>string certificate_data = 1;</code>
          */
         public Builder setCertificateDataBytes(
@@ -3038,6 +3495,11 @@ public final class RegistryServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a registry in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
@@ -3053,6 +3515,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a registry in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3072,6 +3539,10 @@ public final class RegistryServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getName() {
@@ -3087,6 +3558,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3106,6 +3581,10 @@ public final class RegistryServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3121,6 +3600,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3164,6 +3647,10 @@ public final class RegistryServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3180,6 +3667,10 @@ public final class RegistryServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3187,6 +3678,10 @@ public final class RegistryServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3199,6 +3694,10 @@ public final class RegistryServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3216,12 +3715,20 @@ public final class RegistryServiceOuterClass {
     public static final int CERTIFICATES_FIELD_NUMBER = 5;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> certificates_;
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> getCertificatesList() {
       return certificates_;
     }
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder> 
@@ -3229,18 +3736,30 @@ public final class RegistryServiceOuterClass {
       return certificates_;
     }
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     public int getCertificatesCount() {
       return certificates_.size();
     }
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate getCertificates(int index) {
       return certificates_.get(index);
     }
     /**
+     * <pre>
+     * Registry certificates.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -3252,7 +3771,8 @@ public final class RegistryServiceOuterClass {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Registry passwords.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -3271,7 +3791,8 @@ public final class RegistryServiceOuterClass {
     }
     /**
      * <pre>
-     * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Registry passwords.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 6;</code>
@@ -3754,6 +4275,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a registry in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
@@ -3769,6 +4295,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a registry in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3785,6 +4316,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a registry in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
@@ -3798,6 +4334,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a registry in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
@@ -3807,6 +4348,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a registry in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
@@ -3823,6 +4369,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getName() {
@@ -3838,6 +4388,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3854,6 +4408,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setName(
@@ -3867,6 +4425,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearName() {
@@ -3876,6 +4438,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setNameBytes(
@@ -3892,6 +4458,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -3907,6 +4477,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3923,6 +4497,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -3936,6 +4514,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -3945,6 +4527,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -3986,6 +4572,10 @@ public final class RegistryServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4002,6 +4592,10 @@ public final class RegistryServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4009,6 +4603,10 @@ public final class RegistryServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4021,6 +4619,10 @@ public final class RegistryServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4041,6 +4643,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4060,6 +4666,10 @@ public final class RegistryServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4072,6 +4682,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4095,6 +4709,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder> certificatesBuilder_;
 
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate> getCertificatesList() {
@@ -4105,6 +4723,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public int getCertificatesCount() {
@@ -4115,6 +4737,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate getCertificates(int index) {
@@ -4125,6 +4751,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder setCertificates(
@@ -4142,6 +4772,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder setCertificates(
@@ -4156,6 +4790,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder addCertificates(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate value) {
@@ -4172,6 +4810,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder addCertificates(
@@ -4189,6 +4831,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder addCertificates(
@@ -4203,6 +4849,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder addCertificates(
@@ -4217,6 +4867,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder addAllCertificates(
@@ -4232,6 +4886,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder clearCertificates() {
@@ -4245,6 +4903,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public Builder removeCertificates(int index) {
@@ -4258,6 +4920,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder getCertificatesBuilder(
@@ -4265,6 +4931,10 @@ public final class RegistryServiceOuterClass {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder getCertificatesOrBuilder(
@@ -4275,6 +4945,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.CertificateOrBuilder> 
@@ -4286,6 +4960,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder addCertificatesBuilder() {
@@ -4293,6 +4971,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder addCertificatesBuilder(
@@ -4301,6 +4983,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Registry certificates.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.CreateRegistryRequest.Certificate certificates = 5;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.CreateRegistryRequest.Certificate.Builder> 
@@ -4325,7 +5011,8 @@ public final class RegistryServiceOuterClass {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Registry passwords.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4344,7 +5031,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Registry passwords.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4364,7 +5052,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Registry passwords.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4381,7 +5070,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Registry passwords.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4394,7 +5084,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * if specified, must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Registry passwords.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 6;</code>
@@ -4468,10 +5159,18 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry that is being created.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry that is being created.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4558,6 +5257,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry that is being created.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public java.lang.String getRegistryId() {
@@ -4573,6 +5276,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry that is being created.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -4894,6 +5601,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry that is being created.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public java.lang.String getRegistryId() {
@@ -4909,6 +5620,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being created.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -4925,6 +5640,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being created.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryId(
@@ -4938,6 +5657,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being created.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder clearRegistryId() {
@@ -4947,6 +5670,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being created.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryIdBytes(
@@ -5018,53 +5745,101 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to update.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to update.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5076,11 +5851,21 @@ public final class RegistryServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5088,6 +5873,11 @@ public final class RegistryServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5228,6 +6018,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to update.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -5243,6 +6038,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to update.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5262,18 +6062,30 @@ public final class RegistryServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the registry are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5283,6 +6095,10 @@ public final class RegistryServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getName() {
@@ -5298,6 +6114,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the registry. The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5317,6 +6137,10 @@ public final class RegistryServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -5332,6 +6156,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the registry.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5375,6 +6203,11 @@ public final class RegistryServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5391,6 +6224,11 @@ public final class RegistryServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5398,6 +6236,11 @@ public final class RegistryServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5410,6 +6253,11 @@ public final class RegistryServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * Existing set of `labels` is completely replaced by the provided set.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5846,6 +6694,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to update.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -5861,6 +6714,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to update.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5877,6 +6735,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to update.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -5890,6 +6753,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to update.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -5899,6 +6767,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to update.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -5917,12 +6790,20 @@ public final class RegistryServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -5933,6 +6814,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5949,6 +6834,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -5963,6 +6852,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5981,6 +6874,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -5995,6 +6892,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6003,6 +6904,10 @@ public final class RegistryServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6014,6 +6919,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the registry are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6032,6 +6941,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getName() {
@@ -6047,6 +6960,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6063,6 +6980,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setName(
@@ -6076,6 +6997,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearName() {
@@ -6085,6 +7010,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the registry. The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setNameBytes(
@@ -6101,6 +7030,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6116,6 +7049,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6132,6 +7069,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6145,6 +7086,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6154,6 +7099,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the registry.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6195,6 +7144,11 @@ public final class RegistryServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6211,6 +7165,11 @@ public final class RegistryServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6218,6 +7177,11 @@ public final class RegistryServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6230,6 +7194,11 @@ public final class RegistryServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6250,6 +7219,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6269,6 +7243,11 @@ public final class RegistryServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -6281,6 +7260,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * Existing set of `labels` is completely replaced by the provided set.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6348,10 +7332,18 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry that is being updated.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry that is being updated.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6438,6 +7430,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry that is being updated.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public java.lang.String getRegistryId() {
@@ -6453,6 +7449,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry that is being updated.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6774,6 +7774,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry that is being updated.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public java.lang.String getRegistryId() {
@@ -6789,6 +7793,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being updated.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6805,6 +7813,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being updated.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryId(
@@ -6818,6 +7830,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being updated.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder clearRegistryId() {
@@ -6827,6 +7843,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being updated.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryIdBytes(
@@ -6898,10 +7918,20 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to delete.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to delete.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -6988,6 +8018,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to delete.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -7003,6 +8038,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to delete.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7324,6 +8364,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to delete.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -7339,6 +8384,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7355,6 +8405,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -7368,6 +8423,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -7377,6 +8437,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -7448,10 +8513,18 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry that is being deleted.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry that is being deleted.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7538,6 +8611,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry that is being deleted.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public java.lang.String getRegistryId() {
@@ -7553,6 +8630,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry that is being deleted.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7874,6 +8955,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry that is being deleted.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public java.lang.String getRegistryId() {
@@ -7889,6 +8974,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being deleted.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7905,6 +8994,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that is being deleted.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryId(
@@ -7918,6 +9011,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being deleted.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder clearRegistryId() {
@@ -7927,6 +9024,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that is being deleted.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryIdBytes(
@@ -7998,10 +9099,18 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list certificates for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to list certificates for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -8088,6 +9197,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to list certificates for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -8103,6 +9216,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list certificates for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8424,6 +9541,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to list certificates for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -8439,6 +9560,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list certificates for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8455,6 +9580,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list certificates for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -8468,6 +9597,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list certificates for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -8477,6 +9610,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list certificates for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -8548,24 +9685,44 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> 
         getCertificatesList();
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate getCertificates(int index);
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     int getCertificatesCount();
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder> 
         getCertificatesOrBuilderList();
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder getCertificatesOrBuilder(
@@ -8658,12 +9815,20 @@ public final class RegistryServiceOuterClass {
     public static final int CERTIFICATES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> certificates_;
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> getCertificatesList() {
       return certificates_;
     }
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder> 
@@ -8671,18 +9836,30 @@ public final class RegistryServiceOuterClass {
       return certificates_;
     }
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     public int getCertificatesCount() {
       return certificates_.size();
     }
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate getCertificates(int index) {
       return certificates_.get(index);
     }
     /**
+     * <pre>
+     * List of certificates for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder getCertificatesOrBuilder(
@@ -9046,6 +10223,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder> certificatesBuilder_;
 
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate> getCertificatesList() {
@@ -9056,6 +10237,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public int getCertificatesCount() {
@@ -9066,6 +10251,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate getCertificates(int index) {
@@ -9076,6 +10265,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder setCertificates(
@@ -9093,6 +10286,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder setCertificates(
@@ -9107,6 +10304,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder addCertificates(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate value) {
@@ -9123,6 +10324,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9140,6 +10345,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9154,6 +10363,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder addCertificates(
@@ -9168,6 +10381,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder addAllCertificates(
@@ -9183,6 +10400,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder clearCertificates() {
@@ -9196,6 +10417,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public Builder removeCertificates(int index) {
@@ -9209,6 +10434,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder getCertificatesBuilder(
@@ -9216,6 +10445,10 @@ public final class RegistryServiceOuterClass {
         return getCertificatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder getCertificatesOrBuilder(
@@ -9226,6 +10459,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificateOrBuilder> 
@@ -9237,6 +10474,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder addCertificatesBuilder() {
@@ -9244,6 +10485,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder addCertificatesBuilder(
@@ -9252,6 +10497,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of certificates for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryCertificate certificates = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryCertificate.Builder> 
@@ -9330,20 +10579,38 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry for which the certificate is being added.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry for which the certificate is being added.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Public part of the certificate that is being added.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     java.lang.String getCertificateData();
     /**
+     * <pre>
+     * Public part of the certificate that is being added.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     com.google.protobuf.ByteString
@@ -9437,6 +10704,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry for which the certificate is being added.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -9452,6 +10724,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry for which the certificate is being added.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9471,6 +10748,10 @@ public final class RegistryServiceOuterClass {
     public static final int CERTIFICATE_DATA_FIELD_NUMBER = 3;
     private volatile java.lang.Object certificateData_;
     /**
+     * <pre>
+     * Public part of the certificate that is being added.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public java.lang.String getCertificateData() {
@@ -9486,6 +10767,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Public part of the certificate that is being added.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -9824,6 +11109,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry for which the certificate is being added.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -9839,6 +11129,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry for which the certificate is being added.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9855,6 +11150,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry for which the certificate is being added.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -9868,6 +11168,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry for which the certificate is being added.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -9877,6 +11182,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry for which the certificate is being added.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -9893,6 +11203,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object certificateData_ = "";
       /**
+       * <pre>
+       * Public part of the certificate that is being added.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public java.lang.String getCertificateData() {
@@ -9908,6 +11222,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate that is being added.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -9924,6 +11242,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate that is being added.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateData(
@@ -9937,6 +11259,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate that is being added.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder clearCertificateData() {
@@ -9946,6 +11272,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate that is being added.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateDataBytes(
@@ -10017,20 +11347,36 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry certificate that is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry certificate that is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -10124,6 +11470,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry certificate that is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public java.lang.String getRegistryId() {
@@ -10139,6 +11489,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry certificate that is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -10158,6 +11512,10 @@ public final class RegistryServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public java.lang.String getFingerprint() {
@@ -10173,6 +11531,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being added.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -10511,6 +11873,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry certificate that is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public java.lang.String getRegistryId() {
@@ -10526,6 +11892,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry certificate that is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -10542,6 +11912,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry certificate that is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryId(
@@ -10555,6 +11929,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry certificate that is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder clearRegistryId() {
@@ -10564,6 +11942,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry certificate that is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryIdBytes(
@@ -10580,6 +11962,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public java.lang.String getFingerprint() {
@@ -10595,6 +11981,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -10611,6 +12001,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprint(
@@ -10624,6 +12018,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder clearFingerprint() {
@@ -10633,6 +12031,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being added.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprintBytes(
@@ -10704,20 +12106,38 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to delete a certificate for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to delete a certificate for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -10811,6 +12231,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to delete a certificate for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -10826,6 +12251,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to delete a certificate for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10845,6 +12275,10 @@ public final class RegistryServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFingerprint() {
@@ -10860,6 +12294,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate that is being deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11198,6 +12636,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to delete a certificate for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -11213,6 +12656,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete a certificate for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11229,6 +12677,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete a certificate for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -11242,6 +12695,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete a certificate for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -11251,6 +12709,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete a certificate for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -11267,6 +12730,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFingerprint() {
@@ -11282,6 +12749,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11298,6 +12769,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprint(
@@ -11311,6 +12786,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFingerprint() {
@@ -11320,6 +12799,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate that is being deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprintBytes(
@@ -11391,20 +12874,36 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of a registry for which the certificate is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of a registry for which the certificate is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Fingerprint of the certificate to deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * Fingerprint of the certificate to deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -11498,6 +12997,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of a registry for which the certificate is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -11513,6 +13016,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of a registry for which the certificate is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11532,6 +13039,10 @@ public final class RegistryServiceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * Fingerprint of the certificate to deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFingerprint() {
@@ -11547,6 +13058,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Fingerprint of the certificate to deleted.
+     * </pre>
+     *
      * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11885,6 +13400,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of a registry for which the certificate is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -11900,6 +13419,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a registry for which the certificate is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11916,6 +13439,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a registry for which the certificate is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -11929,6 +13456,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a registry for which the certificate is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -11938,6 +13469,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a registry for which the certificate is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -11954,6 +13489,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * Fingerprint of the certificate to deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFingerprint() {
@@ -11969,6 +13508,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11985,6 +13528,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprint(
@@ -11998,6 +13545,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFingerprint() {
@@ -12007,6 +13558,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Fingerprint of the certificate to deleted.
+       * </pre>
+       *
        * <code>string fingerprint = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFingerprintBytes(
@@ -12078,10 +13633,20 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -12168,6 +13733,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -12183,6 +13753,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list passwords in.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12504,6 +14079,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -12519,6 +14099,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -12535,6 +14120,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -12548,6 +14138,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -12557,6 +14152,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list passwords in.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -12628,24 +14228,44 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> 
         getPasswordsList();
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword getPasswords(int index);
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     int getPasswordsCount();
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder> 
         getPasswordsOrBuilderList();
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder getPasswordsOrBuilder(
@@ -12738,12 +14358,20 @@ public final class RegistryServiceOuterClass {
     public static final int PASSWORDS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> passwords_;
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> getPasswordsList() {
       return passwords_;
     }
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder> 
@@ -12751,18 +14379,30 @@ public final class RegistryServiceOuterClass {
       return passwords_;
     }
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     public int getPasswordsCount() {
       return passwords_.size();
     }
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword getPasswords(int index) {
       return passwords_.get(index);
     }
     /**
+     * <pre>
+     * List of passwords for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder getPasswordsOrBuilder(
@@ -13126,6 +14766,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder> passwordsBuilder_;
 
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword> getPasswordsList() {
@@ -13136,6 +14780,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public int getPasswordsCount() {
@@ -13146,6 +14794,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword getPasswords(int index) {
@@ -13156,6 +14808,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder setPasswords(
@@ -13173,6 +14829,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder setPasswords(
@@ -13187,6 +14847,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder addPasswords(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword value) {
@@ -13203,6 +14867,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13220,6 +14888,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13234,6 +14906,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder addPasswords(
@@ -13248,6 +14924,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder addAllPasswords(
@@ -13263,6 +14943,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder clearPasswords() {
@@ -13276,6 +14960,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public Builder removePasswords(int index) {
@@ -13289,6 +14977,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder getPasswordsBuilder(
@@ -13296,6 +14988,10 @@ public final class RegistryServiceOuterClass {
         return getPasswordsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder getPasswordsOrBuilder(
@@ -13306,6 +15002,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPasswordOrBuilder> 
@@ -13317,6 +15017,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder addPasswordsBuilder() {
@@ -13324,6 +15028,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder addPasswordsBuilder(
@@ -13332,6 +15040,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of passwords for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.RegistryPassword passwords = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.RegistryPassword.Builder> 
@@ -13410,10 +15122,20 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to add a password for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to add a password for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -13421,7 +15143,8 @@ public final class RegistryServiceOuterClass {
 
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the registry.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13429,7 +15152,8 @@ public final class RegistryServiceOuterClass {
     java.lang.String getPassword();
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the registry.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13525,6 +15249,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to add a password for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -13540,6 +15269,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to add a password for.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -13560,7 +15294,8 @@ public final class RegistryServiceOuterClass {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the registry.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13579,7 +15314,8 @@ public final class RegistryServiceOuterClass {
     }
     /**
      * <pre>
-     * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+     * Passwords for the registry.
+     * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
      * </pre>
      *
      * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -13920,6 +15656,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to add a password for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -13935,6 +15676,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to add a password for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13951,6 +15697,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to add a password for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -13964,6 +15715,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to add a password for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -13973,6 +15729,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to add a password for.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -13990,7 +15751,8 @@ public final class RegistryServiceOuterClass {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the registry.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14009,7 +15771,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the registry.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14029,7 +15792,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the registry.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14046,7 +15810,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the registry.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14059,7 +15824,8 @@ public final class RegistryServiceOuterClass {
       }
       /**
        * <pre>
-       * must contain at least 3 of 4 ASCII character groups: upper case latin, lower case latin, numbers and special symbols
+       * Passwords for the registry.
+       * The password must contain at least three character categories among the following: upper case latin, lower case latin, numbers and special symbols.
        * </pre>
        *
        * <code>string password = 2 [(.yandex.cloud.length) = "&gt;=14"];</code>
@@ -14133,20 +15899,36 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry for which the password is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry for which the password is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * ID of a password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of a password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -14240,6 +16022,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry for which the password is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public java.lang.String getRegistryId() {
@@ -14255,6 +16041,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry for which the password is being added.
+     * </pre>
+     *
      * <code>string registry_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -14274,6 +16064,10 @@ public final class RegistryServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of a password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     public java.lang.String getPasswordId() {
@@ -14289,6 +16083,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of a password that is being added.
+     * </pre>
+     *
      * <code>string password_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -14627,6 +16425,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry for which the password is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public java.lang.String getRegistryId() {
@@ -14642,6 +16444,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry for which the password is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -14658,6 +16464,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry for which the password is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryId(
@@ -14671,6 +16481,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry for which the password is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder clearRegistryId() {
@@ -14680,6 +16494,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry for which the password is being added.
+       * </pre>
+       *
        * <code>string registry_id = 1;</code>
        */
       public Builder setRegistryIdBytes(
@@ -14696,6 +16514,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of a password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public java.lang.String getPasswordId() {
@@ -14711,6 +16533,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -14727,6 +16553,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder setPasswordId(
@@ -14740,6 +16570,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder clearPasswordId() {
@@ -14749,6 +16583,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a password that is being added.
+       * </pre>
+       *
        * <code>string password_id = 2;</code>
        */
       public Builder setPasswordIdBytes(
@@ -14820,20 +16658,40 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to delete a password for.
+     * To get a registry ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to delete a password for.
+     * To get a registry ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -14927,6 +16785,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to delete a password for.
+     * To get a registry ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -14942,6 +16805,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to delete a password for.
+     * To get a registry ID make a [DeviceService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -14961,6 +16829,11 @@ public final class RegistryServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getPasswordId() {
@@ -14976,6 +16849,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15314,6 +17192,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to delete a password for.
+       * To get a registry ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -15329,6 +17212,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete a password for.
+       * To get a registry ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15345,6 +17233,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to delete a password for.
+       * To get a registry ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -15358,6 +17251,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete a password for.
+       * To get a registry ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -15367,6 +17265,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to delete a password for.
+       * To get a registry ID make a [DeviceService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -15383,6 +17286,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getPasswordId() {
@@ -15398,6 +17306,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15414,6 +17327,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordId(
@@ -15427,6 +17345,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearPasswordId() {
@@ -15436,6 +17359,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordIdBytes(
@@ -15507,20 +17435,38 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of a registry for which the password is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of a registry for which the password is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getPasswordId();
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -15614,6 +17560,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of a registry for which the password is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -15629,6 +17579,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of a registry for which the password is being delete.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15648,6 +17602,11 @@ public final class RegistryServiceOuterClass {
     public static final int PASSWORD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object passwordId_;
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getPasswordId() {
@@ -15663,6 +17622,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password to delete.
+     * To get a password ID make a [RegistryService.ListPasswords] request.
+     * </pre>
+     *
      * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16001,6 +17965,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of a registry for which the password is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -16016,6 +17984,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a registry for which the password is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16032,6 +18004,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of a registry for which the password is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -16045,6 +18021,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a registry for which the password is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -16054,6 +18034,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of a registry for which the password is being delete.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -16070,6 +18054,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object passwordId_ = "";
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getPasswordId() {
@@ -16085,6 +18074,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16101,6 +18095,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordId(
@@ -16114,6 +18113,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearPasswordId() {
@@ -16123,6 +18127,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password to delete.
+       * To get a password ID make a [RegistryService.ListPasswords] request.
+       * </pre>
+       *
        * <code>string password_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setPasswordIdBytes(
@@ -16194,25 +18203,52 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list aliases for device topic.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to list aliases for device topic.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDeviceTopicAliasesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -16312,6 +18348,11 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to list aliases for device topic.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -16327,6 +18368,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list aliases for device topic.
+     * To get a registry ID make a [RegistryService.List] request.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16346,6 +18392,13 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDeviceTopicAliasesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -16355,6 +18408,11 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -16370,6 +18428,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -16726,6 +18789,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to list aliases for device topic.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -16741,6 +18809,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list aliases for device topic.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16757,6 +18830,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list aliases for device topic.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -16770,6 +18848,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list aliases for device topic.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -16779,6 +18862,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list aliases for device topic.
+       * To get a registry ID make a [RegistryService.List] request.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -16795,12 +18883,26 @@ public final class RegistryServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceTopicAliasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceTopicAliasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -16810,6 +18912,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDeviceTopicAliasesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -16821,6 +18930,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -16836,6 +18950,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -16852,6 +18971,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -16865,6 +18989,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -16874,6 +19003,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDeviceTopicAliasesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -16945,34 +19079,68 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> 
         getAliasesList();
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias getAliases(int index);
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     int getAliasesCount();
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder> 
         getAliasesOrBuilderList();
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder getAliasesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -17073,12 +19241,20 @@ public final class RegistryServiceOuterClass {
     public static final int ALIASES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> aliases_;
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> getAliasesList() {
       return aliases_;
     }
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder> 
@@ -17086,18 +19262,30 @@ public final class RegistryServiceOuterClass {
       return aliases_;
     }
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     public int getAliasesCount() {
       return aliases_.size();
     }
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias getAliases(int index) {
       return aliases_.get(index);
     }
     /**
+     * <pre>
+     * List of device aliases for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
      */
     public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder getAliasesOrBuilder(
@@ -17108,6 +19296,13 @@ public final class RegistryServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -17123,6 +19318,13 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -17514,6 +19716,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder> aliasesBuilder_;
 
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias> getAliasesList() {
@@ -17524,6 +19730,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public int getAliasesCount() {
@@ -17534,6 +19744,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias getAliases(int index) {
@@ -17544,6 +19758,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder setAliases(
@@ -17561,6 +19779,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder setAliases(
@@ -17575,6 +19797,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder addAliases(yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias value) {
@@ -17591,6 +19817,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder addAliases(
@@ -17608,6 +19838,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder addAliases(
@@ -17622,6 +19856,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder addAliases(
@@ -17636,6 +19874,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder addAllAliases(
@@ -17651,6 +19893,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder clearAliases() {
@@ -17664,6 +19910,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public Builder removeAliases(int index) {
@@ -17677,6 +19927,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder getAliasesBuilder(
@@ -17684,6 +19938,10 @@ public final class RegistryServiceOuterClass {
         return getAliasesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder getAliasesOrBuilder(
@@ -17694,6 +19952,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAliasOrBuilder> 
@@ -17705,6 +19967,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder addAliasesBuilder() {
@@ -17712,6 +19978,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder addAliasesBuilder(
@@ -17720,6 +19990,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of device aliases for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.iot.devices.v1.DeviceAlias aliases = 1;</code>
        */
       public java.util.List<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.DeviceAlias.Builder> 
@@ -17743,6 +20017,13 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -17758,6 +20039,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -17774,6 +20062,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -17787,6 +20082,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -17796,6 +20098,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDeviceTopicAliasesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDeviceTopicAliasesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -17867,35 +20176,70 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the registry to list operations for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry to list operations for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListRegistryOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Registry.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Registry.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -18002,6 +20346,10 @@ public final class RegistryServiceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry to list operations for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getRegistryId() {
@@ -18017,6 +20365,10 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry to list operations for.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -18036,6 +20388,13 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than `page_size`, the service returns a [ListRegistryOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -18045,6 +20404,11 @@ public final class RegistryServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -18060,6 +20424,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -18079,6 +20448,11 @@ public final class RegistryServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Registry.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -18094,6 +20468,11 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * Currently you can use filtering only on [Registry.name] field.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -18467,6 +20846,10 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry to list operations for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRegistryId() {
@@ -18482,6 +20865,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list operations for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -18498,6 +20885,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry to list operations for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRegistryId(
@@ -18511,6 +20902,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list operations for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRegistryId() {
@@ -18520,6 +20915,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry to list operations for.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRegistryIdBytes(
@@ -18536,12 +20935,26 @@ public final class RegistryServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistryOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistryOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -18551,6 +20964,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `page_size`, the service returns a [ListRegistryOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -18562,6 +20982,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -18577,6 +21002,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -18593,6 +21023,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -18606,6 +21041,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -18615,6 +21055,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListRegistryOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -18631,6 +21076,11 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Registry.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -18646,6 +21096,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Registry.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -18662,6 +21117,11 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Registry.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -18675,6 +21135,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Registry.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -18684,6 +21149,11 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * Currently you can use filtering only on [Registry.name] field.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -18755,34 +21225,68 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -18883,12 +21387,20 @@ public final class RegistryServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -18896,18 +21408,30 @@ public final class RegistryServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified registry.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -18918,6 +21442,13 @@ public final class RegistryServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -18933,6 +21464,13 @@ public final class RegistryServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -19324,6 +21862,10 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -19334,6 +21876,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -19344,6 +21890,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -19354,6 +21904,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -19371,6 +21925,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -19385,6 +21943,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -19401,6 +21963,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -19418,6 +21984,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -19432,6 +22002,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -19446,6 +22020,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -19461,6 +22039,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -19474,6 +22056,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -19487,6 +22073,10 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -19494,6 +22084,10 @@ public final class RegistryServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -19504,6 +22098,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -19515,6 +22113,10 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -19522,6 +22124,10 @@ public final class RegistryServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -19530,6 +22136,10 @@ public final class RegistryServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified registry.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -19553,6 +22163,13 @@ public final class RegistryServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -19568,6 +22185,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -19584,6 +22208,13 @@ public final class RegistryServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -19597,6 +22228,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -19606,6 +22244,13 @@ public final class RegistryServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListRegistryOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListRegistryOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(

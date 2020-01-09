@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing PlacementGroup resources.
+ * A set of methods for managing placement groups.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -279,7 +279,7 @@ public final class PlacementGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing PlacementGroup resources.
+   * A set of methods for managing placement groups.
    * </pre>
    */
   public static abstract class PlacementGroupServiceImplBase implements io.grpc.BindableService {
@@ -287,6 +287,7 @@ public final class PlacementGroupServiceGrpc {
     /**
      * <pre>
      * Returns the specified placement group.
+     * To get the list of all available placement groups, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request,
@@ -411,7 +412,7 @@ public final class PlacementGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing PlacementGroup resources.
+   * A set of methods for managing placement groups.
    * </pre>
    */
   public static final class PlacementGroupServiceStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceStub> {
@@ -433,6 +434,7 @@ public final class PlacementGroupServiceGrpc {
     /**
      * <pre>
      * Returns the specified placement group.
+     * To get the list of all available placement groups, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request,
@@ -510,7 +512,7 @@ public final class PlacementGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing PlacementGroup resources.
+   * A set of methods for managing placement groups.
    * </pre>
    */
   public static final class PlacementGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceBlockingStub> {
@@ -532,6 +534,7 @@ public final class PlacementGroupServiceGrpc {
     /**
      * <pre>
      * Returns the specified placement group.
+     * To get the list of all available placement groups, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup get(yandex.cloud.api.compute.v1.PlacementGroupServiceOuterClass.GetPlacementGroupRequest request) {
@@ -602,7 +605,7 @@ public final class PlacementGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing PlacementGroup resources.
+   * A set of methods for managing placement groups.
    * </pre>
    */
   public static final class PlacementGroupServiceFutureStub extends io.grpc.stub.AbstractStub<PlacementGroupServiceFutureStub> {
@@ -624,6 +627,7 @@ public final class PlacementGroupServiceGrpc {
     /**
      * <pre>
      * Returns the specified placement group.
+     * To get the list of all available placement groups, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> get(

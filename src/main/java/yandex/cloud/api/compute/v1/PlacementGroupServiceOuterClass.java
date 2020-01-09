@@ -21,7 +21,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the placement group to return.
-     * To get the placement group ID, use [PlacementGroupService.List] request.
+     * To get a placement group ID make a [PlacementGroupService.List] request.
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
@@ -30,7 +30,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the placement group to return.
-     * To get the placement group ID, use [PlacementGroupService.List] request.
+     * To get a placement group ID make a [PlacementGroupService.List] request.
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
@@ -121,7 +121,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the placement group to return.
-     * To get the placement group ID, use [PlacementGroupService.List] request.
+     * To get a placement group ID make a [PlacementGroupService.List] request.
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
@@ -141,7 +141,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the placement group to return.
-     * To get the placement group ID, use [PlacementGroupService.List] request.
+     * To get a placement group ID make a [PlacementGroupService.List] request.
      * </pre>
      *
      * <code>string placement_group_id = 1;</code>
@@ -467,7 +467,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the placement group to return.
-       * To get the placement group ID, use [PlacementGroupService.List] request.
+       * To get a placement group ID make a [PlacementGroupService.List] request.
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
@@ -487,7 +487,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the placement group to return.
-       * To get the placement group ID, use [PlacementGroupService.List] request.
+       * To get a placement group ID make a [PlacementGroupService.List] request.
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
@@ -508,7 +508,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the placement group to return.
-       * To get the placement group ID, use [PlacementGroupService.List] request.
+       * To get a placement group ID make a [PlacementGroupService.List] request.
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
@@ -526,7 +526,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the placement group to return.
-       * To get the placement group ID, use [PlacementGroupService.List] request.
+       * To get a placement group ID make a [PlacementGroupService.List] request.
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
@@ -540,7 +540,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the placement group to return.
-       * To get the placement group ID, use [PlacementGroupService.List] request.
+       * To get a placement group ID make a [PlacementGroupService.List] request.
        * </pre>
        *
        * <code>string placement_group_id = 1;</code>
@@ -616,7 +616,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list placement groups in.
-     * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -625,7 +625,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list placement groups in.
-     * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -790,7 +790,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list placement groups in.
-     * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -810,7 +810,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list placement groups in.
-     * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -1294,7 +1294,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list placement groups in.
-       * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1314,7 +1314,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list placement groups in.
-       * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1335,7 +1335,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list placement groups in.
-       * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1353,7 +1353,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list placement groups in.
-       * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1367,7 +1367,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list placement groups in.
-       * To get the folder ID, use [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -1682,7 +1682,7 @@ public final class PlacementGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1691,7 +1691,7 @@ public final class PlacementGroupServiceOuterClass {
         getPlacementGroupsList();
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1699,7 +1699,7 @@ public final class PlacementGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup getPlacementGroups(int index);
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1707,7 +1707,7 @@ public final class PlacementGroupServiceOuterClass {
     int getPlacementGroupsCount();
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1716,7 +1716,7 @@ public final class PlacementGroupServiceOuterClass {
         getPlacementGroupsOrBuilderList();
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1726,12 +1726,10 @@ public final class PlacementGroupServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListPlacementGroupsRequest.page_size], use
-     * [next_page_token] as the value
-     * for the [ListPlacementGroupsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1739,12 +1737,10 @@ public final class PlacementGroupServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListPlacementGroupsRequest.page_size], use
-     * [next_page_token] as the value
-     * for the [ListPlacementGroupsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1848,7 +1844,7 @@ public final class PlacementGroupServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.PlacementGroupOuterClass.PlacementGroup> placementGroups_;
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1858,7 +1854,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1869,7 +1865,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1879,7 +1875,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1889,7 +1885,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Lists placement groups for the specified folder.
+     * Lists placement groups in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -1903,12 +1899,10 @@ public final class PlacementGroupServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListPlacementGroupsRequest.page_size], use
-     * [next_page_token] as the value
-     * for the [ListPlacementGroupsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1927,12 +1921,10 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListPlacementGroupsRequest.page_size], use
-     * [next_page_token] as the value
-     * for the [ListPlacementGroupsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2327,7 +2319,7 @@ public final class PlacementGroupServiceOuterClass {
 
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2341,7 +2333,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2355,7 +2347,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2369,7 +2361,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2390,7 +2382,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2408,7 +2400,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2428,7 +2420,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2449,7 +2441,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2467,7 +2459,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2485,7 +2477,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2504,7 +2496,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2521,7 +2513,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2538,7 +2530,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2549,7 +2541,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2563,7 +2555,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2578,7 +2570,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2589,7 +2581,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2601,7 +2593,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Lists placement groups for the specified folder.
+       * Lists placement groups in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.PlacementGroup placement_groups = 1;</code>
@@ -2628,12 +2620,10 @@ public final class PlacementGroupServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListPlacementGroupsRequest.page_size], use
-       * [next_page_token] as the value
-       * for the [ListPlacementGroupsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2652,12 +2642,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListPlacementGroupsRequest.page_size], use
-       * [next_page_token] as the value
-       * for the [ListPlacementGroupsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2677,12 +2665,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListPlacementGroupsRequest.page_size], use
-       * [next_page_token] as the value
-       * for the [ListPlacementGroupsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2699,12 +2685,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListPlacementGroupsRequest.page_size], use
-       * [next_page_token] as the value
-       * for the [ListPlacementGroupsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2717,12 +2701,10 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListPlacementGroupsRequest.page_size], use
-       * [next_page_token] as the value
-       * for the [ListPlacementGroupsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListPlacementGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListPlacementGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2798,7 +2780,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a placement group in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -2807,7 +2789,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a placement group in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -2907,7 +2889,7 @@ public final class PlacementGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -2915,7 +2897,7 @@ public final class PlacementGroupServiceOuterClass {
     boolean hasSpreadPlacementStrategy();
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -2923,7 +2905,7 @@ public final class PlacementGroupServiceOuterClass {
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy getSpreadPlacementStrategy();
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -3105,7 +3087,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a placement group in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3125,7 +3107,7 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a placement group in.
-     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -3323,7 +3305,7 @@ public final class PlacementGroupServiceOuterClass {
     public static final int SPREAD_PLACEMENT_STRATEGY_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -3333,7 +3315,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -3346,7 +3328,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -3812,7 +3794,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a placement group in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -3832,7 +3814,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a placement group in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -3853,7 +3835,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a placement group in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -3871,7 +3853,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a placement group in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -3885,7 +3867,7 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a placement group in.
-       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get a folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -4235,7 +4217,7 @@ public final class PlacementGroupServiceOuterClass {
           yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategyOrBuilder> spreadPlacementStrategyBuilder_;
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4245,7 +4227,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4265,7 +4247,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4285,7 +4267,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4303,7 +4285,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4329,7 +4311,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4352,7 +4334,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4362,7 +4344,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -4379,7 +4361,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 5;</code>
@@ -5067,7 +5049,7 @@ public final class PlacementGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5075,7 +5057,7 @@ public final class PlacementGroupServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5083,7 +5065,7 @@ public final class PlacementGroupServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5364,7 +5346,7 @@ public final class PlacementGroupServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5374,7 +5356,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5384,7 +5366,7 @@ public final class PlacementGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+     * Field mask that specifies which fields of the PlacementGroup resource should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6092,7 +6074,7 @@ public final class PlacementGroupServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6102,7 +6084,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6116,7 +6098,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6136,7 +6118,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6154,7 +6136,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6176,7 +6158,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6194,7 +6176,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6206,7 +6188,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6221,7 +6203,7 @@ public final class PlacementGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the PlacementGroup resource are going to be updated.
+       * Field mask that specifies which fields of the PlacementGroup resource should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>

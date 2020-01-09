@@ -20,7 +20,7 @@ public final class PlacementGroupOuterClass {
 
     /**
      * <pre>
-     * ID of the placement group.
+     * ID of the placement group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class PlacementGroupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the placement group.
+     * ID of the placement group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -56,7 +56,7 @@ public final class PlacementGroupOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -64,7 +64,7 @@ public final class PlacementGroupOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -72,7 +72,7 @@ public final class PlacementGroupOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -101,7 +101,7 @@ public final class PlacementGroupOuterClass {
 
     /**
      * <pre>
-     * Description of the placement group.
+     * Description of the placement group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -109,7 +109,7 @@ public final class PlacementGroupOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the placement group.
+     * Description of the placement group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -119,7 +119,7 @@ public final class PlacementGroupOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -127,7 +127,7 @@ public final class PlacementGroupOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -142,7 +142,7 @@ public final class PlacementGroupOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -151,7 +151,7 @@ public final class PlacementGroupOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -162,7 +162,7 @@ public final class PlacementGroupOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -173,7 +173,8 @@ public final class PlacementGroupOuterClass {
 
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -181,7 +182,8 @@ public final class PlacementGroupOuterClass {
     boolean hasSpreadPlacementStrategy();
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -189,7 +191,8 @@ public final class PlacementGroupOuterClass {
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy getSpreadPlacementStrategy();
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -390,7 +393,7 @@ public final class PlacementGroupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the placement group.
+     * ID of the placement group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -409,7 +412,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * ID of the placement group.
+     * ID of the placement group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -474,7 +477,7 @@ public final class PlacementGroupOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -484,7 +487,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -494,7 +497,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -551,7 +554,7 @@ public final class PlacementGroupOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the placement group.
+     * Description of the placement group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -570,7 +573,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Description of the placement group.
+     * Description of the placement group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -617,7 +620,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -637,7 +640,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -648,7 +651,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -664,7 +667,7 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Placement group labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -684,7 +687,8 @@ public final class PlacementGroupOuterClass {
     public static final int SPREAD_PLACEMENT_STRATEGY_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -694,7 +698,8 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -707,7 +712,8 @@ public final class PlacementGroupOuterClass {
     }
     /**
      * <pre>
-     * Distribute instances over distinct failure domains.
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1219,7 +1225,7 @@ public final class PlacementGroupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the placement group.
+       * ID of the placement group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1238,7 +1244,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the placement group.
+       * ID of the placement group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1258,7 +1264,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the placement group.
+       * ID of the placement group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1275,7 +1281,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the placement group.
+       * ID of the placement group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1288,7 +1294,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the placement group.
+       * ID of the placement group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1399,7 +1405,7 @@ public final class PlacementGroupOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1409,7 +1415,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1423,7 +1429,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1443,7 +1449,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1461,7 +1467,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1483,7 +1489,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1501,7 +1507,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1513,7 +1519,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1528,7 +1534,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1644,7 +1650,7 @@ public final class PlacementGroupOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the placement group.
+       * Description of the placement group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1663,7 +1669,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the placement group.
+       * Description of the placement group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1683,7 +1689,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the placement group.
+       * Description of the placement group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1700,7 +1706,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the placement group.
+       * Description of the placement group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1713,7 +1719,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the placement group.
+       * Description of the placement group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1758,7 +1764,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1778,7 +1784,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1789,7 +1795,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1805,7 +1811,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1829,7 +1835,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1852,7 +1858,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1868,7 +1874,7 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Placement group labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1885,7 +1891,8 @@ public final class PlacementGroupOuterClass {
           yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategy.Builder, yandex.cloud.api.compute.v1.PlacementGroupOuterClass.SpreadPlacementStrategyOrBuilder> spreadPlacementStrategyBuilder_;
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1895,7 +1902,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1915,7 +1923,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1935,7 +1944,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1953,7 +1963,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -1979,7 +1990,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -2002,7 +2014,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -2012,7 +2025,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -2029,7 +2043,8 @@ public final class PlacementGroupOuterClass {
       }
       /**
        * <pre>
-       * Distribute instances over distinct failure domains.
+       * Anti-affinity placement strategy (`spread`). Instances are distributed
+       * over distinct failure domains.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.SpreadPlacementStrategy spread_placement_strategy = 7;</code>
@@ -2110,6 +2125,13 @@ public final class PlacementGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Anti-affinity placement strategy (`spread`). Instances are distributed
+   * over distinct failure domains.
+   * This is an empty structure that must be passed to explicitly
+   * specify the required placement strategy.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.compute.v1.SpreadPlacementStrategy}
    */
   public  static final class SpreadPlacementStrategy extends
@@ -2325,6 +2347,13 @@ public final class PlacementGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Anti-affinity placement strategy (`spread`). Instances are distributed
+     * over distinct failure domains.
+     * This is an empty structure that must be passed to explicitly
+     * specify the required placement strategy.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.compute.v1.SpreadPlacementStrategy}
      */
     public static final class Builder extends

@@ -19,53 +19,97 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the device.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the registry that the device belongs to.
+     * </pre>
+     *
      * <code>string registry_id = 2;</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the registry that the device belongs to.
+     * </pre>
+     *
      * <code>string registry_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Name of the device. The name is unique within the registry.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the device. The name is unique within the registry.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the device. 0-256 characters long.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the device. 0-256 characters long.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     com.google.protobuf.ByteString
@@ -73,7 +117,8 @@ public final class DeviceOuterClass {
 
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -81,7 +126,8 @@ public final class DeviceOuterClass {
     int getTopicAliasesCount();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -96,7 +142,8 @@ public final class DeviceOuterClass {
     getTopicAliases();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -105,7 +152,8 @@ public final class DeviceOuterClass {
     getTopicAliasesMap();
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -116,7 +164,8 @@ public final class DeviceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -126,6 +175,10 @@ public final class DeviceOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * A device. For more information, see [Device](/docs/iot-core/concepts/index#device).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.Device}
    */
   public  static final class Device extends
@@ -266,6 +319,10 @@ public final class DeviceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the device.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -281,6 +338,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -300,6 +361,10 @@ public final class DeviceOuterClass {
     public static final int REGISTRY_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object registryId_;
     /**
+     * <pre>
+     * ID of the registry that the device belongs to.
+     * </pre>
+     *
      * <code>string registry_id = 2;</code>
      */
     public java.lang.String getRegistryId() {
@@ -315,6 +380,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the registry that the device belongs to.
+     * </pre>
+     *
      * <code>string registry_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -334,18 +403,30 @@ public final class DeviceOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -355,6 +436,10 @@ public final class DeviceOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the device. The name is unique within the registry.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public java.lang.String getName() {
@@ -370,6 +455,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the device. The name is unique within the registry.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -389,6 +478,10 @@ public final class DeviceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the device. 0-256 characters long.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public java.lang.String getDescription() {
@@ -404,6 +497,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the device. 0-256 characters long.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public com.google.protobuf.ByteString
@@ -448,7 +545,8 @@ public final class DeviceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -468,7 +566,8 @@ public final class DeviceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -479,7 +578,8 @@ public final class DeviceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -495,7 +595,8 @@ public final class DeviceOuterClass {
     }
     /**
      * <pre>
-     * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+     * Alias of a device topic.
+     * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -736,6 +837,10 @@ public final class DeviceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A device. For more information, see [Device](/docs/iot-core/concepts/index#device).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.Device}
      */
     public static final class Builder extends
@@ -951,6 +1056,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the device.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -966,6 +1075,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -982,6 +1095,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -995,6 +1112,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1004,6 +1125,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1020,6 +1145,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object registryId_ = "";
       /**
+       * <pre>
+       * ID of the registry that the device belongs to.
+       * </pre>
+       *
        * <code>string registry_id = 2;</code>
        */
       public java.lang.String getRegistryId() {
@@ -1035,6 +1164,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that the device belongs to.
+       * </pre>
+       *
        * <code>string registry_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1051,6 +1184,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry that the device belongs to.
+       * </pre>
+       *
        * <code>string registry_id = 2;</code>
        */
       public Builder setRegistryId(
@@ -1064,6 +1201,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that the device belongs to.
+       * </pre>
+       *
        * <code>string registry_id = 2;</code>
        */
       public Builder clearRegistryId() {
@@ -1073,6 +1214,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the registry that the device belongs to.
+       * </pre>
+       *
        * <code>string registry_id = 2;</code>
        */
       public Builder setRegistryIdBytes(
@@ -1091,12 +1236,20 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1107,6 +1260,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1123,6 +1280,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1137,6 +1298,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1155,6 +1320,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1169,6 +1338,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1177,6 +1350,10 @@ public final class DeviceOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1188,6 +1365,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1206,6 +1387,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the device. The name is unique within the registry.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public java.lang.String getName() {
@@ -1221,6 +1406,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name is unique within the registry.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1237,6 +1426,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the device. The name is unique within the registry.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setName(
@@ -1250,6 +1443,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name is unique within the registry.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder clearName() {
@@ -1259,6 +1456,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the device. The name is unique within the registry.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setNameBytes(
@@ -1275,6 +1476,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the device. 0-256 characters long.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public java.lang.String getDescription() {
@@ -1290,6 +1495,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device. 0-256 characters long.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public com.google.protobuf.ByteString
@@ -1306,6 +1515,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the device. 0-256 characters long.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescription(
@@ -1319,6 +1532,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device. 0-256 characters long.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder clearDescription() {
@@ -1328,6 +1545,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the device. 0-256 characters long.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescriptionBytes(
@@ -1370,7 +1591,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1390,7 +1612,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1401,7 +1624,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1417,7 +1641,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1441,7 +1666,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1464,7 +1690,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1480,7 +1707,8 @@ public final class DeviceOuterClass {
       }
       /**
        * <pre>
-       * map from alias to canonical topic name prefix, e.g. my/custom/alias -&gt; $device/abcdef/events
+       * Alias of a device topic.
+       * Alias is an alternate name of a device topic assigned by the user. Map alias to canonical topic name prefix, e.g. `my/custom/alias` match to `$device/abcdef/events`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; topic_aliases = 6;</code>
@@ -1550,49 +1778,89 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device that the certificate belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device that the certificate belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * SHA256 hash of the certificate.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     java.lang.String getFingerprint();
     /**
+     * <pre>
+     * SHA256 hash of the certificate.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
 
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     java.lang.String getCertificateData();
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     com.google.protobuf.ByteString
         getCertificateDataBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
+   * <pre>
+   * A device certificate. For more information, see [Managing device certificates](/docs/iot-core/operations/certificates/device-certificates).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceCertificate}
    */
   public  static final class DeviceCertificate extends
@@ -1700,6 +1968,10 @@ public final class DeviceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device that the certificate belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -1715,6 +1987,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device that the certificate belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -1734,6 +2010,10 @@ public final class DeviceOuterClass {
     public static final int FINGERPRINT_FIELD_NUMBER = 2;
     private volatile java.lang.Object fingerprint_;
     /**
+     * <pre>
+     * SHA256 hash of the certificate.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public java.lang.String getFingerprint() {
@@ -1749,6 +2029,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * SHA256 hash of the certificate.
+     * </pre>
+     *
      * <code>string fingerprint = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -1768,6 +2052,10 @@ public final class DeviceOuterClass {
     public static final int CERTIFICATE_DATA_FIELD_NUMBER = 3;
     private volatile java.lang.Object certificateData_;
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public java.lang.String getCertificateData() {
@@ -1783,6 +2071,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Public part of the certificate.
+     * </pre>
+     *
      * <code>string certificate_data = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -1802,18 +2094,30 @@ public final class DeviceOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2012,6 +2316,10 @@ public final class DeviceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A device certificate. For more information, see [Managing device certificates](/docs/iot-core/operations/certificates/device-certificates).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceCertificate}
      */
     public static final class Builder extends
@@ -2189,6 +2497,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device that the certificate belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -2204,6 +2516,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that the certificate belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2220,6 +2536,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that the certificate belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -2233,6 +2553,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that the certificate belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -2242,6 +2566,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that the certificate belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -2258,6 +2586,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object fingerprint_ = "";
       /**
+       * <pre>
+       * SHA256 hash of the certificate.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public java.lang.String getFingerprint() {
@@ -2273,6 +2605,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SHA256 hash of the certificate.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2289,6 +2625,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SHA256 hash of the certificate.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprint(
@@ -2302,6 +2642,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SHA256 hash of the certificate.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder clearFingerprint() {
@@ -2311,6 +2655,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SHA256 hash of the certificate.
+       * </pre>
+       *
        * <code>string fingerprint = 2;</code>
        */
       public Builder setFingerprintBytes(
@@ -2327,6 +2675,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object certificateData_ = "";
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public java.lang.String getCertificateData() {
@@ -2342,6 +2694,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -2358,6 +2714,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateData(
@@ -2371,6 +2731,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder clearCertificateData() {
@@ -2380,6 +2744,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public part of the certificate.
+       * </pre>
+       *
        * <code>string certificate_data = 3;</code>
        */
       public Builder setCertificateDataBytes(
@@ -2398,12 +2766,20 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -2414,6 +2790,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2430,6 +2810,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(
@@ -2444,6 +2828,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2462,6 +2850,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder clearCreatedAt() {
@@ -2476,6 +2868,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2484,6 +2880,10 @@ public final class DeviceOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2495,6 +2895,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2568,39 +2972,71 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the device that the password belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     java.lang.String getDeviceId();
     /**
+     * <pre>
+     * ID of the device that the password belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
+     * <pre>
+     * ID of the password.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the password.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
+   * <pre>
+   * A device password.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.iot.devices.v1.DevicePassword}
    */
   public  static final class DevicePassword extends
@@ -2701,6 +3137,10 @@ public final class DeviceOuterClass {
     public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
+     * <pre>
+     * ID of the device that the password belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public java.lang.String getDeviceId() {
@@ -2716,6 +3156,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the device that the password belongs to.
+     * </pre>
+     *
      * <code>string device_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2735,6 +3179,10 @@ public final class DeviceOuterClass {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the password.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      */
     public java.lang.String getId() {
@@ -2750,6 +3198,10 @@ public final class DeviceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the password.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2769,18 +3221,30 @@ public final class DeviceOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2969,6 +3433,10 @@ public final class DeviceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A device password.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.iot.devices.v1.DevicePassword}
      */
     public static final class Builder extends
@@ -3139,6 +3607,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
+       * <pre>
+       * ID of the device that the password belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public java.lang.String getDeviceId() {
@@ -3154,6 +3626,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that the password belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3170,6 +3646,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the device that the password belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceId(
@@ -3183,6 +3663,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that the password belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder clearDeviceId() {
@@ -3192,6 +3676,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the device that the password belongs to.
+       * </pre>
+       *
        * <code>string device_id = 1;</code>
        */
       public Builder setDeviceIdBytes(
@@ -3208,6 +3696,10 @@ public final class DeviceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the password.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        */
       public java.lang.String getId() {
@@ -3223,6 +3715,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3239,6 +3735,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the password.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        */
       public Builder setId(
@@ -3252,6 +3752,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        */
       public Builder clearId() {
@@ -3261,6 +3765,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the password.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        */
       public Builder setIdBytes(
@@ -3279,12 +3787,20 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -3295,6 +3811,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3311,6 +3831,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -3325,6 +3849,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -3343,6 +3871,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -3357,6 +3889,10 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -3365,6 +3901,10 @@ public final class DeviceOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -3376,6 +3916,10 @@ public final class DeviceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
