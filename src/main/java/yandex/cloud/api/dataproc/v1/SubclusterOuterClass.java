@@ -33,7 +33,7 @@ public final class SubclusterOuterClass {
      * * Hive: Server, Metastore, HCatalog
      * * Spark History Server
      * * Zeppelin
-     * * Zookeeper
+     * * ZooKeeper
      * </pre>
      *
      * <code>MASTERNODE = 1;</code>
@@ -43,10 +43,10 @@ public final class SubclusterOuterClass {
      * <pre>
      * The subcluster is a DATANODE in a Data Proc cluster.
      * DATANODE can run the following services, depending on the requested components:
-     * * HDFS DataNode,
-     * * YARN NodeManager,
-     * * HBase RegionServer,
-     * * Spark libraries.
+     * * HDFS DataNode
+     * * YARN NodeManager
+     * * HBase RegionServer
+     * * Spark libraries
      * </pre>
      *
      * <code>DATANODE = 2;</code>
@@ -56,8 +56,8 @@ public final class SubclusterOuterClass {
      * <pre>
      * The subcluster is a COMPUTENODE in a Data Proc cluster.
      * COMPUTENODE can run the following services, depending on the requested components:
-     * * YARN NodeManager.
-     * * Spark libraries.
+     * * YARN NodeManager
+     * * Spark libraries
      * </pre>
      *
      * <code>COMPUTENODE = 3;</code>
@@ -80,7 +80,7 @@ public final class SubclusterOuterClass {
      * * Hive: Server, Metastore, HCatalog
      * * Spark History Server
      * * Zeppelin
-     * * Zookeeper
+     * * ZooKeeper
      * </pre>
      *
      * <code>MASTERNODE = 1;</code>
@@ -90,10 +90,10 @@ public final class SubclusterOuterClass {
      * <pre>
      * The subcluster is a DATANODE in a Data Proc cluster.
      * DATANODE can run the following services, depending on the requested components:
-     * * HDFS DataNode,
-     * * YARN NodeManager,
-     * * HBase RegionServer,
-     * * Spark libraries.
+     * * HDFS DataNode
+     * * YARN NodeManager
+     * * HBase RegionServer
+     * * Spark libraries
      * </pre>
      *
      * <code>DATANODE = 2;</code>
@@ -103,8 +103,8 @@ public final class SubclusterOuterClass {
      * <pre>
      * The subcluster is a COMPUTENODE in a Data Proc cluster.
      * COMPUTENODE can run the following services, depending on the requested components:
-     * * YARN NodeManager.
-     * * Spark libraries.
+     * * YARN NodeManager
+     * * Spark libraries
      * </pre>
      *
      * <code>COMPUTENODE = 3;</code>
@@ -2119,7 +2119,7 @@ public final class SubclusterOuterClass {
   }
   /**
    * <pre>
-   * A Data Proc host resource. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+   * A Data Proc host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Host}
@@ -2604,7 +2604,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * A Data Proc host resource. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+     * A Data Proc host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Host}

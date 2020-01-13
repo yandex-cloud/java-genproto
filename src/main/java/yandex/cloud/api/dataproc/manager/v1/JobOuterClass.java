@@ -20,7 +20,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
+     * Unique ID of the Data Proc job.
      * This ID is assigned by MDB in the process of creating Data Proc job.
      * </pre>
      *
@@ -29,7 +29,7 @@ public final class JobOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
+     * Unique ID of the Data Proc job.
      * This ID is assigned by MDB in the process of creating Data Proc job.
      * </pre>
      *
@@ -40,7 +40,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -48,7 +48,7 @@ public final class JobOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -638,7 +638,7 @@ public final class JobOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
+     * Unique ID of the Data Proc job.
      * This ID is assigned by MDB in the process of creating Data Proc job.
      * </pre>
      *
@@ -658,7 +658,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
+     * Unique ID of the Data Proc job.
      * This ID is assigned by MDB in the process of creating Data Proc job.
      * </pre>
      *
@@ -682,7 +682,7 @@ public final class JobOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -701,7 +701,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1578,7 +1578,7 @@ public final class JobOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
+       * Unique ID of the Data Proc job.
        * This ID is assigned by MDB in the process of creating Data Proc job.
        * </pre>
        *
@@ -1598,7 +1598,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
+       * Unique ID of the Data Proc job.
        * This ID is assigned by MDB in the process of creating Data Proc job.
        * </pre>
        *
@@ -1619,7 +1619,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
+       * Unique ID of the Data Proc job.
        * This ID is assigned by MDB in the process of creating Data Proc job.
        * </pre>
        *
@@ -1637,7 +1637,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
+       * Unique ID of the Data Proc job.
        * This ID is assigned by MDB in the process of creating Data Proc job.
        * </pre>
        *
@@ -1651,7 +1651,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
+       * Unique ID of the Data Proc job.
        * This ID is assigned by MDB in the process of creating Data Proc job.
        * </pre>
        *
@@ -1672,7 +1672,7 @@ public final class JobOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1691,7 +1691,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1711,7 +1711,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1728,7 +1728,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1741,7 +1741,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>

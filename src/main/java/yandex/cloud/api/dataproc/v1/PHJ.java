@@ -38,7 +38,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -46,7 +46,7 @@ public final class PHJ {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -507,7 +507,7 @@ public final class PHJ {
       ERROR(4),
       /**
        * <pre>
-       * Job is finished
+       * Job is finished.
        * </pre>
        *
        * <code>DONE = 5;</code>
@@ -554,7 +554,7 @@ public final class PHJ {
       public static final int ERROR_VALUE = 4;
       /**
        * <pre>
-       * Job is finished
+       * Job is finished.
        * </pre>
        *
        * <code>DONE = 5;</code>
@@ -726,7 +726,7 @@ public final class PHJ {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -745,7 +745,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Unique ID of the Data Proc cluster.
+     * ID of the Data Proc cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1759,7 +1759,7 @@ public final class PHJ {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1778,7 +1778,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1798,7 +1798,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1815,7 +1815,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -1828,7 +1828,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc cluster.
+       * ID of the Data Proc cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -5706,7 +5706,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the `main` class for the job.
+     * The HCFS URI of the JAR file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -5714,7 +5714,7 @@ public final class PHJ {
     java.lang.String getMainJarFileUri();
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the `main` class for the job.
+     * The HCFS URI of the JAR file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -6183,7 +6183,7 @@ public final class PHJ {
     private volatile java.lang.Object mainJarFileUri_;
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the `main` class for the job.
+     * The HCFS URI of the JAR file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -6202,7 +6202,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * The HCFS URI of the jar file containing the `main` class for the job.
+     * The HCFS URI of the JAR file containing the `main` class for the job.
      * </pre>
      *
      * <code>string main_jar_file_uri = 6;</code>
@@ -7455,7 +7455,7 @@ public final class PHJ {
       private java.lang.Object mainJarFileUri_ = "";
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the `main` class for the job.
+       * The HCFS URI of the JAR file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7474,7 +7474,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the `main` class for the job.
+       * The HCFS URI of the JAR file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7494,7 +7494,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the `main` class for the job.
+       * The HCFS URI of the JAR file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7511,7 +7511,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the `main` class for the job.
+       * The HCFS URI of the JAR file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>
@@ -7524,7 +7524,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * The HCFS URI of the jar file containing the `main` class for the job.
+       * The HCFS URI of the JAR file containing the `main` class for the job.
        * </pre>
        *
        * <code>string main_jar_file_uri = 6;</code>

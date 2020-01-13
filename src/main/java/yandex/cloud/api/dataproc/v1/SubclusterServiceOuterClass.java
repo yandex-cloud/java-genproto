@@ -8234,7 +8234,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the ubcluster resource that is being to deleted.
+     * ID of the subcluster that is being deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8242,7 +8242,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the ubcluster resource that is being to deleted.
+     * ID of the subcluster that is being deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8381,7 +8381,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the ubcluster resource that is being to deleted.
+     * ID of the subcluster that is being deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8400,7 +8400,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the ubcluster resource that is being to deleted.
+     * ID of the subcluster that is being deleted.
      * </pre>
      *
      * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8831,7 +8831,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the ubcluster resource that is being to deleted.
+       * ID of the subcluster that is being deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8850,7 +8850,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ubcluster resource that is being to deleted.
+       * ID of the subcluster that is being deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8870,7 +8870,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ubcluster resource that is being to deleted.
+       * ID of the subcluster that is being deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8887,7 +8887,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ubcluster resource that is being to deleted.
+       * ID of the subcluster that is being deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8900,7 +8900,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ubcluster resource that is being to deleted.
+       * ID of the subcluster that is being deleted.
        * </pre>
        *
        * <code>string subcluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>

@@ -4459,7 +4459,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4470,7 +4470,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4488,7 +4488,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4500,7 +4500,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4514,7 +4514,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -4993,7 +4993,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5016,7 +5016,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5030,7 +5030,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5049,7 +5049,7 @@ public final class ClusterOuterClass {
      * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
      * the service and the property.
      * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-     * in `/etc/hadoop/conf/hdfs-site.xml`.
+     * in the file `/etc/hadoop/conf/hdfs-site.xml`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5726,7 +5726,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5749,7 +5749,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5763,7 +5763,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5782,7 +5782,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5809,7 +5809,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5835,7 +5835,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
@@ -5854,7 +5854,7 @@ public final class ClusterOuterClass {
        * Properties set for all hosts in `*-site.xml` configurations. The key should indicate
        * the service and the property.
        * For example, use the key 'hdfs:dfs.replication' to set the `dfs.replication` property
-       * in `/etc/hadoop/conf/hdfs-site.xml`.
+       * in the file `/etc/hadoop/conf/hdfs-site.xml`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 2;</code>
