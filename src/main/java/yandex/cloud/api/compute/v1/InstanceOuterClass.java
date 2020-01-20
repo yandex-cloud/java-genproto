@@ -604,7 +604,7 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -612,7 +612,7 @@ public final class InstanceOuterClass {
     boolean hasNetworkSettings();
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -620,7 +620,7 @@ public final class InstanceOuterClass {
     yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkSettings getNetworkSettings();
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -1987,7 +1987,7 @@ public final class InstanceOuterClass {
     private yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkSettings networkSettings_;
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -1997,7 +1997,7 @@ public final class InstanceOuterClass {
     }
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -2007,7 +2007,7 @@ public final class InstanceOuterClass {
     }
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Settings
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5178,7 +5178,7 @@ public final class InstanceOuterClass {
           yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkSettingsOrBuilder> networkSettingsBuilder_;
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5188,7 +5188,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5202,7 +5202,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5222,7 +5222,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5240,7 +5240,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5262,7 +5262,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5280,7 +5280,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5292,7 +5292,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -5307,7 +5307,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Settings
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings network_settings = 19;</code>
@@ -10907,7 +10907,7 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Type
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -10915,7 +10915,7 @@ public final class InstanceOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Type
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11144,7 +11144,7 @@ public final class InstanceOuterClass {
     private int type_;
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Type
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11154,7 +11154,7 @@ public final class InstanceOuterClass {
     }
     /**
      * <pre>
-     * Do not specify this field, network settings are not supported yet.
+     * Network Type
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11470,7 +11470,7 @@ public final class InstanceOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Type
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11480,7 +11480,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Type
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11492,7 +11492,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Type
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11504,7 +11504,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Type
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
@@ -11520,7 +11520,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Do not specify this field, network settings are not supported yet.
+       * Network Type
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.NetworkSettings.Type type = 1;</code>
