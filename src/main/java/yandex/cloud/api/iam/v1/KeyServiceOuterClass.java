@@ -4857,6 +4857,1614 @@ public final class KeyServiceOuterClass {
 
   }
 
+  public interface UpdateKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.UpdateKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Key resource to update.
+     * To get key pair ID, use a [Service.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getKeyId();
+    /**
+     * <pre>
+     * ID of the Key resource to update.
+     * To get key pair ID, use a [Service.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Description of the key pair.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the key pair.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.UpdateKeyRequest}
+   */
+  public  static final class UpdateKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.UpdateKeyRequest)
+      UpdateKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateKeyRequest.newBuilder() to construct.
+    private UpdateKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateKeyRequest() {
+      keyId_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateKeyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              keyId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.class, yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.Builder.class);
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object keyId_;
+    /**
+     * <pre>
+     * ID of the Key resource to update.
+     * To get key pair ID, use a [Service.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Key resource to update.
+     * To get key pair ID, use a [Service.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Key resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the key pair.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the key pair.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest other = (yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest) obj;
+
+      boolean result = true;
+      result = result && getKeyId()
+          .equals(other.getKeyId());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.UpdateKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.UpdateKeyRequest)
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.class, yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        keyId_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest build() {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest buildPartial() {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest result = new yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest(this);
+        result.keyId_ = keyId_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest) {
+          return mergeFrom((yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest other) {
+        if (other == yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.getDefaultInstance()) return this;
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <pre>
+       * ID of the Key resource to update.
+       * To get key pair ID, use a [Service.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Key resource to update.
+       * To get key pair ID, use a [Service.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Key resource to update.
+       * To get key pair ID, use a [Service.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Key resource to update.
+       * To get key pair ID, use a [Service.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearKeyId() {
+        
+        keyId_ = getDefaultInstance().getKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Key resource to update.
+       * To get key pair ID, use a [Service.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Key resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the key pair.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the key pair.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the key pair.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the key pair.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the key pair.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.UpdateKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.UpdateKeyRequest)
+    private static final yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest();
+    }
+
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateKeyRequest>() {
+      @java.lang.Override
+      public UpdateKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateKeyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateKeyMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.UpdateKeyMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Key resource that is being updated.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    java.lang.String getKeyId();
+    /**
+     * <pre>
+     * ID of the Key resource that is being updated.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.UpdateKeyMetadata}
+   */
+  public  static final class UpdateKeyMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.UpdateKeyMetadata)
+      UpdateKeyMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateKeyMetadata.newBuilder() to construct.
+    private UpdateKeyMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateKeyMetadata() {
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateKeyMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              keyId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.class, yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.Builder.class);
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object keyId_;
+    /**
+     * <pre>
+     * ID of the Key resource that is being updated.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Key resource that is being updated.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata other = (yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata) obj;
+
+      boolean result = true;
+      result = result && getKeyId()
+          .equals(other.getKeyId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.UpdateKeyMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.UpdateKeyMetadata)
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.class, yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        keyId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata build() {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata buildPartial() {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata result = new yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata(this);
+        result.keyId_ = keyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata) {
+          return mergeFrom((yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata other) {
+        if (other == yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata.getDefaultInstance()) return this;
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <pre>
+       * ID of the Key resource that is being updated.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Key resource that is being updated.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Key resource that is being updated.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Key resource that is being updated.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder clearKeyId() {
+        
+        keyId_ = getDefaultInstance().getKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Key resource that is being updated.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.UpdateKeyMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.UpdateKeyMetadata)
+    private static final yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata();
+    }
+
+    public static yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateKeyMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateKeyMetadata>() {
+      @java.lang.Override
+      public UpdateKeyMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateKeyMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateKeyMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateKeyMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteKeyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.DeleteKeyRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8033,6 +9641,16 @@ public final class KeyServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_CreateKeyResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_DeleteKeyRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8063,53 +9681,62 @@ public final class KeyServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/iam/v1/key_service.proto\022" +
       "\023yandex.cloud.iam.v1\032\034google/api/annotat" +
-      "ions.proto\032\035yandex/cloud/iam/v1/key.prot" +
-      "o\032 yandex/cloud/api/operation.proto\032&yan" +
-      "dex/cloud/operation/operation.proto\032\035yan" +
-      "dex/cloud/validation.proto\"]\n\rGetKeyRequ" +
-      "est\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\006for" +
-      "mat\030\002 \001(\0162\036.yandex.cloud.iam.v1.KeyForma" +
-      "t\"\245\001\n\017ListKeysRequest\022.\n\006format\030\001 \001(\0162\036." +
-      "yandex.cloud.iam.v1.KeyFormat\022$\n\022service" +
-      "_account_id\030\002 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\003 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\004 \001(\tB\t" +
-      "\212\3101\005<=100\"S\n\020ListKeysResponse\022&\n\004keys\030\001 " +
-      "\003(\0132\030.yandex.cloud.iam.v1.Key\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\303\001\n\020CreateKeyRequest\022$\n\022s" +
-      "ervice_account_id\030\001 \001(\tB\010\212\3101\004<=50\022\036\n\013des" +
-      "cription\030\002 \001(\tB\t\212\3101\005<=256\022.\n\006format\030\003 \001(" +
-      "\0162\036.yandex.cloud.iam.v1.KeyFormat\0229\n\rkey" +
-      "_algorithm\030\004 \001(\0162\".yandex.cloud.iam.v1.K" +
-      "ey.Algorithm\"O\n\021CreateKeyResponse\022%\n\003key" +
-      "\030\001 \001(\0132\030.yandex.cloud.iam.v1.Key\022\023\n\013priv" +
-      "ate_key\030\002 \001(\t\"0\n\020DeleteKeyRequest\022\034\n\006key" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"#\n\021DeleteKeyMeta" +
-      "data\022\016\n\006key_id\030\001 \001(\t\"v\n\030ListKeyOperation" +
-      "sRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"k\n\031ListKeyOperation" +
-      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
-      "loud.operation.Operation\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t*\031\n\tKeyFormat\022\014\n\010PEM_FILE\020\0002\213\005\n" +
-      "\nKeyService\022b\n\003Get\022\".yandex.cloud.iam.v1" +
-      ".GetKeyRequest\032\030.yandex.cloud.iam.v1.Key" +
-      "\"\035\202\323\344\223\002\027\022\025/iam/v1/keys/{key_id}\022i\n\004List\022" +
-      "$.yandex.cloud.iam.v1.ListKeysRequest\032%." +
-      "yandex.cloud.iam.v1.ListKeysResponse\"\024\202\323" +
-      "\344\223\002\016\022\014/iam/v1/keys\022p\n\006Create\022%.yandex.cl" +
-      "oud.iam.v1.CreateKeyRequest\032&.yandex.clo" +
-      "ud.iam.v1.CreateKeyResponse\"\027\202\323\344\223\002\021\"\014/ia" +
-      "m/v1/keys:\001*\022\237\001\n\006Delete\022%.yandex.cloud.i" +
-      "am.v1.DeleteKeyRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"K\202\323\344\223\002\027*\025/iam/v1/keys/" +
-      "{key_id}\262\322**\n\021DeleteKeyMetadata\022\025google." +
-      "protobuf.Empty\022\231\001\n\016ListOperations\022-.yand" +
-      "ex.cloud.iam.v1.ListKeyOperationsRequest" +
-      "\032..yandex.cloud.iam.v1.ListKeyOperations" +
-      "Response\"(\202\323\344\223\002\"\022 /iam/v1/keys/{key_id}/" +
-      "operationsBV\n\027yandex.cloud.api.iam.v1Z;g" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/iam/v1;iamb\006proto3"
+      "ions.proto\032 google/protobuf/field_mask.p" +
+      "roto\032\035yandex/cloud/iam/v1/key.proto\032 yan" +
+      "dex/cloud/api/operation.proto\032&yandex/cl" +
+      "oud/operation/operation.proto\032\035yandex/cl" +
+      "oud/validation.proto\"]\n\rGetKeyRequest\022\034\n" +
+      "\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\006format\030\002 " +
+      "\001(\0162\036.yandex.cloud.iam.v1.KeyFormat\"\245\001\n\017" +
+      "ListKeysRequest\022.\n\006format\030\001 \001(\0162\036.yandex" +
+      ".cloud.iam.v1.KeyFormat\022$\n\022service_accou" +
+      "nt_id\030\002 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\003 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=" +
+      "100\"S\n\020ListKeysResponse\022&\n\004keys\030\001 \003(\0132\030." +
+      "yandex.cloud.iam.v1.Key\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\303\001\n\020CreateKeyRequest\022$\n\022service" +
+      "_account_id\030\001 \001(\tB\010\212\3101\004<=50\022\036\n\013descripti" +
+      "on\030\002 \001(\tB\t\212\3101\005<=256\022.\n\006format\030\003 \001(\0162\036.ya" +
+      "ndex.cloud.iam.v1.KeyFormat\0229\n\rkey_algor" +
+      "ithm\030\004 \001(\0162\".yandex.cloud.iam.v1.Key.Alg" +
+      "orithm\"O\n\021CreateKeyResponse\022%\n\003key\030\001 \001(\013" +
+      "2\030.yandex.cloud.iam.v1.Key\022\023\n\013private_ke" +
+      "y\030\002 \001(\t\"\201\001\n\020UpdateKeyRequest\022\034\n\006key_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\"#\n\021UpdateKeyMetadata" +
+      "\022\016\n\006key_id\030\001 \001(\t\"0\n\020DeleteKeyRequest\022\034\n\006" +
+      "key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"#\n\021DeleteKeyM" +
+      "etadata\022\016\n\006key_id\030\001 \001(\t\"v\n\030ListKeyOperat" +
+      "ionsRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\"k\n\031ListKeyOperat" +
+      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
+      "x.cloud.operation.Operation\022\027\n\017next_page" +
+      "_token\030\002 \001(\t*\031\n\tKeyFormat\022\014\n\010PEM_FILE\020\0002" +
+      "\236\006\n\nKeyService\022b\n\003Get\022\".yandex.cloud.iam" +
+      ".v1.GetKeyRequest\032\030.yandex.cloud.iam.v1." +
+      "Key\"\035\202\323\344\223\002\027\022\025/iam/v1/keys/{key_id}\022i\n\004Li" +
+      "st\022$.yandex.cloud.iam.v1.ListKeysRequest" +
+      "\032%.yandex.cloud.iam.v1.ListKeysResponse\"" +
+      "\024\202\323\344\223\002\016\022\014/iam/v1/keys\022p\n\006Create\022%.yandex" +
+      ".cloud.iam.v1.CreateKeyRequest\032&.yandex." +
+      "cloud.iam.v1.CreateKeyResponse\"\027\202\323\344\223\002\021\"\014" +
+      "/iam/v1/keys:\001*\022\220\001\n\006Update\022%.yandex.clou" +
+      "d.iam.v1.UpdateKeyRequest\032!.yandex.cloud" +
+      ".operation.Operation\"<\202\323\344\223\002\0322\025/iam/v1/ke" +
+      "ys/{key_id}:\001*\262\322*\030\n\021UpdateKeyMetadata\022\003K" +
+      "ey\022\237\001\n\006Delete\022%.yandex.cloud.iam.v1.Dele" +
+      "teKeyRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"K\202\323\344\223\002\027*\025/iam/v1/keys/{key_id}\262\322" +
+      "**\n\021DeleteKeyMetadata\022\025google.protobuf.E" +
+      "mpty\022\231\001\n\016ListOperations\022-.yandex.cloud.i" +
+      "am.v1.ListKeyOperationsRequest\032..yandex." +
+      "cloud.iam.v1.ListKeyOperationsResponse\"(" +
+      "\202\323\344\223\002\"\022 /iam/v1/keys/{key_id}/operations" +
+      "BV\n\027yandex.cloud.api.iam.v1Z;github.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ia" +
+      "m/v1;iamb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8123,6 +9750,7 @@ public final class KeyServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.iam.v1.KeyOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -8158,26 +9786,38 @@ public final class KeyServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_CreateKeyResponse_descriptor,
         new java.lang.String[] { "Key", "PrivateKey", });
-    internal_static_yandex_cloud_iam_v1_DeleteKeyRequest_descriptor =
+    internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_UpdateKeyRequest_descriptor,
+        new java.lang.String[] { "KeyId", "UpdateMask", "Description", });
+    internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_UpdateKeyMetadata_descriptor,
+        new java.lang.String[] { "KeyId", });
+    internal_static_yandex_cloud_iam_v1_DeleteKeyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_iam_v1_DeleteKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_DeleteKeyRequest_descriptor,
         new java.lang.String[] { "KeyId", });
     internal_static_yandex_cloud_iam_v1_DeleteKeyMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_iam_v1_DeleteKeyMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_DeleteKeyMetadata_descriptor,
         new java.lang.String[] { "KeyId", });
     internal_static_yandex_cloud_iam_v1_ListKeyOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_iam_v1_ListKeyOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ListKeyOperationsRequest_descriptor,
         new java.lang.String[] { "KeyId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_iam_v1_ListKeyOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_iam_v1_ListKeyOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ListKeyOperationsResponse_descriptor,
@@ -8192,6 +9832,7 @@ public final class KeyServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.iam.v1.KeyOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

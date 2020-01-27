@@ -3994,14 +3994,14 @@ public final class MlModelServiceOuterClass {
         getClusterIdBytes();
 
     /**
-     * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
-    java.lang.String getMlModeName();
+    java.lang.String getMlModelName();
     /**
-     * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     com.google.protobuf.ByteString
-        getMlModeNameBytes();
+        getMlModelNameBytes();
 
     /**
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
@@ -4040,7 +4040,7 @@ public final class MlModelServiceOuterClass {
     }
     private UpdateMlModelRequest() {
       clusterId_ = "";
-      mlModeName_ = "";
+      mlModelName_ = "";
       uri_ = "";
     }
 
@@ -4077,7 +4077,7 @@ public final class MlModelServiceOuterClass {
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              mlModeName_ = s;
+              mlModelName_ = s;
               break;
             }
             case 26: {
@@ -4165,34 +4165,34 @@ public final class MlModelServiceOuterClass {
       }
     }
 
-    public static final int ML_MODE_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object mlModeName_;
+    public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object mlModelName_;
     /**
-     * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
-    public java.lang.String getMlModeName() {
-      java.lang.Object ref = mlModeName_;
+    public java.lang.String getMlModelName() {
+      java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        mlModeName_ = s;
+        mlModelName_ = s;
         return s;
       }
     }
     /**
-     * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public com.google.protobuf.ByteString
-        getMlModeNameBytes() {
-      java.lang.Object ref = mlModeName_;
+        getMlModelNameBytes() {
+      java.lang.Object ref = mlModelName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        mlModeName_ = b;
+        mlModelName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4271,8 +4271,8 @@ public final class MlModelServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getMlModeNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModeName_);
+      if (!getMlModelNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mlModelName_);
       }
       if (updateMask_ != null) {
         output.writeMessage(3, getUpdateMask());
@@ -4292,8 +4292,8 @@ public final class MlModelServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
       }
-      if (!getMlModeNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModeName_);
+      if (!getMlModelNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mlModelName_);
       }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -4320,8 +4320,8 @@ public final class MlModelServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
-      result = result && getMlModeName()
-          .equals(other.getMlModeName());
+      result = result && getMlModelName()
+          .equals(other.getMlModelName());
       result = result && (hasUpdateMask() == other.hasUpdateMask());
       if (hasUpdateMask()) {
         result = result && getUpdateMask()
@@ -4342,8 +4342,8 @@ public final class MlModelServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
-      hash = (37 * hash) + ML_MODE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMlModeName().hashCode();
+      hash = (37 * hash) + ML_MODEL_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getMlModelName().hashCode();
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
@@ -4485,7 +4485,7 @@ public final class MlModelServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
-        mlModeName_ = "";
+        mlModelName_ = "";
 
         if (updateMaskBuilder_ == null) {
           updateMask_ = null;
@@ -4522,7 +4522,7 @@ public final class MlModelServiceOuterClass {
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest result = new yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest(this);
         result.clusterId_ = clusterId_;
-        result.mlModeName_ = mlModeName_;
+        result.mlModelName_ = mlModelName_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
         } else {
@@ -4581,8 +4581,8 @@ public final class MlModelServiceOuterClass {
           clusterId_ = other.clusterId_;
           onChanged();
         }
-        if (!other.getMlModeName().isEmpty()) {
-          mlModeName_ = other.mlModeName_;
+        if (!other.getMlModelName().isEmpty()) {
+          mlModelName_ = other.mlModelName_;
           onChanged();
         }
         if (other.hasUpdateMask()) {
@@ -4690,71 +4690,71 @@ public final class MlModelServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object mlModeName_ = "";
+      private java.lang.Object mlModelName_ = "";
       /**
-       * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
-      public java.lang.String getMlModeName() {
-        java.lang.Object ref = mlModeName_;
+      public java.lang.String getMlModelName() {
+        java.lang.Object ref = mlModelName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          mlModeName_ = s;
+          mlModelName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public com.google.protobuf.ByteString
-          getMlModeNameBytes() {
-        java.lang.Object ref = mlModeName_;
+          getMlModelNameBytes() {
+        java.lang.Object ref = mlModelName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          mlModeName_ = b;
+          mlModelName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
-      public Builder setMlModeName(
+      public Builder setMlModelName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        mlModeName_ = value;
+        mlModelName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
-      public Builder clearMlModeName() {
+      public Builder clearMlModelName() {
         
-        mlModeName_ = getDefaultInstance().getMlModeName();
+        mlModelName_ = getDefaultInstance().getMlModelName();
         onChanged();
         return this;
       }
       /**
-       * <code>string ml_mode_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
-      public Builder setMlModeNameBytes(
+      public Builder setMlModelNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        mlModeName_ = value;
+        mlModelName_ = value;
         onChanged();
         return this;
       }
@@ -7134,46 +7134,47 @@ public final class MlModelServiceOuterClass {
       "ype\030\003 \001(\0162+.yandex.cloud.mdb.clickhouse." +
       "v1.MlModelTypeB\004\350\3071\001\022\021\n\003uri\030\004 \001(\tB\004\350\3071\001\"" +
       "B\n\025CreateMlModelMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\022\025\n\rml_model_name\030\002 \001(\t\"\254\001\n\024UpdateMl" +
+      " \001(\t\022\025\n\rml_model_name\030\002 \001(\t\"\255\001\n\024UpdateMl" +
       "ModelRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0224\n\014ml_mode_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022\013\n\003uri\030\004 \001" +
-      "(\t\"B\n\025UpdateMlModelMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\025\n\rml_model_name\030\002 \001(\t\"o\n\024Delete" +
-      "MlModelRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0225\n\rml_model_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\"B\n\025DeleteMlModel" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rml_model" +
-      "_name\030\002 \001(\t2\357\007\n\016MlModelService\022\260\001\n\003Get\0221" +
-      ".yandex.cloud.mdb.clickhouse.v1.GetMlMod" +
-      "elRequest\032\'.yandex.cloud.mdb.clickhouse." +
-      "v1.MlModel\"M\202\323\344\223\002G\022E/managed-clickhouse/" +
-      "v1/clusters/{cluster_id}/mlModels/{ml_mo" +
-      "del_name}\022\260\001\n\004List\0223.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.ListMlModelsRequest\0324.yandex" +
-      ".cloud.mdb.clickhouse.v1.ListMlModelsRes" +
-      "ponse\"=\202\323\344\223\0027\0225/managed-clickhouse/v1/cl" +
-      "usters/{cluster_id}/mlModels\022\307\001\n\006Create\022" +
-      "4.yandex.cloud.mdb.clickhouse.v1.CreateM" +
-      "lModelRequest\032!.yandex.cloud.operation.O" +
-      "peration\"d\202\323\344\223\002:\"5/managed-clickhouse/v1" +
-      "/clusters/{cluster_id}/mlModels:\001*\262\322* \n\025" +
-      "CreateMlModelMetadata\022\007MlModel\022\307\001\n\006Updat" +
-      "e\0224.yandex.cloud.mdb.clickhouse.v1.Updat" +
-      "eMlModelRequest\032!.yandex.cloud.operation" +
-      ".Operation\"d\202\323\344\223\002:25/managed-clickhouse/" +
-      "v1/clusters/{cluster_id}/mlModels:\001*\262\322* " +
-      "\n\025UpdateMlModelMetadata\022\007MlModel\022\342\001\n\006Del" +
-      "ete\0224.yandex.cloud.mdb.clickhouse.v1.Del" +
-      "eteMlModelRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\177\202\323\344\223\002G*E/managed-clickhous" +
-      "e/v1/clusters/{cluster_id}/mlModels/{ml_" +
-      "model_name}\262\322*.\n\025DeleteMlModelMetadata\022\025" +
-      "google.protobuf.EmptyBs\n\"yandex.cloud.ap" +
-      "i.mdb.clickhouse.v1ZMgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/clickh" +
-      "ouse/v1;clickhouseb\006proto3"
+      "1\004<=50\0225\n\rml_model_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022\013\n\003uri\030\004 " +
+      "\001(\t\"B\n\025UpdateMlModelMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\022\025\n\rml_model_name\030\002 \001(\t\"o\n\024Delet" +
+      "eMlModelRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\0225\n\rml_model_name\030\002 \001(\tB\036\350\3071\001\212\310" +
+      "1\004<=63\362\3071\016[a-zA-Z0-9_-]*\"B\n\025DeleteMlMode" +
+      "lMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rml_mode" +
+      "l_name\030\002 \001(\t2\377\007\n\016MlModelService\022\260\001\n\003Get\022" +
+      "1.yandex.cloud.mdb.clickhouse.v1.GetMlMo" +
+      "delRequest\032\'.yandex.cloud.mdb.clickhouse" +
+      ".v1.MlModel\"M\202\323\344\223\002G\022E/managed-clickhouse" +
+      "/v1/clusters/{cluster_id}/mlModels/{ml_m" +
+      "odel_name}\022\260\001\n\004List\0223.yandex.cloud.mdb.c" +
+      "lickhouse.v1.ListMlModelsRequest\0324.yande" +
+      "x.cloud.mdb.clickhouse.v1.ListMlModelsRe" +
+      "sponse\"=\202\323\344\223\0027\0225/managed-clickhouse/v1/c" +
+      "lusters/{cluster_id}/mlModels\022\307\001\n\006Create" +
+      "\0224.yandex.cloud.mdb.clickhouse.v1.Create" +
+      "MlModelRequest\032!.yandex.cloud.operation." +
+      "Operation\"d\202\323\344\223\002:\"5/managed-clickhouse/v" +
+      "1/clusters/{cluster_id}/mlModels:\001*\262\322* \n" +
+      "\025CreateMlModelMetadata\022\007MlModel\022\327\001\n\006Upda" +
+      "te\0224.yandex.cloud.mdb.clickhouse.v1.Upda" +
+      "teMlModelRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"t\202\323\344\223\002J2E/managed-clickhouse" +
+      "/v1/clusters/{cluster_id}/mlModels/{ml_m" +
+      "odel_name}:\001*\262\322* \n\025UpdateMlModelMetadata" +
+      "\022\007MlModel\022\342\001\n\006Delete\0224.yandex.cloud.mdb." +
+      "clickhouse.v1.DeleteMlModelRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\177\202\323\344\223\002G*E/" +
+      "managed-clickhouse/v1/clusters/{cluster_" +
+      "id}/mlModels/{ml_model_name}\262\322*.\n\025Delete" +
+      "MlModelMetadata\022\025google.protobuf.EmptyBs" +
+      "\n\"yandex.cloud.api.mdb.clickhouse.v1ZMgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/clickhouse/v1;clickhouseb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7228,7 +7229,7 @@ public final class MlModelServiceOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateMlModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateMlModelRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "MlModeName", "UpdateMask", "Uri", });
+        new java.lang.String[] { "ClusterId", "MlModelName", "UpdateMask", "Uri", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateMlModelMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateMlModelMetadata_fieldAccessorTable = new

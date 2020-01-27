@@ -126,6 +126,38 @@ public final class KeyServiceGrpc {
      return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+    if ((getUpdateMethod = KeyServiceGrpc.getUpdateMethod) == null) {
+      synchronized (KeyServiceGrpc.class) {
+        if ((getUpdateMethod = KeyServiceGrpc.getUpdateMethod) == null) {
+          KeyServiceGrpc.getUpdateMethod = getUpdateMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.iam.v1.KeyService", "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new KeyServiceMethodDescriptorSupplier("Update"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -253,6 +285,16 @@ public final class KeyServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified key pair.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified key pair.
      * </pre>
      */
@@ -294,6 +336,13 @@ public final class KeyServiceGrpc {
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest,
                 yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -369,6 +418,17 @@ public final class KeyServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified key pair.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified key pair.
      * </pre>
      */
@@ -440,6 +500,16 @@ public final class KeyServiceGrpc {
     public yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse create(yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified key pair.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -520,6 +590,17 @@ public final class KeyServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified key pair.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
+        yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified key pair.
      * </pre>
      */
@@ -544,8 +625,9 @@ public final class KeyServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
-  private static final int METHODID_DELETE = 3;
-  private static final int METHODID_LIST_OPERATIONS = 4;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST_OPERATIONS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -575,6 +657,10 @@ public final class KeyServiceGrpc {
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.KeyServiceOuterClass.CreateKeyResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((yandex.cloud.api.iam.v1.KeyServiceOuterClass.UpdateKeyRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.iam.v1.KeyServiceOuterClass.DeleteKeyRequest) request,
@@ -648,6 +734,7 @@ public final class KeyServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .build();

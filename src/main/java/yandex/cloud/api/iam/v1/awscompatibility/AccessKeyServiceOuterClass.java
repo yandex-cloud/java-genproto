@@ -4249,6 +4249,1614 @@ public final class AccessKeyServiceOuterClass {
 
   }
 
+  public interface UpdateAccessKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the AccessKey resource to update.
+     * To get the access key ID, use a [AccessKeyService.List] request.
+     * </pre>
+     *
+     * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getAccessKeyId();
+    /**
+     * <pre>
+     * ID of the AccessKey resource to update.
+     * To get the access key ID, use a [AccessKeyService.List] request.
+     * </pre>
+     *
+     * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyIdBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Description of the access key.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the access key.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest}
+   */
+  public  static final class UpdateAccessKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
+      UpdateAccessKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAccessKeyRequest.newBuilder() to construct.
+    private UpdateAccessKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAccessKeyRequest() {
+      accessKeyId_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateAccessKeyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKeyId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.Builder.class);
+    }
+
+    public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKeyId_;
+    /**
+     * <pre>
+     * ID of the AccessKey resource to update.
+     * To get the access key ID, use a [AccessKeyService.List] request.
+     * </pre>
+     *
+     * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getAccessKeyId() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the AccessKey resource to update.
+     * To get the access key ID, use a [AccessKeyService.List] request.
+     * </pre>
+     *
+     * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getAccessKeyIdBytes() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the access key.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the access key.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest) obj;
+
+      boolean result = true;
+      result = result && getAccessKeyId()
+          .equals(other.getAccessKeyId());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKeyId().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessKeyId_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest build() {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest buildPartial() {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest result = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest(this);
+        result.accessKeyId_ = accessKeyId_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest) {
+          return mergeFrom((yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest other) {
+        if (other == yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest.getDefaultInstance()) return this;
+        if (!other.getAccessKeyId().isEmpty()) {
+          accessKeyId_ = other.accessKeyId_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accessKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the AccessKey resource to update.
+       * To get the access key ID, use a [AccessKeyService.List] request.
+       * </pre>
+       *
+       * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getAccessKeyId() {
+        java.lang.Object ref = accessKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource to update.
+       * To get the access key ID, use a [AccessKeyService.List] request.
+       * </pre>
+       *
+       * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyIdBytes() {
+        java.lang.Object ref = accessKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource to update.
+       * To get the access key ID, use a [AccessKeyService.List] request.
+       * </pre>
+       *
+       * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setAccessKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource to update.
+       * To get the access key ID, use a [AccessKeyService.List] request.
+       * </pre>
+       *
+       * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearAccessKeyId() {
+        
+        accessKeyId_ = getDefaultInstance().getAccessKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource to update.
+       * To get the access key ID, use a [AccessKeyService.List] request.
+       * </pre>
+       *
+       * <code>string access_key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setAccessKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Accesskey resource are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the access key.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the access key.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the access key.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the access key.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the access key.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyRequest)
+    private static final yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest();
+    }
+
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAccessKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAccessKeyRequest>() {
+      @java.lang.Override
+      public UpdateAccessKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateAccessKeyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAccessKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAccessKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAccessKeyMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the AccessKey resource that is being updated.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     */
+    java.lang.String getAccessKeyId();
+    /**
+     * <pre>
+     * ID of the AccessKey resource that is being updated.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata}
+   */
+  public  static final class UpdateAccessKeyMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
+      UpdateAccessKeyMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAccessKeyMetadata.newBuilder() to construct.
+    private UpdateAccessKeyMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAccessKeyMetadata() {
+      accessKeyId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateAccessKeyMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKeyId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.Builder.class);
+    }
+
+    public static final int ACCESS_KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKeyId_;
+    /**
+     * <pre>
+     * ID of the AccessKey resource that is being updated.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     */
+    public java.lang.String getAccessKeyId() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKeyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the AccessKey resource that is being updated.
+     * </pre>
+     *
+     * <code>string access_key_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAccessKeyIdBytes() {
+      java.lang.Object ref = accessKeyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKeyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKeyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAccessKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKeyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata other = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata) obj;
+
+      boolean result = true;
+      result = result && getAccessKeyId()
+          .equals(other.getAccessKeyId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKeyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.class, yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessKeyId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata build() {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata buildPartial() {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata result = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata(this);
+        result.accessKeyId_ = accessKeyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata) {
+          return mergeFrom((yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata other) {
+        if (other == yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata.getDefaultInstance()) return this;
+        if (!other.getAccessKeyId().isEmpty()) {
+          accessKeyId_ = other.accessKeyId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accessKeyId_ = "";
+      /**
+       * <pre>
+       * ID of the AccessKey resource that is being updated.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       */
+      public java.lang.String getAccessKeyId() {
+        java.lang.Object ref = accessKeyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKeyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource that is being updated.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyIdBytes() {
+        java.lang.Object ref = accessKeyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKeyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource that is being updated.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       */
+      public Builder setAccessKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource that is being updated.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       */
+      public Builder clearAccessKeyId() {
+        
+        accessKeyId_ = getDefaultInstance().getAccessKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the AccessKey resource that is being updated.
+       * </pre>
+       *
+       * <code>string access_key_id = 1;</code>
+       */
+      public Builder setAccessKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.awscompatibility.UpdateAccessKeyMetadata)
+    private static final yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata();
+    }
+
+    public static yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAccessKeyMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAccessKeyMetadata>() {
+      @java.lang.Override
+      public UpdateAccessKeyMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateAccessKeyMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAccessKeyMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAccessKeyMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceOuterClass.UpdateAccessKeyMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteAccessKeyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.awscompatibility.DeleteAccessKeyRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -7425,6 +9033,16 @@ public final class AccessKeyServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_awscompatibility_CreateAccessKeyResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7456,62 +9074,73 @@ public final class AccessKeyServiceOuterClass {
       "\n=yandex/cloud/iam/v1/awscompatibility/a" +
       "ccess_key_service.proto\022$yandex.cloud.ia" +
       "m.v1.awscompatibility\032\034google/api/annota" +
-      "tions.proto\032 yandex/cloud/api/operation." +
-      "proto\0325yandex/cloud/iam/v1/awscompatibil" +
-      "ity/access_key.proto\032&yandex/cloud/opera" +
-      "tion/operation.proto\032\035yandex/cloud/valid" +
-      "ation.proto\":\n\023GetAccessKeyRequest\022#\n\rac" +
-      "cess_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"{\n\025ListA" +
-      "ccessKeysRequest\022$\n\022service_account_id\030\001" +
-      " \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"w\n\026" +
-      "ListAccessKeysResponse\022D\n\013access_keys\030\001 " +
-      "\003(\0132/.yandex.cloud.iam.v1.awscompatibili" +
-      "ty.AccessKey\022\027\n\017next_page_token\030\002 \001(\t\"^\n" +
-      "\026CreateAccessKeyRequest\022$\n\022service_accou" +
-      "nt_id\030\001 \001(\tB\010\212\3101\004<=50\022\036\n\013description\030\002 \001" +
-      "(\tB\t\212\3101\005<=256\"n\n\027CreateAccessKeyResponse" +
-      "\022C\n\naccess_key\030\001 \001(\0132/.yandex.cloud.iam." +
-      "v1.awscompatibility.AccessKey\022\016\n\006secret\030" +
-      "\002 \001(\t\"=\n\026DeleteAccessKeyRequest\022#\n\racces" +
-      "s_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\027DeleteAc" +
-      "cessKeyMetadata\022\025\n\raccess_key_id\030\001 \001(\t\"\203" +
-      "\001\n\036ListAccessKeyOperationsRequest\022#\n\racc" +
-      "ess_key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"q\n\037ListAccessKeyOperationsR" +
-      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
-      "ud.operation.Operation\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t2\366\007\n\020AccessKeyService\022\257\001\n\004List\022;." +
-      "yandex.cloud.iam.v1.awscompatibility.Lis" +
-      "tAccessKeysRequest\032<.yandex.cloud.iam.v1" +
-      ".awscompatibility.ListAccessKeysResponse" +
-      "\",\202\323\344\223\002&\022$/iam/aws-compatibility/v1/acce" +
-      "ssKeys\022\257\001\n\003Get\0229.yandex.cloud.iam.v1.aws" +
-      "compatibility.GetAccessKeyRequest\032/.yand" +
-      "ex.cloud.iam.v1.awscompatibility.AccessK" +
-      "ey\"<\202\323\344\223\0026\0224/iam/aws-compatibility/v1/ac" +
-      "cessKeys/{access_key_id}\022\266\001\n\006Create\022<.ya" +
-      "ndex.cloud.iam.v1.awscompatibility.Creat" +
-      "eAccessKeyRequest\032=.yandex.cloud.iam.v1." +
-      "awscompatibility.CreateAccessKeyResponse" +
-      "\"/\202\323\344\223\002)\"$/iam/aws-compatibility/v1/acce" +
-      "ssKeys:\001*\022\333\001\n\006Delete\022<.yandex.cloud.iam." +
-      "v1.awscompatibility.DeleteAccessKeyReque" +
-      "st\032!.yandex.cloud.operation.Operation\"p\202" +
-      "\323\344\223\0026*4/iam/aws-compatibility/v1/accessK" +
-      "eys/{access_key_id}\262\322*0\n\027DeleteAccessKey" +
-      "Metadata\022\025google.protobuf.Empty\022\346\001\n\016List" +
-      "Operations\022D.yandex.cloud.iam.v1.awscomp" +
-      "atibility.ListAccessKeyOperationsRequest" +
-      "\032E.yandex.cloud.iam.v1.awscompatibility." +
-      "ListAccessKeyOperationsResponse\"G\202\323\344\223\002A\022" +
-      "?/iam/aws-compatibility/v1/accessKeys/{a" +
-      "ccess_key_id}/operationsB\205\001\n(yandex.clou" +
-      "d.api.iam.v1.awscompatibilityZYgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "iam/v1/awscompatibility;awscompatibility" +
-      "b\006proto3"
+      "tions.proto\032 google/protobuf/field_mask." +
+      "proto\032 yandex/cloud/api/operation.proto\032" +
+      "5yandex/cloud/iam/v1/awscompatibility/ac" +
+      "cess_key.proto\032&yandex/cloud/operation/o" +
+      "peration.proto\032\035yandex/cloud/validation." +
+      "proto\":\n\023GetAccessKeyRequest\022#\n\raccess_k" +
+      "ey_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"{\n\025ListAccessK" +
+      "eysRequest\022$\n\022service_account_id\030\001 \001(\tB\010" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"w\n\026ListAc" +
+      "cessKeysResponse\022D\n\013access_keys\030\001 \003(\0132/." +
+      "yandex.cloud.iam.v1.awscompatibility.Acc" +
+      "essKey\022\027\n\017next_page_token\030\002 \001(\t\"^\n\026Creat" +
+      "eAccessKeyRequest\022$\n\022service_account_id\030" +
+      "\001 \001(\tB\010\212\3101\004<=50\022\036\n\013description\030\002 \001(\tB\t\212\310" +
+      "1\005<=256\"n\n\027CreateAccessKeyResponse\022C\n\nac" +
+      "cess_key\030\001 \001(\0132/.yandex.cloud.iam.v1.aws" +
+      "compatibility.AccessKey\022\016\n\006secret\030\002 \001(\t\"" +
+      "\216\001\n\026UpdateAccessKeyRequest\022#\n\raccess_key" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMask\022\036\n\013desc" +
+      "ription\030\003 \001(\tB\t\212\3101\005<=256\"0\n\027UpdateAccess" +
+      "KeyMetadata\022\025\n\raccess_key_id\030\001 \001(\t\"=\n\026De" +
+      "leteAccessKeyRequest\022#\n\raccess_key_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\027DeleteAccessKeyMeta" +
+      "data\022\025\n\raccess_key_id\030\001 \001(\t\"\203\001\n\036ListAcce" +
+      "ssKeyOperationsRequest\022#\n\raccess_key_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
+      "0\"q\n\037ListAccessKeyOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\313\t\n" +
+      "\020AccessKeyService\022\257\001\n\004List\022;.yandex.clou" +
+      "d.iam.v1.awscompatibility.ListAccessKeys" +
+      "Request\032<.yandex.cloud.iam.v1.awscompati" +
+      "bility.ListAccessKeysResponse\",\202\323\344\223\002&\022$/" +
+      "iam/aws-compatibility/v1/accessKeys\022\257\001\n\003" +
+      "Get\0229.yandex.cloud.iam.v1.awscompatibili" +
+      "ty.GetAccessKeyRequest\032/.yandex.cloud.ia" +
+      "m.v1.awscompatibility.AccessKey\"<\202\323\344\223\0026\022" +
+      "4/iam/aws-compatibility/v1/accessKeys/{a" +
+      "ccess_key_id}\022\266\001\n\006Create\022<.yandex.cloud." +
+      "iam.v1.awscompatibility.CreateAccessKeyR" +
+      "equest\032=.yandex.cloud.iam.v1.awscompatib" +
+      "ility.CreateAccessKeyResponse\"/\202\323\344\223\002)\"$/" +
+      "iam/aws-compatibility/v1/accessKeys:\001*\022\322" +
+      "\001\n\006Update\022<.yandex.cloud.iam.v1.awscompa" +
+      "tibility.UpdateAccessKeyRequest\032!.yandex" +
+      ".cloud.operation.Operation\"g\202\323\344\223\002924/iam" +
+      "/aws-compatibility/v1/accessKeys/{access" +
+      "_key_id}:\001*\262\322*$\n\027UpdateAccessKeyMetadata" +
+      "\022\tAccessKey\022\333\001\n\006Delete\022<.yandex.cloud.ia" +
+      "m.v1.awscompatibility.DeleteAccessKeyReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "p\202\323\344\223\0026*4/iam/aws-compatibility/v1/acces" +
+      "sKeys/{access_key_id}\262\322*0\n\027DeleteAccessK" +
+      "eyMetadata\022\025google.protobuf.Empty\022\346\001\n\016Li" +
+      "stOperations\022D.yandex.cloud.iam.v1.awsco" +
+      "mpatibility.ListAccessKeyOperationsReque" +
+      "st\032E.yandex.cloud.iam.v1.awscompatibilit" +
+      "y.ListAccessKeyOperationsResponse\"G\202\323\344\223\002" +
+      "A\022?/iam/aws-compatibility/v1/accessKeys/" +
+      "{access_key_id}/operationsB\205\001\n(yandex.cl" +
+      "oud.api.iam.v1.awscompatibilityZYgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/iam/v1/awscompatibility;awscompatibili" +
+      "tyb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7525,6 +9154,7 @@ public final class AccessKeyServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -7560,26 +9190,38 @@ public final class AccessKeyServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_awscompatibility_CreateAccessKeyResponse_descriptor,
         new java.lang.String[] { "AccessKey", "Secret", });
-    internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyRequest_descriptor =
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyRequest_descriptor,
+        new java.lang.String[] { "AccessKeyId", "UpdateMask", "Description", });
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_awscompatibility_UpdateAccessKeyMetadata_descriptor,
+        new java.lang.String[] { "AccessKeyId", });
+    internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyRequest_descriptor,
         new java.lang.String[] { "AccessKeyId", });
     internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_awscompatibility_DeleteAccessKeyMetadata_descriptor,
         new java.lang.String[] { "AccessKeyId", });
     internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsRequest_descriptor,
         new java.lang.String[] { "AccessKeyId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_awscompatibility_ListAccessKeyOperationsResponse_descriptor,
@@ -7594,6 +9236,7 @@ public final class AccessKeyServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iam.v1.awscompatibility.AccessKeyOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

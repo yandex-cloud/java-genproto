@@ -18907,7 +18907,7 @@ public final class InstanceGroupOuterClass {
      * The amount of memory available to the instance, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=274877906944"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
      */
     long getMemory();
 
@@ -19041,7 +19041,7 @@ public final class InstanceGroupOuterClass {
      * The amount of memory available to the instance, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=274877906944"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
      */
     public long getMemory() {
       return memory_;
@@ -19451,7 +19451,7 @@ public final class InstanceGroupOuterClass {
        * The amount of memory available to the instance, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=274877906944"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
        */
       public long getMemory() {
         return memory_;
@@ -19461,7 +19461,7 @@ public final class InstanceGroupOuterClass {
        * The amount of memory available to the instance, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=274877906944"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
        */
       public Builder setMemory(long value) {
         
@@ -19474,7 +19474,7 @@ public final class InstanceGroupOuterClass {
        * The amount of memory available to the instance, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=274877906944"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
        */
       public Builder clearMemory() {
         
@@ -38208,7 +38208,7 @@ public final class InstanceGroupOuterClass {
       "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\r" +
       "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
       "\t:\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B" +
-      "\022\372\3071\016<=274877906944\022[\n\005cores\030\002 \001(\003BL\372\3071H" +
+      "\022\372\3071\016<=824633720832\022[\n\005cores\030\002 \001(\003BL\372\3071H" +
       "1,2,4,6,8,10,12,14,16,18,20,22,24,26,28," +
       "30,32,34,36,40,44,48,52,56,60,64\022(\n\rcore" +
       "_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gp" +
