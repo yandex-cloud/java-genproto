@@ -1138,6 +1138,30 @@ public final class InstanceGroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> 
+        getVariablesList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index);
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    int getVariablesCount();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.CreateInstanceGroupRequest}
@@ -1156,6 +1180,7 @@ public final class InstanceGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       serviceAccountId_ = "";
+      variables_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1297,6 +1322,15 @@ public final class InstanceGroupServiceOuterClass {
               serviceAccountId_ = s;
               break;
             }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              variables_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1312,6 +1346,9 @@ public final class InstanceGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          variables_ = java.util.Collections.unmodifiableList(variables_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1806,6 +1843,41 @@ public final class InstanceGroupServiceOuterClass {
       }
     }
 
+    public static final int VARIABLES_FIELD_NUMBER = 13;
+    private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_;
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    public int getVariablesCount() {
+      return variables_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+      return variables_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index) {
+      return variables_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1855,6 +1927,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       if (!getServiceAccountIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, serviceAccountId_);
+      }
+      for (int i = 0; i < variables_.size(); i++) {
+        output.writeMessage(13, variables_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1910,6 +1985,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       if (!getServiceAccountIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, serviceAccountId_);
+      }
+      for (int i = 0; i < variables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, variables_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1967,6 +2046,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       result = result && getServiceAccountId()
           .equals(other.getServiceAccountId());
+      result = result && getVariablesList()
+          .equals(other.getVariablesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2014,6 +2095,10 @@ public final class InstanceGroupServiceOuterClass {
       }
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (getVariablesCount() > 0) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getVariablesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2164,6 +2249,7 @@ public final class InstanceGroupServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getVariablesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2214,6 +2300,12 @@ public final class InstanceGroupServiceOuterClass {
         }
         serviceAccountId_ = "";
 
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          variablesBuilder_.clear();
+        }
         return this;
       }
 
@@ -2278,6 +2370,15 @@ public final class InstanceGroupServiceOuterClass {
           result.healthChecksSpec_ = healthChecksSpecBuilder_.build();
         }
         result.serviceAccountId_ = serviceAccountId_;
+        if (variablesBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            variables_ = java.util.Collections.unmodifiableList(variables_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.variables_ = variables_;
+        } else {
+          result.variables_ = variablesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2362,6 +2463,32 @@ public final class InstanceGroupServiceOuterClass {
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
           onChanged();
+        }
+        if (variablesBuilder_ == null) {
+          if (!other.variables_.isEmpty()) {
+            if (variables_.isEmpty()) {
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureVariablesIsMutable();
+              variables_.addAll(other.variables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.variables_.isEmpty()) {
+            if (variablesBuilder_.isEmpty()) {
+              variablesBuilder_.dispose();
+              variablesBuilder_ = null;
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              variablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVariablesFieldBuilder() : null;
+            } else {
+              variablesBuilder_.addAllMessages(other.variables_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3831,6 +3958,246 @@ public final class InstanceGroupServiceOuterClass {
         serviceAccountId_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_ =
+        java.util.Collections.emptyList();
+      private void ensureVariablesIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>(variables_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> variablesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+        if (variablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(variables_);
+        } else {
+          return variablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public int getVariablesCount() {
+        if (variablesBuilder_ == null) {
+          return variables_.size();
+        } else {
+          return variablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);
+        } else {
+          return variablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.set(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder addVariables(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder addVariables(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder addAllVariables(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> values) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, variables_);
+          onChanged();
+        } else {
+          variablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder clearVariables() {
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          variablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public Builder removeVariables(int index) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.remove(index);
+          onChanged();
+        } else {
+          variablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder getVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+          int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);  } else {
+          return variablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+           getVariablesOrBuilderList() {
+        if (variablesBuilder_ != null) {
+          return variablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(variables_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder() {
+        return getVariablesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder> 
+           getVariablesBuilderList() {
+        return getVariablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+          getVariablesFieldBuilder() {
+        if (variablesBuilder_ == null) {
+          variablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder>(
+                  variables_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          variables_ = null;
+        }
+        return variablesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5554,6 +5921,30 @@ public final class InstanceGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec load_balancer_spec = 14;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpecOrBuilder getLoadBalancerSpecOrBuilder();
+
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> 
+        getVariablesList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index);
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    int getVariablesCount();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.UpdateInstanceGroupRequest}
@@ -5572,6 +5963,7 @@ public final class InstanceGroupServiceOuterClass {
       name_ = "";
       description_ = "";
       serviceAccountId_ = "";
+      variables_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5726,6 +6118,15 @@ public final class InstanceGroupServiceOuterClass {
 
               break;
             }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              variables_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5741,6 +6142,9 @@ public final class InstanceGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          variables_ = java.util.Collections.unmodifiableList(variables_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -6272,6 +6676,41 @@ public final class InstanceGroupServiceOuterClass {
       return getLoadBalancerSpec();
     }
 
+    public static final int VARIABLES_FIELD_NUMBER = 15;
+    private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_;
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    public int getVariablesCount() {
+      return variables_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+      return variables_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index) {
+      return variables_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6324,6 +6763,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       if (loadBalancerSpec_ != null) {
         output.writeMessage(14, getLoadBalancerSpec());
+      }
+      for (int i = 0; i < variables_.size(); i++) {
+        output.writeMessage(15, variables_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -6383,6 +6825,10 @@ public final class InstanceGroupServiceOuterClass {
       if (loadBalancerSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getLoadBalancerSpec());
+      }
+      for (int i = 0; i < variables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, variables_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6445,6 +6891,8 @@ public final class InstanceGroupServiceOuterClass {
         result = result && getLoadBalancerSpec()
             .equals(other.getLoadBalancerSpec());
       }
+      result = result && getVariablesList()
+          .equals(other.getVariablesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6495,6 +6943,10 @@ public final class InstanceGroupServiceOuterClass {
       if (hasLoadBalancerSpec()) {
         hash = (37 * hash) + LOAD_BALANCER_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getLoadBalancerSpec().hashCode();
+      }
+      if (getVariablesCount() > 0) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getVariablesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6646,6 +7098,7 @@ public final class InstanceGroupServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getVariablesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6701,6 +7154,12 @@ public final class InstanceGroupServiceOuterClass {
         } else {
           loadBalancerSpec_ = null;
           loadBalancerSpecBuilder_ = null;
+        }
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        } else {
+          variablesBuilder_.clear();
         }
         return this;
       }
@@ -6770,6 +7229,15 @@ public final class InstanceGroupServiceOuterClass {
           result.loadBalancerSpec_ = loadBalancerSpec_;
         } else {
           result.loadBalancerSpec_ = loadBalancerSpecBuilder_.build();
+        }
+        if (variablesBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+            variables_ = java.util.Collections.unmodifiableList(variables_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.variables_ = variables_;
+        } else {
+          result.variables_ = variablesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -6858,6 +7326,32 @@ public final class InstanceGroupServiceOuterClass {
         }
         if (other.hasLoadBalancerSpec()) {
           mergeLoadBalancerSpec(other.getLoadBalancerSpec());
+        }
+        if (variablesBuilder_ == null) {
+          if (!other.variables_.isEmpty()) {
+            if (variables_.isEmpty()) {
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureVariablesIsMutable();
+              variables_.addAll(other.variables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.variables_.isEmpty()) {
+            if (variablesBuilder_.isEmpty()) {
+              variablesBuilder_.dispose();
+              variablesBuilder_ = null;
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              variablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVariablesFieldBuilder() : null;
+            } else {
+              variablesBuilder_.addAllMessages(other.variables_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8487,6 +8981,246 @@ public final class InstanceGroupServiceOuterClass {
           loadBalancerSpec_ = null;
         }
         return loadBalancerSpecBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_ =
+        java.util.Collections.emptyList();
+      private void ensureVariablesIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>(variables_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> variablesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+        if (variablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(variables_);
+        } else {
+          return variablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public int getVariablesCount() {
+        if (variablesBuilder_ == null) {
+          return variables_.size();
+        } else {
+          return variablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);
+        } else {
+          return variablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.set(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder addVariables(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder addVariables(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder addAllVariables(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> values) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, variables_);
+          onChanged();
+        } else {
+          variablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder clearVariables() {
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          variablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public Builder removeVariables(int index) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.remove(index);
+          onChanged();
+        } else {
+          variablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder getVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+          int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);  } else {
+          return variablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+           getVariablesOrBuilderList() {
+        if (variablesBuilder_ != null) {
+          return variablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(variables_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder() {
+        return getVariablesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 15;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder> 
+           getVariablesBuilderList() {
+        return getVariablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+          getVariablesFieldBuilder() {
+        if (variablesBuilder_ == null) {
+          variablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder>(
+                  variables_,
+                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  getParentForChildren(),
+                  isClean());
+          variables_ = null;
+        }
+        return variablesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23008,7 +23742,7 @@ public final class InstanceGroupServiceOuterClass {
       "validation.proto\"\212\001\n\027GetInstanceGroupReq" +
       "uest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\022F\n\004view\030\002 \001(\01628.yandex.cloud.compu" +
-      "te.v1.instancegroup.InstanceGroupView\"\362\006" +
+      "te.v1.instancegroup.InstanceGroupView\"\266\007" +
       "\n\032CreateInstanceGroupRequest\022\027\n\tfolder_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][" +
       "-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 " +
@@ -23029,154 +23763,157 @@ public final class InstanceGroupServiceOuterClass {
       ".compute.v1.instancegroup.LoadBalancerSp" +
       "ec\022S\n\022health_checks_spec\030\013 \001(\01327.yandex." +
       "cloud.compute.v1.instancegroup.HealthChe" +
-      "cksSpec\022\032\n\022service_account_id\030\014 \001(\t\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"m\n\"CreateInstanceGroupFromYamlRequest" +
-      "\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022.\n\023instance_gr" +
-      "oup_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"B\n\033Cre" +
-      "ateInstanceGroupMetadata\022#\n\021instance_gro" +
-      "up_id\030\001 \001(\tB\010\212\3101\004<=50\"\263\007\n\032UpdateInstance" +
-      "GroupRequest\022\'\n\021instance_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\307" +
-      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descr" +
-      "iption\030\004 \001(\tB\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\013" +
-      "2M.yandex.cloud.compute.v1.instancegroup" +
-      ".UpdateInstanceGroupRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022X\n\021instance_tem" +
-      "plate\030\006 \001(\01327.yandex.cloud.compute.v1.in" +
-      "stancegroup.InstanceTemplateB\004\350\3071\001\022N\n\014sc" +
-      "ale_policy\030\007 \001(\01322.yandex.cloud.compute." +
-      "v1.instancegroup.ScalePolicyB\004\350\3071\001\022P\n\rde" +
-      "ploy_policy\030\010 \001(\01323.yandex.cloud.compute" +
-      ".v1.instancegroup.DeployPolicyB\004\350\3071\001\022X\n\021" +
-      "allocation_policy\030\t \001(\01327.yandex.cloud.c" +
-      "ompute.v1.instancegroup.AllocationPolicy" +
-      "B\004\350\3071\001\022S\n\022health_checks_spec\030\013 \001(\01327.yan" +
-      "dex.cloud.compute.v1.instancegroup.Healt" +
-      "hChecksSpec\022\032\n\022service_account_id\030\014 \001(\t\022" +
-      "S\n\022load_balancer_spec\030\016 \001(\01327.yandex.clo" +
-      "ud.compute.v1.instancegroup.LoadBalancer" +
-      "Spec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"}\n\"UpdateInstanceGroupFromYa" +
-      "mlRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022.\n\023instance_group_yaml\030\002 \001(\tB" +
-      "\021\350\3071\001\212\3101\t<=1048576\"8\n\033UpdateInstanceGrou" +
-      "pMetadata\022\031\n\021instance_group_id\030\001 \001(\t\"D\n\031" +
-      "StartInstanceGroupRequest\022\'\n\021instance_gr" +
-      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"7\n\032StartInsta" +
-      "nceGroupMetadata\022\031\n\021instance_group_id\030\001 " +
-      "\001(\t\"C\n\030StopInstanceGroupRequest\022\'\n\021insta" +
-      "nce_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\031Stop" +
-      "InstanceGroupMetadata\022\031\n\021instance_group_" +
-      "id\030\001 \001(\t\"E\n\032DeleteInstanceGroupRequest\022\'" +
-      "\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      "8\n\033DeleteInstanceGroupMetadata\022\031\n\021instan" +
-      "ce_group_id\030\001 \001(\t\"4\n\027DeleteInstancesMeta" +
-      "data\022\031\n\021instance_group_id\030\001 \001(\t\"\326\001\n\031List" +
-      "InstanceGroupsRequest\022\027\n\tfolder_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
-      " \001(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yandex." +
-      "cloud.compute.v1.instancegroup.InstanceG" +
-      "roupView\"\204\001\n\032ListInstanceGroupsResponse\022" +
-      "M\n\017instance_groups\030\001 \003(\01324.yandex.cloud." +
-      "compute.v1.instancegroup.InstanceGroup\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\246\001\n!ListInstance" +
-      "GroupInstancesRequest\022\'\n\021instance_group_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "cksSpec\022\032\n\022service_account_id\030\014 \001(\t\022B\n\tv" +
+      "ariables\030\r \003(\0132/.yandex.cloud.compute.v1" +
+      ".instancegroup.Variable\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"m\n\"Create" +
+      "InstanceGroupFromYamlRequest\022\027\n\tfolder_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022.\n\023instance_group_yaml\030\002 \001" +
+      "(\tB\021\350\3071\001\212\3101\t<=1048576\"B\n\033CreateInstanceG" +
+      "roupMetadata\022#\n\021instance_group_id\030\001 \001(\tB" +
+      "\010\212\3101\004<=50\"\367\007\n\032UpdateInstanceGroupRequest" +
+      "\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-" +
+      "z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\t" +
+      "B\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\0132M.yandex.cl" +
+      "oud.compute.v1.instancegroup.UpdateInsta" +
+      "nceGroupRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
+      "][-_0-9a-z]*\022X\n\021instance_template\030\006 \001(\0132" +
+      "7.yandex.cloud.compute.v1.instancegroup." +
+      "InstanceTemplateB\004\350\3071\001\022N\n\014scale_policy\030\007" +
+      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
+      "roup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_policy\030" +
+      "\010 \001(\01323.yandex.cloud.compute.v1.instance" +
+      "group.DeployPolicyB\004\350\3071\001\022X\n\021allocation_p" +
+      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.AllocationPolicyB\004\350\3071\001\022S\n\022he" +
+      "alth_checks_spec\030\013 \001(\01327.yandex.cloud.co" +
+      "mpute.v1.instancegroup.HealthChecksSpec\022" +
+      "\032\n\022service_account_id\030\014 \001(\t\022S\n\022load_bala" +
+      "ncer_spec\030\016 \001(\01327.yandex.cloud.compute.v" +
+      "1.instancegroup.LoadBalancerSpec\022B\n\tvari" +
+      "ables\030\017 \003(\0132/.yandex.cloud.compute.v1.in" +
+      "stancegroup.Variable\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"}\n\"UpdateIns" +
+      "tanceGroupFromYamlRequest\022\'\n\021instance_gr" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\023instance_g" +
+      "roup_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033Up" +
+      "dateInstanceGroupMetadata\022\031\n\021instance_gr" +
+      "oup_id\030\001 \001(\t\"D\n\031StartInstanceGroupReques" +
+      "t\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"7\n\032StartInstanceGroupMetadata\022\031\n\021inst" +
+      "ance_group_id\030\001 \001(\t\"C\n\030StopInstanceGroup" +
+      "Request\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"6\n\031StopInstanceGroupMetadata\022\031\n" +
+      "\021instance_group_id\030\001 \001(\t\"E\n\032DeleteInstan" +
+      "ceGroupRequest\022\'\n\021instance_group_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"8\n\033DeleteInstanceGroupMe" +
+      "tadata\022\031\n\021instance_group_id\030\001 \001(\t\"4\n\027Del" +
+      "eteInstancesMetadata\022\031\n\021instance_group_i" +
+      "d\030\001 \001(\t\"\326\001\n\031ListInstanceGroupsRequest\022\027\n" +
+      "\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
       "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n\"Lis" +
-      "tInstanceGroupInstancesResponse\022I\n\tinsta" +
-      "nces\030\001 \003(\01326.yandex.cloud.compute.v1.ins" +
-      "tancegroup.ManagedInstance\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"\247\001\n\"ListInstanceGroupOperati" +
-      "onsRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fil" +
-      "ter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n#ListInstanceGro" +
-      "upOperationsResponse\0225\n\noperations\030\001 \003(\013" +
-      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\237\001\n\"ListInstanceGro" +
-      "upLogRecordsRequest\022\037\n\021instance_group_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
-      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"\205\001\n#ListInstanceG" +
-      "roupLogRecordsResponse\022E\n\013log_records\030\001 " +
-      "\003(\01320.yandex.cloud.compute.v1.instancegr" +
-      "oup.LogRecord\022\027\n\017next_page_token\030\002 \001(\t*(" +
-      "\n\021InstanceGroupView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001" +
-      "2\302\024\n\024InstanceGroupService\022\263\001\n\003Get\022>.yand" +
-      "ex.cloud.compute.v1.instancegroup.GetIns" +
-      "tanceGroupRequest\0324.yandex.cloud.compute" +
-      ".v1.instancegroup.InstanceGroup\"6\202\323\344\223\0020\022" +
-      "./compute/v1/instanceGroups/{instance_gr" +
-      "oup_id}\022\257\001\n\004List\022@.yandex.cloud.compute." +
-      "v1.instancegroup.ListInstanceGroupsReque" +
-      "st\032A.yandex.cloud.compute.v1.instancegro" +
-      "up.ListInstanceGroupsResponse\"\"\202\323\344\223\002\034\022\032/" +
-      "compute/v1/instanceGroups\022\305\001\n\006Create\022A.y" +
-      "andex.cloud.compute.v1.instancegroup.Cre" +
-      "ateInstanceGroupRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"U\202\323\344\223\002\037\"\032/compute/v1/" +
-      "instanceGroups:\001*\262\322*,\n\033CreateInstanceGro" +
-      "upMetadata\022\rInstanceGroup\022\332\001\n\016CreateFrom" +
-      "Yaml\022I.yandex.cloud.compute.v1.instanceg" +
-      "roup.CreateInstanceGroupFromYamlRequest\032" +
-      "!.yandex.cloud.operation.Operation\"Z\202\323\344\223" +
-      "\002$\"\037/compute/v1/instanceGroups:yaml:\001*\262\322" +
-      "*,\n\033CreateInstanceGroupMetadata\022\rInstanc" +
-      "eGroup\022\331\001\n\006Update\022A.yandex.cloud.compute" +
-      ".v1.instancegroup.UpdateInstanceGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "i\202\323\344\223\00232./compute/v1/instanceGroups/{ins" +
-      "tance_group_id}:\001*\262\322*,\n\033UpdateInstanceGr" +
-      "oupMetadata\022\rInstanceGroup\022\356\001\n\016UpdateFro" +
-      "mYaml\022I.yandex.cloud.compute.v1.instance" +
-      "group.UpdateInstanceGroupFromYamlRequest" +
-      "\032!.yandex.cloud.operation.Operation\"n\202\323\344" +
-      "\223\002823/compute/v1/instanceGroups/{instanc" +
-      "e_group_id}:yaml:\001*\262\322*,\n\033UpdateInstanceG" +
-      "roupMetadata\022\rInstanceGroup\022\325\001\n\004Stop\022?.y" +
-      "andex.cloud.compute.v1.instancegroup.Sto" +
-      "pInstanceGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"i\202\323\344\223\0025\"3/compute/v1/in" +
-      "stanceGroups/{instance_group_id}:stop\262\322*" +
-      "*\n\031StopInstanceGroupMetadata\022\rInstanceGr" +
-      "oup\022\331\001\n\005Start\022@.yandex.cloud.compute.v1." +
-      "instancegroup.StartInstanceGroupRequest\032" +
-      "!.yandex.cloud.operation.Operation\"k\202\323\344\223" +
-      "\0026\"4/compute/v1/instanceGroups/{instance" +
-      "_group_id}:start\262\322*+\n\032StartInstanceGroup" +
-      "Metadata\022\rInstanceGroup\022\336\001\n\006Delete\022A.yan" +
-      "dex.cloud.compute.v1.instancegroup.Delet" +
-      "eInstanceGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"n\202\323\344\223\0020*./compute/v1/in" +
-      "stanceGroups/{instance_group_id}\262\322*4\n\033De" +
-      "leteInstanceGroupMetadata\022\025google.protob" +
-      "uf.Empty\022\346\001\n\rListInstances\022H.yandex.clou" +
-      "d.compute.v1.instancegroup.ListInstanceG" +
-      "roupInstancesRequest\032I.yandex.cloud.comp" +
-      "ute.v1.instancegroup.ListInstanceGroupIn" +
-      "stancesResponse\"@\202\323\344\223\002:\0228/compute/v1/ins" +
-      "tanceGroups/{instance_group_id}/instance" +
-      "s\022\352\001\n\016ListOperations\022I.yandex.cloud.comp" +
-      "ute.v1.instancegroup.ListInstanceGroupOp" +
-      "erationsRequest\032J.yandex.cloud.compute.v" +
-      "1.instancegroup.ListInstanceGroupOperati" +
-      "onsResponse\"A\202\323\344\223\002;\0229/compute/v1/instanc" +
-      "eGroups/{instance_group_id}/operations\022\344" +
-      "\001\n\016ListLogRecords\022I.yandex.cloud.compute" +
-      ".v1.instancegroup.ListInstanceGroupLogRe" +
-      "cordsRequest\032J.yandex.cloud.compute.v1.i" +
-      "nstancegroup.ListInstanceGroupLogRecords" +
-      "Response\";\202\323\344\223\0025\0223/compute/v1/instanceGr" +
-      "oups/{instance_group_id}:logsB\204\001\n)yandex" +
-      ".cloud.api.compute.v1.instancegroupZWgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/compute/v1/instancegroup;instanceg" +
-      "roupb\006proto3"
+      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022F\n\004view" +
+      "\030\005 \001(\01628.yandex.cloud.compute.v1.instanc" +
+      "egroup.InstanceGroupView\"\204\001\n\032ListInstanc" +
+      "eGroupsResponse\022M\n\017instance_groups\030\001 \003(\013" +
+      "24.yandex.cloud.compute.v1.instancegroup" +
+      ".InstanceGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\246\001\n!ListInstanceGroupInstancesRequest\022\'\n" +
+      "\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\"\210\001\n\"ListInstanceGroupInstancesR" +
+      "esponse\022I\n\tinstances\030\001 \003(\01326.yandex.clou" +
+      "d.compute.v1.instancegroup.ManagedInstan" +
+      "ce\022\027\n\017next_page_token\030\002 \001(\t\"\247\001\n\"ListInst" +
+      "anceGroupOperationsRequest\022\'\n\021instance_g" +
+      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n" +
+      "#ListInstanceGroupOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n" +
+      "\"ListInstanceGroupLogRecordsRequest\022\037\n\021i" +
+      "nstance_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\205" +
+      "\001\n#ListInstanceGroupLogRecordsResponse\022E" +
+      "\n\013log_records\030\001 \003(\01320.yandex.cloud.compu" +
+      "te.v1.instancegroup.LogRecord\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005B" +
+      "ASIC\020\000\022\010\n\004FULL\020\0012\302\024\n\024InstanceGroupServic" +
+      "e\022\263\001\n\003Get\022>.yandex.cloud.compute.v1.inst" +
+      "ancegroup.GetInstanceGroupRequest\0324.yand" +
+      "ex.cloud.compute.v1.instancegroup.Instan" +
+      "ceGroup\"6\202\323\344\223\0020\022./compute/v1/instanceGro" +
+      "ups/{instance_group_id}\022\257\001\n\004List\022@.yande" +
+      "x.cloud.compute.v1.instancegroup.ListIns" +
+      "tanceGroupsRequest\032A.yandex.cloud.comput" +
+      "e.v1.instancegroup.ListInstanceGroupsRes" +
+      "ponse\"\"\202\323\344\223\002\034\022\032/compute/v1/instanceGroup" +
+      "s\022\305\001\n\006Create\022A.yandex.cloud.compute.v1.i" +
+      "nstancegroup.CreateInstanceGroupRequest\032" +
+      "!.yandex.cloud.operation.Operation\"U\202\323\344\223" +
+      "\002\037\"\032/compute/v1/instanceGroups:\001*\262\322*,\n\033C" +
+      "reateInstanceGroupMetadata\022\rInstanceGrou" +
+      "p\022\332\001\n\016CreateFromYaml\022I.yandex.cloud.comp" +
+      "ute.v1.instancegroup.CreateInstanceGroup" +
+      "FromYamlRequest\032!.yandex.cloud.operation" +
+      ".Operation\"Z\202\323\344\223\002$\"\037/compute/v1/instance" +
+      "Groups:yaml:\001*\262\322*,\n\033CreateInstanceGroupM" +
+      "etadata\022\rInstanceGroup\022\331\001\n\006Update\022A.yand" +
+      "ex.cloud.compute.v1.instancegroup.Update" +
+      "InstanceGroupRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"i\202\323\344\223\00232./compute/v1/ins" +
+      "tanceGroups/{instance_group_id}:\001*\262\322*,\n\033" +
+      "UpdateInstanceGroupMetadata\022\rInstanceGro" +
+      "up\022\356\001\n\016UpdateFromYaml\022I.yandex.cloud.com" +
+      "pute.v1.instancegroup.UpdateInstanceGrou" +
+      "pFromYamlRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"n\202\323\344\223\002823/compute/v1/instanc" +
+      "eGroups/{instance_group_id}:yaml:\001*\262\322*,\n" +
+      "\033UpdateInstanceGroupMetadata\022\rInstanceGr" +
+      "oup\022\325\001\n\004Stop\022?.yandex.cloud.compute.v1.i" +
+      "nstancegroup.StopInstanceGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"i\202\323\344\223\0025" +
+      "\"3/compute/v1/instanceGroups/{instance_g" +
+      "roup_id}:stop\262\322**\n\031StopInstanceGroupMeta" +
+      "data\022\rInstanceGroup\022\331\001\n\005Start\022@.yandex.c" +
+      "loud.compute.v1.instancegroup.StartInsta" +
+      "nceGroupRequest\032!.yandex.cloud.operation" +
+      ".Operation\"k\202\323\344\223\0026\"4/compute/v1/instance" +
+      "Groups/{instance_group_id}:start\262\322*+\n\032St" +
+      "artInstanceGroupMetadata\022\rInstanceGroup\022" +
+      "\336\001\n\006Delete\022A.yandex.cloud.compute.v1.ins" +
+      "tancegroup.DeleteInstanceGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"n\202\323\344\223\0020" +
+      "*./compute/v1/instanceGroups/{instance_g" +
+      "roup_id}\262\322*4\n\033DeleteInstanceGroupMetadat" +
+      "a\022\025google.protobuf.Empty\022\346\001\n\rListInstanc" +
+      "es\022H.yandex.cloud.compute.v1.instancegro" +
+      "up.ListInstanceGroupInstancesRequest\032I.y" +
+      "andex.cloud.compute.v1.instancegroup.Lis" +
+      "tInstanceGroupInstancesResponse\"@\202\323\344\223\002:\022" +
+      "8/compute/v1/instanceGroups/{instance_gr" +
+      "oup_id}/instances\022\352\001\n\016ListOperations\022I.y" +
+      "andex.cloud.compute.v1.instancegroup.Lis" +
+      "tInstanceGroupOperationsRequest\032J.yandex" +
+      ".cloud.compute.v1.instancegroup.ListInst" +
+      "anceGroupOperationsResponse\"A\202\323\344\223\002;\0229/co" +
+      "mpute/v1/instanceGroups/{instance_group_" +
+      "id}/operations\022\344\001\n\016ListLogRecords\022I.yand" +
+      "ex.cloud.compute.v1.instancegroup.ListIn" +
+      "stanceGroupLogRecordsRequest\032J.yandex.cl" +
+      "oud.compute.v1.instancegroup.ListInstanc" +
+      "eGroupLogRecordsResponse\";\202\323\344\223\0025\0223/compu" +
+      "te/v1/instanceGroups/{instance_group_id}" +
+      ":logsB\204\001\n)yandex.cloud.api.compute.v1.in" +
+      "stancegroupZWgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/compute/v1/instanc" +
+      "egroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23207,7 +23944,7 @@ public final class InstanceGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Variables", });
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_LabelsEntry_fieldAccessorTable = new
@@ -23231,7 +23968,7 @@ public final class InstanceGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor,
-        new java.lang.String[] { "InstanceGroupId", "UpdateMask", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "HealthChecksSpec", "ServiceAccountId", "LoadBalancerSpec", });
+        new java.lang.String[] { "InstanceGroupId", "UpdateMask", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "HealthChecksSpec", "ServiceAccountId", "LoadBalancerSpec", "Variables", });
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_LabelsEntry_fieldAccessorTable = new

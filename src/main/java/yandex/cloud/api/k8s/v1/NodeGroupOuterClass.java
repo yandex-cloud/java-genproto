@@ -449,6 +449,25 @@ public final class NodeGroupOuterClass {
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
+
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    java.util.List<java.lang.String>
+        getAllowedUnsafeSysctlsList();
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    int getAllowedUnsafeSysctlsCount();
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    java.lang.String getAllowedUnsafeSysctls(int index);
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    com.google.protobuf.ByteString
+        getAllowedUnsafeSysctlsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeGroup}
@@ -470,6 +489,7 @@ public final class NodeGroupOuterClass {
       status_ = 0;
       instanceGroupId_ = "";
       nodeVersion_ = "";
+      allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -629,6 +649,15 @@ public final class NodeGroupOuterClass {
 
               break;
             }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+                allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              allowedUnsafeSysctls_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -644,6 +673,9 @@ public final class NodeGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+          allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1429,6 +1461,35 @@ public final class NodeGroupOuterClass {
       return getMaintenancePolicy();
     }
 
+    public static final int ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER = 15;
+    private com.google.protobuf.LazyStringList allowedUnsafeSysctls_;
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedUnsafeSysctlsList() {
+      return allowedUnsafeSysctls_;
+    }
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    public int getAllowedUnsafeSysctlsCount() {
+      return allowedUnsafeSysctls_.size();
+    }
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    public java.lang.String getAllowedUnsafeSysctls(int index) {
+      return allowedUnsafeSysctls_.get(index);
+    }
+    /**
+     * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAllowedUnsafeSysctlsBytes(int index) {
+      return allowedUnsafeSysctls_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1487,6 +1548,9 @@ public final class NodeGroupOuterClass {
       }
       if (maintenancePolicy_ != null) {
         output.writeMessage(14, getMaintenancePolicy());
+      }
+      for (int i = 0; i < allowedUnsafeSysctls_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, allowedUnsafeSysctls_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1553,6 +1617,14 @@ public final class NodeGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getMaintenancePolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedUnsafeSysctls_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedUnsafeSysctls_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedUnsafeSysctlsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1614,6 +1686,8 @@ public final class NodeGroupOuterClass {
         result = result && getMaintenancePolicy()
             .equals(other.getMaintenancePolicy());
       }
+      result = result && getAllowedUnsafeSysctlsList()
+          .equals(other.getAllowedUnsafeSysctlsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1666,6 +1740,10 @@ public final class NodeGroupOuterClass {
       if (hasMaintenancePolicy()) {
         hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenancePolicy().hashCode();
+      }
+      if (getAllowedUnsafeSysctlsCount() > 0) {
+        hash = (37 * hash) + ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedUnsafeSysctlsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1873,6 +1951,8 @@ public final class NodeGroupOuterClass {
           maintenancePolicy_ = null;
           maintenancePolicyBuilder_ = null;
         }
+        allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -1940,6 +2020,11 @@ public final class NodeGroupOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00004000);
+        }
+        result.allowedUnsafeSysctls_ = allowedUnsafeSysctls_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2035,6 +2120,16 @@ public final class NodeGroupOuterClass {
         }
         if (other.hasMaintenancePolicy()) {
           mergeMaintenancePolicy(other.getMaintenancePolicy());
+        }
+        if (!other.allowedUnsafeSysctls_.isEmpty()) {
+          if (allowedUnsafeSysctls_.isEmpty()) {
+            allowedUnsafeSysctls_ = other.allowedUnsafeSysctls_;
+            bitField0_ = (bitField0_ & ~0x00004000);
+          } else {
+            ensureAllowedUnsafeSysctlsIsMutable();
+            allowedUnsafeSysctls_.addAll(other.allowedUnsafeSysctls_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3670,6 +3765,100 @@ public final class NodeGroupOuterClass {
           maintenancePolicy_ = null;
         }
         return maintenancePolicyBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAllowedUnsafeSysctlsIsMutable() {
+        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+          allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList(allowedUnsafeSysctls_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedUnsafeSysctlsList() {
+        return allowedUnsafeSysctls_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public int getAllowedUnsafeSysctlsCount() {
+        return allowedUnsafeSysctls_.size();
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public java.lang.String getAllowedUnsafeSysctls(int index) {
+        return allowedUnsafeSysctls_.get(index);
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAllowedUnsafeSysctlsBytes(int index) {
+        return allowedUnsafeSysctls_.getByteString(index);
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public Builder setAllowedUnsafeSysctls(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowedUnsafeSysctlsIsMutable();
+        allowedUnsafeSysctls_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public Builder addAllowedUnsafeSysctls(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowedUnsafeSysctlsIsMutable();
+        allowedUnsafeSysctls_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public Builder addAllAllowedUnsafeSysctls(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedUnsafeSysctlsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedUnsafeSysctls_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public Builder clearAllowedUnsafeSysctls() {
+        allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string allowed_unsafe_sysctls = 15;</code>
+       */
+      public Builder addAllowedUnsafeSysctlsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAllowedUnsafeSysctlsIsMutable();
+        allowedUnsafeSysctls_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13400,7 +13589,7 @@ public final class NodeGroupOuterClass {
       "yandex.cloud.k8s.v1\032\037google/protobuf/tim" +
       "estamp.proto\032%yandex/cloud/k8s/v1/mainte" +
       "nance.proto\032!yandex/cloud/k8s/v1/version" +
-      ".proto\032\035yandex/cloud/validation.proto\"\235\006" +
+      ".proto\032\035yandex/cloud/validation.proto\"\275\006" +
       "\n\tNodeGroup\022\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
@@ -13416,53 +13605,54 @@ public final class NodeGroupOuterClass {
       "6\n\014version_info\030\r \001(\0132 .yandex.cloud.k8s" +
       ".v1.VersionInfo\022K\n\022maintenance_policy\030\016 " +
       "\001(\0132/.yandex.cloud.k8s.v1.NodeGroupMaint" +
-      "enancePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS" +
-      "_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNN" +
-      "ING\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007" +
-      "STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"\301\003" +
-      "\n\014NodeTemplate\022\023\n\013platform_id\030\001 \001(\t\022:\n\016r" +
-      "esources_spec\030\002 \001(\0132\".yandex.cloud.k8s.v" +
-      "1.ResourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132" +
-      "\035.yandex.cloud.k8s.v1.DiskSpec\022w\n\010metada" +
-      "ta\030\004 \003(\0132/.yandex.cloud.k8s.v1.NodeTempl" +
-      "ate.MetadataEntryB4\202\3101\004<=64\212\3101\010<=131072\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022=\n\017v4_ad" +
-      "dress_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1.N" +
-      "odeAddressSpec\022@\n\021scheduling_policy\030\006 \001(" +
-      "\0132%.yandex.cloud.k8s.v1.SchedulingPolicy" +
-      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"T\n\017NodeAddressSpec\022A\n\023one_to_o" +
-      "ne_nat_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1." +
-      "OneToOneNatSpec\"E\n\017OneToOneNatSpec\0222\n\nip" +
-      "_version\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpV" +
-      "ersion\"\241\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003" +
-      "B\022\372\3071\0160-274877906944\022B\n\005cores\030\002 \001(\003B3\372\3071" +
-      "/0,1,2,4,6,8,10,12,14,16,18,20,22,24,26," +
-      "28,30,32\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5" +
-      ",20,50,100\"f\n\010DiskSpec\0222\n\014disk_type_id\030\001" +
-      " \001(\tB\034\362\3071\030|network-ssd|network-hdd\022&\n\tdi" +
-      "sk_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\266\002\n\013S" +
-      "calePolicy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex" +
-      ".cloud.k8s.v1.ScalePolicy.FixedScaleH\000\022@" +
-      "\n\nauto_scale\030\002 \001(\0132*.yandex.cloud.k8s.v1" +
-      ".ScalePolicy.AutoScaleH\000\032%\n\nFixedScale\022\027" +
-      "\n\004size\030\001 \001(\003B\t\372\3071\0050-100\032f\n\tAutoScale\022\033\n\010" +
-      "min_size\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 " +
-      "\001(\003B\t\372\3071\0050-100\022\037\n\014initial_size\030\003 \001(\003B\t\372\307" +
-      "1\0050-100B\022\n\nscale_type\022\004\300\3011\001\"V\n\031NodeGroup" +
-      "AllocationPolicy\0229\n\tlocations\030\001 \003(\0132&.ya" +
-      "ndex.cloud.k8s.v1.NodeGroupLocation\"=\n\021N" +
-      "odeGroupLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\021\n\tsubnet_id\030\002 \001(\t\"\'\n\020SchedulingPolicy\022\023" +
-      "\n\013preemptible\030\001 \001(\010\"\213\001\n\032NodeGroupMainten" +
-      "ancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022\023\n\013auto" +
-      "_repair\030\002 \001(\010\022B\n\022maintenance_window\030\003 \001(" +
-      "\0132&.yandex.cloud.k8s.v1.MaintenanceWindo" +
-      "w*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED" +
-      "\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.a" +
-      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "enancePolicy\022\036\n\026allowed_unsafe_sysctls\030\017" +
+      " \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPECI" +
+      "FIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017\n" +
+      "\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020" +
+      "\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"\301\003\n\014NodeTe" +
+      "mplate\022\023\n\013platform_id\030\001 \001(\t\022:\n\016resources" +
+      "_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.Resour" +
+      "cesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.yandex" +
+      ".cloud.k8s.v1.DiskSpec\022w\n\010metadata\030\004 \003(\013" +
+      "2/.yandex.cloud.k8s.v1.NodeTemplate.Meta" +
+      "dataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\0041-6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022=\n\017v4_address_sp" +
+      "ec\030\005 \001(\0132$.yandex.cloud.k8s.v1.NodeAddre" +
+      "ssSpec\022@\n\021scheduling_policy\030\006 \001(\0132%.yand" +
+      "ex.cloud.k8s.v1.SchedulingPolicy\032/\n\rMeta" +
+      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"T\n\017NodeAddressSpec\022A\n\023one_to_one_nat_s" +
+      "pec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOne" +
+      "NatSpec\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
+      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"\241" +
+      "\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\0160-" +
+      "274877906944\022B\n\005cores\030\002 \001(\003B3\372\3071/0,1,2,4" +
+      ",6,8,10,12,14,16,18,20,22,24,26,28,30,32" +
+      "\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,1" +
+      "00\"f\n\010DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\307" +
+      "1\030|network-ssd|network-hdd\022&\n\tdisk_size\030" +
+      "\002 \001(\003B\023\372\3071\0170-4398046511104\"\266\002\n\013ScalePoli" +
+      "cy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.k" +
+      "8s.v1.ScalePolicy.FixedScaleH\000\022@\n\nauto_s" +
+      "cale\030\002 \001(\0132*.yandex.cloud.k8s.v1.ScalePo" +
+      "licy.AutoScaleH\000\032%\n\nFixedScale\022\027\n\004size\030\001" +
+      " \001(\003B\t\372\3071\0050-100\032f\n\tAutoScale\022\033\n\010min_size" +
+      "\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071" +
+      "\0050-100\022\037\n\014initial_size\030\003 \001(\003B\t\372\3071\0050-100B" +
+      "\022\n\nscale_type\022\004\300\3011\001\"V\n\031NodeGroupAllocati" +
+      "onPolicy\0229\n\tlocations\030\001 \003(\0132&.yandex.clo" +
+      "ud.k8s.v1.NodeGroupLocation\"=\n\021NodeGroup" +
+      "Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubne" +
+      "t_id\030\002 \001(\t\"\'\n\020SchedulingPolicy\022\023\n\013preemp" +
+      "tible\030\001 \001(\010\"\213\001\n\032NodeGroupMaintenancePoli" +
+      "cy\022\024\n\014auto_upgrade\030\001 \001(\010\022\023\n\013auto_repair\030" +
+      "\002 \001(\010\022B\n\022maintenance_window\030\003 \001(\0132&.yand" +
+      "ex.cloud.k8s.v1.MaintenanceWindow*;\n\tIpV" +
+      "ersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IP" +
+      "V4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api.k8s.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13485,7 +13675,7 @@ public final class NodeGroupOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Description", "Labels", "Status", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "InstanceGroupId", "NodeVersion", "VersionInfo", "MaintenancePolicy", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Description", "Labels", "Status", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "InstanceGroupId", "NodeVersion", "VersionInfo", "MaintenancePolicy", "AllowedUnsafeSysctls", });
     internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_fieldAccessorTable = new

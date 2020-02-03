@@ -19413,133 +19413,150 @@ public final class SymmetricKeyServiceOuterClass {
       "pi/annotations.proto\032 google/protobuf/fi" +
       "eld_mask.proto\032\037google/protobuf/timestam" +
       "p.proto\032\036google/protobuf/duration.proto\032" +
-      " yandex/cloud/api/operation.proto\032&yande" +
-      "x/cloud/operation/operation.proto\032\035yande" +
-      "x/cloud/validation.proto\032\'yandex/cloud/k" +
-      "ms/v1/symmetric_key.proto\"\253\003\n\031CreateSymm" +
-      "etricKeyRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037\n\013des" +
-      "cription\030\003 \001(\tB\n\212\3101\006<=1024\022\213\001\n\006labels\030\004 " +
-      "\003(\0132:.yandex.cloud.kms.v1.CreateSymmetri" +
-      "cKeyRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022B\n\021default_algorithm\030\005 \001(\0162\'.ya" +
-      "ndex.cloud.kms.v1.SymmetricAlgorithm\0222\n\017" +
-      "rotation_period\030\006 \001(\0132\031.google.protobuf." +
-      "Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"H\n\032CreateSymmetricKeyMet" +
-      "adata\022\016\n\006key_id\030\001 \001(\t\022\032\n\022primary_version" +
-      "_id\030\002 \001(\t\"6\n\026GetSymmetricKeyRequest\022\034\n\006k" +
-      "ey_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"y\n\030ListSymmetr" +
-      "icKeysRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"e\n\031ListSymm" +
-      "etricKeysResponse\022/\n\004keys\030\001 \003(\0132!.yandex" +
-      ".cloud.kms.v1.SymmetricKey\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"}\n\037ListSymmetricKeyVersionsR" +
-      "equest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"{\n ListSymmetricKeyVe" +
-      "rsionsResponse\022>\n\014key_versions\030\001 \003(\0132(.y" +
-      "andex.cloud.kms.v1.SymmetricKeyVersion\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\231\004\n\031UpdateSymmet" +
-      "ricKeyRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\0225\n\013update_mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\0228\n\006" +
-      "status\030\005 \001(\0162(.yandex.cloud.kms.v1.Symme" +
-      "tricKey.Status\022\213\001\n\006labels\030\006 \003(\0132:.yandex" +
-      ".cloud.kms.v1.UpdateSymmetricKeyRequest." +
-      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
-      "-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022B\n\021" +
-      "default_algorithm\030\007 \001(\0162\'.yandex.cloud.k" +
-      "ms.v1.SymmetricAlgorithm\0222\n\017rotation_per" +
-      "iod\030\010 \001(\0132\031.google.protobuf.Duration\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\",\n\032UpdateSymmetricKeyMetadata\022\016\n\006key" +
-      "_id\030\001 \001(\t\"9\n\031DeleteSymmetricKeyRequest\022\034" +
-      "\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\032DeleteSy" +
-      "mmetricKeyMetadata\022\016\n\006key_id\030\001 \001(\t\"f\n$Se" +
-      "tPrimarySymmetricKeyVersionRequest\022\034\n\006ke" +
-      "y_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"K\n%SetPrimarySymmetri" +
-      "cKeyVersionMetadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nv" +
-      "ersion_id\030\002 \001(\t\"9\n\031RotateSymmetricKeyReq" +
-      "uest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"L\n\032Ro" +
-      "tateSymmetricKeyMetadata\022\016\n\006key_id\030\001 \001(\t" +
-      "\022\036\n\026new_primary_version_id\030\002 \001(\t\"\242\001\n-Sch" +
-      "eduleSymmetricKeyVersionDestructionReque" +
-      "st\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nvers" +
-      "ion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_pe" +
-      "riod\030\003 \001(\0132\031.google.protobuf.Duration\"\204\001" +
-      "\n.ScheduleSymmetricKeyVersionDestruction" +
-      "Metadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_id\030\002" +
-      " \001(\t\022.\n\ndestroy_at\030\003 \001(\0132\032.google.protob" +
-      "uf.Timestamp\"m\n+CancelSymmetricKeyVersio" +
-      "nDestructionRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"R\n,CancelSymmetricKeyVersionDestruct" +
-      "ionMetadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_i" +
-      "d\030\002 \001(\t\"\177\n!ListSymmetricKeyOperationsReq" +
-      "uest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListSymmetricKeyOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t2\377\017\n\023SymmetricKeyService\022\242" +
-      "\001\n\006Create\022..yandex.cloud.kms.v1.CreateSy" +
-      "mmetricKeyRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"E\202\323\344\223\002\021\"\014/kms/v1/keys:\001*\262\322*" +
-      "*\n\032CreateSymmetricKeyMetadata\022\014Symmetric" +
-      "Key\022t\n\003Get\022+.yandex.cloud.kms.v1.GetSymm" +
-      "etricKeyRequest\032!.yandex.cloud.kms.v1.Sy" +
-      "mmetricKey\"\035\202\323\344\223\002\027\022\025/kms/v1/keys/{key_id" +
-      "}\022{\n\004List\022-.yandex.cloud.kms.v1.ListSymm" +
-      "etricKeysRequest\032..yandex.cloud.kms.v1.L" +
-      "istSymmetricKeysResponse\"\024\202\323\344\223\002\016\022\014/kms/v" +
-      "1/keys\022\243\001\n\014ListVersions\0224.yandex.cloud.k" +
-      "ms.v1.ListSymmetricKeyVersionsRequest\0325." +
-      "yandex.cloud.kms.v1.ListSymmetricKeyVers" +
-      "ionsResponse\"&\202\323\344\223\002 \022\036/kms/v1/keys/{key_" +
-      "id}/versions\022\253\001\n\006Update\022..yandex.cloud.k" +
-      "ms.v1.UpdateSymmetricKeyRequest\032!.yandex" +
-      ".cloud.operation.Operation\"N\202\323\344\223\002\0322\025/kms" +
-      "/v1/keys/{key_id}:\001*\262\322**\n\032UpdateSymmetri" +
-      "cKeyMetadata\022\014SymmetricKey\022\250\001\n\006Delete\022.." +
-      "yandex.cloud.kms.v1.DeleteSymmetricKeyRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"K\202\323\344\223\002\027*\025/kms/v1/keys/{key_id}\262\322**\n\032Del" +
-      "eteSymmetricKeyMetadata\022\014SymmetricKey\022\336\001" +
-      "\n\021SetPrimaryVersion\0229.yandex.cloud.kms.v" +
-      "1.SetPrimarySymmetricKeyVersionRequest\032!" +
-      ".yandex.cloud.operation.Operation\"k\202\323\344\223\002" +
-      ",\"\'/kms/v1/keys/{key_id}:setPrimaryVersi" +
-      "on:\001*\262\322*5\n%SetPrimarySymmetricKeyVersion" +
-      "Metadata\022\014SymmetricKey\022\212\002\n\032ScheduleVersi" +
-      "onDestruction\022B.yandex.cloud.kms.v1.Sche" +
-      "duleSymmetricKeyVersionDestructionReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\204\001\202" +
-      "\323\344\223\0025\"0/kms/v1/keys/{key_id}:scheduleVer" +
-      "sionDestruction:\001*\262\322*E\n.ScheduleSymmetri" +
-      "cKeyVersionDestructionMetadata\022\023Symmetri" +
-      "cKeyVersion\022\202\002\n\030CancelVersionDestruction" +
-      "\022@.yandex.cloud.kms.v1.CancelSymmetricKe" +
-      "yVersionDestructionRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\200\001\202\323\344\223\0023\"./kms/v1/" +
-      "keys/{key_id}:cancelVersionDestruction:\001" +
-      "*\262\322*C\n,CancelSymmetricKeyVersionDestruct" +
-      "ionMetadata\022\023SymmetricKeyVersion\022\257\001\n\006Rot" +
-      "ate\022..yandex.cloud.kms.v1.RotateSymmetri" +
+      " yandex/cloud/access/access.proto\032 yande" +
+      "x/cloud/api/operation.proto\032&yandex/clou" +
+      "d/operation/operation.proto\032\035yandex/clou" +
+      "d/validation.proto\032\'yandex/cloud/kms/v1/" +
+      "symmetric_key.proto\"\253\003\n\031CreateSymmetricK" +
+      "eyRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037\n\013descripti" +
+      "on\030\003 \001(\tB\n\212\3101\006<=1024\022\213\001\n\006labels\030\004 \003(\0132:." +
+      "yandex.cloud.kms.v1.CreateSymmetricKeyRe" +
+      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
+      "-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\022B\n\021default_algorithm\030\005 \001(\0162\'.yandex.c" +
+      "loud.kms.v1.SymmetricAlgorithm\0222\n\017rotati" +
+      "on_period\030\006 \001(\0132\031.google.protobuf.Durati" +
+      "on\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"H\n\032CreateSymmetricKeyMetadata\022" +
+      "\016\n\006key_id\030\001 \001(\t\022\032\n\022primary_version_id\030\002 " +
+      "\001(\t\"6\n\026GetSymmetricKeyRequest\022\034\n\006key_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"y\n\030ListSymmetricKeys" +
+      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"e\n\031ListSymmetricK" +
+      "eysResponse\022/\n\004keys\030\001 \003(\0132!.yandex.cloud" +
+      ".kms.v1.SymmetricKey\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"}\n\037ListSymmetricKeyVersionsRequest" +
+      "\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"{\n ListSymmetricKeyVersions" +
+      "Response\022>\n\014key_versions\030\001 \003(\0132(.yandex." +
+      "cloud.kms.v1.SymmetricKeyVersion\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"\231\004\n\031UpdateSymmetricKey" +
+      "Request\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n" +
+      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005<=100\022\037\n" +
+      "\013description\030\004 \001(\tB\n\212\3101\006<=1024\0228\n\006status" +
+      "\030\005 \001(\0162(.yandex.cloud.kms.v1.SymmetricKe" +
+      "y.Status\022\213\001\n\006labels\030\006 \003(\0132:.yandex.cloud" +
+      ".kms.v1.UpdateSymmetricKeyRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022B\n\021defaul" +
+      "t_algorithm\030\007 \001(\0162\'.yandex.cloud.kms.v1." +
+      "SymmetricAlgorithm\0222\n\017rotation_period\030\010 " +
+      "\001(\0132\031.google.protobuf.Duration\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n" +
+      "\032UpdateSymmetricKeyMetadata\022\016\n\006key_id\030\001 " +
+      "\001(\t\"9\n\031DeleteSymmetricKeyRequest\022\034\n\006key_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\032DeleteSymmetri" +
+      "cKeyMetadata\022\016\n\006key_id\030\001 \001(\t\"f\n$SetPrima" +
+      "rySymmetricKeyVersionRequest\022\034\n\006key_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"K\n%SetPrimarySymmetricKeyVe" +
+      "rsionMetadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion" +
+      "_id\030\002 \001(\t\"9\n\031RotateSymmetricKeyRequest\022\034" +
+      "\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"L\n\032RotateSy" +
+      "mmetricKeyMetadata\022\016\n\006key_id\030\001 \001(\t\022\036\n\026ne" +
+      "w_primary_version_id\030\002 \001(\t\"\242\001\n-ScheduleS" +
+      "ymmetricKeyVersionDestructionRequest\022\034\n\006" +
+      "key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003" +
+      " \001(\0132\031.google.protobuf.Duration\"\204\001\n.Sche" +
+      "duleSymmetricKeyVersionDestructionMetada" +
+      "ta\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022." +
+      "\n\ndestroy_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\"m\n+CancelSymmetricKeyVersionDestr" +
+      "uctionRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"R\n" +
+      ",CancelSymmetricKeyVersionDestructionMet" +
+      "adata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(" +
+      "\t\"\177\n!ListSymmetricKeyOperationsRequest\022\034" +
+      "\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"t\n\"ListSymmetricKeyOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t2\366\024\n\023SymmetricKeyService\022\242\001\n\006Cre" +
+      "ate\022..yandex.cloud.kms.v1.CreateSymmetri" +
       "cKeyRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"R\202\323\344\223\002\036\"\034/kms/v1/keys/{key_id}:ro" +
-      "tate\262\322**\n\032RotateSymmetricKeyMetadata\022\014Sy" +
-      "mmetricKey\022\253\001\n\016ListOperations\0226.yandex.c" +
-      "loud.kms.v1.ListSymmetricKeyOperationsRe" +
-      "quest\0327.yandex.cloud.kms.v1.ListSymmetri" +
-      "cKeyOperationsResponse\"(\202\323\344\223\002\"\022 /kms/v1/" +
-      "keys/{key_id}/operationsBV\n\027yandex.cloud" +
-      ".api.kms.v1Z;github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/kms/v1;kmsb\006proto3"
+      "ration\"E\202\323\344\223\002\021\"\014/kms/v1/keys:\001*\262\322**\n\032Cre" +
+      "ateSymmetricKeyMetadata\022\014SymmetricKey\022t\n" +
+      "\003Get\022+.yandex.cloud.kms.v1.GetSymmetricK" +
+      "eyRequest\032!.yandex.cloud.kms.v1.Symmetri" +
+      "cKey\"\035\202\323\344\223\002\027\022\025/kms/v1/keys/{key_id}\022{\n\004L" +
+      "ist\022-.yandex.cloud.kms.v1.ListSymmetricK" +
+      "eysRequest\032..yandex.cloud.kms.v1.ListSym" +
+      "metricKeysResponse\"\024\202\323\344\223\002\016\022\014/kms/v1/keys" +
+      "\022\243\001\n\014ListVersions\0224.yandex.cloud.kms.v1." +
+      "ListSymmetricKeyVersionsRequest\0325.yandex" +
+      ".cloud.kms.v1.ListSymmetricKeyVersionsRe" +
+      "sponse\"&\202\323\344\223\002 \022\036/kms/v1/keys/{key_id}/ve" +
+      "rsions\022\253\001\n\006Update\022..yandex.cloud.kms.v1." +
+      "UpdateSymmetricKeyRequest\032!.yandex.cloud" +
+      ".operation.Operation\"N\202\323\344\223\002\0322\025/kms/v1/ke" +
+      "ys/{key_id}:\001*\262\322**\n\032UpdateSymmetricKeyMe" +
+      "tadata\022\014SymmetricKey\022\250\001\n\006Delete\022..yandex" +
+      ".cloud.kms.v1.DeleteSymmetricKeyRequest\032" +
+      "!.yandex.cloud.operation.Operation\"K\202\323\344\223" +
+      "\002\027*\025/kms/v1/keys/{key_id}\262\322**\n\032DeleteSym" +
+      "metricKeyMetadata\022\014SymmetricKey\022\336\001\n\021SetP" +
+      "rimaryVersion\0229.yandex.cloud.kms.v1.SetP" +
+      "rimarySymmetricKeyVersionRequest\032!.yande" +
+      "x.cloud.operation.Operation\"k\202\323\344\223\002,\"\'/km" +
+      "s/v1/keys/{key_id}:setPrimaryVersion:\001*\262" +
+      "\322*5\n%SetPrimarySymmetricKeyVersionMetada" +
+      "ta\022\014SymmetricKey\022\212\002\n\032ScheduleVersionDest" +
+      "ruction\022B.yandex.cloud.kms.v1.ScheduleSy" +
+      "mmetricKeyVersionDestructionRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\204\001\202\323\344\223\0025\"" +
+      "0/kms/v1/keys/{key_id}:scheduleVersionDe" +
+      "struction:\001*\262\322*E\n.ScheduleSymmetricKeyVe" +
+      "rsionDestructionMetadata\022\023SymmetricKeyVe" +
+      "rsion\022\202\002\n\030CancelVersionDestruction\022@.yan" +
+      "dex.cloud.kms.v1.CancelSymmetricKeyVersi" +
+      "onDestructionRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\200\001\202\323\344\223\0023\"./kms/v1/keys/{" +
+      "key_id}:cancelVersionDestruction:\001*\262\322*C\n" +
+      ",CancelSymmetricKeyVersionDestructionMet" +
+      "adata\022\023SymmetricKeyVersion\022\257\001\n\006Rotate\022.." +
+      "yandex.cloud.kms.v1.RotateSymmetricKeyRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"R\202\323\344\223\002\036\"\034/kms/v1/keys/{key_id}:rotate\262\322" +
+      "**\n\032RotateSymmetricKeyMetadata\022\014Symmetri" +
+      "cKey\022\253\001\n\016ListOperations\0226.yandex.cloud.k" +
+      "ms.v1.ListSymmetricKeyOperationsRequest\032" +
+      "7.yandex.cloud.kms.v1.ListSymmetricKeyOp" +
+      "erationsResponse\"(\202\323\344\223\002\"\022 /kms/v1/keys/{" +
+      "key_id}/operations\022\254\001\n\022ListAccessBinding" +
+      "s\022..yandex.cloud.access.ListAccessBindin" +
+      "gsRequest\032/.yandex.cloud.access.ListAcce" +
+      "ssBindingsResponse\"5\202\323\344\223\002/\022-/kms/v1/keys" +
+      "/{resource_id}:listAccessBindings\022\333\001\n\021Se" +
+      "tAccessBindings\022-.yandex.cloud.access.Se" +
+      "tAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"t\202\323\344\223\0021\",/kms/v1/keys/" +
+      "{resource_id}:setAccessBindings:\001*\262\322*9\n " +
+      "access.SetAccessBindingsMetadata\022\025google" +
+      ".protobuf.Empty\022\347\001\n\024UpdateAccessBindings" +
+      "\0220.yandex.cloud.access.UpdateAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"z\202\323\344\223\0024\"//kms/v1/keys/{resource_id" +
+      "}:updateAccessBindings:\001*\262\322*<\n#access.Up" +
+      "dateAccessBindingsMetadata\022\025google.proto" +
+      "buf.EmptyBV\n\027yandex.cloud.api.kms.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/kms/v1;kmsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19556,6 +19573,7 @@ public final class SymmetricKeyServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -19715,6 +19733,7 @@ public final class SymmetricKeyServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

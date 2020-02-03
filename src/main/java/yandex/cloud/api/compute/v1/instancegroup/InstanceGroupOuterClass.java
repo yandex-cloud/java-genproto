@@ -535,6 +535,30 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceGroup.Status status = 17;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.InstanceGroup.Status getStatus();
+
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> 
+        getVariablesList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index);
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    int getVariablesCount();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.InstanceGroup}
@@ -555,6 +579,7 @@ public final class InstanceGroupOuterClass {
       description_ = "";
       serviceAccountId_ = "";
       status_ = 0;
+      variables_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -747,6 +772,15 @@ public final class InstanceGroupOuterClass {
               status_ = rawValue;
               break;
             }
+            case 146: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              variables_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -762,6 +796,9 @@ public final class InstanceGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          variables_ = java.util.Collections.unmodifiableList(variables_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1611,6 +1648,41 @@ public final class InstanceGroupOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.InstanceGroup.Status.UNRECOGNIZED : result;
     }
 
+    public static final int VARIABLES_FIELD_NUMBER = 18;
+    private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_;
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+        getVariablesOrBuilderList() {
+      return variables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    public int getVariablesCount() {
+      return variables_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+      return variables_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+        int index) {
+      return variables_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1675,6 +1747,9 @@ public final class InstanceGroupOuterClass {
       }
       if (status_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.InstanceGroup.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(17, status_);
+      }
+      for (int i = 0; i < variables_.size(); i++) {
+        output.writeMessage(18, variables_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1750,6 +1825,10 @@ public final class InstanceGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, status_);
       }
+      for (int i = 0; i < variables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, variables_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1824,6 +1903,8 @@ public final class InstanceGroupOuterClass {
       result = result && getServiceAccountId()
           .equals(other.getServiceAccountId());
       result = result && status_ == other.status_;
+      result = result && getVariablesList()
+          .equals(other.getVariablesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1887,6 +1968,10 @@ public final class InstanceGroupOuterClass {
       hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (getVariablesCount() > 0) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getVariablesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2037,6 +2122,7 @@ public final class InstanceGroupOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getVariablesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2109,6 +2195,12 @@ public final class InstanceGroupOuterClass {
 
         status_ = 0;
 
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          variablesBuilder_.clear();
+        }
         return this;
       }
 
@@ -2190,6 +2282,15 @@ public final class InstanceGroupOuterClass {
         }
         result.serviceAccountId_ = serviceAccountId_;
         result.status_ = status_;
+        if (variablesBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+            variables_ = java.util.Collections.unmodifiableList(variables_);
+            bitField0_ = (bitField0_ & ~0x00010000);
+          }
+          result.variables_ = variables_;
+        } else {
+          result.variables_ = variablesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2290,6 +2391,32 @@ public final class InstanceGroupOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (variablesBuilder_ == null) {
+          if (!other.variables_.isEmpty()) {
+            if (variables_.isEmpty()) {
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              ensureVariablesIsMutable();
+              variables_.addAll(other.variables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.variables_.isEmpty()) {
+            if (variablesBuilder_.isEmpty()) {
+              variablesBuilder_.dispose();
+              variablesBuilder_ = null;
+              variables_ = other.variables_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+              variablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVariablesFieldBuilder() : null;
+            } else {
+              variablesBuilder_.addAllMessages(other.variables_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4382,6 +4509,246 @@ public final class InstanceGroupOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> variables_ =
+        java.util.Collections.emptyList();
+      private void ensureVariablesIsMutable() {
+        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+          variables_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable>(variables_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> variablesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> getVariablesList() {
+        if (variablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(variables_);
+        } else {
+          return variablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public int getVariablesCount() {
+        if (variablesBuilder_ == null) {
+          return variables_.size();
+        } else {
+          return variablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getVariables(int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);
+        } else {
+          return variablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.set(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder setVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder addVariables(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariablesIsMutable();
+          variables_.add(index, value);
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder addVariables(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder addVariables(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          variablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder addAllVariables(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable> values) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, variables_);
+          onChanged();
+        } else {
+          variablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder clearVariables() {
+        if (variablesBuilder_ == null) {
+          variables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+          onChanged();
+        } else {
+          variablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public Builder removeVariables(int index) {
+        if (variablesBuilder_ == null) {
+          ensureVariablesIsMutable();
+          variables_.remove(index);
+          onChanged();
+        } else {
+          variablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder getVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder getVariablesOrBuilder(
+          int index) {
+        if (variablesBuilder_ == null) {
+          return variables_.get(index);  } else {
+          return variablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+           getVariablesOrBuilderList() {
+        if (variablesBuilder_ != null) {
+          return variablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(variables_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder() {
+        return getVariablesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder addVariablesBuilder(
+          int index) {
+        return getVariablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.Variable variables = 18;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder> 
+           getVariablesBuilderList() {
+        return getVariablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder> 
+          getVariablesFieldBuilder() {
+        if (variablesBuilder_ == null) {
+          variablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder>(
+                  variables_,
+                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  getParentForChildren(),
+                  isClean());
+          variables_ = null;
+        }
+        return variablesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4430,6 +4797,693 @@ public final class InstanceGroupOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.InstanceGroup getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VariableOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.Variable)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.Variable}
+   */
+  public  static final class Variable extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.Variable)
+      VariableOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Variable.newBuilder() to construct.
+    private Variable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Variable() {
+      key_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Variable(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_Variable_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable) obj;
+
+      boolean result = true;
+      result = result && getKey()
+          .equals(other.getKey());
+      result = result && getValue()
+          .equals(other.getValue());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.Variable}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.Variable)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.VariableOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_Variable_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        value_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable(this);
+        result.key_ = key_;
+        result.value_ = value_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [(.yandex.cloud.pattern) = "[a-zA-Z0-9._-]*", (.yandex.cloud.length) = "1-128"];</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.Variable)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.Variable)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Variable>
+        PARSER = new com.google.protobuf.AbstractParser<Variable>() {
+      @java.lang.Override
+      public Variable parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Variable(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Variable> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Variable> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.Variable getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15342,6 +16396,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -15352,6 +16418,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -15369,6 +16447,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -15380,6 +16470,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -15393,6 +16495,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -15583,6 +16697,78 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.NetworkSettings network_settings = 11;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkSettingsOrBuilder getNetworkSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Host name for the instance.
+     * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+     * The host name must be unique within the network and region.
+     * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+     * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, `name` value will be used
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    java.lang.String getHostname();
+    /**
+     * <pre>
+     * Host name for the instance.
+     * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+     * The host name must be unique within the network and region.
+     * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+     * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, `name` value will be used
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostnameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.InstanceTemplate}
@@ -15602,6 +16788,8 @@ public final class InstanceGroupOuterClass {
       secondaryDiskSpecs_ = java.util.Collections.emptyList();
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
       serviceAccountId_ = "";
+      name_ = "";
+      hostname_ = "";
     }
 
     @java.lang.Override
@@ -15740,6 +16928,18 @@ public final class InstanceGroupOuterClass {
                 networkSettings_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostname_ = s;
               break;
             }
             default: {
@@ -16039,6 +17239,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -16061,6 +17273,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -16074,6 +17298,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -16092,6 +17328,18 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * Metadata values may contain one of the supported placeholders:
+     *   {instance_group.id}
+     *   {instance.short_id}
+     *   {instance.index}
+     *   {instance.index_in_zone}
+     *   {instance.zone_id}
+     * InstanceGroup and Instance labels may be copied to metadata following way:
+     *   {instance_group.labels.some_label_key}
+     *   {instance.labels.another_label_key}
+     * These placeholders will be substituted for each created instance anywhere in the value text.
+     * In the rare case the value requires to contain this placeholder explicitly,
+     * it must be escaped with double brackets, in example {{instance.index}}
      * For example, you may use the metadata in order to provide your public SSH key to the instance.
      * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
      * </pre>
@@ -16361,6 +17609,126 @@ public final class InstanceGroupOuterClass {
       return getNetworkSettings();
     }
 
+    public static final int NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the instance.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, default is used: {instance_group.id}-{instance.short_id}
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 13;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <pre>
+     * Host name for the instance.
+     * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+     * The host name must be unique within the network and region.
+     * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+     * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, `name` value will be used
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Host name for the instance.
+     * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+     * The host name must be unique within the network and region.
+     * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+     * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+     * In order to be unique it must contain at least on of instance unique placeholders:
+     *   {instance.short_id}
+     *   {instance.index}
+     *   combination of {instance.zone_id} and {instance.index_in_zone}
+     * Example: my-instance-{instance.index}
+     * If not set, `name` value will be used
+     * It may also contain another placeholders, see metadata doc for full list.
+     * </pre>
+     *
+     * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16413,6 +17781,12 @@ public final class InstanceGroupOuterClass {
       }
       if (networkSettings_ != null) {
         output.writeMessage(11, getNetworkSettings());
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, name_);
+      }
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, hostname_);
       }
       unknownFields.writeTo(output);
     }
@@ -16476,6 +17850,12 @@ public final class InstanceGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getNetworkSettings());
       }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, name_);
+      }
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, hostname_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16526,6 +17906,10 @@ public final class InstanceGroupOuterClass {
         result = result && getNetworkSettings()
             .equals(other.getNetworkSettings());
       }
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getHostname()
+          .equals(other.getHostname());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -16575,6 +17959,10 @@ public final class InstanceGroupOuterClass {
         hash = (37 * hash) + NETWORK_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkSettings().hashCode();
       }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16780,6 +18168,10 @@ public final class InstanceGroupOuterClass {
           networkSettings_ = null;
           networkSettingsBuilder_ = null;
         }
+        name_ = "";
+
+        hostname_ = "";
+
         return this;
       }
 
@@ -16853,6 +18245,8 @@ public final class InstanceGroupOuterClass {
         } else {
           result.networkSettings_ = networkSettingsBuilder_.build();
         }
+        result.name_ = name_;
+        result.hostname_ = hostname_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -16981,6 +18375,14 @@ public final class InstanceGroupOuterClass {
         }
         if (other.hasNetworkSettings()) {
           mergeNetworkSettings(other.getNetworkSettings());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17538,6 +18940,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17560,6 +18974,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17573,6 +18999,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17591,6 +19029,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17617,6 +19067,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17642,6 +19104,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -17660,6 +19134,18 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The metadata `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * Metadata values may contain one of the supported placeholders:
+       *   {instance_group.id}
+       *   {instance.short_id}
+       *   {instance.index}
+       *   {instance.index_in_zone}
+       *   {instance.zone_id}
+       * InstanceGroup and Instance labels may be copied to metadata following way:
+       *   {instance_group.labels.some_label_key}
+       *   {instance.labels.another_label_key}
+       * These placeholders will be substituted for each created instance anywhere in the value text.
+       * In the rare case the value requires to contain this placeholder explicitly,
+       * it must be escaped with double brackets, in example {{instance.index}}
        * For example, you may use the metadata in order to provide your public SSH key to the instance.
        * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
        * </pre>
@@ -18844,6 +20330,274 @@ public final class InstanceGroupOuterClass {
           networkSettings_ = null;
         }
         return networkSettingsBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the instance.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, default is used: {instance_group.id}-{instance.short_id}
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string name = 12 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <pre>
+       * Host name for the instance.
+       * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+       * The host name must be unique within the network and region.
+       * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+       * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, `name` value will be used
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Host name for the instance.
+       * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+       * The host name must be unique within the network and region.
+       * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+       * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, `name` value will be used
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Host name for the instance.
+       * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+       * The host name must be unique within the network and region.
+       * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+       * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, `name` value will be used
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setHostname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host name for the instance.
+       * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+       * The host name must be unique within the network and region.
+       * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+       * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, `name` value will be used
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder clearHostname() {
+        
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host name for the instance.
+       * This field is used to generate the [yandex.cloud.compute.v1.Instance.fqdn] value.
+       * The host name must be unique within the network and region.
+       * If not specified, the host name will be equal to [yandex.cloud.compute.v1.Instance.id] of the instance
+       * and FQDN will be `&lt;id&gt;.auto.internal`. Otherwise FQDN will be `&lt;hostname&gt;.&lt;region_id&gt;.internal`.
+       * In order to be unique it must contain at least on of instance unique placeholders:
+       *   {instance.short_id}
+       *   {instance.index}
+       *   combination of {instance.zone_id} and {instance.index_in_zone}
+       * Example: my-instance-{instance.index}
+       * If not set, `name` value will be used
+       * It may also contain another placeholders, see metadata doc for full list.
+       * </pre>
+       *
+       * <code>string hostname = 13 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       */
+      public Builder setHostnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostname_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -37920,6 +39674,11 @@ public final class InstanceGroupOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_Variable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerState_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38102,7 +39861,7 @@ public final class InstanceGroupOuterClass {
       "instance_group.proto\022%yandex.cloud.compu" +
       "te.v1.instancegroup\032\035yandex/cloud/valida" +
       "tion.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\032\036google/protobuf/duration.proto\"\356\010\n\r" +
+      "oto\032\036google/protobuf/duration.proto\"\262\t\n\r" +
       "InstanceGroup\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descriptio" +
@@ -38127,183 +39886,188 @@ public final class InstanceGroupOuterClass {
       "mpute.v1.instancegroup.HealthChecksSpec\022" +
       "\032\n\022service_account_id\030\020 \001(\t\022K\n\006status\030\021 " +
       "\001(\0162;.yandex.cloud.compute.v1.instancegr" +
-      "oup.InstanceGroup.Status\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\006Statu" +
-      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010STARTING\020\001\022" +
-      "\n\n\006ACTIVE\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014" +
-      "\n\010DELETING\020\005\"D\n\021LoadBalancerState\022\027\n\017tar" +
-      "get_group_id\030\001 \001(\t\022\026\n\016status_message\030\002 \001" +
-      "(\t\"\277\002\n\025ManagedInstancesState\022\023\n\013target_s" +
-      "ize\030\001 \001(\003\022\034\n\024running_actual_count\030\004 \001(\003\022" +
-      "\036\n\026running_outdated_count\030\005 \001(\003\022\030\n\020proce" +
-      "ssing_count\030\006 \001(\003\032\270\001\n\010Statuses\022\020\n\010creati" +
-      "ng\030\001 \001(\003\022\020\n\010starting\030\002 \001(\003\022\017\n\007opening\030\003 " +
-      "\001(\003\022\017\n\007warming\030\004 \001(\003\022\017\n\007running\030\005 \001(\003\022\017\n" +
-      "\007closing\030\006 \001(\003\022\020\n\010stopping\030\007 \001(\003\022\020\n\010upda" +
-      "ting\030\010 \001(\003\022\020\n\010deleting\030\t \001(\003\022\016\n\006failed\030\n" +
-      " \001(\003\"\365\t\n\013ScalePolicy\022T\n\013fixed_scale\030\001 \001(" +
-      "\0132=.yandex.cloud.compute.v1.instancegrou" +
-      "p.ScalePolicy.FixedScaleH\000\022R\n\nauto_scale" +
-      "\030\002 \001(\0132<.yandex.cloud.compute.v1.instanc" +
-      "egroup.ScalePolicy.AutoScaleH\000\032\373\003\n\tAutoS" +
-      "cale\022 \n\rmin_zone_size\030\001 \001(\003B\t\372\3071\0050-100\022\033" +
-      "\n\010max_size\030\002 \001(\003B\t\372\3071\0050-100\022G\n\024measureme" +
-      "nt_duration\030\003 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\016\350\3071\001\372\3071\0061m-10m\022=\n\017warmup_duration\030" +
-      "\004 \001(\0132\031.google.protobuf.DurationB\t\372\3071\005<=" +
-      "10m\022E\n\026stabilization_duration\030\005 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\n\372\3071\0061m-30m\022\035\n\014in" +
-      "itial_size\030\006 \001(\003B\007\372\3071\003>=1\022c\n\024cpu_utiliza" +
-      "tion_rule\030\007 \001(\0132E.yandex.cloud.compute.v" +
-      "1.instancegroup.ScalePolicy.CpuUtilizati" +
-      "onRule\022\\\n\014custom_rules\030\010 \003(\0132=.yandex.cl" +
-      "oud.compute.v1.instancegroup.ScalePolicy" +
-      ".CustomRuleB\007\202\3101\003<=1\032<\n\022CpuUtilizationRu" +
-      "le\022&\n\022utilization_target\030\001 \001(\001B\n\372\3071\00610-1" +
-      "00\032\304\003\n\nCustomRule\022_\n\trule_type\030\001 \001(\0162F.y" +
-      "andex.cloud.compute.v1.instancegroup.Sca" +
-      "lePolicy.CustomRule.RuleTypeB\004\350\3071\001\022c\n\013me" +
-      "tric_type\030\002 \001(\0162H.yandex.cloud.compute.v" +
-      "1.instancegroup.ScalePolicy.CustomRule.M" +
-      "etricTypeB\004\350\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\307" +
-      "1\001\362\30712[a-zA-Z0-9./@_][ 0-9a-zA-Z./@_,:;(" +
-      ")\\[\\]<>-]{0,198}\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0" +
-      "\"D\n\010RuleType\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000\022" +
-      "\017\n\013UTILIZATION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetric" +
-      "Type\022\033\n\027METRIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAU" +
-      "GE\020\001\022\013\n\007COUNTER\020\002\032%\n\nFixedScale\022\027\n\004size\030" +
-      "\001 \001(\003B\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\326\001\n" +
-      "\014DeployPolicy\022\"\n\017max_unavailable\030\001 \001(\003B\t" +
-      "\372\3071\0050-100\022\037\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-1" +
-      "00\022\037\n\014max_creating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rm" +
-      "ax_expansion\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startup" +
-      "_duration\030\007 \001(\0132\031.google.protobuf.Durati" +
-      "onB\t\372\3071\0050m-1h\"\207\001\n\020AllocationPolicy\022T\n\005zo" +
-      "nes\030\001 \003(\0132<.yandex.cloud.compute.v1.inst" +
-      "ancegroup.AllocationPolicy.ZoneB\007\202\3101\003>=1" +
-      "\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"\363\007\n\020Inst" +
-      "anceTemplate\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<" +
-      "=256\022\206\001\n\006labels\030\002 \003(\0132C.yandex.cloud.com" +
-      "pute.v1.instancegroup.InstanceTemplate.L" +
-      "abelsEntryB1\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\022\023\n\013platform_id\030\003 \001" +
-      "(\t\022R\n\016resources_spec\030\004 \001(\01324.yandex.clou" +
-      "d.compute.v1.instancegroup.ResourcesSpec" +
-      "B\004\350\3071\001\022\216\001\n\010metadata\030\005 \003(\0132E.yandex.cloud" +
-      ".compute.v1.instancegroup.InstanceTempla" +
-      "te.MetadataEntryB5\202\3101\005<=128\212\3101\010<=262144\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_" +
-      "disk_spec\030\006 \001(\01327.yandex.cloud.compute.v" +
-      "1.instancegroup.AttachedDiskSpecB\004\350\3071\001\022^" +
-      "\n\024secondary_disk_specs\030\007 \003(\01327.yandex.cl" +
-      "oud.compute.v1.instancegroup.AttachedDis" +
-      "kSpecB\007\202\3101\003<=3\022c\n\027network_interface_spec" +
-      "s\030\010 \003(\0132;.yandex.cloud.compute.v1.instan" +
-      "cegroup.NetworkInterfaceSpecB\005\202\3101\0011\022R\n\021s" +
-      "cheduling_policy\030\t \001(\01327.yandex.cloud.co" +
-      "mpute.v1.instancegroup.SchedulingPolicy\022" +
-      "\032\n\022service_account_id\030\n \001(\t\022P\n\020network_s" +
-      "ettings\030\013 \001(\01326.yandex.cloud.compute.v1." +
-      "instancegroup.NetworkSettings\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B" +
-      "\022\372\3071\016<=824633720832\022[\n\005cores\030\002 \001(\003BL\372\3071H" +
-      "1,2,4,6,8,10,12,14,16,18,20,22,24,26,28," +
-      "30,32,34,36,40,44,48,52,56,60,64\022(\n\rcore" +
-      "_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gp" +
-      "us\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020AttachedDiskSp" +
-      "ec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compute." +
-      "v1.instancegroup.AttachedDiskSpec.ModeB\004" +
-      "\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_" +
-      "0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yande" +
-      "x.cloud.compute.v1.instancegroup.Attache" +
-      "dDiskSpec.DiskSpecB\004\350\3071\001\032\271\001\n\010DiskSpec\022\036\n" +
-      "\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id" +
-      "\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\0254194304-" +
-      "4398046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=5" +
-      "0H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B\016\n\014" +
-      "source_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED" +
-      "\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n\024Ne" +
-      "tworkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022" +
-      "\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address" +
-      "_spec\030\003 \001(\01329.yandex.cloud.compute.v1.in" +
-      "stancegroup.PrimaryAddressSpec\022Z\n\027primar" +
-      "y_v6_address_spec\030\004 \001(\01329.yandex.cloud.c" +
-      "ompute.v1.instancegroup.PrimaryAddressSp" +
-      "ec\"i\n\022PrimaryAddressSpec\022S\n\023one_to_one_n" +
-      "at_spec\030\001 \001(\01326.yandex.cloud.compute.v1." +
-      "instancegroup.OneToOneNatSpec\"W\n\017OneToOn" +
-      "eNatSpec\022D\n\nip_version\030\001 \001(\01620.yandex.cl" +
-      "oud.compute.v1.instancegroup.IpVersion\"\'" +
-      "\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"" +
-      "\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yand" +
-      "ex.cloud.compute.v1.instancegroup.Networ" +
-      "kSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERAT" +
-      "ED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020LoadBa" +
-      "lancerSpec\022Q\n\021target_group_spec\030\001 \001(\01326." +
-      "yandex.cloud.compute.v1.instancegroup.Ta" +
-      "rgetGroupSpec\"\247\002\n\017TargetGroupSpec\022/\n\004nam" +
-      "e\030\001 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-" +
-      "9]\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\223\001\n\006l" +
-      "abels\030\003 \003(\0132B.yandex.cloud.compute.v1.in" +
-      "stancegroup.TargetGroupSpec.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020Healt" +
-      "hChecksSpec\022[\n\022health_check_specs\030\001 \003(\0132" +
-      "6.yandex.cloud.compute.v1.instancegroup." +
-      "HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017HealthCheck" +
-      "Spec\0228\n\010interval\030\001 \001(\0132\031.google.protobuf" +
-      ".DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132" +
-      "\031.google.protobuf.DurationB\n\372\3071\0061s-60s\0225" +
-      "\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4" +
-      ",5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(\003" +
-      "B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_option" +
-      "s\030\005 \001(\0132A.yandex.cloud.compute.v1.instan" +
-      "cegroup.HealthCheckSpec.TcpOptionsH\000\022Z\n\014" +
-      "http_options\030\006 \001(\0132B.yandex.cloud.comput" +
-      "e.v1.instancegroup.HealthCheckSpec.HttpO" +
-      "ptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\307" +
-      "1\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013" +
-      "\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_chec" +
-      "k_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002i" +
-      "d\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud.c" +
-      "ompute.v1.instancegroup.ManagedInstance." +
-      "Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(" +
-      "\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\022" +
-      "\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces\030\010" +
-      " \003(\01327.yandex.cloud.compute.v1.instanceg" +
-      "roup.NetworkInterface\0225\n\021status_changed_" +
-      "at\030\t \001(\0132\032.google.protobuf.Timestamp\"\323\002\n" +
-      "\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CREAT" +
-      "ING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n" +
-      "\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INSTANC" +
-      "E\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITING_S" +
-      "TARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023" +
-      "\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP_D" +
-      "URATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNIN" +
-      "G_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOP" +
-      "PED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterface\022" +
-      "\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\ts" +
-      "ubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030\004 \001" +
-      "(\01325.yandex.cloud.compute.v1.instancegro" +
-      "up.PrimaryAddress\022Q\n\022primary_v6_address\030" +
-      "\005 \001(\01325.yandex.cloud.compute.v1.instance" +
-      "group.PrimaryAddress\"m\n\016PrimaryAddress\022\017" +
-      "\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001(\0132" +
-      "2.yandex.cloud.compute.v1.instancegroup." +
-      "OneToOneNat\"d\n\013OneToOneNat\022\017\n\007address\030\001 " +
-      "\001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.cloud.c" +
-      "ompute.v1.instancegroup.IpVersion\"K\n\tLog" +
-      "Record\022-\n\ttimestamp\030\001 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVers" +
-      "ion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020" +
-      "\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.compute" +
-      ".v1.instancegroupZWgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/compute/v1/i" +
-      "nstancegroup;instancegroupb\006proto3"
+      "oup.InstanceGroup.Status\022B\n\tvariables\030\022 " +
+      "\003(\0132/.yandex.cloud.compute.v1.instancegr" +
+      "oup.Variable\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\006Status\022\026\n\022STATUS_" +
+      "UNSPECIFIED\020\000\022\014\n\010STARTING\020\001\022\n\n\006ACTIVE\020\002\022" +
+      "\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014\n\010DELETING\020\005" +
+      "\"O\n\010Variable\022)\n\003key\030\001 \001(\tB\034\212\3101\0051-128\362\3071\017" +
+      "[a-zA-Z0-9._-]*\022\030\n\005value\030\002 \001(\tB\t\212\3101\005<=12" +
+      "8\"D\n\021LoadBalancerState\022\027\n\017target_group_i" +
+      "d\030\001 \001(\t\022\026\n\016status_message\030\002 \001(\t\"\277\002\n\025Mana" +
+      "gedInstancesState\022\023\n\013target_size\030\001 \001(\003\022\034" +
+      "\n\024running_actual_count\030\004 \001(\003\022\036\n\026running_" +
+      "outdated_count\030\005 \001(\003\022\030\n\020processing_count" +
+      "\030\006 \001(\003\032\270\001\n\010Statuses\022\020\n\010creating\030\001 \001(\003\022\020\n" +
+      "\010starting\030\002 \001(\003\022\017\n\007opening\030\003 \001(\003\022\017\n\007warm" +
+      "ing\030\004 \001(\003\022\017\n\007running\030\005 \001(\003\022\017\n\007closing\030\006 " +
+      "\001(\003\022\020\n\010stopping\030\007 \001(\003\022\020\n\010updating\030\010 \001(\003\022" +
+      "\020\n\010deleting\030\t \001(\003\022\016\n\006failed\030\n \001(\003\"\365\t\n\013Sc" +
+      "alePolicy\022T\n\013fixed_scale\030\001 \001(\0132=.yandex." +
+      "cloud.compute.v1.instancegroup.ScalePoli" +
+      "cy.FixedScaleH\000\022R\n\nauto_scale\030\002 \001(\0132<.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Scal" +
+      "ePolicy.AutoScaleH\000\032\373\003\n\tAutoScale\022 \n\rmin" +
+      "_zone_size\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030" +
+      "\002 \001(\003B\t\372\3071\0050-100\022G\n\024measurement_duration" +
+      "\030\003 \001(\0132\031.google.protobuf.DurationB\016\350\3071\001\372" +
+      "\3071\0061m-10m\022=\n\017warmup_duration\030\004 \001(\0132\031.goo" +
+      "gle.protobuf.DurationB\t\372\3071\005<=10m\022E\n\026stab" +
+      "ilization_duration\030\005 \001(\0132\031.google.protob" +
+      "uf.DurationB\n\372\3071\0061m-30m\022\035\n\014initial_size\030" +
+      "\006 \001(\003B\007\372\3071\003>=1\022c\n\024cpu_utilization_rule\030\007" +
+      " \001(\0132E.yandex.cloud.compute.v1.instanceg" +
+      "roup.ScalePolicy.CpuUtilizationRule\022\\\n\014c" +
+      "ustom_rules\030\010 \003(\0132=.yandex.cloud.compute" +
+      ".v1.instancegroup.ScalePolicy.CustomRule" +
+      "B\007\202\3101\003<=1\032<\n\022CpuUtilizationRule\022&\n\022utili" +
+      "zation_target\030\001 \001(\001B\n\372\3071\00610-100\032\304\003\n\nCust" +
+      "omRule\022_\n\trule_type\030\001 \001(\0162F.yandex.cloud" +
+      ".compute.v1.instancegroup.ScalePolicy.Cu" +
+      "stomRule.RuleTypeB\004\350\3071\001\022c\n\013metric_type\030\002" +
+      " \001(\0162H.yandex.cloud.compute.v1.instanceg" +
+      "roup.ScalePolicy.CustomRule.MetricTypeB\004" +
+      "\350\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\3071\001\362\30712[a-zA" +
+      "-Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-]{0" +
+      ",198}\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0\"D\n\010RuleTyp" +
+      "e\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000\022\017\n\013UTILIZAT" +
+      "ION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033\n\027MET" +
+      "RIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COU" +
+      "NTER\020\002\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
+      "1-100B\022\n\nscale_type\022\004\300\3011\001\"\326\001\n\014DeployPoli" +
+      "cy\022\"\n\017max_unavailable\030\001 \001(\003B\t\372\3071\0050-100\022\037" +
+      "\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014max_c" +
+      "reating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_expansio" +
+      "n\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startup_duration\030\007" +
+      " \001(\0132\031.google.protobuf.DurationB\t\372\3071\0050m-" +
+      "1h\"\207\001\n\020AllocationPolicy\022T\n\005zones\030\001 \003(\0132<" +
+      ".yandex.cloud.compute.v1.instancegroup.A" +
+      "llocationPolicy.ZoneB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n" +
+      "\007zone_id\030\001 \001(\tB\004\350\3071\001\"\251\010\n\020InstanceTemplat" +
+      "e\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\206\001\n\006la" +
+      "bels\030\002 \003(\0132C.yandex.cloud.compute.v1.ins" +
+      "tancegroup.InstanceTemplate.LabelsEntryB" +
+      "1\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][" +
+      "-_0-9a-z]*\022\023\n\013platform_id\030\003 \001(\t\022R\n\016resou" +
+      "rces_spec\030\004 \001(\01324.yandex.cloud.compute.v" +
+      "1.instancegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010" +
+      "metadata\030\005 \003(\0132E.yandex.cloud.compute.v1" +
+      ".instancegroup.InstanceTemplate.Metadata" +
+      "EntryB5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006" +
+      " \001(\01327.yandex.cloud.compute.v1.instanceg" +
+      "roup.AttachedDiskSpecB\004\350\3071\001\022^\n\024secondary" +
+      "_disk_specs\030\007 \003(\01327.yandex.cloud.compute" +
+      ".v1.instancegroup.AttachedDiskSpecB\007\202\3101\003" +
+      "<=3\022c\n\027network_interface_specs\030\010 \003(\0132;.y" +
+      "andex.cloud.compute.v1.instancegroup.Net" +
+      "workInterfaceSpecB\005\202\3101\0011\022R\n\021scheduling_p" +
+      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.SchedulingPolicy\022\032\n\022service_" +
+      "account_id\030\n \001(\t\022P\n\020network_settings\030\013 \001" +
+      "(\01326.yandex.cloud.compute.v1.instancegro" +
+      "up.NetworkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=" +
+      "128\022\033\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
+      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001" +
+      "(\003B\022\372\3071\016<=824633720832\022[\n\005cores\030\002 \001(\003BL\372" +
+      "\3071H1,2,4,6,8,10,12,14,16,18,20,22,24,26," +
+      "28,30,32,34,36,40,44,48,52,56,60,64\022(\n\rc" +
+      "ore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n" +
+      "\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020AttachedDis" +
+      "kSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compu" +
+      "te.v1.instancegroup.AttachedDiskSpec.Mod" +
+      "eB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z]" +
+      "[-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Atta" +
+      "chedDiskSpec.DiskSpecB\004\350\3071\001\032\271\001\n\010DiskSpec" +
+      "\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type" +
+      "_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\02541943" +
+      "04-4398046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004" +
+      "<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B" +
+      "\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIF" +
+      "IED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n" +
+      "\024NetworkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(" +
+      "\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_addr" +
+      "ess_spec\030\003 \001(\01329.yandex.cloud.compute.v1" +
+      ".instancegroup.PrimaryAddressSpec\022Z\n\027pri" +
+      "mary_v6_address_spec\030\004 \001(\01329.yandex.clou" +
+      "d.compute.v1.instancegroup.PrimaryAddres" +
+      "sSpec\"i\n\022PrimaryAddressSpec\022S\n\023one_to_on" +
+      "e_nat_spec\030\001 \001(\01326.yandex.cloud.compute." +
+      "v1.instancegroup.OneToOneNatSpec\"W\n\017OneT" +
+      "oOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yandex" +
+      ".cloud.compute.v1.instancegroup.IpVersio" +
+      "n\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001" +
+      "(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.y" +
+      "andex.cloud.compute.v1.instancegroup.Net" +
+      "workSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELE" +
+      "RATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020Loa" +
+      "dBalancerSpec\022Q\n\021target_group_spec\030\001 \001(\013" +
+      "26.yandex.cloud.compute.v1.instancegroup" +
+      ".TargetGroupSpec\"\247\002\n\017TargetGroupSpec\022/\n\004" +
+      "name\030\001 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-" +
+      "z0-9]\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\223\001" +
+      "\n\006labels\030\003 \003(\0132B.yandex.cloud.compute.v1" +
+      ".instancegroup.TargetGroupSpec.LabelsEnt" +
+      "ryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032" +
+      "\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020He" +
+      "althChecksSpec\022[\n\022health_check_specs\030\001 \003" +
+      "(\01326.yandex.cloud.compute.v1.instancegro" +
+      "up.HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017HealthCh" +
+      "eckSpec\0228\n\010interval\030\001 \001(\0132\031.google.proto" +
+      "buf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001" +
+      "(\0132\031.google.protobuf.DurationB\n\372\3071\0061s-60" +
+      "s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2," +
+      "3,4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 " +
+      "\001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_opt" +
+      "ions\030\005 \001(\0132A.yandex.cloud.compute.v1.ins" +
+      "tancegroup.HealthCheckSpec.TcpOptionsH\000\022" +
+      "Z\n\014http_options\030\006 \001(\0132B.yandex.cloud.com" +
+      "pute.v1.instancegroup.HealthCheckSpec.Ht" +
+      "tpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B" +
+      "\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(" +
+      "\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_c" +
+      "heck_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n" +
+      "\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.clou" +
+      "d.compute.v1.instancegroup.ManagedInstan" +
+      "ce.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004" +
+      " \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001" +
+      "(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interface" +
+      "s\030\010 \003(\01327.yandex.cloud.compute.v1.instan" +
+      "cegroup.NetworkInterface\0225\n\021status_chang" +
+      "ed_at\030\t \001(\0132\032.google.protobuf.Timestamp\"" +
+      "\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CR" +
+      "EATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014" +
+      "\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INST" +
+      "ANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITIN" +
+      "G_STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020" +
+      "\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMU" +
+      "P_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUN" +
+      "NING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007S" +
+      "TOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterfa" +
+      "ce\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021" +
+      "\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030" +
+      "\004 \001(\01325.yandex.cloud.compute.v1.instance" +
+      "group.PrimaryAddress\022Q\n\022primary_v6_addre" +
+      "ss\030\005 \001(\01325.yandex.cloud.compute.v1.insta" +
+      "ncegroup.PrimaryAddress\"m\n\016PrimaryAddres" +
+      "s\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001" +
+      "(\01322.yandex.cloud.compute.v1.instancegro" +
+      "up.OneToOneNat\"d\n\013OneToOneNat\022\017\n\007address" +
+      "\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.clou" +
+      "d.compute.v1.instancegroup.IpVersion\"K\n\t" +
+      "LogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpV" +
+      "ersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IP" +
+      "V4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.comp" +
+      "ute.v1.instancegroupZWgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/compute/v" +
+      "1/instancegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38325,21 +40089,27 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerState", "ManagedInstancesState", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerState", "ManagedInstancesState", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Status", "Variables", });
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerState_descriptor =
+    internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_compute_v1_instancegroup_Variable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_Variable_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerState_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerState_descriptor,
         new java.lang.String[] { "TargetGroupId", "StatusMessage", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstancesState_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstancesState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstancesState_descriptor,
@@ -38351,7 +40121,7 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstancesState_Statuses_descriptor,
         new java.lang.String[] { "Creating", "Starting", "Opening", "Warming", "Running", "Closing", "Stopping", "Updating", "Deleting", "Failed", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_descriptor,
@@ -38381,13 +40151,13 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_FixedScale_descriptor,
         new java.lang.String[] { "Size", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DeployPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_compute_v1_instancegroup_DeployPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeployPolicy_descriptor,
         new java.lang.String[] { "MaxUnavailable", "MaxDeleting", "MaxCreating", "MaxExpansion", "StartupDuration", });
     internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_descriptor,
@@ -38399,11 +40169,11 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_Zone_descriptor,
         new java.lang.String[] { "ZoneId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_descriptor,
-        new java.lang.String[] { "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "BootDiskSpec", "SecondaryDiskSpecs", "NetworkInterfaceSpecs", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", });
+        new java.lang.String[] { "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "BootDiskSpec", "SecondaryDiskSpecs", "NetworkInterfaceSpecs", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "Name", "Hostname", });
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_LabelsEntry_fieldAccessorTable = new
@@ -38417,13 +40187,13 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_InstanceTemplate_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ResourcesSpec_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_compute_v1_instancegroup_ResourcesSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ResourcesSpec_descriptor,
         new java.lang.String[] { "Memory", "Cores", "CoreFraction", "Gpus", });
     internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_descriptor,
@@ -38435,43 +40205,43 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_DiskSpec_descriptor,
         new java.lang.String[] { "Description", "TypeId", "Size", "ImageId", "SnapshotId", "SourceOneof", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_descriptor,
         new java.lang.String[] { "NetworkId", "SubnetIds", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", });
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_descriptor,
         new java.lang.String[] { "OneToOneNatSpec", });
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_descriptor,
         new java.lang.String[] { "IpVersion", });
     internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor,
         new java.lang.String[] { "Preemptible", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_descriptor,
         new java.lang.String[] { "TargetGroupSpec", });
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_descriptor,
@@ -38483,13 +40253,13 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor,
         new java.lang.String[] { "HealthCheckSpecs", });
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_descriptor,
@@ -38507,31 +40277,31 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_HttpOptions_descriptor,
         new java.lang.String[] { "Port", "Path", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_descriptor,
         new java.lang.String[] { "Id", "Status", "InstanceId", "Fqdn", "Name", "StatusMessage", "ZoneId", "NetworkInterfaces", "StatusChangedAt", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_descriptor,
         new java.lang.String[] { "Index", "MacAddress", "SubnetId", "PrimaryV4Address", "PrimaryV6Address", });
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_descriptor,
         new java.lang.String[] { "Address", "OneToOneNat", });
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_descriptor,
         new java.lang.String[] { "Address", "IpVersion", });
     internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_descriptor,
