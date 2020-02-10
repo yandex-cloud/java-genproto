@@ -20720,7 +20720,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -20728,7 +20728,7 @@ public final class ClusterServiceOuterClass {
     boolean hasExternalV4AddressSpec();
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -20736,7 +20736,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec getExternalV4AddressSpec();
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -20921,7 +20921,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec externalV4AddressSpec_;
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -20931,7 +20931,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -20941,7 +20941,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Specify to allocate a static public IP for the master
+     * Specify to allocate a static public IP for the master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21656,7 +21656,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ExternalAddressSpecOrBuilder> externalV4AddressSpecBuilder_;
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21666,7 +21666,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21680,7 +21680,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21700,7 +21700,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21718,7 +21718,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21740,7 +21740,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21758,7 +21758,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21770,7 +21770,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>
@@ -21785,7 +21785,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specify to allocate a static public IP for the master
+       * Specify to allocate a static public IP for the master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ExternalAddressSpec external_v4_address_spec = 3;</code>

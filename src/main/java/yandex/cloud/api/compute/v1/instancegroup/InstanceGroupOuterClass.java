@@ -11194,6 +11194,60 @@ public final class InstanceGroupOuterClass {
 
       /**
        * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      int getLabelsCount();
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      boolean containsLabels(
+          java.lang.String key);
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getLabels();
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getLabelsMap();
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      java.lang.String getLabelsOrThrow(
+          java.lang.String key);
+
+      /**
+       * <pre>
        * Target value for the custom metric. Instance Groups maintains this level for each availability zone.
        * </pre>
        *
@@ -11267,6 +11321,19 @@ public final class InstanceGroupOuterClass {
                 target_ = input.readDouble();
                 break;
               }
+              case 42: {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  labels_ = com.google.protobuf.MapField.newMapField(
+                      LabelsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                labels__ = input.readMessage(
+                    LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                labels_.getMutableMap().put(
+                    labels__.getKey(), labels__.getValue());
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -11291,6 +11358,18 @@ public final class InstanceGroupOuterClass {
         return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -11565,6 +11644,7 @@ public final class InstanceGroupOuterClass {
         // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.ScalePolicy.CustomRule.MetricType)
       }
 
+      private int bitField0_;
       public static final int RULE_TYPE_FIELD_NUMBER = 1;
       private int ruleType_;
       /**
@@ -11659,6 +11739,98 @@ public final class InstanceGroupOuterClass {
         }
       }
 
+      public static final int LABELS_FIELD_NUMBER = 5;
+      private static final class LabelsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       public static final int TARGET_FIELD_NUMBER = 4;
       private double target_;
       /**
@@ -11698,6 +11870,12 @@ public final class InstanceGroupOuterClass {
         if (target_ != 0D) {
           output.writeDouble(4, target_);
         }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetLabels(),
+            LabelsDefaultEntryHolder.defaultEntry,
+            5);
         unknownFields.writeTo(output);
       }
 
@@ -11722,6 +11900,16 @@ public final class InstanceGroupOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(4, target_);
         }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetLabels().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(5, labels__);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -11742,6 +11930,8 @@ public final class InstanceGroupOuterClass {
         result = result && metricType_ == other.metricType_;
         result = result && getMetricName()
             .equals(other.getMetricName());
+        result = result && internalGetLabels().equals(
+            other.internalGetLabels());
         result = result && (
             java.lang.Double.doubleToLongBits(getTarget())
             == java.lang.Double.doubleToLongBits(
@@ -11763,6 +11953,10 @@ public final class InstanceGroupOuterClass {
         hash = (53 * hash) + metricType_;
         hash = (37 * hash) + METRIC_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getMetricName().hashCode();
+        if (!internalGetLabels().getMap().isEmpty()) {
+          hash = (37 * hash) + LABELS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetLabels().hashCode();
+        }
         hash = (37 * hash) + TARGET_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             java.lang.Double.doubleToLongBits(getTarget()));
@@ -11873,6 +12067,28 @@ public final class InstanceGroupOuterClass {
           return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_descriptor;
         }
 
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 5:
+              return internalGetLabels();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 5:
+              return internalGetMutableLabels();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
@@ -11905,6 +12121,7 @@ public final class InstanceGroupOuterClass {
 
           metricName_ = "";
 
+          internalGetMutableLabels().clear();
           target_ = 0D;
 
           return this;
@@ -11933,10 +12150,15 @@ public final class InstanceGroupOuterClass {
         @java.lang.Override
         public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule buildPartial() {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ScalePolicy.CustomRule(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.ruleType_ = ruleType_;
           result.metricType_ = metricType_;
           result.metricName_ = metricName_;
+          result.labels_ = internalGetLabels();
+          result.labels_.makeImmutable();
           result.target_ = target_;
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -11995,6 +12217,8 @@ public final class InstanceGroupOuterClass {
             metricName_ = other.metricName_;
             onChanged();
           }
+          internalGetMutableLabels().mergeFrom(
+              other.internalGetLabels());
           if (other.getTarget() != 0D) {
             setTarget(other.getTarget());
           }
@@ -12026,6 +12250,7 @@ public final class InstanceGroupOuterClass {
           }
           return this;
         }
+        private int bitField0_;
 
         private int ruleType_ = 0;
         /**
@@ -12248,6 +12473,157 @@ public final class InstanceGroupOuterClass {
           
           metricName_ = value;
           onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> labels_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetLabels() {
+          if (labels_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                LabelsDefaultEntryHolder.defaultEntry);
+          }
+          return labels_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableLabels() {
+          onChanged();;
+          if (labels_ == null) {
+            labels_ = com.google.protobuf.MapField.newMapField(
+                LabelsDefaultEntryHolder.defaultEntry);
+          }
+          if (!labels_.isMutable()) {
+            labels_ = labels_.copy();
+          }
+          return labels_;
+        }
+
+        public int getLabelsCount() {
+          return internalGetLabels().getMap().size();
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public boolean containsLabels(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          return internalGetLabels().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getLabelsMap()} instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+          return getLabelsMap();
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+          return internalGetLabels().getMap();
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public java.lang.String getLabelsOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetLabels().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public java.lang.String getLabelsOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetLabels().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearLabels() {
+          internalGetMutableLabels().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder removeLabels(
+            java.lang.String key) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableLabels().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableLabels() {
+          return internalGetMutableLabels().getMutableMap();
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+        public Builder putLabels(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new java.lang.NullPointerException(); }
+          if (value == null) { throw new java.lang.NullPointerException(); }
+          internalGetMutableLabels().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Labels of custom metric in Yandex Monitoring that should be used for scaling.
+         * </pre>
+         *
+         * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[a-zA-Z0-9./&#64;_][ 0-9a-zA-Z./&#64;_,:;()&#92;&#92;[&#92;&#92;]&lt;&gt;-]{0,198}", (.yandex.cloud.map_key) = { ... }</code>
+         */
+
+        public Builder putAllLabels(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableLabels().getMutableMap()
+              .putAll(values);
           return this;
         }
 
@@ -16352,7 +16728,7 @@ public final class InstanceGroupOuterClass {
      * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
      * </pre>
      *
-     * <code>string platform_id = 3;</code>
+     * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getPlatformId();
     /**
@@ -16363,7 +16739,7 @@ public final class InstanceGroupOuterClass {
      * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
      * </pre>
      *
-     * <code>string platform_id = 3;</code>
+     * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getPlatformIdBytes();
@@ -17139,7 +17515,7 @@ public final class InstanceGroupOuterClass {
      * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
      * </pre>
      *
-     * <code>string platform_id = 3;</code>
+     * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getPlatformId() {
       java.lang.Object ref = platformId_;
@@ -17161,7 +17537,7 @@ public final class InstanceGroupOuterClass {
      * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
      * </pre>
      *
-     * <code>string platform_id = 3;</code>
+     * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
         getPlatformIdBytes() {
@@ -18663,7 +19039,7 @@ public final class InstanceGroupOuterClass {
        * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
        * </pre>
        *
-       * <code>string platform_id = 3;</code>
+       * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getPlatformId() {
         java.lang.Object ref = platformId_;
@@ -18685,7 +19061,7 @@ public final class InstanceGroupOuterClass {
        * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
        * </pre>
        *
-       * <code>string platform_id = 3;</code>
+       * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
           getPlatformIdBytes() {
@@ -18708,7 +19084,7 @@ public final class InstanceGroupOuterClass {
        * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
        * </pre>
        *
-       * <code>string platform_id = 3;</code>
+       * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setPlatformId(
           java.lang.String value) {
@@ -18728,7 +19104,7 @@ public final class InstanceGroupOuterClass {
        * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
        * </pre>
        *
-       * <code>string platform_id = 3;</code>
+       * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearPlatformId() {
         
@@ -18744,7 +19120,7 @@ public final class InstanceGroupOuterClass {
        * For more information, see [Platforms](/docs/compute/concepts/vm-platforms).
        * </pre>
        *
-       * <code>string platform_id = 3;</code>
+       * <code>string platform_id = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setPlatformIdBytes(
           com.google.protobuf.ByteString value) {
@@ -39714,6 +40090,11 @@ public final class InstanceGroupOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_FixedScale_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39903,7 +40284,7 @@ public final class InstanceGroupOuterClass {
       "\010starting\030\002 \001(\003\022\017\n\007opening\030\003 \001(\003\022\017\n\007warm" +
       "ing\030\004 \001(\003\022\017\n\007running\030\005 \001(\003\022\017\n\007closing\030\006 " +
       "\001(\003\022\020\n\010stopping\030\007 \001(\003\022\020\n\010updating\030\010 \001(\003\022" +
-      "\020\n\010deleting\030\t \001(\003\022\016\n\006failed\030\n \001(\003\"\365\t\n\013Sc" +
+      "\020\n\010deleting\030\t \001(\003\022\016\n\006failed\030\n \001(\003\"\332\013\n\013Sc" +
       "alePolicy\022T\n\013fixed_scale\030\001 \001(\0132=.yandex." +
       "cloud.compute.v1.instancegroup.ScalePoli" +
       "cy.FixedScaleH\000\022R\n\nauto_scale\030\002 \001(\0132<.ya" +
@@ -39922,7 +40303,7 @@ public final class InstanceGroupOuterClass {
       "ustom_rules\030\010 \003(\0132=.yandex.cloud.compute" +
       ".v1.instancegroup.ScalePolicy.CustomRule" +
       "B\007\202\3101\003<=1\032<\n\022CpuUtilizationRule\022&\n\022utili" +
-      "zation_target\030\001 \001(\001B\n\372\3071\00610-100\032\304\003\n\nCust" +
+      "zation_target\030\001 \001(\001B\n\372\3071\00610-100\032\251\005\n\nCust" +
       "omRule\022_\n\trule_type\030\001 \001(\0162F.yandex.cloud" +
       ".compute.v1.instancegroup.ScalePolicy.Cu" +
       "stomRule.RuleTypeB\004\350\3071\001\022c\n\013metric_type\030\002" +
@@ -39930,144 +40311,150 @@ public final class InstanceGroupOuterClass {
       "roup.ScalePolicy.CustomRule.MetricTypeB\004" +
       "\350\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\3071\001\362\30712[a-zA" +
       "-Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-]{0" +
-      ",198}\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0\"D\n\010RuleTyp" +
-      "e\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000\022\017\n\013UTILIZAT" +
-      "ION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033\n\027MET" +
-      "RIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COU" +
-      "NTER\020\002\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
-      "1-100B\022\n\nscale_type\022\004\300\3011\001\"\326\001\n\014DeployPoli" +
-      "cy\022\"\n\017max_unavailable\030\001 \001(\003B\t\372\3071\0050-100\022\037" +
-      "\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014max_c" +
-      "reating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_expansio" +
-      "n\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startup_duration\030\007" +
-      " \001(\0132\031.google.protobuf.DurationB\t\372\3071\0050m-" +
-      "1h\"\207\001\n\020AllocationPolicy\022T\n\005zones\030\001 \003(\0132<" +
-      ".yandex.cloud.compute.v1.instancegroup.A" +
-      "llocationPolicy.ZoneB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n" +
-      "\007zone_id\030\001 \001(\tB\004\350\3071\001\"\251\010\n\020InstanceTemplat" +
-      "e\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\206\001\n\006la" +
-      "bels\030\002 \003(\0132C.yandex.cloud.compute.v1.ins" +
-      "tancegroup.InstanceTemplate.LabelsEntryB" +
-      "1\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][" +
-      "-_0-9a-z]*\022\023\n\013platform_id\030\003 \001(\t\022R\n\016resou" +
-      "rces_spec\030\004 \001(\01324.yandex.cloud.compute.v" +
-      "1.instancegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010" +
-      "metadata\030\005 \003(\0132E.yandex.cloud.compute.v1" +
-      ".instancegroup.InstanceTemplate.Metadata" +
-      "EntryB5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006" +
-      " \001(\01327.yandex.cloud.compute.v1.instanceg" +
-      "roup.AttachedDiskSpecB\004\350\3071\001\022^\n\024secondary" +
-      "_disk_specs\030\007 \003(\01327.yandex.cloud.compute" +
-      ".v1.instancegroup.AttachedDiskSpecB\007\202\3101\003" +
-      "<=3\022c\n\027network_interface_specs\030\010 \003(\0132;.y" +
-      "andex.cloud.compute.v1.instancegroup.Net" +
-      "workInterfaceSpecB\005\202\3101\0011\022R\n\021scheduling_p" +
-      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
-      "stancegroup.SchedulingPolicy\022\032\n\022service_" +
-      "account_id\030\n \001(\t\022P\n\020network_settings\030\013 \001" +
-      "(\01326.yandex.cloud.compute.v1.instancegro" +
-      "up.NetworkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=" +
-      "128\022\033\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032" +
-      "/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001" +
-      "(\003B\022\372\3071\016<=824633720832\022[\n\005cores\030\002 \001(\003BL\372" +
-      "\3071H1,2,4,6,8,10,12,14,16,18,20,22,24,26," +
-      "28,30,32,34,36,40,44,48,52,56,60,64\022(\n\rc" +
-      "ore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n" +
-      "\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020AttachedDis" +
-      "kSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compu" +
-      "te.v1.instancegroup.AttachedDiskSpec.Mod" +
-      "eB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z]" +
-      "[-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Atta" +
-      "chedDiskSpec.DiskSpecB\004\350\3071\001\032\271\001\n\010DiskSpec" +
-      "\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type" +
-      "_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\02541943" +
-      "04-4398046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004" +
-      "<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B" +
-      "\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIF" +
-      "IED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n" +
-      "\024NetworkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(" +
-      "\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_addr" +
-      "ess_spec\030\003 \001(\01329.yandex.cloud.compute.v1" +
-      ".instancegroup.PrimaryAddressSpec\022Z\n\027pri" +
-      "mary_v6_address_spec\030\004 \001(\01329.yandex.clou" +
-      "d.compute.v1.instancegroup.PrimaryAddres" +
-      "sSpec\"i\n\022PrimaryAddressSpec\022S\n\023one_to_on" +
-      "e_nat_spec\030\001 \001(\01326.yandex.cloud.compute." +
-      "v1.instancegroup.OneToOneNatSpec\"W\n\017OneT" +
-      "oOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yandex" +
-      ".cloud.compute.v1.instancegroup.IpVersio" +
-      "n\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001" +
-      "(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.y" +
-      "andex.cloud.compute.v1.instancegroup.Net" +
-      "workSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPEC" +
-      "IFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELE" +
-      "RATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020Loa" +
-      "dBalancerSpec\022Q\n\021target_group_spec\030\001 \001(\013" +
-      "26.yandex.cloud.compute.v1.instancegroup" +
-      ".TargetGroupSpec\"\247\002\n\017TargetGroupSpec\022/\n\004" +
-      "name\030\001 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-" +
-      "z0-9]\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\223\001" +
-      "\n\006labels\030\003 \003(\0132B.yandex.cloud.compute.v1" +
-      ".instancegroup.TargetGroupSpec.LabelsEnt" +
-      "ryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032" +
-      "\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020He" +
-      "althChecksSpec\022[\n\022health_check_specs\030\001 \003" +
-      "(\01326.yandex.cloud.compute.v1.instancegro" +
-      "up.HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017HealthCh" +
-      "eckSpec\0228\n\010interval\030\001 \001(\0132\031.google.proto" +
-      "buf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001" +
-      "(\0132\031.google.protobuf.DurationB\n\372\3071\0061s-60" +
-      "s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2," +
-      "3,4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 " +
-      "\001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_opt" +
-      "ions\030\005 \001(\0132A.yandex.cloud.compute.v1.ins" +
-      "tancegroup.HealthCheckSpec.TcpOptionsH\000\022" +
-      "Z\n\014http_options\030\006 \001(\0132B.yandex.cloud.com" +
-      "pute.v1.instancegroup.HealthCheckSpec.Ht" +
-      "tpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B" +
-      "\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(" +
-      "\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_c" +
-      "heck_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n" +
-      "\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.clou" +
-      "d.compute.v1.instancegroup.ManagedInstan" +
-      "ce.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004" +
-      " \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001" +
-      "(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interface" +
-      "s\030\010 \003(\01327.yandex.cloud.compute.v1.instan" +
-      "cegroup.NetworkInterface\0225\n\021status_chang" +
-      "ed_at\030\t \001(\0132\032.google.protobuf.Timestamp\"" +
-      "\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CR" +
-      "EATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014" +
-      "\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INST" +
-      "ANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITIN" +
-      "G_STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020" +
-      "\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMU" +
-      "P_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUN" +
-      "NING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007S" +
-      "TOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterfa" +
-      "ce\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021" +
-      "\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030" +
-      "\004 \001(\01325.yandex.cloud.compute.v1.instance" +
-      "group.PrimaryAddress\022Q\n\022primary_v6_addre" +
-      "ss\030\005 \001(\01325.yandex.cloud.compute.v1.insta" +
-      "ncegroup.PrimaryAddress\"m\n\016PrimaryAddres" +
-      "s\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001" +
-      "(\01322.yandex.cloud.compute.v1.instancegro" +
-      "up.OneToOneNat\"d\n\013OneToOneNat\022\017\n\007address" +
-      "\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.clou" +
-      "d.compute.v1.instancegroup.IpVersion\"K\n\t" +
-      "LogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpV" +
-      "ersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IP" +
-      "V4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.comp" +
-      "ute.v1.instancegroupZWgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/compute/v" +
-      "1/instancegroup;instancegroupb\006proto3"
+      ",198}\022\263\001\n\006labels\030\005 \003(\0132I.yandex.cloud.co" +
+      "mpute.v1.instancegroup.ScalePolicy.Custo" +
+      "mRule.LabelsEntryBX\362\30712[a-zA-Z0-9./@_][ " +
+      "0-9a-zA-Z./@_,:;()\\[\\]<>-]{0,198}\262\3101\036\022\034^" +
+      "[a-zA-Z][0-9a-zA-Z_]{0,31}$\022\026\n\006target\030\004 " +
+      "\001(\001B\006\372\3071\002>0\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"D\n\010RuleType\022\031\n\025RULE_T" +
+      "YPE_UNSPECIFIED\020\000\022\017\n\013UTILIZATION\020\001\022\014\n\010WO" +
+      "RKLOAD\020\002\"A\n\nMetricType\022\033\n\027METRIC_TYPE_UN" +
+      "SPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COUNTER\020\002\032%\n\nF" +
+      "ixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100B\022\n\nsc" +
+      "ale_type\022\004\300\3011\001\"\326\001\n\014DeployPolicy\022\"\n\017max_u" +
+      "navailable\030\001 \001(\003B\t\372\3071\0050-100\022\037\n\014max_delet" +
+      "ing\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014max_creating\030\003 \001" +
+      "(\003B\t\372\3071\0050-100\022 \n\rmax_expansion\030\006 \001(\003B\t\372\307" +
+      "1\0050-100\022>\n\020startup_duration\030\007 \001(\0132\031.goog" +
+      "le.protobuf.DurationB\t\372\3071\0050m-1h\"\207\001\n\020Allo" +
+      "cationPolicy\022T\n\005zones\030\001 \003(\0132<.yandex.clo" +
+      "ud.compute.v1.instancegroup.AllocationPo" +
+      "licy.ZoneB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n\007zone_id\030\001 " +
+      "\001(\tB\004\350\3071\001\"\257\010\n\020InstanceTemplate\022\036\n\013descri" +
+      "ption\030\001 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\002 \003(\0132" +
+      "C.yandex.cloud.compute.v1.instancegroup." +
+      "InstanceTemplate.LabelsEntryB1\202\3101\004<=64\212\310" +
+      "1\005<=128\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
+      "\031\n\013platform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_" +
+      "spec\030\004 \001(\01324.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010metad" +
+      "ata\030\005 \003(\0132E.yandex.cloud.compute.v1.inst" +
+      "ancegroup.InstanceTemplate.MetadataEntry" +
+      "B5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006 \001(\0132" +
+      "7.yandex.cloud.compute.v1.instancegroup." +
+      "AttachedDiskSpecB\004\350\3071\001\022^\n\024secondary_disk" +
+      "_specs\030\007 \003(\01327.yandex.cloud.compute.v1.i" +
+      "nstancegroup.AttachedDiskSpecB\007\202\3101\003<=3\022c" +
+      "\n\027network_interface_specs\030\010 \003(\0132;.yandex" +
+      ".cloud.compute.v1.instancegroup.NetworkI" +
+      "nterfaceSpecB\005\202\3101\0011\022R\n\021scheduling_policy" +
+      "\030\t \001(\01327.yandex.cloud.compute.v1.instanc" +
+      "egroup.SchedulingPolicy\022\032\n\022service_accou" +
+      "nt_id\030\n \001(\t\022P\n\020network_settings\030\013 \001(\01326." +
+      "yandex.cloud.compute.v1.instancegroup.Ne" +
+      "tworkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033" +
+      "\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMe" +
+      "tadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\325\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372" +
+      "\3071\016<=824633720832\022[\n\005cores\030\002 \001(\003BL\372\3071H1," +
+      "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30" +
+      ",32,34,36,40,44,48,52,56,60,64\022(\n\rcore_f" +
+      "raction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus" +
+      "\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\351\003\n\020AttachedDiskSpec" +
+      "\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1" +
+      ".instancegroup.AttachedDiskSpec.ModeB\004\350\307" +
+      "1\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-" +
+      "9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex." +
+      "cloud.compute.v1.instancegroup.AttachedD" +
+      "iskSpec.DiskSpecB\004\350\3071\001\032\271\001\n\010DiskSpec\022\036\n\013d" +
+      "escription\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002" +
+      " \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\0254194304-43" +
+      "98046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H" +
+      "\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B\016\n\014so" +
+      "urce_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000" +
+      "\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n\024Netw" +
+      "orkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\n" +
+      "subnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_s" +
+      "pec\030\003 \001(\01329.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddressSpec\022Z\n\027primary_" +
+      "v6_address_spec\030\004 \001(\01329.yandex.cloud.com" +
+      "pute.v1.instancegroup.PrimaryAddressSpec" +
+      "\"i\n\022PrimaryAddressSpec\022S\n\023one_to_one_nat" +
+      "_spec\030\001 \001(\01326.yandex.cloud.compute.v1.in" +
+      "stancegroup.OneToOneNatSpec\"W\n\017OneToOneN" +
+      "atSpec\022D\n\nip_version\030\001 \001(\01620.yandex.clou" +
+      "d.compute.v1.instancegroup.IpVersion\"\'\n\020" +
+      "SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001" +
+      "\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yandex" +
+      ".cloud.compute.v1.instancegroup.NetworkS" +
+      "ettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
+      "\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED" +
+      "\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020LoadBala" +
+      "ncerSpec\022Q\n\021target_group_spec\030\001 \001(\01326.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Targ" +
+      "etGroupSpec\"\247\002\n\017TargetGroupSpec\022/\n\004name\030" +
+      "\001 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]" +
+      "\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\223\001\n\006lab" +
+      "els\030\003 \003(\0132B.yandex.cloud.compute.v1.inst" +
+      "ancegroup.TargetGroupSpec.LabelsEntryB?\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63" +
+      "\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020HealthC" +
+      "hecksSpec\022[\n\022health_check_specs\030\001 \003(\01326." +
+      "yandex.cloud.compute.v1.instancegroup.He" +
+      "althCheckSpecB\007\202\3101\003>=1\"\244\004\n\017HealthCheckSp" +
+      "ec\0228\n\010interval\030\001 \001(\0132\031.google.protobuf.D" +
+      "urationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031." +
+      "google.protobuf.DurationB\n\372\3071\0061s-60s\0225\n\023" +
+      "unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5" +
+      ",6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(\003B\030" +
+      "\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_options\030" +
+      "\005 \001(\0132A.yandex.cloud.compute.v1.instance" +
+      "group.HealthCheckSpec.TcpOptionsH\000\022Z\n\014ht" +
+      "tp_options\030\006 \001(\0132B.yandex.cloud.compute." +
+      "v1.instancegroup.HealthCheckSpec.HttpOpt" +
+      "ionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\007" +
+      "1-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\307" +
+      "1\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_check_" +
+      "options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002id\030" +
+      "\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud.com" +
+      "pute.v1.instancegroup.ManagedInstance.St" +
+      "atus\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022" +
+      "\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n" +
+      "\007zone_id\030\007 \001(\t\022S\n\022network_interfaces\030\010 \003" +
+      "(\01327.yandex.cloud.compute.v1.instancegro" +
+      "up.NetworkInterface\0225\n\021status_changed_at" +
+      "\030\t \001(\0132\032.google.protobuf.Timestamp\"\323\002\n\006S" +
+      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CREATIN" +
+      "G_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021D" +
+      "ELETING_INSTANCE\020\r\022\025\n\021STARTING_INSTANCE\020" +
+      "\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITING_STA" +
+      "RTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017" +
+      "OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP_DUR" +
+      "ATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNING_" +
+      "ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOPPE" +
+      "D\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterface\022\r\n" +
+      "\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsub" +
+      "net_id\030\003 \001(\t\022Q\n\022primary_v4_address\030\004 \001(\013" +
+      "25.yandex.cloud.compute.v1.instancegroup" +
+      ".PrimaryAddress\022Q\n\022primary_v6_address\030\005 " +
+      "\001(\01325.yandex.cloud.compute.v1.instancegr" +
+      "oup.PrimaryAddress\"m\n\016PrimaryAddress\022\017\n\007" +
+      "address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001(\01322." +
+      "yandex.cloud.compute.v1.instancegroup.On" +
+      "eToOneNat\"d\n\013OneToOneNat\022\017\n\007address\030\001 \001(" +
+      "\t\022D\n\nip_version\030\002 \001(\01620.yandex.cloud.com" +
+      "pute.v1.instancegroup.IpVersion\"K\n\tLogRe" +
+      "cord\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVersio" +
+      "n\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022" +
+      "\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.compute.v" +
+      "1.instancegroupZWgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/compute/v1/ins" +
+      "tancegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -40143,7 +40530,13 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_descriptor,
-        new java.lang.String[] { "RuleType", "MetricType", "MetricName", "Target", });
+        new java.lang.String[] { "RuleType", "MetricType", "MetricName", "Labels", "Target", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_CustomRule_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_FixedScale_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_compute_v1_instancegroup_ScalePolicy_FixedScale_fieldAccessorTable = new

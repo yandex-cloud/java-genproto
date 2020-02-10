@@ -151,6 +151,24 @@ public final class JobOuterClass {
 
     /**
      * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
+
+    /**
+     * <pre>
      * Status.
      * </pre>
      *
@@ -240,6 +258,7 @@ public final class JobOuterClass {
       id_ = "";
       clusterId_ = "";
       name_ = "";
+      createdBy_ = "";
       status_ = 0;
     }
 
@@ -384,6 +403,12 @@ public final class JobOuterClass {
                 jobSpec_ = subBuilder.buildPartial();
               }
               jobSpecCase_ = 11;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdBy_ = s;
               break;
             }
             default: {
@@ -861,6 +886,48 @@ public final class JobOuterClass {
       }
     }
 
+    public static final int CREATED_BY_FIELD_NUMBER = 12;
+    private volatile java.lang.Object createdBy_;
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int STATUS_FIELD_NUMBER = 7;
     private int status_;
     /**
@@ -1037,6 +1104,9 @@ public final class JobOuterClass {
       if (jobSpecCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.HiveJob) jobSpec_);
       }
+      if (!getCreatedByBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, createdBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1087,6 +1157,9 @@ public final class JobOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.HiveJob) jobSpec_);
       }
+      if (!getCreatedByBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, createdBy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1124,6 +1197,8 @@ public final class JobOuterClass {
       }
       result = result && getName()
           .equals(other.getName());
+      result = result && getCreatedBy()
+          .equals(other.getCreatedBy());
       result = result && status_ == other.status_;
       result = result && getJobSpecCase().equals(
           other.getJobSpecCase());
@@ -1177,6 +1252,8 @@ public final class JobOuterClass {
       }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
       switch (jobSpecCase_) {
@@ -1360,6 +1437,8 @@ public final class JobOuterClass {
         }
         name_ = "";
 
+        createdBy_ = "";
+
         status_ = 0;
 
         jobSpecCase_ = 0;
@@ -1408,6 +1487,7 @@ public final class JobOuterClass {
           result.finishedAt_ = finishedAtBuilder_.build();
         }
         result.name_ = name_;
+        result.createdBy_ = createdBy_;
         result.status_ = status_;
         if (jobSpecCase_ == 8) {
           if (mapreduceJobBuilder_ == null) {
@@ -1505,6 +1585,10 @@ public final class JobOuterClass {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
           onChanged();
         }
         if (other.status_ != 0) {
@@ -2302,6 +2386,95 @@ public final class JobOuterClass {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder clearCreatedBy() {
+        
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdBy_ = value;
         onChanged();
         return this;
       }
@@ -12294,60 +12467,60 @@ public final class JobOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/dataproc/manager/v1/job.p" +
       "roto\022 yandex.cloud.dataproc.manager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"\377\004\n\003Job\022" +
+      "google/protobuf/timestamp.proto\"\223\005\n\003Job\022" +
       "\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       ".\n\nstarted_at\030\004 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022/\n\013finished_at\030\005 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\014\n\004name\030\006 \001(\t\022<\n\006status" +
-      "\030\007 \001(\0162,.yandex.cloud.dataproc.manager.v" +
-      "1.Job.Status\022G\n\rmapreduce_job\030\010 \001(\0132..ya" +
-      "ndex.cloud.dataproc.manager.v1.Mapreduce" +
-      "JobH\000\022?\n\tspark_job\030\t \001(\0132*.yandex.cloud." +
-      "dataproc.manager.v1.SparkJobH\000\022C\n\013pyspar" +
-      "k_job\030\n \001(\0132,.yandex.cloud.dataproc.mana" +
-      "ger.v1.PysparkJobH\000\022=\n\010hive_job\030\013 \001(\0132)." +
+      "otobuf.Timestamp\022\014\n\004name\030\006 \001(\t\022\022\n\ncreate" +
+      "d_by\030\014 \001(\t\022<\n\006status\030\007 \001(\0162,.yandex.clou" +
+      "d.dataproc.manager.v1.Job.Status\022G\n\rmapr" +
+      "educe_job\030\010 \001(\0132..yandex.cloud.dataproc." +
+      "manager.v1.MapreduceJobH\000\022?\n\tspark_job\030\t" +
+      " \001(\0132*.yandex.cloud.dataproc.manager.v1." +
+      "SparkJobH\000\022C\n\013pyspark_job\030\n \001(\0132,.yandex" +
+      ".cloud.dataproc.manager.v1.PysparkJobH\000\022" +
+      "=\n\010hive_job\030\013 \001(\0132).yandex.cloud.datapro" +
+      "c.manager.v1.HiveJobH\000\"a\n\006Status\022\026\n\022STAT" +
+      "US_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PE" +
+      "NDING\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020" +
+      "\005B\n\n\010job_spec\"\240\002\n\014MapreduceJob\022\014\n\004args\030\001" +
+      " \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris" +
+      "\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022R\n\nproperti" +
+      "es\030\005 \003(\0132>.yandex.cloud.dataproc.manager" +
+      ".v1.MapreduceJob.PropertiesEntry\022\033\n\021main" +
+      "_jar_file_uri\030\006 \001(\tH\000\022\024\n\nmain_class\030\007 \001(" +
+      "\tH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\010\n\006driver\"\212\002\n\010SparkJob\022\014\n" +
+      "\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfi" +
+      "le_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022N\n\np" +
+      "roperties\030\005 \003(\0132:.yandex.cloud.dataproc." +
+      "manager.v1.SparkJob.PropertiesEntry\022\031\n\021m" +
+      "ain_jar_file_uri\030\006 \001(\t\022\022\n\nmain_class\030\007 \001" +
+      "(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"\227\002\n\nPysparkJob\022\014\n\004args\030\001 \003" +
+      "(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003" +
+      " \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022P\n\nproperties" +
+      "\030\005 \003(\0132<.yandex.cloud.dataproc.manager.v" +
+      "1.PysparkJob.PropertiesEntry\022\034\n\024main_pyt" +
+      "hon_file_uri\030\006 \001(\t\022\030\n\020python_file_uris\030\007" +
+      " \003(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"\034\n\tQueryList\022\017\n\007queries\030" +
+      "\001 \003(\t\"\274\003\n\007HiveJob\022M\n\nproperties\030\001 \003(\01329." +
       "yandex.cloud.dataproc.manager.v1.HiveJob" +
-      "H\000\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014" +
-      "PROVISIONING\020\001\022\013\n\007PENDING\020\002\022\013\n\007RUNNING\020\003" +
-      "\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005B\n\n\010job_spec\"\240\002\n\014Ma" +
-      "preduceJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uri" +
-      "s\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_ur" +
-      "is\030\004 \003(\t\022R\n\nproperties\030\005 \003(\0132>.yandex.cl" +
-      "oud.dataproc.manager.v1.MapreduceJob.Pro" +
-      "pertiesEntry\022\033\n\021main_jar_file_uri\030\006 \001(\tH" +
-      "\000\022\024\n\nmain_class\030\007 \001(\tH\000\0321\n\017PropertiesEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006dr" +
-      "iver\"\212\002\n\010SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_f" +
-      "ile_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014arc" +
-      "hive_uris\030\004 \003(\t\022N\n\nproperties\030\005 \003(\0132:.ya" +
-      "ndex.cloud.dataproc.manager.v1.SparkJob." +
-      "PropertiesEntry\022\031\n\021main_jar_file_uri\030\006 \001" +
-      "(\t\022\022\n\nmain_class\030\007 \001(\t\0321\n\017PropertiesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\227\002\n\nPy" +
-      "sparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_uris\030" +
-      "\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive_uris" +
-      "\030\004 \003(\t\022P\n\nproperties\030\005 \003(\0132<.yandex.clou" +
-      "d.dataproc.manager.v1.PysparkJob.Propert" +
-      "iesEntry\022\034\n\024main_python_file_uri\030\006 \001(\t\022\030" +
-      "\n\020python_file_uris\030\007 \003(\t\0321\n\017PropertiesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034\n\tQ" +
-      "ueryList\022\017\n\007queries\030\001 \003(\t\"\274\003\n\007HiveJob\022M\n" +
-      "\nproperties\030\001 \003(\01329.yandex.cloud.datapro" +
-      "c.manager.v1.HiveJob.PropertiesEntry\022\033\n\023" +
-      "continue_on_failure\030\002 \001(\010\022X\n\020script_vari" +
-      "ables\030\003 \003(\0132>.yandex.cloud.dataproc.mana" +
-      "ger.v1.HiveJob.ScriptVariablesEntry\022\025\n\rj" +
-      "ar_file_uris\030\004 \003(\t\022\030\n\016query_file_uri\030\005 \001" +
-      "(\tH\000\022A\n\nquery_list\030\006 \001(\0132+.yandex.cloud." +
-      "dataproc.manager.v1.QueryListH\000\0321\n\017Prope" +
-      "rtiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\0326\n\024ScriptVariablesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$yand" +
-      "ex.cloud.api.dataproc.manager.v1ZUgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/dataproc/manager/v1;dataproc_managerb" +
-      "\006proto3"
+      ".PropertiesEntry\022\033\n\023continue_on_failure\030" +
+      "\002 \001(\010\022X\n\020script_variables\030\003 \003(\0132>.yandex" +
+      ".cloud.dataproc.manager.v1.HiveJob.Scrip" +
+      "tVariablesEntry\022\025\n\rjar_file_uris\030\004 \003(\t\022\030" +
+      "\n\016query_file_uri\030\005 \001(\tH\000\022A\n\nquery_list\030\006" +
+      " \001(\0132+.yandex.cloud.dataproc.manager.v1." +
+      "QueryListH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024ScriptVariable" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014" +
+      "\n\nquery_typeB}\n$yandex.cloud.api.datapro" +
+      "c.manager.v1ZUgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/dataproc/manager/" +
+      "v1;dataproc_managerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12367,7 +12540,7 @@ public final class JobOuterClass {
     internal_static_yandex_cloud_dataproc_manager_v1_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_Job_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "JobSpec", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "JobSpec", });
     internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_dataproc_manager_v1_MapreduceJob_fieldAccessorTable = new

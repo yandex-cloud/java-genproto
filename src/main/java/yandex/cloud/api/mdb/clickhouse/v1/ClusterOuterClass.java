@@ -310,6 +310,24 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.Cluster.Status status = 12;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Cluster.Status getStatus();
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * <pre>
@@ -338,6 +356,7 @@ public final class ClusterOuterClass {
       networkId_ = "";
       health_ = 0;
       status_ = 0;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -458,6 +477,12 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -1505,6 +1530,48 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Cluster.Status.UNRECOGNIZED : result;
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 13;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1557,6 +1624,9 @@ public final class ClusterOuterClass {
       }
       if (status_ != yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Cluster.Status.STATUS_UNKNOWN.getNumber()) {
         output.writeEnum(12, status_);
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1616,6 +1686,9 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, status_);
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1659,6 +1732,8 @@ public final class ClusterOuterClass {
           .equals(other.getNetworkId());
       result = result && health_ == other.health_;
       result = result && status_ == other.status_;
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1702,6 +1777,8 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + health_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1898,6 +1975,8 @@ public final class ClusterOuterClass {
 
         status_ = 0;
 
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -1955,6 +2034,7 @@ public final class ClusterOuterClass {
         result.networkId_ = networkId_;
         result.health_ = health_;
         result.status_ = status_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2066,6 +2146,10 @@ public final class ClusterOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3512,6 +3596,95 @@ public final class ClusterOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 13;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -15740,7 +15913,7 @@ public final class ClusterOuterClass {
       "google/protobuf/timestamp.proto\032\036google/" +
       "protobuf/wrappers.proto\032\033google/type/tim" +
       "eofday.proto\0326yandex/cloud/mdb/clickhous" +
-      "e/v1/config/clickhouse.proto\"\323\006\n\007Cluster" +
+      "e/v1/config/clickhouse.proto\"\357\006\n\007Cluster" +
       "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
       "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
       "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006la" +
@@ -15754,64 +15927,65 @@ public final class ClusterOuterClass {
       " \001(\t\022>\n\006health\030\013 \001(\0162..yandex.cloud.mdb." +
       "clickhouse.v1.Cluster.Health\022>\n\006status\030\014" +
       " \001(\0162..yandex.cloud.mdb.clickhouse.v1.Cl" +
-      "uster.Status\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027EN" +
-      "VIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022" +
-      "\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
-      "y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATIN" +
-      "G\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020" +
-      "\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING" +
-      "\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descri" +
-      "ption\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\213\004\n\rClusterCon" +
-      "fig\022\017\n\007version\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\013" +
-      "28.yandex.cloud.mdb.clickhouse.v1.Cluste" +
-      "rConfig.Clickhouse\022J\n\tzookeeper\030\003 \001(\01327." +
-      "yandex.cloud.mdb.clickhouse.v1.ClusterCo" +
-      "nfig.Zookeeper\0223\n\023backup_window_start\030\004 " +
-      "\001(\0132\026.google.type.TimeOfDay\0226\n\006access\030\005 " +
-      "\001(\0132&.yandex.cloud.mdb.clickhouse.v1.Acc" +
-      "ess\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yan" +
-      "dex.cloud.mdb.clickhouse.v1.config.Click" +
-      "houseConfigSet\022<\n\tresources\030\002 \001(\0132).yand" +
-      "ex.cloud.mdb.clickhouse.v1.Resources\032I\n\t" +
-      "Zookeeper\022<\n\tresources\030\001 \001(\0132).yandex.cl" +
-      "oud.mdb.clickhouse.v1.Resources\"f\n\005Shard" +
-      "\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006co" +
-      "nfig\030\003 \001(\0132+.yandex.cloud.mdb.clickhouse" +
-      ".v1.ShardConfig\"\237\002\n\013ShardConfig\022J\n\nclick" +
-      "house\030\001 \001(\01326.yandex.cloud.mdb.clickhous" +
-      "e.v1.ShardConfig.Clickhouse\032\303\001\n\nClickhou" +
-      "se\022J\n\006config\030\001 \001(\0132:.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfigSet\022<" +
-      "\n\tresources\030\002 \001(\0132).yandex.cloud.mdb.cli" +
-      "ckhouse.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\"\340\003\n\004Host\022\014\n\004na" +
-      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030" +
-      "\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex.cloud.mdb.c" +
-      "lickhouse.v1.Host.Type\022<\n\tresources\030\005 \001(" +
-      "\0132).yandex.cloud.mdb.clickhouse.v1.Resou" +
-      "rces\022;\n\006health\030\006 \001(\0162+.yandex.cloud.mdb." +
-      "clickhouse.v1.Host.Health\0229\n\010services\030\007 " +
-      "\003(\0132\'.yandex.cloud.mdb.clickhouse.v1.Ser" +
-      "vice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public" +
-      "_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n\004Type\022\024\n" +
-      "\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZ" +
-      "OOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALI" +
-      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service" +
-      "\022:\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.clickh" +
-      "ouse.v1.Service.Type\022>\n\006health\030\002 \001(\0162..y" +
-      "andex.cloud.mdb.clickhouse.v1.Service.He" +
-      "alth\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCL" +
-      "ICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007U" +
-      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResourc" +
-      "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
-      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"=\n\006Acces" +
-      "s\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n" +
-      "\007metrika\030\003 \001(\010Bs\n\"yandex.cloud.api.mdb.c" +
-      "lickhouse.v1ZMgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/clickhouse/v1" +
-      ";clickhouseb\006proto3"
+      "uster.Status\022\032\n\022service_account_id\030\r \001(\t" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
+      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
+      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n" +
+      "\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNI" +
+      "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
+      "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
+      "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
+      "\014\n\004link\030\003 \001(\t\"\213\004\n\rClusterConfig\022\017\n\007versi" +
+      "on\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328.yandex.cl" +
+      "oud.mdb.clickhouse.v1.ClusterConfig.Clic" +
+      "khouse\022J\n\tzookeeper\030\003 \001(\01327.yandex.cloud" +
+      ".mdb.clickhouse.v1.ClusterConfig.Zookeep" +
+      "er\0223\n\023backup_window_start\030\004 \001(\0132\026.google" +
+      ".type.TimeOfDay\0226\n\006access\030\005 \001(\0132&.yandex" +
+      ".cloud.mdb.clickhouse.v1.Access\032\226\001\n\nClic" +
+      "khouse\022J\n\006config\030\001 \001(\0132:.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfigS" +
+      "et\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb" +
+      ".clickhouse.v1.Resources\032I\n\tZookeeper\022<\n" +
+      "\tresources\030\001 \001(\0132).yandex.cloud.mdb.clic" +
+      "khouse.v1.Resources\"f\n\005Shard\022\014\n\004name\030\001 \001" +
+      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+" +
+      ".yandex.cloud.mdb.clickhouse.v1.ShardCon" +
+      "fig\"\237\002\n\013ShardConfig\022J\n\nclickhouse\030\001 \001(\0132" +
+      "6.yandex.cloud.mdb.clickhouse.v1.ShardCo" +
+      "nfig.Clickhouse\032\303\001\n\nClickhouse\022J\n\006config" +
+      "\030\001 \001(\0132:.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfigSet\022<\n\tresources\030" +
+      "\002 \001(\0132).yandex.cloud.mdb.clickhouse.v1.R" +
+      "esources\022+\n\006weight\030\003 \001(\0132\033.google.protob" +
+      "uf.Int64Value\"\340\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
+      "cluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004typ" +
+      "e\030\004 \001(\0162).yandex.cloud.mdb.clickhouse.v1" +
+      ".Host.Type\022<\n\tresources\030\005 \001(\0132).yandex.c" +
+      "loud.mdb.clickhouse.v1.Resources\022;\n\006heal" +
+      "th\030\006 \001(\0162+.yandex.cloud.mdb.clickhouse.v" +
+      "1.Host.Health\0229\n\010services\030\007 \003(\0132\'.yandex" +
+      ".cloud.mdb.clickhouse.v1.Service\022\021\n\tsubn" +
+      "et_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n" +
+      "\nshard_name\030\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8" +
+      "\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service\022:\n\004type\030\001 \001" +
+      "(\0162,.yandex.cloud.mdb.clickhouse.v1.Serv" +
+      "ice.Type\022>\n\006health\030\002 \001(\0162..yandex.cloud." +
+      "mdb.clickhouse.v1.Service.Health\";\n\004Type" +
+      "\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r" +
+      "\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005" +
+      "ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resour" +
+      "ce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n" +
+      "\014disk_type_id\030\003 \001(\t\"=\n\006Access\022\021\n\tdata_le" +
+      "ns\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001" +
+      "(\010Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
+      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15834,7 +16008,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_fieldAccessorTable = new

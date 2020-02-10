@@ -4510,6 +4510,30 @@ public final class UserServiceOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings settings = 6;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> 
+        getQuotasList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index);
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    int getQuotasCount();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateUserRequest}
@@ -4528,6 +4552,7 @@ public final class UserServiceOuterClass {
       userName_ = "";
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
+      quotas_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4607,6 +4632,15 @@ public final class UserServiceOuterClass {
 
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              quotas_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4624,6 +4658,9 @@ public final class UserServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          quotas_ = java.util.Collections.unmodifiableList(quotas_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4882,6 +4919,41 @@ public final class UserServiceOuterClass {
       return getSettings();
     }
 
+    public static final int QUOTAS_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_;
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+      return quotas_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+        getQuotasOrBuilderList() {
+      return quotas_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    public int getQuotasCount() {
+      return quotas_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+      return quotas_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+        int index) {
+      return quotas_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4914,6 +4986,9 @@ public final class UserServiceOuterClass {
       if (settings_ != null) {
         output.writeMessage(6, getSettings());
       }
+      for (int i = 0; i < quotas_.size(); i++) {
+        output.writeMessage(7, quotas_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4943,6 +5018,10 @@ public final class UserServiceOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSettings());
+      }
+      for (int i = 0; i < quotas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, quotas_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4978,6 +5057,8 @@ public final class UserServiceOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && getQuotasList()
+          .equals(other.getQuotasList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5006,6 +5087,10 @@ public final class UserServiceOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (getQuotasCount() > 0) {
+        hash = (37 * hash) + QUOTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getQuotasList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5136,6 +5221,7 @@ public final class UserServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getPermissionsFieldBuilder();
+          getQuotasFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5164,6 +5250,12 @@ public final class UserServiceOuterClass {
         } else {
           settings_ = null;
           settingsBuilder_ = null;
+        }
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          quotasBuilder_.clear();
         }
         return this;
       }
@@ -5214,6 +5306,15 @@ public final class UserServiceOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (quotasBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            quotas_ = java.util.Collections.unmodifiableList(quotas_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.quotas_ = quotas_;
+        } else {
+          result.quotas_ = quotasBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -5307,6 +5408,32 @@ public final class UserServiceOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (quotasBuilder_ == null) {
+          if (!other.quotas_.isEmpty()) {
+            if (quotas_.isEmpty()) {
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureQuotasIsMutable();
+              quotas_.addAll(other.quotas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.quotas_.isEmpty()) {
+            if (quotasBuilder_.isEmpty()) {
+              quotasBuilder_.dispose();
+              quotasBuilder_ = null;
+              quotas_ = other.quotas_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              quotasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQuotasFieldBuilder() : null;
+            } else {
+              quotasBuilder_.addAllMessages(other.quotas_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6195,6 +6322,246 @@ public final class UserServiceOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> quotas_ =
+        java.util.Collections.emptyList();
+      private void ensureQuotasIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          quotas_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota>(quotas_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> quotasBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> getQuotasList() {
+        if (quotasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(quotas_);
+        } else {
+          return quotasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public int getQuotasCount() {
+        if (quotasBuilder_ == null) {
+          return quotas_.size();
+        } else {
+          return quotasBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota getQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);
+        } else {
+          return quotasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.set(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder setQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder addQuotas(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota value) {
+        if (quotasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuotasIsMutable();
+          quotas_.add(index, value);
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder addQuotas(
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder addQuotas(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder builderForValue) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          quotasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder addAllQuotas(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota> values) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, quotas_);
+          onChanged();
+        } else {
+          quotasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder clearQuotas() {
+        if (quotasBuilder_ == null) {
+          quotas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          quotasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public Builder removeQuotas(int index) {
+        if (quotasBuilder_ == null) {
+          ensureQuotasIsMutable();
+          quotas_.remove(index);
+          onChanged();
+        } else {
+          quotasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder getQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder getQuotasOrBuilder(
+          int index) {
+        if (quotasBuilder_ == null) {
+          return quotas_.get(index);  } else {
+          return quotasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+           getQuotasOrBuilderList() {
+        if (quotasBuilder_ != null) {
+          return quotasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(quotas_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder() {
+        return getQuotasFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder addQuotasBuilder(
+          int index) {
+        return getQuotasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.UserQuota quotas = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder> 
+           getQuotasBuilderList() {
+        return getQuotasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder> 
+          getQuotasFieldBuilder() {
+        if (quotasBuilder_ == null) {
+          quotasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuota.Builder, yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserQuotaOrBuilder>(
+                  quotas_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          quotas_ = null;
+        }
+        return quotasBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12136,7 +12503,7 @@ public final class UserServiceOuterClass {
       "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec" +
       "\030\002 \001(\0132(.yandex.cloud.mdb.clickhouse.v1." +
       "UserSpecB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\n" +
-      "cluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\266\002\n\021" +
+      "cluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\361\002\n\021" +
       "UpdateUserRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004" +
       "<=63\362\3071\r[a-zA-Z0-9_]*\022/\n\013update_mask\030\003 \001" +
@@ -12144,65 +12511,66 @@ public final class UserServiceOuterClass {
       "rd\030\004 \001(\tB\t\212\3101\0058-128\022?\n\013permissions\030\005 \003(\013" +
       "2*.yandex.cloud.mdb.clickhouse.v1.Permis" +
       "sion\022>\n\010settings\030\006 \001(\0132,.yandex.cloud.md" +
-      "b.clickhouse.v1.UserSettings\";\n\022UpdateUs" +
-      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_n" +
-      "ame\030\002 \001(\t\"g\n\021DeleteUserRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 " +
-      "\001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\";\n\022De" +
-      "leteUserMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\t" +
-      "user_name\030\002 \001(\t\"\260\001\n\032GrantUserPermissionR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-" +
-      "zA-Z0-9_]*\022>\n\npermission\030\003 \001(\0132*.yandex." +
-      "cloud.mdb.clickhouse.v1.Permission\"D\n\033Gr" +
-      "antUserPermissionMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\244\001\n\033RevokeUserP" +
-      "ermissionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<" +
-      "=63\362\3071\r[a-zA-Z0-9_]*\0221\n\rdatabase_name\030\003 " +
-      "\001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034Revok" +
-      "eUserPermissionMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\021\n\tuser_name\030\002 \001(\t2\255\013\n\013UserService\022\243" +
-      "\001\n\003Get\022..yandex.cloud.mdb.clickhouse.v1." +
-      "GetUserRequest\032$.yandex.cloud.mdb.clickh" +
-      "ouse.v1.User\"F\202\323\344\223\002@\022>/managed-clickhous" +
-      "e/v1/clusters/{cluster_id}/users/{user_n" +
-      "ame}\022\247\001\n\004List\0220.yandex.cloud.mdb.clickho" +
-      "use.v1.ListUsersRequest\0321.yandex.cloud.m" +
-      "db.clickhouse.v1.ListUsersResponse\":\202\323\344\223" +
-      "\0024\0222/managed-clickhouse/v1/clusters/{clu" +
-      "ster_id}/users\022\273\001\n\006Create\0221.yandex.cloud" +
-      ".mdb.clickhouse.v1.CreateUserRequest\032!.y" +
-      "andex.cloud.operation.Operation\"[\202\323\344\223\0027\"" +
-      "2/managed-clickhouse/v1/clusters/{cluste" +
-      "r_id}/users:\001*\262\322*\032\n\022CreateUserMetadata\022\004" +
-      "User\022\307\001\n\006Update\0221.yandex.cloud.mdb.click" +
-      "house.v1.UpdateUserRequest\032!.yandex.clou" +
-      "d.operation.Operation\"g\202\323\344\223\002C2>/managed-" +
-      "clickhouse/v1/clusters/{cluster_id}/user" +
-      "s/{user_name}:\001*\262\322*\032\n\022UpdateUserMetadata" +
-      "\022\004User\022\325\001\n\006Delete\0221.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.DeleteUserRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"u\202\323\344\223\002@*>/manage" +
-      "d-clickhouse/v1/clusters/{cluster_id}/us" +
-      "ers/{user_name}\262\322*+\n\022DeleteUserMetadata\022" +
-      "\025google.protobuf.Empty\022\363\001\n\017GrantPermissi" +
-      "on\022:.yandex.cloud.mdb.clickhouse.v1.Gran" +
-      "tUserPermissionRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\200\001\202\323\344\223\002S\"N/managed-cli" +
-      "ckhouse/v1/clusters/{cluster_id}/users/{" +
-      "user_name}:grantPermission:\001*\262\322*#\n\033Grant" +
-      "UserPermissionMetadata\022\004User\022\367\001\n\020RevokeP" +
-      "ermission\022;.yandex.cloud.mdb.clickhouse." +
-      "v1.RevokeUserPermissionRequest\032!.yandex." +
-      "cloud.operation.Operation\"\202\001\202\323\344\223\002T\"O/man" +
-      "aged-clickhouse/v1/clusters/{cluster_id}" +
-      "/users/{user_name}:revokePermission:\001*\262\322" +
-      "*$\n\034RevokeUserPermissionMetadata\022\004UserBs" +
-      "\n\"yandex.cloud.api.mdb.clickhouse.v1ZMgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/mdb/clickhouse/v1;clickhouseb\006pro" +
-      "to3"
+      "b.clickhouse.v1.UserSettings\0229\n\006quotas\030\007" +
+      " \003(\0132).yandex.cloud.mdb.clickhouse.v1.Us" +
+      "erQuota\";\n\022UpdateUserMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"g\n\021DeleteUs" +
+      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\0220\n\tuser_name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r" +
+      "[a-zA-Z0-9_]*\";\n\022DeleteUserMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\260\001\n\032G" +
+      "rantUserPermissionRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_name\030\002 \001(\tB\035" +
+      "\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022>\n\npermiss" +
+      "ion\030\003 \001(\0132*.yandex.cloud.mdb.clickhouse." +
+      "v1.Permission\"D\n\033GrantUserPermissionMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 " +
+      "\001(\t\"\244\001\n\033RevokeUserPermissionRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\tuser_na" +
+      "me\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022" +
+      "1\n\rdatabase_name\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\"E\n\034RevokeUserPermissionMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(" +
+      "\t2\255\013\n\013UserService\022\243\001\n\003Get\022..yandex.cloud" +
+      ".mdb.clickhouse.v1.GetUserRequest\032$.yand" +
+      "ex.cloud.mdb.clickhouse.v1.User\"F\202\323\344\223\002@\022" +
+      ">/managed-clickhouse/v1/clusters/{cluste" +
+      "r_id}/users/{user_name}\022\247\001\n\004List\0220.yande" +
+      "x.cloud.mdb.clickhouse.v1.ListUsersReque" +
+      "st\0321.yandex.cloud.mdb.clickhouse.v1.List" +
+      "UsersResponse\":\202\323\344\223\0024\0222/managed-clickhou" +
+      "se/v1/clusters/{cluster_id}/users\022\273\001\n\006Cr" +
+      "eate\0221.yandex.cloud.mdb.clickhouse.v1.Cr" +
+      "eateUserRequest\032!.yandex.cloud.operation" +
+      ".Operation\"[\202\323\344\223\0027\"2/managed-clickhouse/" +
+      "v1/clusters/{cluster_id}/users:\001*\262\322*\032\n\022C" +
+      "reateUserMetadata\022\004User\022\307\001\n\006Update\0221.yan" +
+      "dex.cloud.mdb.clickhouse.v1.UpdateUserRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"g\202\323\344\223\002C2>/managed-clickhouse/v1/cluster" +
+      "s/{cluster_id}/users/{user_name}:\001*\262\322*\032\n" +
+      "\022UpdateUserMetadata\022\004User\022\325\001\n\006Delete\0221.y" +
+      "andex.cloud.mdb.clickhouse.v1.DeleteUser" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"u\202\323\344\223\002@*>/managed-clickhouse/v1/clust" +
+      "ers/{cluster_id}/users/{user_name}\262\322*+\n\022" +
+      "DeleteUserMetadata\022\025google.protobuf.Empt" +
+      "y\022\363\001\n\017GrantPermission\022:.yandex.cloud.mdb" +
+      ".clickhouse.v1.GrantUserPermissionReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\200\001\202" +
+      "\323\344\223\002S\"N/managed-clickhouse/v1/clusters/{" +
+      "cluster_id}/users/{user_name}:grantPermi" +
+      "ssion:\001*\262\322*#\n\033GrantUserPermissionMetadat" +
+      "a\022\004User\022\367\001\n\020RevokePermission\022;.yandex.cl" +
+      "oud.mdb.clickhouse.v1.RevokeUserPermissi" +
+      "onRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\202\001\202\323\344\223\002T\"O/managed-clickhouse/v1/cl" +
+      "usters/{cluster_id}/users/{user_name}:re" +
+      "vokePermission:\001*\262\322*$\n\034RevokeUserPermiss" +
+      "ionMetadata\022\004UserBs\n\"yandex.cloud.api.md" +
+      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/clickhouse" +
+      "/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12257,7 +12625,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "Settings", "Quotas", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateUserMetadata_fieldAccessorTable = new

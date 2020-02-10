@@ -149,6 +149,24 @@ public final class PHJ {
 
     /**
      * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
+
+    /**
+     * <pre>
      * Job status.
      * </pre>
      *
@@ -286,6 +304,7 @@ public final class PHJ {
       id_ = "";
       clusterId_ = "";
       name_ = "";
+      createdBy_ = "";
       status_ = 0;
     }
 
@@ -430,6 +449,12 @@ public final class PHJ {
                 jobSpec_ = subBuilder.buildPartial();
               }
               jobSpecCase_ = 11;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdBy_ = s;
               break;
             }
             default: {
@@ -905,6 +930,48 @@ public final class PHJ {
       }
     }
 
+    public static final int CREATED_BY_FIELD_NUMBER = 12;
+    private volatile java.lang.Object createdBy_;
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int STATUS_FIELD_NUMBER = 7;
     private int status_;
     /**
@@ -1129,6 +1196,9 @@ public final class PHJ {
       if (jobSpecCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_);
       }
+      if (!getCreatedByBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, createdBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1179,6 +1249,9 @@ public final class PHJ {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.dataproc.v1.PHJ.HiveJob) jobSpec_);
       }
+      if (!getCreatedByBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, createdBy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1216,6 +1289,8 @@ public final class PHJ {
       }
       result = result && getName()
           .equals(other.getName());
+      result = result && getCreatedBy()
+          .equals(other.getCreatedBy());
       result = result && status_ == other.status_;
       result = result && getJobSpecCase().equals(
           other.getJobSpecCase());
@@ -1269,6 +1344,8 @@ public final class PHJ {
       }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
       switch (jobSpecCase_) {
@@ -1452,6 +1529,8 @@ public final class PHJ {
         }
         name_ = "";
 
+        createdBy_ = "";
+
         status_ = 0;
 
         jobSpecCase_ = 0;
@@ -1500,6 +1579,7 @@ public final class PHJ {
           result.finishedAt_ = finishedAtBuilder_.build();
         }
         result.name_ = name_;
+        result.createdBy_ = createdBy_;
         result.status_ = status_;
         if (jobSpecCase_ == 8) {
           if (mapreduceJobBuilder_ == null) {
@@ -1597,6 +1677,10 @@ public final class PHJ {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
           onChanged();
         }
         if (other.status_ != 0) {
@@ -2389,6 +2473,95 @@ public final class PHJ {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder clearCreatedBy() {
+        
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdBy_ = value;
         onChanged();
         return this;
       }
@@ -12704,57 +12877,57 @@ public final class PHJ {
     java.lang.String[] descriptorData = {
       "\n\"yandex/cloud/dataproc/v1/job.proto\022\030ya" +
       "ndex.cloud.dataproc.v1\032\037google/protobuf/" +
-      "timestamp.proto\"\327\004\n\003Job\022\n\n\002id\030\001 \001(\t\022\022\n\nc" +
+      "timestamp.proto\"\353\004\n\003Job\022\n\n\002id\030\001 \001(\t\022\022\n\nc" +
       "luster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
       "ogle.protobuf.Timestamp\022.\n\nstarted_at\030\004 " +
       "\001(\0132\032.google.protobuf.Timestamp\022/\n\013finis" +
       "hed_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\014\n\004name\030\006 \001(\t\0224\n\006status\030\007 \001(\0162$.yandex." +
-      "cloud.dataproc.v1.Job.Status\022?\n\rmapreduc" +
-      "e_job\030\010 \001(\0132&.yandex.cloud.dataproc.v1.M" +
-      "apreduceJobH\000\0227\n\tspark_job\030\t \001(\0132\".yande" +
-      "x.cloud.dataproc.v1.SparkJobH\000\022;\n\013pyspar" +
-      "k_job\030\n \001(\0132$.yandex.cloud.dataproc.v1.P" +
-      "ysparkJobH\000\0225\n\010hive_job\030\013 \001(\0132!.yandex.c" +
-      "loud.dataproc.v1.HiveJobH\000\"a\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013" +
-      "\n\007PENDING\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004D" +
-      "ONE\020\005B\n\n\010job_spec\"\230\002\n\014MapreduceJob\022\014\n\004ar" +
-      "gs\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_" +
-      "uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022J\n\nprop" +
-      "erties\030\005 \003(\01326.yandex.cloud.dataproc.v1." +
-      "MapreduceJob.PropertiesEntry\022\033\n\021main_jar" +
-      "_file_uri\030\006 \001(\tH\000\022\024\n\nmain_class\030\007 \001(\tH\000\032" +
-      "1\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001B\010\n\006driver\"\202\002\n\010SparkJob\022\014\n\004arg" +
-      "s\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfile_u" +
-      "ris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022F\n\nprope" +
-      "rties\030\005 \003(\01322.yandex.cloud.dataproc.v1.S" +
-      "parkJob.PropertiesEntry\022\031\n\021main_jar_file" +
-      "_uri\030\006 \001(\t\022\022\n\nmain_class\030\007 \001(\t\0321\n\017Proper" +
-      "tiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\217\002\n\nPysparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_fi" +
-      "le_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014arch" +
-      "ive_uris\030\004 \003(\t\022H\n\nproperties\030\005 \003(\01324.yan" +
-      "dex.cloud.dataproc.v1.PysparkJob.Propert" +
-      "iesEntry\022\034\n\024main_python_file_uri\030\006 \001(\t\022\030" +
-      "\n\020python_file_uris\030\007 \003(\t\0321\n\017PropertiesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\034\n\tQ" +
-      "ueryList\022\017\n\007queries\030\001 \003(\t\"\244\003\n\007HiveJob\022E\n" +
-      "\nproperties\030\001 \003(\01321.yandex.cloud.datapro" +
-      "c.v1.HiveJob.PropertiesEntry\022\033\n\023continue" +
-      "_on_failure\030\002 \001(\010\022P\n\020script_variables\030\003 " +
-      "\003(\01326.yandex.cloud.dataproc.v1.HiveJob.S" +
-      "criptVariablesEntry\022\025\n\rjar_file_uris\030\004 \003" +
-      "(\t\022\030\n\016query_file_uri\030\005 \001(\tH\000\0229\n\nquery_li" +
-      "st\030\006 \001(\0132#.yandex.cloud.dataproc.v1.Quer" +
-      "yListH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024ScriptVariablesEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\nqu" +
-      "ery_typeBj\n\034yandex.cloud.api.dataproc.v1" +
-      "B\003PHJZEgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/dataproc/v1;dataprocb\006pr" +
-      "oto3"
+      "\022\014\n\004name\030\006 \001(\t\022\022\n\ncreated_by\030\014 \001(\t\0224\n\006st" +
+      "atus\030\007 \001(\0162$.yandex.cloud.dataproc.v1.Jo" +
+      "b.Status\022?\n\rmapreduce_job\030\010 \001(\0132&.yandex" +
+      ".cloud.dataproc.v1.MapreduceJobH\000\0227\n\tspa" +
+      "rk_job\030\t \001(\0132\".yandex.cloud.dataproc.v1." +
+      "SparkJobH\000\022;\n\013pyspark_job\030\n \001(\0132$.yandex" +
+      ".cloud.dataproc.v1.PysparkJobH\000\0225\n\010hive_" +
+      "job\030\013 \001(\0132!.yandex.cloud.dataproc.v1.Hiv" +
+      "eJobH\000\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
+      "\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDING\020\002\022\013\n\007RUNNI" +
+      "NG\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005B\n\n\010job_spec\"\230\002" +
+      "\n\014MapreduceJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file" +
+      "_uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archiv" +
+      "e_uris\030\004 \003(\t\022J\n\nproperties\030\005 \003(\01326.yande" +
+      "x.cloud.dataproc.v1.MapreduceJob.Propert" +
+      "iesEntry\022\033\n\021main_jar_file_uri\030\006 \001(\tH\000\022\024\n" +
+      "\nmain_class\030\007 \001(\tH\000\0321\n\017PropertiesEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006driver" +
+      "\"\202\002\n\010SparkJob\022\014\n\004args\030\001 \003(\t\022\025\n\rjar_file_" +
+      "uris\030\002 \003(\t\022\021\n\tfile_uris\030\003 \003(\t\022\024\n\014archive" +
+      "_uris\030\004 \003(\t\022F\n\nproperties\030\005 \003(\01322.yandex" +
+      ".cloud.dataproc.v1.SparkJob.PropertiesEn" +
+      "try\022\031\n\021main_jar_file_uri\030\006 \001(\t\022\022\n\nmain_c" +
+      "lass\030\007 \001(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\217\002\n\nPysparkJob\022\014\n\004" +
+      "args\030\001 \003(\t\022\025\n\rjar_file_uris\030\002 \003(\t\022\021\n\tfil" +
+      "e_uris\030\003 \003(\t\022\024\n\014archive_uris\030\004 \003(\t\022H\n\npr" +
+      "operties\030\005 \003(\01324.yandex.cloud.dataproc.v" +
+      "1.PysparkJob.PropertiesEntry\022\034\n\024main_pyt" +
+      "hon_file_uri\030\006 \001(\t\022\030\n\020python_file_uris\030\007" +
+      " \003(\t\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"\034\n\tQueryList\022\017\n\007queries\030" +
+      "\001 \003(\t\"\244\003\n\007HiveJob\022E\n\nproperties\030\001 \003(\01321." +
+      "yandex.cloud.dataproc.v1.HiveJob.Propert" +
+      "iesEntry\022\033\n\023continue_on_failure\030\002 \001(\010\022P\n" +
+      "\020script_variables\030\003 \003(\01326.yandex.cloud.d" +
+      "ataproc.v1.HiveJob.ScriptVariablesEntry\022" +
+      "\025\n\rjar_file_uris\030\004 \003(\t\022\030\n\016query_file_uri" +
+      "\030\005 \001(\tH\000\0229\n\nquery_list\030\006 \001(\0132#.yandex.cl" +
+      "oud.dataproc.v1.QueryListH\000\0321\n\017Propertie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326" +
+      "\n\024ScriptVariablesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\014\n\nquery_typeBj\n\034yandex.c" +
+      "loud.api.dataproc.v1B\003PHJZEgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/data" +
+      "proc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12774,7 +12947,7 @@ public final class PHJ {
     internal_static_yandex_cloud_dataproc_v1_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Job_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "JobSpec", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Name", "CreatedBy", "Status", "MapreduceJob", "SparkJob", "PysparkJob", "HiveJob", "JobSpec", });
     internal_static_yandex_cloud_dataproc_v1_MapreduceJob_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_dataproc_v1_MapreduceJob_fieldAccessorTable = new
