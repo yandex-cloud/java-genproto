@@ -6522,6 +6522,19 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.ByteString
         getNodeServiceAccountIdBytes();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    boolean hasNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.UpdateClusterRequest.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -6641,6 +6654,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountId_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder subBuilder = null;
+              if (networkPolicy_ != null) {
+                subBuilder = networkPolicy_.toBuilder();
+              }
+              networkPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(networkPolicy_);
+                networkPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7125,6 +7151,27 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int NETWORK_POLICY_FIELD_NUMBER = 10;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    public boolean hasNetworkPolicy() {
+      return networkPolicy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+      return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+      return getNetworkPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7168,6 +7215,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getServiceAccountIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, serviceAccountId_);
+      }
+      if (networkPolicy_ != null) {
+        output.writeMessage(10, getNetworkPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -7214,6 +7264,10 @@ public final class ClusterServiceOuterClass {
       if (!getServiceAccountIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, serviceAccountId_);
       }
+      if (networkPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getNetworkPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7252,6 +7306,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getServiceAccountId());
       result = result && getNodeServiceAccountId()
           .equals(other.getNodeServiceAccountId());
+      result = result && (hasNetworkPolicy() == other.hasNetworkPolicy());
+      if (hasNetworkPolicy()) {
+        result = result && getNetworkPolicy()
+            .equals(other.getNetworkPolicy());
+      }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
       if (!result) return false;
@@ -7296,6 +7355,10 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + NODE_SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNodeServiceAccountId().hashCode();
+      if (hasNetworkPolicy()) {
+        hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
       switch (internetGatewayCase_) {
         case 6:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
@@ -7482,6 +7545,12 @@ public final class ClusterServiceOuterClass {
 
         nodeServiceAccountId_ = "";
 
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -7532,6 +7601,11 @@ public final class ClusterServiceOuterClass {
         }
         result.serviceAccountId_ = serviceAccountId_;
         result.nodeServiceAccountId_ = nodeServiceAccountId_;
+        if (networkPolicyBuilder_ == null) {
+          result.networkPolicy_ = networkPolicy_;
+        } else {
+          result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
@@ -7609,6 +7683,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getNodeServiceAccountId().isEmpty()) {
           nodeServiceAccountId_ = other.nodeServiceAccountId_;
           onChanged();
+        }
+        if (other.hasNetworkPolicy()) {
+          mergeNetworkPolicy(other.getNetworkPolicy());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -8606,6 +8683,123 @@ public final class ClusterServiceOuterClass {
         nodeServiceAccountId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> networkPolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public boolean hasNetworkPolicy() {
+        return networkPolicyBuilder_ != null || networkPolicy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        } else {
+          return networkPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public Builder setNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          networkPolicy_ = value;
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public Builder setNetworkPolicy(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder builderForValue) {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public Builder mergeNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (networkPolicy_ != null) {
+            networkPolicy_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.newBuilder(networkPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            networkPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          networkPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public Builder clearNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+          onChanged();
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder getNetworkPolicyBuilder() {
+        
+        onChanged();
+        return getNetworkPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+        if (networkPolicyBuilder_ != null) {
+          return networkPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return networkPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> 
+          getNetworkPolicyFieldBuilder() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder>(
+                  getNetworkPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          networkPolicy_ = null;
+        }
+        return networkPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10298,6 +10492,19 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    boolean hasNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -10431,6 +10638,19 @@ public final class ClusterServiceOuterClass {
               int rawValue = input.readEnum();
 
               releaseChannel_ = rawValue;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder subBuilder = null;
+              if (networkPolicy_ != null) {
+                subBuilder = networkPolicy_.toBuilder();
+              }
+              networkPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(networkPolicy_);
+                networkPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -11000,6 +11220,27 @@ public final class ClusterServiceOuterClass {
       return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
     }
 
+    public static final int NETWORK_POLICY_FIELD_NUMBER = 12;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    public boolean hasNetworkPolicy() {
+      return networkPolicy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+      return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+      return getNetworkPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11049,6 +11290,9 @@ public final class ClusterServiceOuterClass {
       }
       if (releaseChannel_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.RELEASE_CHANNEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(11, releaseChannel_);
+      }
+      if (networkPolicy_ != null) {
+        output.writeMessage(12, getNetworkPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -11102,6 +11346,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, releaseChannel_);
       }
+      if (networkPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getNetworkPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11143,6 +11391,11 @@ public final class ClusterServiceOuterClass {
       result = result && getNodeServiceAccountId()
           .equals(other.getNodeServiceAccountId());
       result = result && releaseChannel_ == other.releaseChannel_;
+      result = result && (hasNetworkPolicy() == other.hasNetworkPolicy());
+      if (hasNetworkPolicy()) {
+        result = result && getNetworkPolicy()
+            .equals(other.getNetworkPolicy());
+      }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
       if (!result) return false;
@@ -11191,6 +11444,10 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getNodeServiceAccountId().hashCode();
       hash = (37 * hash) + RELEASE_CHANNEL_FIELD_NUMBER;
       hash = (53 * hash) + releaseChannel_;
+      if (hasNetworkPolicy()) {
+        hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
       switch (internetGatewayCase_) {
         case 8:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
@@ -11381,6 +11638,12 @@ public final class ClusterServiceOuterClass {
 
         releaseChannel_ = 0;
 
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -11433,6 +11696,11 @@ public final class ClusterServiceOuterClass {
         result.serviceAccountId_ = serviceAccountId_;
         result.nodeServiceAccountId_ = nodeServiceAccountId_;
         result.releaseChannel_ = releaseChannel_;
+        if (networkPolicyBuilder_ == null) {
+          result.networkPolicy_ = networkPolicy_;
+        } else {
+          result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
@@ -11517,6 +11785,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.releaseChannel_ != 0) {
           setReleaseChannelValue(other.getReleaseChannelValue());
+        }
+        if (other.hasNetworkPolicy()) {
+          mergeNetworkPolicy(other.getNetworkPolicy());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -12728,6 +12999,123 @@ public final class ClusterServiceOuterClass {
         releaseChannel_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> networkPolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public boolean hasNetworkPolicy() {
+        return networkPolicyBuilder_ != null || networkPolicy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        } else {
+          return networkPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public Builder setNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          networkPolicy_ = value;
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public Builder setNetworkPolicy(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder builderForValue) {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public Builder mergeNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (networkPolicy_ != null) {
+            networkPolicy_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.newBuilder(networkPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            networkPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          networkPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public Builder clearNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+          onChanged();
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder getNetworkPolicyBuilder() {
+        
+        onChanged();
+        return getNetworkPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+        if (networkPolicyBuilder_ != null) {
+          return networkPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return networkPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> 
+          getNetworkPolicyFieldBuilder() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder>(
+                  getNetworkPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          networkPolicy_ = null;
+        }
+        return networkPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23840,7 +24228,7 @@ public final class ClusterServiceOuterClass {
       "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/" +
       "\n\023StartClusterRequest\022\030\n\ncluster_id\030\001 \001(" +
       "\tB\004\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"\241\004\n\024UpdateClusterRequest\022\030\n\n" +
+      "er_id\030\001 \001(\t\"\335\004\n\024UpdateClusterRequest\022\030\n\n" +
       "cluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 " +
       "\001(\0132\032.google.protobuf.FieldMask\022/\n\004name\030" +
       "\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]" +
@@ -23852,28 +24240,31 @@ public final class ClusterServiceOuterClass {
       "\010\212\3101\004<=15H\000\022:\n\013master_spec\030\007 \001(\0132%.yande" +
       "x.cloud.k8s.v1.MasterUpdateSpec\022\032\n\022servi" +
       "ce_account_id\030\t \001(\t\022\037\n\027node_service_acco" +
-      "unt_id\030\010 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"" +
-      "\225\001\n\020MasterUpdateSpec\0227\n\007version\030\001 \001(\0132&." +
-      "yandex.cloud.k8s.v1.UpdateVersionSpec\022H\n" +
-      "\022maintenance_policy\030\002 \001(\0132,.yandex.cloud" +
-      ".k8s.v1.MasterMaintenancePolicy\"+\n\025Updat" +
-      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\220\005\n" +
-      "\024CreateClusterRequest\022\027\n\tfolder_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9" +
-      "]{1,61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\310" +
-      "1\005<=256\022\206\001\n\006labels\030\004 \003(\01325.yandex.cloud." +
-      "k8s.v1.CreateClusterRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\030\n\nnetwork_id\030\005" +
-      " \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037.yandex" +
-      ".cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024ip_all" +
-      "ocation_policy\030\007 \001(\0132\'.yandex.cloud.k8s." +
-      "v1.IPAllocationPolicy\022\036\n\024gateway_ipv4_ad" +
-      "dress\030\010 \001(\tH\000\022 \n\022service_account_id\030\t \001(" +
-      "\tB\004\350\3071\001\022%\n\027node_service_account_id\030\n \001(\t" +
-      "B\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162#.yandex" +
-      ".cloud.k8s.v1.ReleaseChannel\032-\n\013LabelsEn" +
+      "unt_id\030\010 \001(\t\022:\n\016network_policy\030\n \001(\0132\".y" +
+      "andex.cloud.k8s.v1.NetworkPolicy\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
+      "\022\n\020internet_gateway\"\225\001\n\020MasterUpdateSpec" +
+      "\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k8s.v1." +
+      "UpdateVersionSpec\022H\n\022maintenance_policy\030" +
+      "\002 \001(\0132,.yandex.cloud.k8s.v1.MasterMainte" +
+      "nancePolicy\"+\n\025UpdateClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"\314\005\n\024CreateClusterReques" +
+      "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001(\t" +
+      "B!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013d" +
+      "escription\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004" +
+      " \003(\01325.yandex.cloud.k8s.v1.CreateCluster" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master" +
+      "_spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.Master" +
+      "SpecB\004\350\3071\001\022E\n\024ip_allocation_policy\030\007 \001(\013" +
+      "2\'.yandex.cloud.k8s.v1.IPAllocationPolic" +
+      "y\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 \n\022ser" +
+      "vice_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_serv" +
+      "ice_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_ch" +
+      "annel\030\013 \001(\0162#.yandex.cloud.k8s.v1.Releas" +
+      "eChannel\022:\n\016network_policy\030\014 \001(\0132\".yande" +
+      "x.cloud.k8s.v1.NetworkPolicy\032-\n\013LabelsEn" +
       "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020i" +
       "nternet_gateway\"+\n\025CreateClusterMetadata" +
       "\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMaste" +
@@ -24030,7 +24421,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "InternetGateway", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "GatewayIpv4Address", "MasterSpec", "ServiceAccountId", "NodeServiceAccountId", "NetworkPolicy", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -24054,7 +24445,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "InternetGateway", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new

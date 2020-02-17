@@ -450,6 +450,19 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    boolean hasNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -621,6 +634,19 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               releaseChannel_ = rawValue;
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder subBuilder = null;
+              if (networkPolicy_ != null) {
+                subBuilder = networkPolicy_.toBuilder();
+              }
+              networkPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(networkPolicy_);
+                networkPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1638,6 +1664,27 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
     }
 
+    public static final int NETWORK_POLICY_FIELD_NUMBER = 16;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    public boolean hasNetworkPolicy() {
+      return networkPolicy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+      return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+      return getNetworkPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1699,6 +1746,9 @@ public final class ClusterOuterClass {
       }
       if (releaseChannel_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.RELEASE_CHANNEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(15, releaseChannel_);
+      }
+      if (networkPolicy_ != null) {
+        output.writeMessage(16, getNetworkPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -1767,6 +1817,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(15, releaseChannel_);
       }
+      if (networkPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getNetworkPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1817,6 +1871,11 @@ public final class ClusterOuterClass {
       result = result && getNodeServiceAccountId()
           .equals(other.getNodeServiceAccountId());
       result = result && releaseChannel_ == other.releaseChannel_;
+      result = result && (hasNetworkPolicy() == other.hasNetworkPolicy());
+      if (hasNetworkPolicy()) {
+        result = result && getNetworkPolicy()
+            .equals(other.getNetworkPolicy());
+      }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
       if (!result) return false;
@@ -1875,6 +1934,10 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getNodeServiceAccountId().hashCode();
       hash = (37 * hash) + RELEASE_CHANNEL_FIELD_NUMBER;
       hash = (53 * hash) + releaseChannel_;
+      if (hasNetworkPolicy()) {
+        hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
       switch (internetGatewayCase_) {
         case 12:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
@@ -2081,6 +2144,12 @@ public final class ClusterOuterClass {
 
         releaseChannel_ = 0;
 
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -2141,6 +2210,11 @@ public final class ClusterOuterClass {
         result.serviceAccountId_ = serviceAccountId_;
         result.nodeServiceAccountId_ = nodeServiceAccountId_;
         result.releaseChannel_ = releaseChannel_;
+        if (networkPolicyBuilder_ == null) {
+          result.networkPolicy_ = networkPolicy_;
+        } else {
+          result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
@@ -2238,6 +2312,9 @@ public final class ClusterOuterClass {
         }
         if (other.releaseChannel_ != 0) {
           setReleaseChannelValue(other.getReleaseChannelValue());
+        }
+        if (other.hasNetworkPolicy()) {
+          mergeNetworkPolicy(other.getNetworkPolicy());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -3801,6 +3878,123 @@ public final class ClusterOuterClass {
         releaseChannel_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy networkPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> networkPolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public boolean hasNetworkPolicy() {
+        return networkPolicyBuilder_ != null || networkPolicy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          return networkPolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        } else {
+          return networkPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public Builder setNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          networkPolicy_ = value;
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public Builder setNetworkPolicy(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder builderForValue) {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          networkPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public Builder mergeNetworkPolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy value) {
+        if (networkPolicyBuilder_ == null) {
+          if (networkPolicy_ != null) {
+            networkPolicy_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.newBuilder(networkPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            networkPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          networkPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public Builder clearNetworkPolicy() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicy_ = null;
+          onChanged();
+        } else {
+          networkPolicy_ = null;
+          networkPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder getNetworkPolicyBuilder() {
+        
+        onChanged();
+        return getNetworkPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder() {
+        if (networkPolicyBuilder_ != null) {
+          return networkPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return networkPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance() : networkPolicy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy network_policy = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder> 
+          getNetworkPolicyFieldBuilder() {
+        if (networkPolicyBuilder_ == null) {
+          networkPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder>(
+                  getNetworkPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          networkPolicy_ = null;
+        }
+        return networkPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10642,6 +10836,611 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface NetworkPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.NetworkPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+     */
+    int getProviderValue();
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider getProvider();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.NetworkPolicy}
+   */
+  public  static final class NetworkPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.NetworkPolicy)
+      NetworkPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NetworkPolicy.newBuilder() to construct.
+    private NetworkPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NetworkPolicy() {
+      provider_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NetworkPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              provider_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.k8s.v1.NetworkPolicy.Provider}
+     */
+    public enum Provider
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PROVIDER_UNSPECIFIED = 0;</code>
+       */
+      PROVIDER_UNSPECIFIED(0),
+      /**
+       * <code>CALICO = 1;</code>
+       */
+      CALICO(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>PROVIDER_UNSPECIFIED = 0;</code>
+       */
+      public static final int PROVIDER_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>CALICO = 1;</code>
+       */
+      public static final int CALICO_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Provider valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Provider forNumber(int value) {
+        switch (value) {
+          case 0: return PROVIDER_UNSPECIFIED;
+          case 1: return CALICO;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Provider>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Provider> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Provider>() {
+              public Provider findValueByNumber(int number) {
+                return Provider.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Provider[] VALUES = values();
+
+      public static Provider valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Provider(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.k8s.v1.NetworkPolicy.Provider)
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 1;
+    private int provider_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+     */
+    public int getProviderValue() {
+      return provider_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider getProvider() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider result = yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.valueOf(provider_);
+      return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (provider_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.PROVIDER_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, provider_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (provider_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.PROVIDER_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, provider_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy) obj;
+
+      boolean result = true;
+      result = result && provider_ == other.provider_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + provider_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.NetworkPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.NetworkPolicy)
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        provider_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy build() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy(this);
+        result.provider_ = provider_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.getDefaultInstance()) return this;
+        if (other.provider_ != 0) {
+          setProviderValue(other.getProviderValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int provider_ = 0;
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+       */
+      public int getProviderValue() {
+        return provider_;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+       */
+      public Builder setProviderValue(int value) {
+        provider_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider getProvider() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider result = yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.valueOf(provider_);
+        return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+       */
+      public Builder setProvider(yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy.Provider value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        provider_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.NetworkPolicy.Provider provider = 1;</code>
+       */
+      public Builder clearProvider() {
+        
+        provider_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.NetworkPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.NetworkPolicy)
+    private static final yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NetworkPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<NetworkPolicy>() {
+      @java.lang.Override
+      public NetworkPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NetworkPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NetworkPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NetworkPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_Cluster_descriptor;
   private static final 
@@ -10687,6 +11486,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10700,7 +11504,7 @@ public final class ClusterOuterClass {
       "dex.cloud.k8s.v1\032\037google/protobuf/timest" +
       "amp.proto\032%yandex/cloud/k8s/v1/maintenan" +
       "ce.proto\032!yandex/cloud/k8s/v1/version.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\327\006\n\007C" +
+      "oto\032\035yandex/cloud/validation.proto\"\223\007\n\007C" +
       "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
       "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
@@ -10715,41 +11519,46 @@ public final class ClusterOuterClass {
       "ress\030\014 \001(\tB\010\212\3101\004<=15H\000\022\032\n\022service_accoun" +
       "t_id\030\r \001(\t\022\037\n\027node_service_account_id\030\016 " +
       "\001(\t\022<\n\017release_channel\030\017 \001(\0162#.yandex.cl" +
-      "oud.k8s.v1.ReleaseChannel\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Sta" +
-      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISION" +
-      "ING\020\001\022\013\n\007RUNNING\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010S" +
-      "TOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010" +
-      "STARTING\020\007\"<\n\006Health\022\026\n\022HEALTH_UNSPECIFI" +
-      "ED\020\000\022\013\n\007HEALTHY\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020inte" +
-      "rnet_gateway\"\223\003\n\006Master\0228\n\014zonal_master\030" +
-      "\001 \001(\0132 .yandex.cloud.k8s.v1.ZonalMasterH" +
-      "\000\022>\n\017regional_master\030\007 \001(\0132#.yandex.clou" +
-      "d.k8s.v1.RegionalMasterH\000\022\017\n\007version\030\002 \001" +
-      "(\t\0227\n\tendpoints\030\003 \001(\0132$.yandex.cloud.k8s" +
-      ".v1.MasterEndpoints\0224\n\013master_auth\030\004 \001(\013" +
-      "2\037.yandex.cloud.k8s.v1.MasterAuth\0226\n\014ver" +
-      "sion_info\030\005 \001(\0132 .yandex.cloud.k8s.v1.Ve" +
-      "rsionInfo\022H\n\022maintenance_policy\030\006 \001(\0132,." +
-      "yandex.cloud.k8s.v1.MasterMaintenancePol" +
-      "icyB\r\n\013master_type\",\n\nMasterAuth\022\036\n\026clus" +
-      "ter_ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022" +
-      "\017\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_address\030" +
-      "\002 \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Re" +
-      "gionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023inter" +
-      "nal_v4_address\030\002 \001(\t\022\033\n\023external_v4_addr" +
-      "ess\030\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024internal" +
-      "_v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoi" +
-      "nt\030\002 \001(\t\"V\n\022IPAllocationPolicy\022\037\n\027cluste" +
-      "r_ipv4_cidr_block\030\001 \001(\t\022\037\n\027service_ipv4_" +
-      "cidr_block\030\002 \001(\t\"s\n\027MasterMaintenancePol" +
-      "icy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenance" +
-      "_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Main" +
-      "tenanceWindow*U\n\016ReleaseChannel\022\037\n\033RELEA" +
-      "SE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007R" +
-      "EGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.cloud.api" +
-      ".k8s.v1Z;github.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "oud.k8s.v1.ReleaseChannel\022:\n\016network_pol" +
+      "icy\030\020 \001(\0132\".yandex.cloud.k8s.v1.NetworkP" +
+      "olicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPEC" +
+      "IFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017" +
+      "\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED" +
+      "\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006Health" +
+      "\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\r\n" +
+      "\tUNHEALTHY\020\002B\022\n\020internet_gateway\"\223\003\n\006Mas" +
+      "ter\0228\n\014zonal_master\030\001 \001(\0132 .yandex.cloud" +
+      ".k8s.v1.ZonalMasterH\000\022>\n\017regional_master" +
+      "\030\007 \001(\0132#.yandex.cloud.k8s.v1.RegionalMas" +
+      "terH\000\022\017\n\007version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(" +
+      "\0132$.yandex.cloud.k8s.v1.MasterEndpoints\022" +
+      "4\n\013master_auth\030\004 \001(\0132\037.yandex.cloud.k8s." +
+      "v1.MasterAuth\0226\n\014version_info\030\005 \001(\0132 .ya" +
+      "ndex.cloud.k8s.v1.VersionInfo\022H\n\022mainten" +
+      "ance_policy\030\006 \001(\0132,.yandex.cloud.k8s.v1." +
+      "MasterMaintenancePolicyB\r\n\013master_type\"," +
+      "\n\nMasterAuth\022\036\n\026cluster_ca_certificate\030\001" +
+      " \001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023" +
+      "internal_v4_address\030\002 \001(\t\022\033\n\023external_v4" +
+      "_address\030\003 \001(\t\"]\n\016RegionalMaster\022\021\n\tregi" +
+      "on_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t" +
+      "\022\033\n\023external_v4_address\030\003 \001(\t\"M\n\017MasterE" +
+      "ndpoints\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034" +
+      "\n\024external_v4_endpoint\030\002 \001(\t\"V\n\022IPAlloca" +
+      "tionPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001 " +
+      "\001(\t\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\"s\n\027" +
+      "MasterMaintenancePolicy\022\024\n\014auto_upgrade\030" +
+      "\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\0132&.yand" +
+      "ex.cloud.k8s.v1.MaintenanceWindow\"\200\001\n\rNe" +
+      "tworkPolicy\022=\n\010provider\030\001 \001(\0162+.yandex.c" +
+      "loud.k8s.v1.NetworkPolicy.Provider\"0\n\010Pr" +
+      "ovider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALI" +
+      "CO\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNE" +
+      "L_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022" +
+      "\n\n\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10772,7 +11581,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "InternetGateway", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -10821,6 +11630,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor,
         new java.lang.String[] { "AutoUpgrade", "MaintenanceWindow", });
+    internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor,
+        new java.lang.String[] { "Provider", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

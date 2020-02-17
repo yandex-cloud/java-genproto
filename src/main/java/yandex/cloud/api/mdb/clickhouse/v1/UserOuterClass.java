@@ -7659,18 +7659,34 @@ public final class UserOuterClass {
        */
       DISTRIBUTED_PRODUCT_MODE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Default value. Prohibits using these types of subqueries (returns the "Double-distributed in/JOIN subqueries is denied" exception).
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_DENY = 1;</code>
        */
       DISTRIBUTED_PRODUCT_MODE_DENY(1),
       /**
+       * <pre>
+       *Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_LOCAL = 2;</code>
        */
       DISTRIBUTED_PRODUCT_MODE_LOCAL(2),
       /**
+       * <pre>
+       *Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_GLOBAL = 3;</code>
        */
       DISTRIBUTED_PRODUCT_MODE_GLOBAL(3),
       /**
+       * <pre>
+       *Allows the use of these types of subqueries.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_ALLOW = 4;</code>
        */
       DISTRIBUTED_PRODUCT_MODE_ALLOW(4),
@@ -7682,18 +7698,34 @@ public final class UserOuterClass {
        */
       public static final int DISTRIBUTED_PRODUCT_MODE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Default value. Prohibits using these types of subqueries (returns the "Double-distributed in/JOIN subqueries is denied" exception).
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_DENY = 1;</code>
        */
       public static final int DISTRIBUTED_PRODUCT_MODE_DENY_VALUE = 1;
       /**
+       * <pre>
+       *Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_LOCAL = 2;</code>
        */
       public static final int DISTRIBUTED_PRODUCT_MODE_LOCAL_VALUE = 2;
       /**
+       * <pre>
+       *Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_GLOBAL = 3;</code>
        */
       public static final int DISTRIBUTED_PRODUCT_MODE_GLOBAL_VALUE = 3;
       /**
+       * <pre>
+       *Allows the use of these types of subqueries.
+       * </pre>
+       *
        * <code>DISTRIBUTED_PRODUCT_MODE_ALLOW = 4;</code>
        */
       public static final int DISTRIBUTED_PRODUCT_MODE_ALLOW_VALUE = 4;

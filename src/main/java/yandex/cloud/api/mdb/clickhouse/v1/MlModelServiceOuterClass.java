@@ -19,20 +19,38 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the model to return.
+     * To get a model name make a [MlModelService.List] request.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the model to return.
+     * To get a model name make a [MlModelService.List] request.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     com.google.protobuf.ByteString
@@ -126,6 +144,10 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
@@ -141,6 +163,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -160,6 +186,11 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the model to return.
+     * To get a model name make a [MlModelService.List] request.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public java.lang.String getMlModelName() {
@@ -175,6 +206,11 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the model to return.
+     * To get a model name make a [MlModelService.List] request.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public com.google.protobuf.ByteString
@@ -513,6 +549,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
@@ -528,6 +568,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -544,6 +588,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
@@ -557,6 +605,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
@@ -566,6 +618,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
@@ -582,6 +638,11 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the model to return.
+       * To get a model name make a [MlModelService.List] request.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public java.lang.String getMlModelName() {
@@ -597,6 +658,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the model to return.
+       * To get a model name make a [MlModelService.List] request.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public com.google.protobuf.ByteString
@@ -613,6 +679,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the model to return.
+       * To get a model name make a [MlModelService.List] request.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelName(
@@ -626,6 +697,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the model to return.
+       * To get a model name make a [MlModelService.List] request.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder clearMlModelName() {
@@ -635,6 +711,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the model to return.
+       * To get a model name make a [MlModelService.List] request.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelNameBytes(
@@ -706,25 +787,50 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster that models belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster that models belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListMlModelsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -824,6 +930,10 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster that models belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
@@ -839,6 +949,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster that models belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -858,6 +972,13 @@ public final class MlModelServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListMlModelsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
@@ -867,6 +988,11 @@ public final class MlModelServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -882,6 +1008,11 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1238,6 +1369,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster that models belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
@@ -1253,6 +1388,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that models belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1269,6 +1408,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that models belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
@@ -1282,6 +1425,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that models belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
@@ -1291,6 +1438,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that models belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
@@ -1307,12 +1458,26 @@ public final class MlModelServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListMlModelsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListMlModelsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1322,6 +1487,13 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListMlModelsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1333,6 +1505,11 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1348,6 +1525,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1546,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1377,6 +1564,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1386,6 +1578,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListMlModelsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1457,34 +1654,68 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> 
         getMlModelsList();
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel getMlModels(int index);
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     int getMlModelsCount();
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder> 
         getMlModelsOrBuilderList();
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder getMlModelsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+     * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+     * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1816,20 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODELS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> mlModels_;
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> getMlModelsList() {
       return mlModels_;
     }
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder> 
@@ -1598,18 +1837,30 @@ public final class MlModelServiceOuterClass {
       return mlModels_;
     }
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     public int getMlModelsCount() {
       return mlModels_.size();
     }
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel getMlModels(int index) {
       return mlModels_.get(index);
     }
     /**
+     * <pre>
+     * List of models in the specified cluster.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder getMlModelsOrBuilder(
@@ -1620,6 +1871,13 @@ public final class MlModelServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+     * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1893,13 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+     * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2291,10 @@ public final class MlModelServiceOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder> mlModelsBuilder_;
 
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> getMlModelsList() {
@@ -2036,6 +2305,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public int getMlModelsCount() {
@@ -2046,6 +2319,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel getMlModels(int index) {
@@ -2056,6 +2333,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder setMlModels(
@@ -2073,6 +2354,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder setMlModels(
@@ -2087,6 +2372,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder addMlModels(yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel value) {
@@ -2103,6 +2392,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder addMlModels(
@@ -2120,6 +2413,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder addMlModels(
@@ -2134,6 +2431,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder addMlModels(
@@ -2148,6 +2449,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder addAllMlModels(
@@ -2163,6 +2468,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder clearMlModels() {
@@ -2176,6 +2485,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public Builder removeMlModels(int index) {
@@ -2189,6 +2502,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder getMlModelsBuilder(
@@ -2196,6 +2513,10 @@ public final class MlModelServiceOuterClass {
         return getMlModelsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder getMlModelsOrBuilder(
@@ -2206,6 +2527,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelOrBuilder> 
@@ -2217,6 +2542,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder addMlModelsBuilder() {
@@ -2224,6 +2553,10 @@ public final class MlModelServiceOuterClass {
             yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder addMlModelsBuilder(
@@ -2232,6 +2565,10 @@ public final class MlModelServiceOuterClass {
             index, yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of models in the specified cluster.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.MlModel ml_models = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel.Builder> 
@@ -2255,6 +2592,13 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+       * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2614,13 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+       * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2637,13 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+       * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2657,13 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+       * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2673,13 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListMlModelsRequest.page_size], use `next_page_token` as the value
+       * for the [ListMlModelsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,39 +2751,73 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster to create a model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster to create a model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     com.google.protobuf.ByteString
         getMlModelNameBytes();
 
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType();
 
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -2519,6 +2925,11 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster to create a model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
@@ -2534,6 +2945,11 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster to create a model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2553,6 +2969,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public java.lang.String getMlModelName() {
@@ -2568,6 +2988,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2587,12 +3011,20 @@ public final class MlModelServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private int type_;
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
@@ -2604,6 +3036,10 @@ public final class MlModelServiceOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getUri() {
@@ -2619,6 +3055,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2990,6 +3430,11 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster to create a model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
@@ -3005,6 +3450,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to create a model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3021,6 +3471,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to create a model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
@@ -3034,6 +3489,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to create a model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
@@ -3043,6 +3503,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to create a model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
@@ -3059,6 +3524,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public java.lang.String getMlModelName() {
@@ -3074,6 +3543,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3090,6 +3563,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelName(
@@ -3103,6 +3580,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder clearMlModelName() {
@@ -3112,6 +3593,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model name. The model name is one of the arguments of the modelEvaluate() function, which is used to call the model in ClickHouse.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelNameBytes(
@@ -3128,12 +3613,20 @@ public final class MlModelServiceOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTypeValue(int value) {
@@ -3142,6 +3635,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
@@ -3150,6 +3647,10 @@ public final class MlModelServiceOuterClass {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType value) {
@@ -3162,6 +3663,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearType() {
@@ -3173,6 +3678,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getUri() {
@@ -3188,6 +3697,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -3204,6 +3717,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUri(
@@ -3217,6 +3734,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUri() {
@@ -3226,6 +3747,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUriBytes(
@@ -3297,20 +3822,36 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster that a model is being added to.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster that a model is being added to.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the the model that is being created.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the the model that is being created.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -3404,6 +3945,10 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster that a model is being added to.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public java.lang.String getClusterId() {
@@ -3419,6 +3964,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster that a model is being added to.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -3438,6 +3987,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the the model that is being created.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public java.lang.String getMlModelName() {
@@ -3453,6 +4006,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model that is being created.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -3791,6 +4348,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster that a model is being added to.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public java.lang.String getClusterId() {
@@ -3806,6 +4367,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that a model is being added to.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3822,6 +4387,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that a model is being added to.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterId(
@@ -3835,6 +4404,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that a model is being added to.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder clearClusterId() {
@@ -3844,6 +4417,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that a model is being added to.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterIdBytes(
@@ -3860,6 +4437,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the the model that is being created.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public java.lang.String getMlModelName() {
@@ -3875,6 +4456,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being created.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3891,6 +4476,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being created.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelName(
@@ -3904,6 +4493,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being created.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder clearMlModelName() {
@@ -3913,6 +4506,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being created.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelNameBytes(
@@ -3984,20 +4581,38 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster to update the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster to update the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the the model to update.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the the model to update.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     com.google.protobuf.ByteString
@@ -4017,10 +4632,18 @@ public final class MlModelServiceOuterClass {
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -4134,6 +4757,11 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster to update the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
@@ -4149,6 +4777,11 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster to update the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4168,6 +4801,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the the model to update.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public java.lang.String getMlModelName() {
@@ -4183,6 +4820,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model to update.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4223,6 +4864,10 @@ public final class MlModelServiceOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     public java.lang.String getUri() {
@@ -4238,6 +4883,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The new model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -4623,6 +5272,11 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster to update the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
@@ -4638,6 +5292,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to update the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4654,6 +5313,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to update the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
@@ -4667,6 +5331,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to update the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
@@ -4676,6 +5345,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to update the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
@@ -4692,6 +5366,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the the model to update.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public java.lang.String getMlModelName() {
@@ -4707,6 +5385,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model to update.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4723,6 +5405,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model to update.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelName(
@@ -4736,6 +5422,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model to update.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder clearMlModelName() {
@@ -4745,6 +5435,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model to update.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelNameBytes(
@@ -4878,6 +5572,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public java.lang.String getUri() {
@@ -4893,6 +5591,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -4909,6 +5611,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder setUri(
@@ -4922,6 +5628,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder clearUri() {
@@ -4931,6 +5641,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The new model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder setUriBytes(
@@ -5002,20 +5716,36 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster that contains the model being updated.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster that contains the model being updated.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the the model that is being updated.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the the model that is being updated.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -5109,6 +5839,10 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster that contains the model being updated.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public java.lang.String getClusterId() {
@@ -5124,6 +5858,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster that contains the model being updated.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5143,6 +5881,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the the model that is being updated.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public java.lang.String getMlModelName() {
@@ -5158,6 +5900,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model that is being updated.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -5496,6 +6242,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster that contains the model being updated.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public java.lang.String getClusterId() {
@@ -5511,6 +6261,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being updated.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5527,6 +6281,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being updated.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterId(
@@ -5540,6 +6298,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being updated.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder clearClusterId() {
@@ -5549,6 +6311,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being updated.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterIdBytes(
@@ -5565,6 +6331,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the the model that is being updated.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public java.lang.String getMlModelName() {
@@ -5580,6 +6350,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being updated.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -5596,6 +6370,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being updated.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelName(
@@ -5609,6 +6387,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being updated.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder clearMlModelName() {
@@ -5618,6 +6400,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being updated.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelNameBytes(
@@ -5689,20 +6475,38 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster to delete the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster to delete the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the the model to delete.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the the model to delete.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     com.google.protobuf.ByteString
@@ -5796,6 +6600,11 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster to delete the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getClusterId() {
@@ -5811,6 +6620,11 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster to delete the model in.
+     * To get a cluster ID make a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5830,6 +6644,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the the model to delete.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public java.lang.String getMlModelName() {
@@ -5845,6 +6663,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model to delete.
+     * </pre>
+     *
      * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6183,6 +7005,11 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster to delete the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getClusterId() {
@@ -6198,6 +7025,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to delete the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6214,6 +7046,11 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster to delete the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterId(
@@ -6227,6 +7064,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to delete the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearClusterId() {
@@ -6236,6 +7078,11 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster to delete the model in.
+       * To get a cluster ID make a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setClusterIdBytes(
@@ -6252,6 +7099,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the the model to delete.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public java.lang.String getMlModelName() {
@@ -6267,6 +7118,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model to delete.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6283,6 +7138,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model to delete.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelName(
@@ -6296,6 +7155,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model to delete.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder clearMlModelName() {
@@ -6305,6 +7168,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model to delete.
+       * </pre>
+       *
        * <code>string ml_model_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        */
       public Builder setMlModelNameBytes(
@@ -6376,20 +7243,36 @@ public final class MlModelServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the cluster that contains the model being deleted.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the cluster that contains the model being deleted.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Name of the the model that is being deleted.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     java.lang.String getMlModelName();
     /**
+     * <pre>
+     * Name of the the model that is being deleted.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -6483,6 +7366,10 @@ public final class MlModelServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the cluster that contains the model being deleted.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public java.lang.String getClusterId() {
@@ -6498,6 +7385,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cluster that contains the model being deleted.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6517,6 +7408,10 @@ public final class MlModelServiceOuterClass {
     public static final int ML_MODEL_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object mlModelName_;
     /**
+     * <pre>
+     * Name of the the model that is being deleted.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public java.lang.String getMlModelName() {
@@ -6532,6 +7427,10 @@ public final class MlModelServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model that is being deleted.
+     * </pre>
+     *
      * <code>string ml_model_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -6870,6 +7769,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the cluster that contains the model being deleted.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public java.lang.String getClusterId() {
@@ -6885,6 +7788,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being deleted.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6901,6 +7808,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being deleted.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterId(
@@ -6914,6 +7825,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being deleted.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder clearClusterId() {
@@ -6923,6 +7838,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cluster that contains the model being deleted.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterIdBytes(
@@ -6939,6 +7858,10 @@ public final class MlModelServiceOuterClass {
 
       private java.lang.Object mlModelName_ = "";
       /**
+       * <pre>
+       * Name of the the model that is being deleted.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public java.lang.String getMlModelName() {
@@ -6954,6 +7877,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being deleted.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -6970,6 +7897,10 @@ public final class MlModelServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model that is being deleted.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelName(
@@ -6983,6 +7914,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being deleted.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder clearMlModelName() {
@@ -6992,6 +7927,10 @@ public final class MlModelServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model that is being deleted.
+       * </pre>
+       *
        * <code>string ml_model_name = 2;</code>
        */
       public Builder setMlModelNameBytes(

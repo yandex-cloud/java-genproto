@@ -21,6 +21,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
+     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -29,6 +30,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
+     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -24468,6 +24470,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
+     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -24478,6 +24481,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
+     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25843,6 +25847,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
+       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25853,6 +25858,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
+       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25865,6 +25871,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
+       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25877,6 +25884,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
+       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25893,6 +25901,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
+       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>

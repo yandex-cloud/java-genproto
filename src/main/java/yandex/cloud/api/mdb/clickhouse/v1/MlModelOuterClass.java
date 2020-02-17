@@ -24,6 +24,10 @@ public final class MlModelOuterClass {
      */
     ML_MODEL_TYPE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * CatBoost model.
+     * </pre>
+     *
      * <code>ML_MODEL_TYPE_CATBOOST = 1;</code>
      */
     ML_MODEL_TYPE_CATBOOST(1),
@@ -35,6 +39,10 @@ public final class MlModelOuterClass {
      */
     public static final int ML_MODEL_TYPE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * CatBoost model.
+     * </pre>
+     *
      * <code>ML_MODEL_TYPE_CATBOOST = 1;</code>
      */
     public static final int ML_MODEL_TYPE_CATBOOST_VALUE = 1;
@@ -117,39 +125,71 @@ public final class MlModelOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the the model.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the the model.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * ID of the ClickHouse cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the ClickHouse cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType();
 
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -257,6 +297,10 @@ public final class MlModelOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the the model.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public java.lang.String getName() {
@@ -272,6 +316,10 @@ public final class MlModelOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the the model.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -291,6 +339,10 @@ public final class MlModelOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the ClickHouse cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      */
     public java.lang.String getClusterId() {
@@ -306,6 +358,10 @@ public final class MlModelOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the ClickHouse cluster that the model belongs to.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -325,12 +381,20 @@ public final class MlModelOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private int type_;
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Type of the model.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
@@ -342,6 +406,10 @@ public final class MlModelOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     public java.lang.String getUri() {
@@ -357,6 +425,10 @@ public final class MlModelOuterClass {
       }
     }
     /**
+     * <pre>
+     * Model file URL. You can only use models stored in Yandex Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -728,6 +800,10 @@ public final class MlModelOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the the model.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public java.lang.String getName() {
@@ -743,6 +819,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -759,6 +839,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the the model.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder setName(
@@ -772,6 +856,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder clearName() {
@@ -781,6 +869,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the the model.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder setNameBytes(
@@ -797,6 +889,10 @@ public final class MlModelOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the ClickHouse cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        */
       public java.lang.String getClusterId() {
@@ -812,6 +908,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the ClickHouse cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -828,6 +928,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the ClickHouse cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        */
       public Builder setClusterId(
@@ -841,6 +945,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the ClickHouse cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        */
       public Builder clearClusterId() {
@@ -850,6 +958,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the ClickHouse cluster that the model belongs to.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        */
       public Builder setClusterIdBytes(
@@ -866,12 +978,20 @@ public final class MlModelOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
        */
       public Builder setTypeValue(int value) {
@@ -880,6 +1000,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType getType() {
@@ -888,6 +1012,10 @@ public final class MlModelOuterClass {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
        */
       public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModelType value) {
@@ -900,6 +1028,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the model.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MlModelType type = 3;</code>
        */
       public Builder clearType() {
@@ -911,6 +1043,10 @@ public final class MlModelOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public java.lang.String getUri() {
@@ -926,6 +1062,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -942,6 +1082,10 @@ public final class MlModelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder setUri(
@@ -955,6 +1099,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder clearUri() {
@@ -964,6 +1112,10 @@ public final class MlModelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Model file URL. You can only use models stored in Yandex Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        */
       public Builder setUriBytes(

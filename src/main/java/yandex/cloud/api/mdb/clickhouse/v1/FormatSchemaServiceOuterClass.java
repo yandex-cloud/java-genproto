@@ -7147,7 +7147,7 @@ public final class FormatSchemaServiceOuterClass {
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022:\n\022format_schema_nam" +
       "e\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"" +
       "L\n\032DeleteFormatSchemaMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\032\n\022format_schema_name\030\002 \001(\t2\324\010" +
+      "_id\030\001 \001(\t\022\032\n\022format_schema_name\030\002 \001(\t2\352\010" +
       "\n\023FormatSchemaService\022\304\001\n\003Get\0226.yandex.c" +
       "loud.mdb.clickhouse.v1.GetFormatSchemaRe" +
       "quest\032,.yandex.cloud.mdb.clickhouse.v1.F" +
@@ -7163,22 +7163,23 @@ public final class FormatSchemaServiceOuterClass {
       "uest\032!.yandex.cloud.operation.Operation\"" +
       "s\202\323\344\223\002?\":/managed-clickhouse/v1/clusters" +
       "/{cluster_id}/formatSchemas:\001*\262\322**\n\032Crea" +
-      "teFormatSchemaMetadata\022\014FormatSchema\022\333\001\n" +
+      "teFormatSchemaMetadata\022\014FormatSchema\022\361\001\n" +
       "\006Update\0229.yandex.cloud.mdb.clickhouse.v1" +
       ".UpdateFormatSchemaRequest\032!.yandex.clou" +
-      "d.operation.Operation\"s\202\323\344\223\002?2:/managed-" +
-      "clickhouse/v1/clusters/{cluster_id}/form" +
-      "atSchemas:\001*\262\322**\n\032UpdateFormatSchemaMeta" +
-      "data\022\014FormatSchema\022\367\001\n\006Delete\0229.yandex.c" +
-      "loud.mdb.clickhouse.v1.DeleteFormatSchem" +
-      "aRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\216\001\202\323\344\223\002Q*O/managed-clickhouse/v1/clu" +
-      "sters/{cluster_id}/formatSchemas/{format" +
-      "_schema_name}\262\322*3\n\032DeleteFormatSchemaMet" +
-      "adata\022\025google.protobuf.EmptyBs\n\"yandex.c" +
-      "loud.api.mdb.clickhouse.v1ZMgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/clickhouse/v1;clickhouseb\006proto3"
+      "d.operation.Operation\"\210\001\202\323\344\223\002T2O/managed" +
+      "-clickhouse/v1/clusters/{cluster_id}/for" +
+      "matSchemas/{format_schema_name}:\001*\262\322**\n\032" +
+      "UpdateFormatSchemaMetadata\022\014FormatSchema" +
+      "\022\367\001\n\006Delete\0229.yandex.cloud.mdb.clickhous" +
+      "e.v1.DeleteFormatSchemaRequest\032!.yandex." +
+      "cloud.operation.Operation\"\216\001\202\323\344\223\002Q*O/man" +
+      "aged-clickhouse/v1/clusters/{cluster_id}" +
+      "/formatSchemas/{format_schema_name}\262\322*3\n" +
+      "\032DeleteFormatSchemaMetadata\022\025google.prot" +
+      "obuf.EmptyBs\n\"yandex.cloud.api.mdb.click" +
+      "house.v1ZMgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
+      "ckhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

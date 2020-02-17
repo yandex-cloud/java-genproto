@@ -414,6 +414,70 @@ public final class InstanceServiceGrpc {
      return getDetachDiskMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddOneToOneNatMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddOneToOneNat",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddOneToOneNatMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddOneToOneNatMethod;
+    if ((getAddOneToOneNatMethod = InstanceServiceGrpc.getAddOneToOneNatMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getAddOneToOneNatMethod = InstanceServiceGrpc.getAddOneToOneNatMethod) == null) {
+          InstanceServiceGrpc.getAddOneToOneNatMethod = getAddOneToOneNatMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.InstanceService", "AddOneToOneNat"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("AddOneToOneNat"))
+                  .build();
+          }
+        }
+     }
+     return getAddOneToOneNatMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveOneToOneNatMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveOneToOneNat",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveOneToOneNatMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveOneToOneNatMethod;
+    if ((getRemoveOneToOneNatMethod = InstanceServiceGrpc.getRemoveOneToOneNatMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getRemoveOneToOneNatMethod = InstanceServiceGrpc.getRemoveOneToOneNatMethod) == null) {
+          InstanceServiceGrpc.getRemoveOneToOneNatMethod = getRemoveOneToOneNatMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.InstanceService", "RemoveOneToOneNat"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("RemoveOneToOneNat"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveOneToOneNatMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.ListInstanceOperationsRequest,
       yandex.cloud.api.compute.v1.InstanceServiceOuterClass.ListInstanceOperationsResponse> getListOperationsMethod;
 
@@ -600,6 +664,20 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public void addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getAddOneToOneNatMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRemoveOneToOneNatMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Lists operations for the specified instance.
      * </pre>
@@ -695,6 +773,20 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DETACH_DISK)))
+          .addMethod(
+            getAddOneToOneNatMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_ONE_TO_ONE_NAT)))
+          .addMethod(
+            getRemoveOneToOneNatMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REMOVE_ONE_TO_ONE_NAT)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
@@ -863,6 +955,22 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public void addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAddOneToOneNatMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRemoveOneToOneNatMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * Lists operations for the specified instance.
      * </pre>
@@ -1016,6 +1124,20 @@ public final class InstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation detachDisk(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest request) {
       return blockingUnaryCall(
           getChannel(), getDetachDiskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAddOneToOneNatMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRemoveOneToOneNatMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1186,6 +1308,22 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addOneToOneNat(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAddOneToOneNatMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeOneToOneNat(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRemoveOneToOneNatMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Lists operations for the specified instance.
      * </pre>
@@ -1209,7 +1347,9 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_RESTART = 9;
   private static final int METHODID_ATTACH_DISK = 10;
   private static final int METHODID_DETACH_DISK = 11;
-  private static final int METHODID_LIST_OPERATIONS = 12;
+  private static final int METHODID_ADD_ONE_TO_ONE_NAT = 12;
+  private static final int METHODID_REMOVE_ONE_TO_ONE_NAT = 13;
+  private static final int METHODID_LIST_OPERATIONS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1274,6 +1414,14 @@ public final class InstanceServiceGrpc {
           break;
         case METHODID_DETACH_DISK:
           serviceImpl.detachDisk((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ADD_ONE_TO_ONE_NAT:
+          serviceImpl.addOneToOneNat((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REMOVE_ONE_TO_ONE_NAT:
+          serviceImpl.removeOneToOneNat((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -1353,6 +1501,8 @@ public final class InstanceServiceGrpc {
               .addMethod(getRestartMethod())
               .addMethod(getAttachDiskMethod())
               .addMethod(getDetachDiskMethod())
+              .addMethod(getAddOneToOneNatMethod())
+              .addMethod(getRemoveOneToOneNatMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }

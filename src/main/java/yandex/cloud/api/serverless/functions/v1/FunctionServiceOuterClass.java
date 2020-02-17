@@ -15490,6 +15490,41 @@ public final class FunctionServiceOuterClass {
     java.lang.String getEnvironmentOrThrow(
         java.lang.String key);
 
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    java.util.List<java.lang.String>
+        getTagList();
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    int getTagCount();
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    java.lang.String getTag(int index);
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    com.google.protobuf.ByteString
+        getTagBytes(int index);
+
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.PackageSourceCase getPackageSourceCase();
   }
   /**
@@ -15510,6 +15545,7 @@ public final class FunctionServiceOuterClass {
       description_ = "";
       entrypoint_ = "";
       serviceAccountId_ = "";
+      tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -15624,6 +15660,15 @@ public final class FunctionServiceOuterClass {
                   environment__.getKey(), environment__.getValue());
               break;
             }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                tag_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              tag_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15639,6 +15684,9 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          tag_ = tag_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -16133,6 +16181,51 @@ public final class FunctionServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int TAG_FIELD_NUMBER = 13;
+    private com.google.protobuf.LazyStringList tag_;
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagList() {
+      return tag_;
+    }
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    public int getTagCount() {
+      return tag_.size();
+    }
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    public java.lang.String getTag(int index) {
+      return tag_.get(index);
+    }
+    /**
+     * <pre>
+     * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagBytes(int index) {
+      return tag_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16181,6 +16274,9 @@ public final class FunctionServiceOuterClass {
           internalGetEnvironment(),
           EnvironmentDefaultEntryHolder.defaultEntry,
           12);
+      for (int i = 0; i < tag_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, tag_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16232,6 +16328,14 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, environment__);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tag_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tag_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16270,6 +16374,8 @@ public final class FunctionServiceOuterClass {
           .equals(other.getServiceAccountId());
       result = result && internalGetEnvironment().equals(
           other.internalGetEnvironment());
+      result = result && getTagList()
+          .equals(other.getTagList());
       result = result && getPackageSourceCase().equals(
           other.getPackageSourceCase());
       if (!result) return false;
@@ -16317,6 +16423,10 @@ public final class FunctionServiceOuterClass {
       if (!internalGetEnvironment().getMap().isEmpty()) {
         hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
         hash = (53 * hash) + internalGetEnvironment().hashCode();
+      }
+      if (getTagCount() > 0) {
+        hash = (37 * hash) + TAG_FIELD_NUMBER;
+        hash = (53 * hash) + getTagList().hashCode();
       }
       switch (packageSourceCase_) {
         case 9:
@@ -16508,6 +16618,8 @@ public final class FunctionServiceOuterClass {
         serviceAccountId_ = "";
 
         internalGetMutableEnvironment().clear();
+        tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000400);
         packageSourceCase_ = 0;
         packageSource_ = null;
         return this;
@@ -16565,6 +16677,11 @@ public final class FunctionServiceOuterClass {
         }
         result.environment_ = internalGetEnvironment();
         result.environment_.makeImmutable();
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          tag_ = tag_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.tag_ = tag_;
         result.bitField0_ = to_bitField0_;
         result.packageSourceCase_ = packageSourceCase_;
         onBuilt();
@@ -16643,6 +16760,16 @@ public final class FunctionServiceOuterClass {
         }
         internalGetMutableEnvironment().mergeFrom(
             other.internalGetEnvironment());
+        if (!other.tag_.isEmpty()) {
+          if (tag_.isEmpty()) {
+            tag_ = other.tag_;
+            bitField0_ = (bitField0_ & ~0x00000400);
+          } else {
+            ensureTagIsMutable();
+            tag_.addAll(other.tag_);
+          }
+          onChanged();
+        }
         switch (other.getPackageSourceCase()) {
           case PACKAGE: {
             mergePackage(other.getPackage());
@@ -17831,6 +17958,136 @@ public final class FunctionServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableEnvironment().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          tag_ = new com.google.protobuf.LazyStringArrayList(tag_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagList() {
+        return tag_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public int getTagCount() {
+        return tag_.size();
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public java.lang.String getTag(int index) {
+        return tag_.get(index);
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes(int index) {
+        return tag_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public Builder setTag(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagIsMutable();
+        tag_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public Builder addTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagIsMutable();
+        tag_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public Builder addAllTag(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tag_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public Builder clearTag() {
+        tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Function version tags. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>repeated string tag = 13 [(.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       */
+      public Builder addTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagIsMutable();
+        tag_.add(value);
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -25215,7 +25472,7 @@ public final class FunctionServiceOuterClass {
       "\212\3101\006<=1000\"p\n\036ListFunctionOperationsResp" +
       "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
       "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\365\004\n\034CreateFunctionVersionRequest\022\031\n" +
+      " \001(\t\"\230\005\n\034CreateFunctionVersionRequest\022\031\n" +
       "\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(" +
       "\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022" +
       "\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005" +
@@ -25228,121 +25485,121 @@ public final class FunctionServiceOuterClass {
       "428800H\000\022\217\001\n\013environment\030\014 \003(\0132S.yandex." +
       "cloud.serverless.functions.v1.CreateFunc" +
       "tionVersionRequest.EnvironmentEntryB%\212\3101" +
-      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\0322\n\020En" +
-      "vironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001B\026\n\016package_source\022\004\300\3011\001J\004\010\010\020\t\"<\n\035" +
-      "CreateFunctionVersionMetadata\022\033\n\023functio" +
-      "n_version_id\030\001 \001(\t\"]\n\025SetFunctionTagRequ" +
-      "est\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022!" +
-      "\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030Rem" +
-      "oveFunctionTagRequest\022!\n\023function_versio" +
-      "n_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z]" +
-      "[-_0-9a-z]*\"5\n\026SetFunctionTagMetadata\022\033\n" +
-      "\023function_version_id\030\001 \001(\t\"8\n\031RemoveFunc" +
-      "tionTagMetadata\022\033\n\023function_version_id\030\001" +
-      " \001(\t\"\301\001\n\035ListFunctionTagHistoryRequest\022\031" +
-      "\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036" +
-      "\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tpage_s" +
-      "ize\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(" +
-      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000" +
-      "\"\200\003\n\036ListFunctionTagHistoryResponse\022\202\001\n\033" +
-      "function_tag_history_record\030\001 \003(\0132].yand" +
-      "ex.cloud.serverless.functions.v1.ListFun" +
-      "ctionTagHistoryResponse.FunctionTagHisto" +
-      "ryRecord\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030Fu" +
-      "nctionTagHistoryRecord\022\023\n\013function_id\030\001 " +
-      "\001(\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n\003tag\030" +
-      "\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\0220\n\014effective_to\030\005 \001(\0132" +
-      "\032.google.protobuf.Timestamp2\235\032\n\017Function" +
-      "Service\022\236\001\n\003Get\0228.yandex.cloud.serverles" +
-      "s.functions.v1.GetFunctionRequest\032..yand" +
-      "ex.cloud.serverless.functions.v1.Functio" +
-      "n\"-\202\323\344\223\002\'\022%/functions/v1/functions/{func" +
-      "tion_id}\022\240\001\n\004List\022:.yandex.cloud.serverl" +
-      "ess.functions.v1.ListFunctionsRequest\032;." +
-      "yandex.cloud.serverless.functions.v1.Lis" +
-      "tFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functions/v" +
-      "1/functions\022\262\001\n\006Create\022;.yandex.cloud.se" +
-      "rverless.functions.v1.CreateFunctionRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"H" +
-      "\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262\322*\"\n\026" +
-      "CreateFunctionMetadata\022\010Function\022\300\001\n\006Upd" +
-      "ate\022;.yandex.cloud.serverless.functions." +
-      "v1.UpdateFunctionRequest\032!.yandex.cloud." +
-      "operation.Operation\"V\202\323\344\223\002*2%/functions/" +
-      "v1/functions/{function_id}:\001*\262\322*\"\n\026Updat" +
-      "eFunctionMetadata\022\010Function\022\312\001\n\006Delete\022;" +
-      ".yandex.cloud.serverless.functions.v1.De" +
-      "leteFunctionRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"`\202\323\344\223\002\'*%/functions/v1/fu" +
-      "nctions/{function_id}\262\322*/\n\026DeleteFunctio" +
-      "nMetadata\022\025google.protobuf.Empty\022\262\001\n\nGet" +
-      "Version\022?.yandex.cloud.serverless.functi" +
-      "ons.v1.GetFunctionVersionRequest\032-.yande" +
-      "x.cloud.serverless.functions.v1.Version\"" +
-      "4\202\323\344\223\002.\022,/functions/v1/versions/{functio" +
-      "n_version_id}\022\254\001\n\017GetVersionByTag\022D.yand" +
-      "ex.cloud.serverless.functions.v1.GetFunc" +
-      "tionVersionByTagRequest\032-.yandex.cloud.s" +
-      "erverless.functions.v1.Version\"$\202\323\344\223\002\036\022\034" +
-      "/functions/v1/versions:byTag\022\267\001\n\014ListVer" +
-      "sions\022B.yandex.cloud.serverless.function" +
-      "s.v1.ListFunctionsVersionsRequest\032C.yand" +
-      "ex.cloud.serverless.functions.v1.ListFun" +
-      "ctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/functio" +
-      "ns/v1/versions\022\315\001\n\006SetTag\022;.yandex.cloud" +
-      ".serverless.functions.v1.SetFunctionTagR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"c\202\323\344\223\0028\"3/functions/v1/versions/{funct" +
-      "ion_version_id}:setTag:\001*\262\322*!\n\026SetFuncti" +
-      "onTagMetadata\022\007Version\022\331\001\n\tRemoveTag\022>.y" +
-      "andex.cloud.serverless.functions.v1.Remo" +
-      "veFunctionTagRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"i\202\323\344\223\002;\"6/functions/v1/v" +
-      "ersions/{function_version_id}:removeTag:" +
-      "\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007Versi" +
-      "on\022\325\001\n\016ListTagHistory\022C.yandex.cloud.ser" +
-      "verless.functions.v1.ListFunctionTagHist" +
-      "oryRequest\032D.yandex.cloud.serverless.fun" +
-      "ctions.v1.ListFunctionTagHistoryResponse" +
-      "\"8\202\323\344\223\0022\0220/functions/v1/functions/{funct" +
-      "ion_id}:tagHistory\022\305\001\n\rCreateVersion\022B.y" +
-      "andex.cloud.serverless.functions.v1.Crea" +
-      "teFunctionVersionRequest\032!.yandex.cloud." +
-      "operation.Operation\"M\202\323\344\223\002\033\"\026/functions/" +
-      "v1/versions:\001*\262\322*(\n\035CreateFunctionVersio" +
-      "nMetadata\022\007Version\022\245\001\n\014ListRuntimes\0229.ya" +
-      "ndex.cloud.serverless.functions.v1.ListR" +
-      "untimesRequest\032:.yandex.cloud.serverless" +
-      ".functions.v1.ListRuntimesResponse\"\036\202\323\344\223" +
-      "\002\030\022\026/functions/v1/runtimes\022\325\001\n\016ListOpera" +
-      "tions\022C.yandex.cloud.serverless.function" +
-      "s.v1.ListFunctionOperationsRequest\032D.yan" +
-      "dex.cloud.serverless.functions.v1.ListFu" +
-      "nctionOperationsResponse\"8\202\323\344\223\0022\0220/funct" +
-      "ions/v1/functions/{function_id}/operatio" +
-      "ns\022\267\001\n\022ListAccessBindings\022..yandex.cloud" +
-      ".access.ListAccessBindingsRequest\032/.yand" +
-      "ex.cloud.access.ListAccessBindingsRespon" +
-      "se\"@\202\323\344\223\002:\0228/functions/v1/functions/{res" +
-      "ource_id}:listAccessBindings\022\346\001\n\021SetAcce" +
-      "ssBindings\022-.yandex.cloud.access.SetAcce" +
-      "ssBindingsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\177\202\323\344\223\002<\"7/functions/v1/func" +
-      "tions/{resource_id}:setAccessBindings:\001*" +
-      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
-      "google.protobuf.Empty\022\363\001\n\024UpdateAccessBi" +
-      "ndings\0220.yandex.cloud.access.UpdateAcces" +
-      "sBindingsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\205\001\202\323\344\223\002?\":/functions/v1/func" +
-      "tions/{resource_id}:updateAccessBindings" +
-      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
-      "data\022\025google.protobuf.EmptyB~\n(yandex.cl" +
-      "oud.api.serverless.functions.v1ZRgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/functions/v1;functionsb\006pro" +
-      "to3"
+      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022!\n\003ta" +
+      "g\030\r \003(\tB\024\362\3071\020[a-z][-_0-9a-z]*\0322\n\020Environ" +
+      "mentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001B\026\n\016package_source\022\004\300\3011\001J\004\010\010\020\t\"<\n\035Creat" +
+      "eFunctionVersionMetadata\022\033\n\023function_ver" +
+      "sion_id\030\001 \001(\t\"]\n\025SetFunctionTagRequest\022!" +
+      "\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag" +
+      "\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030RemoveFu" +
+      "nctionTagRequest\022!\n\023function_version_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-" +
+      "9a-z]*\"5\n\026SetFunctionTagMetadata\022\033\n\023func" +
+      "tion_version_id\030\001 \001(\t\"8\n\031RemoveFunctionT" +
+      "agMetadata\022\033\n\023function_version_id\030\001 \001(\t\"" +
+      "\301\001\n\035ListFunctionTagHistoryRequest\022\031\n\013fun" +
+      "ction_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[" +
+      "a-z][-_0-9a-z]*|[$]latest\022\035\n\tpage_size\030\003" +
+      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\310" +
+      "1\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"\200\003\n\036" +
+      "ListFunctionTagHistoryResponse\022\202\001\n\033funct" +
+      "ion_tag_history_record\030\001 \003(\0132].yandex.cl" +
+      "oud.serverless.functions.v1.ListFunction" +
+      "TagHistoryResponse.FunctionTagHistoryRec" +
+      "ord\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030Functio" +
+      "nTagHistoryRecord\022\023\n\013function_id\030\001 \001(\t\022\033" +
+      "\n\023function_version_id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t" +
+      "\0222\n\016effective_from\030\004 \001(\0132\032.google.protob" +
+      "uf.Timestamp\0220\n\014effective_to\030\005 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp2\235\032\n\017FunctionServi" +
+      "ce\022\236\001\n\003Get\0228.yandex.cloud.serverless.fun" +
+      "ctions.v1.GetFunctionRequest\032..yandex.cl" +
+      "oud.serverless.functions.v1.Function\"-\202\323" +
+      "\344\223\002\'\022%/functions/v1/functions/{function_" +
+      "id}\022\240\001\n\004List\022:.yandex.cloud.serverless.f" +
+      "unctions.v1.ListFunctionsRequest\032;.yande" +
+      "x.cloud.serverless.functions.v1.ListFunc" +
+      "tionsResponse\"\037\202\323\344\223\002\031\022\027/functions/v1/fun" +
+      "ctions\022\262\001\n\006Create\022;.yandex.cloud.serverl" +
+      "ess.functions.v1.CreateFunctionRequest\032!" +
+      ".yandex.cloud.operation.Operation\"H\202\323\344\223\002" +
+      "\034\"\027/functions/v1/functions:\001*\262\322*\"\n\026Creat" +
+      "eFunctionMetadata\022\010Function\022\300\001\n\006Update\022;" +
+      ".yandex.cloud.serverless.functions.v1.Up" +
+      "dateFunctionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"V\202\323\344\223\002*2%/functions/v1/fu" +
+      "nctions/{function_id}:\001*\262\322*\"\n\026UpdateFunc" +
+      "tionMetadata\022\010Function\022\312\001\n\006Delete\022;.yand" +
+      "ex.cloud.serverless.functions.v1.DeleteF" +
+      "unctionRequest\032!.yandex.cloud.operation." +
+      "Operation\"`\202\323\344\223\002\'*%/functions/v1/functio" +
+      "ns/{function_id}\262\322*/\n\026DeleteFunctionMeta" +
+      "data\022\025google.protobuf.Empty\022\262\001\n\nGetVersi" +
+      "on\022?.yandex.cloud.serverless.functions.v" +
+      "1.GetFunctionVersionRequest\032-.yandex.clo" +
+      "ud.serverless.functions.v1.Version\"4\202\323\344\223" +
+      "\002.\022,/functions/v1/versions/{function_ver" +
+      "sion_id}\022\254\001\n\017GetVersionByTag\022D.yandex.cl" +
+      "oud.serverless.functions.v1.GetFunctionV" +
+      "ersionByTagRequest\032-.yandex.cloud.server" +
+      "less.functions.v1.Version\"$\202\323\344\223\002\036\022\034/func" +
+      "tions/v1/versions:byTag\022\267\001\n\014ListVersions" +
+      "\022B.yandex.cloud.serverless.functions.v1." +
+      "ListFunctionsVersionsRequest\032C.yandex.cl" +
+      "oud.serverless.functions.v1.ListFunction" +
+      "sVersionsResponse\"\036\202\323\344\223\002\030\022\026/functions/v1" +
+      "/versions\022\315\001\n\006SetTag\022;.yandex.cloud.serv" +
+      "erless.functions.v1.SetFunctionTagReques" +
+      "t\032!.yandex.cloud.operation.Operation\"c\202\323" +
+      "\344\223\0028\"3/functions/v1/versions/{function_v" +
+      "ersion_id}:setTag:\001*\262\322*!\n\026SetFunctionTag" +
+      "Metadata\022\007Version\022\331\001\n\tRemoveTag\022>.yandex" +
+      ".cloud.serverless.functions.v1.RemoveFun" +
+      "ctionTagRequest\032!.yandex.cloud.operation" +
+      ".Operation\"i\202\323\344\223\002;\"6/functions/v1/versio" +
+      "ns/{function_version_id}:removeTag:\001*\262\322*" +
+      "$\n\031RemoveFunctionTagMetadata\022\007Version\022\325\001" +
+      "\n\016ListTagHistory\022C.yandex.cloud.serverle" +
+      "ss.functions.v1.ListFunctionTagHistoryRe" +
+      "quest\032D.yandex.cloud.serverless.function" +
+      "s.v1.ListFunctionTagHistoryResponse\"8\202\323\344" +
+      "\223\0022\0220/functions/v1/functions/{function_i" +
+      "d}:tagHistory\022\305\001\n\rCreateVersion\022B.yandex" +
+      ".cloud.serverless.functions.v1.CreateFun" +
+      "ctionVersionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"M\202\323\344\223\002\033\"\026/functions/v1/ve" +
+      "rsions:\001*\262\322*(\n\035CreateFunctionVersionMeta" +
+      "data\022\007Version\022\245\001\n\014ListRuntimes\0229.yandex." +
+      "cloud.serverless.functions.v1.ListRuntim" +
+      "esRequest\032:.yandex.cloud.serverless.func" +
+      "tions.v1.ListRuntimesResponse\"\036\202\323\344\223\002\030\022\026/" +
+      "functions/v1/runtimes\022\325\001\n\016ListOperations" +
+      "\022C.yandex.cloud.serverless.functions.v1." +
+      "ListFunctionOperationsRequest\032D.yandex.c" +
+      "loud.serverless.functions.v1.ListFunctio" +
+      "nOperationsResponse\"8\202\323\344\223\0022\0220/functions/" +
+      "v1/functions/{function_id}/operations\022\267\001" +
+      "\n\022ListAccessBindings\022..yandex.cloud.acce" +
+      "ss.ListAccessBindingsRequest\032/.yandex.cl" +
+      "oud.access.ListAccessBindingsResponse\"@\202" +
+      "\323\344\223\002:\0228/functions/v1/functions/{resource" +
+      "_id}:listAccessBindings\022\346\001\n\021SetAccessBin" +
+      "dings\022-.yandex.cloud.access.SetAccessBin" +
+      "dingsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\177\202\323\344\223\002<\"7/functions/v1/functions" +
+      "/{resource_id}:setAccessBindings:\001*\262\322*9\n" +
+      " access.SetAccessBindingsMetadata\022\025googl" +
+      "e.protobuf.Empty\022\363\001\n\024UpdateAccessBinding" +
+      "s\0220.yandex.cloud.access.UpdateAccessBind" +
+      "ingsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\205\001\202\323\344\223\002?\":/functions/v1/functions" +
+      "/{resource_id}:updateAccessBindings:\001*\262\322" +
+      "*<\n#access.UpdateAccessBindingsMetadata\022" +
+      "\025google.protobuf.EmptyB~\n(yandex.cloud.a" +
+      "pi.serverless.functions.v1ZRgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ser" +
+      "verless/functions/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25484,7 +25741,7 @@ public final class FunctionServiceOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor,
-        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "Environment", "PackageSource", });
+        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "Environment", "Tag", "PackageSource", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_fieldAccessorTable = new

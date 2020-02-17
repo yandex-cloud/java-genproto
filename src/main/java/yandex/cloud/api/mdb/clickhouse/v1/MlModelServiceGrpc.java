@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing machine learning models.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -211,10 +214,17 @@ public final class MlModelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing machine learning models.
+   * </pre>
    */
   public static abstract class MlModelServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified machine learning model.
+     * To get the list of all available models, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> responseObserver) {
@@ -222,6 +232,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of machine learning models in the specified cluster.
+     * </pre>
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> responseObserver) {
@@ -229,6 +242,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a machine learning model in the specified cluster.
+     * </pre>
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -236,6 +252,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified machine learning model.
+     * </pre>
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -243,6 +262,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified machine learning model.
+     * </pre>
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -291,6 +313,9 @@ public final class MlModelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing machine learning models.
+   * </pre>
    */
   public static final class MlModelServiceStub extends io.grpc.stub.AbstractStub<MlModelServiceStub> {
     private MlModelServiceStub(io.grpc.Channel channel) {
@@ -309,6 +334,10 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified machine learning model.
+     * To get the list of all available models, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> responseObserver) {
@@ -317,6 +346,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of machine learning models in the specified cluster.
+     * </pre>
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> responseObserver) {
@@ -325,6 +357,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a machine learning model in the specified cluster.
+     * </pre>
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +368,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified machine learning model.
+     * </pre>
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -341,6 +379,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified machine learning model.
+     * </pre>
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -350,6 +391,9 @@ public final class MlModelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing machine learning models.
+   * </pre>
    */
   public static final class MlModelServiceBlockingStub extends io.grpc.stub.AbstractStub<MlModelServiceBlockingStub> {
     private MlModelServiceBlockingStub(io.grpc.Channel channel) {
@@ -368,6 +412,10 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified machine learning model.
+     * To get the list of all available models, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel get(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request) {
       return blockingUnaryCall(
@@ -375,6 +423,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of machine learning models in the specified cluster.
+     * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse list(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request) {
       return blockingUnaryCall(
@@ -382,6 +433,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a machine learning model in the specified cluster.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request) {
       return blockingUnaryCall(
@@ -389,6 +443,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified machine learning model.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request) {
       return blockingUnaryCall(
@@ -396,6 +453,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified machine learning model.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request) {
       return blockingUnaryCall(
@@ -404,6 +464,9 @@ public final class MlModelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing machine learning models.
+   * </pre>
    */
   public static final class MlModelServiceFutureStub extends io.grpc.stub.AbstractStub<MlModelServiceFutureStub> {
     private MlModelServiceFutureStub(io.grpc.Channel channel) {
@@ -422,6 +485,10 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified machine learning model.
+     * To get the list of all available models, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.MlModelOuterClass.MlModel> get(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.GetMlModelRequest request) {
@@ -430,6 +497,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of machine learning models in the specified cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsResponse> list(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.ListMlModelsRequest request) {
@@ -438,6 +508,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a machine learning model in the specified cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.CreateMlModelRequest request) {
@@ -446,6 +519,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified machine learning model.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.UpdateMlModelRequest request) {
@@ -454,6 +530,9 @@ public final class MlModelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified machine learning model.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.clickhouse.v1.MlModelServiceOuterClass.DeleteMlModelRequest request) {

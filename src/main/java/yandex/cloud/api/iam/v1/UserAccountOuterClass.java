@@ -2042,6 +2042,60 @@ public final class UserAccountOuterClass {
      */
     com.google.protobuf.ByteString
         getNameIdBytes();
+
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+    int getAttributesCount();
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+    boolean containsAttributes(
+        java.lang.String key);
+    /**
+     * Use {@link #getAttributesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+    getAttributes();
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+    java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+    getAttributesMap();
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute defaultValue);
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -2101,6 +2155,19 @@ public final class UserAccountOuterClass {
               nameId_ = s;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                attributes_ = com.google.protobuf.MapField.newMapField(
+                    AttributesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+              attributes__ = input.readMessage(
+                  AttributesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              attributes_.getMutableMap().put(
+                  attributes__.getKey(), attributes__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2125,6 +2192,18 @@ public final class UserAccountOuterClass {
       return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetAttributes();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2133,6 +2212,611 @@ public final class UserAccountOuterClass {
               yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.class, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Builder.class);
     }
 
+    public interface AttributeOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.SamlUserAccount.Attribute)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      java.util.List<java.lang.String>
+          getValueList();
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      int getValueCount();
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      java.lang.String getValue(int index);
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getValueBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.SamlUserAccount.Attribute}
+     */
+    public  static final class Attribute extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.SamlUserAccount.Attribute)
+        AttributeOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Attribute.newBuilder() to construct.
+      private Attribute(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Attribute() {
+        value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Attribute(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  value_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                value_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            value_ = value_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.class, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.Builder.class);
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList value_;
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValueList() {
+        return value_;
+      }
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      public int getValueCount() {
+        return value_.size();
+      }
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      public java.lang.String getValue(int index) {
+        return value_.get(index);
+      }
+      /**
+       * <code>repeated string value = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes(int index) {
+        return value_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < value_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < value_.size(); i++) {
+            dataSize += computeStringSizeNoTag(value_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValueList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute other = (yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute) obj;
+
+        boolean result = true;
+        result = result && getValueList()
+            .equals(other.getValueList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getValueCount() > 0) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValueList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.iam.v1.SamlUserAccount.Attribute}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.SamlUserAccount.Attribute)
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.AttributeOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.class, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getDefaultInstanceForType() {
+          return yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute build() {
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute buildPartial() {
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute result = new yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            value_ = value_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute) {
+            return mergeFrom((yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute other) {
+          if (other == yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.getDefaultInstance()) return this;
+          if (!other.value_.isEmpty()) {
+            if (value_.isEmpty()) {
+              value_ = other.value_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValueIsMutable();
+              value_.addAll(other.value_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValueIsMutable() {
+          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+            value_ = new com.google.protobuf.LazyStringArrayList(value_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValueList() {
+          return value_.getUnmodifiableView();
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public int getValueCount() {
+          return value_.size();
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public java.lang.String getValue(int index) {
+          return value_.get(index);
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getValueBytes(int index) {
+          return value_.getByteString(index);
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public Builder setValue(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValueIsMutable();
+          value_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public Builder addValue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValueIsMutable();
+          value_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public Builder addAllValue(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValueIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, value_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public Builder clearValue() {
+          value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated string value = 1;</code>
+         */
+        public Builder addValueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValueIsMutable();
+          value_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.SamlUserAccount.Attribute)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.SamlUserAccount.Attribute)
+      private static final yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute();
+      }
+
+      public static yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Attribute>
+          PARSER = new com.google.protobuf.AbstractParser<Attribute>() {
+        @java.lang.Override
+        public Attribute parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Attribute(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Attribute> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Attribute> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
     public static final int FEDERATION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object federationId_;
     /**
@@ -2219,6 +2903,98 @@ public final class UserAccountOuterClass {
       }
     }
 
+    public static final int ATTRIBUTES_FIELD_NUMBER = 3;
+    private static final class AttributesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>newDefaultInstance(
+                  yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> attributes_;
+    private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+    internalGetAttributes() {
+      if (attributes_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AttributesDefaultEntryHolder.defaultEntry);
+      }
+      return attributes_;
+    }
+
+    public int getAttributesCount() {
+      return internalGetAttributes().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    public boolean containsAttributes(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetAttributes().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAttributesMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributes() {
+      return getAttributesMap();
+    }
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributesMap() {
+      return internalGetAttributes().getMap();
+    }
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
+          internalGetAttributes().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional attributes of the SAML federated user.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+     */
+
+    public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
+          internalGetAttributes().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2239,6 +3015,12 @@ public final class UserAccountOuterClass {
       if (!getNameIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nameId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAttributes(),
+          AttributesDefaultEntryHolder.defaultEntry,
+          3);
       unknownFields.writeTo(output);
     }
 
@@ -2253,6 +3035,16 @@ public final class UserAccountOuterClass {
       }
       if (!getNameIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nameId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> entry
+           : internalGetAttributes().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+        attributes__ = AttributesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, attributes__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2274,6 +3066,8 @@ public final class UserAccountOuterClass {
           .equals(other.getFederationId());
       result = result && getNameId()
           .equals(other.getNameId());
+      result = result && internalGetAttributes().equals(
+          other.internalGetAttributes());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2289,6 +3083,10 @@ public final class UserAccountOuterClass {
       hash = (53 * hash) + getFederationId().hashCode();
       hash = (37 * hash) + NAME_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNameId().hashCode();
+      if (!internalGetAttributes().getMap().isEmpty()) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAttributes().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2401,6 +3199,28 @@ public final class UserAccountOuterClass {
         return yandex.cloud.api.iam.v1.UserAccountOuterClass.internal_static_yandex_cloud_iam_v1_SamlUserAccount_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetAttributes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableAttributes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2431,6 +3251,7 @@ public final class UserAccountOuterClass {
 
         nameId_ = "";
 
+        internalGetMutableAttributes().clear();
         return this;
       }
 
@@ -2457,8 +3278,13 @@ public final class UserAccountOuterClass {
       @java.lang.Override
       public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount buildPartial() {
         yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount result = new yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.federationId_ = federationId_;
         result.nameId_ = nameId_;
+        result.attributes_ = internalGetAttributes();
+        result.attributes_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2515,6 +3341,8 @@ public final class UserAccountOuterClass {
           nameId_ = other.nameId_;
           onChanged();
         }
+        internalGetMutableAttributes().mergeFrom(
+            other.internalGetAttributes());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2543,6 +3371,7 @@ public final class UserAccountOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object federationId_ = "";
       /**
@@ -2726,6 +3555,157 @@ public final class UserAccountOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> attributes_;
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+      internalGetAttributes() {
+        if (attributes_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AttributesDefaultEntryHolder.defaultEntry);
+        }
+        return attributes_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+      internalGetMutableAttributes() {
+        onChanged();;
+        if (attributes_ == null) {
+          attributes_ = com.google.protobuf.MapField.newMapField(
+              AttributesDefaultEntryHolder.defaultEntry);
+        }
+        if (!attributes_.isMutable()) {
+          attributes_ = attributes_.copy();
+        }
+        return attributes_;
+      }
+
+      public int getAttributesCount() {
+        return internalGetAttributes().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public boolean containsAttributes(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetAttributes().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAttributesMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributes() {
+        return getAttributesMap();
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> getAttributesMap() {
+        return internalGetAttributes().getMap();
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrDefault(
+          java.lang.String key,
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
+            internalGetAttributes().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute getAttributesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> map =
+            internalGetAttributes().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAttributes() {
+        internalGetMutableAttributes().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public Builder removeAttributes(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableAttributes().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute>
+      getMutableAttributes() {
+        return internalGetMutableAttributes().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+      public Builder putAttributes(
+          java.lang.String key,
+          yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableAttributes().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional attributes of the SAML federated user.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.iam.v1.SamlUserAccount.Attribute&gt; attributes = 3;</code>
+       */
+
+      public Builder putAllAttributes(
+          java.util.Map<java.lang.String, yandex.cloud.api.iam.v1.UserAccountOuterClass.SamlUserAccount.Attribute> values) {
+        internalGetMutableAttributes().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2794,6 +3774,16 @@ public final class UserAccountOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_SamlUserAccount_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2812,11 +3802,16 @@ public final class UserAccountOuterClass {
       "ndex.cloud.iam.v1.SamlUserAccountH\000B\024\n\014u" +
       "ser_account\022\004\300\3011\001\"A\n\031YandexPassportUserA" +
       "ccount\022\r\n\005login\030\001 \001(\t\022\025\n\rdefault_email\030\002" +
-      " \001(\t\"V\n\017SamlUserAccount\022#\n\rfederation_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007name_id\030\002 \001(\tB\r\350" +
-      "\3071\001\212\3101\0051-256BV\n\027yandex.cloud.api.iam.v1Z" +
-      ";github.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/iam/v1;iamb\006proto3"
+      " \001(\t\"\237\002\n\017SamlUserAccount\022#\n\rfederation_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007name_id\030\002 \001(\tB\r" +
+      "\350\3071\001\212\3101\0051-256\022H\n\nattributes\030\003 \003(\01324.yand" +
+      "ex.cloud.iam.v1.SamlUserAccount.Attribut" +
+      "esEntry\032\032\n\tAttribute\022\r\n\005value\030\001 \003(\t\032a\n\017A" +
+      "ttributesEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001" +
+      "(\0132..yandex.cloud.iam.v1.SamlUserAccount" +
+      ".Attribute:\0028\001BV\n\027yandex.cloud.api.iam.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/iam/v1;iamb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2848,7 +3843,19 @@ public final class UserAccountOuterClass {
     internal_static_yandex_cloud_iam_v1_SamlUserAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_SamlUserAccount_descriptor,
-        new java.lang.String[] { "FederationId", "NameId", });
+        new java.lang.String[] { "FederationId", "NameId", "Attributes", });
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor =
+      internal_static_yandex_cloud_iam_v1_SamlUserAccount_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_SamlUserAccount_Attribute_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_descriptor =
+      internal_static_yandex_cloud_iam_v1_SamlUserAccount_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_SamlUserAccount_AttributesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
