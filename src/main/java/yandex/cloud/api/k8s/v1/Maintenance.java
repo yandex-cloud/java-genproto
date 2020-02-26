@@ -19,40 +19,76 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     boolean hasAnytime();
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime();
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder();
 
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     boolean hasDailyMaintenanceWindow();
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow();
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder getDailyMaintenanceWindowOrBuilder();
 
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     boolean hasWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder();
@@ -214,12 +250,20 @@ public final class Maintenance {
 
     public static final int ANYTIME_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public boolean hasAnytime() {
       return policyCase_ == 1;
     }
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
@@ -229,6 +273,10 @@ public final class Maintenance {
       return yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Updating the master at any time.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
@@ -240,12 +288,20 @@ public final class Maintenance {
 
     public static final int DAILY_MAINTENANCE_WINDOW_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     public boolean hasDailyMaintenanceWindow() {
       return policyCase_ == 2;
     }
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow() {
@@ -255,6 +311,10 @@ public final class Maintenance {
       return yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Updating the master on any day during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder getDailyMaintenanceWindowOrBuilder() {
@@ -266,12 +326,20 @@ public final class Maintenance {
 
     public static final int WEEKLY_MAINTENANCE_WINDOW_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     public boolean hasWeeklyMaintenanceWindow() {
       return policyCase_ == 3;
     }
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
@@ -281,6 +349,10 @@ public final class Maintenance {
       return yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Updating the master on selected days during the specified time window.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
@@ -691,12 +763,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder> anytimeBuilder_;
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public boolean hasAnytime() {
         return policyCase_ == 1;
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
@@ -713,6 +793,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -729,6 +813,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(
@@ -743,6 +831,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder mergeAnytime(yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -765,6 +857,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder clearAnytime() {
@@ -784,12 +880,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindow.Builder getAnytimeBuilder() {
         return getAnytimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
@@ -803,6 +907,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master at any time.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -827,12 +935,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder> dailyMaintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public boolean hasDailyMaintenanceWindow() {
         return policyCase_ == 2;
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow getDailyMaintenanceWindow() {
@@ -849,6 +965,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public Builder setDailyMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow value) {
@@ -865,6 +985,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public Builder setDailyMaintenanceWindow(
@@ -879,6 +1003,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public Builder mergeDailyMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow value) {
@@ -901,6 +1029,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public Builder clearDailyMaintenanceWindow() {
@@ -920,12 +1052,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindow.Builder getDailyMaintenanceWindowBuilder() {
         return getDailyMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DailyMaintenanceWindowOrBuilder getDailyMaintenanceWindowOrBuilder() {
@@ -939,6 +1079,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master on any day during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.DailyMaintenanceWindow daily_maintenance_window = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -963,12 +1107,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder> weeklyMaintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public boolean hasWeeklyMaintenanceWindow() {
         return policyCase_ == 3;
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
@@ -985,6 +1137,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public Builder setWeeklyMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -1001,6 +1157,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public Builder setWeeklyMaintenanceWindow(
@@ -1015,6 +1175,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public Builder mergeWeeklyMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -1037,6 +1201,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public Builder clearWeeklyMaintenanceWindow() {
@@ -1056,12 +1224,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindow.Builder getWeeklyMaintenanceWindowBuilder() {
         return getWeeklyMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
@@ -1075,6 +1251,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Updating the master on selected days during the specified time window.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1565,27 +1745,51 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.type.TimeOfDay getStartTime();
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     boolean hasDuration();
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     com.google.protobuf.Duration getDuration();
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
@@ -1690,18 +1894,30 @@ public final class Maintenance {
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.type.TimeOfDay startTime_;
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.type.TimeOfDay getStartTime() {
       return startTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
@@ -1711,18 +1927,30 @@ public final class Maintenance {
     public static final int DURATION_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration duration_;
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public boolean hasDuration() {
       return duration_ != null;
     }
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
@@ -2079,12 +2307,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDay getStartTime() {
@@ -2095,6 +2331,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(com.google.type.TimeOfDay value) {
@@ -2111,6 +2351,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(
@@ -2125,6 +2369,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeStartTime(com.google.type.TimeOfDay value) {
@@ -2143,6 +2391,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearStartTime() {
@@ -2157,6 +2409,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDay.Builder getStartTimeBuilder() {
@@ -2165,6 +2421,10 @@ public final class Maintenance {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
@@ -2176,6 +2436,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2196,12 +2460,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public boolean hasDuration() {
         return durationBuilder_ != null || duration_ != null;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.Duration getDuration() {
@@ -2212,6 +2484,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder setDuration(com.google.protobuf.Duration value) {
@@ -2228,6 +2504,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder setDuration(
@@ -2242,6 +2522,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder mergeDuration(com.google.protobuf.Duration value) {
@@ -2260,6 +2544,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder clearDuration() {
@@ -2274,6 +2562,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.Duration.Builder getDurationBuilder() {
@@ -2282,6 +2574,10 @@ public final class Maintenance {
         return getDurationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
@@ -2293,6 +2589,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 2 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2366,49 +2666,93 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     java.util.List<com.google.type.DayOfWeek> getDaysList();
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     int getDaysCount();
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     com.google.type.DayOfWeek getDays(int index);
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     java.util.List<java.lang.Integer>
     getDaysValueList();
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     int getDaysValue(int index);
 
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.type.TimeOfDay getStartTime();
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     boolean hasDuration();
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     com.google.protobuf.Duration getDuration();
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
@@ -2551,6 +2895,10 @@ public final class Maintenance {
               }
             };
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public java.util.List<com.google.type.DayOfWeek> getDaysList() {
@@ -2558,18 +2906,30 @@ public final class Maintenance {
           java.lang.Integer, com.google.type.DayOfWeek>(days_, days_converter_);
     }
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public int getDaysCount() {
       return days_.size();
     }
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public com.google.type.DayOfWeek getDays(int index) {
       return days_converter_.convert(days_.get(index));
     }
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public java.util.List<java.lang.Integer>
@@ -2577,6 +2937,10 @@ public final class Maintenance {
       return days_;
     }
     /**
+     * <pre>
+     * Days of the week when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public int getDaysValue(int index) {
@@ -2587,18 +2951,30 @@ public final class Maintenance {
     public static final int START_TIME_FIELD_NUMBER = 2;
     private com.google.type.TimeOfDay startTime_;
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.type.TimeOfDay getStartTime() {
       return startTime_ == null ? com.google.type.TimeOfDay.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Window start time, in the UTC timezone.
+     * </pre>
+     *
      * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
@@ -2608,18 +2984,30 @@ public final class Maintenance {
     public static final int DURATION_FIELD_NUMBER = 3;
     private com.google.protobuf.Duration duration_;
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public boolean hasDuration() {
       return duration_ != null;
     }
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public com.google.protobuf.Duration getDuration() {
       return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
     }
     /**
+     * <pre>
+     * Window duration.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
@@ -3027,6 +3415,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public java.util.List<com.google.type.DayOfWeek> getDaysList() {
@@ -3034,18 +3426,30 @@ public final class Maintenance {
             java.lang.Integer, com.google.type.DayOfWeek>(days_, days_converter_);
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public int getDaysCount() {
         return days_.size();
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public com.google.type.DayOfWeek getDays(int index) {
         return days_converter_.convert(days_.get(index));
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder setDays(
@@ -3059,6 +3463,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDays(com.google.type.DayOfWeek value) {
@@ -3071,6 +3479,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addAllDays(
@@ -3083,6 +3495,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder clearDays() {
@@ -3092,6 +3508,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public java.util.List<java.lang.Integer>
@@ -3099,12 +3519,20 @@ public final class Maintenance {
         return java.util.Collections.unmodifiableList(days_);
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public int getDaysValue(int index) {
         return days_.get(index);
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder setDaysValue(
@@ -3115,6 +3543,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDaysValue(int value) {
@@ -3124,6 +3556,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .google.type.DayOfWeek days = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addAllDaysValue(
@@ -3140,12 +3576,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.TimeOfDay, com.google.type.TimeOfDay.Builder, com.google.type.TimeOfDayOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDay getStartTime() {
@@ -3156,6 +3600,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(com.google.type.TimeOfDay value) {
@@ -3172,6 +3620,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStartTime(
@@ -3186,6 +3638,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeStartTime(com.google.type.TimeOfDay value) {
@@ -3204,6 +3660,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearStartTime() {
@@ -3218,6 +3678,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDay.Builder getStartTimeBuilder() {
@@ -3226,6 +3690,10 @@ public final class Maintenance {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.type.TimeOfDayOrBuilder getStartTimeOrBuilder() {
@@ -3237,6 +3705,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window start time, in the UTC timezone.
+       * </pre>
+       *
        * <code>.google.type.TimeOfDay start_time = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3257,12 +3729,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public boolean hasDuration() {
         return durationBuilder_ != null || duration_ != null;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.Duration getDuration() {
@@ -3273,6 +3753,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder setDuration(com.google.protobuf.Duration value) {
@@ -3289,6 +3773,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder setDuration(
@@ -3303,6 +3791,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder mergeDuration(com.google.protobuf.Duration value) {
@@ -3321,6 +3813,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public Builder clearDuration() {
@@ -3335,6 +3831,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.Duration.Builder getDurationBuilder() {
@@ -3343,6 +3843,10 @@ public final class Maintenance {
         return getDurationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
@@ -3354,6 +3858,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Window duration.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration duration = 3 [(.yandex.cloud.value) = "1h-24h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3427,24 +3935,44 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> 
         getDaysOfWeekList();
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow getDaysOfWeek(int index);
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     int getDaysOfWeekCount();
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     java.util.List<? extends yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder> 
         getDaysOfWeekOrBuilderList();
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder getDaysOfWeekOrBuilder(
@@ -3537,12 +4065,20 @@ public final class Maintenance {
     public static final int DAYS_OF_WEEK_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> daysOfWeek_;
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> getDaysOfWeekList() {
       return daysOfWeek_;
     }
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder> 
@@ -3550,18 +4086,30 @@ public final class Maintenance {
       return daysOfWeek_;
     }
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public int getDaysOfWeekCount() {
       return daysOfWeek_.size();
     }
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow getDaysOfWeek(int index) {
       return daysOfWeek_.get(index);
     }
     /**
+     * <pre>
+     * Days of the week and the maintenance window for these days when automatic updates are allowed.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder getDaysOfWeekOrBuilder(
@@ -3925,6 +4473,10 @@ public final class Maintenance {
           yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder> daysOfWeekBuilder_;
 
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow> getDaysOfWeekList() {
@@ -3935,6 +4487,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public int getDaysOfWeekCount() {
@@ -3945,6 +4501,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow getDaysOfWeek(int index) {
@@ -3955,6 +4515,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder setDaysOfWeek(
@@ -3972,6 +4536,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder setDaysOfWeek(
@@ -3986,6 +4554,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDaysOfWeek(yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow value) {
@@ -4002,6 +4574,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDaysOfWeek(
@@ -4019,6 +4595,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDaysOfWeek(
@@ -4033,6 +4613,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addDaysOfWeek(
@@ -4047,6 +4631,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder addAllDaysOfWeek(
@@ -4062,6 +4650,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder clearDaysOfWeek() {
@@ -4075,6 +4667,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public Builder removeDaysOfWeek(int index) {
@@ -4088,6 +4684,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder getDaysOfWeekBuilder(
@@ -4095,6 +4695,10 @@ public final class Maintenance {
         return getDaysOfWeekFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder getDaysOfWeekOrBuilder(
@@ -4105,6 +4709,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindowOrBuilder> 
@@ -4116,6 +4724,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder addDaysOfWeekBuilder() {
@@ -4123,6 +4735,10 @@ public final class Maintenance {
             yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder addDaysOfWeekBuilder(
@@ -4131,6 +4747,10 @@ public final class Maintenance {
             index, yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Days of the week and the maintenance window for these days when automatic updates are allowed.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.DaysOfWeekMaintenanceWindow days_of_week = 1 [(.yandex.cloud.size) = "1-7"];</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.Maintenance.DaysOfWeekMaintenanceWindow.Builder> 

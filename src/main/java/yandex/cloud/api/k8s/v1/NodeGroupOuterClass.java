@@ -425,45 +425,85 @@ public final class NodeGroupOuterClass {
         getNodeVersionBytes();
 
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     boolean hasVersionInfo();
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo();
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     java.util.List<java.lang.String>
         getAllowedUnsafeSysctlsList();
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     int getAllowedUnsafeSysctlsCount();
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     java.lang.String getAllowedUnsafeSysctls(int index);
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     com.google.protobuf.ByteString
@@ -1422,18 +1462,30 @@ public final class NodeGroupOuterClass {
     public static final int VERSION_INFO_FIELD_NUMBER = 13;
     private yandex.cloud.api.k8s.v1.Version.VersionInfo versionInfo_;
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     public boolean hasVersionInfo() {
       return versionInfo_ != null;
     }
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo() {
       return versionInfo_ == null ? yandex.cloud.api.k8s.v1.Version.VersionInfo.getDefaultInstance() : versionInfo_;
     }
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the node.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder() {
@@ -1443,18 +1495,30 @@ public final class NodeGroupOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 14;
     private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -1464,6 +1528,10 @@ public final class NodeGroupOuterClass {
     public static final int ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER = 15;
     private com.google.protobuf.LazyStringList allowedUnsafeSysctls_;
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -1471,18 +1539,30 @@ public final class NodeGroupOuterClass {
       return allowedUnsafeSysctls_;
     }
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     public int getAllowedUnsafeSysctlsCount() {
       return allowedUnsafeSysctls_.size();
     }
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     public java.lang.String getAllowedUnsafeSysctls(int index) {
       return allowedUnsafeSysctls_.get(index);
     }
     /**
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
      * <code>repeated string allowed_unsafe_sysctls = 15;</code>
      */
     public com.google.protobuf.ByteString
@@ -3537,12 +3617,20 @@ public final class NodeGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.VersionInfo, yandex.cloud.api.k8s.v1.Version.VersionInfo.Builder, yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder> versionInfoBuilder_;
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public boolean hasVersionInfo() {
         return versionInfoBuilder_ != null || versionInfo_ != null;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo() {
@@ -3553,6 +3641,10 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public Builder setVersionInfo(yandex.cloud.api.k8s.v1.Version.VersionInfo value) {
@@ -3569,6 +3661,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public Builder setVersionInfo(
@@ -3583,6 +3679,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public Builder mergeVersionInfo(yandex.cloud.api.k8s.v1.Version.VersionInfo value) {
@@ -3601,6 +3701,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public Builder clearVersionInfo() {
@@ -3615,6 +3719,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfo.Builder getVersionInfoBuilder() {
@@ -3623,6 +3731,10 @@ public final class NodeGroupOuterClass {
         return getVersionInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder() {
@@ -3634,6 +3746,10 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the node.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3654,12 +3770,20 @@ public final class NodeGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
@@ -3670,6 +3794,10 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -3686,6 +3814,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public Builder setMaintenancePolicy(
@@ -3700,6 +3832,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -3718,6 +3854,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -3732,6 +3872,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -3740,6 +3884,10 @@ public final class NodeGroupOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -3751,6 +3899,10 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3775,6 +3927,10 @@ public final class NodeGroupOuterClass {
          }
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3782,18 +3938,30 @@ public final class NodeGroupOuterClass {
         return allowedUnsafeSysctls_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public int getAllowedUnsafeSysctlsCount() {
         return allowedUnsafeSysctls_.size();
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public java.lang.String getAllowedUnsafeSysctls(int index) {
         return allowedUnsafeSysctls_.get(index);
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public com.google.protobuf.ByteString
@@ -3801,6 +3969,10 @@ public final class NodeGroupOuterClass {
         return allowedUnsafeSysctls_.getByteString(index);
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public Builder setAllowedUnsafeSysctls(
@@ -3814,6 +3986,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public Builder addAllowedUnsafeSysctls(
@@ -3827,6 +4003,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public Builder addAllAllowedUnsafeSysctls(
@@ -3838,6 +4018,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public Builder clearAllowedUnsafeSysctls() {
@@ -3847,6 +4031,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
        * <code>repeated string allowed_unsafe_sysctls = 15;</code>
        */
       public Builder addAllowedUnsafeSysctlsBytes(
@@ -3962,9 +4150,7 @@ public final class NodeGroupOuterClass {
 
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -3972,9 +4158,7 @@ public final class NodeGroupOuterClass {
     boolean hasBootDiskSpec();
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -3982,9 +4166,7 @@ public final class NodeGroupOuterClass {
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpec getBootDiskSpec();
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -3992,10 +4174,22 @@ public final class NodeGroupOuterClass {
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpecOrBuilder getBootDiskSpecOrBuilder();
 
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getMetadataCount();
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsMetadata(
@@ -4007,11 +4201,23 @@ public final class NodeGroupOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getMetadata();
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getMetadataMap();
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4019,6 +4225,12 @@ public final class NodeGroupOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4310,9 +4522,7 @@ public final class NodeGroupOuterClass {
     private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpec bootDiskSpec_;
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -4322,9 +4532,7 @@ public final class NodeGroupOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -4334,9 +4542,7 @@ public final class NodeGroupOuterClass {
     }
     /**
      * <pre>
-     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-     * For example, you may use the metadata in order to provide your public SSH key to the node.
-     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * Specification for the boot disk that will be attached to the node.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -4372,6 +4578,12 @@ public final class NodeGroupOuterClass {
       return internalGetMetadata().getMap().size();
     }
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4388,6 +4600,12 @@ public final class NodeGroupOuterClass {
       return getMetadataMap();
     }
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4395,6 +4613,12 @@ public final class NodeGroupOuterClass {
       return internalGetMetadata().getMap();
     }
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4407,6 +4631,12 @@ public final class NodeGroupOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+     * For example, you may use the metadata in order to provide your public SSH key to the node.
+     * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5210,9 +5440,7 @@ public final class NodeGroupOuterClass {
           yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpec, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpec.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DiskSpecOrBuilder> bootDiskSpecBuilder_;
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5222,9 +5450,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5238,9 +5464,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5260,9 +5484,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5280,9 +5502,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5304,9 +5524,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5324,9 +5542,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5338,9 +5554,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5355,9 +5569,7 @@ public final class NodeGroupOuterClass {
       }
       /**
        * <pre>
-       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
-       * For example, you may use the metadata in order to provide your public SSH key to the node.
-       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * Specification for the boot disk that will be attached to the node.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.DiskSpec boot_disk_spec = 3;</code>
@@ -5403,6 +5615,12 @@ public final class NodeGroupOuterClass {
         return internalGetMetadata().getMap().size();
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5419,6 +5637,12 @@ public final class NodeGroupOuterClass {
         return getMetadataMap();
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5426,6 +5650,12 @@ public final class NodeGroupOuterClass {
         return internalGetMetadata().getMap();
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5438,6 +5668,12 @@ public final class NodeGroupOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5458,6 +5694,12 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5477,6 +5719,12 @@ public final class NodeGroupOuterClass {
         return internalGetMutableMetadata().getMutableMap();
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putMetadata(
@@ -5489,6 +5737,12 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The metadata as `key:value` pairs assigned to this instance template. This includes custom metadata and predefined keys.
+       * For example, you may use the metadata in order to provide your public SSH key to the node.
+       * For more information, see [Metadata](/docs/compute/concepts/vm-metadata).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; metadata = 4 [(.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=131072", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -12771,24 +13025,48 @@ public final class NodeGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+     * If set to false, automatic upgrades are disabled.
+     * </pre>
+     *
      * <code>bool auto_upgrade = 1;</code>
      */
     boolean getAutoUpgrade();
 
     /**
+     * <pre>
+     * If set to true, automatic repairs are enabled. Default value is false.
+     * </pre>
+     *
      * <code>bool auto_repair = 2;</code>
      */
     boolean getAutoRepair();
 
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     boolean hasMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
@@ -12892,6 +13170,11 @@ public final class NodeGroupOuterClass {
     public static final int AUTO_UPGRADE_FIELD_NUMBER = 1;
     private boolean autoUpgrade_;
     /**
+     * <pre>
+     * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+     * If set to false, automatic upgrades are disabled.
+     * </pre>
+     *
      * <code>bool auto_upgrade = 1;</code>
      */
     public boolean getAutoUpgrade() {
@@ -12901,6 +13184,10 @@ public final class NodeGroupOuterClass {
     public static final int AUTO_REPAIR_FIELD_NUMBER = 2;
     private boolean autoRepair_;
     /**
+     * <pre>
+     * If set to true, automatic repairs are enabled. Default value is false.
+     * </pre>
+     *
      * <code>bool auto_repair = 2;</code>
      */
     public boolean getAutoRepair() {
@@ -12910,18 +13197,33 @@ public final class NodeGroupOuterClass {
     public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 3;
     private yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     public boolean hasMaintenanceWindow() {
       return maintenanceWindow_ != null;
     }
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
       return maintenanceWindow_ == null ? yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
     }
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
@@ -13282,12 +13584,22 @@ public final class NodeGroupOuterClass {
 
       private boolean autoUpgrade_ ;
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public boolean getAutoUpgrade() {
         return autoUpgrade_;
       }
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public Builder setAutoUpgrade(boolean value) {
@@ -13297,6 +13609,11 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public Builder clearAutoUpgrade() {
@@ -13308,12 +13625,20 @@ public final class NodeGroupOuterClass {
 
       private boolean autoRepair_ ;
       /**
+       * <pre>
+       * If set to true, automatic repairs are enabled. Default value is false.
+       * </pre>
+       *
        * <code>bool auto_repair = 2;</code>
        */
       public boolean getAutoRepair() {
         return autoRepair_;
       }
       /**
+       * <pre>
+       * If set to true, automatic repairs are enabled. Default value is false.
+       * </pre>
+       *
        * <code>bool auto_repair = 2;</code>
        */
       public Builder setAutoRepair(boolean value) {
@@ -13323,6 +13648,10 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If set to true, automatic repairs are enabled. Default value is false.
+       * </pre>
+       *
        * <code>bool auto_repair = 2;</code>
        */
       public Builder clearAutoRepair() {
@@ -13336,12 +13665,22 @@ public final class NodeGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public boolean hasMaintenanceWindow() {
         return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
@@ -13352,6 +13691,11 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public Builder setMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow value) {
@@ -13368,6 +13712,11 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public Builder setMaintenanceWindow(
@@ -13382,6 +13731,11 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public Builder mergeMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow value) {
@@ -13400,6 +13754,11 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public Builder clearMaintenanceWindow() {
@@ -13414,6 +13773,11 @@ public final class NodeGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
@@ -13422,6 +13786,11 @@ public final class NodeGroupOuterClass {
         return getMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
@@ -13433,6 +13802,11 @@ public final class NodeGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

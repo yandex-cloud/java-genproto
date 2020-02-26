@@ -24388,28 +24388,28 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     boolean hasIntervalDuration();
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     com.google.protobuf.Int64Value getIntervalDuration();
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder();
 
@@ -24712,10 +24712,10 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     public boolean hasIntervalDuration() {
       return intervalDuration_ != null;
@@ -24723,10 +24723,10 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     public com.google.protobuf.Int64Value getIntervalDuration() {
       return intervalDuration_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : intervalDuration_;
@@ -24734,10 +24734,10 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Duration of interval for quota in milliseconds.
-     * Minimal value is 1 minute.
+     * Minimal value is 1 second.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+     * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder() {
       return getIntervalDuration();
@@ -25400,10 +25400,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public boolean hasIntervalDuration() {
         return intervalDurationBuilder_ != null || intervalDuration_ != null;
@@ -25411,10 +25411,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public com.google.protobuf.Int64Value getIntervalDuration() {
         if (intervalDurationBuilder_ == null) {
@@ -25426,10 +25426,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public Builder setIntervalDuration(com.google.protobuf.Int64Value value) {
         if (intervalDurationBuilder_ == null) {
@@ -25447,10 +25447,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public Builder setIntervalDuration(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -25466,10 +25466,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public Builder mergeIntervalDuration(com.google.protobuf.Int64Value value) {
         if (intervalDurationBuilder_ == null) {
@@ -25489,10 +25489,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public Builder clearIntervalDuration() {
         if (intervalDurationBuilder_ == null) {
@@ -25508,10 +25508,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getIntervalDurationBuilder() {
         
@@ -25521,10 +25521,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getIntervalDurationOrBuilder() {
         if (intervalDurationBuilder_ != null) {
@@ -25537,10 +25537,10 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Duration of interval for quota in milliseconds.
-       * Minimal value is 1 minute.
+       * Minimal value is 1 second.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=60000"];</code>
+       * <code>.google.protobuf.Int64Value interval_duration = 1 [(.yandex.cloud.value) = "&gt;=1000"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -26620,19 +26620,19 @@ public final class UserOuterClass {
       "BUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED" +
       "_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRO" +
       "DUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUC" +
-      "T_MODE_ALLOW\020\004\"\357\002\n\tUserQuota\022C\n\021interval" +
+      "T_MODE_ALLOW\020\004\"\356\002\n\tUserQuota\022B\n\021interval" +
       "_duration\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\013\372\3071\007>=60000\0225\n\007queries\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006erro" +
-      "rs\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005" +
-      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022<\n\016execution_time\030\006 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud" +
-      ".api.mdb.clickhouse.v1ZMgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
-      "ckhouse/v1;clickhouseb\006proto3"
+      "alueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006error" +
+      "s\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022<\n\016execution_time\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud." +
+      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
+      "khouse/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

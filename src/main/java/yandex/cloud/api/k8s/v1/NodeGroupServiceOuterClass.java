@@ -648,7 +648,7 @@ public final class NodeGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -657,7 +657,7 @@ public final class NodeGroupServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -855,7 +855,7 @@ public final class NodeGroupServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -875,7 +875,7 @@ public final class NodeGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1447,7 +1447,7 @@ public final class NodeGroupServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1467,7 +1467,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1488,7 +1488,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1506,7 +1506,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1520,7 +1520,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1751,10 +1751,10 @@ public final class NodeGroupServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1764,10 +1764,10 @@ public final class NodeGroupServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1928,10 +1928,10 @@ public final class NodeGroupServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1952,10 +1952,10 @@ public final class NodeGroupServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2653,10 +2653,10 @@ public final class NodeGroupServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2677,10 +2677,10 @@ public final class NodeGroupServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2702,10 +2702,10 @@ public final class NodeGroupServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2724,10 +2724,10 @@ public final class NodeGroupServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2742,10 +2742,10 @@ public final class NodeGroupServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4220,46 +4220,86 @@ public final class NodeGroupServiceOuterClass {
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupAllocationPolicyOrBuilder getAllocationPolicyOrBuilder();
 
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     boolean hasVersion();
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion();
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     java.util.List<java.lang.String>
         getAllowedUnsafeSysctlsList();
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     int getAllowedUnsafeSysctlsCount();
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     java.lang.String getAllowedUnsafeSysctls(int index);
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     com.google.protobuf.ByteString
         getAllowedUnsafeSysctlsBytes(int index);
@@ -4837,18 +4877,30 @@ public final class NodeGroupServiceOuterClass {
     public static final int VERSION_FIELD_NUMBER = 10;
     private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     public boolean hasVersion() {
       return version_ != null;
     }
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
       return version_ == null ? yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.getDefaultInstance() : version_;
     }
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder() {
@@ -4858,18 +4910,30 @@ public final class NodeGroupServiceOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 11;
     private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -4879,26 +4943,42 @@ public final class NodeGroupServiceOuterClass {
     public static final int ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER = 12;
     private com.google.protobuf.LazyStringList allowedUnsafeSysctls_;
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getAllowedUnsafeSysctlsList() {
       return allowedUnsafeSysctls_;
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public int getAllowedUnsafeSysctlsCount() {
       return allowedUnsafeSysctls_.size();
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public java.lang.String getAllowedUnsafeSysctls(int index) {
       return allowedUnsafeSysctls_.get(index);
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public com.google.protobuf.ByteString
         getAllowedUnsafeSysctlsBytes(int index) {
@@ -6569,12 +6649,20 @@ public final class NodeGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder> versionBuilder_;
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
@@ -6585,6 +6673,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public Builder setVersion(yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec value) {
@@ -6601,6 +6693,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public Builder setVersion(
@@ -6615,6 +6711,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public Builder mergeVersion(yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec value) {
@@ -6633,6 +6733,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public Builder clearVersion() {
@@ -6647,6 +6751,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder getVersionBuilder() {
@@ -6655,6 +6763,10 @@ public final class NodeGroupServiceOuterClass {
         return getVersionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder() {
@@ -6666,6 +6778,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6686,12 +6802,20 @@ public final class NodeGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
@@ -6702,6 +6826,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -6718,6 +6846,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public Builder setMaintenancePolicy(
@@ -6732,6 +6864,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -6750,6 +6886,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -6764,6 +6904,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -6772,6 +6916,10 @@ public final class NodeGroupServiceOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -6783,6 +6931,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6807,33 +6959,53 @@ public final class NodeGroupServiceOuterClass {
          }
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getAllowedUnsafeSysctlsList() {
         return allowedUnsafeSysctls_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public int getAllowedUnsafeSysctlsCount() {
         return allowedUnsafeSysctls_.size();
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public java.lang.String getAllowedUnsafeSysctls(int index) {
         return allowedUnsafeSysctls_.get(index);
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public com.google.protobuf.ByteString
           getAllowedUnsafeSysctlsBytes(int index) {
         return allowedUnsafeSysctls_.getByteString(index);
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder setAllowedUnsafeSysctls(
           int index, java.lang.String value) {
@@ -6846,7 +7018,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllowedUnsafeSysctls(
           java.lang.String value) {
@@ -6859,7 +7035,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllAllowedUnsafeSysctls(
           java.lang.Iterable<java.lang.String> values) {
@@ -6870,7 +7050,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder clearAllowedUnsafeSysctls() {
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -6879,7 +7063,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 12;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 12 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllowedUnsafeSysctlsBytes(
           com.google.protobuf.ByteString value) {
@@ -7723,43 +7911,79 @@ public final class NodeGroupServiceOuterClass {
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupAllocationPolicyOrBuilder getAllocationPolicyOrBuilder();
 
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>string version = 8;</code>
      */
     java.lang.String getVersion();
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>string version = 8;</code>
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     java.util.List<java.lang.String>
         getAllowedUnsafeSysctlsList();
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     int getAllowedUnsafeSysctlsCount();
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     java.lang.String getAllowedUnsafeSysctls(int index);
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     com.google.protobuf.ByteString
         getAllowedUnsafeSysctlsBytes(int index);
@@ -8278,6 +8502,10 @@ public final class NodeGroupServiceOuterClass {
     public static final int VERSION_FIELD_NUMBER = 8;
     private volatile java.lang.Object version_;
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>string version = 8;</code>
      */
     public java.lang.String getVersion() {
@@ -8293,6 +8521,10 @@ public final class NodeGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the nodes.
+     * </pre>
+     *
      * <code>string version = 8;</code>
      */
     public com.google.protobuf.ByteString
@@ -8312,18 +8544,30 @@ public final class NodeGroupServiceOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 9;
     private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the node group.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
      */
     public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -8333,26 +8577,42 @@ public final class NodeGroupServiceOuterClass {
     public static final int ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER = 10;
     private com.google.protobuf.LazyStringList allowedUnsafeSysctls_;
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getAllowedUnsafeSysctlsList() {
       return allowedUnsafeSysctls_;
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public int getAllowedUnsafeSysctlsCount() {
       return allowedUnsafeSysctls_.size();
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public java.lang.String getAllowedUnsafeSysctls(int index) {
       return allowedUnsafeSysctls_.get(index);
     }
     /**
-     * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+     * <pre>
+     * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+     * </pre>
+     *
+     * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
      */
     public com.google.protobuf.ByteString
         getAllowedUnsafeSysctlsBytes(int index) {
@@ -9809,6 +10069,10 @@ public final class NodeGroupServiceOuterClass {
 
       private java.lang.Object version_ = "";
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>string version = 8;</code>
        */
       public java.lang.String getVersion() {
@@ -9824,6 +10088,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>string version = 8;</code>
        */
       public com.google.protobuf.ByteString
@@ -9840,6 +10108,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>string version = 8;</code>
        */
       public Builder setVersion(
@@ -9853,6 +10125,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>string version = 8;</code>
        */
       public Builder clearVersion() {
@@ -9862,6 +10138,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the nodes.
+       * </pre>
+       *
        * <code>string version = 8;</code>
        */
       public Builder setVersionBytes(
@@ -9880,12 +10160,20 @@ public final class NodeGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy getMaintenancePolicy() {
@@ -9896,6 +10184,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -9912,6 +10204,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public Builder setMaintenancePolicy(
@@ -9926,6 +10222,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy value) {
@@ -9944,6 +10244,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -9958,6 +10262,10 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -9966,6 +10274,10 @@ public final class NodeGroupServiceOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.NodeGroupMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -9977,6 +10289,10 @@ public final class NodeGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the node group.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.NodeGroupMaintenancePolicy maintenance_policy = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10001,33 +10317,53 @@ public final class NodeGroupServiceOuterClass {
          }
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getAllowedUnsafeSysctlsList() {
         return allowedUnsafeSysctls_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public int getAllowedUnsafeSysctlsCount() {
         return allowedUnsafeSysctls_.size();
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public java.lang.String getAllowedUnsafeSysctls(int index) {
         return allowedUnsafeSysctls_.get(index);
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public com.google.protobuf.ByteString
           getAllowedUnsafeSysctlsBytes(int index) {
         return allowedUnsafeSysctls_.getByteString(index);
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder setAllowedUnsafeSysctls(
           int index, java.lang.String value) {
@@ -10040,7 +10376,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllowedUnsafeSysctls(
           java.lang.String value) {
@@ -10053,7 +10393,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllAllowedUnsafeSysctls(
           java.lang.Iterable<java.lang.String> values) {
@@ -10064,7 +10408,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder clearAllowedUnsafeSysctls() {
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -10073,7 +10421,11 @@ public final class NodeGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string allowed_unsafe_sysctls = 10;</code>
+       * <pre>
+       * Support for unsafe sysctl parameters. For more details see [documentation](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/).
+       * </pre>
+       *
+       * <code>repeated string allowed_unsafe_sysctls = 10 [(.yandex.cloud.pattern) = "([a-z0-9]([-_a-z0-9]*[a-z0-9])?&#92;&#92;.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]", (.yandex.cloud.length) = "&lt;=253"];</code>
        */
       public Builder addAllowedUnsafeSysctlsBytes(
           com.google.protobuf.ByteString value) {
@@ -11347,7 +11699,7 @@ public final class NodeGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11356,7 +11708,7 @@ public final class NodeGroupServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11545,7 +11897,7 @@ public final class NodeGroupServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11565,7 +11917,7 @@ public final class NodeGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -12123,7 +12475,7 @@ public final class NodeGroupServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12143,7 +12495,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12164,7 +12516,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12182,7 +12534,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12196,7 +12548,7 @@ public final class NodeGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListNodeGroupOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12411,9 +12763,9 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -12422,9 +12774,9 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -12584,9 +12936,9 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -12606,9 +12958,9 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -13305,9 +13657,9 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -13327,9 +13679,9 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -13350,9 +13702,9 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -13370,9 +13722,9 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -13386,9 +13738,9 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListNodeGroupOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListNodeGroupOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListNodeGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -13553,7 +13905,7 @@ public final class NodeGroupServiceOuterClass {
       "loud.k8s.v1.NodeGroup\022\027\n\017next_page_token" +
       "\030\002 \001(\t\"5\n\026DeleteNodeGroupRequest\022\033\n\rnode" +
       "_group_id\030\001 \001(\tB\004\350\3071\001\"0\n\027DeleteNodeGroup" +
-      "Metadata\022\025\n\rnode_group_id\030\001 \001(\t\"\324\005\n\026Upda" +
+      "Metadata\022\025\n\rnode_group_id\030\001 \001(\t\"\245\006\n\026Upda" +
       "teNodeGroupRequest\022\033\n\rnode_group_id\030\001 \001(" +
       "\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
       "otobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-" +
@@ -13570,65 +13922,69 @@ public final class NodeGroupServiceOuterClass {
       "(\0132&.yandex.cloud.k8s.v1.UpdateVersionSp" +
       "ec\022K\n\022maintenance_policy\030\013 \001(\0132/.yandex." +
       "cloud.k8s.v1.NodeGroupMaintenancePolicy\022" +
-      "\036\n\026allowed_unsafe_sysctls\030\014 \003(\t\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6" +
-      "\n\027UpdateNodeGroupMetadata\022\033\n\rnode_group_" +
-      "id\030\001 \001(\tB\004\350\3071\001\"\204\005\n\026CreateNodeGroupReques" +
-      "t\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001(" +
-      "\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013" +
-      "description\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030" +
-      "\004 \003(\01327.yandex.cloud.k8s.v1.CreateNodeGr" +
-      "oupRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
-      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\022>\n\rnode_template\030\005 \001(\0132!.yandex." +
-      "cloud.k8s.v1.NodeTemplateB\004\350\3071\001\022<\n\014scale" +
-      "_policy\030\006 \001(\0132 .yandex.cloud.k8s.v1.Scal" +
-      "ePolicyB\004\350\3071\001\022I\n\021allocation_policy\030\007 \001(\013" +
-      "2..yandex.cloud.k8s.v1.NodeGroupAllocati" +
-      "onPolicy\022\017\n\007version\030\010 \001(\t\022K\n\022maintenance" +
-      "_policy\030\t \001(\0132/.yandex.cloud.k8s.v1.Node" +
-      "GroupMaintenancePolicy\022\036\n\026allowed_unsafe" +
-      "_sysctls\030\n \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027CreateNodeGroup" +
-      "Metadata\022\025\n\rnode_group_id\030\001 \001(\t\"5\n\034AutoU" +
-      "pgradeNodeGroupMetadata\022\025\n\rnode_group_id" +
-      "\030\001 \001(\t\"\227\001\n\036ListNodeGroupOperationsReques" +
-      "t\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
-      "\"q\n\037ListNodeGroupOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\254\010\n\020" +
-      "NodeGroupService\022\212\001\n\003Get\022(.yandex.cloud." +
-      "k8s.v1.GetNodeGroupRequest\032\036.yandex.clou" +
-      "d.k8s.v1.NodeGroup\"9\202\323\344\223\0023\0221/managed-kub" +
-      "ernetes/v1/nodeGroups/{node_group_id}\022\212\001" +
-      "\n\004List\022*.yandex.cloud.k8s.v1.ListNodeGro" +
-      "upsRequest\032+.yandex.cloud.k8s.v1.ListNod" +
-      "eGroupsResponse\")\202\323\344\223\002#\022!/managed-kubern" +
-      "etes/v1/nodeGroups\022\256\001\n\006Create\022+.yandex.c" +
-      "loud.k8s.v1.CreateNodeGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"T\202\323\344\223\002&\"!/" +
-      "managed-kubernetes/v1/nodeGroups:\001*\262\322*$\n" +
-      "\027CreateNodeGroupMetadata\022\tNodeGroup\022\276\001\n\006" +
-      "Update\022+.yandex.cloud.k8s.v1.UpdateNodeG" +
-      "roupRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"d\202\323\344\223\002621/managed-kubernetes/v1/n" +
-      "odeGroups/{node_group_id}:\001*\262\322*$\n\027Update" +
-      "NodeGroupMetadata\022\tNodeGroup\022\307\001\n\006Delete\022" +
-      "+.yandex.cloud.k8s.v1.DeleteNodeGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "m\202\323\344\223\0023*1/managed-kubernetes/v1/nodeGrou" +
-      "ps/{node_group_id}\262\322*0\n\027DeleteNodeGroupM" +
-      "etadata\022\025google.protobuf.Empty\022\301\001\n\016ListO" +
-      "perations\0223.yandex.cloud.k8s.v1.ListNode" +
-      "GroupOperationsRequest\0324.yandex.cloud.k8" +
-      "s.v1.ListNodeGroupOperationsResponse\"D\202\323" +
-      "\344\223\002>\022</managed-kubernetes/v1/nodeGroups/" +
-      "{node_group_id}/operationsBV\n\027yandex.clo" +
-      "ud.api.k8s.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/k8s/v1;k8sb\006prot" +
-      "o3"
+      "o\n\026allowed_unsafe_sysctls\030\014 \003(\tBO\212\3101\005<=2" +
+      "53\362\3071B([a-z0-9]([-_a-z0-9]*[a-z0-9])?\\.)" +
+      "*([a-z0-9][-_a-z0-9]*)?[a-z0-9*]\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "6\n\027UpdateNodeGroupMetadata\022\033\n\rnode_group" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"\325\005\n\026CreateNodeGroupReque" +
+      "st\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001" +
+      "(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n" +
+      "\013description\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels" +
+      "\030\004 \003(\01327.yandex.cloud.k8s.v1.CreateNodeG" +
+      "roupRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022>\n\rnode_template\030\005 \001(\0132!.yandex" +
+      ".cloud.k8s.v1.NodeTemplateB\004\350\3071\001\022<\n\014scal" +
+      "e_policy\030\006 \001(\0132 .yandex.cloud.k8s.v1.Sca" +
+      "lePolicyB\004\350\3071\001\022I\n\021allocation_policy\030\007 \001(" +
+      "\0132..yandex.cloud.k8s.v1.NodeGroupAllocat" +
+      "ionPolicy\022\017\n\007version\030\010 \001(\t\022K\n\022maintenanc" +
+      "e_policy\030\t \001(\0132/.yandex.cloud.k8s.v1.Nod" +
+      "eGroupMaintenancePolicy\022o\n\026allowed_unsaf" +
+      "e_sysctls\030\n \003(\tBO\212\3101\005<=253\362\3071B([a-z0-9](" +
+      "[-_a-z0-9]*[a-z0-9])?\\.)*([a-z0-9][-_a-z" +
+      "0-9]*)?[a-z0-9*]\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027CreateNodeGro" +
+      "upMetadata\022\025\n\rnode_group_id\030\001 \001(\t\"5\n\034Aut" +
+      "oUpgradeNodeGroupMetadata\022\025\n\rnode_group_" +
+      "id\030\001 \001(\t\"\227\001\n\036ListNodeGroupOperationsRequ" +
+      "est\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
+      "00\"q\n\037ListNodeGroupOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\254\010" +
+      "\n\020NodeGroupService\022\212\001\n\003Get\022(.yandex.clou" +
+      "d.k8s.v1.GetNodeGroupRequest\032\036.yandex.cl" +
+      "oud.k8s.v1.NodeGroup\"9\202\323\344\223\0023\0221/managed-k" +
+      "ubernetes/v1/nodeGroups/{node_group_id}\022" +
+      "\212\001\n\004List\022*.yandex.cloud.k8s.v1.ListNodeG" +
+      "roupsRequest\032+.yandex.cloud.k8s.v1.ListN" +
+      "odeGroupsResponse\")\202\323\344\223\002#\022!/managed-kube" +
+      "rnetes/v1/nodeGroups\022\256\001\n\006Create\022+.yandex" +
+      ".cloud.k8s.v1.CreateNodeGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"T\202\323\344\223\002&\"" +
+      "!/managed-kubernetes/v1/nodeGroups:\001*\262\322*" +
+      "$\n\027CreateNodeGroupMetadata\022\tNodeGroup\022\276\001" +
+      "\n\006Update\022+.yandex.cloud.k8s.v1.UpdateNod" +
+      "eGroupRequest\032!.yandex.cloud.operation.O" +
+      "peration\"d\202\323\344\223\002621/managed-kubernetes/v1" +
+      "/nodeGroups/{node_group_id}:\001*\262\322*$\n\027Upda" +
+      "teNodeGroupMetadata\022\tNodeGroup\022\307\001\n\006Delet" +
+      "e\022+.yandex.cloud.k8s.v1.DeleteNodeGroupR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"m\202\323\344\223\0023*1/managed-kubernetes/v1/nodeGr" +
+      "oups/{node_group_id}\262\322*0\n\027DeleteNodeGrou" +
+      "pMetadata\022\025google.protobuf.Empty\022\301\001\n\016Lis" +
+      "tOperations\0223.yandex.cloud.k8s.v1.ListNo" +
+      "deGroupOperationsRequest\0324.yandex.cloud." +
+      "k8s.v1.ListNodeGroupOperationsResponse\"D" +
+      "\202\323\344\223\002>\022</managed-kubernetes/v1/nodeGroup" +
+      "s/{node_group_id}/operationsBV\n\027yandex.c" +
+      "loud.api.k8s.v1Z;github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/k8s/v1;k8sb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

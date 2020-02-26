@@ -639,7 +639,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -648,7 +648,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -846,7 +846,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -866,7 +866,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1438,7 +1438,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1458,7 +1458,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1479,7 +1479,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1497,7 +1497,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1511,7 +1511,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1742,10 +1742,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClustersRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClustersRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1755,10 +1755,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClustersRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClustersRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1919,10 +1919,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClustersRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClustersRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1943,10 +1943,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClustersRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClustersRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2644,10 +2644,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClustersRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClustersRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2668,10 +2668,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClustersRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClustersRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2693,10 +2693,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClustersRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClustersRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2715,10 +2715,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClustersRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClustersRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2733,10 +2733,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClustersRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClustersRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3991,20 +3991,38 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to stop.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to stop.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * ID of the service account which has permission to stop the Kubernetes cluster.
+     * </pre>
+     *
      * <code>string service_account_id = 2;</code>
      */
     java.lang.String getServiceAccountId();
     /**
+     * <pre>
+     * ID of the service account which has permission to stop the Kubernetes cluster.
+     * </pre>
+     *
      * <code>string service_account_id = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -4098,6 +4116,11 @@ public final class ClusterServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to stop.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getClusterId() {
@@ -4113,6 +4136,11 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to stop.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -4132,6 +4160,10 @@ public final class ClusterServiceOuterClass {
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object serviceAccountId_;
     /**
+     * <pre>
+     * ID of the service account which has permission to stop the Kubernetes cluster.
+     * </pre>
+     *
      * <code>string service_account_id = 2;</code>
      */
     public java.lang.String getServiceAccountId() {
@@ -4147,6 +4179,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the service account which has permission to stop the Kubernetes cluster.
+     * </pre>
+     *
      * <code>string service_account_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -4485,6 +4521,11 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to stop.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getClusterId() {
@@ -4500,6 +4541,11 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to stop.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4516,6 +4562,11 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to stop.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setClusterId(
@@ -4529,6 +4580,11 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to stop.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearClusterId() {
@@ -4538,6 +4594,11 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to stop.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setClusterIdBytes(
@@ -4554,6 +4615,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object serviceAccountId_ = "";
       /**
+       * <pre>
+       * ID of the service account which has permission to stop the Kubernetes cluster.
+       * </pre>
+       *
        * <code>string service_account_id = 2;</code>
        */
       public java.lang.String getServiceAccountId() {
@@ -4569,6 +4634,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account which has permission to stop the Kubernetes cluster.
+       * </pre>
+       *
        * <code>string service_account_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -4585,6 +4654,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the service account which has permission to stop the Kubernetes cluster.
+       * </pre>
+       *
        * <code>string service_account_id = 2;</code>
        */
       public Builder setServiceAccountId(
@@ -4598,6 +4671,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account which has permission to stop the Kubernetes cluster.
+       * </pre>
+       *
        * <code>string service_account_id = 2;</code>
        */
       public Builder clearServiceAccountId() {
@@ -4607,6 +4684,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the service account which has permission to stop the Kubernetes cluster.
+       * </pre>
+       *
        * <code>string service_account_id = 2;</code>
        */
       public Builder setServiceAccountIdBytes(
@@ -4678,10 +4759,18 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being stopped.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being stopped.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4768,6 +4857,10 @@ public final class ClusterServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being stopped.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public java.lang.String getClusterId() {
@@ -4783,6 +4876,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being stopped.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5104,6 +5201,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being stopped.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public java.lang.String getClusterId() {
@@ -5119,6 +5220,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being stopped.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5135,6 +5240,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being stopped.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterId(
@@ -5148,6 +5257,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being stopped.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder clearClusterId() {
@@ -5157,6 +5270,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being stopped.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterIdBytes(
@@ -5228,10 +5345,20 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to start.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to start.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -5318,6 +5445,11 @@ public final class ClusterServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to start.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getClusterId() {
@@ -5333,6 +5465,11 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Kubernetes cluster to start.
+     * To get Kubernetes cluster ID use a [ClusterService.List] request.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5654,6 +5791,11 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to start.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getClusterId() {
@@ -5669,6 +5811,11 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to start.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -5685,6 +5832,11 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to start.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setClusterId(
@@ -5698,6 +5850,11 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to start.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearClusterId() {
@@ -5707,6 +5864,11 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster to start.
+       * To get Kubernetes cluster ID use a [ClusterService.List] request.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setClusterIdBytes(
@@ -5778,10 +5940,18 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being started.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being started.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -5868,6 +6038,10 @@ public final class ClusterServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being started.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public java.lang.String getClusterId() {
@@ -5883,6 +6057,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Kubernetes cluster that is being started.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6204,6 +6382,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being started.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public java.lang.String getClusterId() {
@@ -6219,6 +6401,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being started.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6235,6 +6421,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being started.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterId(
@@ -6248,6 +6438,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being started.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder clearClusterId() {
@@ -6257,6 +6451,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Kubernetes cluster that is being started.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        */
       public Builder setClusterIdBytes(
@@ -6458,24 +6656,44 @@ public final class ClusterServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
      */
     java.lang.String getGatewayIpv4Address();
     /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
      */
     com.google.protobuf.ByteString
         getGatewayIpv4AddressBytes();
 
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     boolean hasMasterSpec();
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec();
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder getMasterSpecOrBuilder();
@@ -6999,6 +7217,10 @@ public final class ClusterServiceOuterClass {
 
     public static final int GATEWAY_IPV4_ADDRESS_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
      */
     public java.lang.String getGatewayIpv4Address() {
@@ -7019,6 +7241,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Gateway IPv4 address.
+     * </pre>
+     *
      * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7043,18 +7269,30 @@ public final class ClusterServiceOuterClass {
     public static final int MASTER_SPEC_FIELD_NUMBER = 7;
     private yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec masterSpec_;
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     public boolean hasMasterSpec() {
       return masterSpec_ != null;
     }
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec() {
       return masterSpec_ == null ? yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.getDefaultInstance() : masterSpec_;
     }
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder getMasterSpecOrBuilder() {
@@ -8296,6 +8534,10 @@ public final class ClusterServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
        */
       public java.lang.String getGatewayIpv4Address() {
@@ -8316,6 +8558,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8337,6 +8583,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
        */
       public Builder setGatewayIpv4Address(
@@ -8350,6 +8600,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
        */
       public Builder clearGatewayIpv4Address() {
@@ -8361,6 +8615,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Gateway IPv4 address.
+       * </pre>
+       *
        * <code>string gateway_ipv4_address = 6 [(.yandex.cloud.length) = "&lt;=15"];</code>
        */
       public Builder setGatewayIpv4AddressBytes(
@@ -8379,12 +8637,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder> masterSpecBuilder_;
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public boolean hasMasterSpec() {
         return masterSpecBuilder_ != null || masterSpec_ != null;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec getMasterSpec() {
@@ -8395,6 +8661,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public Builder setMasterSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec value) {
@@ -8411,6 +8681,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public Builder setMasterSpec(
@@ -8425,6 +8699,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public Builder mergeMasterSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec value) {
@@ -8443,6 +8721,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public Builder clearMasterSpec() {
@@ -8457,6 +8739,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.Builder getMasterSpecBuilder() {
@@ -8465,6 +8751,10 @@ public final class ClusterServiceOuterClass {
         return getMasterSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpecOrBuilder getMasterSpecOrBuilder() {
@@ -8476,6 +8766,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterUpdateSpec master_spec = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8859,27 +9153,51 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     boolean hasVersion();
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion();
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
@@ -8984,18 +9302,30 @@ public final class ClusterServiceOuterClass {
     public static final int VERSION_FIELD_NUMBER = 1;
     private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     public boolean hasVersion() {
       return version_ != null;
     }
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
       return version_ == null ? yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.getDefaultInstance() : version_;
     }
     /**
+     * <pre>
+     * Specification of the master update.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder() {
@@ -9005,18 +9335,30 @@ public final class ClusterServiceOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 2;
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -9373,12 +9715,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder> versionBuilder_;
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec getVersion() {
@@ -9389,6 +9739,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public Builder setVersion(yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec value) {
@@ -9405,6 +9759,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public Builder setVersion(
@@ -9419,6 +9777,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public Builder mergeVersion(yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec value) {
@@ -9437,6 +9799,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public Builder clearVersion() {
@@ -9451,6 +9817,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder getVersionBuilder() {
@@ -9459,6 +9829,10 @@ public final class ClusterServiceOuterClass {
         return getVersionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder getVersionOrBuilder() {
@@ -9470,6 +9844,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the master update.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.UpdateVersionSpec version = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9490,12 +9868,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
@@ -9506,6 +9892,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -9522,6 +9912,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public Builder setMaintenancePolicy(
@@ -9536,6 +9930,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -9554,6 +9952,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -9568,6 +9970,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -9576,6 +9982,10 @@ public final class ClusterServiceOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -9587,6 +9997,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10484,10 +10898,18 @@ public final class ClusterServiceOuterClass {
         getNodeServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Release channel for the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
      */
     int getReleaseChannelValue();
     /**
+     * <pre>
+     * Release channel for the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
@@ -11206,12 +11628,20 @@ public final class ClusterServiceOuterClass {
     public static final int RELEASE_CHANNEL_FIELD_NUMBER = 11;
     private int releaseChannel_;
     /**
+     * <pre>
+     * Release channel for the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
      */
     public int getReleaseChannelValue() {
       return releaseChannel_;
     }
     /**
+     * <pre>
+     * Release channel for the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -12958,12 +13388,20 @@ public final class ClusterServiceOuterClass {
 
       private int releaseChannel_ = 0;
       /**
+       * <pre>
+       * Release channel for the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
        */
       public int getReleaseChannelValue() {
         return releaseChannel_;
       }
       /**
+       * <pre>
+       * Release channel for the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
        */
       public Builder setReleaseChannelValue(int value) {
@@ -12972,6 +13410,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Release channel for the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -12980,6 +13422,10 @@ public final class ClusterServiceOuterClass {
         return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Release channel for the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
        */
       public Builder setReleaseChannel(yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel value) {
@@ -12992,6 +13438,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Release channel for the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 11;</code>
        */
       public Builder clearReleaseChannel() {
@@ -14378,7 +14828,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14387,7 +14837,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14576,7 +15026,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -14596,7 +15046,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -15154,7 +15604,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15174,7 +15624,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15195,7 +15645,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15213,7 +15663,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15227,7 +15677,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -15442,9 +15892,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15453,9 +15903,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15615,9 +16065,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -15637,9 +16087,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -16336,9 +16786,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16358,9 +16808,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16381,9 +16831,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16401,9 +16851,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16417,9 +16867,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListClusterOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListClusterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Each subsequent list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -16527,7 +16977,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -16536,7 +16986,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -16728,7 +17178,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -16748,7 +17198,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -17314,7 +17764,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -17334,7 +17784,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -17355,7 +17805,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -17373,7 +17823,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -17387,7 +17837,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListClusterNodeGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -17603,10 +18053,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClusterNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClusterNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17616,10 +18066,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClusterNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClusterNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17780,10 +18230,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClusterNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClusterNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -17804,10 +18254,10 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
      * is larger than [ListClusterNodeGroupsRequest.page_size], use
-     * the [next_page_token] as the value
+     * the `next_page_token` as the value
      * for the [ListClusterNodeGroupsRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -18505,10 +18955,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClusterNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClusterNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18529,10 +18979,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClusterNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClusterNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18554,10 +19004,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClusterNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClusterNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18576,10 +19026,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClusterNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClusterNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18594,10 +19044,10 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
        * is larger than [ListClusterNodeGroupsRequest.page_size], use
-       * the [next_page_token] as the value
+       * the `next_page_token` as the value
        * for the [ListClusterNodeGroupsRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -18672,7 +19122,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18680,7 +19130,7 @@ public final class ClusterServiceOuterClass {
     boolean hasZonalMasterSpec();
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18688,7 +19138,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec getZonalMasterSpec();
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18696,37 +19146,69 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpecOrBuilder getZonalMasterSpecOrBuilder();
 
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     boolean hasRegionalMasterSpec();
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec();
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder getRegionalMasterSpecOrBuilder();
 
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the master.
+     * </pre>
+     *
      * <code>string version = 3;</code>
      */
     java.lang.String getVersion();
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the master.
+     * </pre>
+     *
      * <code>string version = 3;</code>
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
@@ -18893,7 +19375,7 @@ public final class ClusterServiceOuterClass {
     public static final int ZONAL_MASTER_SPEC_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18903,7 +19385,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18916,7 +19398,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Specification of the master availability zone.
+     * Specification of the zonal master.
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -18930,12 +19412,20 @@ public final class ClusterServiceOuterClass {
 
     public static final int REGIONAL_MASTER_SPEC_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     public boolean hasRegionalMasterSpec() {
       return masterTypeCase_ == 2;
     }
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec() {
@@ -18945,6 +19435,10 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Specification of the regional master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder getRegionalMasterSpecOrBuilder() {
@@ -18957,6 +19451,10 @@ public final class ClusterServiceOuterClass {
     public static final int VERSION_FIELD_NUMBER = 3;
     private volatile java.lang.Object version_;
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the master.
+     * </pre>
+     *
      * <code>string version = 3;</code>
      */
     public java.lang.String getVersion() {
@@ -18972,6 +19470,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version of Kubernetes components that runs on the master.
+     * </pre>
+     *
      * <code>string version = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -18991,18 +19493,30 @@ public final class ClusterServiceOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 4;
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -19432,7 +19946,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpecOrBuilder> zonalMasterSpecBuilder_;
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19442,7 +19956,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19462,7 +19976,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19482,7 +19996,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19500,7 +20014,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19526,7 +20040,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19549,7 +20063,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19559,7 +20073,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19576,7 +20090,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Specification of the master availability zone.
+       * Specification of the zonal master.
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ZonalMasterSpec zonal_master_spec = 1;</code>
@@ -19603,12 +20117,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder> regionalMasterSpecBuilder_;
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public boolean hasRegionalMasterSpec() {
         return masterTypeCase_ == 2;
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec getRegionalMasterSpec() {
@@ -19625,6 +20147,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public Builder setRegionalMasterSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec value) {
@@ -19641,6 +20167,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public Builder setRegionalMasterSpec(
@@ -19655,6 +20185,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public Builder mergeRegionalMasterSpec(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec value) {
@@ -19677,6 +20211,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public Builder clearRegionalMasterSpec() {
@@ -19696,12 +20234,20 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.Builder getRegionalMasterSpecBuilder() {
         return getRegionalMasterSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpecOrBuilder getRegionalMasterSpecOrBuilder() {
@@ -19715,6 +20261,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Specification of the regional master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.RegionalMasterSpec regional_master_spec = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19738,6 +20288,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object version_ = "";
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the master.
+       * </pre>
+       *
        * <code>string version = 3;</code>
        */
       public java.lang.String getVersion() {
@@ -19753,6 +20307,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the master.
+       * </pre>
+       *
        * <code>string version = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -19769,6 +20327,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the master.
+       * </pre>
+       *
        * <code>string version = 3;</code>
        */
       public Builder setVersion(
@@ -19782,6 +20344,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the master.
+       * </pre>
+       *
        * <code>string version = 3;</code>
        */
       public Builder clearVersion() {
@@ -19791,6 +20357,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components that runs on the master.
+       * </pre>
+       *
        * <code>string version = 3;</code>
        */
       public Builder setVersionBytes(
@@ -19809,12 +20379,20 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
@@ -19825,6 +20403,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -19841,6 +20423,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public Builder setMaintenancePolicy(
@@ -19855,6 +20441,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -19873,6 +20463,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -19887,6 +20481,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -19895,6 +20493,10 @@ public final class ClusterServiceOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -19906,6 +20508,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21073,34 +21679,62 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getRegionId();
     /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getRegionIdBytes();
 
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> 
         getLocationsList();
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation getLocations(int index);
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     int getLocationsCount();
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder> 
         getLocationsOrBuilderList();
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder getLocationsOrBuilder(
@@ -21239,6 +21873,10 @@ public final class ClusterServiceOuterClass {
     public static final int REGION_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object regionId_;
     /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getRegionId() {
@@ -21254,6 +21892,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
      * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -21273,12 +21915,20 @@ public final class ClusterServiceOuterClass {
     public static final int LOCATIONS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> locations_;
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> getLocationsList() {
       return locations_;
     }
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder> 
@@ -21286,18 +21936,30 @@ public final class ClusterServiceOuterClass {
       return locations_;
     }
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     public int getLocationsCount() {
       return locations_.size();
     }
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation getLocations(int index) {
       return locations_.get(index);
     }
     /**
+     * <pre>
+     * List of locations where the master will be allocated.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder getLocationsOrBuilder(
@@ -21732,6 +22394,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object regionId_ = "";
       /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRegionId() {
@@ -21747,6 +22413,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -21763,6 +22433,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRegionId(
@@ -21776,6 +22450,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRegionId() {
@@ -21785,6 +22463,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
        * <code>string region_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRegionIdBytes(
@@ -21812,6 +22494,10 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder> locationsBuilder_;
 
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation> getLocationsList() {
@@ -21822,6 +22508,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public int getLocationsCount() {
@@ -21832,6 +22522,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation getLocations(int index) {
@@ -21842,6 +22536,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder setLocations(
@@ -21859,6 +22557,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder setLocations(
@@ -21873,6 +22575,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder addLocations(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation value) {
@@ -21889,6 +22595,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder addLocations(
@@ -21906,6 +22616,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder addLocations(
@@ -21920,6 +22634,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder addLocations(
@@ -21934,6 +22652,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder addAllLocations(
@@ -21949,6 +22671,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder clearLocations() {
@@ -21962,6 +22688,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public Builder removeLocations(int index) {
@@ -21975,6 +22705,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder getLocationsBuilder(
@@ -21982,6 +22716,10 @@ public final class ClusterServiceOuterClass {
         return getLocationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder getLocationsOrBuilder(
@@ -21992,6 +22730,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocationOrBuilder> 
@@ -22003,6 +22745,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder addLocationsBuilder() {
@@ -22010,6 +22756,10 @@ public final class ClusterServiceOuterClass {
             yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder addLocationsBuilder(
@@ -22018,6 +22768,10 @@ public final class ClusterServiceOuterClass {
             index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of locations where the master will be allocated.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.MasterLocation locations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterLocation.Builder> 
@@ -23247,10 +24001,18 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the availability zone.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getZoneId();
     /**
+     * <pre>
+     * ID of the availability zone.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -23378,6 +24140,10 @@ public final class ClusterServiceOuterClass {
     public static final int ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object zoneId_;
     /**
+     * <pre>
+     * ID of the availability zone.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getZoneId() {
@@ -23393,6 +24159,10 @@ public final class ClusterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the availability zone.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -23780,6 +24550,10 @@ public final class ClusterServiceOuterClass {
 
       private java.lang.Object zoneId_ = "";
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getZoneId() {
@@ -23795,6 +24569,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -23811,6 +24589,10 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setZoneId(
@@ -23824,6 +24606,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearZoneId() {
@@ -23833,6 +24619,10 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setZoneIdBytes(

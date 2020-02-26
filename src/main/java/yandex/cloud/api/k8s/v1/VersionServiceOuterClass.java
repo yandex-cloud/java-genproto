@@ -431,24 +431,44 @@ public final class VersionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> 
         getAvailableVersionsList();
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions getAvailableVersions(int index);
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     int getAvailableVersionsCount();
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder> 
         getAvailableVersionsOrBuilderList();
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder getAvailableVersionsOrBuilder(
@@ -541,12 +561,20 @@ public final class VersionServiceOuterClass {
     public static final int AVAILABLE_VERSIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> availableVersions_;
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     public java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> getAvailableVersionsList() {
       return availableVersions_;
     }
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder> 
@@ -554,18 +582,30 @@ public final class VersionServiceOuterClass {
       return availableVersions_;
     }
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     public int getAvailableVersionsCount() {
       return availableVersions_.size();
     }
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions getAvailableVersions(int index) {
       return availableVersions_.get(index);
     }
     /**
+     * <pre>
+     * Versions available in the specified release channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder getAvailableVersionsOrBuilder(
@@ -929,6 +969,10 @@ public final class VersionServiceOuterClass {
           yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder> availableVersionsBuilder_;
 
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions> getAvailableVersionsList() {
@@ -939,6 +983,10 @@ public final class VersionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public int getAvailableVersionsCount() {
@@ -949,6 +997,10 @@ public final class VersionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions getAvailableVersions(int index) {
@@ -959,6 +1011,10 @@ public final class VersionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder setAvailableVersions(
@@ -976,6 +1032,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder setAvailableVersions(
@@ -990,6 +1050,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder addAvailableVersions(yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions value) {
@@ -1006,6 +1070,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder addAvailableVersions(
@@ -1023,6 +1091,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder addAvailableVersions(
@@ -1037,6 +1109,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder addAvailableVersions(
@@ -1051,6 +1127,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder addAllAvailableVersions(
@@ -1066,6 +1146,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder clearAvailableVersions() {
@@ -1079,6 +1163,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public Builder removeAvailableVersions(int index) {
@@ -1092,6 +1180,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder getAvailableVersionsBuilder(
@@ -1099,6 +1191,10 @@ public final class VersionServiceOuterClass {
         return getAvailableVersionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder getAvailableVersionsOrBuilder(
@@ -1109,6 +1205,10 @@ public final class VersionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersionsOrBuilder> 
@@ -1120,6 +1220,10 @@ public final class VersionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder addAvailableVersionsBuilder() {
@@ -1127,6 +1231,10 @@ public final class VersionServiceOuterClass {
             yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder addAvailableVersionsBuilder(
@@ -1135,6 +1243,10 @@ public final class VersionServiceOuterClass {
             index, yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Versions available in the specified release channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.k8s.v1.AvailableVersions available_versions = 1;</code>
        */
       public java.util.List<yandex.cloud.api.k8s.v1.VersionServiceOuterClass.AvailableVersions.Builder> 
@@ -1213,28 +1325,52 @@ public final class VersionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
      */
     int getReleaseChannelValue();
     /**
+     * <pre>
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
 
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     java.util.List<java.lang.String>
         getVersionsList();
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     int getVersionsCount();
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     java.lang.String getVersions(int index);
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1335,12 +1471,20 @@ public final class VersionServiceOuterClass {
     public static final int RELEASE_CHANNEL_FIELD_NUMBER = 1;
     private int releaseChannel_;
     /**
+     * <pre>
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
      */
     public int getReleaseChannelValue() {
       return releaseChannel_;
     }
     /**
+     * <pre>
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -1352,6 +1496,10 @@ public final class VersionServiceOuterClass {
     public static final int VERSIONS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList versions_;
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -1359,18 +1507,30 @@ public final class VersionServiceOuterClass {
       return versions_;
     }
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     public int getVersionsCount() {
       return versions_.size();
     }
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     public java.lang.String getVersions(int index) {
       return versions_.get(index);
     }
     /**
+     * <pre>
+     * Version of Kubernetes components.
+     * </pre>
+     *
      * <code>repeated string versions = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -1720,12 +1880,20 @@ public final class VersionServiceOuterClass {
 
       private int releaseChannel_ = 0;
       /**
+       * <pre>
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
        */
       public int getReleaseChannelValue() {
         return releaseChannel_;
       }
       /**
+       * <pre>
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
        */
       public Builder setReleaseChannelValue(int value) {
@@ -1734,6 +1902,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -1742,6 +1914,10 @@ public final class VersionServiceOuterClass {
         return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
        */
       public Builder setReleaseChannel(yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel value) {
@@ -1754,6 +1930,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
        */
       public Builder clearReleaseChannel() {
@@ -1771,6 +1951,10 @@ public final class VersionServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -1778,18 +1962,30 @@ public final class VersionServiceOuterClass {
         return versions_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public int getVersionsCount() {
         return versions_.size();
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public java.lang.String getVersions(int index) {
         return versions_.get(index);
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1797,6 +1993,10 @@ public final class VersionServiceOuterClass {
         return versions_.getByteString(index);
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public Builder setVersions(
@@ -1810,6 +2010,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public Builder addVersions(
@@ -1823,6 +2027,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public Builder addAllVersions(
@@ -1834,6 +2042,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public Builder clearVersions() {
@@ -1843,6 +2055,10 @@ public final class VersionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of Kubernetes components.
+       * </pre>
+       *
        * <code>repeated string versions = 2;</code>
        */
       public Builder addVersionsBytes(
@@ -1934,19 +2150,20 @@ public final class VersionServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/k8s/v1/version_service.pr" +
-      "oto\022\023yandex.cloud.k8s.v1\032!yandex/cloud/k" +
-      "8s/v1/cluster.proto\"\025\n\023ListVersionsReque" +
-      "st\"Z\n\024ListVersionsResponse\022B\n\022available_" +
-      "versions\030\001 \003(\0132&.yandex.cloud.k8s.v1.Ava" +
-      "ilableVersions\"c\n\021AvailableVersions\022<\n\017r" +
-      "elease_channel\030\001 \001(\0162#.yandex.cloud.k8s." +
-      "v1.ReleaseChannel\022\020\n\010versions\030\002 \003(\t2m\n\016V" +
-      "ersionService\022[\n\004List\022(.yandex.cloud.k8s" +
-      ".v1.ListVersionsRequest\032).yandex.cloud.k" +
-      "8s.v1.ListVersionsResponseBV\n\027yandex.clo" +
-      "ud.api.k8s.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/k8s/v1;k8sb\006prot" +
-      "o3"
+      "oto\022\023yandex.cloud.k8s.v1\032\034google/api/ann" +
+      "otations.proto\032!yandex/cloud/k8s/v1/clus" +
+      "ter.proto\"\025\n\023ListVersionsRequest\"Z\n\024List" +
+      "VersionsResponse\022B\n\022available_versions\030\001" +
+      " \003(\0132&.yandex.cloud.k8s.v1.AvailableVers" +
+      "ions\"c\n\021AvailableVersions\022<\n\017release_cha" +
+      "nnel\030\001 \001(\0162#.yandex.cloud.k8s.v1.Release" +
+      "Channel\022\020\n\010versions\030\002 \003(\t2\227\001\n\016VersionSer" +
+      "vice\022\204\001\n\004List\022(.yandex.cloud.k8s.v1.List" +
+      "VersionsRequest\032).yandex.cloud.k8s.v1.Li" +
+      "stVersionsResponse\"\'\202\323\344\223\002!\022\037/managed-kub" +
+      "ernetes/v1/versionsBV\n\027yandex.cloud.api." +
+      "k8s.v1Z;github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1959,6 +2176,7 @@ public final class VersionServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.k8s.v1.ClusterOuterClass.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_k8s_v1_ListVersionsRequest_descriptor =
@@ -1979,6 +2197,12 @@ public final class VersionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_AvailableVersions_descriptor,
         new java.lang.String[] { "ReleaseChannel", "Versions", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.k8s.v1.ClusterOuterClass.getDescriptor();
   }
 

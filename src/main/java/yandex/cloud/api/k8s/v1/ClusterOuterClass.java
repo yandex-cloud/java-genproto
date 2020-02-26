@@ -24,14 +24,27 @@ public final class ClusterOuterClass {
      */
     RELEASE_CHANNEL_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Minor updates with new functions and improvements are often added.
+     * You can't disable automatic updates in this channel, but you can specify a time period for automatic updates.
+     * </pre>
+     *
      * <code>RAPID = 1;</code>
      */
     RAPID(1),
     /**
+     * <pre>
+     * New functions and improvements are added in chunks shortly after they appear on `RAPID`.
+     * </pre>
+     *
      * <code>REGULAR = 2;</code>
      */
     REGULAR(2),
     /**
+     * <pre>
+     * Only updates related to bug fixes or security improvements are added.
+     * </pre>
+     *
      * <code>STABLE = 3;</code>
      */
     STABLE(3),
@@ -43,14 +56,27 @@ public final class ClusterOuterClass {
      */
     public static final int RELEASE_CHANNEL_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Minor updates with new functions and improvements are often added.
+     * You can't disable automatic updates in this channel, but you can specify a time period for automatic updates.
+     * </pre>
+     *
      * <code>RAPID = 1;</code>
      */
     public static final int RAPID_VALUE = 1;
     /**
+     * <pre>
+     * New functions and improvements are added in chunks shortly after they appear on `RAPID`.
+     * </pre>
+     *
      * <code>REGULAR = 2;</code>
      */
     public static final int REGULAR_VALUE = 2;
     /**
+     * <pre>
+     * Only updates related to bug fixes or security improvements are added.
+     * </pre>
+     *
      * <code>STABLE = 3;</code>
      */
     public static final int STABLE_VALUE = 3;
@@ -442,10 +468,24 @@ public final class ClusterOuterClass {
         getNodeServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+     * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+     * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+     * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
      */
     int getReleaseChannelValue();
     /**
+     * <pre>
+     * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+     * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+     * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+     * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel();
@@ -1650,12 +1690,26 @@ public final class ClusterOuterClass {
     public static final int RELEASE_CHANNEL_FIELD_NUMBER = 15;
     private int releaseChannel_;
     /**
+     * <pre>
+     * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+     * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+     * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+     * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
      */
     public int getReleaseChannelValue() {
       return releaseChannel_;
     }
     /**
+     * <pre>
+     * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+     * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+     * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+     * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -3837,12 +3891,26 @@ public final class ClusterOuterClass {
 
       private int releaseChannel_ = 0;
       /**
+       * <pre>
+       * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+       * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+       * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+       * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
        */
       public int getReleaseChannelValue() {
         return releaseChannel_;
       }
       /**
+       * <pre>
+       * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+       * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+       * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+       * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
        */
       public Builder setReleaseChannelValue(int value) {
@@ -3851,6 +3919,13 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+       * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+       * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+       * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel getReleaseChannel() {
@@ -3859,6 +3934,13 @@ public final class ClusterOuterClass {
         return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+       * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+       * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+       * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
        */
       public Builder setReleaseChannel(yandex.cloud.api.k8s.v1.ClusterOuterClass.ReleaseChannel value) {
@@ -3871,6 +3953,13 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * When creating a Kubernetes cluster, you should specify one of three release channels. The release channel contains several Kubernetes versions.
+       * Channels differ in the set of available versions, the management of auto-updates, and the updates received.
+       * You can't change the channel once the Kubernetes cluster is created, you can only recreate the Kubernetes cluster and specify a new release channel.
+       * For more details see [documentation](https://cloud.yandex.com/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 15;</code>
        */
       public Builder clearReleaseChannel() {
@@ -4175,27 +4264,51 @@ public final class ClusterOuterClass {
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterAuthOrBuilder getMasterAuthOrBuilder();
 
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     boolean hasVersionInfo();
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo();
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     boolean hasMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy();
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
@@ -4588,18 +4701,30 @@ public final class ClusterOuterClass {
     public static final int VERSION_INFO_FIELD_NUMBER = 5;
     private yandex.cloud.api.k8s.v1.Version.VersionInfo versionInfo_;
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     public boolean hasVersionInfo() {
       return versionInfo_ != null;
     }
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo() {
       return versionInfo_ == null ? yandex.cloud.api.k8s.v1.Version.VersionInfo.getDefaultInstance() : versionInfo_;
     }
     /**
+     * <pre>
+     * Detailed information about the Kubernetes version that is running on the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
      */
     public yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder() {
@@ -4609,18 +4734,30 @@ public final class ClusterOuterClass {
     public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 6;
     private yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy maintenancePolicy_;
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     public boolean hasMaintenancePolicy() {
       return maintenancePolicy_ != null;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
       return maintenancePolicy_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.getDefaultInstance() : maintenancePolicy_;
     }
     /**
+     * <pre>
+     * Maintenance policy of the master.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
      */
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -5888,12 +6025,20 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.VersionInfo, yandex.cloud.api.k8s.v1.Version.VersionInfo.Builder, yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder> versionInfoBuilder_;
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public boolean hasVersionInfo() {
         return versionInfoBuilder_ != null || versionInfo_ != null;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfo getVersionInfo() {
@@ -5904,6 +6049,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public Builder setVersionInfo(yandex.cloud.api.k8s.v1.Version.VersionInfo value) {
@@ -5920,6 +6069,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public Builder setVersionInfo(
@@ -5934,6 +6087,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public Builder mergeVersionInfo(yandex.cloud.api.k8s.v1.Version.VersionInfo value) {
@@ -5952,6 +6109,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public Builder clearVersionInfo() {
@@ -5966,6 +6127,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfo.Builder getVersionInfoBuilder() {
@@ -5974,6 +6139,10 @@ public final class ClusterOuterClass {
         return getVersionInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       public yandex.cloud.api.k8s.v1.Version.VersionInfoOrBuilder getVersionInfoOrBuilder() {
@@ -5985,6 +6154,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detailed information about the Kubernetes version that is running on the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.VersionInfo version_info = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6005,12 +6178,20 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder> maintenancePolicyBuilder_;
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public boolean hasMaintenancePolicy() {
         return maintenancePolicyBuilder_ != null || maintenancePolicy_ != null;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy getMaintenancePolicy() {
@@ -6021,6 +6202,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public Builder setMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -6037,6 +6222,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public Builder setMaintenancePolicy(
@@ -6051,6 +6240,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public Builder mergeMaintenancePolicy(yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy value) {
@@ -6069,6 +6262,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public Builder clearMaintenancePolicy() {
@@ -6083,6 +6280,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicy.Builder getMaintenancePolicyBuilder() {
@@ -6091,6 +6292,10 @@ public final class ClusterOuterClass {
         return getMaintenancePolicyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder() {
@@ -6102,6 +6307,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance policy of the master.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6780,7 +6989,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -6788,7 +6997,7 @@ public final class ClusterOuterClass {
     java.lang.String getInternalV4Address();
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -6798,7 +7007,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -6806,7 +7015,7 @@ public final class ClusterOuterClass {
     java.lang.String getExternalV4Address();
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -6952,7 +7161,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object internalV4Address_;
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -6971,7 +7180,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -6994,7 +7203,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object externalV4Address_;
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -7013,7 +7222,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -7461,7 +7670,7 @@ public final class ClusterOuterClass {
       private java.lang.Object internalV4Address_ = "";
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -7480,7 +7689,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -7500,7 +7709,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -7517,7 +7726,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -7530,7 +7739,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -7550,7 +7759,7 @@ public final class ClusterOuterClass {
       private java.lang.Object externalV4Address_ = "";
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -7569,7 +7778,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -7589,7 +7798,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -7606,7 +7815,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -7619,7 +7828,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -7712,7 +7921,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -7720,7 +7929,7 @@ public final class ClusterOuterClass {
     java.lang.String getInternalV4Address();
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -7730,7 +7939,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -7738,7 +7947,7 @@ public final class ClusterOuterClass {
     java.lang.String getExternalV4Address();
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -7884,7 +8093,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object internalV4Address_;
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -7903,7 +8112,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * An IPv4 internal network address that is assigned to the master.
+     * IPv4 internal network address that is assigned to the master.
      * </pre>
      *
      * <code>string internal_v4_address = 2;</code>
@@ -7926,7 +8135,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object externalV4Address_;
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -7945,7 +8154,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * An IPv4 external network address that is assigned to the master.
+     * IPv4 external network address that is assigned to the master.
      * </pre>
      *
      * <code>string external_v4_address = 3;</code>
@@ -8393,7 +8602,7 @@ public final class ClusterOuterClass {
       private java.lang.Object internalV4Address_ = "";
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -8412,7 +8621,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -8432,7 +8641,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -8449,7 +8658,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -8462,7 +8671,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 internal network address that is assigned to the master.
+       * IPv4 internal network address that is assigned to the master.
        * </pre>
        *
        * <code>string internal_v4_address = 2;</code>
@@ -8482,7 +8691,7 @@ public final class ClusterOuterClass {
       private java.lang.Object externalV4Address_ = "";
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -8501,7 +8710,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -8521,7 +8730,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -8538,7 +8747,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -8551,7 +8760,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * An IPv4 external network address that is assigned to the master.
+       * IPv4 external network address that is assigned to the master.
        * </pre>
        *
        * <code>string external_v4_address = 3;</code>
@@ -10170,19 +10379,39 @@ public final class ClusterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+     * If set to false, automatic upgrades are disabled.
+     * </pre>
+     *
      * <code>bool auto_upgrade = 1;</code>
      */
     boolean getAutoUpgrade();
 
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     boolean hasMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
@@ -10280,6 +10509,11 @@ public final class ClusterOuterClass {
     public static final int AUTO_UPGRADE_FIELD_NUMBER = 1;
     private boolean autoUpgrade_;
     /**
+     * <pre>
+     * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+     * If set to false, automatic upgrades are disabled.
+     * </pre>
+     *
      * <code>bool auto_upgrade = 1;</code>
      */
     public boolean getAutoUpgrade() {
@@ -10289,18 +10523,33 @@ public final class ClusterOuterClass {
     public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 2;
     private yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     public boolean hasMaintenanceWindow() {
       return maintenanceWindow_ != null;
     }
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
       return maintenanceWindow_ == null ? yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
     }
     /**
+     * <pre>
+     * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+     * The time is set in UTC.
+     * </pre>
+     *
      * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
      */
     public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
@@ -10643,12 +10892,22 @@ public final class ClusterOuterClass {
 
       private boolean autoUpgrade_ ;
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public boolean getAutoUpgrade() {
         return autoUpgrade_;
       }
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public Builder setAutoUpgrade(boolean value) {
@@ -10658,6 +10917,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If set to true, automatic updates are installed in the specified period of time with no interaction from the user.
+       * If set to false, automatic upgrades are disabled.
+       * </pre>
+       *
        * <code>bool auto_upgrade = 1;</code>
        */
       public Builder clearAutoUpgrade() {
@@ -10671,12 +10935,22 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public boolean hasMaintenanceWindow() {
         return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
@@ -10687,6 +10961,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public Builder setMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow value) {
@@ -10703,6 +10982,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public Builder setMaintenanceWindow(
@@ -10717,6 +11001,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public Builder mergeMaintenanceWindow(yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow value) {
@@ -10735,6 +11024,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public Builder clearMaintenanceWindow() {
@@ -10749,6 +11043,11 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
@@ -10757,6 +11056,11 @@ public final class ClusterOuterClass {
         return getMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       public yandex.cloud.api.k8s.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
@@ -10768,6 +11072,11 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Maintenance window settings. Update will start at the specified time and last no more than the specified duration.
+       * The time is set in UTC.
+       * </pre>
+       *
        * <code>.yandex.cloud.k8s.v1.MaintenanceWindow maintenance_window = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

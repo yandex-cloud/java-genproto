@@ -400,6 +400,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified Kubernetes cluster.
+     * </pre>
      */
     public void stop(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -407,6 +410,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified Kubernetes cluster.
+     * </pre>
      */
     public void start(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -580,6 +586,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified Kubernetes cluster.
+     * </pre>
      */
     public void stop(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -588,6 +597,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified Kubernetes cluster.
+     * </pre>
      */
     public void start(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -691,6 +703,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified Kubernetes cluster.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest request) {
       return blockingUnaryCall(
@@ -698,6 +713,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified Kubernetes cluster.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest request) {
       return blockingUnaryCall(
@@ -803,6 +821,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified Kubernetes cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest request) {
@@ -811,6 +832,9 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified Kubernetes cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StartClusterRequest request) {

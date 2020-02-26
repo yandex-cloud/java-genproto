@@ -20,7 +20,7 @@ public final class Version {
 
     /**
      * <pre>
-     * Current kubernetes version, major.minor (e.g. 1.15).
+     * Current Kubernetes version, format: major.minor (e.g. 1.15).
      * </pre>
      *
      * <code>string current_version = 1;</code>
@@ -28,7 +28,7 @@ public final class Version {
     java.lang.String getCurrentVersion();
     /**
      * <pre>
-     * Current kubernetes version, major.minor (e.g. 1.15).
+     * Current Kubernetes version, format: major.minor (e.g. 1.15).
      * </pre>
      *
      * <code>string current_version = 1;</code>
@@ -38,8 +38,8 @@ public final class Version {
 
     /**
      * <pre>
-     * Newer revisions may include kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-     * as some internal component updates - new features or bug fixes in yandex-specific
+     * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
+     * as some internal component updates — new features or bug fixes in Yandex specific
      * components either on the master or nodes.
      * </pre>
      *
@@ -49,7 +49,7 @@ public final class Version {
 
     /**
      * <pre>
-     * Human readable description of the changes to be applied when updating to the latest
+     * Description of the changes to be applied when updating to the latest
      * revision. Empty if new_revision_available is false.
      * </pre>
      *
@@ -58,7 +58,7 @@ public final class Version {
     java.lang.String getNewRevisionSummary();
     /**
      * <pre>
-     * Human readable description of the changes to be applied when updating to the latest
+     * Description of the changes to be applied when updating to the latest
      * revision. Empty if new_revision_available is false.
      * </pre>
      *
@@ -178,7 +178,7 @@ public final class Version {
     private volatile java.lang.Object currentVersion_;
     /**
      * <pre>
-     * Current kubernetes version, major.minor (e.g. 1.15).
+     * Current Kubernetes version, format: major.minor (e.g. 1.15).
      * </pre>
      *
      * <code>string current_version = 1;</code>
@@ -197,7 +197,7 @@ public final class Version {
     }
     /**
      * <pre>
-     * Current kubernetes version, major.minor (e.g. 1.15).
+     * Current Kubernetes version, format: major.minor (e.g. 1.15).
      * </pre>
      *
      * <code>string current_version = 1;</code>
@@ -220,8 +220,8 @@ public final class Version {
     private boolean newRevisionAvailable_;
     /**
      * <pre>
-     * Newer revisions may include kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-     * as some internal component updates - new features or bug fixes in yandex-specific
+     * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
+     * as some internal component updates — new features or bug fixes in Yandex specific
      * components either on the master or nodes.
      * </pre>
      *
@@ -235,7 +235,7 @@ public final class Version {
     private volatile java.lang.Object newRevisionSummary_;
     /**
      * <pre>
-     * Human readable description of the changes to be applied when updating to the latest
+     * Description of the changes to be applied when updating to the latest
      * revision. Empty if new_revision_available is false.
      * </pre>
      *
@@ -255,7 +255,7 @@ public final class Version {
     }
     /**
      * <pre>
-     * Human readable description of the changes to be applied when updating to the latest
+     * Description of the changes to be applied when updating to the latest
      * revision. Empty if new_revision_available is false.
      * </pre>
      *
@@ -648,7 +648,7 @@ public final class Version {
       private java.lang.Object currentVersion_ = "";
       /**
        * <pre>
-       * Current kubernetes version, major.minor (e.g. 1.15).
+       * Current Kubernetes version, format: major.minor (e.g. 1.15).
        * </pre>
        *
        * <code>string current_version = 1;</code>
@@ -667,7 +667,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Current kubernetes version, major.minor (e.g. 1.15).
+       * Current Kubernetes version, format: major.minor (e.g. 1.15).
        * </pre>
        *
        * <code>string current_version = 1;</code>
@@ -687,7 +687,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Current kubernetes version, major.minor (e.g. 1.15).
+       * Current Kubernetes version, format: major.minor (e.g. 1.15).
        * </pre>
        *
        * <code>string current_version = 1;</code>
@@ -704,7 +704,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Current kubernetes version, major.minor (e.g. 1.15).
+       * Current Kubernetes version, format: major.minor (e.g. 1.15).
        * </pre>
        *
        * <code>string current_version = 1;</code>
@@ -717,7 +717,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Current kubernetes version, major.minor (e.g. 1.15).
+       * Current Kubernetes version, format: major.minor (e.g. 1.15).
        * </pre>
        *
        * <code>string current_version = 1;</code>
@@ -737,8 +737,8 @@ public final class Version {
       private boolean newRevisionAvailable_ ;
       /**
        * <pre>
-       * Newer revisions may include kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates - new features or bug fixes in yandex-specific
+       * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
+       * as some internal component updates — new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *
@@ -749,8 +749,8 @@ public final class Version {
       }
       /**
        * <pre>
-       * Newer revisions may include kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates - new features or bug fixes in yandex-specific
+       * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
+       * as some internal component updates — new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *
@@ -764,8 +764,8 @@ public final class Version {
       }
       /**
        * <pre>
-       * Newer revisions may include kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates - new features or bug fixes in yandex-specific
+       * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
+       * as some internal component updates — new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *
@@ -781,7 +781,7 @@ public final class Version {
       private java.lang.Object newRevisionSummary_ = "";
       /**
        * <pre>
-       * Human readable description of the changes to be applied when updating to the latest
+       * Description of the changes to be applied when updating to the latest
        * revision. Empty if new_revision_available is false.
        * </pre>
        *
@@ -801,7 +801,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Human readable description of the changes to be applied when updating to the latest
+       * Description of the changes to be applied when updating to the latest
        * revision. Empty if new_revision_available is false.
        * </pre>
        *
@@ -822,7 +822,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Human readable description of the changes to be applied when updating to the latest
+       * Description of the changes to be applied when updating to the latest
        * revision. Empty if new_revision_available is false.
        * </pre>
        *
@@ -840,7 +840,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Human readable description of the changes to be applied when updating to the latest
+       * Description of the changes to be applied when updating to the latest
        * revision. Empty if new_revision_available is false.
        * </pre>
        *
@@ -854,7 +854,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Human readable description of the changes to be applied when updating to the latest
+       * Description of the changes to be applied when updating to the latest
        * revision. Empty if new_revision_available is false.
        * </pre>
        *
@@ -971,7 +971,7 @@ public final class Version {
 
     /**
      * <pre>
-     * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -979,7 +979,7 @@ public final class Version {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -1121,7 +1121,7 @@ public final class Version {
     public static final int VERSION_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -1145,7 +1145,7 @@ public final class Version {
     }
     /**
      * <pre>
-     * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+     * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -1554,7 +1554,7 @@ public final class Version {
 
       /**
        * <pre>
-       * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -1578,7 +1578,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -1603,7 +1603,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -1620,7 +1620,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -1635,7 +1635,7 @@ public final class Version {
       }
       /**
        * <pre>
-       * Request update to a newer version of kubernetes (1.x -&gt; 1.y).
+       * Request update to a newer version of Kubernetes (1.x -&gt; 1.y).
        * </pre>
        *
        * <code>string version = 1;</code>
