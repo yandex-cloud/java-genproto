@@ -3011,44 +3011,44 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> 
         getAttachedTargetGroupsList();
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index);
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     int getAttachedTargetGroupsCount();
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
         getAttachedTargetGroupsOrBuilderList();
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
         int index);
@@ -3559,20 +3559,20 @@ public final class NetworkLoadBalancerServiceOuterClass {
     private java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> attachedTargetGroups_;
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> getAttachedTargetGroupsList() {
       return attachedTargetGroups_;
     }
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
         getAttachedTargetGroupsOrBuilderList() {
@@ -3580,30 +3580,30 @@ public final class NetworkLoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public int getAttachedTargetGroupsCount() {
       return attachedTargetGroups_.size();
     }
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index) {
       return attachedTargetGroups_.get(index);
     }
     /**
      * <pre>
-     * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * List of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
         int index) {
@@ -5051,10 +5051,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> getAttachedTargetGroupsList() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5065,10 +5065,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public int getAttachedTargetGroupsCount() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5079,10 +5079,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5093,10 +5093,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder setAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
@@ -5114,10 +5114,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder setAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -5132,10 +5132,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5152,10 +5152,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
@@ -5173,10 +5173,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -5191,10 +5191,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -5209,10 +5209,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAllAttachedTargetGroups(
           java.lang.Iterable<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> values) {
@@ -5228,10 +5228,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder clearAttachedTargetGroups() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5245,10 +5245,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder removeAttachedTargetGroups(int index) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -5262,10 +5262,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder getAttachedTargetGroupsBuilder(
           int index) {
@@ -5273,10 +5273,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
           int index) {
@@ -5287,10 +5287,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
            getAttachedTargetGroupsOrBuilderList() {
@@ -5302,10 +5302,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder addAttachedTargetGroupsBuilder() {
         return getAttachedTargetGroupsFieldBuilder().addBuilder(
@@ -5313,10 +5313,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder addAttachedTargetGroupsBuilder(
           int index) {
@@ -5325,10 +5325,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * List of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * List of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 8 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder> 
            getAttachedTargetGroupsBuilderList() {
@@ -6179,44 +6179,44 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> 
         getAttachedTargetGroupsList();
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index);
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     int getAttachedTargetGroupsCount();
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
         getAttachedTargetGroupsOrBuilderList();
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
         int index);
@@ -6696,20 +6696,20 @@ public final class NetworkLoadBalancerServiceOuterClass {
     private java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> attachedTargetGroups_;
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> getAttachedTargetGroupsList() {
       return attachedTargetGroups_;
     }
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
         getAttachedTargetGroupsOrBuilderList() {
@@ -6717,30 +6717,30 @@ public final class NetworkLoadBalancerServiceOuterClass {
     }
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public int getAttachedTargetGroupsCount() {
       return attachedTargetGroups_.size();
     }
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index) {
       return attachedTargetGroups_.get(index);
     }
     /**
      * <pre>
-     * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+     * A list of attached target groups for the network load balancer.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+     * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
      */
     public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
         int index) {
@@ -8191,10 +8191,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
 
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> getAttachedTargetGroupsList() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8205,10 +8205,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public int getAttachedTargetGroupsCount() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8219,10 +8219,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup getAttachedTargetGroups(int index) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8233,10 +8233,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder setAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
@@ -8254,10 +8254,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder setAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -8272,10 +8272,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8292,10 +8292,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup value) {
@@ -8313,10 +8313,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -8331,10 +8331,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAttachedTargetGroups(
           int index, yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder builderForValue) {
@@ -8349,10 +8349,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder addAllAttachedTargetGroups(
           java.lang.Iterable<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup> values) {
@@ -8368,10 +8368,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder clearAttachedTargetGroups() {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8385,10 +8385,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public Builder removeAttachedTargetGroups(int index) {
         if (attachedTargetGroupsBuilder_ == null) {
@@ -8402,10 +8402,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder getAttachedTargetGroupsBuilder(
           int index) {
@@ -8413,10 +8413,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder getAttachedTargetGroupsOrBuilder(
           int index) {
@@ -8427,10 +8427,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroupOrBuilder> 
            getAttachedTargetGroupsOrBuilderList() {
@@ -8442,10 +8442,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder addAttachedTargetGroupsBuilder() {
         return getAttachedTargetGroupsFieldBuilder().addBuilder(
@@ -8453,10 +8453,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder addAttachedTargetGroupsBuilder(
           int index) {
@@ -8465,10 +8465,10 @@ public final class NetworkLoadBalancerServiceOuterClass {
       }
       /**
        * <pre>
-       * A list of attached target groups for the network load balancer. For now, we accept only one target_group per NetworkLoadBalancer resource.
+       * A list of attached target groups for the network load balancer.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=1"];</code>
+       * <code>repeated .yandex.cloud.loadbalancer.v1.AttachedTargetGroup attached_target_groups = 7 [(.yandex.cloud.size) = "&lt;=5"];</code>
        */
       public java.util.List<yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerOuterClass.AttachedTargetGroup.Builder> 
            getAttachedTargetGroupsBuilderList() {
@@ -25577,7 +25577,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       "d.loadbalancer.v1.ListenerSpecB\010\202\3101\004<=10" +
       "\022Z\n\026attached_target_groups\030\010 \003(\01321.yande" +
       "x.cloud.loadbalancer.v1.AttachedTargetGr" +
-      "oupB\007\202\3101\003<=1\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "oupB\007\202\3101\003<=5\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
       "\022\r\n\005value\030\002 \001(\t:\0028\001\"E\n!CreateNetworkLoad" +
       "BalancerMetadata\022 \n\030network_load_balance" +
       "r_id\030\001 \001(\t\"\313\004\n UpdateNetworkLoadBalancer" +
@@ -25593,7 +25593,7 @@ public final class NetworkLoadBalancerServiceOuterClass {
       "s\030\006 \003(\0132*.yandex.cloud.loadbalancer.v1.L" +
       "istenerSpecB\010\202\3101\004<=10\022Z\n\026attached_target" +
       "_groups\030\007 \003(\01321.yandex.cloud.loadbalance" +
-      "r.v1.AttachedTargetGroupB\007\202\3101\003<=1\032-\n\013Lab" +
+      "r.v1.AttachedTargetGroupB\007\202\3101\003<=5\032-\n\013Lab" +
       "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
       "\"E\n!UpdateNetworkLoadBalancerMetadata\022 \n" +
       "\030network_load_balancer_id\030\001 \001(\t\"R\n Delet" +

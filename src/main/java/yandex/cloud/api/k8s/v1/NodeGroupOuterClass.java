@@ -508,6 +508,104 @@ public final class NodeGroupOuterClass {
      */
     com.google.protobuf.ByteString
         getAllowedUnsafeSysctlsBytes(int index);
+
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> 
+        getNodeTaintsList();
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getNodeTaints(int index);
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    int getNodeTaintsCount();
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder> 
+        getNodeTaintsOrBuilderList();
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder getNodeTaintsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+    int getNodeLabelsCount();
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+    boolean containsNodeLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getNodeLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getNodeLabels();
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getNodeLabelsMap();
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    java.lang.String getNodeLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    java.lang.String getNodeLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeGroup}
@@ -530,6 +628,7 @@ public final class NodeGroupOuterClass {
       instanceGroupId_ = "";
       nodeVersion_ = "";
       allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      nodeTaints_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -698,6 +797,28 @@ public final class NodeGroupOuterClass {
               allowedUnsafeSysctls_.add(s);
               break;
             }
+            case 130: {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+                nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint>();
+                mutable_bitField0_ |= 0x00008000;
+              }
+              nodeTaints_.add(
+                  input.readMessage(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.parser(), extensionRegistry));
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                nodeLabels_ = com.google.protobuf.MapField.newMapField(
+                    NodeLabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00010000;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              nodeLabels__ = input.readMessage(
+                  NodeLabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              nodeLabels_.getMutableMap().put(
+                  nodeLabels__.getKey(), nodeLabels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -716,6 +837,9 @@ public final class NodeGroupOuterClass {
         if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
           allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
         }
+        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+          nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -732,6 +856,8 @@ public final class NodeGroupOuterClass {
       switch (number) {
         case 6:
           return internalGetLabels();
+        case 17:
+          return internalGetNodeLabels();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -1570,6 +1696,153 @@ public final class NodeGroupOuterClass {
       return allowedUnsafeSysctls_.getByteString(index);
     }
 
+    public static final int NODE_TAINTS_FIELD_NUMBER = 16;
+    private java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> nodeTaints_;
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    public java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> getNodeTaintsList() {
+      return nodeTaints_;
+    }
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder> 
+        getNodeTaintsOrBuilderList() {
+      return nodeTaints_;
+    }
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    public int getNodeTaintsCount() {
+      return nodeTaints_.size();
+    }
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getNodeTaints(int index) {
+      return nodeTaints_.get(index);
+    }
+    /**
+     * <pre>
+     * Taints that are applied to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder getNodeTaintsOrBuilder(
+        int index) {
+      return nodeTaints_.get(index);
+    }
+
+    public static final int NODE_LABELS_FIELD_NUMBER = 17;
+    private static final class NodeLabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> nodeLabels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetNodeLabels() {
+      if (nodeLabels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NodeLabelsDefaultEntryHolder.defaultEntry);
+      }
+      return nodeLabels_;
+    }
+
+    public int getNodeLabelsCount() {
+      return internalGetNodeLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    public boolean containsNodeLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetNodeLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNodeLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getNodeLabels() {
+      return getNodeLabelsMap();
+    }
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getNodeLabelsMap() {
+      return internalGetNodeLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    public java.lang.String getNodeLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNodeLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Labels that are assigned to the nodes of the node group at creation time.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; node_labels = 17;</code>
+     */
+
+    public java.lang.String getNodeLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNodeLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1632,6 +1905,15 @@ public final class NodeGroupOuterClass {
       for (int i = 0; i < allowedUnsafeSysctls_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, allowedUnsafeSysctls_.getRaw(i));
       }
+      for (int i = 0; i < nodeTaints_.size(); i++) {
+        output.writeMessage(16, nodeTaints_.get(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetNodeLabels(),
+          NodeLabelsDefaultEntryHolder.defaultEntry,
+          17);
       unknownFields.writeTo(output);
     }
 
@@ -1705,6 +1987,20 @@ public final class NodeGroupOuterClass {
         size += dataSize;
         size += 1 * getAllowedUnsafeSysctlsList().size();
       }
+      for (int i = 0; i < nodeTaints_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, nodeTaints_.get(i));
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetNodeLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        nodeLabels__ = NodeLabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(17, nodeLabels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1768,6 +2064,10 @@ public final class NodeGroupOuterClass {
       }
       result = result && getAllowedUnsafeSysctlsList()
           .equals(other.getAllowedUnsafeSysctlsList());
+      result = result && getNodeTaintsList()
+          .equals(other.getNodeTaintsList());
+      result = result && internalGetNodeLabels().equals(
+          other.internalGetNodeLabels());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1824,6 +2124,14 @@ public final class NodeGroupOuterClass {
       if (getAllowedUnsafeSysctlsCount() > 0) {
         hash = (37 * hash) + ALLOWED_UNSAFE_SYSCTLS_FIELD_NUMBER;
         hash = (53 * hash) + getAllowedUnsafeSysctlsList().hashCode();
+      }
+      if (getNodeTaintsCount() > 0) {
+        hash = (37 * hash) + NODE_TAINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNodeTaintsList().hashCode();
+      }
+      if (!internalGetNodeLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + NODE_LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNodeLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1938,6 +2246,8 @@ public final class NodeGroupOuterClass {
         switch (number) {
           case 6:
             return internalGetLabels();
+          case 17:
+            return internalGetNodeLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1949,6 +2259,8 @@ public final class NodeGroupOuterClass {
         switch (number) {
           case 6:
             return internalGetMutableLabels();
+          case 17:
+            return internalGetMutableNodeLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1975,6 +2287,7 @@ public final class NodeGroupOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getNodeTaintsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2033,6 +2346,13 @@ public final class NodeGroupOuterClass {
         }
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00004000);
+        if (nodeTaintsBuilder_ == null) {
+          nodeTaints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+        } else {
+          nodeTaintsBuilder_.clear();
+        }
+        internalGetMutableNodeLabels().clear();
         return this;
       }
 
@@ -2105,6 +2425,17 @@ public final class NodeGroupOuterClass {
           bitField0_ = (bitField0_ & ~0x00004000);
         }
         result.allowedUnsafeSysctls_ = allowedUnsafeSysctls_;
+        if (nodeTaintsBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
+            bitField0_ = (bitField0_ & ~0x00008000);
+          }
+          result.nodeTaints_ = nodeTaints_;
+        } else {
+          result.nodeTaints_ = nodeTaintsBuilder_.build();
+        }
+        result.nodeLabels_ = internalGetNodeLabels();
+        result.nodeLabels_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2211,6 +2542,34 @@ public final class NodeGroupOuterClass {
           }
           onChanged();
         }
+        if (nodeTaintsBuilder_ == null) {
+          if (!other.nodeTaints_.isEmpty()) {
+            if (nodeTaints_.isEmpty()) {
+              nodeTaints_ = other.nodeTaints_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+            } else {
+              ensureNodeTaintsIsMutable();
+              nodeTaints_.addAll(other.nodeTaints_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.nodeTaints_.isEmpty()) {
+            if (nodeTaintsBuilder_.isEmpty()) {
+              nodeTaintsBuilder_.dispose();
+              nodeTaintsBuilder_ = null;
+              nodeTaints_ = other.nodeTaints_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+              nodeTaintsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNodeTaintsFieldBuilder() : null;
+            } else {
+              nodeTaintsBuilder_.addAllMessages(other.nodeTaints_);
+            }
+          }
+        }
+        internalGetMutableNodeLabels().mergeFrom(
+            other.internalGetNodeLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4046,6 +4405,469 @@ public final class NodeGroupOuterClass {
         ensureAllowedUnsafeSysctlsIsMutable();
         allowedUnsafeSysctls_.add(value);
         onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> nodeTaints_ =
+        java.util.Collections.emptyList();
+      private void ensureNodeTaintsIsMutable() {
+        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+          nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint>(nodeTaints_);
+          bitField0_ |= 0x00008000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder> nodeTaintsBuilder_;
+
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> getNodeTaintsList() {
+        if (nodeTaintsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(nodeTaints_);
+        } else {
+          return nodeTaintsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public int getNodeTaintsCount() {
+        if (nodeTaintsBuilder_ == null) {
+          return nodeTaints_.size();
+        } else {
+          return nodeTaintsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getNodeTaints(int index) {
+        if (nodeTaintsBuilder_ == null) {
+          return nodeTaints_.get(index);
+        } else {
+          return nodeTaintsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder setNodeTaints(
+          int index, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint value) {
+        if (nodeTaintsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.set(index, value);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder setNodeTaints(
+          int index, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder builderForValue) {
+        if (nodeTaintsBuilder_ == null) {
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder addNodeTaints(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint value) {
+        if (nodeTaintsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.add(value);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder addNodeTaints(
+          int index, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint value) {
+        if (nodeTaintsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.add(index, value);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder addNodeTaints(
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder builderForValue) {
+        if (nodeTaintsBuilder_ == null) {
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.add(builderForValue.build());
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder addNodeTaints(
+          int index, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder builderForValue) {
+        if (nodeTaintsBuilder_ == null) {
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder addAllNodeTaints(
+          java.lang.Iterable<? extends yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint> values) {
+        if (nodeTaintsBuilder_ == null) {
+          ensureNodeTaintsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, nodeTaints_);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder clearNodeTaints() {
+        if (nodeTaintsBuilder_ == null) {
+          nodeTaints_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public Builder removeNodeTaints(int index) {
+        if (nodeTaintsBuilder_ == null) {
+          ensureNodeTaintsIsMutable();
+          nodeTaints_.remove(index);
+          onChanged();
+        } else {
+          nodeTaintsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder getNodeTaintsBuilder(
+          int index) {
+        return getNodeTaintsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder getNodeTaintsOrBuilder(
+          int index) {
+        if (nodeTaintsBuilder_ == null) {
+          return nodeTaints_.get(index);  } else {
+          return nodeTaintsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder> 
+           getNodeTaintsOrBuilderList() {
+        if (nodeTaintsBuilder_ != null) {
+          return nodeTaintsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(nodeTaints_);
+        }
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder addNodeTaintsBuilder() {
+        return getNodeTaintsFieldBuilder().addBuilder(
+            yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder addNodeTaintsBuilder(
+          int index) {
+        return getNodeTaintsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Taints that are applied to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Taint node_taints = 16;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder> 
+           getNodeTaintsBuilderList() {
+        return getNodeTaintsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder> 
+          getNodeTaintsFieldBuilder() {
+        if (nodeTaintsBuilder_ == null) {
+          nodeTaintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder>(
+                  nodeTaints_,
+                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  getParentForChildren(),
+                  isClean());
+          nodeTaints_ = null;
+        }
+        return nodeTaintsBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> nodeLabels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetNodeLabels() {
+        if (nodeLabels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NodeLabelsDefaultEntryHolder.defaultEntry);
+        }
+        return nodeLabels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableNodeLabels() {
+        onChanged();;
+        if (nodeLabels_ == null) {
+          nodeLabels_ = com.google.protobuf.MapField.newMapField(
+              NodeLabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!nodeLabels_.isMutable()) {
+          nodeLabels_ = nodeLabels_.copy();
+        }
+        return nodeLabels_;
+      }
+
+      public int getNodeLabelsCount() {
+        return internalGetNodeLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public boolean containsNodeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetNodeLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNodeLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getNodeLabels() {
+        return getNodeLabelsMap();
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getNodeLabelsMap() {
+        return internalGetNodeLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public java.lang.String getNodeLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNodeLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public java.lang.String getNodeLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNodeLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNodeLabels() {
+        internalGetMutableNodeLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public Builder removeNodeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNodeLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableNodeLabels() {
+        return internalGetMutableNodeLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+      public Builder putNodeLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNodeLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Labels that are assigned to the nodes of the node group at creation time.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; node_labels = 17;</code>
+       */
+
+      public Builder putAllNodeLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableNodeLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -13875,6 +14697,903 @@ public final class NodeGroupOuterClass {
 
   }
 
+  public interface TaintOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.Taint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
+    /**
+     * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+     */
+    int getEffectValue();
+    /**
+     * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect getEffect();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.Taint}
+   */
+  public  static final class Taint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.Taint)
+      TaintOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Taint.newBuilder() to construct.
+    private Taint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Taint() {
+      key_ = "";
+      value_ = "";
+      effect_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Taint(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              effect_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_Taint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_Taint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.class, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.k8s.v1.Taint.Effect}
+     */
+    public enum Effect
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EFFECT_UNSPECIFIED = 0;</code>
+       */
+      EFFECT_UNSPECIFIED(0),
+      /**
+       * <code>NO_SCHEDULE = 1;</code>
+       */
+      NO_SCHEDULE(1),
+      /**
+       * <code>PREFER_NO_SCHEDULE = 2;</code>
+       */
+      PREFER_NO_SCHEDULE(2),
+      /**
+       * <code>NO_EXECUTE = 3;</code>
+       */
+      NO_EXECUTE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>EFFECT_UNSPECIFIED = 0;</code>
+       */
+      public static final int EFFECT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>NO_SCHEDULE = 1;</code>
+       */
+      public static final int NO_SCHEDULE_VALUE = 1;
+      /**
+       * <code>PREFER_NO_SCHEDULE = 2;</code>
+       */
+      public static final int PREFER_NO_SCHEDULE_VALUE = 2;
+      /**
+       * <code>NO_EXECUTE = 3;</code>
+       */
+      public static final int NO_EXECUTE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Effect valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Effect forNumber(int value) {
+        switch (value) {
+          case 0: return EFFECT_UNSPECIFIED;
+          case 1: return NO_SCHEDULE;
+          case 2: return PREFER_NO_SCHEDULE;
+          case 3: return NO_EXECUTE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Effect>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Effect> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Effect>() {
+              public Effect findValueByNumber(int number) {
+                return Effect.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Effect[] VALUES = values();
+
+      public static Effect valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Effect(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.k8s.v1.Taint.Effect)
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1;</code>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2;</code>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EFFECT_FIELD_NUMBER = 3;
+    private int effect_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+     */
+    public int getEffectValue() {
+      return effect_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect getEffect() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect result = yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.valueOf(effect_);
+      return result == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      if (effect_ != yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.EFFECT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, effect_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      if (effect_ != yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.EFFECT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, effect_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint other = (yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint) obj;
+
+      boolean result = true;
+      result = result && getKey()
+          .equals(other.getKey());
+      result = result && getValue()
+          .equals(other.getValue());
+      result = result && effect_ == other.effect_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + EFFECT_FIELD_NUMBER;
+      hash = (53 * hash) + effect_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.Taint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.Taint)
+        yandex.cloud.api.k8s.v1.NodeGroupOuterClass.TaintOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_Taint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_Taint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.class, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        value_ = "";
+
+        effect_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.internal_static_yandex_cloud_k8s_v1_Taint_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint build() {
+        yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint buildPartial() {
+        yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint result = new yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint(this);
+        result.key_ = key_;
+        result.value_ = value_;
+        result.effect_ = effect_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint other) {
+        if (other == yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        if (other.effect_ != 0) {
+          setEffectValue(other.getEffectValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1;</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2;</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int effect_ = 0;
+      /**
+       * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+       */
+      public int getEffectValue() {
+        return effect_;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+       */
+      public Builder setEffectValue(int value) {
+        effect_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect getEffect() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect result = yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.valueOf(effect_);
+        return result == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+       */
+      public Builder setEffect(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint.Effect value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        effect_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Taint.Effect effect = 3;</code>
+       */
+      public Builder clearEffect() {
+        
+        effect_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.Taint)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.Taint)
+    private static final yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint();
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Taint>
+        PARSER = new com.google.protobuf.AbstractParser<Taint>() {
+      @java.lang.Override
+      public Taint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Taint(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Taint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Taint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.Taint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor;
   private static final 
@@ -13885,6 +15604,11 @@ public final class NodeGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor;
   private static final 
@@ -13950,6 +15674,11 @@ public final class NodeGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NodeGroupMaintenancePolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_Taint_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_Taint_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13963,7 +15692,7 @@ public final class NodeGroupOuterClass {
       "yandex.cloud.k8s.v1\032\037google/protobuf/tim" +
       "estamp.proto\032%yandex/cloud/k8s/v1/mainte" +
       "nance.proto\032!yandex/cloud/k8s/v1/version" +
-      ".proto\032\035yandex/cloud/validation.proto\"\275\006" +
+      ".proto\032\035yandex/cloud/validation.proto\"\346\007" +
       "\n\tNodeGroup\022\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
@@ -13980,53 +15709,62 @@ public final class NodeGroupOuterClass {
       ".v1.VersionInfo\022K\n\022maintenance_policy\030\016 " +
       "\001(\0132/.yandex.cloud.k8s.v1.NodeGroupMaint" +
       "enancePolicy\022\036\n\026allowed_unsafe_sysctls\030\017" +
-      " \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPECI" +
-      "FIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017\n" +
-      "\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020" +
-      "\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"\301\003\n\014NodeTe" +
-      "mplate\022\023\n\013platform_id\030\001 \001(\t\022:\n\016resources" +
-      "_spec\030\002 \001(\0132\".yandex.cloud.k8s.v1.Resour" +
-      "cesSpec\0225\n\016boot_disk_spec\030\003 \001(\0132\035.yandex" +
-      ".cloud.k8s.v1.DiskSpec\022w\n\010metadata\030\004 \003(\013" +
-      "2/.yandex.cloud.k8s.v1.NodeTemplate.Meta" +
-      "dataEntryB4\202\3101\004<=64\212\3101\010<=131072\262\3101\006\032\0041-6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022=\n\017v4_address_sp" +
-      "ec\030\005 \001(\0132$.yandex.cloud.k8s.v1.NodeAddre" +
-      "ssSpec\022@\n\021scheduling_policy\030\006 \001(\0132%.yand" +
-      "ex.cloud.k8s.v1.SchedulingPolicy\032/\n\rMeta" +
-      "dataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"T\n\017NodeAddressSpec\022A\n\023one_to_one_nat_s" +
-      "pec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOne" +
-      "NatSpec\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
-      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"\241" +
-      "\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\0160-" +
-      "274877906944\022B\n\005cores\030\002 \001(\003B3\372\3071/0,1,2,4" +
-      ",6,8,10,12,14,16,18,20,22,24,26,28,30,32" +
-      "\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,1" +
-      "00\"f\n\010DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\307" +
-      "1\030|network-ssd|network-hdd\022&\n\tdisk_size\030" +
-      "\002 \001(\003B\023\372\3071\0170-4398046511104\"\266\002\n\013ScalePoli" +
-      "cy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.k" +
-      "8s.v1.ScalePolicy.FixedScaleH\000\022@\n\nauto_s" +
-      "cale\030\002 \001(\0132*.yandex.cloud.k8s.v1.ScalePo" +
-      "licy.AutoScaleH\000\032%\n\nFixedScale\022\027\n\004size\030\001" +
-      " \001(\003B\t\372\3071\0050-100\032f\n\tAutoScale\022\033\n\010min_size" +
-      "\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071" +
-      "\0050-100\022\037\n\014initial_size\030\003 \001(\003B\t\372\3071\0050-100B" +
-      "\022\n\nscale_type\022\004\300\3011\001\"V\n\031NodeGroupAllocati" +
-      "onPolicy\0229\n\tlocations\030\001 \003(\0132&.yandex.clo" +
-      "ud.k8s.v1.NodeGroupLocation\"=\n\021NodeGroup" +
-      "Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubne" +
-      "t_id\030\002 \001(\t\"\'\n\020SchedulingPolicy\022\023\n\013preemp" +
-      "tible\030\001 \001(\010\"\213\001\n\032NodeGroupMaintenancePoli" +
-      "cy\022\024\n\014auto_upgrade\030\001 \001(\010\022\023\n\013auto_repair\030" +
-      "\002 \001(\010\022B\n\022maintenance_window\030\003 \001(\0132&.yand" +
-      "ex.cloud.k8s.v1.MaintenanceWindow*;\n\tIpV" +
-      "ersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IP" +
-      "V4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api.k8s.v" +
-      "1Z;github.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/k8s/v1;k8sb\006proto3"
+      " \003(\t\022/\n\013node_taints\030\020 \003(\0132\032.yandex.cloud" +
+      ".k8s.v1.Taint\022C\n\013node_labels\030\021 \003(\0132..yan" +
+      "dex.cloud.k8s.v1.NodeGroup.NodeLabelsEnt" +
+      "ry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\0321\n\017NodeLabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATU" +
+      "S_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUN" +
+      "NING\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n" +
+      "\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"\301" +
+      "\003\n\014NodeTemplate\022\023\n\013platform_id\030\001 \001(\t\022:\n\016" +
+      "resources_spec\030\002 \001(\0132\".yandex.cloud.k8s." +
+      "v1.ResourcesSpec\0225\n\016boot_disk_spec\030\003 \001(\013" +
+      "2\035.yandex.cloud.k8s.v1.DiskSpec\022w\n\010metad" +
+      "ata\030\004 \003(\0132/.yandex.cloud.k8s.v1.NodeTemp" +
+      "late.MetadataEntryB4\202\3101\004<=64\212\3101\010<=131072" +
+      "\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022=\n\017v4_a" +
+      "ddress_spec\030\005 \001(\0132$.yandex.cloud.k8s.v1." +
+      "NodeAddressSpec\022@\n\021scheduling_policy\030\006 \001" +
+      "(\0132%.yandex.cloud.k8s.v1.SchedulingPolic" +
+      "y\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"T\n\017NodeAddressSpec\022A\n\023one_to_" +
+      "one_nat_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1" +
+      ".OneToOneNatSpec\"E\n\017OneToOneNatSpec\0222\n\ni" +
+      "p_version\030\001 \001(\0162\036.yandex.cloud.k8s.v1.Ip" +
+      "Version\"\241\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(" +
+      "\003B\022\372\3071\0160-274877906944\022B\n\005cores\030\002 \001(\003B3\372\307" +
+      "1/0,1,2,4,6,8,10,12,14,16,18,20,22,24,26" +
+      ",28,30,32\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0," +
+      "5,20,50,100\"f\n\010DiskSpec\0222\n\014disk_type_id\030" +
+      "\001 \001(\tB\034\362\3071\030|network-ssd|network-hdd\022&\n\td" +
+      "isk_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\266\002\n\013" +
+      "ScalePolicy\022B\n\013fixed_scale\030\001 \001(\0132+.yande" +
+      "x.cloud.k8s.v1.ScalePolicy.FixedScaleH\000\022" +
+      "@\n\nauto_scale\030\002 \001(\0132*.yandex.cloud.k8s.v" +
+      "1.ScalePolicy.AutoScaleH\000\032%\n\nFixedScale\022" +
+      "\027\n\004size\030\001 \001(\003B\t\372\3071\0050-100\032f\n\tAutoScale\022\033\n" +
+      "\010min_size\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002" +
+      " \001(\003B\t\372\3071\0050-100\022\037\n\014initial_size\030\003 \001(\003B\t\372" +
+      "\3071\0050-100B\022\n\nscale_type\022\004\300\3011\001\"V\n\031NodeGrou" +
+      "pAllocationPolicy\0229\n\tlocations\030\001 \003(\0132&.y" +
+      "andex.cloud.k8s.v1.NodeGroupLocation\"=\n\021" +
+      "NodeGroupLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022\021\n\tsubnet_id\030\002 \001(\t\"\'\n\020SchedulingPolicy\022" +
+      "\023\n\013preemptible\030\001 \001(\010\"\213\001\n\032NodeGroupMainte" +
+      "nancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022\023\n\013aut" +
+      "o_repair\030\002 \001(\010\022B\n\022maintenance_window\030\003 \001" +
+      "(\0132&.yandex.cloud.k8s.v1.MaintenanceWind" +
+      "ow\"\261\001\n\005Taint\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      "\0221\n\006effect\030\003 \001(\0162!.yandex.cloud.k8s.v1.T" +
+      "aint.Effect\"Y\n\006Effect\022\026\n\022EFFECT_UNSPECIF" +
+      "IED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO_SCHE" +
+      "DULE\020\002\022\016\n\nNO_EXECUTE\020\003*;\n\tIpVersion\022\032\n\026I" +
+      "P_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV" +
+      "6\020\002BV\n\027yandex.cloud.api.k8s.v1Z;github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14049,12 +15787,18 @@ public final class NodeGroupOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Description", "Labels", "Status", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "InstanceGroupId", "NodeVersion", "VersionInfo", "MaintenancePolicy", "AllowedUnsafeSysctls", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Description", "Labels", "Status", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "InstanceGroupId", "NodeVersion", "VersionInfo", "MaintenancePolicy", "AllowedUnsafeSysctls", "NodeTaints", "NodeLabels", });
     internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeGroup_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_descriptor =
+      internal_static_yandex_cloud_k8s_v1_NodeGroup_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_NodeGroup_NodeLabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor =
       getDescriptor().getMessageTypes().get(1);
@@ -14134,6 +15878,12 @@ public final class NodeGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeGroupMaintenancePolicy_descriptor,
         new java.lang.String[] { "AutoUpgrade", "AutoRepair", "MaintenanceWindow", });
+    internal_static_yandex_cloud_k8s_v1_Taint_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_k8s_v1_Taint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_Taint_descriptor,
+        new java.lang.String[] { "Key", "Value", "Effect", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
