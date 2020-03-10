@@ -9616,6 +9616,16 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Size of the masks that are assigned for each node in the cluster.
+     * If not specified, 24 is used.
+     * </pre>
+     *
+     * <code>int64 node_ipv4_cidr_mask_size = 5 [(.yandex.cloud.value) = "0,24,25,26,27,28"];</code>
+     */
+    long getNodeIpv4CidrMaskSize();
+
+    /**
+     * <pre>
      * CIDR block. IP range Kubernetes service Kubernetes cluster IP addresses will be allocated from.
      * It should not overlap with any subnet in the network the Kubernetes cluster located in.
      * </pre>
@@ -9648,6 +9658,7 @@ public final class ClusterOuterClass {
     }
     private IPAllocationPolicy() {
       clusterIpv4CidrBlock_ = "";
+      nodeIpv4CidrMaskSize_ = 0L;
       serviceIpv4CidrBlock_ = "";
     }
 
@@ -9685,6 +9696,11 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceIpv4CidrBlock_ = s;
+              break;
+            }
+            case 40: {
+
+              nodeIpv4CidrMaskSize_ = input.readInt64();
               break;
             }
             default: {
@@ -9765,6 +9781,20 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int NODE_IPV4_CIDR_MASK_SIZE_FIELD_NUMBER = 5;
+    private long nodeIpv4CidrMaskSize_;
+    /**
+     * <pre>
+     * Size of the masks that are assigned for each node in the cluster.
+     * If not specified, 24 is used.
+     * </pre>
+     *
+     * <code>int64 node_ipv4_cidr_mask_size = 5 [(.yandex.cloud.value) = "0,24,25,26,27,28"];</code>
+     */
+    public long getNodeIpv4CidrMaskSize() {
+      return nodeIpv4CidrMaskSize_;
+    }
+
     public static final int SERVICE_IPV4_CIDR_BLOCK_FIELD_NUMBER = 2;
     private volatile java.lang.Object serviceIpv4CidrBlock_;
     /**
@@ -9829,6 +9859,9 @@ public final class ClusterOuterClass {
       if (!getServiceIpv4CidrBlockBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceIpv4CidrBlock_);
       }
+      if (nodeIpv4CidrMaskSize_ != 0L) {
+        output.writeInt64(5, nodeIpv4CidrMaskSize_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9843,6 +9876,10 @@ public final class ClusterOuterClass {
       }
       if (!getServiceIpv4CidrBlockBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceIpv4CidrBlock_);
+      }
+      if (nodeIpv4CidrMaskSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, nodeIpv4CidrMaskSize_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9862,6 +9899,8 @@ public final class ClusterOuterClass {
       boolean result = true;
       result = result && getClusterIpv4CidrBlock()
           .equals(other.getClusterIpv4CidrBlock());
+      result = result && (getNodeIpv4CidrMaskSize()
+          == other.getNodeIpv4CidrMaskSize());
       result = result && getServiceIpv4CidrBlock()
           .equals(other.getServiceIpv4CidrBlock());
       result = result && unknownFields.equals(other.unknownFields);
@@ -9877,6 +9916,9 @@ public final class ClusterOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_IPV4_CIDR_BLOCK_FIELD_NUMBER;
       hash = (53 * hash) + getClusterIpv4CidrBlock().hashCode();
+      hash = (37 * hash) + NODE_IPV4_CIDR_MASK_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNodeIpv4CidrMaskSize());
       hash = (37 * hash) + SERVICE_IPV4_CIDR_BLOCK_FIELD_NUMBER;
       hash = (53 * hash) + getServiceIpv4CidrBlock().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -10014,6 +10056,8 @@ public final class ClusterOuterClass {
         super.clear();
         clusterIpv4CidrBlock_ = "";
 
+        nodeIpv4CidrMaskSize_ = 0L;
+
         serviceIpv4CidrBlock_ = "";
 
         return this;
@@ -10043,6 +10087,7 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.IPAllocationPolicy(this);
         result.clusterIpv4CidrBlock_ = clusterIpv4CidrBlock_;
+        result.nodeIpv4CidrMaskSize_ = nodeIpv4CidrMaskSize_;
         result.serviceIpv4CidrBlock_ = serviceIpv4CidrBlock_;
         onBuilt();
         return result;
@@ -10095,6 +10140,9 @@ public final class ClusterOuterClass {
         if (!other.getClusterIpv4CidrBlock().isEmpty()) {
           clusterIpv4CidrBlock_ = other.clusterIpv4CidrBlock_;
           onChanged();
+        }
+        if (other.getNodeIpv4CidrMaskSize() != 0L) {
+          setNodeIpv4CidrMaskSize(other.getNodeIpv4CidrMaskSize());
         }
         if (!other.getServiceIpv4CidrBlock().isEmpty()) {
           serviceIpv4CidrBlock_ = other.serviceIpv4CidrBlock_;
@@ -10224,6 +10272,47 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         clusterIpv4CidrBlock_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long nodeIpv4CidrMaskSize_ ;
+      /**
+       * <pre>
+       * Size of the masks that are assigned for each node in the cluster.
+       * If not specified, 24 is used.
+       * </pre>
+       *
+       * <code>int64 node_ipv4_cidr_mask_size = 5 [(.yandex.cloud.value) = "0,24,25,26,27,28"];</code>
+       */
+      public long getNodeIpv4CidrMaskSize() {
+        return nodeIpv4CidrMaskSize_;
+      }
+      /**
+       * <pre>
+       * Size of the masks that are assigned for each node in the cluster.
+       * If not specified, 24 is used.
+       * </pre>
+       *
+       * <code>int64 node_ipv4_cidr_mask_size = 5 [(.yandex.cloud.value) = "0,24,25,26,27,28"];</code>
+       */
+      public Builder setNodeIpv4CidrMaskSize(long value) {
+        
+        nodeIpv4CidrMaskSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the masks that are assigned for each node in the cluster.
+       * If not specified, 24 is used.
+       * </pre>
+       *
+       * <code>int64 node_ipv4_cidr_mask_size = 5 [(.yandex.cloud.value) = "0,24,25,26,27,28"];</code>
+       */
+      public Builder clearNodeIpv4CidrMaskSize() {
+        
+        nodeIpv4CidrMaskSize_ = 0L;
         onChanged();
         return this;
       }
@@ -11854,20 +11943,22 @@ public final class ClusterOuterClass {
       "on_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t" +
       "\022\033\n\023external_v4_address\030\003 \001(\t\"M\n\017MasterE" +
       "ndpoints\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034" +
-      "\n\024external_v4_endpoint\030\002 \001(\t\"V\n\022IPAlloca" +
-      "tionPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001 " +
-      "\001(\t\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\"s\n\027" +
-      "MasterMaintenancePolicy\022\024\n\014auto_upgrade\030" +
-      "\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\0132&.yand" +
-      "ex.cloud.k8s.v1.MaintenanceWindow\"\200\001\n\rNe" +
-      "tworkPolicy\022=\n\010provider\030\001 \001(\0162+.yandex.c" +
-      "loud.k8s.v1.NetworkPolicy.Provider\"0\n\010Pr" +
-      "ovider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALI" +
-      "CO\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNE" +
-      "L_UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022" +
-      "\n\n\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/k8s/v1;k8sb\006proto3"
+      "\n\024external_v4_endpoint\030\002 \001(\t\"\216\001\n\022IPAlloc" +
+      "ationPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001" +
+      " \001(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001(\003B\024" +
+      "\372\3071\0200,24,25,26,27,28\022\037\n\027service_ipv4_cid" +
+      "r_block\030\002 \001(\t\"s\n\027MasterMaintenancePolicy" +
+      "\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenance_wi" +
+      "ndow\030\002 \001(\0132&.yandex.cloud.k8s.v1.Mainten" +
+      "anceWindow\"\200\001\n\rNetworkPolicy\022=\n\010provider" +
+      "\030\001 \001(\0162+.yandex.cloud.k8s.v1.NetworkPoli" +
+      "cy.Provider\"0\n\010Provider\022\030\n\024PROVIDER_UNSP" +
+      "ECIFIED\020\000\022\n\n\006CALICO\020\001*U\n\016ReleaseChannel\022" +
+      "\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPI" +
+      "D\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.c" +
+      "loud.api.k8s.v1Z;github.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/k8s/v1;k8sb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11932,7 +12023,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_descriptor,
-        new java.lang.String[] { "ClusterIpv4CidrBlock", "ServiceIpv4CidrBlock", });
+        new java.lang.String[] { "ClusterIpv4CidrBlock", "NodeIpv4CidrMaskSize", "ServiceIpv4CidrBlock", });
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_fieldAccessorTable = new
@@ -11948,6 +12039,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();

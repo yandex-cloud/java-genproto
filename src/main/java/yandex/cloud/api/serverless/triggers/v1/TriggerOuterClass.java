@@ -841,6 +841,19 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorageOrBuilder getObjectStorageOrBuilder();
 
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      boolean hasContainerRegistry();
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry();
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.RuleCase getRuleCase();
     }
     /**
@@ -942,6 +955,20 @@ public final class TriggerOuterClass {
                 ruleCase_ = 5;
                 break;
               }
+              case 50: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder subBuilder = null;
+                if (ruleCase_ == 6) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_).toBuilder();
+                }
+                rule_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_);
+                  rule_ = subBuilder.buildPartial();
+                }
+                ruleCase_ = 6;
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -982,6 +1009,7 @@ public final class TriggerOuterClass {
         MESSAGE_QUEUE(3),
         IOT_MESSAGE(4),
         OBJECT_STORAGE(5),
+        CONTAINER_REGISTRY(6),
         RULE_NOT_SET(0);
         private final int value;
         private RuleCase(int value) {
@@ -1001,6 +1029,7 @@ public final class TriggerOuterClass {
             case 3: return MESSAGE_QUEUE;
             case 4: return IOT_MESSAGE;
             case 5: return OBJECT_STORAGE;
+            case 6: return CONTAINER_REGISTRY;
             case 0: return RULE_NOT_SET;
             default: return null;
           }
@@ -1156,6 +1185,32 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.getDefaultInstance();
       }
 
+      public static final int CONTAINER_REGISTRY_FIELD_NUMBER = 6;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      public boolean hasContainerRegistry() {
+        return ruleCase_ == 6;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry() {
+        if (ruleCase_ == 6) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder() {
+        if (ruleCase_ == 6) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1182,6 +1237,9 @@ public final class TriggerOuterClass {
         if (ruleCase_ == 5) {
           output.writeMessage(5, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage) rule_);
         }
+        if (ruleCase_ == 6) {
+          output.writeMessage(6, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -1206,6 +1264,10 @@ public final class TriggerOuterClass {
         if (ruleCase_ == 5) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage) rule_);
+        }
+        if (ruleCase_ == 6) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1243,6 +1305,10 @@ public final class TriggerOuterClass {
             result = result && getObjectStorage()
                 .equals(other.getObjectStorage());
             break;
+          case 6:
+            result = result && getContainerRegistry()
+                .equals(other.getContainerRegistry());
+            break;
           case 0:
           default:
         }
@@ -1273,6 +1339,10 @@ public final class TriggerOuterClass {
           case 5:
             hash = (37 * hash) + OBJECT_STORAGE_FIELD_NUMBER;
             hash = (53 * hash) + getObjectStorage().hashCode();
+            break;
+          case 6:
+            hash = (37 * hash) + CONTAINER_REGISTRY_FIELD_NUMBER;
+            hash = (53 * hash) + getContainerRegistry().hashCode();
             break;
           case 0:
           default:
@@ -1470,6 +1540,13 @@ public final class TriggerOuterClass {
               result.rule_ = objectStorageBuilder_.build();
             }
           }
+          if (ruleCase_ == 6) {
+            if (containerRegistryBuilder_ == null) {
+              result.rule_ = rule_;
+            } else {
+              result.rule_ = containerRegistryBuilder_.build();
+            }
+          }
           result.ruleCase_ = ruleCase_;
           onBuilt();
           return result;
@@ -1534,6 +1611,10 @@ public final class TriggerOuterClass {
             }
             case OBJECT_STORAGE: {
               mergeObjectStorage(other.getObjectStorage());
+              break;
+            }
+            case CONTAINER_REGISTRY: {
+              mergeContainerRegistry(other.getContainerRegistry());
               break;
             }
             case RULE_NOT_SET: {
@@ -2234,6 +2315,142 @@ public final class TriggerOuterClass {
           ruleCase_ = 5;
           onChanged();;
           return objectStorageBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder> containerRegistryBuilder_;
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public boolean hasContainerRegistry() {
+          return ruleCase_ == 6;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry getContainerRegistry() {
+          if (containerRegistryBuilder_ == null) {
+            if (ruleCase_ == 6) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+          } else {
+            if (ruleCase_ == 6) {
+              return containerRegistryBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public Builder setContainerRegistry(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry value) {
+          if (containerRegistryBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            rule_ = value;
+            onChanged();
+          } else {
+            containerRegistryBuilder_.setMessage(value);
+          }
+          ruleCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public Builder setContainerRegistry(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder builderForValue) {
+          if (containerRegistryBuilder_ == null) {
+            rule_ = builderForValue.build();
+            onChanged();
+          } else {
+            containerRegistryBuilder_.setMessage(builderForValue.build());
+          }
+          ruleCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public Builder mergeContainerRegistry(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry value) {
+          if (containerRegistryBuilder_ == null) {
+            if (ruleCase_ == 6 &&
+                rule_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance()) {
+              rule_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              rule_ = value;
+            }
+            onChanged();
+          } else {
+            if (ruleCase_ == 6) {
+              containerRegistryBuilder_.mergeFrom(value);
+            }
+            containerRegistryBuilder_.setMessage(value);
+          }
+          ruleCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public Builder clearContainerRegistry() {
+          if (containerRegistryBuilder_ == null) {
+            if (ruleCase_ == 6) {
+              ruleCase_ = 0;
+              rule_ = null;
+              onChanged();
+            }
+          } else {
+            if (ruleCase_ == 6) {
+              ruleCase_ = 0;
+              rule_ = null;
+            }
+            containerRegistryBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder getContainerRegistryBuilder() {
+          return getContainerRegistryFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder getContainerRegistryOrBuilder() {
+          if ((ruleCase_ == 6) && (containerRegistryBuilder_ != null)) {
+            return containerRegistryBuilder_.getMessageOrBuilder();
+          } else {
+            if (ruleCase_ == 6) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistry container_registry = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder> 
+            getContainerRegistryFieldBuilder() {
+          if (containerRegistryBuilder_ == null) {
+            if (!(ruleCase_ == 6)) {
+              rule_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.getDefaultInstance();
+            }
+            containerRegistryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistryOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry) rule_,
+                    getParentForChildren(),
+                    isClean());
+            rule_ = null;
+          }
+          ruleCase_ = 6;
+          onChanged();;
+          return containerRegistryBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -7925,14 +8142,14 @@ public final class TriggerOuterClass {
           getImageNameBytes();
 
       /**
-       * <code>string tag_name = 6;</code>
+       * <code>string tag = 6;</code>
        */
-      java.lang.String getTagName();
+      java.lang.String getTag();
       /**
-       * <code>string tag_name = 6;</code>
+       * <code>string tag = 6;</code>
        */
       com.google.protobuf.ByteString
-          getTagNameBytes();
+          getTagBytes();
 
       /**
        * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
@@ -7965,7 +8182,7 @@ public final class TriggerOuterClass {
         eventType_ = java.util.Collections.emptyList();
         registryId_ = "";
         imageName_ = "";
-        tagName_ = "";
+        tag_ = "";
       }
 
       @java.lang.Override
@@ -8030,7 +8247,7 @@ public final class TriggerOuterClass {
               case 50: {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                tagName_ = s;
+                tag_ = s;
                 break;
               }
               case 810: {
@@ -8261,34 +8478,34 @@ public final class TriggerOuterClass {
         }
       }
 
-      public static final int TAG_NAME_FIELD_NUMBER = 6;
-      private volatile java.lang.Object tagName_;
+      public static final int TAG_FIELD_NUMBER = 6;
+      private volatile java.lang.Object tag_;
       /**
-       * <code>string tag_name = 6;</code>
+       * <code>string tag = 6;</code>
        */
-      public java.lang.String getTagName() {
-        java.lang.Object ref = tagName_;
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          tagName_ = s;
+          tag_ = s;
           return s;
         }
       }
       /**
-       * <code>string tag_name = 6;</code>
+       * <code>string tag = 6;</code>
        */
       public com.google.protobuf.ByteString
-          getTagNameBytes() {
-        java.lang.Object ref = tagName_;
+          getTagBytes() {
+        java.lang.Object ref = tag_;
         if (ref instanceof java.lang.String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          tagName_ = b;
+          tag_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -8349,8 +8566,8 @@ public final class TriggerOuterClass {
         if (!getImageNameBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, imageName_);
         }
-        if (!getTagNameBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tagName_);
+        if (!getTagBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tag_);
         }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
@@ -8382,8 +8599,8 @@ public final class TriggerOuterClass {
         if (!getImageNameBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, imageName_);
         }
-        if (!getTagNameBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tagName_);
+        if (!getTagBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tag_);
         }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
@@ -8410,8 +8627,8 @@ public final class TriggerOuterClass {
             .equals(other.getRegistryId());
         result = result && getImageName()
             .equals(other.getImageName());
-        result = result && getTagName()
-            .equals(other.getTagName());
+        result = result && getTag()
+            .equals(other.getTag());
         result = result && getActionCase().equals(
             other.getActionCase());
         if (!result) return false;
@@ -8442,8 +8659,8 @@ public final class TriggerOuterClass {
         hash = (53 * hash) + getRegistryId().hashCode();
         hash = (37 * hash) + IMAGE_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getImageName().hashCode();
-        hash = (37 * hash) + TAG_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getTagName().hashCode();
+        hash = (37 * hash) + TAG_FIELD_NUMBER;
+        hash = (53 * hash) + getTag().hashCode();
         switch (actionCase_) {
           case 101:
             hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -8591,7 +8808,7 @@ public final class TriggerOuterClass {
 
           imageName_ = "";
 
-          tagName_ = "";
+          tag_ = "";
 
           actionCase_ = 0;
           action_ = null;
@@ -8630,7 +8847,7 @@ public final class TriggerOuterClass {
           result.eventType_ = eventType_;
           result.registryId_ = registryId_;
           result.imageName_ = imageName_;
-          result.tagName_ = tagName_;
+          result.tag_ = tag_;
           if (actionCase_ == 101) {
             if (invokeFunctionBuilder_ == null) {
               result.action_ = action_;
@@ -8706,8 +8923,8 @@ public final class TriggerOuterClass {
             imageName_ = other.imageName_;
             onChanged();
           }
-          if (!other.getTagName().isEmpty()) {
-            tagName_ = other.tagName_;
+          if (!other.getTag().isEmpty()) {
+            tag_ = other.tag_;
             onChanged();
           }
           switch (other.getActionCase()) {
@@ -9088,71 +9305,71 @@ public final class TriggerOuterClass {
           return this;
         }
 
-        private java.lang.Object tagName_ = "";
+        private java.lang.Object tag_ = "";
         /**
-         * <code>string tag_name = 6;</code>
+         * <code>string tag = 6;</code>
          */
-        public java.lang.String getTagName() {
-          java.lang.Object ref = tagName_;
+        public java.lang.String getTag() {
+          java.lang.Object ref = tag_;
           if (!(ref instanceof java.lang.String)) {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            tagName_ = s;
+            tag_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>string tag_name = 6;</code>
+         * <code>string tag = 6;</code>
          */
         public com.google.protobuf.ByteString
-            getTagNameBytes() {
-          java.lang.Object ref = tagName_;
+            getTagBytes() {
+          java.lang.Object ref = tag_;
           if (ref instanceof String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            tagName_ = b;
+            tag_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
           }
         }
         /**
-         * <code>string tag_name = 6;</code>
+         * <code>string tag = 6;</code>
          */
-        public Builder setTagName(
+        public Builder setTag(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
   
-          tagName_ = value;
+          tag_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>string tag_name = 6;</code>
+         * <code>string tag = 6;</code>
          */
-        public Builder clearTagName() {
+        public Builder clearTag() {
           
-          tagName_ = getDefaultInstance().getTagName();
+          tag_ = getDefaultInstance().getTag();
           onChanged();
           return this;
         }
         /**
-         * <code>string tag_name = 6;</code>
+         * <code>string tag = 6;</code>
          */
-        public Builder setTagNameBytes(
+        public Builder setTagBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
           
-          tagName_ = value;
+          tag_ = value;
           onChanged();
           return this;
         }
@@ -15771,7 +15988,7 @@ public final class TriggerOuterClass {
       "igger.proto\022#yandex.cloud.serverless.tri" +
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\035yande" +
-      "x/cloud/validation.proto\"\304\023\n\007Trigger\022\n\n\002" +
+      "x/cloud/validation.proto\"\235\024\n\007Trigger\022\n\n\002" +
       "id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
       "Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013des" +
@@ -15780,7 +15997,7 @@ public final class TriggerOuterClass {
       "Trigger.LabelsEntry\022E\n\004rule\030\010 \001(\01321.yand" +
       "ex.cloud.serverless.triggers.v1.Trigger." +
       "RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\032\323\002\n\004Rule\022C\n\005timer\030\002 \001(" +
+      "\n\005value\030\002 \001(\t:\0028\001\032\261\003\n\004Rule\022C\n\005timer\030\002 \001(" +
       "\01322.yandex.cloud.serverless.triggers.v1." +
       "Trigger.TimerH\000\022R\n\rmessage_queue\030\003 \001(\01329" +
       ".yandex.cloud.serverless.triggers.v1.Tri" +
@@ -15788,76 +16005,78 @@ public final class TriggerOuterClass {
       "27.yandex.cloud.serverless.triggers.v1.T" +
       "rigger.IoTMessageH\000\022T\n\016object_storage\030\005 " +
       "\001(\0132:.yandex.cloud.serverless.triggers.v" +
-      "1.Trigger.ObjectStorageH\000B\014\n\004rule\022\004\300\3011\001\032" +
-      "\367\001\n\005Timer\022&\n\017cron_expression\030\001 \001(\tB\r\350\3071\001" +
-      "\212\3101\005<=100\022R\n\017invoke_function\030e \001(\01327.yan" +
-      "dex.cloud.serverless.triggers.v1.InvokeF" +
-      "unctionOnceH\000\022b\n\032invoke_function_with_re" +
-      "try\030g \001(\0132<.yandex.cloud.serverless.trig" +
-      "gers.v1.InvokeFunctionWithRetryH\000B\016\n\006act" +
-      "ion\022\004\300\3011\001\032\310\002\n\014MessageQueue\022\026\n\010queue_id\030\013" +
-      " \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022P\n\016batch_settings\030\004 \001(\01322.y" +
-      "andex.cloud.serverless.triggers.v1.Batch" +
-      "SettingsB\004\350\3071\001\022@\n\022visibility_timeout\030\005 \001" +
-      "(\0132\031.google.protobuf.DurationB\t\372\3071\005<=12h" +
-      "\022R\n\017invoke_function\030e \001(\01327.yandex.cloud" +
-      ".serverless.triggers.v1.InvokeFunctionOn" +
-      "ceH\000B\016\n\006action\022\004\300\3011\001\032\267\001\n\nIoTMessage\022\031\n\013r" +
-      "egistry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(" +
-      "\t\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017invoke_function" +
-      "\030e \001(\0132<.yandex.cloud.serverless.trigger" +
-      "s.v1.InvokeFunctionWithRetryH\000B\016\n\006action" +
-      "\022\004\300\3011\001\032\214\002\n\rObjectStorage\022_\n\nevent_type\030\003" +
-      " \003(\0162C.yandex.cloud.serverless.triggers." +
-      "v1.Trigger.ObjectStorageEventTypeB\006\202\3101\002>" +
-      "0\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006" +
-      "suffix\030\007 \001(\t\022W\n\017invoke_function\030e \001(\0132<." +
-      "yandex.cloud.serverless.triggers.v1.Invo" +
-      "keFunctionWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\234\002" +
-      "\n\021ContainerRegistry\022c\n\nevent_type\030\003 \003(\0162" +
-      "G.yandex.cloud.serverless.triggers.v1.Tr" +
-      "igger.ContainerRegistryEventTypeB\006\202\3101\002>0" +
-      "\022\023\n\013registry_id\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(" +
-      "\t\022\020\n\010tag_name\030\006 \001(\t\022W\n\017invoke_function\030e" +
-      " \001(\0132<.yandex.cloud.serverless.triggers." +
-      "v1.InvokeFunctionWithRetryH\000B\016\n\006action\022\004" +
-      "\300\3011\001\"\312\001\n\026ObjectStorageEventType\022)\n%OBJEC" +
-      "T_STORAGE_EVENT_TYPE_UNSPECIFIED\020\000\022+\n\'OB" +
-      "JECT_STORAGE_EVENT_TYPE_CREATE_OBJECT\020\001\022" +
-      "+\n\'OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJE" +
-      "CT\020\002\022+\n\'OBJECT_STORAGE_EVENT_TYPE_DELETE" +
-      "_OBJECT\020\003\"\223\002\n\032ContainerRegistryEventType" +
-      "\022-\n)CONTAINER_REGISTRY_EVENT_TYPE_UNSPEC" +
-      "IFIED\020\000\022.\n*CONTAINER_REGISTRY_EVENT_TYPE" +
-      "_CREATE_IMAGE\020\001\022.\n*CONTAINER_REGISTRY_EV" +
-      "ENT_TYPE_DELETE_IMAGE\020\002\0222\n.CONTAINER_REG" +
-      "ISTRY_EVENT_TYPE_CREATE_IMAGE_TAG\020\003\0222\n.C" +
-      "ONTAINER_REGISTRY_EVENT_TYPE_DELETE_IMAG" +
-      "E_TAG\020\004\"i\n\022InvokeFunctionOnce\022!\n\013functio" +
-      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag" +
-      "\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027I" +
-      "nvokeFunctionWithRetry\022!\n\013function_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022" +
-      "\032\n\022service_account_id\030\003 \001(\t\022J\n\016retry_set" +
-      "tings\030\004 \001(\01322.yandex.cloud.serverless.tr" +
-      "iggers.v1.RetrySettings\022O\n\021dead_letter_q" +
-      "ueue\030\005 \001(\01324.yandex.cloud.serverless.tri" +
-      "ggers.v1.PutQueueMessage\"M\n\017PutQueueMess" +
-      "age\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_account" +
-      "_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSettings" +
-      "\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030\002 \001(\013" +
-      "2\031.google.protobuf.DurationB\004\350\3071\001\"c\n\rRet" +
-      "rySettings\022\037\n\016retry_attempts\030\001 \001(\003B\007\372\3071\003" +
-      "1-5\0221\n\010interval\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB\004\350\3071\001*\206\001\n\013TriggerType\022\034\n\030TRIGGE" +
-      "R_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSA" +
-      "GE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\022\n\016OBJECT_ST" +
-      "ORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006B{\n\'yande" +
-      "x.cloud.api.serverless.triggers.v1ZPgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/serverless/triggers/v1;triggersb\006pr" +
-      "oto3"
+      "1.Trigger.ObjectStorageH\000\022\\\n\022container_r" +
+      "egistry\030\006 \001(\0132>.yandex.cloud.serverless." +
+      "triggers.v1.Trigger.ContainerRegistryH\000B" +
+      "\014\n\004rule\022\004\300\3011\001\032\367\001\n\005Timer\022&\n\017cron_expressi" +
+      "on\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022R\n\017invoke_functi" +
+      "on\030e \001(\01327.yandex.cloud.serverless.trigg" +
+      "ers.v1.InvokeFunctionOnceH\000\022b\n\032invoke_fu" +
+      "nction_with_retry\030g \001(\0132<.yandex.cloud.s" +
+      "erverless.triggers.v1.InvokeFunctionWith" +
+      "RetryH\000B\016\n\006action\022\004\300\3011\001\032\310\002\n\014MessageQueue" +
+      "\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_acco" +
+      "unt_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_sett" +
+      "ings\030\004 \001(\01322.yandex.cloud.serverless.tri" +
+      "ggers.v1.BatchSettingsB\004\350\3071\001\022@\n\022visibili" +
+      "ty_timeout\030\005 \001(\0132\031.google.protobuf.Durat" +
+      "ionB\t\372\3071\005<=12h\022R\n\017invoke_function\030e \001(\0132" +
+      "7.yandex.cloud.serverless.triggers.v1.In" +
+      "vokeFunctionOnceH\000B\016\n\006action\022\004\300\3011\001\032\267\001\n\nI" +
+      "oTMessage\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\t" +
+      "device_id\030\002 \001(\t\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017i" +
+      "nvoke_function\030e \001(\0132<.yandex.cloud.serv" +
+      "erless.triggers.v1.InvokeFunctionWithRet" +
+      "ryH\000B\016\n\006action\022\004\300\3011\001\032\214\002\n\rObjectStorage\022_" +
+      "\n\nevent_type\030\003 \003(\0162C.yandex.cloud.server" +
+      "less.triggers.v1.Trigger.ObjectStorageEv" +
+      "entTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006pr" +
+      "efix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022W\n\017invoke_fun" +
+      "ction\030e \001(\0132<.yandex.cloud.serverless.tr" +
+      "iggers.v1.InvokeFunctionWithRetryH\000B\016\n\006a" +
+      "ction\022\004\300\3011\001\032\227\002\n\021ContainerRegistry\022c\n\neve" +
+      "nt_type\030\003 \003(\0162G.yandex.cloud.serverless." +
+      "triggers.v1.Trigger.ContainerRegistryEve" +
+      "ntTypeB\006\202\3101\002>0\022\023\n\013registry_id\030\004 \001(\t\022\022\n\ni" +
+      "mage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t\022W\n\017invoke_f" +
+      "unction\030e \001(\0132<.yandex.cloud.serverless." +
+      "triggers.v1.InvokeFunctionWithRetryH\000B\016\n" +
+      "\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorageEventType" +
+      "\022)\n%OBJECT_STORAGE_EVENT_TYPE_UNSPECIFIE" +
+      "D\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYPE_CREATE_" +
+      "OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVENT_TYPE_UP" +
+      "DATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE_EVENT_TY" +
+      "PE_DELETE_OBJECT\020\003\"\223\002\n\032ContainerRegistry" +
+      "EventType\022-\n)CONTAINER_REGISTRY_EVENT_TY" +
+      "PE_UNSPECIFIED\020\000\022.\n*CONTAINER_REGISTRY_E" +
+      "VENT_TYPE_CREATE_IMAGE\020\001\022.\n*CONTAINER_RE" +
+      "GISTRY_EVENT_TYPE_DELETE_IMAGE\020\002\0222\n.CONT" +
+      "AINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_T" +
+      "AG\020\003\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_DE" +
+      "LETE_IMAGE_TAG\020\004\"i\n\022InvokeFunctionOnce\022!" +
+      "\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014fun" +
+      "ction_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 " +
+      "\001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!\n\013funct" +
+      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_t" +
+      "ag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\022J\n\016" +
+      "retry_settings\030\004 \001(\01322.yandex.cloud.serv" +
+      "erless.triggers.v1.RetrySettings\022O\n\021dead" +
+      "_letter_queue\030\005 \001(\01324.yandex.cloud.serve" +
+      "rless.triggers.v1.PutQueueMessage\"M\n\017Put" +
+      "QueueMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022servic" +
+      "e_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatc" +
+      "hSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cut" +
+      "off\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\307" +
+      "1\001\"c\n\rRetrySettings\022\037\n\016retry_attempts\030\001 " +
+      "\001(\003B\007\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031.google." +
+      "protobuf.DurationB\004\350\3071\001*\206\001\n\013TriggerType\022" +
+      "\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002" +
+      "\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\022\n\016" +
+      "OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006" +
+      "B{\n\'yandex.cloud.api.serverless.triggers" +
+      ".v1ZPgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/serverless/triggers/v1;tri" +
+      "ggersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15891,7 +16110,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Rule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Rule_descriptor,
-        new java.lang.String[] { "Timer", "MessageQueue", "IotMessage", "ObjectStorage", "Rule", });
+        new java.lang.String[] { "Timer", "MessageQueue", "IotMessage", "ObjectStorage", "ContainerRegistry", "Rule", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_fieldAccessorTable = new
@@ -15921,7 +16140,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor,
-        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "TagName", "InvokeFunction", "Action", });
+        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "InvokeFunction", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_fieldAccessorTable = new
