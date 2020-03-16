@@ -318,6 +318,38 @@ public final class ClusterServiceGrpc {
      return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest,
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> getListNodesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListNodes",
+      requestType = yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest.class,
+      responseType = yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest,
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> getListNodesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> getListNodesMethod;
+    if ((getListNodesMethod = ClusterServiceGrpc.getListNodesMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListNodesMethod = ClusterServiceGrpc.getListNodesMethod) == null) {
+          ClusterServiceGrpc.getListNodesMethod = getListNodesMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.k8s.v1.ClusterService", "ListNodes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListNodes"))
+                  .build();
+          }
+        }
+     }
+     return getListNodesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -439,6 +471,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists cluster's nodes.
+     * </pre>
+     */
+    public void listNodes(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListNodesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -504,6 +546,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
                 yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getListNodesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest,
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse>(
+                  this, METHODID_LIST_NODES)))
           .build();
     }
   }
@@ -628,6 +677,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists cluster's nodes.
+     * </pre>
+     */
+    public void listNodes(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListNodesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -740,6 +800,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse listOperations(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists cluster's nodes.
+     * </pre>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse listNodes(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListNodesMethod(), getCallOptions(), request);
     }
   }
 
@@ -863,6 +933,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists cluster's nodes.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse> listNodes(
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListNodesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -874,6 +955,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_START = 6;
   private static final int METHODID_LIST_NODE_GROUPS = 7;
   private static final int METHODID_LIST_OPERATIONS = 8;
+  private static final int METHODID_LIST_NODES = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -927,6 +1009,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterOperationsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_NODES:
+          serviceImpl.listNodes((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ListClusterNodesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -998,6 +1084,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getStartMethod())
               .addMethod(getListNodeGroupsMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getListNodesMethod())
               .build();
         }
       }

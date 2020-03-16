@@ -7508,6 +7508,41 @@ public final class InstanceOuterClass {
      * <code>.yandex.cloud.compute.v1.PrimaryAddress primary_v6_address = 5;</code>
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddressOrBuilder getPrimaryV6AddressOrBuilder();
+
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.NetworkInterface}
@@ -7525,6 +7560,7 @@ public final class InstanceOuterClass {
       index_ = "";
       macAddress_ = "";
       subnetId_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -7595,6 +7631,15 @@ public final class InstanceOuterClass {
 
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7610,6 +7655,9 @@ public final class InstanceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -7627,6 +7675,7 @@ public final class InstanceOuterClass {
               yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkInterface.class, yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkInterface.Builder.class);
     }
 
+    private int bitField0_;
     public static final int INDEX_FIELD_NUMBER = 1;
     private volatile java.lang.Object index_;
     /**
@@ -7821,6 +7870,51 @@ public final class InstanceOuterClass {
       return getPrimaryV6Address();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7850,6 +7944,9 @@ public final class InstanceOuterClass {
       if (primaryV6Address_ != null) {
         output.writeMessage(5, getPrimaryV6Address());
       }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityGroupIds_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7875,6 +7972,14 @@ public final class InstanceOuterClass {
       if (primaryV6Address_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPrimaryV6Address());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7908,6 +8013,8 @@ public final class InstanceOuterClass {
         result = result && getPrimaryV6Address()
             .equals(other.getPrimaryV6Address());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7932,6 +8039,10 @@ public final class InstanceOuterClass {
       if (hasPrimaryV6Address()) {
         hash = (37 * hash) + PRIMARY_V6_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryV6Address().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8084,6 +8195,8 @@ public final class InstanceOuterClass {
           primaryV6Address_ = null;
           primaryV6AddressBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -8110,6 +8223,8 @@ public final class InstanceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkInterface buildPartial() {
         yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkInterface result = new yandex.cloud.api.compute.v1.InstanceOuterClass.NetworkInterface(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.index_ = index_;
         result.macAddress_ = macAddress_;
         result.subnetId_ = subnetId_;
@@ -8123,6 +8238,12 @@ public final class InstanceOuterClass {
         } else {
           result.primaryV6Address_ = primaryV6AddressBuilder_.build();
         }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8189,6 +8310,16 @@ public final class InstanceOuterClass {
         if (other.hasPrimaryV6Address()) {
           mergePrimaryV6Address(other.getPrimaryV6Address());
         }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -8217,6 +8348,7 @@ public final class InstanceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object index_ = "";
       /**
@@ -8794,6 +8926,136 @@ public final class InstanceOuterClass {
           primaryV6Address_ = null;
         }
         return primaryV6AddressBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12271,28 +12533,28 @@ public final class InstanceOuterClass {
       "achedDisk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013a" +
       "uto_delete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mod" +
       "e\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016" +
-      "\n\nREAD_WRITE\020\002\"\323\001\n\020NetworkInterface\022\r\n\005i" +
+      "\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterface\022\r\n\005i" +
       "ndex\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubne" +
       "t_id\030\003 \001(\t\022C\n\022primary_v4_address\030\004 \001(\0132\'" +
       ".yandex.cloud.compute.v1.PrimaryAddress\022" +
       "C\n\022primary_v6_address\030\005 \001(\0132\'.yandex.clo" +
-      "ud.compute.v1.PrimaryAddress\"_\n\016PrimaryA" +
-      "ddress\022\017\n\007address\030\001 \001(\t\022<\n\016one_to_one_na" +
-      "t\030\002 \001(\0132$.yandex.cloud.compute.v1.OneToO" +
-      "neNat\"V\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\0226\n" +
-      "\nip_version\030\002 \001(\0162\".yandex.cloud.compute" +
-      ".v1.IpVersion\"\'\n\020SchedulingPolicy\022\023\n\013pre" +
-      "emptible\030\001 \001(\010\"\256\001\n\017NetworkSettings\022;\n\004ty" +
-      "pe\030\001 \001(\0162-.yandex.cloud.compute.v1.Netwo" +
-      "rkSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERA" +
-      "TED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"-\n\017Place" +
-      "mentPolicy\022\032\n\022placement_group_id\030\001 \001(\t*;" +
-      "\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022" +
-      "\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bb\n\033yandex.cloud.api." +
-      "compute.v1ZCgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/compute/v1;computeb" +
-      "\006proto3"
+      "ud.compute.v1.PrimaryAddress\022\032\n\022security" +
+      "_group_ids\030\006 \003(\t\"_\n\016PrimaryAddress\022\017\n\007ad" +
+      "dress\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$.ya" +
+      "ndex.cloud.compute.v1.OneToOneNat\"V\n\013One" +
+      "ToOneNat\022\017\n\007address\030\001 \001(\t\0226\n\nip_version\030" +
+      "\002 \001(\0162\".yandex.cloud.compute.v1.IpVersio" +
+      "n\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001" +
+      "(\010\"\256\001\n\017NetworkSettings\022;\n\004type\030\001 \001(\0162-.y" +
+      "andex.cloud.compute.v1.NetworkSettings.T" +
+      "ype\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STA" +
+      "NDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HAR" +
+      "DWARE_ACCELERATED\020\003\"-\n\017PlacementPolicy\022\032" +
+      "\n\022placement_group_id\030\001 \001(\t*;\n\tIpVersion\022" +
+      "\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n" +
+      "\004IPV6\020\002Bb\n\033yandex.cloud.api.compute.v1ZC" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12342,7 +12604,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_NetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_NetworkInterface_descriptor,
-        new java.lang.String[] { "Index", "MacAddress", "SubnetId", "PrimaryV4Address", "PrimaryV6Address", });
+        new java.lang.String[] { "Index", "MacAddress", "SubnetId", "PrimaryV4Address", "PrimaryV6Address", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_PrimaryAddress_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_compute_v1_PrimaryAddress_fieldAccessorTable = new

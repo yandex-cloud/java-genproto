@@ -1001,6 +1001,50 @@ public final class TextDetection {
      */
     yandex.cloud.api.ai.vision.v1.TextDetection.BlockOrBuilder getBlocksOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> 
+        getEntitiesList();
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    yandex.cloud.api.ai.vision.v1.TextDetection.Entity getEntities(int index);
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    int getEntitiesCount();
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> 
+        getEntitiesOrBuilderList();
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder getEntitiesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Page}
@@ -1018,6 +1062,7 @@ public final class TextDetection {
       width_ = 0L;
       height_ = 0L;
       blocks_ = java.util.Collections.emptyList();
+      entities_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1063,6 +1108,15 @@ public final class TextDetection {
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Block.parser(), extensionRegistry));
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                entities_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Entity>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              entities_.add(
+                  input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Entity.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1080,6 +1134,9 @@ public final class TextDetection {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           blocks_ = java.util.Collections.unmodifiableList(blocks_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          entities_ = java.util.Collections.unmodifiableList(entities_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1180,6 +1237,61 @@ public final class TextDetection {
       return blocks_.get(index);
     }
 
+    public static final int ENTITIES_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> entities_;
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> getEntitiesList() {
+      return entities_;
+    }
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> 
+        getEntitiesOrBuilderList() {
+      return entities_;
+    }
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    public int getEntitiesCount() {
+      return entities_.size();
+    }
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    public yandex.cloud.api.ai.vision.v1.TextDetection.Entity getEntities(int index) {
+      return entities_.get(index);
+    }
+    /**
+     * <pre>
+     * Recognized entities
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+     */
+    public yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder getEntitiesOrBuilder(
+        int index) {
+      return entities_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1203,6 +1315,9 @@ public final class TextDetection {
       for (int i = 0; i < blocks_.size(); i++) {
         output.writeMessage(3, blocks_.get(i));
       }
+      for (int i = 0; i < entities_.size(); i++) {
+        output.writeMessage(4, entities_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1223,6 +1338,10 @@ public final class TextDetection {
       for (int i = 0; i < blocks_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, blocks_.get(i));
+      }
+      for (int i = 0; i < entities_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, entities_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1246,6 +1365,8 @@ public final class TextDetection {
           == other.getHeight());
       result = result && getBlocksList()
           .equals(other.getBlocksList());
+      result = result && getEntitiesList()
+          .equals(other.getEntitiesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1266,6 +1387,10 @@ public final class TextDetection {
       if (getBlocksCount() > 0) {
         hash = (37 * hash) + BLOCKS_FIELD_NUMBER;
         hash = (53 * hash) + getBlocksList().hashCode();
+      }
+      if (getEntitiesCount() > 0) {
+        hash = (37 * hash) + ENTITIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntitiesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1396,6 +1521,7 @@ public final class TextDetection {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getBlocksFieldBuilder();
+          getEntitiesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1410,6 +1536,12 @@ public final class TextDetection {
           bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           blocksBuilder_.clear();
+        }
+        if (entitiesBuilder_ == null) {
+          entities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          entitiesBuilder_.clear();
         }
         return this;
       }
@@ -1449,6 +1581,15 @@ public final class TextDetection {
           result.blocks_ = blocks_;
         } else {
           result.blocks_ = blocksBuilder_.build();
+        }
+        if (entitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            entities_ = java.util.Collections.unmodifiableList(entities_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.entities_ = entities_;
+        } else {
+          result.entities_ = entitiesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1528,6 +1669,32 @@ public final class TextDetection {
                    getBlocksFieldBuilder() : null;
             } else {
               blocksBuilder_.addAllMessages(other.blocks_);
+            }
+          }
+        }
+        if (entitiesBuilder_ == null) {
+          if (!other.entities_.isEmpty()) {
+            if (entities_.isEmpty()) {
+              entities_ = other.entities_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureEntitiesIsMutable();
+              entities_.addAll(other.entities_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entities_.isEmpty()) {
+            if (entitiesBuilder_.isEmpty()) {
+              entitiesBuilder_.dispose();
+              entitiesBuilder_ = null;
+              entities_ = other.entities_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              entitiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntitiesFieldBuilder() : null;
+            } else {
+              entitiesBuilder_.addAllMessages(other.entities_);
             }
           }
         }
@@ -1948,6 +2115,318 @@ public final class TextDetection {
         }
         return blocksBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> entities_ =
+        java.util.Collections.emptyList();
+      private void ensureEntitiesIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          entities_ = new java.util.ArrayList<yandex.cloud.api.ai.vision.v1.TextDetection.Entity>(entities_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.vision.v1.TextDetection.Entity, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> entitiesBuilder_;
+
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity> getEntitiesList() {
+        if (entitiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entities_);
+        } else {
+          return entitiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public int getEntitiesCount() {
+        if (entitiesBuilder_ == null) {
+          return entities_.size();
+        } else {
+          return entitiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity getEntities(int index) {
+        if (entitiesBuilder_ == null) {
+          return entities_.get(index);
+        } else {
+          return entitiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder setEntities(
+          int index, yandex.cloud.api.ai.vision.v1.TextDetection.Entity value) {
+        if (entitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntitiesIsMutable();
+          entities_.set(index, value);
+          onChanged();
+        } else {
+          entitiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder setEntities(
+          int index, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder builderForValue) {
+        if (entitiesBuilder_ == null) {
+          ensureEntitiesIsMutable();
+          entities_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entitiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder addEntities(yandex.cloud.api.ai.vision.v1.TextDetection.Entity value) {
+        if (entitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntitiesIsMutable();
+          entities_.add(value);
+          onChanged();
+        } else {
+          entitiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder addEntities(
+          int index, yandex.cloud.api.ai.vision.v1.TextDetection.Entity value) {
+        if (entitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntitiesIsMutable();
+          entities_.add(index, value);
+          onChanged();
+        } else {
+          entitiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder addEntities(
+          yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder builderForValue) {
+        if (entitiesBuilder_ == null) {
+          ensureEntitiesIsMutable();
+          entities_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entitiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder addEntities(
+          int index, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder builderForValue) {
+        if (entitiesBuilder_ == null) {
+          ensureEntitiesIsMutable();
+          entities_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entitiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder addAllEntities(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.vision.v1.TextDetection.Entity> values) {
+        if (entitiesBuilder_ == null) {
+          ensureEntitiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entities_);
+          onChanged();
+        } else {
+          entitiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder clearEntities() {
+        if (entitiesBuilder_ == null) {
+          entities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          entitiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public Builder removeEntities(int index) {
+        if (entitiesBuilder_ == null) {
+          ensureEntitiesIsMutable();
+          entities_.remove(index);
+          onChanged();
+        } else {
+          entitiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder getEntitiesBuilder(
+          int index) {
+        return getEntitiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder getEntitiesOrBuilder(
+          int index) {
+        if (entitiesBuilder_ == null) {
+          return entities_.get(index);  } else {
+          return entitiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> 
+           getEntitiesOrBuilderList() {
+        if (entitiesBuilder_ != null) {
+          return entitiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entities_);
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder addEntitiesBuilder() {
+        return getEntitiesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.vision.v1.TextDetection.Entity.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder addEntitiesBuilder(
+          int index) {
+        return getEntitiesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Recognized entities
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.vision.v1.Entity entities = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder> 
+           getEntitiesBuilderList() {
+        return getEntitiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.vision.v1.TextDetection.Entity, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder> 
+          getEntitiesFieldBuilder() {
+        if (entitiesBuilder_ == null) {
+          entitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.vision.v1.TextDetection.Entity, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder, yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder>(
+                  entities_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          entities_ = null;
+        }
+        return entitiesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1996,6 +2475,765 @@ public final class TextDetection {
 
     @java.lang.Override
     public yandex.cloud.api.ai.vision.v1.TextDetection.Page getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EntityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.vision.v1.Entity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Entity name
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Entity name
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Recognized entity text
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Recognized entity text
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.vision.v1.Entity}
+   */
+  public  static final class Entity extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.vision.v1.Entity)
+      EntityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Entity.newBuilder() to construct.
+    private Entity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Entity() {
+      name_ = "";
+      text_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Entity(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.vision.v1.TextDetection.internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.vision.v1.TextDetection.internal_static_yandex_cloud_ai_vision_v1_Entity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.vision.v1.TextDetection.Entity.class, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Entity name
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entity name
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Recognized entity text
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Recognized entity text
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.vision.v1.TextDetection.Entity)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.vision.v1.TextDetection.Entity other = (yandex.cloud.api.ai.vision.v1.TextDetection.Entity) obj;
+
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getText()
+          .equals(other.getText());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.vision.v1.TextDetection.Entity prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.vision.v1.Entity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.vision.v1.Entity)
+        yandex.cloud.api.ai.vision.v1.TextDetection.EntityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.vision.v1.TextDetection.internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.vision.v1.TextDetection.internal_static_yandex_cloud_ai_vision_v1_Entity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.vision.v1.TextDetection.Entity.class, yandex.cloud.api.ai.vision.v1.TextDetection.Entity.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.vision.v1.TextDetection.Entity.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        text_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.vision.v1.TextDetection.internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.vision.v1.TextDetection.Entity.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity build() {
+        yandex.cloud.api.ai.vision.v1.TextDetection.Entity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.vision.v1.TextDetection.Entity buildPartial() {
+        yandex.cloud.api.ai.vision.v1.TextDetection.Entity result = new yandex.cloud.api.ai.vision.v1.TextDetection.Entity(this);
+        result.name_ = name_;
+        result.text_ = text_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.vision.v1.TextDetection.Entity) {
+          return mergeFrom((yandex.cloud.api.ai.vision.v1.TextDetection.Entity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.vision.v1.TextDetection.Entity other) {
+        if (other == yandex.cloud.api.ai.vision.v1.TextDetection.Entity.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.vision.v1.TextDetection.Entity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.vision.v1.TextDetection.Entity) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Entity name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Recognized entity text
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entity text
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Recognized entity text
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entity text
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized entity text
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.vision.v1.Entity)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.vision.v1.Entity)
+    private static final yandex.cloud.api.ai.vision.v1.TextDetection.Entity DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.vision.v1.TextDetection.Entity();
+    }
+
+    public static yandex.cloud.api.ai.vision.v1.TextDetection.Entity getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Entity>
+        PARSER = new com.google.protobuf.AbstractParser<Entity>() {
+      @java.lang.Override
+      public Entity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Entity(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Entity> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Entity> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.vision.v1.TextDetection.Entity getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4488,6 +5726,15 @@ public final class TextDetection {
      */
     yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguageOrBuilder getLanguagesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Id of recognized word in entities array
+     * </pre>
+     *
+     * <code>int64 entity_index = 5;</code>
+     */
+    long getEntityIndex();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.vision.v1.Word}
@@ -4505,6 +5752,7 @@ public final class TextDetection {
       text_ = "";
       confidence_ = 0D;
       languages_ = java.util.Collections.emptyList();
+      entityIndex_ = 0L;
     }
 
     @java.lang.Override
@@ -4562,6 +5810,11 @@ public final class TextDetection {
               }
               languages_.add(
                   input.readMessage(yandex.cloud.api.ai.vision.v1.TextDetection.Word.DetectedLanguage.parser(), extensionRegistry));
+              break;
+            }
+            case 40: {
+
+              entityIndex_ = input.readInt64();
               break;
             }
             default: {
@@ -5415,6 +6668,19 @@ public final class TextDetection {
       return languages_.get(index);
     }
 
+    public static final int ENTITY_INDEX_FIELD_NUMBER = 5;
+    private long entityIndex_;
+    /**
+     * <pre>
+     * Id of recognized word in entities array
+     * </pre>
+     *
+     * <code>int64 entity_index = 5;</code>
+     */
+    public long getEntityIndex() {
+      return entityIndex_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5441,6 +6707,9 @@ public final class TextDetection {
       for (int i = 0; i < languages_.size(); i++) {
         output.writeMessage(4, languages_.get(i));
       }
+      if (entityIndex_ != 0L) {
+        output.writeInt64(5, entityIndex_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5464,6 +6733,10 @@ public final class TextDetection {
       for (int i = 0; i < languages_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, languages_.get(i));
+      }
+      if (entityIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, entityIndex_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5494,6 +6767,8 @@ public final class TextDetection {
               other.getConfidence()));
       result = result && getLanguagesList()
           .equals(other.getLanguagesList());
+      result = result && (getEntityIndex()
+          == other.getEntityIndex());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5518,6 +6793,9 @@ public final class TextDetection {
         hash = (37 * hash) + LANGUAGES_FIELD_NUMBER;
         hash = (53 * hash) + getLanguagesList().hashCode();
       }
+      hash = (37 * hash) + ENTITY_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEntityIndex());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5668,6 +6946,8 @@ public final class TextDetection {
         } else {
           languagesBuilder_.clear();
         }
+        entityIndex_ = 0L;
+
         return this;
       }
 
@@ -5712,6 +6992,7 @@ public final class TextDetection {
         } else {
           result.languages_ = languagesBuilder_.build();
         }
+        result.entityIndex_ = entityIndex_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5796,6 +7077,9 @@ public final class TextDetection {
               languagesBuilder_.addAllMessages(other.languages_);
             }
           }
+        }
+        if (other.getEntityIndex() != 0L) {
+          setEntityIndex(other.getEntityIndex());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6418,6 +7702,44 @@ public final class TextDetection {
         }
         return languagesBuilder_;
       }
+
+      private long entityIndex_ ;
+      /**
+       * <pre>
+       * Id of recognized word in entities array
+       * </pre>
+       *
+       * <code>int64 entity_index = 5;</code>
+       */
+      public long getEntityIndex() {
+        return entityIndex_;
+      }
+      /**
+       * <pre>
+       * Id of recognized word in entities array
+       * </pre>
+       *
+       * <code>int64 entity_index = 5;</code>
+       */
+      public Builder setEntityIndex(long value) {
+        
+        entityIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of recognized word in entities array
+       * </pre>
+       *
+       * <code>int64 entity_index = 5;</code>
+       */
+      public Builder clearEntityIndex() {
+        
+        entityIndex_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6482,6 +7804,11 @@ public final class TextDetection {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_vision_v1_Page_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_vision_v1_Entity_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_vision_v1_Block_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6514,24 +7841,27 @@ public final class TextDetection {
       "on.proto\022\031yandex.cloud.ai.vision.v1\032*yan" +
       "dex/cloud/ai/vision/v1/primitives.proto\"" +
       "@\n\016TextAnnotation\022.\n\005pages\030\001 \003(\0132\037.yande" +
-      "x.cloud.ai.vision.v1.Page\"W\n\004Page\022\r\n\005wid" +
-      "th\030\001 \001(\003\022\016\n\006height\030\002 \001(\003\0220\n\006blocks\030\003 \003(\013" +
-      "2 .yandex.cloud.ai.vision.v1.Block\"q\n\005Bl" +
-      "ock\0228\n\014bounding_box\030\001 \001(\0132\".yandex.cloud" +
-      ".ai.vision.v1.Polygon\022.\n\005lines\030\002 \003(\0132\037.y" +
-      "andex.cloud.ai.vision.v1.Line\"\204\001\n\004Line\0228" +
-      "\n\014bounding_box\030\001 \001(\0132\".yandex.cloud.ai.v" +
-      "ision.v1.Polygon\022.\n\005words\030\002 \003(\0132\037.yandex" +
-      ".cloud.ai.vision.v1.Word\022\022\n\nconfidence\030\003" +
-      " \001(\001\"\346\001\n\004Word\0228\n\014bounding_box\030\001 \001(\0132\".ya" +
-      "ndex.cloud.ai.vision.v1.Polygon\022\014\n\004text\030" +
-      "\002 \001(\t\022\022\n\nconfidence\030\003 \001(\001\022C\n\tlanguages\030\004" +
-      " \003(\01320.yandex.cloud.ai.vision.v1.Word.De" +
-      "tectedLanguage\032=\n\020DetectedLanguage\022\025\n\rla" +
-      "nguage_code\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\001Be\n" +
-      "\035yandex.cloud.api.ai.vision.v1ZDgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/ai/vision/v1;visionb\006proto3"
+      "x.cloud.ai.vision.v1.Page\"\214\001\n\004Page\022\r\n\005wi" +
+      "dth\030\001 \001(\003\022\016\n\006height\030\002 \001(\003\0220\n\006blocks\030\003 \003(" +
+      "\0132 .yandex.cloud.ai.vision.v1.Block\0223\n\010e" +
+      "ntities\030\004 \003(\0132!.yandex.cloud.ai.vision.v" +
+      "1.Entity\"$\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004text" +
+      "\030\002 \001(\t\"q\n\005Block\0228\n\014bounding_box\030\001 \001(\0132\"." +
+      "yandex.cloud.ai.vision.v1.Polygon\022.\n\005lin" +
+      "es\030\002 \003(\0132\037.yandex.cloud.ai.vision.v1.Lin" +
+      "e\"\204\001\n\004Line\0228\n\014bounding_box\030\001 \001(\0132\".yande" +
+      "x.cloud.ai.vision.v1.Polygon\022.\n\005words\030\002 " +
+      "\003(\0132\037.yandex.cloud.ai.vision.v1.Word\022\022\n\n" +
+      "confidence\030\003 \001(\001\"\374\001\n\004Word\0228\n\014bounding_bo" +
+      "x\030\001 \001(\0132\".yandex.cloud.ai.vision.v1.Poly" +
+      "gon\022\014\n\004text\030\002 \001(\t\022\022\n\nconfidence\030\003 \001(\001\022C\n" +
+      "\tlanguages\030\004 \003(\01320.yandex.cloud.ai.visio" +
+      "n.v1.Word.DetectedLanguage\022\024\n\014entity_ind" +
+      "ex\030\005 \001(\003\032=\n\020DetectedLanguage\022\025\n\rlanguage" +
+      "_code\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\001Be\n\035yande" +
+      "x.cloud.api.ai.vision.v1ZDgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/ai/vi" +
+      "sion/v1;visionb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6557,25 +7887,31 @@ public final class TextDetection {
     internal_static_yandex_cloud_ai_vision_v1_Page_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_Page_descriptor,
-        new java.lang.String[] { "Width", "Height", "Blocks", });
-    internal_static_yandex_cloud_ai_vision_v1_Block_descriptor =
+        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", });
+    internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_vision_v1_Entity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_vision_v1_Entity_descriptor,
+        new java.lang.String[] { "Name", "Text", });
+    internal_static_yandex_cloud_ai_vision_v1_Block_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_vision_v1_Block_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_Block_descriptor,
         new java.lang.String[] { "BoundingBox", "Lines", });
     internal_static_yandex_cloud_ai_vision_v1_Line_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_vision_v1_Line_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_Line_descriptor,
         new java.lang.String[] { "BoundingBox", "Words", "Confidence", });
     internal_static_yandex_cloud_ai_vision_v1_Word_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ai_vision_v1_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_vision_v1_Word_descriptor,
-        new java.lang.String[] { "BoundingBox", "Text", "Confidence", "Languages", });
+        new java.lang.String[] { "BoundingBox", "Text", "Confidence", "Languages", "EntityIndex", });
     internal_static_yandex_cloud_ai_vision_v1_Word_DetectedLanguage_descriptor =
       internal_static_yandex_cloud_ai_vision_v1_Word_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_vision_v1_Word_DetectedLanguage_fieldAccessorTable = new

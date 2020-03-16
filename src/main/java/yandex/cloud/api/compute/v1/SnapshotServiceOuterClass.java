@@ -2858,7 +2858,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -2866,7 +2866,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2894,7 +2894,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -2902,7 +2902,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -2917,7 +2917,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -2926,7 +2926,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -2937,7 +2937,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3163,7 +3163,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3182,7 +3182,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3271,7 +3271,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -3291,7 +3291,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -3302,7 +3302,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -3318,7 +3318,7 @@ public final class SnapshotServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -3933,7 +3933,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3952,7 +3952,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3972,7 +3972,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -3989,7 +3989,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -4002,7 +4002,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4136,7 +4136,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -4156,7 +4156,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -4167,7 +4167,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -4183,7 +4183,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -4207,7 +4207,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4230,7 +4230,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4246,7 +4246,7 @@ public final class SnapshotServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -5121,7 +5121,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -5129,7 +5129,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5158,7 +5158,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5167,7 +5167,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5183,7 +5183,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5193,7 +5193,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5205,7 +5205,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -5426,7 +5426,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -5445,7 +5445,7 @@ public final class SnapshotServiceOuterClass {
      * Name of the snapshot.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5535,7 +5535,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -5556,7 +5556,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -5568,7 +5568,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -5585,7 +5585,7 @@ public final class SnapshotServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -6272,7 +6272,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6291,7 +6291,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6311,7 +6311,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -6328,7 +6328,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -6341,7 +6341,7 @@ public final class SnapshotServiceOuterClass {
        * Name of the snapshot.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6476,7 +6476,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -6497,7 +6497,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -6509,7 +6509,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -6526,7 +6526,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -6551,7 +6551,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -6575,7 +6575,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -6592,7 +6592,7 @@ public final class SnapshotServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -10468,65 +10468,66 @@ public final class SnapshotServiceOuterClass {
       "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
       "\006<=1000\"f\n\025ListSnapshotsResponse\0224\n\tsnap" +
       "shots\030\001 \003(\0132!.yandex.cloud.compute.v1.Sn" +
-      "apshot\022\027\n\017next_page_token\030\002 \001(\t\"\345\002\n\025Crea" +
+      "apshot\022\027\n\017next_page_token\030\002 \001(\t\"\360\002\n\025Crea" +
       "teSnapshotRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\307" +
       "1\001\212\3101\004<=50\022\035\n\007disk_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,6" +
-      "1}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=2" +
-      "56\022\213\001\n\006labels\030\006 \003(\0132:.yandex.cloud.compu" +
-      "te.v1.CreateSnapshotRequest.LabelsEntryB" +
-      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\">\n\026Creat" +
-      "eSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t\022\017" +
-      "\n\007disk_id\030\002 \001(\t\"\371\002\n\025UpdateSnapshotReques" +
-      "t\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]" +
-      "{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101" +
-      "\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.yandex.cloud.c" +
-      "ompute.v1.UpdateSnapshotRequest.LabelsEn" +
-      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026U" +
-      "pdateSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001" +
-      "(\t\":\n\025DeleteSnapshotRequest\022!\n\013snapshot_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteSnapshot" +
-      "Metadata\022\023\n\013snapshot_id\030\001 \001(\t\"\200\001\n\035ListSn" +
-      "apshotOperationsRequest\022!\n\013snapshot_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"p\n\036ListSnapshotOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030\002 \001(\t2\361\007\n\017S" +
-      "napshotService\022\202\001\n\003Get\022+.yandex.cloud.co" +
-      "mpute.v1.GetSnapshotRequest\032!.yandex.clo" +
-      "ud.compute.v1.Snapshot\"+\202\323\344\223\002%\022#/compute" +
-      "/v1/snapshots/{snapshot_id}\022\204\001\n\004List\022-.y" +
-      "andex.cloud.compute.v1.ListSnapshotsRequ" +
-      "est\032..yandex.cloud.compute.v1.ListSnapsh" +
-      "otsResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/snapsho" +
-      "ts\022\243\001\n\006Create\022..yandex.cloud.compute.v1." +
-      "CreateSnapshotRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"F\202\323\344\223\002\032\"\025/compute/v1/sn" +
-      "apshots:\001*\262\322*\"\n\026CreateSnapshotMetadata\022\010" +
-      "Snapshot\022\261\001\n\006Update\022..yandex.cloud.compu" +
-      "te.v1.UpdateSnapshotRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"T\202\323\344\223\002(2#/compute" +
-      "/v1/snapshots/{snapshot_id}:\001*\262\322*\"\n\026Upda" +
-      "teSnapshotMetadata\022\010Snapshot\022\273\001\n\006Delete\022" +
-      "..yandex.cloud.compute.v1.DeleteSnapshot" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"^\202\323\344\223\002%*#/compute/v1/snapshots/{snaps" +
-      "hot_id}\262\322*/\n\026DeleteSnapshotMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\271\001\n\016ListOperations\0226." +
-      "yandex.cloud.compute.v1.ListSnapshotOper" +
-      "ationsRequest\0327.yandex.cloud.compute.v1." +
-      "ListSnapshotOperationsResponse\"6\202\323\344\223\0020\022." +
-      "/compute/v1/snapshots/{snapshot_id}/oper" +
-      "ationsBb\n\033yandex.cloud.api.compute.v1ZCg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/compute/v1;computeb\006proto3"
+      "0\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
+      "<=256\022\223\001\n\006labels\030\006 \003(\0132:.yandex.cloud.co" +
+      "mpute.v1.CreateSnapshotRequest.LabelsEnt" +
+      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\">\n\026CreateSnapshotMetadata\022\023\n\013snapshot" +
+      "_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\204\003\n\025UpdateSna" +
+      "pshotRequest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-" +
+      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
+      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:." +
+      "yandex.cloud.compute.v1.UpdateSnapshotRe" +
+      "quest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
+      "-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./" +
+      "\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateSnapshotMetad" +
+      "ata\022\023\n\013snapshot_id\030\001 \001(\t\":\n\025DeleteSnapsh" +
+      "otRequest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"-\n\026DeleteSnapshotMetadata\022\023\n\013snapsh" +
+      "ot_id\030\001 \001(\t\"\200\001\n\035ListSnapshotOperationsRe" +
+      "quest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListSnapshotOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t2\361\007\n\017SnapshotService\022\202\001\n" +
+      "\003Get\022+.yandex.cloud.compute.v1.GetSnapsh" +
+      "otRequest\032!.yandex.cloud.compute.v1.Snap" +
+      "shot\"+\202\323\344\223\002%\022#/compute/v1/snapshots/{sna" +
+      "pshot_id}\022\204\001\n\004List\022-.yandex.cloud.comput" +
+      "e.v1.ListSnapshotsRequest\032..yandex.cloud" +
+      ".compute.v1.ListSnapshotsResponse\"\035\202\323\344\223\002" +
+      "\027\022\025/compute/v1/snapshots\022\243\001\n\006Create\022..ya" +
+      "ndex.cloud.compute.v1.CreateSnapshotRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"F" +
+      "\202\323\344\223\002\032\"\025/compute/v1/snapshots:\001*\262\322*\"\n\026Cr" +
+      "eateSnapshotMetadata\022\010Snapshot\022\261\001\n\006Updat" +
+      "e\022..yandex.cloud.compute.v1.UpdateSnapsh" +
+      "otRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"T\202\323\344\223\002(2#/compute/v1/snapshots/{sna" +
+      "pshot_id}:\001*\262\322*\"\n\026UpdateSnapshotMetadata" +
+      "\022\010Snapshot\022\273\001\n\006Delete\022..yandex.cloud.com" +
+      "pute.v1.DeleteSnapshotRequest\032!.yandex.c" +
+      "loud.operation.Operation\"^\202\323\344\223\002%*#/compu" +
+      "te/v1/snapshots/{snapshot_id}\262\322*/\n\026Delet" +
+      "eSnapshotMetadata\022\025google.protobuf.Empty" +
+      "\022\271\001\n\016ListOperations\0226.yandex.cloud.compu" +
+      "te.v1.ListSnapshotOperationsRequest\0327.ya" +
+      "ndex.cloud.compute.v1.ListSnapshotOperat" +
+      "ionsResponse\"6\202\323\344\223\0020\022./compute/v1/snapsh" +
+      "ots/{snapshot_id}/operationsBb\n\033yandex.c" +
+      "loud.api.compute.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/compute/v1" +
+      ";computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

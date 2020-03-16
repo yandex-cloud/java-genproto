@@ -3606,7 +3606,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -3614,7 +3614,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -3642,7 +3642,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -3650,7 +3650,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -3665,7 +3665,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -3674,7 +3674,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3685,7 +3685,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -4156,7 +4156,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4175,7 +4175,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -4264,7 +4264,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -4284,7 +4284,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -4295,7 +4295,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -4311,7 +4311,7 @@ public final class ImageServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -5407,7 +5407,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5426,7 +5426,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5446,7 +5446,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -5463,7 +5463,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -5476,7 +5476,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5610,7 +5610,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -5630,7 +5630,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -5641,7 +5641,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -5657,7 +5657,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -5681,7 +5681,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -5704,7 +5704,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -5720,7 +5720,7 @@ public final class ImageServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7304,7 +7304,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -7312,7 +7312,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -7351,7 +7351,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -7360,7 +7360,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -7376,7 +7376,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -7386,7 +7386,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -7398,7 +7398,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -7625,7 +7625,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -7644,7 +7644,7 @@ public final class ImageServiceOuterClass {
      * Name of the image.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -7748,7 +7748,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -7769,7 +7769,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -7781,7 +7781,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -7798,7 +7798,7 @@ public final class ImageServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -8503,7 +8503,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8522,7 +8522,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8542,7 +8542,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -8559,7 +8559,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -8572,7 +8572,7 @@ public final class ImageServiceOuterClass {
        * Name of the image.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8748,7 +8748,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -8769,7 +8769,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -8781,7 +8781,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -8798,7 +8798,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -8823,7 +8823,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -8847,7 +8847,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -8864,7 +8864,7 @@ public final class ImageServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -12748,73 +12748,73 @@ public final class ImageServiceOuterClass {
       "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"]\n\022ListIma" +
       "gesResponse\022.\n\006images\030\001 \003(\0132\036.yandex.clo" +
       "ud.compute.v1.Image\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\350\004\n\022CreateImageRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descrip" +
-      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\004 \003(\01327" +
-      ".yandex.cloud.compute.v1.CreateImageRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\0221\n\006family\030\005 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1," +
-      "61}[a-z0-9]\0220\n\rmin_disk_size\030\006 \001(\003B\031\372\3071\025" +
-      "4194304-4398046511104\022\035\n\013product_ids\030\007 \003" +
-      "(\tB\010\212\3101\004<=50\022\034\n\010image_id\030\010 \001(\tB\010\212\3101\004<=50" +
-      "H\000\022\033\n\007disk_id\030\t \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snaps" +
-      "hot_id\030\n \001(\tB\010\212\3101\004<=50H\000\022\r\n\003uri\030\013 \001(\tH\000\022" +
-      "\'\n\002os\030\014 \001(\0132\033.yandex.cloud.compute.v1.Os" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001B\016\n\006source\022\004\300\3011\001\"\'\n\023CreateImageMe" +
-      "tadata\022\020\n\010image_id\030\001 \001(\t\"\242\003\n\022UpdateImage" +
-      "Request\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0" +
-      "-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\0220\n\rmin_disk_size\030\005 \001(\003B\031\372\3071\02541" +
-      "94304-4398046511104\022\210\001\n\006labels\030\006 \003(\01327.y" +
-      "andex.cloud.compute.v1.UpdateImageReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\'\n\023UpdateImageMetadata\022\020\n\010image_id" +
-      "\030\001 \001(\t\"4\n\022DeleteImageRequest\022\036\n\010image_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023DeleteImageMetad" +
-      "ata\022\020\n\010image_id\030\001 \001(\t\"z\n\032ListImageOperat" +
-      "ionsRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListImageOp" +
-      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
-      "andex.cloud.operation.Operation\022\027\n\017next_" +
-      "page_token\030\002 \001(\t2\275\010\n\014ImageService\022v\n\003Get" +
-      "\022(.yandex.cloud.compute.v1.GetImageReque" +
-      "st\032\036.yandex.cloud.compute.v1.Image\"%\202\323\344\223" +
-      "\002\037\022\035/compute/v1/images/{image_id}\022\226\001\n\021Ge" +
-      "tLatestByFamily\0226.yandex.cloud.compute.v" +
-      "1.GetImageLatestByFamilyRequest\032\036.yandex" +
-      ".cloud.compute.v1.Image\")\202\323\344\223\002#\022!/comput" +
-      "e/v1/images:latestByFamily\022{\n\004List\022*.yan" +
-      "dex.cloud.compute.v1.ListImagesRequest\032+" +
-      ".yandex.cloud.compute.v1.ListImagesRespo" +
-      "nse\"\032\202\323\344\223\002\024\022\022/compute/v1/images\022\227\001\n\006Crea" +
-      "te\022+.yandex.cloud.compute.v1.CreateImage" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"=\202\323\344\223\002\027\"\022/compute/v1/images:\001*\262\322*\034\n\023C" +
-      "reateImageMetadata\022\005Image\022\242\001\n\006Update\022+.y" +
-      "andex.cloud.compute.v1.UpdateImageReques" +
-      "t\032!.yandex.cloud.operation.Operation\"H\202\323" +
-      "\344\223\002\"2\035/compute/v1/images/{image_id}:\001*\262\322" +
-      "*\034\n\023UpdateImageMetadata\022\005Image\022\257\001\n\006Delet" +
-      "e\022+.yandex.cloud.compute.v1.DeleteImageR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"U\202\323\344\223\002\037*\035/compute/v1/images/{image_id}" +
-      "\262\322*,\n\023DeleteImageMetadata\022\025google.protob" +
-      "uf.Empty\022\255\001\n\016ListOperations\0223.yandex.clo" +
-      "ud.compute.v1.ListImageOperationsRequest" +
-      "\0324.yandex.cloud.compute.v1.ListImageOper" +
-      "ationsResponse\"0\202\323\344\223\002*\022(/compute/v1/imag" +
-      "es/{image_id}/operationsBb\n\033yandex.cloud" +
-      ".api.compute.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/compute/v1;com" +
-      "puteb\006proto3"
+      " \001(\t\"\363\004\n\022CreateImageRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 " +
+      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
+      "ription\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(" +
+      "\01327.yandex.cloud.compute.v1.CreateImageR" +
+      "equest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017" +
+      "[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_." +
+      "/\\@0-9a-z]*\0221\n\006family\030\005 \001(\tB!\362\3071\035|[a-z][" +
+      "-a-z0-9]{1,61}[a-z0-9]\0220\n\rmin_disk_size\030" +
+      "\006 \001(\003B\031\372\3071\0254194304-4398046511104\022\035\n\013prod" +
+      "uct_ids\030\007 \003(\tB\010\212\3101\004<=50\022\034\n\010image_id\030\010 \001(" +
+      "\tB\010\212\3101\004<=50H\000\022\033\n\007disk_id\030\t \001(\tB\010\212\3101\004<=50" +
+      "H\000\022\037\n\013snapshot_id\030\n \001(\tB\010\212\3101\004<=50H\000\022\r\n\003u" +
+      "ri\030\013 \001(\tH\000\022\'\n\002os\030\014 \001(\0132\033.yandex.cloud.co" +
+      "mpute.v1.Os\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001\"\'\n\023Cr" +
+      "eateImageMetadata\022\020\n\010image_id\030\001 \001(\t\"\255\003\n\022" +
+      "UpdateImageRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google" +
+      ".protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |" +
+      "[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descr" +
+      "iption\030\004 \001(\tB\t\212\3101\005<=256\0220\n\rmin_disk_size" +
+      "\030\005 \001(\003B\031\372\3071\0254194304-4398046511104\022\220\001\n\006la" +
+      "bels\030\006 \003(\01327.yandex.cloud.compute.v1.Upd" +
+      "ateImageRequest.LabelsEntryBG\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024" +
+      "[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023UpdateIma" +
+      "geMetadata\022\020\n\010image_id\030\001 \001(\t\"4\n\022DeleteIm" +
+      "ageRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"\'\n\023DeleteImageMetadata\022\020\n\010image_id\030\001 " +
+      "\001(\t\"z\n\032ListImageOperationsRequest\022\036\n\010ima" +
+      "ge_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
+      "1\005<=100\"m\n\033ListImageOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\275" +
+      "\010\n\014ImageService\022v\n\003Get\022(.yandex.cloud.co" +
+      "mpute.v1.GetImageRequest\032\036.yandex.cloud." +
+      "compute.v1.Image\"%\202\323\344\223\002\037\022\035/compute/v1/im" +
+      "ages/{image_id}\022\226\001\n\021GetLatestByFamily\0226." +
+      "yandex.cloud.compute.v1.GetImageLatestBy" +
+      "FamilyRequest\032\036.yandex.cloud.compute.v1." +
+      "Image\")\202\323\344\223\002#\022!/compute/v1/images:latest" +
+      "ByFamily\022{\n\004List\022*.yandex.cloud.compute." +
+      "v1.ListImagesRequest\032+.yandex.cloud.comp" +
+      "ute.v1.ListImagesResponse\"\032\202\323\344\223\002\024\022\022/comp" +
+      "ute/v1/images\022\227\001\n\006Create\022+.yandex.cloud." +
+      "compute.v1.CreateImageRequest\032!.yandex.c" +
+      "loud.operation.Operation\"=\202\323\344\223\002\027\"\022/compu" +
+      "te/v1/images:\001*\262\322*\034\n\023CreateImageMetadata" +
+      "\022\005Image\022\242\001\n\006Update\022+.yandex.cloud.comput" +
+      "e.v1.UpdateImageRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"H\202\323\344\223\002\"2\035/compute/v1/" +
+      "images/{image_id}:\001*\262\322*\034\n\023UpdateImageMet" +
+      "adata\022\005Image\022\257\001\n\006Delete\022+.yandex.cloud.c" +
+      "ompute.v1.DeleteImageRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"U\202\323\344\223\002\037*\035/comput" +
+      "e/v1/images/{image_id}\262\322*,\n\023DeleteImageM" +
+      "etadata\022\025google.protobuf.Empty\022\255\001\n\016ListO" +
+      "perations\0223.yandex.cloud.compute.v1.List" +
+      "ImageOperationsRequest\0324.yandex.cloud.co" +
+      "mpute.v1.ListImageOperationsResponse\"0\202\323" +
+      "\344\223\002*\022(/compute/v1/images/{image_id}/oper" +
+      "ationsBb\n\033yandex.cloud.api.compute.v1ZCg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

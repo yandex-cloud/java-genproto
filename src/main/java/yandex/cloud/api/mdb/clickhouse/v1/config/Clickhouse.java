@@ -21,7 +21,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -30,7 +30,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -290,7 +290,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -299,7 +298,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -308,7 +306,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -318,7 +315,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -327,7 +323,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -336,7 +331,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -346,7 +340,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -355,7 +348,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -364,7 +356,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -374,7 +365,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -383,7 +373,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -392,7 +381,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -427,7 +415,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
      * </pre>
      *
      * <code>string timezone = 14;</code>
@@ -436,7 +423,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
      * </pre>
      *
      * <code>string timezone = 14;</code>
@@ -445,10 +431,18 @@ public final class Clickhouse {
         getTimezoneBytes();
 
     /**
+     * <pre>
+     * Address of the archive with the user geobase in Object Storage.
+     * </pre>
+     *
      * <code>string geobase_uri = 15;</code>
      */
     java.lang.String getGeobaseUri();
     /**
+     * <pre>
+     * Address of the archive with the user geobase in Object Storage.
+     * </pre>
+     *
      * <code>string geobase_uri = 15;</code>
      */
     com.google.protobuf.ByteString
@@ -849,7 +843,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -858,7 +851,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -867,7 +859,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -877,7 +868,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -886,7 +876,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -895,7 +884,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -903,66 +891,129 @@ public final class Clickhouse {
       com.google.protobuf.Int64ValueOrBuilder getReplicatedDeduplicationWindowSecondsOrBuilder();
 
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       boolean hasPartsToDelayInsert();
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       com.google.protobuf.Int64Value getPartsToDelayInsert();
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getPartsToDelayInsertOrBuilder();
 
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       boolean hasPartsToThrowInsert();
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       com.google.protobuf.Int64Value getPartsToThrowInsert();
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getPartsToThrowInsertOrBuilder();
 
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       boolean hasMaxReplicatedMergesInQueue();
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue();
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxReplicatedMergesInQueueOrBuilder();
 
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeOrBuilder();
 
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       boolean hasMaxBytesToMergeAtMinSpaceInPool();
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool();
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMinSpaceInPoolOrBuilder();
@@ -1138,7 +1189,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1149,7 +1199,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1160,7 +1209,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Number of blocks of hashes to keep in ZooKeeper.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1174,7 +1222,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -1185,7 +1232,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -1196,7 +1242,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Period of time to keep blocks of hashes for.
-       * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -1208,18 +1253,30 @@ public final class Clickhouse {
       public static final int PARTS_TO_DELAY_INSERT_FIELD_NUMBER = 3;
       private com.google.protobuf.Int64Value partsToDelayInsert_;
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       public boolean hasPartsToDelayInsert() {
         return partsToDelayInsert_ != null;
       }
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       public com.google.protobuf.Int64Value getPartsToDelayInsert() {
         return partsToDelayInsert_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partsToDelayInsert_;
       }
       /**
+       * <pre>
+       * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPartsToDelayInsertOrBuilder() {
@@ -1229,18 +1286,30 @@ public final class Clickhouse {
       public static final int PARTS_TO_THROW_INSERT_FIELD_NUMBER = 4;
       private com.google.protobuf.Int64Value partsToThrowInsert_;
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       public boolean hasPartsToThrowInsert() {
         return partsToThrowInsert_ != null;
       }
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       public com.google.protobuf.Int64Value getPartsToThrowInsert() {
         return partsToThrowInsert_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : partsToThrowInsert_;
       }
       /**
+       * <pre>
+       * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPartsToThrowInsertOrBuilder() {
@@ -1250,18 +1319,30 @@ public final class Clickhouse {
       public static final int MAX_REPLICATED_MERGES_IN_QUEUE_FIELD_NUMBER = 5;
       private com.google.protobuf.Int64Value maxReplicatedMergesInQueue_;
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       public boolean hasMaxReplicatedMergesInQueue() {
         return maxReplicatedMergesInQueue_ != null;
       }
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       public com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue() {
         return maxReplicatedMergesInQueue_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxReplicatedMergesInQueue_;
       }
       /**
+       * <pre>
+       * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxReplicatedMergesInQueueOrBuilder() {
@@ -1271,18 +1352,33 @@ public final class Clickhouse {
       public static final int NUMBER_OF_FREE_ENTRIES_IN_POOL_TO_LOWER_MAX_SIZE_OF_MERGE_FIELD_NUMBER = 6;
       private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_;
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       public boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
         return numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ != null;
       }
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
         return numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_;
       }
       /**
+       * <pre>
+       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+       * This is to allow small merges to process - not filling the pool with long running merges.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeOrBuilder() {
@@ -1292,18 +1388,30 @@ public final class Clickhouse {
       public static final int MAX_BYTES_TO_MERGE_AT_MIN_SPACE_IN_POOL_FIELD_NUMBER = 7;
       private com.google.protobuf.Int64Value maxBytesToMergeAtMinSpaceInPool_;
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       public boolean hasMaxBytesToMergeAtMinSpaceInPool() {
         return maxBytesToMergeAtMinSpaceInPool_ != null;
       }
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       public com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool() {
         return maxBytesToMergeAtMinSpaceInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMinSpaceInPool_;
       }
       /**
+       * <pre>
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMinSpaceInPoolOrBuilder() {
@@ -1816,7 +1924,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1827,7 +1934,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1842,7 +1948,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1863,7 +1968,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1882,7 +1986,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1905,7 +2008,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1924,7 +2026,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1937,7 +2038,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1953,7 +2053,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Number of blocks of hashes to keep in ZooKeeper.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L59).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window = 1;</code>
@@ -1978,7 +2077,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -1989,7 +2087,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2004,7 +2101,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2025,7 +2121,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2044,7 +2139,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2067,7 +2161,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2086,7 +2179,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2099,7 +2191,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2115,7 +2206,6 @@ public final class Clickhouse {
         /**
          * <pre>
          * Period of time to keep blocks of hashes for.
-         * See detailed description in [ClickHouse sources](https://github.com/yandex/ClickHouse/blob/v18.1.0-stable/dbms/src/Storages/MergeTree/MergeTreeSettings.h#L64).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value replicated_deduplication_window_seconds = 2;</code>
@@ -2138,12 +2228,20 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partsToDelayInsertBuilder_;
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public boolean hasPartsToDelayInsert() {
           return partsToDelayInsertBuilder_ != null || partsToDelayInsert_ != null;
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public com.google.protobuf.Int64Value getPartsToDelayInsert() {
@@ -2154,6 +2252,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public Builder setPartsToDelayInsert(com.google.protobuf.Int64Value value) {
@@ -2170,6 +2272,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public Builder setPartsToDelayInsert(
@@ -2184,6 +2290,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public Builder mergePartsToDelayInsert(com.google.protobuf.Int64Value value) {
@@ -2202,6 +2312,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public Builder clearPartsToDelayInsert() {
@@ -2216,6 +2330,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public com.google.protobuf.Int64Value.Builder getPartsToDelayInsertBuilder() {
@@ -2224,6 +2342,10 @@ public final class Clickhouse {
           return getPartsToDelayInsertFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getPartsToDelayInsertOrBuilder() {
@@ -2235,6 +2357,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * If table contains at least that many active parts in single partition, artificially slow down insert into table.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_delay_insert = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -2255,12 +2381,20 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> partsToThrowInsertBuilder_;
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public boolean hasPartsToThrowInsert() {
           return partsToThrowInsertBuilder_ != null || partsToThrowInsert_ != null;
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public com.google.protobuf.Int64Value getPartsToThrowInsert() {
@@ -2271,6 +2405,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public Builder setPartsToThrowInsert(com.google.protobuf.Int64Value value) {
@@ -2287,6 +2425,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public Builder setPartsToThrowInsert(
@@ -2301,6 +2443,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public Builder mergePartsToThrowInsert(com.google.protobuf.Int64Value value) {
@@ -2319,6 +2465,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public Builder clearPartsToThrowInsert() {
@@ -2333,6 +2483,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public com.google.protobuf.Int64Value.Builder getPartsToThrowInsertBuilder() {
@@ -2341,6 +2495,10 @@ public final class Clickhouse {
           return getPartsToThrowInsertFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getPartsToThrowInsertOrBuilder() {
@@ -2352,6 +2510,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * If more than this number active parts in single partition, throw 'Too many parts ...' exception.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value parts_to_throw_insert = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -2372,12 +2534,20 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxReplicatedMergesInQueueBuilder_;
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public boolean hasMaxReplicatedMergesInQueue() {
           return maxReplicatedMergesInQueueBuilder_ != null || maxReplicatedMergesInQueue_ != null;
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public com.google.protobuf.Int64Value getMaxReplicatedMergesInQueue() {
@@ -2388,6 +2558,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public Builder setMaxReplicatedMergesInQueue(com.google.protobuf.Int64Value value) {
@@ -2404,6 +2578,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public Builder setMaxReplicatedMergesInQueue(
@@ -2418,6 +2596,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public Builder mergeMaxReplicatedMergesInQueue(com.google.protobuf.Int64Value value) {
@@ -2436,6 +2618,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public Builder clearMaxReplicatedMergesInQueue() {
@@ -2450,6 +2636,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public com.google.protobuf.Int64Value.Builder getMaxReplicatedMergesInQueueBuilder() {
@@ -2458,6 +2648,10 @@ public final class Clickhouse {
           return getMaxReplicatedMergesInQueueFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMaxReplicatedMergesInQueueOrBuilder() {
@@ -2469,6 +2663,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * How many tasks of merging and mutating parts are allowed simultaneously in ReplicatedMergeTree queue.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_replicated_merges_in_queue = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -2489,12 +2687,22 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_;
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
           return numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_ != null || numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_ != null;
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
@@ -2505,6 +2713,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public Builder setNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge(com.google.protobuf.Int64Value value) {
@@ -2521,6 +2734,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public Builder setNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge(
@@ -2535,6 +2753,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public Builder mergeNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge(com.google.protobuf.Int64Value value) {
@@ -2553,6 +2776,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public Builder clearNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge() {
@@ -2567,6 +2795,11 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public com.google.protobuf.Int64Value.Builder getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder() {
@@ -2575,6 +2808,11 @@ public final class Clickhouse {
           return getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMergeOrBuilder() {
@@ -2586,6 +2824,11 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
+         * This is to allow small merges to process - not filling the pool with long running merges.
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -2606,12 +2849,20 @@ public final class Clickhouse {
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToMergeAtMinSpaceInPoolBuilder_;
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public boolean hasMaxBytesToMergeAtMinSpaceInPool() {
           return maxBytesToMergeAtMinSpaceInPoolBuilder_ != null || maxBytesToMergeAtMinSpaceInPool_ != null;
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool() {
@@ -2622,6 +2873,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public Builder setMaxBytesToMergeAtMinSpaceInPool(com.google.protobuf.Int64Value value) {
@@ -2638,6 +2893,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public Builder setMaxBytesToMergeAtMinSpaceInPool(
@@ -2652,6 +2911,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public Builder mergeMaxBytesToMergeAtMinSpaceInPool(com.google.protobuf.Int64Value value) {
@@ -2670,6 +2933,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public Builder clearMaxBytesToMergeAtMinSpaceInPool() {
@@ -2684,6 +2951,10 @@ public final class Clickhouse {
           return this;
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public com.google.protobuf.Int64Value.Builder getMaxBytesToMergeAtMinSpaceInPoolBuilder() {
@@ -2692,6 +2963,10 @@ public final class Clickhouse {
           return getMaxBytesToMergeAtMinSpaceInPoolFieldBuilder().getBuilder();
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMinSpaceInPoolOrBuilder() {
@@ -2703,6 +2978,10 @@ public final class Clickhouse {
           }
         }
         /**
+         * <pre>
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * </pre>
+         *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -24470,7 +24749,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -24481,7 +24760,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * Logging level for the ClickHouse cluster.
-     * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -24812,7 +25091,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -24823,7 +25101,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -24834,7 +25111,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -24848,7 +25124,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -24859,7 +25134,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -24870,7 +25144,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-     * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -24884,7 +25157,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -24895,7 +25167,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -24906,7 +25177,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the table that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -24920,7 +25190,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -24931,7 +25200,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -24942,7 +25210,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * Maximum size of the partition that can be deleted using a DROP query.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -24989,7 +25256,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
      * </pre>
      *
      * <code>string timezone = 14;</code>
@@ -25009,7 +25275,6 @@ public final class Clickhouse {
     /**
      * <pre>
      * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
      * </pre>
      *
      * <code>string timezone = 14;</code>
@@ -25031,6 +25296,10 @@ public final class Clickhouse {
     public static final int GEOBASE_URI_FIELD_NUMBER = 15;
     private volatile java.lang.Object geobaseUri_;
     /**
+     * <pre>
+     * Address of the archive with the user geobase in Object Storage.
+     * </pre>
+     *
      * <code>string geobase_uri = 15;</code>
      */
     public java.lang.String getGeobaseUri() {
@@ -25046,6 +25315,10 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Address of the archive with the user geobase in Object Storage.
+     * </pre>
+     *
      * <code>string geobase_uri = 15;</code>
      */
     public com.google.protobuf.ByteString
@@ -25847,7 +26120,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25858,7 +26131,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25871,7 +26144,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25884,7 +26157,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -25901,7 +26174,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * Logging level for the ClickHouse cluster.
-       * See description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#server_settings-logger).
+       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -27530,7 +27803,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27541,7 +27813,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27556,7 +27827,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27577,7 +27847,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27596,7 +27865,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27619,7 +27887,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27638,7 +27905,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27651,7 +27917,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27667,7 +27932,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Cache size (in bytes) for uncompressed data used by MergeTree tables.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#uncompressed_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value uncompressed_cache_size = 9;</code>
@@ -27692,7 +27956,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27703,7 +27966,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27718,7 +27980,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27739,7 +28000,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27758,7 +28018,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27781,7 +28040,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27800,7 +28058,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27813,7 +28070,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27829,7 +28085,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
-       * See details in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#mark_cache_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
@@ -27854,7 +28109,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27865,7 +28119,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27880,7 +28133,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27901,7 +28153,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27920,7 +28171,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27943,7 +28193,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27962,7 +28211,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27975,7 +28223,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -27991,7 +28238,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the table that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_table_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_table_size_to_drop = 11;</code>
@@ -28016,7 +28262,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28027,7 +28272,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28042,7 +28286,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28063,7 +28306,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28082,7 +28324,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28105,7 +28346,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28124,7 +28364,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28137,7 +28376,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28153,7 +28391,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * Maximum size of the partition that can be deleted using a DROP query.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#max_partition_size_to_drop).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_partition_size_to_drop = 13;</code>
@@ -28329,7 +28566,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
        * </pre>
        *
        * <code>string timezone = 14;</code>
@@ -28349,7 +28585,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
        * </pre>
        *
        * <code>string timezone = 14;</code>
@@ -28370,7 +28605,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
        * </pre>
        *
        * <code>string timezone = 14;</code>
@@ -28388,7 +28622,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
        * </pre>
        *
        * <code>string timezone = 14;</code>
@@ -28402,7 +28635,6 @@ public final class Clickhouse {
       /**
        * <pre>
        * The server's time zone to be used in DateTime fields conversions. Specified as an IANA identifier.
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/#timezone).
        * </pre>
        *
        * <code>string timezone = 14;</code>
@@ -28421,6 +28653,10 @@ public final class Clickhouse {
 
       private java.lang.Object geobaseUri_ = "";
       /**
+       * <pre>
+       * Address of the archive with the user geobase in Object Storage.
+       * </pre>
+       *
        * <code>string geobase_uri = 15;</code>
        */
       public java.lang.String getGeobaseUri() {
@@ -28436,6 +28672,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Address of the archive with the user geobase in Object Storage.
+       * </pre>
+       *
        * <code>string geobase_uri = 15;</code>
        */
       public com.google.protobuf.ByteString
@@ -28452,6 +28692,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Address of the archive with the user geobase in Object Storage.
+       * </pre>
+       *
        * <code>string geobase_uri = 15;</code>
        */
       public Builder setGeobaseUri(
@@ -28465,6 +28709,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Address of the archive with the user geobase in Object Storage.
+       * </pre>
+       *
        * <code>string geobase_uri = 15;</code>
        */
       public Builder clearGeobaseUri() {
@@ -28474,6 +28722,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Address of the archive with the user geobase in Object Storage.
+       * </pre>
+       *
        * <code>string geobase_uri = 15;</code>
        */
       public Builder setGeobaseUriBytes(

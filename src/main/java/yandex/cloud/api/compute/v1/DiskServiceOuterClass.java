@@ -2838,7 +2838,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -2846,7 +2846,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -2874,7 +2874,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -2882,7 +2882,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -2897,7 +2897,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -2906,7 +2906,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -2917,7 +2917,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3251,7 +3251,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3270,7 +3270,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3359,7 +3359,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -3379,7 +3379,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -3390,7 +3390,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -3406,7 +3406,7 @@ public final class DiskServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -4247,7 +4247,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4266,7 +4266,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4286,7 +4286,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4303,7 +4303,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -4316,7 +4316,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4450,7 +4450,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -4470,7 +4470,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -4481,7 +4481,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -4497,7 +4497,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -4521,7 +4521,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4544,7 +4544,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4560,7 +4560,7 @@ public final class DiskServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -5694,7 +5694,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -5702,7 +5702,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5731,7 +5731,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5740,7 +5740,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5756,7 +5756,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5766,7 +5766,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5778,7 +5778,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -6014,7 +6014,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6033,7 +6033,7 @@ public final class DiskServiceOuterClass {
      * Name of the disk.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6123,7 +6123,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -6144,7 +6144,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -6156,7 +6156,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -6173,7 +6173,7 @@ public final class DiskServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -6891,7 +6891,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6910,7 +6910,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6930,7 +6930,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -6947,7 +6947,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -6960,7 +6960,7 @@ public final class DiskServiceOuterClass {
        * Name of the disk.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7095,7 +7095,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -7116,7 +7116,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -7128,7 +7128,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -7145,7 +7145,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -7170,7 +7170,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -7194,7 +7194,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -7211,7 +7211,7 @@ public final class DiskServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -11125,65 +11125,65 @@ public final class DiskServiceOuterClass {
       "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"Z\n\021ListDisks" +
       "Response\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.c" +
       "ompute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\356\003\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z]" +
-      "[-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\003" +
-      " \001(\tB\t\212\3101\005<=256\022\207\001\n\006labels\030\004 \003(\01326.yande" +
-      "x.cloud.compute.v1.CreateDiskRequest.Lab" +
-      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\031\n\007typ" +
-      "e_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_id\030\006 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022+\n\004size\030\007 \001(\003B\035\350\3071\001\372\3071\02541943" +
-      "04-4398046511104\022\034\n\010image_id\030\010 \001(\tB\010\212\3101\004" +
-      "<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010\212\3101\004<=50H\000\032" +
+      "\371\003\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.ya" +
+      "ndex.cloud.compute.v1.CreateDiskRequest." +
+      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_" +
+      "id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\004size\030\007 \001(\003B\035\350\307" +
+      "1\001\372\3071\0254194304-4398046511104\022\034\n\010image_id\030" +
+      "\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010" +
+      "\212\3101\004<=50H\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDis" +
+      "kMetadata\022\017\n\007disk_id\030\001 \001(\t\"\241\003\n\021UpdateDis" +
+      "kRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
+      "ieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z" +
+      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(" +
+      "\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex.c" +
+      "loud.compute.v1.UpdateDiskRequest.Labels" +
+      "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
+      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\'" +
+      "\n\004size\030\006 \001(\003B\031\372\3071\0254194304-4398046511104\032" +
       "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001B\010\n\006source\"%\n\022CreateDiskMetadata\022\017" +
-      "\n\007disk_id\030\001 \001(\t\"\226\003\n\021UpdateDiskRequest\022\035\n" +
-      "\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n" +
-      "\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a" +
-      "-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\207" +
-      "\001\n\006labels\030\005 \003(\01326.yandex.cloud.compute.v" +
-      "1.UpdateDiskRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022\'\n\004size\030\006 \001(\003B\031\372\3071\0254194" +
-      "304-4398046511104\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"%\n\022UpdateDiskMe" +
-      "tadata\022\017\n\007disk_id\030\001 \001(\t\"2\n\021DeleteDiskReq" +
-      "uest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022D" +
-      "eleteDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\"x\n\031Li" +
-      "stDiskOperationsRequest\022\035\n\007disk_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032" +
-      "ListDiskOperationsResponse\0225\n\noperations" +
-      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t2\213\007\n\013DiskServi" +
-      "ce\022r\n\003Get\022\'.yandex.cloud.compute.v1.GetD" +
-      "iskRequest\032\035.yandex.cloud.compute.v1.Dis" +
-      "k\"#\202\323\344\223\002\035\022\033/compute/v1/disks/{disk_id}\022x" +
-      "\n\004List\022).yandex.cloud.compute.v1.ListDis" +
-      "ksRequest\032*.yandex.cloud.compute.v1.List" +
-      "DisksResponse\"\031\202\323\344\223\002\023\022\021/compute/v1/disks" +
-      "\022\223\001\n\006Create\022*.yandex.cloud.compute.v1.Cr" +
-      "eateDiskRequest\032!.yandex.cloud.operation" +
-      ".Operation\":\202\323\344\223\002\026\"\021/compute/v1/disks:\001*" +
-      "\262\322*\032\n\022CreateDiskMetadata\022\004Disk\022\235\001\n\006Updat" +
-      "e\022*.yandex.cloud.compute.v1.UpdateDiskRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"D\202\323\344\223\002 2\033/compute/v1/disks/{disk_id}:\001*" +
-      "\262\322*\032\n\022UpdateDiskMetadata\022\004Disk\022\253\001\n\006Delet" +
-      "e\022*.yandex.cloud.compute.v1.DeleteDiskRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"R\202\323\344\223\002\035*\033/compute/v1/disks/{disk_id}\262\322*" +
-      "+\n\022DeleteDiskMetadata\022\025google.protobuf.E" +
-      "mpty\022\251\001\n\016ListOperations\0222.yandex.cloud.c" +
-      "ompute.v1.ListDiskOperationsRequest\0323.ya" +
-      "ndex.cloud.compute.v1.ListDiskOperations" +
-      "Response\".\202\323\344\223\002(\022&/compute/v1/disks/{dis" +
-      "k_id}/operationsBb\n\033yandex.cloud.api.com" +
-      "pute.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/compute/v1;computeb\006pr" +
-      "oto3"
+      "(\t:\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030" +
+      "\001 \001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022" +
+      "\017\n\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperationsRe" +
+      "quest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t2\213\007\n\013DiskService\022r\n\003Get\022\'.yandex" +
+      ".cloud.compute.v1.GetDiskRequest\032\035.yande" +
+      "x.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/comput" +
+      "e/v1/disks/{disk_id}\022x\n\004List\022).yandex.cl" +
+      "oud.compute.v1.ListDisksRequest\032*.yandex" +
+      ".cloud.compute.v1.ListDisksResponse\"\031\202\323\344" +
+      "\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*.yand" +
+      "ex.cloud.compute.v1.CreateDiskRequest\032!." +
+      "yandex.cloud.operation.Operation\":\202\323\344\223\002\026" +
+      "\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDiskMe" +
+      "tadata\022\004Disk\022\235\001\n\006Update\022*.yandex.cloud.c" +
+      "ompute.v1.UpdateDiskRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"D\202\323\344\223\002 2\033/compute" +
+      "/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDiskMe" +
+      "tadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.cloud.c" +
+      "ompute.v1.DeleteDiskRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"R\202\323\344\223\002\035*\033/compute" +
+      "/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskMetad" +
+      "ata\022\025google.protobuf.Empty\022\251\001\n\016ListOpera" +
+      "tions\0222.yandex.cloud.compute.v1.ListDisk" +
+      "OperationsRequest\0323.yandex.cloud.compute" +
+      ".v1.ListDiskOperationsResponse\".\202\323\344\223\002(\022&" +
+      "/compute/v1/disks/{disk_id}/operationsBb" +
+      "\n\033yandex.cloud.api.compute.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
