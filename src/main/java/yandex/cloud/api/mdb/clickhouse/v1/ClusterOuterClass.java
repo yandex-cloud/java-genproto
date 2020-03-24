@@ -15199,6 +15199,15 @@ public final class ClusterOuterClass {
      * <code>bool metrika = 3;</code>
      */
     boolean getMetrika();
+
+    /**
+     * <pre>
+     * Allow access for Serverless
+     * </pre>
+     *
+     * <code>bool serverless = 4;</code>
+     */
+    boolean getServerless();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.Access}
@@ -15216,6 +15225,7 @@ public final class ClusterOuterClass {
       dataLens_ = false;
       webSql_ = false;
       metrika_ = false;
+      serverless_ = false;
     }
 
     @java.lang.Override
@@ -15255,6 +15265,11 @@ public final class ClusterOuterClass {
             case 24: {
 
               metrika_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              serverless_ = input.readBool();
               break;
             }
             default: {
@@ -15328,6 +15343,19 @@ public final class ClusterOuterClass {
       return metrika_;
     }
 
+    public static final int SERVERLESS_FIELD_NUMBER = 4;
+    private boolean serverless_;
+    /**
+     * <pre>
+     * Allow access for Serverless
+     * </pre>
+     *
+     * <code>bool serverless = 4;</code>
+     */
+    public boolean getServerless() {
+      return serverless_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15351,6 +15379,9 @@ public final class ClusterOuterClass {
       if (metrika_ != false) {
         output.writeBool(3, metrika_);
       }
+      if (serverless_ != false) {
+        output.writeBool(4, serverless_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15371,6 +15402,10 @@ public final class ClusterOuterClass {
       if (metrika_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, metrika_);
+      }
+      if (serverless_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, serverless_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15394,6 +15429,8 @@ public final class ClusterOuterClass {
           == other.getWebSql());
       result = result && (getMetrika()
           == other.getMetrika());
+      result = result && (getServerless()
+          == other.getServerless());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -15414,6 +15451,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + METRIKA_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getMetrika());
+      hash = (37 * hash) + SERVERLESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getServerless());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15553,6 +15593,8 @@ public final class ClusterOuterClass {
 
         metrika_ = false;
 
+        serverless_ = false;
+
         return this;
       }
 
@@ -15582,6 +15624,7 @@ public final class ClusterOuterClass {
         result.dataLens_ = dataLens_;
         result.webSql_ = webSql_;
         result.metrika_ = metrika_;
+        result.serverless_ = serverless_;
         onBuilt();
         return result;
       }
@@ -15638,6 +15681,9 @@ public final class ClusterOuterClass {
         }
         if (other.getMetrika() != false) {
           setMetrika(other.getMetrika());
+        }
+        if (other.getServerless() != false) {
+          setServerless(other.getServerless());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15778,6 +15824,44 @@ public final class ClusterOuterClass {
       public Builder clearMetrika() {
         
         metrika_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean serverless_ ;
+      /**
+       * <pre>
+       * Allow access for Serverless
+       * </pre>
+       *
+       * <code>bool serverless = 4;</code>
+       */
+      public boolean getServerless() {
+        return serverless_;
+      }
+      /**
+       * <pre>
+       * Allow access for Serverless
+       * </pre>
+       *
+       * <code>bool serverless = 4;</code>
+       */
+      public Builder setServerless(boolean value) {
+        
+        serverless_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for Serverless
+       * </pre>
+       *
+       * <code>bool serverless = 4;</code>
+       */
+      public Builder clearServerless() {
+        
+        serverless_ = false;
         onChanged();
         return this;
       }
@@ -15980,12 +16064,12 @@ public final class ClusterOuterClass {
       "\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005" +
       "ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resour" +
       "ce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n" +
-      "\014disk_type_id\030\003 \001(\t\"=\n\006Access\022\021\n\tdata_le" +
+      "\014disk_type_id\030\003 \001(\t\"Q\n\006Access\022\021\n\tdata_le" +
       "ns\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001" +
-      "(\010Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
-      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
-      "\006proto3"
+      "(\010\022\022\n\nserverless\030\004 \001(\010Bs\n\"yandex.cloud.a" +
+      "pi.mdb.clickhouse.v1ZMgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/click" +
+      "house/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16080,7 +16164,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "WebSql", "Metrika", });
+        new java.lang.String[] { "DataLens", "WebSql", "Metrika", "Serverless", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();

@@ -882,7 +882,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -890,7 +890,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -918,7 +918,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -926,7 +926,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -941,7 +941,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -950,7 +950,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -961,7 +961,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -1430,7 +1430,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1449,7 +1449,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1538,7 +1538,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -1558,7 +1558,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -1569,7 +1569,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -1585,7 +1585,7 @@ public final class InstanceGroupServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -2620,7 +2620,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2639,7 +2639,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2659,7 +2659,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -2676,7 +2676,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -2689,7 +2689,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2823,7 +2823,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -2843,7 +2843,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -2854,7 +2854,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -2870,7 +2870,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -2894,7 +2894,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -2917,7 +2917,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -2933,7 +2933,7 @@ public final class InstanceGroupServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -5660,7 +5660,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -5668,7 +5668,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -5697,7 +5697,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5706,7 +5706,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5722,7 +5722,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5732,7 +5732,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5744,7 +5744,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -6259,7 +6259,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6278,7 +6278,7 @@ public final class InstanceGroupServiceOuterClass {
      * Name of the instance group.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6368,7 +6368,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -6389,7 +6389,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -6401,7 +6401,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -6418,7 +6418,7 @@ public final class InstanceGroupServiceOuterClass {
      * The existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -7636,7 +7636,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7655,7 +7655,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7675,7 +7675,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -7692,7 +7692,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -7705,7 +7705,7 @@ public final class InstanceGroupServiceOuterClass {
        * Name of the instance group.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7840,7 +7840,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -7861,7 +7861,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -7873,7 +7873,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -7890,7 +7890,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -7915,7 +7915,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -7939,7 +7939,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -7956,7 +7956,7 @@ public final class InstanceGroupServiceOuterClass {
        * The existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -23742,178 +23742,179 @@ public final class InstanceGroupServiceOuterClass {
       "validation.proto\"\212\001\n\027GetInstanceGroupReq" +
       "uest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\022F\n\004view\030\002 \001(\01628.yandex.cloud.compu" +
-      "te.v1.instancegroup.InstanceGroupView\"\266\007" +
+      "te.v1.instancegroup.InstanceGroupView\"\301\007" +
       "\n\032CreateInstanceGroupRequest\022\027\n\tfolder_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][" +
-      "-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 " +
-      "\001(\tB\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\0132M.yandex" +
-      ".cloud.compute.v1.instancegroup.CreateIn" +
-      "stanceGroupRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022X\n\021instance_template\030\006 \001" +
-      "(\01327.yandex.cloud.compute.v1.instancegro" +
-      "up.InstanceTemplateB\004\350\3071\001\022N\n\014scale_polic" +
-      "y\030\007 \001(\01322.yandex.cloud.compute.v1.instan" +
-      "cegroup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_poli" +
-      "cy\030\010 \001(\01323.yandex.cloud.compute.v1.insta" +
-      "ncegroup.DeployPolicyB\004\350\3071\001\022X\n\021allocatio" +
-      "n_policy\030\t \001(\01327.yandex.cloud.compute.v1" +
-      ".instancegroup.AllocationPolicyB\004\350\3071\001\022S\n" +
-      "\022load_balancer_spec\030\n \001(\01327.yandex.cloud" +
-      ".compute.v1.instancegroup.LoadBalancerSp" +
-      "ec\022S\n\022health_checks_spec\030\013 \001(\01327.yandex." +
-      "cloud.compute.v1.instancegroup.HealthChe" +
-      "cksSpec\022\032\n\022service_account_id\030\014 \001(\t\022B\n\tv" +
-      "ariables\030\r \003(\0132/.yandex.cloud.compute.v1" +
-      ".instancegroup.Variable\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"m\n\"Create" +
-      "InstanceGroupFromYamlRequest\022\027\n\tfolder_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022.\n\023instance_group_yaml\030\002 \001" +
-      "(\tB\021\350\3071\001\212\3101\t<=1048576\"B\n\033CreateInstanceG" +
-      "roupMetadata\022#\n\021instance_group_id\030\001 \001(\tB" +
-      "\010\212\3101\004<=50\"\367\007\n\032UpdateInstanceGroupRequest" +
-      "\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-" +
-      "z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\t" +
-      "B\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\0132M.yandex.cl" +
-      "oud.compute.v1.instancegroup.UpdateInsta" +
-      "nceGroupRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022X\n\021instance_template\030\006 \001(\0132" +
-      "7.yandex.cloud.compute.v1.instancegroup." +
-      "InstanceTemplateB\004\350\3071\001\022N\n\014scale_policy\030\007" +
-      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
-      "roup.ScalePolicyB\004\350\3071\001\022P\n\rdeploy_policy\030" +
-      "\010 \001(\01323.yandex.cloud.compute.v1.instance" +
-      "group.DeployPolicyB\004\350\3071\001\022X\n\021allocation_p" +
-      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
-      "stancegroup.AllocationPolicyB\004\350\3071\001\022S\n\022he" +
-      "alth_checks_spec\030\013 \001(\01327.yandex.cloud.co" +
-      "mpute.v1.instancegroup.HealthChecksSpec\022" +
-      "\032\n\022service_account_id\030\014 \001(\t\022S\n\022load_bala" +
-      "ncer_spec\030\016 \001(\01327.yandex.cloud.compute.v" +
-      "1.instancegroup.LoadBalancerSpec\022B\n\tvari" +
-      "ables\030\017 \003(\0132/.yandex.cloud.compute.v1.in" +
-      "stancegroup.Variable\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"}\n\"UpdateIns" +
-      "tanceGroupFromYamlRequest\022\'\n\021instance_gr" +
-      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\023instance_g" +
-      "roup_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"8\n\033Up" +
-      "dateInstanceGroupMetadata\022\031\n\021instance_gr" +
-      "oup_id\030\001 \001(\t\"D\n\031StartInstanceGroupReques" +
-      "t\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"7\n\032StartInstanceGroupMetadata\022\031\n\021inst" +
-      "ance_group_id\030\001 \001(\t\"C\n\030StopInstanceGroup" +
+      "d\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z](" +
+      "[-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description" +
+      "\030\004 \001(\tB\t\212\3101\005<=256\022\246\001\n\006labels\030\005 \003(\0132M.yan" +
+      "dex.cloud.compute.v1.instancegroup.Creat" +
+      "eInstanceGroupRequest.LabelsEntryBG\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63" +
+      "\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022X\n\021instance_t" +
+      "emplate\030\006 \001(\01327.yandex.cloud.compute.v1." +
+      "instancegroup.InstanceTemplateB\004\350\3071\001\022N\n\014" +
+      "scale_policy\030\007 \001(\01322.yandex.cloud.comput" +
+      "e.v1.instancegroup.ScalePolicyB\004\350\3071\001\022P\n\r" +
+      "deploy_policy\030\010 \001(\01323.yandex.cloud.compu" +
+      "te.v1.instancegroup.DeployPolicyB\004\350\3071\001\022X" +
+      "\n\021allocation_policy\030\t \001(\01327.yandex.cloud" +
+      ".compute.v1.instancegroup.AllocationPoli" +
+      "cyB\004\350\3071\001\022S\n\022load_balancer_spec\030\n \001(\01327.y" +
+      "andex.cloud.compute.v1.instancegroup.Loa" +
+      "dBalancerSpec\022S\n\022health_checks_spec\030\013 \001(" +
+      "\01327.yandex.cloud.compute.v1.instancegrou" +
+      "p.HealthChecksSpec\022\032\n\022service_account_id" +
+      "\030\014 \001(\t\022B\n\tvariables\030\r \003(\0132/.yandex.cloud" +
+      ".compute.v1.instancegroup.Variable\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"m\n\"CreateInstanceGroupFromYamlRequest\022" +
+      "\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022.\n\023instance_gro" +
+      "up_yaml\030\002 \001(\tB\021\350\3071\001\212\3101\t<=1048576\"B\n\033Crea" +
+      "teInstanceGroupMetadata\022#\n\021instance_grou" +
+      "p_id\030\001 \001(\tB\010\212\3101\004<=50\"\202\010\n\032UpdateInstanceG" +
+      "roupRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071" +
+      " |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013des" +
+      "cription\030\004 \001(\tB\t\212\3101\005<=256\022\246\001\n\006labels\030\005 \003" +
+      "(\0132M.yandex.cloud.compute.v1.instancegro" +
+      "up.UpdateInstanceGroupRequest.LabelsEntr" +
+      "yBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022X\n\021in" +
+      "stance_template\030\006 \001(\01327.yandex.cloud.com" +
+      "pute.v1.instancegroup.InstanceTemplateB\004" +
+      "\350\3071\001\022N\n\014scale_policy\030\007 \001(\01322.yandex.clou" +
+      "d.compute.v1.instancegroup.ScalePolicyB\004" +
+      "\350\3071\001\022P\n\rdeploy_policy\030\010 \001(\01323.yandex.clo" +
+      "ud.compute.v1.instancegroup.DeployPolicy" +
+      "B\004\350\3071\001\022X\n\021allocation_policy\030\t \001(\01327.yand" +
+      "ex.cloud.compute.v1.instancegroup.Alloca" +
+      "tionPolicyB\004\350\3071\001\022S\n\022health_checks_spec\030\013" +
+      " \001(\01327.yandex.cloud.compute.v1.instanceg" +
+      "roup.HealthChecksSpec\022\032\n\022service_account" +
+      "_id\030\014 \001(\t\022S\n\022load_balancer_spec\030\016 \001(\01327." +
+      "yandex.cloud.compute.v1.instancegroup.Lo" +
+      "adBalancerSpec\022B\n\tvariables\030\017 \003(\0132/.yand" +
+      "ex.cloud.compute.v1.instancegroup.Variab" +
+      "le\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"}\n\"UpdateInstanceGroupFromYaml" +
       "Request\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"6\n\031StopInstanceGroupMetadata\022\031\n" +
-      "\021instance_group_id\030\001 \001(\t\"E\n\032DeleteInstan" +
-      "ceGroupRequest\022\'\n\021instance_group_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"8\n\033DeleteInstanceGroupMe" +
-      "tadata\022\031\n\021instance_group_id\030\001 \001(\t\"4\n\027Del" +
-      "eteInstancesMetadata\022\031\n\021instance_group_i" +
-      "d\030\001 \001(\t\"\326\001\n\031ListInstanceGroupsRequest\022\027\n" +
-      "\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022F\n\004view" +
-      "\030\005 \001(\01628.yandex.cloud.compute.v1.instanc" +
-      "egroup.InstanceGroupView\"\204\001\n\032ListInstanc" +
-      "eGroupsResponse\022M\n\017instance_groups\030\001 \003(\013" +
-      "24.yandex.cloud.compute.v1.instancegroup" +
-      ".InstanceGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\246\001\n!ListInstanceGroupInstancesRequest\022\'\n" +
-      "\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
-      "1\006<=1000\"\210\001\n\"ListInstanceGroupInstancesR" +
-      "esponse\022I\n\tinstances\030\001 \003(\01326.yandex.clou" +
-      "d.compute.v1.instancegroup.ManagedInstan" +
-      "ce\022\027\n\017next_page_token\030\002 \001(\t\"\247\001\n\"ListInst" +
-      "anceGroupOperationsRequest\022\'\n\021instance_g" +
-      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"u\n" +
-      "#ListInstanceGroupOperationsResponse\0225\n\n" +
-      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
-      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t\"\237\001\n" +
-      "\"ListInstanceGroupLogRecordsRequest\022\037\n\021i" +
-      "nstance_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\205" +
-      "\001\n#ListInstanceGroupLogRecordsResponse\022E" +
-      "\n\013log_records\030\001 \003(\01320.yandex.cloud.compu" +
-      "te.v1.instancegroup.LogRecord\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005B" +
-      "ASIC\020\000\022\010\n\004FULL\020\0012\302\024\n\024InstanceGroupServic" +
-      "e\022\263\001\n\003Get\022>.yandex.cloud.compute.v1.inst" +
-      "ancegroup.GetInstanceGroupRequest\0324.yand" +
-      "ex.cloud.compute.v1.instancegroup.Instan" +
-      "ceGroup\"6\202\323\344\223\0020\022./compute/v1/instanceGro" +
-      "ups/{instance_group_id}\022\257\001\n\004List\022@.yande" +
-      "x.cloud.compute.v1.instancegroup.ListIns" +
-      "tanceGroupsRequest\032A.yandex.cloud.comput" +
-      "e.v1.instancegroup.ListInstanceGroupsRes" +
-      "ponse\"\"\202\323\344\223\002\034\022\032/compute/v1/instanceGroup" +
-      "s\022\305\001\n\006Create\022A.yandex.cloud.compute.v1.i" +
-      "nstancegroup.CreateInstanceGroupRequest\032" +
-      "!.yandex.cloud.operation.Operation\"U\202\323\344\223" +
-      "\002\037\"\032/compute/v1/instanceGroups:\001*\262\322*,\n\033C" +
-      "reateInstanceGroupMetadata\022\rInstanceGrou" +
-      "p\022\332\001\n\016CreateFromYaml\022I.yandex.cloud.comp" +
-      "ute.v1.instancegroup.CreateInstanceGroup" +
-      "FromYamlRequest\032!.yandex.cloud.operation" +
-      ".Operation\"Z\202\323\344\223\002$\"\037/compute/v1/instance" +
-      "Groups:yaml:\001*\262\322*,\n\033CreateInstanceGroupM" +
-      "etadata\022\rInstanceGroup\022\331\001\n\006Update\022A.yand" +
-      "ex.cloud.compute.v1.instancegroup.Update" +
-      "InstanceGroupRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"i\202\323\344\223\00232./compute/v1/ins" +
-      "tanceGroups/{instance_group_id}:\001*\262\322*,\n\033" +
-      "UpdateInstanceGroupMetadata\022\rInstanceGro" +
-      "up\022\356\001\n\016UpdateFromYaml\022I.yandex.cloud.com" +
-      "pute.v1.instancegroup.UpdateInstanceGrou" +
-      "pFromYamlRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"n\202\323\344\223\002823/compute/v1/instanc" +
-      "eGroups/{instance_group_id}:yaml:\001*\262\322*,\n" +
-      "\033UpdateInstanceGroupMetadata\022\rInstanceGr" +
-      "oup\022\325\001\n\004Stop\022?.yandex.cloud.compute.v1.i" +
-      "nstancegroup.StopInstanceGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"i\202\323\344\223\0025" +
-      "\"3/compute/v1/instanceGroups/{instance_g" +
-      "roup_id}:stop\262\322**\n\031StopInstanceGroupMeta" +
-      "data\022\rInstanceGroup\022\331\001\n\005Start\022@.yandex.c" +
-      "loud.compute.v1.instancegroup.StartInsta" +
-      "nceGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"k\202\323\344\223\0026\"4/compute/v1/instance" +
-      "Groups/{instance_group_id}:start\262\322*+\n\032St" +
-      "artInstanceGroupMetadata\022\rInstanceGroup\022" +
-      "\336\001\n\006Delete\022A.yandex.cloud.compute.v1.ins" +
-      "tancegroup.DeleteInstanceGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"n\202\323\344\223\0020" +
-      "*./compute/v1/instanceGroups/{instance_g" +
-      "roup_id}\262\322*4\n\033DeleteInstanceGroupMetadat" +
-      "a\022\025google.protobuf.Empty\022\346\001\n\rListInstanc" +
-      "es\022H.yandex.cloud.compute.v1.instancegro" +
-      "up.ListInstanceGroupInstancesRequest\032I.y" +
-      "andex.cloud.compute.v1.instancegroup.Lis" +
-      "tInstanceGroupInstancesResponse\"@\202\323\344\223\002:\022" +
-      "8/compute/v1/instanceGroups/{instance_gr" +
-      "oup_id}/instances\022\352\001\n\016ListOperations\022I.y" +
-      "andex.cloud.compute.v1.instancegroup.Lis" +
-      "tInstanceGroupOperationsRequest\032J.yandex" +
-      ".cloud.compute.v1.instancegroup.ListInst" +
-      "anceGroupOperationsResponse\"A\202\323\344\223\002;\0229/co" +
-      "mpute/v1/instanceGroups/{instance_group_" +
-      "id}/operations\022\344\001\n\016ListLogRecords\022I.yand" +
-      "ex.cloud.compute.v1.instancegroup.ListIn" +
-      "stanceGroupLogRecordsRequest\032J.yandex.cl" +
-      "oud.compute.v1.instancegroup.ListInstanc" +
-      "eGroupLogRecordsResponse\";\202\323\344\223\0025\0223/compu" +
-      "te/v1/instanceGroups/{instance_group_id}" +
-      ":logsB\204\001\n)yandex.cloud.api.compute.v1.in" +
-      "stancegroupZWgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/compute/v1/instanc" +
-      "egroup;instancegroupb\006proto3"
+      "\212\3101\004<=50\022.\n\023instance_group_yaml\030\002 \001(\tB\021\350" +
+      "\3071\001\212\3101\t<=1048576\"8\n\033UpdateInstanceGroupM" +
+      "etadata\022\031\n\021instance_group_id\030\001 \001(\t\"D\n\031St" +
+      "artInstanceGroupRequest\022\'\n\021instance_grou" +
+      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"7\n\032StartInstanc" +
+      "eGroupMetadata\022\031\n\021instance_group_id\030\001 \001(" +
+      "\t\"C\n\030StopInstanceGroupRequest\022\'\n\021instanc" +
+      "e_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\031StopIn" +
+      "stanceGroupMetadata\022\031\n\021instance_group_id" +
+      "\030\001 \001(\t\"E\n\032DeleteInstanceGroupRequest\022\'\n\021" +
+      "instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"8\n" +
+      "\033DeleteInstanceGroupMetadata\022\031\n\021instance" +
+      "_group_id\030\001 \001(\t\"4\n\027DeleteInstancesMetada" +
+      "ta\022\031\n\021instance_group_id\030\001 \001(\t\"\326\001\n\031ListIn" +
+      "stanceGroupsRequest\022\027\n\tfolder_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\022F\n\004view\030\005 \001(\01628.yandex.cl" +
+      "oud.compute.v1.instancegroup.InstanceGro" +
+      "upView\"\204\001\n\032ListInstanceGroupsResponse\022M\n" +
+      "\017instance_groups\030\001 \003(\01324.yandex.cloud.co" +
+      "mpute.v1.instancegroup.InstanceGroup\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"\246\001\n!ListInstanceGr" +
+      "oupInstancesRequest\022\'\n\021instance_group_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\210\001\n\"ListI" +
+      "nstanceGroupInstancesResponse\022I\n\tinstanc" +
+      "es\030\001 \003(\01326.yandex.cloud.compute.v1.insta" +
+      "ncegroup.ManagedInstance\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\247\001\n\"ListInstanceGroupOperation" +
+      "sRequest\022\'\n\021instance_group_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\"u\n#ListInstanceGroup" +
+      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
+      ".yandex.cloud.operation.Operation\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\237\001\n\"ListInstanceGroup" +
+      "LogRecordsRequest\022\037\n\021instance_group_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\"\205\001\n#ListInstanceGro" +
+      "upLogRecordsResponse\022E\n\013log_records\030\001 \003(" +
+      "\01320.yandex.cloud.compute.v1.instancegrou" +
+      "p.LogRecord\022\027\n\017next_page_token\030\002 \001(\t*(\n\021" +
+      "InstanceGroupView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\302" +
+      "\024\n\024InstanceGroupService\022\263\001\n\003Get\022>.yandex" +
+      ".cloud.compute.v1.instancegroup.GetInsta" +
+      "nceGroupRequest\0324.yandex.cloud.compute.v" +
+      "1.instancegroup.InstanceGroup\"6\202\323\344\223\0020\022./" +
+      "compute/v1/instanceGroups/{instance_grou" +
+      "p_id}\022\257\001\n\004List\022@.yandex.cloud.compute.v1" +
+      ".instancegroup.ListInstanceGroupsRequest" +
+      "\032A.yandex.cloud.compute.v1.instancegroup" +
+      ".ListInstanceGroupsResponse\"\"\202\323\344\223\002\034\022\032/co" +
+      "mpute/v1/instanceGroups\022\305\001\n\006Create\022A.yan" +
+      "dex.cloud.compute.v1.instancegroup.Creat" +
+      "eInstanceGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"U\202\323\344\223\002\037\"\032/compute/v1/in" +
+      "stanceGroups:\001*\262\322*,\n\033CreateInstanceGroup" +
+      "Metadata\022\rInstanceGroup\022\332\001\n\016CreateFromYa" +
+      "ml\022I.yandex.cloud.compute.v1.instancegro" +
+      "up.CreateInstanceGroupFromYamlRequest\032!." +
+      "yandex.cloud.operation.Operation\"Z\202\323\344\223\002$" +
+      "\"\037/compute/v1/instanceGroups:yaml:\001*\262\322*," +
+      "\n\033CreateInstanceGroupMetadata\022\rInstanceG" +
+      "roup\022\331\001\n\006Update\022A.yandex.cloud.compute.v" +
+      "1.instancegroup.UpdateInstanceGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"i\202" +
+      "\323\344\223\00232./compute/v1/instanceGroups/{insta" +
+      "nce_group_id}:\001*\262\322*,\n\033UpdateInstanceGrou" +
+      "pMetadata\022\rInstanceGroup\022\356\001\n\016UpdateFromY" +
+      "aml\022I.yandex.cloud.compute.v1.instancegr" +
+      "oup.UpdateInstanceGroupFromYamlRequest\032!" +
+      ".yandex.cloud.operation.Operation\"n\202\323\344\223\002" +
+      "823/compute/v1/instanceGroups/{instance_" +
+      "group_id}:yaml:\001*\262\322*,\n\033UpdateInstanceGro" +
+      "upMetadata\022\rInstanceGroup\022\325\001\n\004Stop\022?.yan" +
+      "dex.cloud.compute.v1.instancegroup.StopI" +
+      "nstanceGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"i\202\323\344\223\0025\"3/compute/v1/inst" +
+      "anceGroups/{instance_group_id}:stop\262\322**\n" +
+      "\031StopInstanceGroupMetadata\022\rInstanceGrou" +
+      "p\022\331\001\n\005Start\022@.yandex.cloud.compute.v1.in" +
+      "stancegroup.StartInstanceGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"k\202\323\344\223\0026" +
+      "\"4/compute/v1/instanceGroups/{instance_g" +
+      "roup_id}:start\262\322*+\n\032StartInstanceGroupMe" +
+      "tadata\022\rInstanceGroup\022\336\001\n\006Delete\022A.yande" +
+      "x.cloud.compute.v1.instancegroup.DeleteI" +
+      "nstanceGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"n\202\323\344\223\0020*./compute/v1/inst" +
+      "anceGroups/{instance_group_id}\262\322*4\n\033Dele" +
+      "teInstanceGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\346\001\n\rListInstances\022H.yandex.cloud." +
+      "compute.v1.instancegroup.ListInstanceGro" +
+      "upInstancesRequest\032I.yandex.cloud.comput" +
+      "e.v1.instancegroup.ListInstanceGroupInst" +
+      "ancesResponse\"@\202\323\344\223\002:\0228/compute/v1/insta" +
+      "nceGroups/{instance_group_id}/instances\022" +
+      "\352\001\n\016ListOperations\022I.yandex.cloud.comput" +
+      "e.v1.instancegroup.ListInstanceGroupOper" +
+      "ationsRequest\032J.yandex.cloud.compute.v1." +
+      "instancegroup.ListInstanceGroupOperation" +
+      "sResponse\"A\202\323\344\223\002;\0229/compute/v1/instanceG" +
+      "roups/{instance_group_id}/operations\022\344\001\n" +
+      "\016ListLogRecords\022I.yandex.cloud.compute.v" +
+      "1.instancegroup.ListInstanceGroupLogReco" +
+      "rdsRequest\032J.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ListInstanceGroupLogRecordsRe" +
+      "sponse\";\202\323\344\223\0025\0223/compute/v1/instanceGrou" +
+      "ps/{instance_group_id}:logsB\204\001\n)yandex.c" +
+      "loud.api.compute.v1.instancegroupZWgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/compute/v1/instancegroup;instancegro" +
+      "upb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

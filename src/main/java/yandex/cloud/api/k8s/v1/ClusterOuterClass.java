@@ -503,6 +503,31 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
 
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    boolean hasKmsProvider();
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider();
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -685,6 +710,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(networkPolicy_);
                 networkPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder subBuilder = null;
+              if (kmsProvider_ != null) {
+                subBuilder = kmsProvider_.toBuilder();
+              }
+              kmsProvider_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kmsProvider_);
+                kmsProvider_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1739,6 +1777,39 @@ public final class ClusterOuterClass {
       return getNetworkPolicy();
     }
 
+    public static final int KMS_PROVIDER_FIELD_NUMBER = 17;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_;
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    public boolean hasKmsProvider() {
+      return kmsProvider_ != null;
+    }
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
+      return kmsProvider_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+    }
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder() {
+      return getKmsProvider();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1803,6 +1874,9 @@ public final class ClusterOuterClass {
       }
       if (networkPolicy_ != null) {
         output.writeMessage(16, getNetworkPolicy());
+      }
+      if (kmsProvider_ != null) {
+        output.writeMessage(17, getKmsProvider());
       }
       unknownFields.writeTo(output);
     }
@@ -1875,6 +1949,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getNetworkPolicy());
       }
+      if (kmsProvider_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getKmsProvider());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1929,6 +2007,11 @@ public final class ClusterOuterClass {
       if (hasNetworkPolicy()) {
         result = result && getNetworkPolicy()
             .equals(other.getNetworkPolicy());
+      }
+      result = result && (hasKmsProvider() == other.hasKmsProvider());
+      if (hasKmsProvider()) {
+        result = result && getKmsProvider()
+            .equals(other.getKmsProvider());
       }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
@@ -1991,6 +2074,10 @@ public final class ClusterOuterClass {
       if (hasNetworkPolicy()) {
         hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
+      if (hasKmsProvider()) {
+        hash = (37 * hash) + KMS_PROVIDER_FIELD_NUMBER;
+        hash = (53 * hash) + getKmsProvider().hashCode();
       }
       switch (internetGatewayCase_) {
         case 12:
@@ -2204,6 +2291,12 @@ public final class ClusterOuterClass {
           networkPolicy_ = null;
           networkPolicyBuilder_ = null;
         }
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = null;
+        } else {
+          kmsProvider_ = null;
+          kmsProviderBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -2268,6 +2361,11 @@ public final class ClusterOuterClass {
           result.networkPolicy_ = networkPolicy_;
         } else {
           result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
+        if (kmsProviderBuilder_ == null) {
+          result.kmsProvider_ = kmsProvider_;
+        } else {
+          result.kmsProvider_ = kmsProviderBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
@@ -2369,6 +2467,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasNetworkPolicy()) {
           mergeNetworkPolicy(other.getNetworkPolicy());
+        }
+        if (other.hasKmsProvider()) {
+          mergeKmsProvider(other.getKmsProvider());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -4084,6 +4185,159 @@ public final class ClusterOuterClass {
           networkPolicy_ = null;
         }
         return networkPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder> kmsProviderBuilder_;
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public boolean hasKmsProvider() {
+        return kmsProviderBuilder_ != null || kmsProvider_ != null;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
+        if (kmsProviderBuilder_ == null) {
+          return kmsProvider_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+        } else {
+          return kmsProviderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public Builder setKmsProvider(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider value) {
+        if (kmsProviderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kmsProvider_ = value;
+          onChanged();
+        } else {
+          kmsProviderBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public Builder setKmsProvider(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder builderForValue) {
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = builderForValue.build();
+          onChanged();
+        } else {
+          kmsProviderBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public Builder mergeKmsProvider(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider value) {
+        if (kmsProviderBuilder_ == null) {
+          if (kmsProvider_ != null) {
+            kmsProvider_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.newBuilder(kmsProvider_).mergeFrom(value).buildPartial();
+          } else {
+            kmsProvider_ = value;
+          }
+          onChanged();
+        } else {
+          kmsProviderBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public Builder clearKmsProvider() {
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = null;
+          onChanged();
+        } else {
+          kmsProvider_ = null;
+          kmsProviderBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder getKmsProviderBuilder() {
+        
+        onChanged();
+        return getKmsProviderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder() {
+        if (kmsProviderBuilder_ != null) {
+          return kmsProviderBuilder_.getMessageOrBuilder();
+        } else {
+          return kmsProvider_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+        }
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder> 
+          getKmsProviderFieldBuilder() {
+        if (kmsProviderBuilder_ == null) {
+          kmsProviderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder>(
+                  getKmsProvider(),
+                  getParentForChildren(),
+                  isClean());
+          kmsProvider_ = null;
+        }
+        return kmsProviderBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11839,6 +12093,601 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface KMSProviderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.KMSProvider)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * KMS key ID for secrets encryption.
+     * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    java.lang.String getKeyId();
+    /**
+     * <pre>
+     * KMS key ID for secrets encryption.
+     * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.KMSProvider}
+   */
+  public  static final class KMSProvider extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.KMSProvider)
+      KMSProviderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KMSProvider.newBuilder() to construct.
+    private KMSProvider(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KMSProvider() {
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private KMSProvider(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              keyId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder.class);
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object keyId_;
+    /**
+     * <pre>
+     * KMS key ID for secrets encryption.
+     * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * KMS key ID for secrets encryption.
+     * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+     * </pre>
+     *
+     * <code>string key_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider) obj;
+
+      boolean result = true;
+      result = result && getKeyId()
+          .equals(other.getKeyId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.KMSProvider}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.KMSProvider)
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        keyId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider build() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider(this);
+        result.keyId_ = keyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance()) return this;
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <pre>
+       * KMS key ID for secrets encryption.
+       * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * KMS key ID for secrets encryption.
+       * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * KMS key ID for secrets encryption.
+       * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS key ID for secrets encryption.
+       * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder clearKeyId() {
+        
+        keyId_ = getDefaultInstance().getKeyId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS key ID for secrets encryption.
+       * To obtain a KMS key ID use a [yandex.cloud.kms.v1.SymmetricKeyService.List] request.
+       * </pre>
+       *
+       * <code>string key_id = 1;</code>
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        keyId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.KMSProvider)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.KMSProvider)
+    private static final yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KMSProvider>
+        PARSER = new com.google.protobuf.AbstractParser<KMSProvider>() {
+      @java.lang.Override
+      public KMSProvider parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new KMSProvider(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<KMSProvider> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KMSProvider> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_Cluster_descriptor;
   private static final 
@@ -11889,6 +12738,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11902,7 +12756,7 @@ public final class ClusterOuterClass {
       "dex.cloud.k8s.v1\032\037google/protobuf/timest" +
       "amp.proto\032%yandex/cloud/k8s/v1/maintenan" +
       "ce.proto\032!yandex/cloud/k8s/v1/version.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\223\007\n\007C" +
+      "oto\032\035yandex/cloud/validation.proto\"\313\007\n\007C" +
       "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
       "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
@@ -11919,46 +12773,48 @@ public final class ClusterOuterClass {
       "\001(\t\022<\n\017release_channel\030\017 \001(\0162#.yandex.cl" +
       "oud.k8s.v1.ReleaseChannel\022:\n\016network_pol" +
       "icy\030\020 \001(\0132\".yandex.cloud.k8s.v1.NetworkP" +
-      "olicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPEC" +
-      "IFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017" +
-      "\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED" +
-      "\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006Health" +
-      "\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\r\n" +
-      "\tUNHEALTHY\020\002B\022\n\020internet_gateway\"\223\003\n\006Mas" +
-      "ter\0228\n\014zonal_master\030\001 \001(\0132 .yandex.cloud" +
-      ".k8s.v1.ZonalMasterH\000\022>\n\017regional_master" +
-      "\030\007 \001(\0132#.yandex.cloud.k8s.v1.RegionalMas" +
-      "terH\000\022\017\n\007version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(" +
-      "\0132$.yandex.cloud.k8s.v1.MasterEndpoints\022" +
-      "4\n\013master_auth\030\004 \001(\0132\037.yandex.cloud.k8s." +
-      "v1.MasterAuth\0226\n\014version_info\030\005 \001(\0132 .ya" +
-      "ndex.cloud.k8s.v1.VersionInfo\022H\n\022mainten" +
-      "ance_policy\030\006 \001(\0132,.yandex.cloud.k8s.v1." +
-      "MasterMaintenancePolicyB\r\n\013master_type\"," +
-      "\n\nMasterAuth\022\036\n\026cluster_ca_certificate\030\001" +
-      " \001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023" +
-      "internal_v4_address\030\002 \001(\t\022\033\n\023external_v4" +
-      "_address\030\003 \001(\t\"]\n\016RegionalMaster\022\021\n\tregi" +
-      "on_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t" +
-      "\022\033\n\023external_v4_address\030\003 \001(\t\"M\n\017MasterE" +
-      "ndpoints\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034" +
-      "\n\024external_v4_endpoint\030\002 \001(\t\"\216\001\n\022IPAlloc" +
-      "ationPolicy\022\037\n\027cluster_ipv4_cidr_block\030\001" +
-      " \001(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001(\003B\024" +
-      "\372\3071\0200,24,25,26,27,28\022\037\n\027service_ipv4_cid" +
-      "r_block\030\002 \001(\t\"s\n\027MasterMaintenancePolicy" +
-      "\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenance_wi" +
-      "ndow\030\002 \001(\0132&.yandex.cloud.k8s.v1.Mainten" +
-      "anceWindow\"\200\001\n\rNetworkPolicy\022=\n\010provider" +
-      "\030\001 \001(\0162+.yandex.cloud.k8s.v1.NetworkPoli" +
-      "cy.Provider\"0\n\010Provider\022\030\n\024PROVIDER_UNSP" +
-      "ECIFIED\020\000\022\n\n\006CALICO\020\001*U\n\016ReleaseChannel\022" +
-      "\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005RAPI" +
-      "D\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yandex.c" +
-      "loud.api.k8s.v1Z;github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/k8s/v1;k8sb\006pr" +
-      "oto3"
+      "olicy\0226\n\014kms_provider\030\021 \001(\0132 .yandex.clo" +
+      "ud.k8s.v1.KMSProvider\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022" +
+      "\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020" +
+      "\001\022\013\n\007RUNNING\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPP" +
+      "ING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STAR" +
+      "TING\020\007\"<\n\006Health\022\026\n\022HEALTH_UNSPECIFIED\020\000" +
+      "\022\013\n\007HEALTHY\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet" +
+      "_gateway\"\223\003\n\006Master\0228\n\014zonal_master\030\001 \001(" +
+      "\0132 .yandex.cloud.k8s.v1.ZonalMasterH\000\022>\n" +
+      "\017regional_master\030\007 \001(\0132#.yandex.cloud.k8" +
+      "s.v1.RegionalMasterH\000\022\017\n\007version\030\002 \001(\t\0227" +
+      "\n\tendpoints\030\003 \001(\0132$.yandex.cloud.k8s.v1." +
+      "MasterEndpoints\0224\n\013master_auth\030\004 \001(\0132\037.y" +
+      "andex.cloud.k8s.v1.MasterAuth\0226\n\014version" +
+      "_info\030\005 \001(\0132 .yandex.cloud.k8s.v1.Versio" +
+      "nInfo\022H\n\022maintenance_policy\030\006 \001(\0132,.yand" +
+      "ex.cloud.k8s.v1.MasterMaintenancePolicyB" +
+      "\r\n\013master_type\",\n\nMasterAuth\022\036\n\026cluster_" +
+      "ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022\017\n\007z" +
+      "one_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(" +
+      "\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Region" +
+      "alMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023internal_" +
+      "v4_address\030\002 \001(\t\022\033\n\023external_v4_address\030" +
+      "\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024internal_v4_" +
+      "endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoint\030\002" +
+      " \001(\t\"\216\001\n\022IPAllocationPolicy\022\037\n\027cluster_i" +
+      "pv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cidr_m" +
+      "ask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027" +
+      "service_ipv4_cidr_block\030\002 \001(\t\"s\n\027MasterM" +
+      "aintenancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B" +
+      "\n\022maintenance_window\030\002 \001(\0132&.yandex.clou" +
+      "d.k8s.v1.MaintenanceWindow\"\200\001\n\rNetworkPo" +
+      "licy\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8" +
+      "s.v1.NetworkPolicy.Provider\"0\n\010Provider\022" +
+      "\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n" +
+      "\013KMSProvider\022\016\n\006key_id\030\001 \001(\t*U\n\016ReleaseC" +
+      "hannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022" +
+      "\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027y" +
+      "andex.cloud.api.k8s.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/k8s/v1;" +
+      "k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11981,7 +12837,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "InternetGateway", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -12036,6 +12892,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor,
         new java.lang.String[] { "Provider", });
+    internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor,
+        new java.lang.String[] { "KeyId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

@@ -10927,6 +10927,31 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.NetworkPolicyOrBuilder getNetworkPolicyOrBuilder();
 
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    boolean hasKmsProvider();
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider();
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.CreateClusterRequest.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -11071,6 +11096,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(networkPolicy_);
                 networkPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder subBuilder = null;
+              if (kmsProvider_ != null) {
+                subBuilder = kmsProvider_.toBuilder();
+              }
+              kmsProvider_ = input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kmsProvider_);
+                kmsProvider_ = subBuilder.buildPartial();
               }
 
               break;
@@ -11671,6 +11709,39 @@ public final class ClusterServiceOuterClass {
       return getNetworkPolicy();
     }
 
+    public static final int KMS_PROVIDER_FIELD_NUMBER = 13;
+    private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_;
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    public boolean hasKmsProvider() {
+      return kmsProvider_ != null;
+    }
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
+      return kmsProvider_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+    }
+    /**
+     * <pre>
+     * KMS provider configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder() {
+      return getKmsProvider();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11723,6 +11794,9 @@ public final class ClusterServiceOuterClass {
       }
       if (networkPolicy_ != null) {
         output.writeMessage(12, getNetworkPolicy());
+      }
+      if (kmsProvider_ != null) {
+        output.writeMessage(13, getKmsProvider());
       }
       unknownFields.writeTo(output);
     }
@@ -11780,6 +11854,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getNetworkPolicy());
       }
+      if (kmsProvider_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getKmsProvider());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11825,6 +11903,11 @@ public final class ClusterServiceOuterClass {
       if (hasNetworkPolicy()) {
         result = result && getNetworkPolicy()
             .equals(other.getNetworkPolicy());
+      }
+      result = result && (hasKmsProvider() == other.hasKmsProvider());
+      if (hasKmsProvider()) {
+        result = result && getKmsProvider()
+            .equals(other.getKmsProvider());
       }
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
@@ -11877,6 +11960,10 @@ public final class ClusterServiceOuterClass {
       if (hasNetworkPolicy()) {
         hash = (37 * hash) + NETWORK_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkPolicy().hashCode();
+      }
+      if (hasKmsProvider()) {
+        hash = (37 * hash) + KMS_PROVIDER_FIELD_NUMBER;
+        hash = (53 * hash) + getKmsProvider().hashCode();
       }
       switch (internetGatewayCase_) {
         case 8:
@@ -12074,6 +12161,12 @@ public final class ClusterServiceOuterClass {
           networkPolicy_ = null;
           networkPolicyBuilder_ = null;
         }
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = null;
+        } else {
+          kmsProvider_ = null;
+          kmsProviderBuilder_ = null;
+        }
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -12130,6 +12223,11 @@ public final class ClusterServiceOuterClass {
           result.networkPolicy_ = networkPolicy_;
         } else {
           result.networkPolicy_ = networkPolicyBuilder_.build();
+        }
+        if (kmsProviderBuilder_ == null) {
+          result.kmsProvider_ = kmsProvider_;
+        } else {
+          result.kmsProvider_ = kmsProviderBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
@@ -12218,6 +12316,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasNetworkPolicy()) {
           mergeNetworkPolicy(other.getNetworkPolicy());
+        }
+        if (other.hasKmsProvider()) {
+          mergeKmsProvider(other.getKmsProvider());
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -13566,6 +13667,159 @@ public final class ClusterServiceOuterClass {
           networkPolicy_ = null;
         }
         return networkPolicyBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider kmsProvider_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder> kmsProviderBuilder_;
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public boolean hasKmsProvider() {
+        return kmsProviderBuilder_ != null || kmsProvider_ != null;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider getKmsProvider() {
+        if (kmsProviderBuilder_ == null) {
+          return kmsProvider_ == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+        } else {
+          return kmsProviderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public Builder setKmsProvider(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider value) {
+        if (kmsProviderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kmsProvider_ = value;
+          onChanged();
+        } else {
+          kmsProviderBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public Builder setKmsProvider(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder builderForValue) {
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = builderForValue.build();
+          onChanged();
+        } else {
+          kmsProviderBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public Builder mergeKmsProvider(yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider value) {
+        if (kmsProviderBuilder_ == null) {
+          if (kmsProvider_ != null) {
+            kmsProvider_ =
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.newBuilder(kmsProvider_).mergeFrom(value).buildPartial();
+          } else {
+            kmsProvider_ = value;
+          }
+          onChanged();
+        } else {
+          kmsProviderBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public Builder clearKmsProvider() {
+        if (kmsProviderBuilder_ == null) {
+          kmsProvider_ = null;
+          onChanged();
+        } else {
+          kmsProvider_ = null;
+          kmsProviderBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder getKmsProviderBuilder() {
+        
+        onChanged();
+        return getKmsProviderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder() {
+        if (kmsProviderBuilder_ != null) {
+          return kmsProviderBuilder_.getMessageOrBuilder();
+        } else {
+          return kmsProvider_ == null ?
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.getDefaultInstance() : kmsProvider_;
+        }
+      }
+      /**
+       * <pre>
+       * KMS provider configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.KMSProvider kms_provider = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder> 
+          getKmsProviderFieldBuilder() {
+        if (kmsProviderBuilder_ == null) {
+          kmsProviderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProvider.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder>(
+                  getKmsProvider(),
+                  getParentForChildren(),
+                  isClean());
+          kmsProvider_ = null;
+        }
+        return kmsProviderBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27045,7 +27299,7 @@ public final class ClusterServiceOuterClass {
       "rsionSpec\022H\n\022maintenance_policy\030\002 \001(\0132,." +
       "yandex.cloud.k8s.v1.MasterMaintenancePol" +
       "icy\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"\314\005\n\024CreateClusterRequest\022\027\n\tfol" +
+      "id\030\001 \001(\t\"\204\006\n\024CreateClusterRequest\022\027\n\tfol" +
       "der_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|[" +
       "a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descripti" +
       "on\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325.y" +
@@ -27061,93 +27315,94 @@ public final class ClusterServiceOuterClass {
       "unt_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 " +
       "\001(\0162#.yandex.cloud.k8s.v1.ReleaseChannel" +
       "\022:\n\016network_policy\030\014 \001(\0132\".yandex.cloud." +
-      "k8s.v1.NetworkPolicy\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_" +
-      "gateway\"+\n\025CreateClusterMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"/\n\031AutoUpgradeMasterMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClusterOpe" +
-      "rationsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\"o\n\035ListClusterOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\222\001\n\034ListClusterNodeGroupsRequest\022\030\n\n" +
-      "cluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035List" +
-      "ClusterNodeGroupsResponse\0223\n\013node_groups" +
-      "\030\001 \003(\0132\036.yandex.cloud.k8s.v1.NodeGroup\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"q\n\027ListClusterNo" +
-      "desRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClusterNodesRe" +
-      "sponse\022(\n\005nodes\030\001 \003(\0132\031.yandex.cloud.k8s" +
-      ".v1.Node\022\027\n\017next_page_token\030\002 \001(\t\"\210\002\n\nMa" +
-      "sterSpec\022A\n\021zonal_master_spec\030\001 \001(\0132$.ya" +
-      "ndex.cloud.k8s.v1.ZonalMasterSpecH\000\022G\n\024r" +
-      "egional_master_spec\030\002 \001(\0132\'.yandex.cloud" +
-      ".k8s.v1.RegionalMasterSpecH\000\022\017\n\007version\030" +
-      "\003 \001(\t\022H\n\022maintenance_policy\030\004 \001(\0132,.yand" +
-      "ex.cloud.k8s.v1.MasterMaintenancePolicyB" +
-      "\023\n\013master_type\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec" +
-      "\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_a" +
-      "ddress_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1." +
-      "InternalAddressSpec\022J\n\030external_v4_addre" +
-      "ss_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.Exte" +
-      "rnalAddressSpec\"\261\001\n\022RegionalMasterSpec\022\027" +
-      "\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003" +
-      "(\0132#.yandex.cloud.k8s.v1.MasterLocation\022" +
-      "J\n\030external_v4_address_spec\030\003 \001(\0132(.yand" +
-      "ex.cloud.k8s.v1.ExternalAddressSpec\"(\n\023I" +
-      "nternalAddressSpec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n" +
-      "\023ExternalAddressSpec\"s\n\016MasterLocation\022\025" +
-      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_add" +
-      "ress_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.In" +
-      "ternalAddressSpec2\313\014\n\016ClusterService\022\201\001\n" +
-      "\003Get\022&.yandex.cloud.k8s.v1.GetClusterReq" +
-      "uest\032\034.yandex.cloud.k8s.v1.Cluster\"4\202\323\344\223" +
-      "\002.\022,/managed-kubernetes/v1/clusters/{clu" +
-      "ster_id}\022\204\001\n\004List\022(.yandex.cloud.k8s.v1." +
-      "ListClustersRequest\032).yandex.cloud.k8s.v" +
-      "1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/managed" +
-      "-kubernetes/v1/clusters\022\246\001\n\006Create\022).yan" +
-      "dex.cloud.k8s.v1.CreateClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"N\202\323\344\223\002$" +
-      "\"\037/managed-kubernetes/v1/clusters:\001*\262\322* " +
-      "\n\025CreateClusterMetadata\022\007Cluster\022\263\001\n\006Upd" +
-      "ate\022).yandex.cloud.k8s.v1.UpdateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"[\202\323\344\223\00212,/managed-kubernetes/v1/cluste" +
-      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
-      "adata\022\007Cluster\022\276\001\n\006Delete\022).yandex.cloud" +
-      ".k8s.v1.DeleteClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"f\202\323\344\223\002.*,/manage" +
-      "d-kubernetes/v1/clusters/{cluster_id}\262\322*" +
-      ".\n\025DeleteClusterMetadata\022\025google.protobu" +
-      "f.Empty\022v\n\004Stop\022\'.yandex.cloud.k8s.v1.St" +
-      "opClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\"\262\322*\036\n\023StopClusterMetadata\022\007" +
-      "Cluster\022y\n\005Start\022(.yandex.cloud.k8s.v1.S" +
-      "tartClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"#\262\322*\037\n\024StartClusterMetadat" +
-      "a\022\007Cluster\022\270\001\n\016ListNodeGroups\0221.yandex.c" +
-      "loud.k8s.v1.ListClusterNodeGroupsRequest" +
-      "\0322.yandex.cloud.k8s.v1.ListClusterNodeGr" +
-      "oupsResponse\"?\202\323\344\223\0029\0227/managed-kubernete" +
-      "s/v1/clusters/{cluster_id}/nodeGroups\022\270\001" +
-      "\n\016ListOperations\0221.yandex.cloud.k8s.v1.L" +
-      "istClusterOperationsRequest\0322.yandex.clo" +
-      "ud.k8s.v1.ListClusterOperationsResponse\"" +
-      "?\202\323\344\223\0029\0227/managed-kubernetes/v1/clusters" +
-      "/{cluster_id}/operations\022\244\001\n\tListNodes\022," +
-      ".yandex.cloud.k8s.v1.ListClusterNodesReq" +
-      "uest\032-.yandex.cloud.k8s.v1.ListClusterNo" +
-      "desResponse\":\202\323\344\223\0024\0222/managed-kubernetes" +
-      "/v1/clusters/{cluster_id}/nodesBV\n\027yande" +
-      "x.cloud.api.k8s.v1Z;github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/k8s/v1;k8sb" +
-      "\006proto3"
+      "k8s.v1.NetworkPolicy\0226\n\014kms_provider\030\r \001" +
+      "(\0132 .yandex.cloud.k8s.v1.KMSProvider\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001B\022\n\020internet_gateway\"+\n\025CreateCluster" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgr" +
+      "adeMasterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001" +
+      "\n\034ListClusterOperationsRequest\022\030\n\ncluste" +
+      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
+      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListCluste" +
+      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeG" +
+      "roupsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\"m\n\035ListClusterNodeGroupsRespons" +
+      "e\0223\n\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8" +
+      "s.v1.NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "q\n\027ListClusterNodesRequest\022\030\n\ncluster_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030Li" +
+      "stClusterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031." +
+      "yandex.cloud.k8s.v1.Node\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\210\002\n\nMasterSpec\022A\n\021zonal_master" +
+      "_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalM" +
+      "asterSpecH\000\022G\n\024regional_master_spec\030\002 \001(" +
+      "\0132\'.yandex.cloud.k8s.v1.RegionalMasterSp" +
+      "ecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022maintenance_pol" +
+      "icy\030\004 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
+      "intenancePolicyB\023\n\013master_type\022\004\300\3011\001\"\300\001\n" +
+      "\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "J\n\030internal_v4_address_spec\030\002 \001(\0132(.yand" +
+      "ex.cloud.k8s.v1.InternalAddressSpec\022J\n\030e" +
+      "xternal_v4_address_spec\030\003 \001(\0132(.yandex.c" +
+      "loud.k8s.v1.ExternalAddressSpec\"\261\001\n\022Regi" +
+      "onalMasterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "6\n\tlocations\030\002 \003(\0132#.yandex.cloud.k8s.v1" +
+      ".MasterLocation\022J\n\030external_v4_address_s" +
+      "pec\030\003 \001(\0132(.yandex.cloud.k8s.v1.External" +
+      "AddressSpec\"(\n\023InternalAddressSpec\022\021\n\tsu" +
+      "bnet_id\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"s\n\016" +
+      "MasterLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n" +
+      "\030internal_v4_address_spec\030\002 \001(\0132(.yandex" +
+      ".cloud.k8s.v1.InternalAddressSpec2\313\014\n\016Cl" +
+      "usterService\022\201\001\n\003Get\022&.yandex.cloud.k8s." +
+      "v1.GetClusterRequest\032\034.yandex.cloud.k8s." +
+      "v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/" +
+      "v1/clusters/{cluster_id}\022\204\001\n\004List\022(.yand" +
+      "ex.cloud.k8s.v1.ListClustersRequest\032).ya" +
+      "ndex.cloud.k8s.v1.ListClustersResponse\"\'" +
+      "\202\323\344\223\002!\022\037/managed-kubernetes/v1/clusters\022" +
+      "\246\001\n\006Create\022).yandex.cloud.k8s.v1.CreateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8s.v" +
+      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"[\202\323\344\223\00212,/managed-kube" +
+      "rnetes/v1/clusters/{cluster_id}:\001*\262\322* \n\025" +
+      "UpdateClusterMetadata\022\007Cluster\022\276\001\n\006Delet" +
+      "e\022).yandex.cloud.k8s.v1.DeleteClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "f\202\323\344\223\002.*,/managed-kubernetes/v1/clusters" +
+      "/{cluster_id}\262\322*.\n\025DeleteClusterMetadata" +
+      "\022\025google.protobuf.Empty\022v\n\004Stop\022\'.yandex" +
+      ".cloud.k8s.v1.StopClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\"\262\322*\036\n\023StopC" +
+      "lusterMetadata\022\007Cluster\022y\n\005Start\022(.yande" +
+      "x.cloud.k8s.v1.StartClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"#\262\322*\037\n\024Sta" +
+      "rtClusterMetadata\022\007Cluster\022\270\001\n\016ListNodeG" +
+      "roups\0221.yandex.cloud.k8s.v1.ListClusterN" +
+      "odeGroupsRequest\0322.yandex.cloud.k8s.v1.L" +
+      "istClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/m" +
+      "anaged-kubernetes/v1/clusters/{cluster_i" +
+      "d}/nodeGroups\022\270\001\n\016ListOperations\0221.yande" +
+      "x.cloud.k8s.v1.ListClusterOperationsRequ" +
+      "est\0322.yandex.cloud.k8s.v1.ListClusterOpe" +
+      "rationsResponse\"?\202\323\344\223\0029\0227/managed-kubern" +
+      "etes/v1/clusters/{cluster_id}/operations" +
+      "\022\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.Lis" +
+      "tClusterNodesRequest\032-.yandex.cloud.k8s." +
+      "v1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/ma" +
+      "naged-kubernetes/v1/clusters/{cluster_id" +
+      "}/nodesBV\n\027yandex.cloud.api.k8s.v1Z;gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27253,7 +27508,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "InternetGateway", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "MasterSpec", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new

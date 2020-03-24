@@ -14,6 +14,271 @@ public final class UserOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.GlobalPermission}
+   */
+  public enum GlobalPermission
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>GLOBAL_PERMISSION_UNSPECIFIED = 0;</code>
+     */
+    GLOBAL_PERMISSION_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Enables use of the SHOW MASTER STATUS, SHOW SLAVE STATUS, and SHOW BINARY LOGS statements.
+     * </pre>
+     *
+     * <code>REPLICATION_CLIENT = 1;</code>
+     */
+    REPLICATION_CLIENT(1),
+    /**
+     * <pre>
+     * Enables the account to request updates that have been made to databases on the master server,
+     * using the SHOW SLAVE HOSTS, SHOW RELAYLOG EVENTS, and SHOW BINLOG EVENTS statements.
+     * </pre>
+     *
+     * <code>REPLICATION_SLAVE = 2;</code>
+     */
+    REPLICATION_SLAVE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>GLOBAL_PERMISSION_UNSPECIFIED = 0;</code>
+     */
+    public static final int GLOBAL_PERMISSION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Enables use of the SHOW MASTER STATUS, SHOW SLAVE STATUS, and SHOW BINARY LOGS statements.
+     * </pre>
+     *
+     * <code>REPLICATION_CLIENT = 1;</code>
+     */
+    public static final int REPLICATION_CLIENT_VALUE = 1;
+    /**
+     * <pre>
+     * Enables the account to request updates that have been made to databases on the master server,
+     * using the SHOW SLAVE HOSTS, SHOW RELAYLOG EVENTS, and SHOW BINLOG EVENTS statements.
+     * </pre>
+     *
+     * <code>REPLICATION_SLAVE = 2;</code>
+     */
+    public static final int REPLICATION_SLAVE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GlobalPermission valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static GlobalPermission forNumber(int value) {
+      switch (value) {
+        case 0: return GLOBAL_PERMISSION_UNSPECIFIED;
+        case 1: return REPLICATION_CLIENT;
+        case 2: return REPLICATION_SLAVE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GlobalPermission>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GlobalPermission> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GlobalPermission>() {
+            public GlobalPermission findValueByNumber(int number) {
+              return GlobalPermission.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final GlobalPermission[] VALUES = values();
+
+    public static GlobalPermission valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GlobalPermission(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.GlobalPermission)
+  }
+
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.AuthPlugin}
+   */
+  public enum AuthPlugin
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>AUTH_PLUGIN_UNSPECIFIED = 0;</code>
+     */
+    AUTH_PLUGIN_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Use [Native Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>MYSQL_NATIVE_PASSWORD = 1;</code>
+     */
+    MYSQL_NATIVE_PASSWORD(1),
+    /**
+     * <pre>
+     * Use [Caching SHA-2 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>CACHING_SHA2_PASSWORD = 2;</code>
+     */
+    CACHING_SHA2_PASSWORD(2),
+    /**
+     * <pre>
+     * Use [SHA-256 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/sha256-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>SHA256_PASSWORD = 3;</code>
+     */
+    SHA256_PASSWORD(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>AUTH_PLUGIN_UNSPECIFIED = 0;</code>
+     */
+    public static final int AUTH_PLUGIN_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Use [Native Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/native-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>MYSQL_NATIVE_PASSWORD = 1;</code>
+     */
+    public static final int MYSQL_NATIVE_PASSWORD_VALUE = 1;
+    /**
+     * <pre>
+     * Use [Caching SHA-2 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>CACHING_SHA2_PASSWORD = 2;</code>
+     */
+    public static final int CACHING_SHA2_PASSWORD_VALUE = 2;
+    /**
+     * <pre>
+     * Use [SHA-256 Pluggable Authentication](https://dev.mysql.com/doc/refman/8.0/en/sha256-pluggable-authentication.html).
+     * </pre>
+     *
+     * <code>SHA256_PASSWORD = 3;</code>
+     */
+    public static final int SHA256_PASSWORD_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AuthPlugin valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static AuthPlugin forNumber(int value) {
+      switch (value) {
+        case 0: return AUTH_PLUGIN_UNSPECIFIED;
+        case 1: return MYSQL_NATIVE_PASSWORD;
+        case 2: return CACHING_SHA2_PASSWORD;
+        case 3: return SHA256_PASSWORD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AuthPlugin>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AuthPlugin> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AuthPlugin>() {
+            public AuthPlugin findValueByNumber(int number) {
+              return AuthPlugin.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final AuthPlugin[] VALUES = values();
+
+    public static AuthPlugin valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AuthPlugin(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.AuthPlugin)
+  }
+
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.User)
       com.google.protobuf.MessageOrBuilder {
@@ -2602,6 +2867,1435 @@ public final class UserOuterClass {
 
   }
 
+  public interface ConnectionLimitsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.ConnectionLimits)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxQuestions();
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxQuestions();
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxUpdates();
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxUpdates();
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxConnections();
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxConnections();
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxUserConnections();
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxUserConnections();
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxUserConnectionsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ConnectionLimits}
+   */
+  public  static final class ConnectionLimits extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.ConnectionLimits)
+      ConnectionLimitsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConnectionLimits.newBuilder() to construct.
+    private ConnectionLimits(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConnectionLimits() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectionLimits(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxQuestions_ != null) {
+                subBuilder = maxQuestions_.toBuilder();
+              }
+              maxQuestions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxQuestions_);
+                maxQuestions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxUpdates_ != null) {
+                subBuilder = maxUpdates_.toBuilder();
+              }
+              maxUpdates_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxUpdates_);
+                maxUpdates_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxConnections_ != null) {
+                subBuilder = maxConnections_.toBuilder();
+              }
+              maxConnections_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxConnections_);
+                maxConnections_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxUserConnections_ != null) {
+                subBuilder = maxUserConnections_.toBuilder();
+              }
+              maxUserConnections_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxUserConnections_);
+                maxUserConnections_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.class, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder.class);
+    }
+
+    public static final int MAX_QUESTIONS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value maxQuestions_;
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxQuestions() {
+      return maxQuestions_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxQuestions() {
+      return maxQuestions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of user questions per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder() {
+      return getMaxQuestions();
+    }
+
+    public static final int MAX_UPDATES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value maxUpdates_;
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxUpdates() {
+      return maxUpdates_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxUpdates() {
+      return maxUpdates_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of user updates per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder() {
+      return getMaxUpdates();
+    }
+
+    public static final int MAX_CONNECTIONS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value maxConnections_;
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxConnections() {
+      return maxConnections_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxConnections() {
+      return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+    }
+    /**
+     * <pre>
+     * The maximum permitted number of simultaneous client connections per hour.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
+      return getMaxConnections();
+    }
+
+    public static final int MAX_USER_CONNECTIONS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value maxUserConnections_;
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxUserConnections() {
+      return maxUserConnections_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxUserConnections() {
+      return maxUserConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUserConnections_;
+    }
+    /**
+     * <pre>
+     * The maximum number of simultaneous connections permitted to any given MySQL user account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxUserConnectionsOrBuilder() {
+      return getMaxUserConnections();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (maxQuestions_ != null) {
+        output.writeMessage(1, getMaxQuestions());
+      }
+      if (maxUpdates_ != null) {
+        output.writeMessage(2, getMaxUpdates());
+      }
+      if (maxConnections_ != null) {
+        output.writeMessage(3, getMaxConnections());
+      }
+      if (maxUserConnections_ != null) {
+        output.writeMessage(4, getMaxUserConnections());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (maxQuestions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMaxQuestions());
+      }
+      if (maxUpdates_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxUpdates());
+      }
+      if (maxConnections_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMaxConnections());
+      }
+      if (maxUserConnections_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMaxUserConnections());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits other = (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits) obj;
+
+      boolean result = true;
+      result = result && (hasMaxQuestions() == other.hasMaxQuestions());
+      if (hasMaxQuestions()) {
+        result = result && getMaxQuestions()
+            .equals(other.getMaxQuestions());
+      }
+      result = result && (hasMaxUpdates() == other.hasMaxUpdates());
+      if (hasMaxUpdates()) {
+        result = result && getMaxUpdates()
+            .equals(other.getMaxUpdates());
+      }
+      result = result && (hasMaxConnections() == other.hasMaxConnections());
+      if (hasMaxConnections()) {
+        result = result && getMaxConnections()
+            .equals(other.getMaxConnections());
+      }
+      result = result && (hasMaxUserConnections() == other.hasMaxUserConnections());
+      if (hasMaxUserConnections()) {
+        result = result && getMaxUserConnections()
+            .equals(other.getMaxUserConnections());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMaxQuestions()) {
+        hash = (37 * hash) + MAX_QUESTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxQuestions().hashCode();
+      }
+      if (hasMaxUpdates()) {
+        hash = (37 * hash) + MAX_UPDATES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxUpdates().hashCode();
+      }
+      if (hasMaxConnections()) {
+        hash = (37 * hash) + MAX_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxConnections().hashCode();
+      }
+      if (hasMaxUserConnections()) {
+        hash = (37 * hash) + MAX_USER_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxUserConnections().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.ConnectionLimits}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.ConnectionLimits)
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.class, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (maxQuestionsBuilder_ == null) {
+          maxQuestions_ = null;
+        } else {
+          maxQuestions_ = null;
+          maxQuestionsBuilder_ = null;
+        }
+        if (maxUpdatesBuilder_ == null) {
+          maxUpdates_ = null;
+        } else {
+          maxUpdates_ = null;
+          maxUpdatesBuilder_ = null;
+        }
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = null;
+        } else {
+          maxConnections_ = null;
+          maxConnectionsBuilder_ = null;
+        }
+        if (maxUserConnectionsBuilder_ == null) {
+          maxUserConnections_ = null;
+        } else {
+          maxUserConnections_ = null;
+          maxUserConnectionsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits build() {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits result = new yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits(this);
+        if (maxQuestionsBuilder_ == null) {
+          result.maxQuestions_ = maxQuestions_;
+        } else {
+          result.maxQuestions_ = maxQuestionsBuilder_.build();
+        }
+        if (maxUpdatesBuilder_ == null) {
+          result.maxUpdates_ = maxUpdates_;
+        } else {
+          result.maxUpdates_ = maxUpdatesBuilder_.build();
+        }
+        if (maxConnectionsBuilder_ == null) {
+          result.maxConnections_ = maxConnections_;
+        } else {
+          result.maxConnections_ = maxConnectionsBuilder_.build();
+        }
+        if (maxUserConnectionsBuilder_ == null) {
+          result.maxUserConnections_ = maxUserConnections_;
+        } else {
+          result.maxUserConnections_ = maxUserConnectionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance()) return this;
+        if (other.hasMaxQuestions()) {
+          mergeMaxQuestions(other.getMaxQuestions());
+        }
+        if (other.hasMaxUpdates()) {
+          mergeMaxUpdates(other.getMaxUpdates());
+        }
+        if (other.hasMaxConnections()) {
+          mergeMaxConnections(other.getMaxConnections());
+        }
+        if (other.hasMaxUserConnections()) {
+          mergeMaxUserConnections(other.getMaxUserConnections());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value maxQuestions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxQuestionsBuilder_;
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxQuestions() {
+        return maxQuestionsBuilder_ != null || maxQuestions_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxQuestions() {
+        if (maxQuestionsBuilder_ == null) {
+          return maxQuestions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+        } else {
+          return maxQuestionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxQuestions(com.google.protobuf.Int64Value value) {
+        if (maxQuestionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxQuestions_ = value;
+          onChanged();
+        } else {
+          maxQuestionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxQuestions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxQuestionsBuilder_ == null) {
+          maxQuestions_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxQuestionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxQuestions(com.google.protobuf.Int64Value value) {
+        if (maxQuestionsBuilder_ == null) {
+          if (maxQuestions_ != null) {
+            maxQuestions_ =
+              com.google.protobuf.Int64Value.newBuilder(maxQuestions_).mergeFrom(value).buildPartial();
+          } else {
+            maxQuestions_ = value;
+          }
+          onChanged();
+        } else {
+          maxQuestionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxQuestions() {
+        if (maxQuestionsBuilder_ == null) {
+          maxQuestions_ = null;
+          onChanged();
+        } else {
+          maxQuestions_ = null;
+          maxQuestionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxQuestionsBuilder() {
+        
+        onChanged();
+        return getMaxQuestionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder() {
+        if (maxQuestionsBuilder_ != null) {
+          return maxQuestionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxQuestions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user questions per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxQuestionsFieldBuilder() {
+        if (maxQuestionsBuilder_ == null) {
+          maxQuestionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxQuestions(),
+                  getParentForChildren(),
+                  isClean());
+          maxQuestions_ = null;
+        }
+        return maxQuestionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxUpdates_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUpdatesBuilder_;
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxUpdates() {
+        return maxUpdatesBuilder_ != null || maxUpdates_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxUpdates() {
+        if (maxUpdatesBuilder_ == null) {
+          return maxUpdates_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+        } else {
+          return maxUpdatesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxUpdates(com.google.protobuf.Int64Value value) {
+        if (maxUpdatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxUpdates_ = value;
+          onChanged();
+        } else {
+          maxUpdatesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxUpdates(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxUpdatesBuilder_ == null) {
+          maxUpdates_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxUpdatesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxUpdates(com.google.protobuf.Int64Value value) {
+        if (maxUpdatesBuilder_ == null) {
+          if (maxUpdates_ != null) {
+            maxUpdates_ =
+              com.google.protobuf.Int64Value.newBuilder(maxUpdates_).mergeFrom(value).buildPartial();
+          } else {
+            maxUpdates_ = value;
+          }
+          onChanged();
+        } else {
+          maxUpdatesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxUpdates() {
+        if (maxUpdatesBuilder_ == null) {
+          maxUpdates_ = null;
+          onChanged();
+        } else {
+          maxUpdates_ = null;
+          maxUpdatesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxUpdatesBuilder() {
+        
+        onChanged();
+        return getMaxUpdatesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder() {
+        if (maxUpdatesBuilder_ != null) {
+          return maxUpdatesBuilder_.getMessageOrBuilder();
+        } else {
+          return maxUpdates_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of user updates per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxUpdatesFieldBuilder() {
+        if (maxUpdatesBuilder_ == null) {
+          maxUpdatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxUpdates(),
+                  getParentForChildren(),
+                  isClean());
+          maxUpdates_ = null;
+        }
+        return maxUpdatesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxConnections() {
+        return maxConnectionsBuilder_ != null || maxConnections_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxConnections() {
+        if (maxConnectionsBuilder_ == null) {
+          return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+        } else {
+          return maxConnectionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxConnections_ = value;
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxConnections(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsBuilder_ == null) {
+          if (maxConnections_ != null) {
+            maxConnections_ =
+              com.google.protobuf.Int64Value.newBuilder(maxConnections_).mergeFrom(value).buildPartial();
+          } else {
+            maxConnections_ = value;
+          }
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxConnections() {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = null;
+          onChanged();
+        } else {
+          maxConnections_ = null;
+          maxConnectionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
+        
+        onChanged();
+        return getMaxConnectionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
+        if (maxConnectionsBuilder_ != null) {
+          return maxConnectionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxConnections_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum permitted number of simultaneous client connections per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxConnectionsFieldBuilder() {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnectionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxConnections(),
+                  getParentForChildren(),
+                  isClean());
+          maxConnections_ = null;
+        }
+        return maxConnectionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxUserConnections_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUserConnectionsBuilder_;
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxUserConnections() {
+        return maxUserConnectionsBuilder_ != null || maxUserConnections_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxUserConnections() {
+        if (maxUserConnectionsBuilder_ == null) {
+          return maxUserConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUserConnections_;
+        } else {
+          return maxUserConnectionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxUserConnections(com.google.protobuf.Int64Value value) {
+        if (maxUserConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxUserConnections_ = value;
+          onChanged();
+        } else {
+          maxUserConnectionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxUserConnections(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxUserConnectionsBuilder_ == null) {
+          maxUserConnections_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxUserConnectionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxUserConnections(com.google.protobuf.Int64Value value) {
+        if (maxUserConnectionsBuilder_ == null) {
+          if (maxUserConnections_ != null) {
+            maxUserConnections_ =
+              com.google.protobuf.Int64Value.newBuilder(maxUserConnections_).mergeFrom(value).buildPartial();
+          } else {
+            maxUserConnections_ = value;
+          }
+          onChanged();
+        } else {
+          maxUserConnectionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxUserConnections() {
+        if (maxUserConnectionsBuilder_ == null) {
+          maxUserConnections_ = null;
+          onChanged();
+        } else {
+          maxUserConnections_ = null;
+          maxUserConnectionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxUserConnectionsBuilder() {
+        
+        onChanged();
+        return getMaxUserConnectionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxUserConnectionsOrBuilder() {
+        if (maxUserConnectionsBuilder_ != null) {
+          return maxUserConnectionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxUserConnections_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxUserConnections_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of simultaneous connections permitted to any given MySQL user account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_user_connections = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxUserConnectionsFieldBuilder() {
+        if (maxUserConnectionsBuilder_ == null) {
+          maxUserConnectionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxUserConnections(),
+                  getParentForChildren(),
+                  isClean());
+          maxUserConnections_ = null;
+        }
+        return maxUserConnectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.ConnectionLimits)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.ConnectionLimits)
+    private static final yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConnectionLimits>
+        PARSER = new com.google.protobuf.AbstractParser<ConnectionLimits>() {
+      @java.lang.Override
+      public ConnectionLimits parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConnectionLimits(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConnectionLimits> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConnectionLimits> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UserSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.UserSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -2685,6 +4379,65 @@ public final class UserOuterClass {
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder getPermissionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    int getGlobalPermissionsValue();
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions();
+
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    boolean hasConnectionLimits();
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits();
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder();
+
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    int getAuthenticationPluginValue();
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UserSpec}
@@ -2702,6 +4455,8 @@ public final class UserOuterClass {
       name_ = "";
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
+      globalPermissions_ = 0;
+      authenticationPlugin_ = 0;
     }
 
     @java.lang.Override
@@ -2747,6 +4502,31 @@ public final class UserOuterClass {
               }
               permissions_.add(
                   input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.parser(), extensionRegistry));
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              globalPermissions_ = rawValue;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder subBuilder = null;
+              if (connectionLimits_ != null) {
+                subBuilder = connectionLimits_.toBuilder();
+              }
+              connectionLimits_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectionLimits_);
+                connectionLimits_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              authenticationPlugin_ = rawValue;
               break;
             }
             default: {
@@ -2924,6 +4704,89 @@ public final class UserOuterClass {
       return permissions_.get(index);
     }
 
+    public static final int GLOBAL_PERMISSIONS_FIELD_NUMBER = 4;
+    private int globalPermissions_;
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public int getGlobalPermissionsValue() {
+      return globalPermissions_;
+    }
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.valueOf(globalPermissions_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.UNRECOGNIZED : result;
+    }
+
+    public static final int CONNECTION_LIMITS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_;
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public boolean hasConnectionLimits() {
+      return connectionLimits_ != null;
+    }
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
+      return connectionLimits_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+    }
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder() {
+      return getConnectionLimits();
+    }
+
+    public static final int AUTHENTICATION_PLUGIN_FIELD_NUMBER = 6;
+    private int authenticationPlugin_;
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    public int getAuthenticationPluginValue() {
+      return authenticationPlugin_;
+    }
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2947,6 +4810,15 @@ public final class UserOuterClass {
       for (int i = 0; i < permissions_.size(); i++) {
         output.writeMessage(3, permissions_.get(i));
       }
+      if (globalPermissions_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.GLOBAL_PERMISSION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, globalPermissions_);
+      }
+      if (connectionLimits_ != null) {
+        output.writeMessage(5, getConnectionLimits());
+      }
+      if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, authenticationPlugin_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2965,6 +4837,18 @@ public final class UserOuterClass {
       for (int i = 0; i < permissions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, permissions_.get(i));
+      }
+      if (globalPermissions_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.GLOBAL_PERMISSION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, globalPermissions_);
+      }
+      if (connectionLimits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getConnectionLimits());
+      }
+      if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, authenticationPlugin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2988,6 +4872,13 @@ public final class UserOuterClass {
           .equals(other.getPassword());
       result = result && getPermissionsList()
           .equals(other.getPermissionsList());
+      result = result && globalPermissions_ == other.globalPermissions_;
+      result = result && (hasConnectionLimits() == other.hasConnectionLimits());
+      if (hasConnectionLimits()) {
+        result = result && getConnectionLimits()
+            .equals(other.getConnectionLimits());
+      }
+      result = result && authenticationPlugin_ == other.authenticationPlugin_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3007,6 +4898,14 @@ public final class UserOuterClass {
         hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPermissionsList().hashCode();
       }
+      hash = (37 * hash) + GLOBAL_PERMISSIONS_FIELD_NUMBER;
+      hash = (53 * hash) + globalPermissions_;
+      if (hasConnectionLimits()) {
+        hash = (37 * hash) + CONNECTION_LIMITS_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionLimits().hashCode();
+      }
+      hash = (37 * hash) + AUTHENTICATION_PLUGIN_FIELD_NUMBER;
+      hash = (53 * hash) + authenticationPlugin_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3151,6 +5050,16 @@ public final class UserOuterClass {
         } else {
           permissionsBuilder_.clear();
         }
+        globalPermissions_ = 0;
+
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = null;
+        } else {
+          connectionLimits_ = null;
+          connectionLimitsBuilder_ = null;
+        }
+        authenticationPlugin_ = 0;
+
         return this;
       }
 
@@ -3190,6 +5099,13 @@ public final class UserOuterClass {
         } else {
           result.permissions_ = permissionsBuilder_.build();
         }
+        result.globalPermissions_ = globalPermissions_;
+        if (connectionLimitsBuilder_ == null) {
+          result.connectionLimits_ = connectionLimits_;
+        } else {
+          result.connectionLimits_ = connectionLimitsBuilder_.build();
+        }
+        result.authenticationPlugin_ = authenticationPlugin_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3272,6 +5188,15 @@ public final class UserOuterClass {
               permissionsBuilder_.addAllMessages(other.permissions_);
             }
           }
+        }
+        if (other.globalPermissions_ != 0) {
+          setGlobalPermissionsValue(other.getGlobalPermissionsValue());
+        }
+        if (other.hasConnectionLimits()) {
+          mergeConnectionLimits(other.getConnectionLimits());
+        }
+        if (other.authenticationPlugin_ != 0) {
+          setAuthenticationPluginValue(other.getAuthenticationPluginValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3792,6 +5717,289 @@ public final class UserOuterClass {
         }
         return permissionsBuilder_;
       }
+
+      private int globalPermissions_ = 0;
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public int getGlobalPermissionsValue() {
+        return globalPermissions_;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder setGlobalPermissionsValue(int value) {
+        globalPermissions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.valueOf(globalPermissions_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder setGlobalPermissions(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        globalPermissions_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder clearGlobalPermissions() {
+        
+        globalPermissions_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder> connectionLimitsBuilder_;
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public boolean hasConnectionLimits() {
+        return connectionLimitsBuilder_ != null || connectionLimits_ != null;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
+        if (connectionLimitsBuilder_ == null) {
+          return connectionLimits_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+        } else {
+          return connectionLimitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder setConnectionLimits(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits value) {
+        if (connectionLimitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectionLimits_ = value;
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder setConnectionLimits(
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder builderForValue) {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder mergeConnectionLimits(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits value) {
+        if (connectionLimitsBuilder_ == null) {
+          if (connectionLimits_ != null) {
+            connectionLimits_ =
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.newBuilder(connectionLimits_).mergeFrom(value).buildPartial();
+          } else {
+            connectionLimits_ = value;
+          }
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder clearConnectionLimits() {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = null;
+          onChanged();
+        } else {
+          connectionLimits_ = null;
+          connectionLimitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder getConnectionLimitsBuilder() {
+        
+        onChanged();
+        return getConnectionLimitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder() {
+        if (connectionLimitsBuilder_ != null) {
+          return connectionLimitsBuilder_.getMessageOrBuilder();
+        } else {
+          return connectionLimits_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+        }
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder> 
+          getConnectionLimitsFieldBuilder() {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder>(
+                  getConnectionLimits(),
+                  getParentForChildren(),
+                  isClean());
+          connectionLimits_ = null;
+        }
+        return connectionLimitsBuilder_;
+      }
+
+      private int authenticationPlugin_ = 0;
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public int getAuthenticationPluginValue() {
+        return authenticationPlugin_;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder setAuthenticationPluginValue(int value) {
+        authenticationPlugin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder setAuthenticationPlugin(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        authenticationPlugin_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder clearAuthenticationPlugin() {
+        
+        authenticationPlugin_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3856,6 +6064,11 @@ public final class UserOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mysql_v1_Permission_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3885,13 +6098,31 @@ public final class UserOuterClass {
       "\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005" +
       "INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013LOCK_TABLES\020\016\022\n\n\006" +
       "SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006" +
-      "UPDATE\020\022\"\224\001\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071" +
-      "\001\212\3101\004<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002" +
-      " \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\013" +
-      "2%.yandex.cloud.mdb.mysql.v1.PermissionB" +
-      "d\n\035yandex.cloud.api.mdb.mysql.v1ZCgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/mysql/v1;mysqlb\006proto3"
+      "UPDATE\020\022\"\215\002\n\020ConnectionLimits\022;\n\rmax_que" +
+      "stions\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\0229\n\013max_updates\030\002 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022=\n\017max_con" +
+      "nections\030\003 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\022B\n\024max_user_connections\030\004 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\"\353\002\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=3" +
+      "2\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\307" +
+      "1\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yande" +
+      "x.cloud.mdb.mysql.v1.Permission\022G\n\022globa" +
+      "l_permissions\030\004 \001(\0162+.yandex.cloud.mdb.m" +
+      "ysql.v1.GlobalPermission\022F\n\021connection_l" +
+      "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
+      "ConnectionLimits\022D\n\025authentication_plugi" +
+      "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
+      "Plugin*d\n\020GlobalPermission\022!\n\035GLOBAL_PER" +
+      "MISSION_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLI" +
+      "ENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002*t\n\nAuthPlug" +
+      "in\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL" +
+      "_NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSW" +
+      "ORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.clo" +
+      "ud.api.mdb.mysql.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/mysql/" +
+      "v1;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3919,18 +6150,25 @@ public final class UserOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Permission_descriptor,
         new java.lang.String[] { "DatabaseName", "Roles", });
-    internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor =
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor,
+        new java.lang.String[] { "MaxQuestions", "MaxUpdates", "MaxConnections", "MaxUserConnections", });
+    internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.WrappersProto.getDescriptor();
