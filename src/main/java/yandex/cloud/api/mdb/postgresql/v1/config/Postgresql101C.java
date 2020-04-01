@@ -1651,6 +1651,32 @@ public final class Postgresql101C {
      * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10_1C.LogLevel pg_hint_plan_message_level = 112;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.PostgresqlConfig10_1C.LogLevel getPgHintPlanMessageLevel();
+
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    boolean hasOnlineAnalyzeEnable();
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    com.google.protobuf.BoolValue getOnlineAnalyzeEnable();
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    boolean hasPlantunerFixEmptyTable();
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    com.google.protobuf.BoolValue getPlantunerFixEmptyTable();
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder();
   }
   /**
    * <pre>
@@ -3044,6 +3070,32 @@ public final class Postgresql101C {
               int rawValue = input.readEnum();
 
               pgHintPlanMessageLevel_ = rawValue;
+              break;
+            }
+            case 906: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (onlineAnalyzeEnable_ != null) {
+                subBuilder = onlineAnalyzeEnable_.toBuilder();
+              }
+              onlineAnalyzeEnable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(onlineAnalyzeEnable_);
+                onlineAnalyzeEnable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 914: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (plantunerFixEmptyTable_ != null) {
+                subBuilder = plantunerFixEmptyTable_.toBuilder();
+              }
+              plantunerFixEmptyTable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plantunerFixEmptyTable_);
+                plantunerFixEmptyTable_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7360,6 +7412,48 @@ public final class Postgresql101C {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.PostgresqlConfig10_1C.LogLevel.UNRECOGNIZED : result;
     }
 
+    public static final int ONLINE_ANALYZE_ENABLE_FIELD_NUMBER = 113;
+    private com.google.protobuf.BoolValue onlineAnalyzeEnable_;
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    public boolean hasOnlineAnalyzeEnable() {
+      return onlineAnalyzeEnable_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    public com.google.protobuf.BoolValue getOnlineAnalyzeEnable() {
+      return onlineAnalyzeEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder() {
+      return getOnlineAnalyzeEnable();
+    }
+
+    public static final int PLANTUNER_FIX_EMPTY_TABLE_FIELD_NUMBER = 114;
+    private com.google.protobuf.BoolValue plantunerFixEmptyTable_;
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    public boolean hasPlantunerFixEmptyTable() {
+      return plantunerFixEmptyTable_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    public com.google.protobuf.BoolValue getPlantunerFixEmptyTable() {
+      return plantunerFixEmptyTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder() {
+      return getPlantunerFixEmptyTable();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7711,6 +7805,12 @@ public final class Postgresql101C {
       }
       if (pgHintPlanMessageLevel_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.PostgresqlConfig10_1C.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(112, pgHintPlanMessageLevel_);
+      }
+      if (onlineAnalyzeEnable_ != null) {
+        output.writeMessage(113, getOnlineAnalyzeEnable());
+      }
+      if (plantunerFixEmptyTable_ != null) {
+        output.writeMessage(114, getPlantunerFixEmptyTable());
       }
       unknownFields.writeTo(output);
     }
@@ -8170,6 +8270,14 @@ public final class Postgresql101C {
       if (pgHintPlanMessageLevel_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.PostgresqlConfig10_1C.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(112, pgHintPlanMessageLevel_);
+      }
+      if (onlineAnalyzeEnable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(113, getOnlineAnalyzeEnable());
+      }
+      if (plantunerFixEmptyTable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(114, getPlantunerFixEmptyTable());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8668,6 +8776,16 @@ public final class Postgresql101C {
       }
       result = result && pgHintPlanDebugPrint_ == other.pgHintPlanDebugPrint_;
       result = result && pgHintPlanMessageLevel_ == other.pgHintPlanMessageLevel_;
+      result = result && (hasOnlineAnalyzeEnable() == other.hasOnlineAnalyzeEnable());
+      if (hasOnlineAnalyzeEnable()) {
+        result = result && getOnlineAnalyzeEnable()
+            .equals(other.getOnlineAnalyzeEnable());
+      }
+      result = result && (hasPlantunerFixEmptyTable() == other.hasPlantunerFixEmptyTable());
+      if (hasPlantunerFixEmptyTable()) {
+        result = result && getPlantunerFixEmptyTable()
+            .equals(other.getPlantunerFixEmptyTable());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9087,6 +9205,14 @@ public final class Postgresql101C {
       hash = (53 * hash) + pgHintPlanDebugPrint_;
       hash = (37 * hash) + PG_HINT_PLAN_MESSAGE_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + pgHintPlanMessageLevel_;
+      if (hasOnlineAnalyzeEnable()) {
+        hash = (37 * hash) + ONLINE_ANALYZE_ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getOnlineAnalyzeEnable().hashCode();
+      }
+      if (hasPlantunerFixEmptyTable()) {
+        hash = (37 * hash) + PLANTUNER_FIX_EMPTY_TABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getPlantunerFixEmptyTable().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9816,6 +9942,18 @@ public final class Postgresql101C {
 
         pgHintPlanMessageLevel_ = 0;
 
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = null;
+        } else {
+          onlineAnalyzeEnable_ = null;
+          onlineAnalyzeEnableBuilder_ = null;
+        }
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = null;
+        } else {
+          plantunerFixEmptyTable_ = null;
+          plantunerFixEmptyTableBuilder_ = null;
+        }
         return this;
       }
 
@@ -10333,6 +10471,16 @@ public final class Postgresql101C {
         }
         result.pgHintPlanDebugPrint_ = pgHintPlanDebugPrint_;
         result.pgHintPlanMessageLevel_ = pgHintPlanMessageLevel_;
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          result.onlineAnalyzeEnable_ = onlineAnalyzeEnable_;
+        } else {
+          result.onlineAnalyzeEnable_ = onlineAnalyzeEnableBuilder_.build();
+        }
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          result.plantunerFixEmptyTable_ = plantunerFixEmptyTable_;
+        } else {
+          result.plantunerFixEmptyTable_ = plantunerFixEmptyTableBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -10726,6 +10874,12 @@ public final class Postgresql101C {
         }
         if (other.pgHintPlanMessageLevel_ != 0) {
           setPgHintPlanMessageLevelValue(other.getPgHintPlanMessageLevelValue());
+        }
+        if (other.hasOnlineAnalyzeEnable()) {
+          mergeOnlineAnalyzeEnable(other.getOnlineAnalyzeEnable());
+        }
+        if (other.hasPlantunerFixEmptyTable()) {
+          mergePlantunerFixEmptyTable(other.getPlantunerFixEmptyTable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -23255,6 +23409,240 @@ public final class Postgresql101C {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue onlineAnalyzeEnable_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> onlineAnalyzeEnableBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public boolean hasOnlineAnalyzeEnable() {
+        return onlineAnalyzeEnableBuilder_ != null || onlineAnalyzeEnable_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public com.google.protobuf.BoolValue getOnlineAnalyzeEnable() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          return onlineAnalyzeEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+        } else {
+          return onlineAnalyzeEnableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public Builder setOnlineAnalyzeEnable(com.google.protobuf.BoolValue value) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          onlineAnalyzeEnable_ = value;
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public Builder setOnlineAnalyzeEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = builderForValue.build();
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public Builder mergeOnlineAnalyzeEnable(com.google.protobuf.BoolValue value) {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          if (onlineAnalyzeEnable_ != null) {
+            onlineAnalyzeEnable_ =
+              com.google.protobuf.BoolValue.newBuilder(onlineAnalyzeEnable_).mergeFrom(value).buildPartial();
+          } else {
+            onlineAnalyzeEnable_ = value;
+          }
+          onChanged();
+        } else {
+          onlineAnalyzeEnableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public Builder clearOnlineAnalyzeEnable() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnable_ = null;
+          onChanged();
+        } else {
+          onlineAnalyzeEnable_ = null;
+          onlineAnalyzeEnableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getOnlineAnalyzeEnableBuilder() {
+        
+        onChanged();
+        return getOnlineAnalyzeEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getOnlineAnalyzeEnableOrBuilder() {
+        if (onlineAnalyzeEnableBuilder_ != null) {
+          return onlineAnalyzeEnableBuilder_.getMessageOrBuilder();
+        } else {
+          return onlineAnalyzeEnable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : onlineAnalyzeEnable_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue online_analyze_enable = 113;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getOnlineAnalyzeEnableFieldBuilder() {
+        if (onlineAnalyzeEnableBuilder_ == null) {
+          onlineAnalyzeEnableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getOnlineAnalyzeEnable(),
+                  getParentForChildren(),
+                  isClean());
+          onlineAnalyzeEnable_ = null;
+        }
+        return onlineAnalyzeEnableBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue plantunerFixEmptyTable_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> plantunerFixEmptyTableBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public boolean hasPlantunerFixEmptyTable() {
+        return plantunerFixEmptyTableBuilder_ != null || plantunerFixEmptyTable_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public com.google.protobuf.BoolValue getPlantunerFixEmptyTable() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          return plantunerFixEmptyTable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+        } else {
+          return plantunerFixEmptyTableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public Builder setPlantunerFixEmptyTable(com.google.protobuf.BoolValue value) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plantunerFixEmptyTable_ = value;
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public Builder setPlantunerFixEmptyTable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = builderForValue.build();
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public Builder mergePlantunerFixEmptyTable(com.google.protobuf.BoolValue value) {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          if (plantunerFixEmptyTable_ != null) {
+            plantunerFixEmptyTable_ =
+              com.google.protobuf.BoolValue.newBuilder(plantunerFixEmptyTable_).mergeFrom(value).buildPartial();
+          } else {
+            plantunerFixEmptyTable_ = value;
+          }
+          onChanged();
+        } else {
+          plantunerFixEmptyTableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public Builder clearPlantunerFixEmptyTable() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTable_ = null;
+          onChanged();
+        } else {
+          plantunerFixEmptyTable_ = null;
+          plantunerFixEmptyTableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPlantunerFixEmptyTableBuilder() {
+        
+        onChanged();
+        return getPlantunerFixEmptyTableFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPlantunerFixEmptyTableOrBuilder() {
+        if (plantunerFixEmptyTableBuilder_ != null) {
+          return plantunerFixEmptyTableBuilder_.getMessageOrBuilder();
+        } else {
+          return plantunerFixEmptyTable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : plantunerFixEmptyTable_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue plantuner_fix_empty_table = 114;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPlantunerFixEmptyTableFieldBuilder() {
+        if (plantunerFixEmptyTableBuilder_ == null) {
+          plantunerFixEmptyTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPlantunerFixEmptyTable(),
+                  getParentForChildren(),
+                  isClean());
+          plantunerFixEmptyTable_ = null;
+        }
+        return plantunerFixEmptyTableBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24521,7 +24909,7 @@ public final class Postgresql101C {
       "postgresql10_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\272L\n\025PostgresqlConfig10_1C\0224\n\017max_con" +
+      "oto\"\264M\n\025PostgresqlConfig10_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -24710,73 +25098,76 @@ public final class Postgresql101C {
       "stgresqlConfig10_1C.PgHintPlanDebugPrint" +
       "\022i\n\032pg_hint_plan_message_level\030p \001(\0162E.y" +
       "andex.cloud.mdb.postgresql.v1.config.Pos" +
-      "tgresqlConfig10_1C.LogLevel\"S\n\010WalLevel\022" +
-      "\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_" +
-      "REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001\n\021Syn" +
-      "chronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNS" +
-      "PECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n" +
-      "\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS" +
-      "_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_RE" +
-      "MOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOT" +
-      "E_APPLY\020\005\"\232\001\n\023ConstraintExclusion\022$\n CON" +
-      "STRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONST" +
-      "RAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCLU" +
-      "SION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PARTI" +
-      "TION\020\003\"\222\001\n\021ForceParallelMode\022#\n\037FORCE_PA" +
-      "RALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PARAL" +
-      "LEL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF" +
-      "\020\002\022\037\n\033FORCE_PARALLEL_MODE_REGRESS\020\003\"\222\002\n\010" +
-      "LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020L" +
-      "OG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022" +
-      "\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG" +
-      "2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_L" +
-      "OG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_" +
-      "WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LE" +
-      "VEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\231\001\n\021Log" +
-      "ErrorVerbosity\022#\n\037LOG_ERROR_VERBOSITY_UN" +
-      "SPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERSE" +
-      "\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033L" +
-      "OG_ERROR_VERBOSITY_VERBOSE\020\003\"\212\001\n\014LogStat" +
-      "ement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022" +
-      "LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DD" +
-      "L\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEM" +
-      "ENT_ALL\020\004\"\346\001\n\024TransactionIsolation\022%\n!TR" +
-      "ANSACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRA" +
-      "NSACTION_ISOLATION_READ_UNCOMMITTED\020\001\022(\n" +
-      "$TRANSACTION_ISOLATION_READ_COMMITTED\020\002\022" +
-      ")\n%TRANSACTION_ISOLATION_REPEATABLE_READ" +
-      "\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALIZABLE" +
-      "\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNSPEC" +
-      "IFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_O" +
-      "UTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINA" +
-      "RY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022" +
-      "\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_" +
-      "OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUM" +
-      "ENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\232\001\n\016Backsl" +
-      "ashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020" +
-      "\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOT" +
-      "E_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKS" +
-      "LASH_QUOTE_SAFE_ENCODING\020\004\"\320\001\n\024PgHintPla" +
-      "nDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRINT_" +
-      "UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRIN" +
-      "T_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002" +
-      "\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020\003\022" +
-      "$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\230\001" +
-      "\n\026SharedPreloadLibraries\022(\n$SHARED_PRELO" +
-      "AD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRE" +
-      "LOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_" +
-      "PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\"\241\002\n\030Pos" +
-      "tgresqlConfigSet10_1C\022\\\n\020effective_confi" +
-      "g\030\001 \001(\0132<.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfig10_1CB\004\350\3071\001\022Q\n\013u" +
-      "ser_config\030\002 \001(\0132<.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfig10_1C\022T" +
-      "\n\016default_config\030\003 \001(\0132<.yandex.cloud.md" +
-      "b.postgresql.v1.config.PostgresqlConfig1" +
-      "0_1CB\201\001\n)yandex.cloud.api.mdb.postgresql" +
-      ".v1.configZTgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/postgresql/v1/c" +
-      "onfig;postgresqlb\006proto3"
+      "tgresqlConfig10_1C.LogLevel\0229\n\025online_an" +
+      "alyze_enable\030q \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022=\n\031plantuner_fix_empty_table\030r \001(" +
+      "\0132\032.google.protobuf.BoolValue\"S\n\010WalLeve" +
+      "l\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVE" +
+      "L_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001\n\021S" +
+      "ynchronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_U" +
+      "NSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022" +
+      "\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONO" +
+      "US_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_" +
+      "REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REM" +
+      "OTE_APPLY\020\005\"\232\001\n\023ConstraintExclusion\022$\n C" +
+      "ONSTRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CON" +
+      "STRAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXC" +
+      "LUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PAR" +
+      "TITION\020\003\"\222\001\n\021ForceParallelMode\022#\n\037FORCE_" +
+      "PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PAR" +
+      "ALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_O" +
+      "FF\020\002\022\037\n\033FORCE_PARALLEL_MODE_REGRESS\020\003\"\222\002" +
+      "\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n" +
+      "\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020" +
+      "\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEB" +
+      "UG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL" +
+      "_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVE" +
+      "L_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_" +
+      "LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\231\001\n\021L" +
+      "ogErrorVerbosity\022#\n\037LOG_ERROR_VERBOSITY_" +
+      "UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TER" +
+      "SE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n" +
+      "\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"\212\001\n\014LogSt" +
+      "atement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026" +
+      "\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_" +
+      "DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STAT" +
+      "EMENT_ALL\020\004\"\346\001\n\024TransactionIsolation\022%\n!" +
+      "TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&T" +
+      "RANSACTION_ISOLATION_READ_UNCOMMITTED\020\001\022" +
+      "(\n$TRANSACTION_ISOLATION_READ_COMMITTED\020" +
+      "\002\022)\n%TRANSACTION_ISOLATION_REPEATABLE_RE" +
+      "AD\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALIZAB" +
+      "LE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNSP" +
+      "ECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA" +
+      "_OUTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BI" +
+      "NARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020" +
+      "\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XM" +
+      "L_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOC" +
+      "UMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\232\001\n\016Back" +
+      "slashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIE" +
+      "D\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QU" +
+      "OTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BAC" +
+      "KSLASH_QUOTE_SAFE_ENCODING\020\004\"\320\001\n\024PgHintP" +
+      "lanDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRIN" +
+      "T_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PR" +
+      "INT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON" +
+      "\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020" +
+      "\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"" +
+      "\230\001\n\026SharedPreloadLibraries\022(\n$SHARED_PRE" +
+      "LOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_P" +
+      "RELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARE" +
+      "D_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\"\241\002\n\030P" +
+      "ostgresqlConfigSet10_1C\022\\\n\020effective_con" +
+      "fig\030\001 \001(\0132<.yandex.cloud.mdb.postgresql." +
+      "v1.config.PostgresqlConfig10_1CB\004\350\3071\001\022Q\n" +
+      "\013user_config\030\002 \001(\0132<.yandex.cloud.mdb.po" +
+      "stgresql.v1.config.PostgresqlConfig10_1C" +
+      "\022T\n\016default_config\030\003 \001(\0132<.yandex.cloud." +
+      "mdb.postgresql.v1.config.PostgresqlConfi" +
+      "g10_1CB\201\001\n)yandex.cloud.api.mdb.postgres" +
+      "ql.v1.configZTgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/postgresql/v1" +
+      "/config;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24797,7 +25188,7 @@ public final class Postgresql101C {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_1C_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_1C_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "OnlineAnalyzeEnable", "PlantunerFixEmptyTable", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_1C_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_1C_fieldAccessorTable = new

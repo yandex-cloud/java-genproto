@@ -12905,66 +12905,66 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> 
+        getAffectedImages1List();
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index);
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    int getAffectedImages1Count();
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
+        getAffectedImages1OrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+        int index);
+
+    /**
+     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
-     * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
 
     /**
-     * <code>string lifecycle_policy_id = 2;</code>
+     * <code>string lifecycle_policy_id = 3;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
-     * <code>string lifecycle_policy_id = 2;</code>
+     * <code>string lifecycle_policy_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
 
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     boolean hasRunAt();
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     com.google.protobuf.Timestamp getRunAt();
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder();
 
     /**
-     * <code>int64 affected_images_count = 4;</code>
+     * <code>int64 affected_images_count = 5;</code>
      */
-    long getAffectedImagesCount4();
-
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> 
-        getAffectedImages5List();
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages5(int index);
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    int getAffectedImages5Count();
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-        getAffectedImages5OrBuilderList();
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages5OrBuilder(
-        int index);
+    long getAffectedImagesCount5();
 
     /**
      * <code>string next_page_token = 6;</code>
@@ -12989,10 +12989,10 @@ public final class LifecyclePolicyServiceOuterClass {
       super(builder);
     }
     private ListDryRunLifecyclePolicyResultAffectedImagesResponse() {
+      affectedImages1_ = java.util.Collections.emptyList();
       dryRunLifecyclePolicyResultId_ = "";
       lifecyclePolicyId_ = "";
-      affectedImagesCount4_ = 0L;
-      affectedImages5_ = java.util.Collections.emptyList();
+      affectedImagesCount5_ = 0L;
       nextPageToken_ = "";
     }
 
@@ -13021,18 +13021,27 @@ public final class LifecyclePolicyServiceOuterClass {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dryRunLifecyclePolicyResultId_ = s;
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                affectedImages1_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              affectedImages1_.add(
+                  input.readMessage(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.parser(), extensionRegistry));
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              lifecyclePolicyId_ = s;
+              dryRunLifecyclePolicyResultId_ = s;
               break;
             }
             case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lifecyclePolicyId_ = s;
+              break;
+            }
+            case 34: {
               com.google.protobuf.Timestamp.Builder subBuilder = null;
               if (runAt_ != null) {
                 subBuilder = runAt_.toBuilder();
@@ -13045,18 +13054,9 @@ public final class LifecyclePolicyServiceOuterClass {
 
               break;
             }
-            case 32: {
+            case 40: {
 
-              affectedImagesCount4_ = input.readInt64();
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                affectedImages5_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              affectedImages5_.add(
-                  input.readMessage(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.parser(), extensionRegistry));
+              affectedImagesCount5_ = input.readInt64();
               break;
             }
             case 50: {
@@ -13080,8 +13080,8 @@ public final class LifecyclePolicyServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          affectedImages5_ = java.util.Collections.unmodifiableList(affectedImages5_);
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          affectedImages1_ = java.util.Collections.unmodifiableList(affectedImages1_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13101,10 +13101,47 @@ public final class LifecyclePolicyServiceOuterClass {
     }
 
     private int bitField0_;
-    public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
+    public static final int AFFECTED_IMAGES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages1_;
+    // An alternative name is used for field "affected_images" because:
+    //     both repeated field "affected_images" and singular field "affected_images_count" generate the method "getAffectedImagesCount()"
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages1List() {
+      return affectedImages1_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
+        getAffectedImages1OrBuilderList() {
+      return affectedImages1_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    public int getAffectedImages1Count() {
+      return affectedImages1_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index) {
+      return affectedImages1_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+        int index) {
+      return affectedImages1_.get(index);
+    }
+
+    public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
     /**
-     * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
      */
     public java.lang.String getDryRunLifecyclePolicyResultId() {
       java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -13119,7 +13156,7 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
-     * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes() {
@@ -13135,10 +13172,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
 
-    public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 2;
+    public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
-     * <code>string lifecycle_policy_id = 2;</code>
+     * <code>string lifecycle_policy_id = 3;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
       java.lang.Object ref = lifecyclePolicyId_;
@@ -13153,7 +13190,7 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
-     * <code>string lifecycle_policy_id = 2;</code>
+     * <code>string lifecycle_policy_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes() {
@@ -13169,73 +13206,36 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
 
-    public static final int RUN_AT_FIELD_NUMBER = 3;
+    public static final int RUN_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp runAt_;
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     public boolean hasRunAt() {
       return runAt_ != null;
     }
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     public com.google.protobuf.Timestamp getRunAt() {
       return runAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
     }
     /**
-     * <code>.google.protobuf.Timestamp run_at = 3;</code>
+     * <code>.google.protobuf.Timestamp run_at = 4;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
       return getRunAt();
     }
 
-    public static final int AFFECTED_IMAGES_COUNT_FIELD_NUMBER = 4;
-    private long affectedImagesCount4_;
+    public static final int AFFECTED_IMAGES_COUNT_FIELD_NUMBER = 5;
+    private long affectedImagesCount5_;
     // An alternative name is used for field "affected_images_count" because:
     //     both repeated field "affected_images" and singular field "affected_images_count" generate the method "getAffectedImagesCount()"
     /**
-     * <code>int64 affected_images_count = 4;</code>
+     * <code>int64 affected_images_count = 5;</code>
      */
-    public long getAffectedImagesCount4() {
-      return affectedImagesCount4_;
-    }
-
-    public static final int AFFECTED_IMAGES_FIELD_NUMBER = 5;
-    private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages5_;
-    // An alternative name is used for field "affected_images" because:
-    //     both repeated field "affected_images" and singular field "affected_images_count" generate the method "getAffectedImagesCount()"
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages5List() {
-      return affectedImages5_;
-    }
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-        getAffectedImages5OrBuilderList() {
-      return affectedImages5_;
-    }
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    public int getAffectedImages5Count() {
-      return affectedImages5_.size();
-    }
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages5(int index) {
-      return affectedImages5_.get(index);
-    }
-    /**
-     * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-     */
-    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages5OrBuilder(
-        int index) {
-      return affectedImages5_.get(index);
+    public long getAffectedImagesCount5() {
+      return affectedImagesCount5_;
     }
 
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 6;
@@ -13286,20 +13286,20 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      for (int i = 0; i < affectedImages1_.size(); i++) {
+        output.writeMessage(1, affectedImages1_.get(i));
+      }
       if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dryRunLifecyclePolicyResultId_);
       }
       if (!getLifecyclePolicyIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lifecyclePolicyId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lifecyclePolicyId_);
       }
       if (runAt_ != null) {
-        output.writeMessage(3, getRunAt());
+        output.writeMessage(4, getRunAt());
       }
-      if (affectedImagesCount4_ != 0L) {
-        output.writeInt64(4, affectedImagesCount4_);
-      }
-      for (int i = 0; i < affectedImages5_.size(); i++) {
-        output.writeMessage(5, affectedImages5_.get(i));
+      if (affectedImagesCount5_ != 0L) {
+        output.writeInt64(5, affectedImagesCount5_);
       }
       if (!getNextPageTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, nextPageToken_);
@@ -13313,23 +13313,23 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      for (int i = 0; i < affectedImages1_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, affectedImages1_.get(i));
+      }
       if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dryRunLifecyclePolicyResultId_);
       }
       if (!getLifecyclePolicyIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lifecyclePolicyId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lifecyclePolicyId_);
       }
       if (runAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRunAt());
+          .computeMessageSize(4, getRunAt());
       }
-      if (affectedImagesCount4_ != 0L) {
+      if (affectedImagesCount5_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, affectedImagesCount4_);
-      }
-      for (int i = 0; i < affectedImages5_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, affectedImages5_.get(i));
+          .computeInt64Size(5, affectedImagesCount5_);
       }
       if (!getNextPageTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, nextPageToken_);
@@ -13350,6 +13350,8 @@ public final class LifecyclePolicyServiceOuterClass {
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse) obj;
 
       boolean result = true;
+      result = result && getAffectedImages1List()
+          .equals(other.getAffectedImages1List());
       result = result && getDryRunLifecyclePolicyResultId()
           .equals(other.getDryRunLifecyclePolicyResultId());
       result = result && getLifecyclePolicyId()
@@ -13359,10 +13361,8 @@ public final class LifecyclePolicyServiceOuterClass {
         result = result && getRunAt()
             .equals(other.getRunAt());
       }
-      result = result && (getAffectedImagesCount4()
-          == other.getAffectedImagesCount4());
-      result = result && getAffectedImages5List()
-          .equals(other.getAffectedImages5List());
+      result = result && (getAffectedImagesCount5()
+          == other.getAffectedImagesCount5());
       result = result && getNextPageToken()
           .equals(other.getNextPageToken());
       result = result && unknownFields.equals(other.unknownFields);
@@ -13376,6 +13376,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAffectedImages1Count() > 0) {
+        hash = (37 * hash) + AFFECTED_IMAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getAffectedImages1List().hashCode();
+      }
       hash = (37 * hash) + DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDryRunLifecyclePolicyResultId().hashCode();
       hash = (37 * hash) + LIFECYCLE_POLICY_ID_FIELD_NUMBER;
@@ -13386,11 +13390,7 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       hash = (37 * hash) + AFFECTED_IMAGES_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffectedImagesCount4());
-      if (getAffectedImages5Count() > 0) {
-        hash = (37 * hash) + AFFECTED_IMAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getAffectedImages5List().hashCode();
-      }
+          getAffectedImagesCount5());
       hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getNextPageToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -13521,12 +13521,18 @@ public final class LifecyclePolicyServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getAffectedImages5FieldBuilder();
+          getAffectedImages1FieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (affectedImages1Builder_ == null) {
+          affectedImages1_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          affectedImages1Builder_.clear();
+        }
         dryRunLifecyclePolicyResultId_ = "";
 
         lifecyclePolicyId_ = "";
@@ -13537,14 +13543,8 @@ public final class LifecyclePolicyServiceOuterClass {
           runAt_ = null;
           runAtBuilder_ = null;
         }
-        affectedImagesCount4_ = 0L;
+        affectedImagesCount5_ = 0L;
 
-        if (affectedImages5Builder_ == null) {
-          affectedImages5_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        } else {
-          affectedImages5Builder_.clear();
-        }
         nextPageToken_ = "";
 
         return this;
@@ -13575,6 +13575,15 @@ public final class LifecyclePolicyServiceOuterClass {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        if (affectedImages1Builder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            affectedImages1_ = java.util.Collections.unmodifiableList(affectedImages1_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.affectedImages1_ = affectedImages1_;
+        } else {
+          result.affectedImages1_ = affectedImages1Builder_.build();
+        }
         result.dryRunLifecyclePolicyResultId_ = dryRunLifecyclePolicyResultId_;
         result.lifecyclePolicyId_ = lifecyclePolicyId_;
         if (runAtBuilder_ == null) {
@@ -13582,16 +13591,7 @@ public final class LifecyclePolicyServiceOuterClass {
         } else {
           result.runAt_ = runAtBuilder_.build();
         }
-        result.affectedImagesCount4_ = affectedImagesCount4_;
-        if (affectedImages5Builder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            affectedImages5_ = java.util.Collections.unmodifiableList(affectedImages5_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.affectedImages5_ = affectedImages5_;
-        } else {
-          result.affectedImages5_ = affectedImages5Builder_.build();
-        }
+        result.affectedImagesCount5_ = affectedImagesCount5_;
         result.nextPageToken_ = nextPageToken_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -13642,6 +13642,32 @@ public final class LifecyclePolicyServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse other) {
         if (other == yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse.getDefaultInstance()) return this;
+        if (affectedImages1Builder_ == null) {
+          if (!other.affectedImages1_.isEmpty()) {
+            if (affectedImages1_.isEmpty()) {
+              affectedImages1_ = other.affectedImages1_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAffectedImages1IsMutable();
+              affectedImages1_.addAll(other.affectedImages1_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.affectedImages1_.isEmpty()) {
+            if (affectedImages1Builder_.isEmpty()) {
+              affectedImages1Builder_.dispose();
+              affectedImages1Builder_ = null;
+              affectedImages1_ = other.affectedImages1_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              affectedImages1Builder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAffectedImages1FieldBuilder() : null;
+            } else {
+              affectedImages1Builder_.addAllMessages(other.affectedImages1_);
+            }
+          }
+        }
         if (!other.getDryRunLifecyclePolicyResultId().isEmpty()) {
           dryRunLifecyclePolicyResultId_ = other.dryRunLifecyclePolicyResultId_;
           onChanged();
@@ -13653,34 +13679,8 @@ public final class LifecyclePolicyServiceOuterClass {
         if (other.hasRunAt()) {
           mergeRunAt(other.getRunAt());
         }
-        if (other.getAffectedImagesCount4() != 0L) {
-          setAffectedImagesCount4(other.getAffectedImagesCount4());
-        }
-        if (affectedImages5Builder_ == null) {
-          if (!other.affectedImages5_.isEmpty()) {
-            if (affectedImages5_.isEmpty()) {
-              affectedImages5_ = other.affectedImages5_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensureAffectedImages5IsMutable();
-              affectedImages5_.addAll(other.affectedImages5_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.affectedImages5_.isEmpty()) {
-            if (affectedImages5Builder_.isEmpty()) {
-              affectedImages5Builder_.dispose();
-              affectedImages5Builder_ = null;
-              affectedImages5_ = other.affectedImages5_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              affectedImages5Builder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAffectedImages5FieldBuilder() : null;
-            } else {
-              affectedImages5Builder_.addAllMessages(other.affectedImages5_);
-            }
-          }
+        if (other.getAffectedImagesCount5() != 0L) {
+          setAffectedImagesCount5(other.getAffectedImagesCount5());
         }
         if (!other.getNextPageToken().isEmpty()) {
           nextPageToken_ = other.nextPageToken_;
@@ -13716,9 +13716,249 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       private int bitField0_;
 
+      private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages1_ =
+        java.util.Collections.emptyList();
+      private void ensureAffectedImages1IsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          affectedImages1_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>(affectedImages1_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> affectedImages1Builder_;
+
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages1List() {
+        if (affectedImages1Builder_ == null) {
+          return java.util.Collections.unmodifiableList(affectedImages1_);
+        } else {
+          return affectedImages1Builder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public int getAffectedImages1Count() {
+        if (affectedImages1Builder_ == null) {
+          return affectedImages1_.size();
+        } else {
+          return affectedImages1Builder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index) {
+        if (affectedImages1Builder_ == null) {
+          return affectedImages1_.get(index);
+        } else {
+          return affectedImages1Builder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder setAffectedImages1(
+          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
+        if (affectedImages1Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.set(index, value);
+          onChanged();
+        } else {
+          affectedImages1Builder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder setAffectedImages1(
+          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
+        if (affectedImages1Builder_ == null) {
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          affectedImages1Builder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder addAffectedImages1(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
+        if (affectedImages1Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.add(value);
+          onChanged();
+        } else {
+          affectedImages1Builder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder addAffectedImages1(
+          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
+        if (affectedImages1Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.add(index, value);
+          onChanged();
+        } else {
+          affectedImages1Builder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder addAffectedImages1(
+          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
+        if (affectedImages1Builder_ == null) {
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.add(builderForValue.build());
+          onChanged();
+        } else {
+          affectedImages1Builder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder addAffectedImages1(
+          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
+        if (affectedImages1Builder_ == null) {
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          affectedImages1Builder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder addAllAffectedImages1(
+          java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> values) {
+        if (affectedImages1Builder_ == null) {
+          ensureAffectedImages1IsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, affectedImages1_);
+          onChanged();
+        } else {
+          affectedImages1Builder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder clearAffectedImages1() {
+        if (affectedImages1Builder_ == null) {
+          affectedImages1_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          affectedImages1Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public Builder removeAffectedImages1(int index) {
+        if (affectedImages1Builder_ == null) {
+          ensureAffectedImages1IsMutable();
+          affectedImages1_.remove(index);
+          onChanged();
+        } else {
+          affectedImages1Builder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder getAffectedImages1Builder(
+          int index) {
+        return getAffectedImages1FieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+          int index) {
+        if (affectedImages1Builder_ == null) {
+          return affectedImages1_.get(index);  } else {
+          return affectedImages1Builder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
+           getAffectedImages1OrBuilderList() {
+        if (affectedImages1Builder_ != null) {
+          return affectedImages1Builder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(affectedImages1_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages1Builder() {
+        return getAffectedImages1FieldBuilder().addBuilder(
+            yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages1Builder(
+          int index) {
+        return getAffectedImages1FieldBuilder().addBuilder(
+            index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder> 
+           getAffectedImages1BuilderList() {
+        return getAffectedImages1FieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
+          getAffectedImages1FieldBuilder() {
+        if (affectedImages1Builder_ == null) {
+          affectedImages1Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder>(
+                  affectedImages1_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          affectedImages1_ = null;
+        }
+        return affectedImages1Builder_;
+      }
+
       private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
       /**
-       * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
         java.lang.Object ref = dryRunLifecyclePolicyResultId_;
@@ -13733,7 +13973,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
        */
       public com.google.protobuf.ByteString
           getDryRunLifecyclePolicyResultIdBytes() {
@@ -13749,7 +13989,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
        */
       public Builder setDryRunLifecyclePolicyResultId(
           java.lang.String value) {
@@ -13762,7 +14002,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
         
@@ -13771,7 +14011,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
+       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13787,7 +14027,7 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
-       * <code>string lifecycle_policy_id = 2;</code>
+       * <code>string lifecycle_policy_id = 3;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
         java.lang.Object ref = lifecyclePolicyId_;
@@ -13802,7 +14042,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string lifecycle_policy_id = 2;</code>
+       * <code>string lifecycle_policy_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getLifecyclePolicyIdBytes() {
@@ -13818,7 +14058,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string lifecycle_policy_id = 2;</code>
+       * <code>string lifecycle_policy_id = 3;</code>
        */
       public Builder setLifecyclePolicyId(
           java.lang.String value) {
@@ -13831,7 +14071,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string lifecycle_policy_id = 2;</code>
+       * <code>string lifecycle_policy_id = 3;</code>
        */
       public Builder clearLifecyclePolicyId() {
         
@@ -13840,7 +14080,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string lifecycle_policy_id = 2;</code>
+       * <code>string lifecycle_policy_id = 3;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
           com.google.protobuf.ByteString value) {
@@ -13858,13 +14098,13 @@ public final class LifecyclePolicyServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> runAtBuilder_;
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public boolean hasRunAt() {
         return runAtBuilder_ != null || runAt_ != null;
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public com.google.protobuf.Timestamp getRunAt() {
         if (runAtBuilder_ == null) {
@@ -13874,7 +14114,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public Builder setRunAt(com.google.protobuf.Timestamp value) {
         if (runAtBuilder_ == null) {
@@ -13890,7 +14130,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public Builder setRunAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -13904,7 +14144,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public Builder mergeRunAt(com.google.protobuf.Timestamp value) {
         if (runAtBuilder_ == null) {
@@ -13922,7 +14162,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public Builder clearRunAt() {
         if (runAtBuilder_ == null) {
@@ -13936,7 +14176,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRunAtBuilder() {
         
@@ -13944,7 +14184,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return getRunAtFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
         if (runAtBuilder_ != null) {
@@ -13955,7 +14195,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Timestamp run_at = 3;</code>
+       * <code>.google.protobuf.Timestamp run_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -13971,270 +14211,30 @@ public final class LifecyclePolicyServiceOuterClass {
         return runAtBuilder_;
       }
 
-      private long affectedImagesCount4_ ;
+      private long affectedImagesCount5_ ;
       /**
-       * <code>int64 affected_images_count = 4;</code>
+       * <code>int64 affected_images_count = 5;</code>
        */
-      public long getAffectedImagesCount4() {
-        return affectedImagesCount4_;
+      public long getAffectedImagesCount5() {
+        return affectedImagesCount5_;
       }
       /**
-       * <code>int64 affected_images_count = 4;</code>
+       * <code>int64 affected_images_count = 5;</code>
        */
-      public Builder setAffectedImagesCount4(long value) {
+      public Builder setAffectedImagesCount5(long value) {
         
-        affectedImagesCount4_ = value;
+        affectedImagesCount5_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 affected_images_count = 4;</code>
+       * <code>int64 affected_images_count = 5;</code>
        */
-      public Builder clearAffectedImagesCount4() {
+      public Builder clearAffectedImagesCount5() {
         
-        affectedImagesCount4_ = 0L;
+        affectedImagesCount5_ = 0L;
         onChanged();
         return this;
-      }
-
-      private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages5_ =
-        java.util.Collections.emptyList();
-      private void ensureAffectedImages5IsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          affectedImages5_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>(affectedImages5_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> affectedImages5Builder_;
-
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages5List() {
-        if (affectedImages5Builder_ == null) {
-          return java.util.Collections.unmodifiableList(affectedImages5_);
-        } else {
-          return affectedImages5Builder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public int getAffectedImages5Count() {
-        if (affectedImages5Builder_ == null) {
-          return affectedImages5_.size();
-        } else {
-          return affectedImages5Builder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages5(int index) {
-        if (affectedImages5Builder_ == null) {
-          return affectedImages5_.get(index);
-        } else {
-          return affectedImages5Builder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder setAffectedImages5(
-          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages5Builder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.set(index, value);
-          onChanged();
-        } else {
-          affectedImages5Builder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder setAffectedImages5(
-          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages5Builder_ == null) {
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          affectedImages5Builder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder addAffectedImages5(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages5Builder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.add(value);
-          onChanged();
-        } else {
-          affectedImages5Builder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder addAffectedImages5(
-          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages5Builder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.add(index, value);
-          onChanged();
-        } else {
-          affectedImages5Builder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder addAffectedImages5(
-          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages5Builder_ == null) {
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.add(builderForValue.build());
-          onChanged();
-        } else {
-          affectedImages5Builder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder addAffectedImages5(
-          int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages5Builder_ == null) {
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          affectedImages5Builder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder addAllAffectedImages5(
-          java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> values) {
-        if (affectedImages5Builder_ == null) {
-          ensureAffectedImages5IsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, affectedImages5_);
-          onChanged();
-        } else {
-          affectedImages5Builder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder clearAffectedImages5() {
-        if (affectedImages5Builder_ == null) {
-          affectedImages5_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          affectedImages5Builder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public Builder removeAffectedImages5(int index) {
-        if (affectedImages5Builder_ == null) {
-          ensureAffectedImages5IsMutable();
-          affectedImages5_.remove(index);
-          onChanged();
-        } else {
-          affectedImages5Builder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder getAffectedImages5Builder(
-          int index) {
-        return getAffectedImages5FieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages5OrBuilder(
-          int index) {
-        if (affectedImages5Builder_ == null) {
-          return affectedImages5_.get(index);  } else {
-          return affectedImages5Builder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-           getAffectedImages5OrBuilderList() {
-        if (affectedImages5Builder_ != null) {
-          return affectedImages5Builder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(affectedImages5_);
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages5Builder() {
-        return getAffectedImages5FieldBuilder().addBuilder(
-            yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages5Builder(
-          int index) {
-        return getAffectedImages5FieldBuilder().addBuilder(
-            index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 5;</code>
-       */
-      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder> 
-           getAffectedImages5BuilderList() {
-        return getAffectedImages5FieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-          getAffectedImages5FieldBuilder() {
-        if (affectedImages5Builder_ == null) {
-          affectedImages5Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder>(
-                  affectedImages5_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
-                  getParentForChildren(),
-                  isClean());
-          affectedImages5_ = null;
-        }
-        return affectedImages5Builder_;
       }
 
       private java.lang.Object nextPageToken_ = "";
@@ -14516,12 +14516,12 @@ public final class LifecyclePolicyServiceOuterClass {
       "\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010" +
       "order_by\030\005 \001(\tB\t\212\3101\005<=100\"\247\002\n5ListDryRun" +
       "LifecyclePolicyResultAffectedImagesRespo" +
-      "nse\022*\n\"dry_run_lifecycle_policy_result_i" +
-      "d\030\001 \001(\t\022\033\n\023lifecycle_policy_id\030\002 \001(\t\022*\n\006" +
-      "run_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\035\n\025affected_images_count\030\004 \001(\003\022A\n\017affec" +
-      "ted_images\030\005 \003(\0132(.yandex.cloud.containe" +
-      "rregistry.v1.Image\022\027\n\017next_page_token\030\006 " +
+      "nse\022A\n\017affected_images\030\001 \003(\0132(.yandex.cl" +
+      "oud.containerregistry.v1.Image\022*\n\"dry_ru" +
+      "n_lifecycle_policy_result_id\030\002 \001(\t\022\033\n\023li" +
+      "fecycle_policy_id\030\003 \001(\t\022*\n\006run_at\030\004 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\035\n\025affected_" +
+      "images_count\030\005 \001(\003\022\027\n\017next_page_token\030\006 " +
       "\001(\t2\305\n\n\026LifecyclePolicyService\022w\n\003Get\022<." +
       "yandex.cloud.containerregistry.v1.GetLif" +
       "ecyclePolicyRequest\0322.yandex.cloud.conta" +
@@ -14675,7 +14675,7 @@ public final class LifecyclePolicyServiceOuterClass {
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesResponse_descriptor,
-        new java.lang.String[] { "DryRunLifecyclePolicyResultId", "LifecyclePolicyId", "RunAt", "AffectedImagesCount4", "AffectedImages5", "NextPageToken", });
+        new java.lang.String[] { "AffectedImages1", "DryRunLifecyclePolicyResultId", "LifecyclePolicyId", "RunAt", "AffectedImagesCount5", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
