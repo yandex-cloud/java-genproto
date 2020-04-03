@@ -24312,6 +24312,41 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.PrimaryAddressSpec primary_v6_address_spec = 4;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder();
+
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec}
@@ -24328,6 +24363,7 @@ public final class InstanceGroupOuterClass {
     private NetworkInterfaceSpec() {
       networkId_ = "";
       subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -24395,6 +24431,15 @@ public final class InstanceGroupOuterClass {
 
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -24412,6 +24457,9 @@ public final class InstanceGroupOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -24584,6 +24632,51 @@ public final class InstanceGroupOuterClass {
       return getPrimaryV6AddressSpec();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24609,6 +24702,9 @@ public final class InstanceGroupOuterClass {
       }
       if (primaryV6AddressSpec_ != null) {
         output.writeMessage(4, getPrimaryV6AddressSpec());
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -24637,6 +24733,14 @@ public final class InstanceGroupOuterClass {
       if (primaryV6AddressSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPrimaryV6AddressSpec());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24668,6 +24772,8 @@ public final class InstanceGroupOuterClass {
         result = result && getPrimaryV6AddressSpec()
             .equals(other.getPrimaryV6AddressSpec());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -24692,6 +24798,10 @@ public final class InstanceGroupOuterClass {
       if (hasPrimaryV6AddressSpec()) {
         hash = (37 * hash) + PRIMARY_V6_ADDRESS_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getPrimaryV6AddressSpec().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -24842,6 +24952,8 @@ public final class InstanceGroupOuterClass {
           primaryV6AddressSpec_ = null;
           primaryV6AddressSpecBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -24886,6 +24998,11 @@ public final class InstanceGroupOuterClass {
         } else {
           result.primaryV6AddressSpec_ = primaryV6AddressSpecBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -24954,6 +25071,16 @@ public final class InstanceGroupOuterClass {
         }
         if (other.hasPrimaryV6AddressSpec()) {
           mergePrimaryV6AddressSpec(other.getPrimaryV6AddressSpec());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25508,6 +25635,136 @@ public final class InstanceGroupOuterClass {
           primaryV6AddressSpec_ = null;
         }
         return primaryV6AddressSpecBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -40375,87 +40632,87 @@ public final class InstanceGroupOuterClass {
       "4-4398046511104\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<" +
       "=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000B\016" +
       "\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFI" +
-      "ED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\366\001\n\024" +
+      "ED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\222\002\n\024" +
       "NetworkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t" +
       "\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_addre" +
       "ss_spec\030\003 \001(\01329.yandex.cloud.compute.v1." +
       "instancegroup.PrimaryAddressSpec\022Z\n\027prim" +
       "ary_v6_address_spec\030\004 \001(\01329.yandex.cloud" +
       ".compute.v1.instancegroup.PrimaryAddress" +
-      "Spec\"i\n\022PrimaryAddressSpec\022S\n\023one_to_one" +
-      "_nat_spec\030\001 \001(\01326.yandex.cloud.compute.v" +
-      "1.instancegroup.OneToOneNatSpec\"W\n\017OneTo" +
-      "OneNatSpec\022D\n\nip_version\030\001 \001(\01620.yandex." +
-      "cloud.compute.v1.instancegroup.IpVersion" +
-      "\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(" +
-      "\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Netw" +
-      "orkSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECI" +
-      "FIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELER" +
-      "ATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020Load" +
-      "BalancerSpec\022Q\n\021target_group_spec\030\001 \001(\0132" +
-      "6.yandex.cloud.compute.v1.instancegroup." +
-      "TargetGroupSpec\"\262\002\n\017TargetGroupSpec\0222\n\004n" +
-      "ame\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
-      "z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022" +
-      "\233\001\n\006labels\030\003 \003(\0132B.yandex.cloud.compute." +
-      "v1.instancegroup.TargetGroupSpec.LabelsE" +
-      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"o\n\020HealthChecksSpec\022[\n\022health_check" +
-      "_specs\030\001 \003(\01326.yandex.cloud.compute.v1.i" +
-      "nstancegroup.HealthCheckSpecB\007\202\3101\003>=1\"\244\004" +
-      "\n\017HealthCheckSpec\0228\n\010interval\030\001 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\013\372\3071\0071s-300s\0226\n\007t" +
-      "imeout\030\002 \001(\0132\031.google.protobuf.DurationB" +
-      "\n\372\3071\0061s-60s\0225\n\023unhealthy_threshold\030\003 \001(\003" +
-      "B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\0223\n\021healthy_th" +
-      "reshold\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022" +
-      "X\n\013tcp_options\030\005 \001(\0132A.yandex.cloud.comp" +
-      "ute.v1.instancegroup.HealthCheckSpec.Tcp" +
-      "OptionsH\000\022Z\n\014http_options\030\006 \001(\0132B.yandex" +
-      ".cloud.compute.v1.instancegroup.HealthCh" +
-      "eckSpec.HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004p" +
-      "ort\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n" +
-      "\004port\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034" +
-      "\n\024health_check_options\022\004\300\3011\001\"\250\005\n\017Managed" +
-      "Instance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.y" +
-      "andex.cloud.compute.v1.instancegroup.Man" +
-      "agedInstance.Status\022\023\n\013instance_id\030\003 \001(\t" +
-      "\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_m" +
-      "essage\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network" +
-      "_interfaces\030\010 \003(\01327.yandex.cloud.compute" +
-      ".v1.instancegroup.NetworkInterface\0225\n\021st" +
-      "atus_changed_at\030\t \001(\0132\032.google.protobuf." +
-      "Timestamp\"\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
-      "ED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021UPDATING_" +
-      "INSTANCE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STA" +
-      "RTING_INSTANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022" +
-      "\035\n\031AWAITING_STARTUP_DURATION\020\020\022\023\n\017CHECKI" +
-      "NG_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAI" +
-      "TING_WARMUP_DURATION\020\023\022\023\n\017CLOSING_TRAFFI" +
-      "C\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDA" +
-      "TED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020Netw" +
-      "orkInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_addre" +
-      "ss\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v" +
-      "4_address\030\004 \001(\01325.yandex.cloud.compute.v" +
-      "1.instancegroup.PrimaryAddress\022Q\n\022primar" +
-      "y_v6_address\030\005 \001(\01325.yandex.cloud.comput" +
-      "e.v1.instancegroup.PrimaryAddress\"m\n\016Pri" +
-      "maryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_o" +
-      "ne_nat\030\002 \001(\01322.yandex.cloud.compute.v1.i" +
-      "nstancegroup.OneToOneNat\"d\n\013OneToOneNat\022" +
-      "\017\n\007address\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.y" +
-      "andex.cloud.compute.v1.instancegroup.IpV" +
-      "ersion\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\017\n\007message\030\002 " +
-      "\001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFI" +
-      "ED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.clou" +
-      "d.api.compute.v1.instancegroupZWgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/compute/v1/instancegroup;instancegroupb" +
-      "\006proto3"
+      "Spec\022\032\n\022security_group_ids\030\005 \003(\t\"i\n\022Prim" +
+      "aryAddressSpec\022S\n\023one_to_one_nat_spec\030\001 " +
+      "\001(\01326.yandex.cloud.compute.v1.instancegr" +
+      "oup.OneToOneNatSpec\"W\n\017OneToOneNatSpec\022D" +
+      "\n\nip_version\030\001 \001(\01620.yandex.cloud.comput" +
+      "e.v1.instancegroup.IpVersion\"\'\n\020Scheduli" +
+      "ngPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001\n\017Networ" +
+      "kSettings\022I\n\004type\030\001 \001(\0162;.yandex.cloud.c" +
+      "ompute.v1.instancegroup.NetworkSettings." +
+      "Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010ST" +
+      "ANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HA" +
+      "RDWARE_ACCELERATED\020\003\"e\n\020LoadBalancerSpec" +
+      "\022Q\n\021target_group_spec\030\001 \001(\01326.yandex.clo" +
+      "ud.compute.v1.instancegroup.TargetGroupS" +
+      "pec\"\262\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362" +
+      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
+      "escription\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003" +
+      " \003(\0132B.yandex.cloud.compute.v1.instanceg" +
+      "roup.TargetGroupSpec.LabelsEntryBG\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020Heal" +
+      "thChecksSpec\022[\n\022health_check_specs\030\001 \003(\013" +
+      "26.yandex.cloud.compute.v1.instancegroup" +
+      ".HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017HealthChec" +
+      "kSpec\0228\n\010interval\030\001 \001(\0132\031.google.protobu" +
+      "f.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\013" +
+      "2\031.google.protobuf.DurationB\n\372\3071\0061s-60s\022" +
+      "5\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3," +
+      "4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(" +
+      "\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_optio" +
+      "ns\030\005 \001(\0132A.yandex.cloud.compute.v1.insta" +
+      "ncegroup.HealthCheckSpec.TcpOptionsH\000\022Z\n" +
+      "\014http_options\030\006 \001(\0132B.yandex.cloud.compu" +
+      "te.v1.instancegroup.HealthCheckSpec.Http" +
+      "OptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372" +
+      "\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B" +
+      "\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_che" +
+      "ck_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002" +
+      "id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud." +
+      "compute.v1.instancegroup.ManagedInstance" +
+      ".Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001" +
+      "(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t" +
+      "\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces\030" +
+      "\010 \003(\01327.yandex.cloud.compute.v1.instance" +
+      "group.NetworkInterface\0225\n\021status_changed" +
+      "_at\030\t \001(\0132\032.google.protobuf.Timestamp\"\323\002" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CREA" +
+      "TING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025" +
+      "\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_INSTAN" +
+      "CE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITING_" +
+      "STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022" +
+      "\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP_" +
+      "DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNI" +
+      "NG_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007STO" +
+      "PPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInterface" +
+      "\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\t" +
+      "subnet_id\030\003 \001(\t\022Q\n\022primary_v4_address\030\004 " +
+      "\001(\01325.yandex.cloud.compute.v1.instancegr" +
+      "oup.PrimaryAddress\022Q\n\022primary_v6_address" +
+      "\030\005 \001(\01325.yandex.cloud.compute.v1.instanc" +
+      "egroup.PrimaryAddress\"m\n\016PrimaryAddress\022" +
+      "\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002 \001(\013" +
+      "22.yandex.cloud.compute.v1.instancegroup" +
+      ".OneToOneNat\"d\n\013OneToOneNat\022\017\n\007address\030\001" +
+      " \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.cloud." +
+      "compute.v1.instancegroup.IpVersion\"K\n\tLo" +
+      "gRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVer" +
+      "sion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4" +
+      "\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.comput" +
+      "e.v1.instancegroupZWgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/compute/v1/" +
+      "instancegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -40603,7 +40860,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_descriptor,
-        new java.lang.String[] { "NetworkId", "SubnetIds", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", });
+        new java.lang.String[] { "NetworkId", "SubnetIds", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_fieldAccessorTable = new

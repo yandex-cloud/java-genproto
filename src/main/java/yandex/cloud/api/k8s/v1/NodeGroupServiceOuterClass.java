@@ -6217,6 +6217,34 @@ public final class NodeGroupServiceOuterClass {
 
     /**
      * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    boolean hasDeployPolicy();
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy();
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder();
+
+    /**
+     * <pre>
      * Version of Kubernetes components that runs on the nodes.
      * </pre>
      *
@@ -6553,33 +6581,46 @@ public final class NodeGroupServiceOuterClass {
             }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
                 allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               allowedUnsafeSysctls_.add(s);
               break;
             }
             case 106: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
                 nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint>();
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00001000;
               }
               nodeTaints_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.Taint.parser(), extensionRegistry));
               break;
             }
             case 114: {
-              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
                 nodeLabels_ = com.google.protobuf.MapField.newMapField(
                     NodeLabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00001000;
+                mutable_bitField0_ |= 0x00002000;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               nodeLabels__ = input.readMessage(
                   NodeLabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               nodeLabels_.getMutableMap().put(
                   nodeLabels__.getKey(), nodeLabels__.getValue());
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder subBuilder = null;
+              if (deployPolicy_ != null) {
+                subBuilder = deployPolicy_.toBuilder();
+              }
+              deployPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deployPolicy_);
+                deployPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6597,10 +6638,10 @@ public final class NodeGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
           nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
         }
         this.unknownFields = unknownFields.build();
@@ -6996,6 +7037,42 @@ public final class NodeGroupServiceOuterClass {
       return getAllocationPolicy();
     }
 
+    public static final int DEPLOY_POLICY_FIELD_NUMBER = 15;
+    private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy deployPolicy_;
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    public boolean hasDeployPolicy() {
+      return deployPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy() {
+      return deployPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+    }
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder() {
+      return getDeployPolicy();
+    }
+
     public static final int VERSION_FIELD_NUMBER = 10;
     private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
     /**
@@ -7313,6 +7390,9 @@ public final class NodeGroupServiceOuterClass {
           internalGetNodeLabels(),
           NodeLabelsDefaultEntryHolder.defaultEntry,
           14);
+      if (deployPolicy_ != null) {
+        output.writeMessage(15, getDeployPolicy());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7387,6 +7467,10 @@ public final class NodeGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(14, nodeLabels__);
       }
+      if (deployPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getDeployPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7430,6 +7514,11 @@ public final class NodeGroupServiceOuterClass {
       if (hasAllocationPolicy()) {
         result = result && getAllocationPolicy()
             .equals(other.getAllocationPolicy());
+      }
+      result = result && (hasDeployPolicy() == other.hasDeployPolicy());
+      if (hasDeployPolicy()) {
+        result = result && getDeployPolicy()
+            .equals(other.getDeployPolicy());
       }
       result = result && (hasVersion() == other.hasVersion());
       if (hasVersion()) {
@@ -7483,6 +7572,10 @@ public final class NodeGroupServiceOuterClass {
       if (hasAllocationPolicy()) {
         hash = (37 * hash) + ALLOCATION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getAllocationPolicy().hashCode();
+      }
+      if (hasDeployPolicy()) {
+        hash = (37 * hash) + DEPLOY_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getDeployPolicy().hashCode();
       }
       if (hasVersion()) {
         hash = (37 * hash) + VERSION_FIELD_NUMBER;
@@ -7695,6 +7788,12 @@ public final class NodeGroupServiceOuterClass {
           allocationPolicy_ = null;
           allocationPolicyBuilder_ = null;
         }
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = null;
+        } else {
+          deployPolicy_ = null;
+          deployPolicyBuilder_ = null;
+        }
         if (versionBuilder_ == null) {
           version_ = null;
         } else {
@@ -7708,10 +7807,10 @@ public final class NodeGroupServiceOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         if (nodeTaintsBuilder_ == null) {
           nodeTaints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
         } else {
           nodeTaintsBuilder_.clear();
         }
@@ -7769,6 +7868,11 @@ public final class NodeGroupServiceOuterClass {
         } else {
           result.allocationPolicy_ = allocationPolicyBuilder_.build();
         }
+        if (deployPolicyBuilder_ == null) {
+          result.deployPolicy_ = deployPolicy_;
+        } else {
+          result.deployPolicy_ = deployPolicyBuilder_.build();
+        }
         if (versionBuilder_ == null) {
           result.version_ = version_;
         } else {
@@ -7779,15 +7883,15 @@ public final class NodeGroupServiceOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
           allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.allowedUnsafeSysctls_ = allowedUnsafeSysctls_;
         if (nodeTaintsBuilder_ == null) {
-          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          if (((bitField0_ & 0x00001000) == 0x00001000)) {
             nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           }
           result.nodeTaints_ = nodeTaints_;
         } else {
@@ -7870,6 +7974,9 @@ public final class NodeGroupServiceOuterClass {
         if (other.hasAllocationPolicy()) {
           mergeAllocationPolicy(other.getAllocationPolicy());
         }
+        if (other.hasDeployPolicy()) {
+          mergeDeployPolicy(other.getDeployPolicy());
+        }
         if (other.hasVersion()) {
           mergeVersion(other.getVersion());
         }
@@ -7879,7 +7986,7 @@ public final class NodeGroupServiceOuterClass {
         if (!other.allowedUnsafeSysctls_.isEmpty()) {
           if (allowedUnsafeSysctls_.isEmpty()) {
             allowedUnsafeSysctls_ = other.allowedUnsafeSysctls_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureAllowedUnsafeSysctlsIsMutable();
             allowedUnsafeSysctls_.addAll(other.allowedUnsafeSysctls_);
@@ -7890,7 +7997,7 @@ public final class NodeGroupServiceOuterClass {
           if (!other.nodeTaints_.isEmpty()) {
             if (nodeTaints_.isEmpty()) {
               nodeTaints_ = other.nodeTaints_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
             } else {
               ensureNodeTaintsIsMutable();
               nodeTaints_.addAll(other.nodeTaints_);
@@ -7903,7 +8010,7 @@ public final class NodeGroupServiceOuterClass {
               nodeTaintsBuilder_.dispose();
               nodeTaintsBuilder_ = null;
               nodeTaints_ = other.nodeTaints_;
-              bitField0_ = (bitField0_ & ~0x00000800);
+              bitField0_ = (bitField0_ & ~0x00001000);
               nodeTaintsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNodeTaintsFieldBuilder() : null;
@@ -9000,6 +9107,168 @@ public final class NodeGroupServiceOuterClass {
         return allocationPolicyBuilder_;
       }
 
+      private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy deployPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder> deployPolicyBuilder_;
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public boolean hasDeployPolicy() {
+        return deployPolicyBuilder_ != null || deployPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy() {
+        if (deployPolicyBuilder_ == null) {
+          return deployPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+        } else {
+          return deployPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public Builder setDeployPolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy value) {
+        if (deployPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deployPolicy_ = value;
+          onChanged();
+        } else {
+          deployPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public Builder setDeployPolicy(
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder builderForValue) {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          deployPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public Builder mergeDeployPolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy value) {
+        if (deployPolicyBuilder_ == null) {
+          if (deployPolicy_ != null) {
+            deployPolicy_ =
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.newBuilder(deployPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            deployPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          deployPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public Builder clearDeployPolicy() {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = null;
+          onChanged();
+        } else {
+          deployPolicy_ = null;
+          deployPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder getDeployPolicyBuilder() {
+        
+        onChanged();
+        return getDeployPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder() {
+        if (deployPolicyBuilder_ != null) {
+          return deployPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return deployPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder> 
+          getDeployPolicyFieldBuilder() {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder>(
+                  getDeployPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          deployPolicy_ = null;
+        }
+        return deployPolicyBuilder_;
+      }
+
       private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec.Builder, yandex.cloud.api.k8s.v1.Version.UpdateVersionSpecOrBuilder> versionBuilder_;
@@ -9308,9 +9577,9 @@ public final class NodeGroupServiceOuterClass {
 
       private com.google.protobuf.LazyStringList allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAllowedUnsafeSysctlsIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
           allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList(allowedUnsafeSysctls_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
       /**
@@ -9413,7 +9682,7 @@ public final class NodeGroupServiceOuterClass {
        */
       public Builder clearAllowedUnsafeSysctls() {
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -9439,9 +9708,9 @@ public final class NodeGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint> nodeTaints_ =
         java.util.Collections.emptyList();
       private void ensureNodeTaintsIsMutable() {
-        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
           nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint>(nodeTaints_);
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
          }
       }
 
@@ -9635,7 +9904,7 @@ public final class NodeGroupServiceOuterClass {
       public Builder clearNodeTaints() {
         if (nodeTaintsBuilder_ == null) {
           nodeTaints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
         } else {
           nodeTaintsBuilder_.clear();
@@ -9740,7 +10009,7 @@ public final class NodeGroupServiceOuterClass {
           nodeTaintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeOuterClass.Taint, yandex.cloud.api.k8s.v1.NodeOuterClass.Taint.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.TaintOrBuilder>(
                   nodeTaints_,
-                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  ((bitField0_ & 0x00001000) == 0x00001000),
                   getParentForChildren(),
                   isClean());
           nodeTaints_ = null;
@@ -10730,6 +10999,34 @@ public final class NodeGroupServiceOuterClass {
 
     /**
      * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    boolean hasDeployPolicy();
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy();
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder();
+
+    /**
+     * <pre>
      * Version of Kubernetes components that runs on the nodes.
      * </pre>
      *
@@ -11040,33 +11337,46 @@ public final class NodeGroupServiceOuterClass {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                 allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000400;
               }
               allowedUnsafeSysctls_.add(s);
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
                 nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               nodeTaints_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.Taint.parser(), extensionRegistry));
               break;
             }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
                 nodeLabels_ = com.google.protobuf.MapField.newMapField(
                     NodeLabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000800;
+                mutable_bitField0_ |= 0x00001000;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               nodeLabels__ = input.readMessage(
                   NodeLabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               nodeLabels_.getMutableMap().put(
                   nodeLabels__.getKey(), nodeLabels__.getValue());
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder subBuilder = null;
+              if (deployPolicy_ != null) {
+                subBuilder = deployPolicy_.toBuilder();
+              }
+              deployPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deployPolicy_);
+                deployPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -11084,10 +11394,10 @@ public final class NodeGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
         }
         this.unknownFields = unknownFields.build();
@@ -11443,6 +11753,42 @@ public final class NodeGroupServiceOuterClass {
       return getAllocationPolicy();
     }
 
+    public static final int DEPLOY_POLICY_FIELD_NUMBER = 13;
+    private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy deployPolicy_;
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    public boolean hasDeployPolicy() {
+      return deployPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy() {
+      return deployPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+    }
+    /**
+     * <pre>
+     * Deploy policy according to which the updates are rolled out. If not specified,
+     * the default is used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder() {
+      return getDeployPolicy();
+    }
+
     public static final int VERSION_FIELD_NUMBER = 8;
     private volatile java.lang.Object version_;
     /**
@@ -11766,6 +12112,9 @@ public final class NodeGroupServiceOuterClass {
           internalGetNodeLabels(),
           NodeLabelsDefaultEntryHolder.defaultEntry,
           12);
+      if (deployPolicy_ != null) {
+        output.writeMessage(13, getDeployPolicy());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11835,6 +12184,10 @@ public final class NodeGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, nodeLabels__);
       }
+      if (deployPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getDeployPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11873,6 +12226,11 @@ public final class NodeGroupServiceOuterClass {
       if (hasAllocationPolicy()) {
         result = result && getAllocationPolicy()
             .equals(other.getAllocationPolicy());
+      }
+      result = result && (hasDeployPolicy() == other.hasDeployPolicy());
+      if (hasDeployPolicy()) {
+        result = result && getDeployPolicy()
+            .equals(other.getDeployPolicy());
       }
       result = result && getVersion()
           .equals(other.getVersion());
@@ -11919,6 +12277,10 @@ public final class NodeGroupServiceOuterClass {
       if (hasAllocationPolicy()) {
         hash = (37 * hash) + ALLOCATION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getAllocationPolicy().hashCode();
+      }
+      if (hasDeployPolicy()) {
+        hash = (37 * hash) + DEPLOY_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getDeployPolicy().hashCode();
       }
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
@@ -12123,6 +12485,12 @@ public final class NodeGroupServiceOuterClass {
           allocationPolicy_ = null;
           allocationPolicyBuilder_ = null;
         }
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = null;
+        } else {
+          deployPolicy_ = null;
+          deployPolicyBuilder_ = null;
+        }
         version_ = "";
 
         if (maintenancePolicyBuilder_ == null) {
@@ -12132,10 +12500,10 @@ public final class NodeGroupServiceOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         if (nodeTaintsBuilder_ == null) {
           nodeTaints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
           nodeTaintsBuilder_.clear();
         }
@@ -12188,21 +12556,26 @@ public final class NodeGroupServiceOuterClass {
         } else {
           result.allocationPolicy_ = allocationPolicyBuilder_.build();
         }
+        if (deployPolicyBuilder_ == null) {
+          result.deployPolicy_ = deployPolicy_;
+        } else {
+          result.deployPolicy_ = deployPolicyBuilder_.build();
+        }
         result.version_ = version_;
         if (maintenancePolicyBuilder_ == null) {
           result.maintenancePolicy_ = maintenancePolicy_;
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
           allowedUnsafeSysctls_ = allowedUnsafeSysctls_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.allowedUnsafeSysctls_ = allowedUnsafeSysctls_;
         if (nodeTaintsBuilder_ == null) {
-          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
             nodeTaints_ = java.util.Collections.unmodifiableList(nodeTaints_);
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           }
           result.nodeTaints_ = nodeTaints_;
         } else {
@@ -12282,6 +12655,9 @@ public final class NodeGroupServiceOuterClass {
         if (other.hasAllocationPolicy()) {
           mergeAllocationPolicy(other.getAllocationPolicy());
         }
+        if (other.hasDeployPolicy()) {
+          mergeDeployPolicy(other.getDeployPolicy());
+        }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
           onChanged();
@@ -12292,7 +12668,7 @@ public final class NodeGroupServiceOuterClass {
         if (!other.allowedUnsafeSysctls_.isEmpty()) {
           if (allowedUnsafeSysctls_.isEmpty()) {
             allowedUnsafeSysctls_ = other.allowedUnsafeSysctls_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureAllowedUnsafeSysctlsIsMutable();
             allowedUnsafeSysctls_.addAll(other.allowedUnsafeSysctls_);
@@ -12303,7 +12679,7 @@ public final class NodeGroupServiceOuterClass {
           if (!other.nodeTaints_.isEmpty()) {
             if (nodeTaints_.isEmpty()) {
               nodeTaints_ = other.nodeTaints_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
             } else {
               ensureNodeTaintsIsMutable();
               nodeTaints_.addAll(other.nodeTaints_);
@@ -12316,7 +12692,7 @@ public final class NodeGroupServiceOuterClass {
               nodeTaintsBuilder_.dispose();
               nodeTaintsBuilder_ = null;
               nodeTaints_ = other.nodeTaints_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
               nodeTaintsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNodeTaintsFieldBuilder() : null;
@@ -13244,6 +13620,168 @@ public final class NodeGroupServiceOuterClass {
         return allocationPolicyBuilder_;
       }
 
+      private yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy deployPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder> deployPolicyBuilder_;
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public boolean hasDeployPolicy() {
+        return deployPolicyBuilder_ != null || deployPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy getDeployPolicy() {
+        if (deployPolicyBuilder_ == null) {
+          return deployPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+        } else {
+          return deployPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public Builder setDeployPolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy value) {
+        if (deployPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deployPolicy_ = value;
+          onChanged();
+        } else {
+          deployPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public Builder setDeployPolicy(
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder builderForValue) {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          deployPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public Builder mergeDeployPolicy(yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy value) {
+        if (deployPolicyBuilder_ == null) {
+          if (deployPolicy_ != null) {
+            deployPolicy_ =
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.newBuilder(deployPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            deployPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          deployPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public Builder clearDeployPolicy() {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicy_ = null;
+          onChanged();
+        } else {
+          deployPolicy_ = null;
+          deployPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder getDeployPolicyBuilder() {
+        
+        onChanged();
+        return getDeployPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder getDeployPolicyOrBuilder() {
+        if (deployPolicyBuilder_ != null) {
+          return deployPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return deployPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.getDefaultInstance() : deployPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Deploy policy according to which the updates are rolled out. If not specified,
+       * the default is used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.DeployPolicy deploy_policy = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder> 
+          getDeployPolicyFieldBuilder() {
+        if (deployPolicyBuilder_ == null) {
+          deployPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicy.Builder, yandex.cloud.api.k8s.v1.NodeGroupOuterClass.DeployPolicyOrBuilder>(
+                  getDeployPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          deployPolicy_ = null;
+        }
+        return deployPolicyBuilder_;
+      }
+
       private java.lang.Object version_ = "";
       /**
        * <pre>
@@ -13488,9 +14026,9 @@ public final class NodeGroupServiceOuterClass {
 
       private com.google.protobuf.LazyStringList allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureAllowedUnsafeSysctlsIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
           allowedUnsafeSysctls_ = new com.google.protobuf.LazyStringArrayList(allowedUnsafeSysctls_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
          }
       }
       /**
@@ -13593,7 +14131,7 @@ public final class NodeGroupServiceOuterClass {
        */
       public Builder clearAllowedUnsafeSysctls() {
         allowedUnsafeSysctls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -13619,9 +14157,9 @@ public final class NodeGroupServiceOuterClass {
       private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint> nodeTaints_ =
         java.util.Collections.emptyList();
       private void ensureNodeTaintsIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
           nodeTaints_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.Taint>(nodeTaints_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
 
@@ -13815,7 +14353,7 @@ public final class NodeGroupServiceOuterClass {
       public Builder clearNodeTaints() {
         if (nodeTaintsBuilder_ == null) {
           nodeTaints_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
           onChanged();
         } else {
           nodeTaintsBuilder_.clear();
@@ -13920,7 +14458,7 @@ public final class NodeGroupServiceOuterClass {
           nodeTaintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.k8s.v1.NodeOuterClass.Taint, yandex.cloud.api.k8s.v1.NodeOuterClass.Taint.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.TaintOrBuilder>(
                   nodeTaints_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000800) == 0x00000800),
                   getParentForChildren(),
                   isClean());
           nodeTaints_ = null;
@@ -17572,7 +18110,7 @@ public final class NodeGroupServiceOuterClass {
       "age_token\030\002 \001(\t\"5\n\026DeleteNodeGroupReques" +
       "t\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\"0\n\027Delete" +
       "NodeGroupMetadata\022\025\n\rnode_group_id\030\001 \001(\t" +
-      "\"\333\007\n\026UpdateNodeGroupRequest\022\033\n\rnode_grou" +
+      "\"\225\010\n\026UpdateNodeGroupRequest\022\033\n\rnode_grou" +
       "p_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032." +
       "google.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB" +
       "!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013de" +
@@ -17584,86 +18122,89 @@ public final class NodeGroupServiceOuterClass {
       "oud.k8s.v1.NodeTemplate\0226\n\014scale_policy\030" +
       "\006 \001(\0132 .yandex.cloud.k8s.v1.ScalePolicy\022" +
       "I\n\021allocation_policy\030\t \001(\0132..yandex.clou" +
-      "d.k8s.v1.NodeGroupAllocationPolicy\0227\n\007ve" +
-      "rsion\030\n \001(\0132&.yandex.cloud.k8s.v1.Update" +
-      "VersionSpec\022K\n\022maintenance_policy\030\013 \001(\0132" +
-      "/.yandex.cloud.k8s.v1.NodeGroupMaintenan" +
-      "cePolicy\022o\n\026allowed_unsafe_sysctls\030\014 \003(\t" +
-      "BO\212\3101\005<=253\362\3071B([a-z0-9]([-_a-z0-9]*[a-z" +
-      "0-9])?\\.)*([a-z0-9][-_a-z0-9]*)?[a-z0-9*" +
-      "]\022/\n\013node_taints\030\r \003(\0132\032.yandex.cloud.k8" +
-      "s.v1.Taint\022P\n\013node_labels\030\016 \003(\0132;.yandex" +
-      ".cloud.k8s.v1.UpdateNodeGroupRequest.Nod" +
-      "eLabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017NodeLabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\027Update" +
-      "NodeGroupMetadata\022\033\n\rnode_group_id\030\001 \001(\t" +
-      "B\004\350\3071\001\"\213\007\n\026CreateNodeGroupRequest\022\030\n\nclu" +
-      "ster_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descript" +
-      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\004 \003(\01327." +
-      "yandex.cloud.k8s.v1.CreateNodeGroupReque" +
-      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
-      ">\n\rnode_template\030\005 \001(\0132!.yandex.cloud.k8" +
-      "s.v1.NodeTemplateB\004\350\3071\001\022<\n\014scale_policy\030" +
-      "\006 \001(\0132 .yandex.cloud.k8s.v1.ScalePolicyB" +
-      "\004\350\3071\001\022I\n\021allocation_policy\030\007 \001(\0132..yande" +
-      "x.cloud.k8s.v1.NodeGroupAllocationPolicy" +
-      "\022\017\n\007version\030\010 \001(\t\022K\n\022maintenance_policy\030" +
-      "\t \001(\0132/.yandex.cloud.k8s.v1.NodeGroupMai" +
-      "ntenancePolicy\022o\n\026allowed_unsafe_sysctls" +
-      "\030\n \003(\tBO\212\3101\005<=253\362\3071B([a-z0-9]([-_a-z0-9" +
-      "]*[a-z0-9])?\\.)*([a-z0-9][-_a-z0-9]*)?[a" +
-      "-z0-9*]\022/\n\013node_taints\030\013 \003(\0132\032.yandex.cl" +
-      "oud.k8s.v1.Taint\022P\n\013node_labels\030\014 \003(\0132;." +
-      "yandex.cloud.k8s.v1.CreateNodeGroupReque" +
-      "st.NodeLabelsEntry\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017NodeLabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027" +
-      "CreateNodeGroupMetadata\022\025\n\rnode_group_id" +
-      "\030\001 \001(\t\"5\n\034AutoUpgradeNodeGroupMetadata\022\025" +
-      "\n\rnode_group_id\030\001 \001(\t\"\227\001\n\036ListNodeGroupO" +
-      "perationsRequest\022\033\n\rnode_group_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 " +
-      "\001(\tB\n\212\3101\006<=1000\"q\n\037ListNodeGroupOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t2\301\t\n\020NodeGroupService\022\212\001\n\003Get\022" +
-      "(.yandex.cloud.k8s.v1.GetNodeGroupReques" +
-      "t\032\036.yandex.cloud.k8s.v1.NodeGroup\"9\202\323\344\223\002" +
-      "3\0221/managed-kubernetes/v1/nodeGroups/{no" +
-      "de_group_id}\022\212\001\n\004List\022*.yandex.cloud.k8s" +
-      ".v1.ListNodeGroupsRequest\032+.yandex.cloud" +
-      ".k8s.v1.ListNodeGroupsResponse\")\202\323\344\223\002#\022!" +
-      "/managed-kubernetes/v1/nodeGroups\022\256\001\n\006Cr" +
-      "eate\022+.yandex.cloud.k8s.v1.CreateNodeGro" +
-      "upRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"T\202\323\344\223\002&\"!/managed-kubernetes/v1/nod" +
-      "eGroups:\001*\262\322*$\n\027CreateNodeGroupMetadata\022" +
-      "\tNodeGroup\022\276\001\n\006Update\022+.yandex.cloud.k8s" +
-      ".v1.UpdateNodeGroupRequest\032!.yandex.clou" +
-      "d.operation.Operation\"d\202\323\344\223\002621/managed-" +
-      "kubernetes/v1/nodeGroups/{node_group_id}" +
-      ":\001*\262\322*$\n\027UpdateNodeGroupMetadata\022\tNodeGr" +
-      "oup\022\307\001\n\006Delete\022+.yandex.cloud.k8s.v1.Del" +
-      "eteNodeGroupRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"m\202\323\344\223\0023*1/managed-kuberne" +
-      "tes/v1/nodeGroups/{node_group_id}\262\322*0\n\027D" +
-      "eleteNodeGroupMetadata\022\025google.protobuf." +
-      "Empty\022\301\001\n\016ListOperations\0223.yandex.cloud." +
-      "k8s.v1.ListNodeGroupOperationsRequest\0324." +
-      "yandex.cloud.k8s.v1.ListNodeGroupOperati" +
-      "onsResponse\"D\202\323\344\223\002>\022</managed-kubernetes" +
-      "/v1/nodeGroups/{node_group_id}/operation" +
-      "s\022\222\001\n\tListNodes\022..yandex.cloud.k8s.v1.Li" +
-      "stNodeGroupNodesRequest\032/.yandex.cloud.k" +
-      "8s.v1.ListNodeGroupNodesResponse\"$\202\323\344\223\002\036" +
-      "\022\034/managed-kubernetes/v1/nodesBV\n\027yandex" +
-      ".cloud.api.k8s.v1Z;github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/k8s/v1;k8sb\006" +
-      "proto3"
+      "d.k8s.v1.NodeGroupAllocationPolicy\0228\n\rde" +
+      "ploy_policy\030\017 \001(\0132!.yandex.cloud.k8s.v1." +
+      "DeployPolicy\0227\n\007version\030\n \001(\0132&.yandex.c" +
+      "loud.k8s.v1.UpdateVersionSpec\022K\n\022mainten" +
+      "ance_policy\030\013 \001(\0132/.yandex.cloud.k8s.v1." +
+      "NodeGroupMaintenancePolicy\022o\n\026allowed_un" +
+      "safe_sysctls\030\014 \003(\tBO\212\3101\005<=253\362\3071B([a-z0-" +
+      "9]([-_a-z0-9]*[a-z0-9])?\\.)*([a-z0-9][-_" +
+      "a-z0-9]*)?[a-z0-9*]\022/\n\013node_taints\030\r \003(\013" +
+      "2\032.yandex.cloud.k8s.v1.Taint\022P\n\013node_lab" +
+      "els\030\016 \003(\0132;.yandex.cloud.k8s.v1.UpdateNo" +
+      "deGroupRequest.NodeLabelsEntry\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n" +
+      "\017NodeLabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"6\n\027UpdateNodeGroupMetadata\022\033\n\rn" +
+      "ode_group_id\030\001 \001(\tB\004\350\3071\001\"\305\007\n\026CreateNodeG" +
+      "roupRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
+      "\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a" +
+      "-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\210" +
+      "\001\n\006labels\030\004 \003(\01327.yandex.cloud.k8s.v1.Cr" +
+      "eateNodeGroupRequest.LabelsEntryB?\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
+      "\020[a-z][-_0-9a-z]*\022>\n\rnode_template\030\005 \001(\013" +
+      "2!.yandex.cloud.k8s.v1.NodeTemplateB\004\350\3071" +
+      "\001\022<\n\014scale_policy\030\006 \001(\0132 .yandex.cloud.k" +
+      "8s.v1.ScalePolicyB\004\350\3071\001\022I\n\021allocation_po" +
+      "licy\030\007 \001(\0132..yandex.cloud.k8s.v1.NodeGro" +
+      "upAllocationPolicy\0228\n\rdeploy_policy\030\r \001(" +
+      "\0132!.yandex.cloud.k8s.v1.DeployPolicy\022\017\n\007" +
+      "version\030\010 \001(\t\022K\n\022maintenance_policy\030\t \001(" +
+      "\0132/.yandex.cloud.k8s.v1.NodeGroupMainten" +
+      "ancePolicy\022o\n\026allowed_unsafe_sysctls\030\n \003" +
+      "(\tBO\212\3101\005<=253\362\3071B([a-z0-9]([-_a-z0-9]*[a" +
+      "-z0-9])?\\.)*([a-z0-9][-_a-z0-9]*)?[a-z0-" +
+      "9*]\022/\n\013node_taints\030\013 \003(\0132\032.yandex.cloud." +
+      "k8s.v1.Taint\022P\n\013node_labels\030\014 \003(\0132;.yand" +
+      "ex.cloud.k8s.v1.CreateNodeGroupRequest.N" +
+      "odeLabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017NodeLabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027Crea" +
+      "teNodeGroupMetadata\022\025\n\rnode_group_id\030\001 \001" +
+      "(\t\"5\n\034AutoUpgradeNodeGroupMetadata\022\025\n\rno" +
+      "de_group_id\030\001 \001(\t\"\227\001\n\036ListNodeGroupOpera" +
+      "tionsRequest\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB" +
+      "\n\212\3101\006<=1000\"q\n\037ListNodeGroupOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t2\301\t\n\020NodeGroupService\022\212\001\n\003Get\022(.ya" +
+      "ndex.cloud.k8s.v1.GetNodeGroupRequest\032\036." +
+      "yandex.cloud.k8s.v1.NodeGroup\"9\202\323\344\223\0023\0221/" +
+      "managed-kubernetes/v1/nodeGroups/{node_g" +
+      "roup_id}\022\212\001\n\004List\022*.yandex.cloud.k8s.v1." +
+      "ListNodeGroupsRequest\032+.yandex.cloud.k8s" +
+      ".v1.ListNodeGroupsResponse\")\202\323\344\223\002#\022!/man" +
+      "aged-kubernetes/v1/nodeGroups\022\256\001\n\006Create" +
+      "\022+.yandex.cloud.k8s.v1.CreateNodeGroupRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"T\202\323\344\223\002&\"!/managed-kubernetes/v1/nodeGro" +
+      "ups:\001*\262\322*$\n\027CreateNodeGroupMetadata\022\tNod" +
+      "eGroup\022\276\001\n\006Update\022+.yandex.cloud.k8s.v1." +
+      "UpdateNodeGroupRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"d\202\323\344\223\002621/managed-kube" +
+      "rnetes/v1/nodeGroups/{node_group_id}:\001*\262" +
+      "\322*$\n\027UpdateNodeGroupMetadata\022\tNodeGroup\022" +
+      "\307\001\n\006Delete\022+.yandex.cloud.k8s.v1.DeleteN" +
+      "odeGroupRequest\032!.yandex.cloud.operation" +
+      ".Operation\"m\202\323\344\223\0023*1/managed-kubernetes/" +
+      "v1/nodeGroups/{node_group_id}\262\322*0\n\027Delet" +
+      "eNodeGroupMetadata\022\025google.protobuf.Empt" +
+      "y\022\301\001\n\016ListOperations\0223.yandex.cloud.k8s." +
+      "v1.ListNodeGroupOperationsRequest\0324.yand" +
+      "ex.cloud.k8s.v1.ListNodeGroupOperationsR" +
+      "esponse\"D\202\323\344\223\002>\022</managed-kubernetes/v1/" +
+      "nodeGroups/{node_group_id}/operations\022\222\001" +
+      "\n\tListNodes\022..yandex.cloud.k8s.v1.ListNo" +
+      "deGroupNodesRequest\032/.yandex.cloud.k8s.v" +
+      "1.ListNodeGroupNodesResponse\"$\202\323\344\223\002\036\022\034/m" +
+      "anaged-kubernetes/v1/nodesBV\n\027yandex.clo" +
+      "ud.api.k8s.v1Z;github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/k8s/v1;k8sb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17732,7 +18273,7 @@ public final class NodeGroupServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_UpdateNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_UpdateNodeGroupRequest_descriptor,
-        new java.lang.String[] { "NodeGroupId", "UpdateMask", "Name", "Description", "Labels", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "Version", "MaintenancePolicy", "AllowedUnsafeSysctls", "NodeTaints", "NodeLabels", });
+        new java.lang.String[] { "NodeGroupId", "UpdateMask", "Name", "Description", "Labels", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "DeployPolicy", "Version", "MaintenancePolicy", "AllowedUnsafeSysctls", "NodeTaints", "NodeLabels", });
     internal_static_yandex_cloud_k8s_v1_UpdateNodeGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_UpdateNodeGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_UpdateNodeGroupRequest_LabelsEntry_fieldAccessorTable = new
@@ -17756,7 +18297,7 @@ public final class NodeGroupServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_CreateNodeGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_CreateNodeGroupRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "Name", "Description", "Labels", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "Version", "MaintenancePolicy", "AllowedUnsafeSysctls", "NodeTaints", "NodeLabels", });
+        new java.lang.String[] { "ClusterId", "Name", "Description", "Labels", "NodeTemplate", "ScalePolicy", "AllocationPolicy", "DeployPolicy", "Version", "MaintenancePolicy", "AllowedUnsafeSysctls", "NodeTaints", "NodeLabels", });
     internal_static_yandex_cloud_k8s_v1_CreateNodeGroupRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_CreateNodeGroupRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_CreateNodeGroupRequest_LabelsEntry_fieldAccessorTable = new
