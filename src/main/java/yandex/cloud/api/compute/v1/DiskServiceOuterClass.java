@@ -2970,7 +2970,7 @@ public final class DiskServiceOuterClass {
      * [yandex.cloud.compute.v1.Image.min_disk_size] value.
      * </pre>
      *
-     * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-28587302322176"];</code>
      */
     long getSize();
 
@@ -3010,6 +3010,15 @@ public final class DiskServiceOuterClass {
     com.google.protobuf.ByteString
         getSnapshotIdBytes();
 
+    /**
+     * <pre>
+     * Block size used for disk, specified in bytes. The default is 4096.
+     * </pre>
+     *
+     * <code>int64 block_size = 10;</code>
+     */
+    long getBlockSize();
+
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest.SourceCase getSourceCase();
   }
   /**
@@ -3031,6 +3040,7 @@ public final class DiskServiceOuterClass {
       typeId_ = "";
       zoneId_ = "";
       size_ = 0L;
+      blockSize_ = 0L;
     }
 
     @java.lang.Override
@@ -3115,6 +3125,11 @@ public final class DiskServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
               sourceCase_ = 9;
               source_ = s;
+              break;
+            }
+            case 80: {
+
+              blockSize_ = input.readInt64();
               break;
             }
             default: {
@@ -3517,7 +3532,7 @@ public final class DiskServiceOuterClass {
      * [yandex.cloud.compute.v1.Image.min_disk_size] value.
      * </pre>
      *
-     * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-4398046511104"];</code>
+     * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-28587302322176"];</code>
      */
     public long getSize() {
       return size_;
@@ -3625,6 +3640,19 @@ public final class DiskServiceOuterClass {
       }
     }
 
+    public static final int BLOCK_SIZE_FIELD_NUMBER = 10;
+    private long blockSize_;
+    /**
+     * <pre>
+     * Block size used for disk, specified in bytes. The default is 4096.
+     * </pre>
+     *
+     * <code>int64 block_size = 10;</code>
+     */
+    public long getBlockSize() {
+      return blockSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3668,6 +3696,9 @@ public final class DiskServiceOuterClass {
       }
       if (sourceCase_ == 9) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, source_);
+      }
+      if (blockSize_ != 0L) {
+        output.writeInt64(10, blockSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -3713,6 +3744,10 @@ public final class DiskServiceOuterClass {
       if (sourceCase_ == 9) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, source_);
       }
+      if (blockSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, blockSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3743,6 +3778,8 @@ public final class DiskServiceOuterClass {
           .equals(other.getZoneId());
       result = result && (getSize()
           == other.getSize());
+      result = result && (getBlockSize()
+          == other.getBlockSize());
       result = result && getSourceCase().equals(
           other.getSourceCase());
       if (!result) return false;
@@ -3786,6 +3823,9 @@ public final class DiskServiceOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      hash = (37 * hash) + BLOCK_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockSize());
       switch (sourceCase_) {
         case 8:
           hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
@@ -3966,6 +4006,8 @@ public final class DiskServiceOuterClass {
 
         size_ = 0L;
 
+        blockSize_ = 0L;
+
         sourceCase_ = 0;
         source_ = null;
         return this;
@@ -4010,6 +4052,7 @@ public final class DiskServiceOuterClass {
         if (sourceCase_ == 9) {
           result.source_ = source_;
         }
+        result.blockSize_ = blockSize_;
         result.bitField0_ = to_bitField0_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
@@ -4084,6 +4127,9 @@ public final class DiskServiceOuterClass {
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (other.getBlockSize() != 0L) {
+          setBlockSize(other.getBlockSize());
         }
         switch (other.getSourceCase()) {
           case IMAGE_ID: {
@@ -4766,7 +4812,7 @@ public final class DiskServiceOuterClass {
        * [yandex.cloud.compute.v1.Image.min_disk_size] value.
        * </pre>
        *
-       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-28587302322176"];</code>
        */
       public long getSize() {
         return size_;
@@ -4778,7 +4824,7 @@ public final class DiskServiceOuterClass {
        * [yandex.cloud.compute.v1.Image.min_disk_size] value.
        * </pre>
        *
-       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-28587302322176"];</code>
        */
       public Builder setSize(long value) {
         
@@ -4793,7 +4839,7 @@ public final class DiskServiceOuterClass {
        * [yandex.cloud.compute.v1.Image.min_disk_size] value.
        * </pre>
        *
-       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-4398046511104"];</code>
+       * <code>int64 size = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "4194304-28587302322176"];</code>
        */
       public Builder clearSize() {
         
@@ -4998,6 +5044,44 @@ public final class DiskServiceOuterClass {
   checkByteStringIsUtf8(value);
         sourceCase_ = 9;
         source_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long blockSize_ ;
+      /**
+       * <pre>
+       * Block size used for disk, specified in bytes. The default is 4096.
+       * </pre>
+       *
+       * <code>int64 block_size = 10;</code>
+       */
+      public long getBlockSize() {
+        return blockSize_;
+      }
+      /**
+       * <pre>
+       * Block size used for disk, specified in bytes. The default is 4096.
+       * </pre>
+       *
+       * <code>int64 block_size = 10;</code>
+       */
+      public Builder setBlockSize(long value) {
+        
+        blockSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Block size used for disk, specified in bytes. The default is 4096.
+       * </pre>
+       *
+       * <code>int64 block_size = 10;</code>
+       */
+      public Builder clearBlockSize() {
+        
+        blockSize_ = 0L;
         onChanged();
         return this;
       }
@@ -11125,7 +11209,7 @@ public final class DiskServiceOuterClass {
       "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"Z\n\021ListDisks" +
       "Response\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.c" +
       "ompute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\371\003\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "\216\004\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
       "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
       "n\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.ya" +
@@ -11133,57 +11217,58 @@ public final class DiskServiceOuterClass {
       "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
       "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
       "-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_" +
-      "id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\004size\030\007 \001(\003B\035\350\307" +
-      "1\001\372\3071\0254194304-4398046511104\022\034\n\010image_id\030" +
-      "\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010" +
-      "\212\3101\004<=50H\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDis" +
-      "kMetadata\022\017\n\007disk_id\030\001 \001(\t\"\241\003\n\021UpdateDis" +
-      "kRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z" +
-      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(" +
-      "\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex.c" +
-      "loud.compute.v1.UpdateDiskRequest.Labels" +
-      "EntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z" +
-      "]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\'" +
-      "\n\004size\030\006 \001(\003B\031\372\3071\0254194304-4398046511104\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030" +
-      "\001 \001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022" +
-      "\017\n\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperationsRe" +
-      "quest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\213\007\n\013DiskService\022r\n\003Get\022\'.yandex" +
-      ".cloud.compute.v1.GetDiskRequest\032\035.yande" +
-      "x.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/comput" +
-      "e/v1/disks/{disk_id}\022x\n\004List\022).yandex.cl" +
-      "oud.compute.v1.ListDisksRequest\032*.yandex" +
-      ".cloud.compute.v1.ListDisksResponse\"\031\202\323\344" +
-      "\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*.yand" +
-      "ex.cloud.compute.v1.CreateDiskRequest\032!." +
-      "yandex.cloud.operation.Operation\":\202\323\344\223\002\026" +
-      "\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDiskMe" +
-      "tadata\022\004Disk\022\235\001\n\006Update\022*.yandex.cloud.c" +
-      "ompute.v1.UpdateDiskRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"D\202\323\344\223\002 2\033/compute" +
-      "/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDiskMe" +
-      "tadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.cloud.c" +
-      "ompute.v1.DeleteDiskRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"R\202\323\344\223\002\035*\033/compute" +
-      "/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskMetad" +
-      "ata\022\025google.protobuf.Empty\022\251\001\n\016ListOpera" +
-      "tions\0222.yandex.cloud.compute.v1.ListDisk" +
-      "OperationsRequest\0323.yandex.cloud.compute" +
-      ".v1.ListDiskOperationsResponse\".\202\323\344\223\002(\022&" +
-      "/compute/v1/disks/{disk_id}/operationsBb" +
-      "\n\033yandex.cloud.api.compute.v1ZCgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "compute/v1;computeb\006proto3"
+      "id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B\036\350\307" +
+      "1\001\372\3071\0264194304-28587302322176\022\034\n\010image_id" +
+      "\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB" +
+      "\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010" +
+      "\n\006source\"%\n\022CreateDiskMetadata\022\017\n\007disk_i" +
+      "d\030\001 \001(\t\"\241\003\n\021UpdateDiskRequest\022\035\n\007disk_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\0222\n\004name\030\003 " +
+      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
+      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\217\001\n\006la" +
+      "bels\030\005 \003(\01326.yandex.cloud.compute.v1.Upd" +
+      "ateDiskRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004" +
+      "<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[" +
+      "a-z][-_./\\@0-9a-z]*\022\'\n\004size\030\006 \001(\003B\031\372\3071\0254" +
+      "194304-4398046511104\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"%\n\022UpdateDis" +
+      "kMetadata\022\017\n\007disk_id\030\001 \001(\t\"2\n\021DeleteDisk" +
+      "Request\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"%" +
+      "\n\022DeleteDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\"x\n" +
+      "\031ListDiskOperationsRequest\022\035\n\007disk_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
+      "l\n\032ListDiskOperationsResponse\0225\n\noperati" +
+      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
+      "tion\022\027\n\017next_page_token\030\002 \001(\t2\213\007\n\013DiskSe" +
+      "rvice\022r\n\003Get\022\'.yandex.cloud.compute.v1.G" +
+      "etDiskRequest\032\035.yandex.cloud.compute.v1." +
+      "Disk\"#\202\323\344\223\002\035\022\033/compute/v1/disks/{disk_id" +
+      "}\022x\n\004List\022).yandex.cloud.compute.v1.List" +
+      "DisksRequest\032*.yandex.cloud.compute.v1.L" +
+      "istDisksResponse\"\031\202\323\344\223\002\023\022\021/compute/v1/di" +
+      "sks\022\223\001\n\006Create\022*.yandex.cloud.compute.v1" +
+      ".CreateDiskRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\":\202\323\344\223\002\026\"\021/compute/v1/disks" +
+      ":\001*\262\322*\032\n\022CreateDiskMetadata\022\004Disk\022\235\001\n\006Up" +
+      "date\022*.yandex.cloud.compute.v1.UpdateDis" +
+      "kRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"D\202\323\344\223\002 2\033/compute/v1/disks/{disk_id}" +
+      ":\001*\262\322*\032\n\022UpdateDiskMetadata\022\004Disk\022\253\001\n\006De" +
+      "lete\022*.yandex.cloud.compute.v1.DeleteDis" +
+      "kRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"R\202\323\344\223\002\035*\033/compute/v1/disks/{disk_id}" +
+      "\262\322*+\n\022DeleteDiskMetadata\022\025google.protobu" +
+      "f.Empty\022\251\001\n\016ListOperations\0222.yandex.clou" +
+      "d.compute.v1.ListDiskOperationsRequest\0323" +
+      ".yandex.cloud.compute.v1.ListDiskOperati" +
+      "onsResponse\".\202\323\344\223\002(\022&/compute/v1/disks/{" +
+      "disk_id}/operationsBb\n\033yandex.cloud.api." +
+      "compute.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/compute/v1;computeb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11226,7 +11311,7 @@ public final class DiskServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "Source", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "BlockSize", "Source", });
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_fieldAccessorTable = new

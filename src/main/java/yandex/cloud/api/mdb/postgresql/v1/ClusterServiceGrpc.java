@@ -414,6 +414,38 @@ public final class ClusterServiceGrpc {
      return getListLogsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+      yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamLogs",
+      requestType = yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.class,
+      responseType = yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+      yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod;
+    if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
+          ClusterServiceGrpc.getStreamLogsMethod = getStreamLogsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.postgresql.v1.ClusterService", "StreamLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StreamLogs"))
+                  .build();
+          }
+        }
+     }
+     return getStreamLogsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
       yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
 
@@ -760,6 +792,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public void streamLogs(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> responseObserver) {
+      asyncUnimplementedUnaryCall(getStreamLogsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
@@ -904,6 +946,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
                 yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsResponse>(
                   this, METHODID_LIST_LOGS)))
+          .addMethod(
+            getStreamLogsMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
+                yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord>(
+                  this, METHODID_STREAM_LOGS)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
@@ -1103,6 +1152,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListLogsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public void streamLogs(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getStreamLogsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1313,6 +1373,17 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * </pre>
+     */
+    public java.util.Iterator<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord> streamLogs(
+        yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getStreamLogsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1610,12 +1681,13 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_RESTORE = 9;
   private static final int METHODID_START_FAILOVER = 10;
   private static final int METHODID_LIST_LOGS = 11;
-  private static final int METHODID_LIST_OPERATIONS = 12;
-  private static final int METHODID_LIST_BACKUPS = 13;
-  private static final int METHODID_LIST_HOSTS = 14;
-  private static final int METHODID_ADD_HOSTS = 15;
-  private static final int METHODID_DELETE_HOSTS = 16;
-  private static final int METHODID_UPDATE_HOSTS = 17;
+  private static final int METHODID_STREAM_LOGS = 12;
+  private static final int METHODID_LIST_OPERATIONS = 13;
+  private static final int METHODID_LIST_BACKUPS = 14;
+  private static final int METHODID_LIST_HOSTS = 15;
+  private static final int METHODID_ADD_HOSTS = 16;
+  private static final int METHODID_DELETE_HOSTS = 17;
+  private static final int METHODID_UPDATE_HOSTS = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1681,6 +1753,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_LOGS:
           serviceImpl.listLogs((yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsResponse>) responseObserver);
+          break;
+        case METHODID_STREAM_LOGS:
+          serviceImpl.streamLogs((yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,
@@ -1779,6 +1855,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getRestoreMethod())
               .addMethod(getStartFailoverMethod())
               .addMethod(getListLogsMethod())
+              .addMethod(getStreamLogsMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListBackupsMethod())
               .addMethod(getListHostsMethod())

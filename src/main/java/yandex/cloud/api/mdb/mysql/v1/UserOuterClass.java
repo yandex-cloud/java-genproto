@@ -2876,75 +2876,75 @@ public final class UserOuterClass {
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    boolean hasMaxQuestions();
+    boolean hasMaxQuestionsPerHour();
     /**
      * <pre>
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64Value getMaxQuestions();
+    com.google.protobuf.Int64Value getMaxQuestionsPerHour();
     /**
      * <pre>
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder();
+    com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsPerHourOrBuilder();
 
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    boolean hasMaxUpdates();
+    boolean hasMaxUpdatesPerHour();
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64Value getMaxUpdates();
+    com.google.protobuf.Int64Value getMaxUpdatesPerHour();
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder();
+    com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesPerHourOrBuilder();
 
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    boolean hasMaxConnections();
+    boolean hasMaxConnectionsPerHour();
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64Value getMaxConnections();
+    com.google.protobuf.Int64Value getMaxConnectionsPerHour();
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
+    com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsPerHourOrBuilder();
 
     /**
      * <pre>
@@ -3012,39 +3012,39 @@ public final class UserOuterClass {
               break;
             case 10: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (maxQuestions_ != null) {
-                subBuilder = maxQuestions_.toBuilder();
+              if (maxQuestionsPerHour_ != null) {
+                subBuilder = maxQuestionsPerHour_.toBuilder();
               }
-              maxQuestions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              maxQuestionsPerHour_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(maxQuestions_);
-                maxQuestions_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(maxQuestionsPerHour_);
+                maxQuestionsPerHour_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 18: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (maxUpdates_ != null) {
-                subBuilder = maxUpdates_.toBuilder();
+              if (maxUpdatesPerHour_ != null) {
+                subBuilder = maxUpdatesPerHour_.toBuilder();
               }
-              maxUpdates_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              maxUpdatesPerHour_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(maxUpdates_);
-                maxUpdates_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(maxUpdatesPerHour_);
+                maxUpdatesPerHour_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 26: {
               com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (maxConnections_ != null) {
-                subBuilder = maxConnections_.toBuilder();
+              if (maxConnectionsPerHour_ != null) {
+                subBuilder = maxConnectionsPerHour_.toBuilder();
               }
-              maxConnections_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              maxConnectionsPerHour_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(maxConnections_);
-                maxConnections_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(maxConnectionsPerHour_);
+                maxConnectionsPerHour_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3094,103 +3094,103 @@ public final class UserOuterClass {
               yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.class, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder.class);
     }
 
-    public static final int MAX_QUESTIONS_FIELD_NUMBER = 1;
-    private com.google.protobuf.Int64Value maxQuestions_;
+    public static final int MAX_QUESTIONS_PER_HOUR_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value maxQuestionsPerHour_;
     /**
      * <pre>
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public boolean hasMaxQuestions() {
-      return maxQuestions_ != null;
+    public boolean hasMaxQuestionsPerHour() {
+      return maxQuestionsPerHour_ != null;
     }
     /**
      * <pre>
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64Value getMaxQuestions() {
-      return maxQuestions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+    public com.google.protobuf.Int64Value getMaxQuestionsPerHour() {
+      return maxQuestionsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestionsPerHour_;
     }
     /**
      * <pre>
      * The maximum permitted number of user questions per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder() {
-      return getMaxQuestions();
+    public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsPerHourOrBuilder() {
+      return getMaxQuestionsPerHour();
     }
 
-    public static final int MAX_UPDATES_FIELD_NUMBER = 2;
-    private com.google.protobuf.Int64Value maxUpdates_;
+    public static final int MAX_UPDATES_PER_HOUR_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value maxUpdatesPerHour_;
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public boolean hasMaxUpdates() {
-      return maxUpdates_ != null;
+    public boolean hasMaxUpdatesPerHour() {
+      return maxUpdatesPerHour_ != null;
     }
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64Value getMaxUpdates() {
-      return maxUpdates_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+    public com.google.protobuf.Int64Value getMaxUpdatesPerHour() {
+      return maxUpdatesPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdatesPerHour_;
     }
     /**
      * <pre>
      * The maximum permitted number of user updates per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder() {
-      return getMaxUpdates();
+    public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesPerHourOrBuilder() {
+      return getMaxUpdatesPerHour();
     }
 
-    public static final int MAX_CONNECTIONS_FIELD_NUMBER = 3;
-    private com.google.protobuf.Int64Value maxConnections_;
+    public static final int MAX_CONNECTIONS_PER_HOUR_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value maxConnectionsPerHour_;
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public boolean hasMaxConnections() {
-      return maxConnections_ != null;
+    public boolean hasMaxConnectionsPerHour() {
+      return maxConnectionsPerHour_ != null;
     }
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64Value getMaxConnections() {
-      return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+    public com.google.protobuf.Int64Value getMaxConnectionsPerHour() {
+      return maxConnectionsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnectionsPerHour_;
     }
     /**
      * <pre>
      * The maximum permitted number of simultaneous client connections per hour.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
-      return getMaxConnections();
+    public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsPerHourOrBuilder() {
+      return getMaxConnectionsPerHour();
     }
 
     public static final int MAX_USER_CONNECTIONS_FIELD_NUMBER = 4;
@@ -3240,14 +3240,14 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (maxQuestions_ != null) {
-        output.writeMessage(1, getMaxQuestions());
+      if (maxQuestionsPerHour_ != null) {
+        output.writeMessage(1, getMaxQuestionsPerHour());
       }
-      if (maxUpdates_ != null) {
-        output.writeMessage(2, getMaxUpdates());
+      if (maxUpdatesPerHour_ != null) {
+        output.writeMessage(2, getMaxUpdatesPerHour());
       }
-      if (maxConnections_ != null) {
-        output.writeMessage(3, getMaxConnections());
+      if (maxConnectionsPerHour_ != null) {
+        output.writeMessage(3, getMaxConnectionsPerHour());
       }
       if (maxUserConnections_ != null) {
         output.writeMessage(4, getMaxUserConnections());
@@ -3261,17 +3261,17 @@ public final class UserOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (maxQuestions_ != null) {
+      if (maxQuestionsPerHour_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMaxQuestions());
+          .computeMessageSize(1, getMaxQuestionsPerHour());
       }
-      if (maxUpdates_ != null) {
+      if (maxUpdatesPerHour_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getMaxUpdates());
+          .computeMessageSize(2, getMaxUpdatesPerHour());
       }
-      if (maxConnections_ != null) {
+      if (maxConnectionsPerHour_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getMaxConnections());
+          .computeMessageSize(3, getMaxConnectionsPerHour());
       }
       if (maxUserConnections_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -3293,20 +3293,20 @@ public final class UserOuterClass {
       yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits other = (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits) obj;
 
       boolean result = true;
-      result = result && (hasMaxQuestions() == other.hasMaxQuestions());
-      if (hasMaxQuestions()) {
-        result = result && getMaxQuestions()
-            .equals(other.getMaxQuestions());
+      result = result && (hasMaxQuestionsPerHour() == other.hasMaxQuestionsPerHour());
+      if (hasMaxQuestionsPerHour()) {
+        result = result && getMaxQuestionsPerHour()
+            .equals(other.getMaxQuestionsPerHour());
       }
-      result = result && (hasMaxUpdates() == other.hasMaxUpdates());
-      if (hasMaxUpdates()) {
-        result = result && getMaxUpdates()
-            .equals(other.getMaxUpdates());
+      result = result && (hasMaxUpdatesPerHour() == other.hasMaxUpdatesPerHour());
+      if (hasMaxUpdatesPerHour()) {
+        result = result && getMaxUpdatesPerHour()
+            .equals(other.getMaxUpdatesPerHour());
       }
-      result = result && (hasMaxConnections() == other.hasMaxConnections());
-      if (hasMaxConnections()) {
-        result = result && getMaxConnections()
-            .equals(other.getMaxConnections());
+      result = result && (hasMaxConnectionsPerHour() == other.hasMaxConnectionsPerHour());
+      if (hasMaxConnectionsPerHour()) {
+        result = result && getMaxConnectionsPerHour()
+            .equals(other.getMaxConnectionsPerHour());
       }
       result = result && (hasMaxUserConnections() == other.hasMaxUserConnections());
       if (hasMaxUserConnections()) {
@@ -3324,17 +3324,17 @@ public final class UserOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasMaxQuestions()) {
-        hash = (37 * hash) + MAX_QUESTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getMaxQuestions().hashCode();
+      if (hasMaxQuestionsPerHour()) {
+        hash = (37 * hash) + MAX_QUESTIONS_PER_HOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxQuestionsPerHour().hashCode();
       }
-      if (hasMaxUpdates()) {
-        hash = (37 * hash) + MAX_UPDATES_FIELD_NUMBER;
-        hash = (53 * hash) + getMaxUpdates().hashCode();
+      if (hasMaxUpdatesPerHour()) {
+        hash = (37 * hash) + MAX_UPDATES_PER_HOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxUpdatesPerHour().hashCode();
       }
-      if (hasMaxConnections()) {
-        hash = (37 * hash) + MAX_CONNECTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getMaxConnections().hashCode();
+      if (hasMaxConnectionsPerHour()) {
+        hash = (37 * hash) + MAX_CONNECTIONS_PER_HOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxConnectionsPerHour().hashCode();
       }
       if (hasMaxUserConnections()) {
         hash = (37 * hash) + MAX_USER_CONNECTIONS_FIELD_NUMBER;
@@ -3473,23 +3473,23 @@ public final class UserOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (maxQuestionsBuilder_ == null) {
-          maxQuestions_ = null;
+        if (maxQuestionsPerHourBuilder_ == null) {
+          maxQuestionsPerHour_ = null;
         } else {
-          maxQuestions_ = null;
-          maxQuestionsBuilder_ = null;
+          maxQuestionsPerHour_ = null;
+          maxQuestionsPerHourBuilder_ = null;
         }
-        if (maxUpdatesBuilder_ == null) {
-          maxUpdates_ = null;
+        if (maxUpdatesPerHourBuilder_ == null) {
+          maxUpdatesPerHour_ = null;
         } else {
-          maxUpdates_ = null;
-          maxUpdatesBuilder_ = null;
+          maxUpdatesPerHour_ = null;
+          maxUpdatesPerHourBuilder_ = null;
         }
-        if (maxConnectionsBuilder_ == null) {
-          maxConnections_ = null;
+        if (maxConnectionsPerHourBuilder_ == null) {
+          maxConnectionsPerHour_ = null;
         } else {
-          maxConnections_ = null;
-          maxConnectionsBuilder_ = null;
+          maxConnectionsPerHour_ = null;
+          maxConnectionsPerHourBuilder_ = null;
         }
         if (maxUserConnectionsBuilder_ == null) {
           maxUserConnections_ = null;
@@ -3523,20 +3523,20 @@ public final class UserOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits result = new yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits(this);
-        if (maxQuestionsBuilder_ == null) {
-          result.maxQuestions_ = maxQuestions_;
+        if (maxQuestionsPerHourBuilder_ == null) {
+          result.maxQuestionsPerHour_ = maxQuestionsPerHour_;
         } else {
-          result.maxQuestions_ = maxQuestionsBuilder_.build();
+          result.maxQuestionsPerHour_ = maxQuestionsPerHourBuilder_.build();
         }
-        if (maxUpdatesBuilder_ == null) {
-          result.maxUpdates_ = maxUpdates_;
+        if (maxUpdatesPerHourBuilder_ == null) {
+          result.maxUpdatesPerHour_ = maxUpdatesPerHour_;
         } else {
-          result.maxUpdates_ = maxUpdatesBuilder_.build();
+          result.maxUpdatesPerHour_ = maxUpdatesPerHourBuilder_.build();
         }
-        if (maxConnectionsBuilder_ == null) {
-          result.maxConnections_ = maxConnections_;
+        if (maxConnectionsPerHourBuilder_ == null) {
+          result.maxConnectionsPerHour_ = maxConnectionsPerHour_;
         } else {
-          result.maxConnections_ = maxConnectionsBuilder_.build();
+          result.maxConnectionsPerHour_ = maxConnectionsPerHourBuilder_.build();
         }
         if (maxUserConnectionsBuilder_ == null) {
           result.maxUserConnections_ = maxUserConnections_;
@@ -3591,14 +3591,14 @@ public final class UserOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits other) {
         if (other == yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance()) return this;
-        if (other.hasMaxQuestions()) {
-          mergeMaxQuestions(other.getMaxQuestions());
+        if (other.hasMaxQuestionsPerHour()) {
+          mergeMaxQuestionsPerHour(other.getMaxQuestionsPerHour());
         }
-        if (other.hasMaxUpdates()) {
-          mergeMaxUpdates(other.getMaxUpdates());
+        if (other.hasMaxUpdatesPerHour()) {
+          mergeMaxUpdatesPerHour(other.getMaxUpdatesPerHour());
         }
-        if (other.hasMaxConnections()) {
-          mergeMaxConnections(other.getMaxConnections());
+        if (other.hasMaxConnectionsPerHour()) {
+          mergeMaxConnectionsPerHour(other.getMaxConnectionsPerHour());
         }
         if (other.hasMaxUserConnections()) {
           mergeMaxUserConnections(other.getMaxUserConnections());
@@ -3632,31 +3632,31 @@ public final class UserOuterClass {
         return this;
       }
 
-      private com.google.protobuf.Int64Value maxQuestions_ = null;
+      private com.google.protobuf.Int64Value maxQuestionsPerHour_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxQuestionsBuilder_;
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxQuestionsPerHourBuilder_;
       /**
        * <pre>
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public boolean hasMaxQuestions() {
-        return maxQuestionsBuilder_ != null || maxQuestions_ != null;
+      public boolean hasMaxQuestionsPerHour() {
+        return maxQuestionsPerHourBuilder_ != null || maxQuestionsPerHour_ != null;
       }
       /**
        * <pre>
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value getMaxQuestions() {
-        if (maxQuestionsBuilder_ == null) {
-          return maxQuestions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+      public com.google.protobuf.Int64Value getMaxQuestionsPerHour() {
+        if (maxQuestionsPerHourBuilder_ == null) {
+          return maxQuestionsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestionsPerHour_;
         } else {
-          return maxQuestionsBuilder_.getMessage();
+          return maxQuestionsPerHourBuilder_.getMessage();
         }
       }
       /**
@@ -3664,17 +3664,17 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxQuestions(com.google.protobuf.Int64Value value) {
-        if (maxQuestionsBuilder_ == null) {
+      public Builder setMaxQuestionsPerHour(com.google.protobuf.Int64Value value) {
+        if (maxQuestionsPerHourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          maxQuestions_ = value;
+          maxQuestionsPerHour_ = value;
           onChanged();
         } else {
-          maxQuestionsBuilder_.setMessage(value);
+          maxQuestionsPerHourBuilder_.setMessage(value);
         }
 
         return this;
@@ -3684,15 +3684,15 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxQuestions(
+      public Builder setMaxQuestionsPerHour(
           com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (maxQuestionsBuilder_ == null) {
-          maxQuestions_ = builderForValue.build();
+        if (maxQuestionsPerHourBuilder_ == null) {
+          maxQuestionsPerHour_ = builderForValue.build();
           onChanged();
         } else {
-          maxQuestionsBuilder_.setMessage(builderForValue.build());
+          maxQuestionsPerHourBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -3702,19 +3702,19 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder mergeMaxQuestions(com.google.protobuf.Int64Value value) {
-        if (maxQuestionsBuilder_ == null) {
-          if (maxQuestions_ != null) {
-            maxQuestions_ =
-              com.google.protobuf.Int64Value.newBuilder(maxQuestions_).mergeFrom(value).buildPartial();
+      public Builder mergeMaxQuestionsPerHour(com.google.protobuf.Int64Value value) {
+        if (maxQuestionsPerHourBuilder_ == null) {
+          if (maxQuestionsPerHour_ != null) {
+            maxQuestionsPerHour_ =
+              com.google.protobuf.Int64Value.newBuilder(maxQuestionsPerHour_).mergeFrom(value).buildPartial();
           } else {
-            maxQuestions_ = value;
+            maxQuestionsPerHour_ = value;
           }
           onChanged();
         } else {
-          maxQuestionsBuilder_.mergeFrom(value);
+          maxQuestionsPerHourBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -3724,15 +3724,15 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder clearMaxQuestions() {
-        if (maxQuestionsBuilder_ == null) {
-          maxQuestions_ = null;
+      public Builder clearMaxQuestionsPerHour() {
+        if (maxQuestionsPerHourBuilder_ == null) {
+          maxQuestionsPerHour_ = null;
           onChanged();
         } else {
-          maxQuestions_ = null;
-          maxQuestionsBuilder_ = null;
+          maxQuestionsPerHour_ = null;
+          maxQuestionsPerHourBuilder_ = null;
         }
 
         return this;
@@ -3742,26 +3742,26 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value.Builder getMaxQuestionsBuilder() {
+      public com.google.protobuf.Int64Value.Builder getMaxQuestionsPerHourBuilder() {
         
         onChanged();
-        return getMaxQuestionsFieldBuilder().getBuilder();
+        return getMaxQuestionsPerHourFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsOrBuilder() {
-        if (maxQuestionsBuilder_ != null) {
-          return maxQuestionsBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.Int64ValueOrBuilder getMaxQuestionsPerHourOrBuilder() {
+        if (maxQuestionsPerHourBuilder_ != null) {
+          return maxQuestionsPerHourBuilder_.getMessageOrBuilder();
         } else {
-          return maxQuestions_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestions_;
+          return maxQuestionsPerHour_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxQuestionsPerHour_;
         }
       }
       /**
@@ -3769,47 +3769,47 @@ public final class UserOuterClass {
        * The maximum permitted number of user questions per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_questions = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_questions_per_hour = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getMaxQuestionsFieldBuilder() {
-        if (maxQuestionsBuilder_ == null) {
-          maxQuestionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getMaxQuestionsPerHourFieldBuilder() {
+        if (maxQuestionsPerHourBuilder_ == null) {
+          maxQuestionsPerHourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getMaxQuestions(),
+                  getMaxQuestionsPerHour(),
                   getParentForChildren(),
                   isClean());
-          maxQuestions_ = null;
+          maxQuestionsPerHour_ = null;
         }
-        return maxQuestionsBuilder_;
+        return maxQuestionsPerHourBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxUpdates_ = null;
+      private com.google.protobuf.Int64Value maxUpdatesPerHour_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUpdatesBuilder_;
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUpdatesPerHourBuilder_;
       /**
        * <pre>
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public boolean hasMaxUpdates() {
-        return maxUpdatesBuilder_ != null || maxUpdates_ != null;
+      public boolean hasMaxUpdatesPerHour() {
+        return maxUpdatesPerHourBuilder_ != null || maxUpdatesPerHour_ != null;
       }
       /**
        * <pre>
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value getMaxUpdates() {
-        if (maxUpdatesBuilder_ == null) {
-          return maxUpdates_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+      public com.google.protobuf.Int64Value getMaxUpdatesPerHour() {
+        if (maxUpdatesPerHourBuilder_ == null) {
+          return maxUpdatesPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdatesPerHour_;
         } else {
-          return maxUpdatesBuilder_.getMessage();
+          return maxUpdatesPerHourBuilder_.getMessage();
         }
       }
       /**
@@ -3817,17 +3817,17 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxUpdates(com.google.protobuf.Int64Value value) {
-        if (maxUpdatesBuilder_ == null) {
+      public Builder setMaxUpdatesPerHour(com.google.protobuf.Int64Value value) {
+        if (maxUpdatesPerHourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          maxUpdates_ = value;
+          maxUpdatesPerHour_ = value;
           onChanged();
         } else {
-          maxUpdatesBuilder_.setMessage(value);
+          maxUpdatesPerHourBuilder_.setMessage(value);
         }
 
         return this;
@@ -3837,15 +3837,15 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxUpdates(
+      public Builder setMaxUpdatesPerHour(
           com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (maxUpdatesBuilder_ == null) {
-          maxUpdates_ = builderForValue.build();
+        if (maxUpdatesPerHourBuilder_ == null) {
+          maxUpdatesPerHour_ = builderForValue.build();
           onChanged();
         } else {
-          maxUpdatesBuilder_.setMessage(builderForValue.build());
+          maxUpdatesPerHourBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -3855,19 +3855,19 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder mergeMaxUpdates(com.google.protobuf.Int64Value value) {
-        if (maxUpdatesBuilder_ == null) {
-          if (maxUpdates_ != null) {
-            maxUpdates_ =
-              com.google.protobuf.Int64Value.newBuilder(maxUpdates_).mergeFrom(value).buildPartial();
+      public Builder mergeMaxUpdatesPerHour(com.google.protobuf.Int64Value value) {
+        if (maxUpdatesPerHourBuilder_ == null) {
+          if (maxUpdatesPerHour_ != null) {
+            maxUpdatesPerHour_ =
+              com.google.protobuf.Int64Value.newBuilder(maxUpdatesPerHour_).mergeFrom(value).buildPartial();
           } else {
-            maxUpdates_ = value;
+            maxUpdatesPerHour_ = value;
           }
           onChanged();
         } else {
-          maxUpdatesBuilder_.mergeFrom(value);
+          maxUpdatesPerHourBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -3877,15 +3877,15 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder clearMaxUpdates() {
-        if (maxUpdatesBuilder_ == null) {
-          maxUpdates_ = null;
+      public Builder clearMaxUpdatesPerHour() {
+        if (maxUpdatesPerHourBuilder_ == null) {
+          maxUpdatesPerHour_ = null;
           onChanged();
         } else {
-          maxUpdates_ = null;
-          maxUpdatesBuilder_ = null;
+          maxUpdatesPerHour_ = null;
+          maxUpdatesPerHourBuilder_ = null;
         }
 
         return this;
@@ -3895,26 +3895,26 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value.Builder getMaxUpdatesBuilder() {
+      public com.google.protobuf.Int64Value.Builder getMaxUpdatesPerHourBuilder() {
         
         onChanged();
-        return getMaxUpdatesFieldBuilder().getBuilder();
+        return getMaxUpdatesPerHourFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesOrBuilder() {
-        if (maxUpdatesBuilder_ != null) {
-          return maxUpdatesBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.Int64ValueOrBuilder getMaxUpdatesPerHourOrBuilder() {
+        if (maxUpdatesPerHourBuilder_ != null) {
+          return maxUpdatesPerHourBuilder_.getMessageOrBuilder();
         } else {
-          return maxUpdates_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdates_;
+          return maxUpdatesPerHour_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxUpdatesPerHour_;
         }
       }
       /**
@@ -3922,47 +3922,47 @@ public final class UserOuterClass {
        * The maximum permitted number of user updates per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_updates = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_updates_per_hour = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getMaxUpdatesFieldBuilder() {
-        if (maxUpdatesBuilder_ == null) {
-          maxUpdatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getMaxUpdatesPerHourFieldBuilder() {
+        if (maxUpdatesPerHourBuilder_ == null) {
+          maxUpdatesPerHourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getMaxUpdates(),
+                  getMaxUpdatesPerHour(),
                   getParentForChildren(),
                   isClean());
-          maxUpdates_ = null;
+          maxUpdatesPerHour_ = null;
         }
-        return maxUpdatesBuilder_;
+        return maxUpdatesPerHourBuilder_;
       }
 
-      private com.google.protobuf.Int64Value maxConnections_ = null;
+      private com.google.protobuf.Int64Value maxConnectionsPerHour_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsPerHourBuilder_;
       /**
        * <pre>
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public boolean hasMaxConnections() {
-        return maxConnectionsBuilder_ != null || maxConnections_ != null;
+      public boolean hasMaxConnectionsPerHour() {
+        return maxConnectionsPerHourBuilder_ != null || maxConnectionsPerHour_ != null;
       }
       /**
        * <pre>
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value getMaxConnections() {
-        if (maxConnectionsBuilder_ == null) {
-          return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+      public com.google.protobuf.Int64Value getMaxConnectionsPerHour() {
+        if (maxConnectionsPerHourBuilder_ == null) {
+          return maxConnectionsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnectionsPerHour_;
         } else {
-          return maxConnectionsBuilder_.getMessage();
+          return maxConnectionsPerHourBuilder_.getMessage();
         }
       }
       /**
@@ -3970,17 +3970,17 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
-        if (maxConnectionsBuilder_ == null) {
+      public Builder setMaxConnectionsPerHour(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsPerHourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          maxConnections_ = value;
+          maxConnectionsPerHour_ = value;
           onChanged();
         } else {
-          maxConnectionsBuilder_.setMessage(value);
+          maxConnectionsPerHourBuilder_.setMessage(value);
         }
 
         return this;
@@ -3990,15 +3990,15 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder setMaxConnections(
+      public Builder setMaxConnectionsPerHour(
           com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (maxConnectionsBuilder_ == null) {
-          maxConnections_ = builderForValue.build();
+        if (maxConnectionsPerHourBuilder_ == null) {
+          maxConnectionsPerHour_ = builderForValue.build();
           onChanged();
         } else {
-          maxConnectionsBuilder_.setMessage(builderForValue.build());
+          maxConnectionsPerHourBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -4008,19 +4008,19 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
-        if (maxConnectionsBuilder_ == null) {
-          if (maxConnections_ != null) {
-            maxConnections_ =
-              com.google.protobuf.Int64Value.newBuilder(maxConnections_).mergeFrom(value).buildPartial();
+      public Builder mergeMaxConnectionsPerHour(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsPerHourBuilder_ == null) {
+          if (maxConnectionsPerHour_ != null) {
+            maxConnectionsPerHour_ =
+              com.google.protobuf.Int64Value.newBuilder(maxConnectionsPerHour_).mergeFrom(value).buildPartial();
           } else {
-            maxConnections_ = value;
+            maxConnectionsPerHour_ = value;
           }
           onChanged();
         } else {
-          maxConnectionsBuilder_.mergeFrom(value);
+          maxConnectionsPerHourBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -4030,15 +4030,15 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public Builder clearMaxConnections() {
-        if (maxConnectionsBuilder_ == null) {
-          maxConnections_ = null;
+      public Builder clearMaxConnectionsPerHour() {
+        if (maxConnectionsPerHourBuilder_ == null) {
+          maxConnectionsPerHour_ = null;
           onChanged();
         } else {
-          maxConnections_ = null;
-          maxConnectionsBuilder_ = null;
+          maxConnectionsPerHour_ = null;
+          maxConnectionsPerHourBuilder_ = null;
         }
 
         return this;
@@ -4048,26 +4048,26 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
+      public com.google.protobuf.Int64Value.Builder getMaxConnectionsPerHourBuilder() {
         
         onChanged();
-        return getMaxConnectionsFieldBuilder().getBuilder();
+        return getMaxConnectionsPerHourFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
-        if (maxConnectionsBuilder_ != null) {
-          return maxConnectionsBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsPerHourOrBuilder() {
+        if (maxConnectionsPerHourBuilder_ != null) {
+          return maxConnectionsPerHourBuilder_.getMessageOrBuilder();
         } else {
-          return maxConnections_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+          return maxConnectionsPerHour_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxConnectionsPerHour_;
         }
       }
       /**
@@ -4075,20 +4075,20 @@ public final class UserOuterClass {
        * The maximum permitted number of simultaneous client connections per hour.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * <code>.google.protobuf.Int64Value max_connections_per_hour = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getMaxConnectionsFieldBuilder() {
-        if (maxConnectionsBuilder_ == null) {
-          maxConnectionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getMaxConnectionsPerHourFieldBuilder() {
+        if (maxConnectionsPerHourBuilder_ == null) {
+          maxConnectionsPerHourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getMaxConnections(),
+                  getMaxConnectionsPerHour(),
                   getParentForChildren(),
                   isClean());
-          maxConnections_ = null;
+          maxConnectionsPerHour_ = null;
         }
-        return maxConnectionsBuilder_;
+        return maxConnectionsPerHourBuilder_;
       }
 
       private com.google.protobuf.Int64Value maxUserConnections_ = null;
@@ -6311,31 +6311,32 @@ public final class UserOuterClass {
       "\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005" +
       "INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013LOCK_TABLES\020\016\022\n\n\006" +
       "SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006" +
-      "UPDATE\020\022\"\215\002\n\020ConnectionLimits\022;\n\rmax_que" +
-      "stions\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\0229\n\013max_updates\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\007\372\3071\003>=0\022=\n\017max_con" +
-      "nections\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\022B\n\024max_user_connections\030\004 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\"\353\002\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=3" +
-      "2\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\307" +
-      "1\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yande" +
-      "x.cloud.mdb.mysql.v1.Permission\022G\n\022globa" +
-      "l_permissions\030\004 \003(\0162+.yandex.cloud.mdb.m" +
-      "ysql.v1.GlobalPermission\022F\n\021connection_l" +
-      "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
-      "ConnectionLimits\022D\n\025authentication_plugi" +
-      "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
-      "Plugin*d\n\020GlobalPermission\022!\n\035GLOBAL_PER" +
-      "MISSION_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLI" +
-      "ENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002*t\n\nAuthPlug" +
-      "in\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL" +
-      "_NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSW" +
-      "ORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.clo" +
-      "ud.api.mdb.mysql.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/mysql/" +
-      "v1;mysqlb\006proto3"
+      "UPDATE\020\022\"\250\002\n\020ConnectionLimits\022D\n\026max_que" +
+      "stions_per_hour\030\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022B\n\024max_updates_per_h" +
+      "our\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\022F\n\030max_connections_per_hour\030\003 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "B\n\024max_user_connections\030\004 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\"\353\002\n\010UserSpec" +
+      "\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z0" +
+      "-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:" +
+      "\n\013permissions\030\003 \003(\0132%.yandex.cloud.mdb.m" +
+      "ysql.v1.Permission\022G\n\022global_permissions" +
+      "\030\004 \003(\0162+.yandex.cloud.mdb.mysql.v1.Globa" +
+      "lPermission\022F\n\021connection_limits\030\005 \001(\0132+" +
+      ".yandex.cloud.mdb.mysql.v1.ConnectionLim" +
+      "its\022D\n\025authentication_plugin\030\006 \001(\0162%.yan" +
+      "dex.cloud.mdb.mysql.v1.AuthPlugin*d\n\020Glo" +
+      "balPermission\022!\n\035GLOBAL_PERMISSION_UNSPE" +
+      "CIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPL" +
+      "ICATION_SLAVE\020\002*t\n\nAuthPlugin\022\033\n\027AUTH_PL" +
+      "UGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSW" +
+      "ORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA2" +
+      "56_PASSWORD\020\003Bd\n\035yandex.cloud.api.mdb.my" +
+      "sql.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/mysql/v1;mysqlb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6368,7 +6369,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ConnectionLimits_descriptor,
-        new java.lang.String[] { "MaxQuestions", "MaxUpdates", "MaxConnections", "MaxUserConnections", });
+        new java.lang.String[] { "MaxQuestionsPerHour", "MaxUpdatesPerHour", "MaxConnectionsPerHour", "MaxUserConnections", });
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_mysql_v1_UserSpec_fieldAccessorTable = new

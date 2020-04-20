@@ -20,8 +20,7 @@ public final class Clickhouse {
 
     /**
      * <pre>
-     * Logging level for the ClickHouse cluster.
-     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+     * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -29,8 +28,7 @@ public final class Clickhouse {
     int getLogLevelValue();
     /**
      * <pre>
-     * Logging level for the ClickHouse cluster.
-     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+     * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -967,8 +965,8 @@ public final class Clickhouse {
 
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -976,8 +974,8 @@ public final class Clickhouse {
       boolean hasNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -985,8 +983,8 @@ public final class Clickhouse {
       com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge();
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -995,7 +993,8 @@ public final class Clickhouse {
 
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -1003,7 +1002,8 @@ public final class Clickhouse {
       boolean hasMaxBytesToMergeAtMinSpaceInPool();
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -1011,7 +1011,8 @@ public final class Clickhouse {
       com.google.protobuf.Int64Value getMaxBytesToMergeAtMinSpaceInPool();
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -1353,8 +1354,8 @@ public final class Clickhouse {
       private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToLowerMaxSizeOfMerge_;
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -1364,8 +1365,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -1375,8 +1376,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-       * This is to allow small merges to process - not filling the pool with long running merges.
+       * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+       * maximum size of merge to process.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -1389,7 +1390,8 @@ public final class Clickhouse {
       private com.google.protobuf.Int64Value maxBytesToMergeAtMinSpaceInPool_;
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -1399,7 +1401,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -1409,7 +1412,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+       * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+       * in replication queue).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2688,8 +2692,8 @@ public final class Clickhouse {
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numberOfFreeEntriesInPoolToLowerMaxSizeOfMergeBuilder_;
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2699,8 +2703,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2714,8 +2718,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2735,8 +2739,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2754,8 +2758,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2777,8 +2781,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2796,8 +2800,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2809,8 +2813,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2825,8 +2829,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * When there is less than specified number of free entries in pool (or replicated queue), start to lower maximum size of merge to process (or to put in queue).
-         * This is to allow small merges to process - not filling the pool with long running merges.
+         * If there is less than specified number of free entries in background pool (or replicated queue), start to lower
+         * maximum size of merge to process.
          * </pre>
          *
          * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_lower_max_size_of_merge = 6;</code>
@@ -2850,7 +2854,8 @@ public final class Clickhouse {
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToMergeAtMinSpaceInPoolBuilder_;
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2860,7 +2865,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2874,7 +2880,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2894,7 +2901,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2912,7 +2920,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2934,7 +2943,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2952,7 +2962,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2964,7 +2975,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -2979,7 +2991,8 @@ public final class Clickhouse {
         }
         /**
          * <pre>
-         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries in replication queue).
+         * Maximum in total size of parts to merge, when there are minimum free threads in background pool (or entries
+         * in replication queue).
          * </pre>
          *
          * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
@@ -24748,8 +24761,7 @@ public final class Clickhouse {
     private int logLevel_;
     /**
      * <pre>
-     * Logging level for the ClickHouse cluster.
-     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+     * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -24759,8 +24771,7 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Logging level for the ClickHouse cluster.
-     * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+     * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -26119,8 +26130,7 @@ public final class Clickhouse {
       private int logLevel_ = 0;
       /**
        * <pre>
-       * Logging level for the ClickHouse cluster.
-       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+       * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -26130,8 +26140,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Logging level for the ClickHouse cluster.
-       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+       * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -26143,8 +26152,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Logging level for the ClickHouse cluster.
-       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+       * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -26156,8 +26164,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Logging level for the ClickHouse cluster.
-       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+       * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
@@ -26173,8 +26180,7 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Logging level for the ClickHouse cluster.
-       * Possible values: TRACE, DEBUG, INFORMATION, WARNING and ERROR.
+       * Logging level for the ClickHouse cluster. Possible values: TRACE, DEBUG, INFORMATION, WARNING, ERROR.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel log_level = 1;</code>
