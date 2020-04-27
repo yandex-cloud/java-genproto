@@ -734,6 +734,70 @@ public final class ClusterServiceGrpc {
      return getDeleteShardMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResetupHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResetupHosts",
+      requestType = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResetupHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResetupHostsMethod;
+    if ((getResetupHostsMethod = ClusterServiceGrpc.getResetupHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getResetupHostsMethod = ClusterServiceGrpc.getResetupHostsMethod) == null) {
+          ClusterServiceGrpc.getResetupHostsMethod = getResetupHostsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.mongodb.v1.ClusterService", "ResetupHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ResetupHosts"))
+                  .build();
+          }
+        }
+     }
+     return getResetupHostsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestartHosts",
+      requestType = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod;
+    if ((getRestartHostsMethod = ClusterServiceGrpc.getRestartHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRestartHostsMethod = ClusterServiceGrpc.getRestartHostsMethod) == null) {
+          ClusterServiceGrpc.getRestartHostsMethod = getRestartHostsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.mongodb.v1.ClusterService", "RestartHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RestartHosts"))
+                  .build();
+          }
+        }
+     }
+     return getRestartHostsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -987,6 +1051,26 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getDeleteShardMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Resetup hosts.
+     * </pre>
+     */
+    public void resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getResetupHostsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restart hosts.
+     * </pre>
+     */
+    public void restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRestartHostsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -1143,6 +1227,20 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.DeleteClusterShardRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_SHARD)))
+          .addMethod(
+            getResetupHostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESETUP_HOSTS)))
+          .addMethod(
+            getRestartHostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESTART_HOSTS)))
           .build();
     }
   }
@@ -1412,6 +1510,28 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Resetup hosts.
+     * </pre>
+     */
+    public void resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getResetupHostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restart hosts.
+     * </pre>
+     */
+    public void restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1657,6 +1777,26 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShard(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteShardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resetup hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getResetupHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Restart hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRestartHostsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1914,6 +2054,28 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Resetup hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resetupHosts(
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getResetupHostsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Restart hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restartHosts(
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1938,6 +2100,8 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_SHARDS = 19;
   private static final int METHODID_ADD_SHARD = 20;
   private static final int METHODID_DELETE_SHARD = 21;
+  private static final int METHODID_RESETUP_HOSTS = 22;
+  private static final int METHODID_RESTART_HOSTS = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2044,6 +2208,14 @@ public final class ClusterServiceGrpc {
           serviceImpl.deleteShard((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.DeleteClusterShardRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_RESETUP_HOSTS:
+          serviceImpl.resetupHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESTART_HOSTS:
+          serviceImpl.restartHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -2127,6 +2299,8 @@ public final class ClusterServiceGrpc {
               .addMethod(getListShardsMethod())
               .addMethod(getAddShardMethod())
               .addMethod(getDeleteShardMethod())
+              .addMethod(getResetupHostsMethod())
+              .addMethod(getRestartHostsMethod())
               .build();
         }
       }

@@ -3197,27 +3197,61 @@ public final class ManagerService {
         int index);
 
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>string safemode = 11;</code>
+     */
+    java.lang.String getSafemode();
+    /**
+     * <code>string safemode = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getSafemodeBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
     java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> 
-        getDecomNodesList();
+        getDecommissioningNodesList();
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecomNodes(int index);
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissioningNodes(int index);
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    int getDecomNodesCount();
+    int getDecommissioningNodesCount();
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
     java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
-        getDecomNodesOrBuilderList();
+        getDecommissioningNodesOrBuilderList();
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecomNodesOrBuilder(
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissioningNodesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> 
+        getDecommissionedNodesList();
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissionedNodes(int index);
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    int getDecommissionedNodesCount();
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
+        getDecommissionedNodesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissionedNodesOrBuilder(
         int index);
   }
   /**
@@ -3242,7 +3276,9 @@ public final class ManagerService {
       missingBlocksReplicaOne_ = 0L;
       liveNodes_ = java.util.Collections.emptyList();
       deadNodes_ = java.util.Collections.emptyList();
-      decomNodes_ = java.util.Collections.emptyList();
+      safemode_ = "";
+      decommissioningNodes_ = java.util.Collections.emptyList();
+      decommissionedNodes_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3322,12 +3358,27 @@ public final class ManagerService {
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
               break;
             }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-                decomNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
-                mutable_bitField0_ |= 0x00000200;
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              safemode_ = s;
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                decommissioningNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
+                mutable_bitField0_ |= 0x00000400;
               }
-              decomNodes_.add(
+              decommissioningNodes_.add(
+                  input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                decommissionedNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              decommissionedNodes_.add(
                   input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.parser(), extensionRegistry));
               break;
             }
@@ -3352,8 +3403,11 @@ public final class ManagerService {
         if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           deadNodes_ = java.util.Collections.unmodifiableList(deadNodes_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-          decomNodes_ = java.util.Collections.unmodifiableList(decomNodes_);
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          decommissioningNodes_ = java.util.Collections.unmodifiableList(decommissioningNodes_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          decommissionedNodes_ = java.util.Collections.unmodifiableList(decommissionedNodes_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3506,39 +3560,108 @@ public final class ManagerService {
       return deadNodes_.get(index);
     }
 
-    public static final int DECOM_NODES_FIELD_NUMBER = 10;
-    private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decomNodes_;
+    public static final int SAFEMODE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object safemode_;
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>string safemode = 11;</code>
      */
-    public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecomNodesList() {
-      return decomNodes_;
+    public java.lang.String getSafemode() {
+      java.lang.Object ref = safemode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        safemode_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>string safemode = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSafemodeBytes() {
+      java.lang.Object ref = safemode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        safemode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DECOMMISSIONING_NODES_FIELD_NUMBER = 12;
+    private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissioningNodes_;
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
+     */
+    public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissioningNodesList() {
+      return decommissioningNodes_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
     public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
-        getDecomNodesOrBuilderList() {
-      return decomNodes_;
+        getDecommissioningNodesOrBuilderList() {
+      return decommissioningNodes_;
     }
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    public int getDecomNodesCount() {
-      return decomNodes_.size();
+    public int getDecommissioningNodesCount() {
+      return decommissioningNodes_.size();
     }
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecomNodes(int index) {
-      return decomNodes_.get(index);
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissioningNodes(int index) {
+      return decommissioningNodes_.get(index);
     }
     /**
-     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
      */
-    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecomNodesOrBuilder(
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissioningNodesOrBuilder(
         int index) {
-      return decomNodes_.get(index);
+      return decommissioningNodes_.get(index);
+    }
+
+    public static final int DECOMMISSIONED_NODES_FIELD_NUMBER = 13;
+    private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissionedNodes_;
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissionedNodesList() {
+      return decommissionedNodes_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
+        getDecommissionedNodesOrBuilderList() {
+      return decommissionedNodes_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    public int getDecommissionedNodesCount() {
+      return decommissionedNodes_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissionedNodes(int index) {
+      return decommissionedNodes_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissionedNodesOrBuilder(
+        int index) {
+      return decommissionedNodes_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3582,8 +3705,14 @@ public final class ManagerService {
       for (int i = 0; i < deadNodes_.size(); i++) {
         output.writeMessage(9, deadNodes_.get(i));
       }
-      for (int i = 0; i < decomNodes_.size(); i++) {
-        output.writeMessage(10, decomNodes_.get(i));
+      if (!getSafemodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, safemode_);
+      }
+      for (int i = 0; i < decommissioningNodes_.size(); i++) {
+        output.writeMessage(12, decommissioningNodes_.get(i));
+      }
+      for (int i = 0; i < decommissionedNodes_.size(); i++) {
+        output.writeMessage(13, decommissionedNodes_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3630,9 +3759,16 @@ public final class ManagerService {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, deadNodes_.get(i));
       }
-      for (int i = 0; i < decomNodes_.size(); i++) {
+      if (!getSafemodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, safemode_);
+      }
+      for (int i = 0; i < decommissioningNodes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, decomNodes_.get(i));
+          .computeMessageSize(12, decommissioningNodes_.get(i));
+      }
+      for (int i = 0; i < decommissionedNodes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, decommissionedNodes_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3670,8 +3806,12 @@ public final class ManagerService {
           .equals(other.getLiveNodesList());
       result = result && getDeadNodesList()
           .equals(other.getDeadNodesList());
-      result = result && getDecomNodesList()
-          .equals(other.getDecomNodesList());
+      result = result && getSafemode()
+          .equals(other.getSafemode());
+      result = result && getDecommissioningNodesList()
+          .equals(other.getDecommissioningNodesList());
+      result = result && getDecommissionedNodesList()
+          .equals(other.getDecommissionedNodesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3712,9 +3852,15 @@ public final class ManagerService {
         hash = (37 * hash) + DEAD_NODES_FIELD_NUMBER;
         hash = (53 * hash) + getDeadNodesList().hashCode();
       }
-      if (getDecomNodesCount() > 0) {
-        hash = (37 * hash) + DECOM_NODES_FIELD_NUMBER;
-        hash = (53 * hash) + getDecomNodesList().hashCode();
+      hash = (37 * hash) + SAFEMODE_FIELD_NUMBER;
+      hash = (53 * hash) + getSafemode().hashCode();
+      if (getDecommissioningNodesCount() > 0) {
+        hash = (37 * hash) + DECOMMISSIONING_NODES_FIELD_NUMBER;
+        hash = (53 * hash) + getDecommissioningNodesList().hashCode();
+      }
+      if (getDecommissionedNodesCount() > 0) {
+        hash = (37 * hash) + DECOMMISSIONED_NODES_FIELD_NUMBER;
+        hash = (53 * hash) + getDecommissionedNodesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3846,7 +3992,8 @@ public final class ManagerService {
                 .alwaysUseFieldBuilders) {
           getLiveNodesFieldBuilder();
           getDeadNodesFieldBuilder();
-          getDecomNodesFieldBuilder();
+          getDecommissioningNodesFieldBuilder();
+          getDecommissionedNodesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3878,11 +4025,19 @@ public final class ManagerService {
         } else {
           deadNodesBuilder_.clear();
         }
-        if (decomNodesBuilder_ == null) {
-          decomNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+        safemode_ = "";
+
+        if (decommissioningNodesBuilder_ == null) {
+          decommissioningNodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
-          decomNodesBuilder_.clear();
+          decommissioningNodesBuilder_.clear();
+        }
+        if (decommissionedNodesBuilder_ == null) {
+          decommissionedNodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          decommissionedNodesBuilder_.clear();
         }
         return this;
       }
@@ -3937,14 +4092,24 @@ public final class ManagerService {
         } else {
           result.deadNodes_ = deadNodesBuilder_.build();
         }
-        if (decomNodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000200) == 0x00000200)) {
-            decomNodes_ = java.util.Collections.unmodifiableList(decomNodes_);
-            bitField0_ = (bitField0_ & ~0x00000200);
+        result.safemode_ = safemode_;
+        if (decommissioningNodesBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            decommissioningNodes_ = java.util.Collections.unmodifiableList(decommissioningNodes_);
+            bitField0_ = (bitField0_ & ~0x00000400);
           }
-          result.decomNodes_ = decomNodes_;
+          result.decommissioningNodes_ = decommissioningNodes_;
         } else {
-          result.decomNodes_ = decomNodesBuilder_.build();
+          result.decommissioningNodes_ = decommissioningNodesBuilder_.build();
+        }
+        if (decommissionedNodesBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            decommissionedNodes_ = java.util.Collections.unmodifiableList(decommissionedNodes_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.decommissionedNodes_ = decommissionedNodes_;
+        } else {
+          result.decommissionedNodes_ = decommissionedNodesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -4068,29 +4233,59 @@ public final class ManagerService {
             }
           }
         }
-        if (decomNodesBuilder_ == null) {
-          if (!other.decomNodes_.isEmpty()) {
-            if (decomNodes_.isEmpty()) {
-              decomNodes_ = other.decomNodes_;
-              bitField0_ = (bitField0_ & ~0x00000200);
+        if (!other.getSafemode().isEmpty()) {
+          safemode_ = other.safemode_;
+          onChanged();
+        }
+        if (decommissioningNodesBuilder_ == null) {
+          if (!other.decommissioningNodes_.isEmpty()) {
+            if (decommissioningNodes_.isEmpty()) {
+              decommissioningNodes_ = other.decommissioningNodes_;
+              bitField0_ = (bitField0_ & ~0x00000400);
             } else {
-              ensureDecomNodesIsMutable();
-              decomNodes_.addAll(other.decomNodes_);
+              ensureDecommissioningNodesIsMutable();
+              decommissioningNodes_.addAll(other.decommissioningNodes_);
             }
             onChanged();
           }
         } else {
-          if (!other.decomNodes_.isEmpty()) {
-            if (decomNodesBuilder_.isEmpty()) {
-              decomNodesBuilder_.dispose();
-              decomNodesBuilder_ = null;
-              decomNodes_ = other.decomNodes_;
-              bitField0_ = (bitField0_ & ~0x00000200);
-              decomNodesBuilder_ = 
+          if (!other.decommissioningNodes_.isEmpty()) {
+            if (decommissioningNodesBuilder_.isEmpty()) {
+              decommissioningNodesBuilder_.dispose();
+              decommissioningNodesBuilder_ = null;
+              decommissioningNodes_ = other.decommissioningNodes_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              decommissioningNodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDecomNodesFieldBuilder() : null;
+                   getDecommissioningNodesFieldBuilder() : null;
             } else {
-              decomNodesBuilder_.addAllMessages(other.decomNodes_);
+              decommissioningNodesBuilder_.addAllMessages(other.decommissioningNodes_);
+            }
+          }
+        }
+        if (decommissionedNodesBuilder_ == null) {
+          if (!other.decommissionedNodes_.isEmpty()) {
+            if (decommissionedNodes_.isEmpty()) {
+              decommissionedNodes_ = other.decommissionedNodes_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureDecommissionedNodesIsMutable();
+              decommissionedNodes_.addAll(other.decommissionedNodes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.decommissionedNodes_.isEmpty()) {
+            if (decommissionedNodesBuilder_.isEmpty()) {
+              decommissionedNodesBuilder_.dispose();
+              decommissionedNodesBuilder_ = null;
+              decommissionedNodes_ = other.decommissionedNodes_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              decommissionedNodesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDecommissionedNodesFieldBuilder() : null;
+            } else {
+              decommissionedNodesBuilder_.addAllMessages(other.decommissionedNodes_);
             }
           }
         }
@@ -4786,244 +4981,553 @@ public final class ManagerService {
         return deadNodesBuilder_;
       }
 
-      private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decomNodes_ =
+      private java.lang.Object safemode_ = "";
+      /**
+       * <code>string safemode = 11;</code>
+       */
+      public java.lang.String getSafemode() {
+        java.lang.Object ref = safemode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          safemode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string safemode = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSafemodeBytes() {
+        java.lang.Object ref = safemode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          safemode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string safemode = 11;</code>
+       */
+      public Builder setSafemode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        safemode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string safemode = 11;</code>
+       */
+      public Builder clearSafemode() {
+        
+        safemode_ = getDefaultInstance().getSafemode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string safemode = 11;</code>
+       */
+      public Builder setSafemodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        safemode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissioningNodes_ =
         java.util.Collections.emptyList();
-      private void ensureDecomNodesIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
-          decomNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(decomNodes_);
-          bitField0_ |= 0x00000200;
+      private void ensureDecommissioningNodesIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          decommissioningNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(decommissioningNodes_);
+          bitField0_ |= 0x00000400;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> decomNodesBuilder_;
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> decommissioningNodesBuilder_;
 
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecomNodesList() {
-        if (decomNodesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(decomNodes_);
+      public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissioningNodesList() {
+        if (decommissioningNodesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(decommissioningNodes_);
         } else {
-          return decomNodesBuilder_.getMessageList();
+          return decommissioningNodesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public int getDecomNodesCount() {
-        if (decomNodesBuilder_ == null) {
-          return decomNodes_.size();
+      public int getDecommissioningNodesCount() {
+        if (decommissioningNodesBuilder_ == null) {
+          return decommissioningNodes_.size();
         } else {
-          return decomNodesBuilder_.getCount();
+          return decommissioningNodesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecomNodes(int index) {
-        if (decomNodesBuilder_ == null) {
-          return decomNodes_.get(index);
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissioningNodes(int index) {
+        if (decommissioningNodesBuilder_ == null) {
+          return decommissioningNodes_.get(index);
         } else {
-          return decomNodesBuilder_.getMessage(index);
+          return decommissioningNodesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder setDecomNodes(
+      public Builder setDecommissioningNodes(
           int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
-        if (decomNodesBuilder_ == null) {
+        if (decommissioningNodesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDecomNodesIsMutable();
-          decomNodes_.set(index, value);
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.set(index, value);
           onChanged();
         } else {
-          decomNodesBuilder_.setMessage(index, value);
+          decommissioningNodesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder setDecomNodes(
+      public Builder setDecommissioningNodes(
           int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
-        if (decomNodesBuilder_ == null) {
-          ensureDecomNodesIsMutable();
-          decomNodes_.set(index, builderForValue.build());
+        if (decommissioningNodesBuilder_ == null) {
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.set(index, builderForValue.build());
           onChanged();
         } else {
-          decomNodesBuilder_.setMessage(index, builderForValue.build());
+          decommissioningNodesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder addDecomNodes(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
-        if (decomNodesBuilder_ == null) {
+      public Builder addDecommissioningNodes(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
+        if (decommissioningNodesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDecomNodesIsMutable();
-          decomNodes_.add(value);
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.add(value);
           onChanged();
         } else {
-          decomNodesBuilder_.addMessage(value);
+          decommissioningNodesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder addDecomNodes(
+      public Builder addDecommissioningNodes(
           int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
-        if (decomNodesBuilder_ == null) {
+        if (decommissioningNodesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureDecomNodesIsMutable();
-          decomNodes_.add(index, value);
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.add(index, value);
           onChanged();
         } else {
-          decomNodesBuilder_.addMessage(index, value);
+          decommissioningNodesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder addDecomNodes(
+      public Builder addDecommissioningNodes(
           yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
-        if (decomNodesBuilder_ == null) {
-          ensureDecomNodesIsMutable();
-          decomNodes_.add(builderForValue.build());
+        if (decommissioningNodesBuilder_ == null) {
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.add(builderForValue.build());
           onChanged();
         } else {
-          decomNodesBuilder_.addMessage(builderForValue.build());
+          decommissioningNodesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder addDecomNodes(
+      public Builder addDecommissioningNodes(
           int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
-        if (decomNodesBuilder_ == null) {
-          ensureDecomNodesIsMutable();
-          decomNodes_.add(index, builderForValue.build());
+        if (decommissioningNodesBuilder_ == null) {
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.add(index, builderForValue.build());
           onChanged();
         } else {
-          decomNodesBuilder_.addMessage(index, builderForValue.build());
+          decommissioningNodesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder addAllDecomNodes(
+      public Builder addAllDecommissioningNodes(
           java.lang.Iterable<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> values) {
-        if (decomNodesBuilder_ == null) {
-          ensureDecomNodesIsMutable();
+        if (decommissioningNodesBuilder_ == null) {
+          ensureDecommissioningNodesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, decomNodes_);
+              values, decommissioningNodes_);
           onChanged();
         } else {
-          decomNodesBuilder_.addAllMessages(values);
+          decommissioningNodesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder clearDecomNodes() {
-        if (decomNodesBuilder_ == null) {
-          decomNodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000200);
+      public Builder clearDecommissioningNodes() {
+        if (decommissioningNodesBuilder_ == null) {
+          decommissioningNodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
         } else {
-          decomNodesBuilder_.clear();
+          decommissioningNodesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public Builder removeDecomNodes(int index) {
-        if (decomNodesBuilder_ == null) {
-          ensureDecomNodesIsMutable();
-          decomNodes_.remove(index);
+      public Builder removeDecommissioningNodes(int index) {
+        if (decommissioningNodesBuilder_ == null) {
+          ensureDecommissioningNodesIsMutable();
+          decommissioningNodes_.remove(index);
           onChanged();
         } else {
-          decomNodesBuilder_.remove(index);
+          decommissioningNodesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder getDecomNodesBuilder(
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder getDecommissioningNodesBuilder(
           int index) {
-        return getDecomNodesFieldBuilder().getBuilder(index);
+        return getDecommissioningNodesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecomNodesOrBuilder(
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissioningNodesOrBuilder(
           int index) {
-        if (decomNodesBuilder_ == null) {
-          return decomNodes_.get(index);  } else {
-          return decomNodesBuilder_.getMessageOrBuilder(index);
+        if (decommissioningNodesBuilder_ == null) {
+          return decommissioningNodes_.get(index);  } else {
+          return decommissioningNodesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
       public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
-           getDecomNodesOrBuilderList() {
-        if (decomNodesBuilder_ != null) {
-          return decomNodesBuilder_.getMessageOrBuilderList();
+           getDecommissioningNodesOrBuilderList() {
+        if (decommissioningNodesBuilder_ != null) {
+          return decommissioningNodesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(decomNodes_);
+          return java.util.Collections.unmodifiableList(decommissioningNodes_);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecomNodesBuilder() {
-        return getDecomNodesFieldBuilder().addBuilder(
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecommissioningNodesBuilder() {
+        return getDecommissioningNodesFieldBuilder().addBuilder(
             yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
-      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecomNodesBuilder(
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecommissioningNodesBuilder(
           int index) {
-        return getDecomNodesFieldBuilder().addBuilder(
+        return getDecommissioningNodesFieldBuilder().addBuilder(
             index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decom_nodes = 10;</code>
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioning_nodes = 12;</code>
        */
       public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder> 
-           getDecomNodesBuilderList() {
-        return getDecomNodesFieldBuilder().getBuilderList();
+           getDecommissioningNodesBuilderList() {
+        return getDecommissioningNodesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
-          getDecomNodesFieldBuilder() {
-        if (decomNodesBuilder_ == null) {
-          decomNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getDecommissioningNodesFieldBuilder() {
+        if (decommissioningNodesBuilder_ == null) {
+          decommissioningNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
-                  decomNodes_,
-                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  decommissioningNodes_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
                   getParentForChildren(),
                   isClean());
-          decomNodes_ = null;
+          decommissioningNodes_ = null;
         }
-        return decomNodesBuilder_;
+        return decommissioningNodesBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> decommissionedNodes_ =
+        java.util.Collections.emptyList();
+      private void ensureDecommissionedNodesIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          decommissionedNodes_ = new java.util.ArrayList<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo>(decommissionedNodes_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> decommissionedNodesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> getDecommissionedNodesList() {
+        if (decommissionedNodesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(decommissionedNodes_);
+        } else {
+          return decommissionedNodesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public int getDecommissionedNodesCount() {
+        if (decommissionedNodesBuilder_ == null) {
+          return decommissionedNodes_.size();
+        } else {
+          return decommissionedNodesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo getDecommissionedNodes(int index) {
+        if (decommissionedNodesBuilder_ == null) {
+          return decommissionedNodes_.get(index);
+        } else {
+          return decommissionedNodesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder setDecommissionedNodes(
+          int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
+        if (decommissionedNodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.set(index, value);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder setDecommissionedNodes(
+          int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
+        if (decommissionedNodesBuilder_ == null) {
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder addDecommissionedNodes(yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
+        if (decommissionedNodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.add(value);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder addDecommissionedNodes(
+          int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo value) {
+        if (decommissionedNodesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.add(index, value);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder addDecommissionedNodes(
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
+        if (decommissionedNodesBuilder_ == null) {
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder addDecommissionedNodes(
+          int index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder builderForValue) {
+        if (decommissionedNodesBuilder_ == null) {
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder addAllDecommissionedNodes(
+          java.lang.Iterable<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo> values) {
+        if (decommissionedNodesBuilder_ == null) {
+          ensureDecommissionedNodesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, decommissionedNodes_);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder clearDecommissionedNodes() {
+        if (decommissionedNodesBuilder_ == null) {
+          decommissionedNodes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public Builder removeDecommissionedNodes(int index) {
+        if (decommissionedNodesBuilder_ == null) {
+          ensureDecommissionedNodesIsMutable();
+          decommissionedNodes_.remove(index);
+          onChanged();
+        } else {
+          decommissionedNodesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder getDecommissionedNodesBuilder(
+          int index) {
+        return getDecommissionedNodesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder getDecommissionedNodesOrBuilder(
+          int index) {
+        if (decommissionedNodesBuilder_ == null) {
+          return decommissionedNodes_.get(index);  } else {
+          return decommissionedNodesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
+           getDecommissionedNodesOrBuilderList() {
+        if (decommissionedNodesBuilder_ != null) {
+          return decommissionedNodesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(decommissionedNodes_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecommissionedNodesBuilder() {
+        return getDecommissionedNodesFieldBuilder().addBuilder(
+            yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder addDecommissionedNodesBuilder(
+          int index) {
+        return getDecommissionedNodesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.dataproc.manager.v1.HDFSNodeInfo decommissioned_nodes = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder> 
+           getDecommissionedNodesBuilderList() {
+        return getDecommissionedNodesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder> 
+          getDecommissionedNodesFieldBuilder() {
+        if (decommissionedNodesBuilder_ == null) {
+          decommissionedNodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.HDFSNodeInfoOrBuilder>(
+                  decommissionedNodes_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          decommissionedNodes_ = null;
+        }
+        return decommissionedNodesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10953,6 +11457,49 @@ public final class ManagerService {
   public interface ReportReplyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.ReportReply)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 decommission_timeout = 1;</code>
+     */
+    long getDecommissionTimeout();
+
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getYarnHostsToDecommissionList();
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    int getYarnHostsToDecommissionCount();
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    java.lang.String getYarnHostsToDecommission(int index);
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getYarnHostsToDecommissionBytes(int index);
+
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getHdfsHostsToDecommissionList();
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    int getHdfsHostsToDecommissionCount();
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    java.lang.String getHdfsHostsToDecommission(int index);
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getHdfsHostsToDecommissionBytes(int index);
   }
   /**
    * <pre>
@@ -10971,6 +11518,9 @@ public final class ManagerService {
       super(builder);
     }
     private ReportReply() {
+      decommissionTimeout_ = 0L;
+      yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -10986,6 +11536,7 @@ public final class ManagerService {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10996,6 +11547,29 @@ public final class ManagerService {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              decommissionTimeout_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                yarnHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              yarnHostsToDecommission_.add(s);
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                hdfsHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              hdfsHostsToDecommission_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11011,6 +11585,12 @@ public final class ManagerService {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          yarnHostsToDecommission_ = yarnHostsToDecommission_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          hdfsHostsToDecommission_ = hdfsHostsToDecommission_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -11028,6 +11608,74 @@ public final class ManagerService {
               yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.Builder.class);
     }
 
+    private int bitField0_;
+    public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 1;
+    private long decommissionTimeout_;
+    /**
+     * <code>int64 decommission_timeout = 1;</code>
+     */
+    public long getDecommissionTimeout() {
+      return decommissionTimeout_;
+    }
+
+    public static final int YARN_HOSTS_TO_DECOMMISSION_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList yarnHostsToDecommission_;
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getYarnHostsToDecommissionList() {
+      return yarnHostsToDecommission_;
+    }
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    public int getYarnHostsToDecommissionCount() {
+      return yarnHostsToDecommission_.size();
+    }
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    public java.lang.String getYarnHostsToDecommission(int index) {
+      return yarnHostsToDecommission_.get(index);
+    }
+    /**
+     * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getYarnHostsToDecommissionBytes(int index) {
+      return yarnHostsToDecommission_.getByteString(index);
+    }
+
+    public static final int HDFS_HOSTS_TO_DECOMMISSION_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList hdfsHostsToDecommission_;
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHdfsHostsToDecommissionList() {
+      return hdfsHostsToDecommission_;
+    }
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    public int getHdfsHostsToDecommissionCount() {
+      return hdfsHostsToDecommission_.size();
+    }
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    public java.lang.String getHdfsHostsToDecommission(int index) {
+      return hdfsHostsToDecommission_.get(index);
+    }
+    /**
+     * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHdfsHostsToDecommissionBytes(int index) {
+      return hdfsHostsToDecommission_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11042,6 +11690,15 @@ public final class ManagerService {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (decommissionTimeout_ != 0L) {
+        output.writeInt64(1, decommissionTimeout_);
+      }
+      for (int i = 0; i < yarnHostsToDecommission_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, yarnHostsToDecommission_.getRaw(i));
+      }
+      for (int i = 0; i < hdfsHostsToDecommission_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, hdfsHostsToDecommission_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11051,6 +11708,26 @@ public final class ManagerService {
       if (size != -1) return size;
 
       size = 0;
+      if (decommissionTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, decommissionTimeout_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < yarnHostsToDecommission_.size(); i++) {
+          dataSize += computeStringSizeNoTag(yarnHostsToDecommission_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getYarnHostsToDecommissionList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hdfsHostsToDecommission_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hdfsHostsToDecommission_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHdfsHostsToDecommissionList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11067,6 +11744,12 @@ public final class ManagerService {
       yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply) obj;
 
       boolean result = true;
+      result = result && (getDecommissionTimeout()
+          == other.getDecommissionTimeout());
+      result = result && getYarnHostsToDecommissionList()
+          .equals(other.getYarnHostsToDecommissionList());
+      result = result && getHdfsHostsToDecommissionList()
+          .equals(other.getHdfsHostsToDecommissionList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11078,6 +11761,17 @@ public final class ManagerService {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DECOMMISSION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecommissionTimeout());
+      if (getYarnHostsToDecommissionCount() > 0) {
+        hash = (37 * hash) + YARN_HOSTS_TO_DECOMMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getYarnHostsToDecommissionList().hashCode();
+      }
+      if (getHdfsHostsToDecommissionCount() > 0) {
+        hash = (37 * hash) + HDFS_HOSTS_TO_DECOMMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getHdfsHostsToDecommissionList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11215,6 +11909,12 @@ public final class ManagerService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        decommissionTimeout_ = 0L;
+
+        yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -11241,6 +11941,20 @@ public final class ManagerService {
       @java.lang.Override
       public yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply buildPartial() {
         yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.decommissionTimeout_ = decommissionTimeout_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          yarnHostsToDecommission_ = yarnHostsToDecommission_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.yarnHostsToDecommission_ = yarnHostsToDecommission_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          hdfsHostsToDecommission_ = hdfsHostsToDecommission_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.hdfsHostsToDecommission_ = hdfsHostsToDecommission_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -11289,6 +12003,29 @@ public final class ManagerService {
 
       public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply other) {
         if (other == yandex.cloud.api.dataproc.manager.v1.ManagerService.ReportReply.getDefaultInstance()) return this;
+        if (other.getDecommissionTimeout() != 0L) {
+          setDecommissionTimeout(other.getDecommissionTimeout());
+        }
+        if (!other.yarnHostsToDecommission_.isEmpty()) {
+          if (yarnHostsToDecommission_.isEmpty()) {
+            yarnHostsToDecommission_ = other.yarnHostsToDecommission_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureYarnHostsToDecommissionIsMutable();
+            yarnHostsToDecommission_.addAll(other.yarnHostsToDecommission_);
+          }
+          onChanged();
+        }
+        if (!other.hdfsHostsToDecommission_.isEmpty()) {
+          if (hdfsHostsToDecommission_.isEmpty()) {
+            hdfsHostsToDecommission_ = other.hdfsHostsToDecommission_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureHdfsHostsToDecommissionIsMutable();
+            hdfsHostsToDecommission_.addAll(other.hdfsHostsToDecommission_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11315,6 +12052,221 @@ public final class ManagerService {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+      private int bitField0_;
+
+      private long decommissionTimeout_ ;
+      /**
+       * <code>int64 decommission_timeout = 1;</code>
+       */
+      public long getDecommissionTimeout() {
+        return decommissionTimeout_;
+      }
+      /**
+       * <code>int64 decommission_timeout = 1;</code>
+       */
+      public Builder setDecommissionTimeout(long value) {
+        
+        decommissionTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 decommission_timeout = 1;</code>
+       */
+      public Builder clearDecommissionTimeout() {
+        
+        decommissionTimeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureYarnHostsToDecommissionIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          yarnHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList(yarnHostsToDecommission_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getYarnHostsToDecommissionList() {
+        return yarnHostsToDecommission_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public int getYarnHostsToDecommissionCount() {
+        return yarnHostsToDecommission_.size();
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public java.lang.String getYarnHostsToDecommission(int index) {
+        return yarnHostsToDecommission_.get(index);
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getYarnHostsToDecommissionBytes(int index) {
+        return yarnHostsToDecommission_.getByteString(index);
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public Builder setYarnHostsToDecommission(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureYarnHostsToDecommissionIsMutable();
+        yarnHostsToDecommission_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public Builder addYarnHostsToDecommission(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureYarnHostsToDecommissionIsMutable();
+        yarnHostsToDecommission_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public Builder addAllYarnHostsToDecommission(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureYarnHostsToDecommissionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, yarnHostsToDecommission_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public Builder clearYarnHostsToDecommission() {
+        yarnHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string yarn_hosts_to_decommission = 2;</code>
+       */
+      public Builder addYarnHostsToDecommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureYarnHostsToDecommissionIsMutable();
+        yarnHostsToDecommission_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHdfsHostsToDecommissionIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          hdfsHostsToDecommission_ = new com.google.protobuf.LazyStringArrayList(hdfsHostsToDecommission_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHdfsHostsToDecommissionList() {
+        return hdfsHostsToDecommission_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public int getHdfsHostsToDecommissionCount() {
+        return hdfsHostsToDecommission_.size();
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public java.lang.String getHdfsHostsToDecommission(int index) {
+        return hdfsHostsToDecommission_.get(index);
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHdfsHostsToDecommissionBytes(int index) {
+        return hdfsHostsToDecommission_.getByteString(index);
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public Builder setHdfsHostsToDecommission(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHdfsHostsToDecommissionIsMutable();
+        hdfsHostsToDecommission_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public Builder addHdfsHostsToDecommission(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHdfsHostsToDecommissionIsMutable();
+        hdfsHostsToDecommission_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public Builder addAllHdfsHostsToDecommission(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHdfsHostsToDecommissionIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hdfsHostsToDecommission_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public Builder clearHdfsHostsToDecommission() {
+        hdfsHostsToDecommission_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string hdfs_hosts_to_decommission = 3;</code>
+       */
+      public Builder addHdfsHostsToDecommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHdfsHostsToDecommissionIsMutable();
+        hdfsHostsToDecommission_.add(value);
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -11452,46 +12404,52 @@ public final class ManagerService {
       "1.HbaseNodeInfo\"r\n\014HDFSNodeInfo\022\014\n\004name\030" +
       "\001 \001(\t\022\014\n\004used\030\002 \001(\003\022\021\n\tremaining\030\003 \001(\003\022\020" +
       "\n\010capacity\030\004 \001(\003\022\022\n\nnum_blocks\030\005 \001(\003\022\r\n\005" +
-      "state\030\006 \001(\t\"\363\002\n\010HDFSInfo\022\021\n\tavailable\030\001 " +
+      "state\030\006 \001(\t\"\343\003\n\010HDFSInfo\022\021\n\tavailable\030\001 " +
       "\001(\010\022\031\n\021percent_remaining\030\002 \001(\001\022\014\n\004used\030\003" +
       " \001(\003\022\014\n\004free\030\004 \001(\003\022\024\n\014total_blocks\030\005 \001(\003" +
       "\022\026\n\016missing_blocks\030\006 \001(\003\022\"\n\032missing_bloc" +
       "ks_replica_one\030\007 \001(\003\022B\n\nlive_nodes\030\010 \003(\013" +
       "2..yandex.cloud.dataproc.manager.v1.HDFS" +
       "NodeInfo\022B\n\ndead_nodes\030\t \003(\0132..yandex.cl" +
-      "oud.dataproc.manager.v1.HDFSNodeInfo\022C\n\013" +
-      "decom_nodes\030\n \003(\0132..yandex.cloud.datapro" +
-      "c.manager.v1.HDFSNodeInfo\"\233\001\n\010HiveInfo\022\021" +
-      "\n\tavailable\030\001 \001(\010\022\031\n\021queries_succeeded\030\002" +
-      " \001(\003\022\026\n\016queries_failed\030\003 \001(\003\022\031\n\021queries_" +
-      "executing\030\004 \001(\003\022\025\n\rsessions_open\030\005 \001(\003\022\027" +
-      "\n\017sessions_active\030\006 \001(\003\"x\n\014YarnNodeInfo\022" +
-      "\014\n\004name\030\001 \001(\t\022\r\n\005state\030\002 \001(\t\022\026\n\016num_cont" +
-      "ainers\030\003 \001(\003\022\026\n\016used_memory_mb\030\004 \001(\003\022\033\n\023" +
-      "available_memory_mb\030\005 \001(\003\"a\n\010YarnInfo\022\021\n" +
-      "\tavailable\030\001 \001(\010\022B\n\nlive_nodes\030\002 \003(\0132..y" +
-      "andex.cloud.dataproc.manager.v1.YarnNode" +
-      "Info\"\036\n\rZookeeperInfo\022\r\n\005alive\030\001 \001(\010\"\032\n\t" +
-      "OozieInfo\022\r\n\005alive\030\001 \001(\010\"\360\002\n\004Info\0228\n\004hdf" +
-      "s\030\001 \001(\0132*.yandex.cloud.dataproc.manager." +
-      "v1.HDFSInfo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud" +
-      ".dataproc.manager.v1.YarnInfo\0228\n\004hive\030\003 " +
-      "\001(\0132*.yandex.cloud.dataproc.manager.v1.H" +
-      "iveInfo\022B\n\tzookeeper\030\004 \001(\0132/.yandex.clou" +
-      "d.dataproc.manager.v1.ZookeeperInfo\022:\n\005h" +
-      "base\030\005 \001(\0132+.yandex.cloud.dataproc.manag" +
-      "er.v1.HbaseInfo\022:\n\005oozie\030\006 \001(\0132+.yandex." +
-      "cloud.dataproc.manager.v1.OozieInfo\"m\n\rR" +
-      "eportRequest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_re" +
-      "vision\030\002 \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.clou" +
-      "d.dataproc.manager.v1.Info\"\r\n\013ReportRepl" +
-      "y2\204\001\n\026DataprocManagerService\022j\n\006Report\022/" +
-      ".yandex.cloud.dataproc.manager.v1.Report" +
-      "Request\032-.yandex.cloud.dataproc.manager." +
-      "v1.ReportReply\"\000B}\n$yandex.cloud.api.dat" +
-      "aproc.manager.v1ZUgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/dataproc/mana" +
-      "ger/v1;dataproc_managerb\006proto3"
+      "oud.dataproc.manager.v1.HDFSNodeInfo\022\020\n\010" +
+      "safemode\030\013 \001(\t\022M\n\025decommissioning_nodes\030" +
+      "\014 \003(\0132..yandex.cloud.dataproc.manager.v1" +
+      ".HDFSNodeInfo\022L\n\024decommissioned_nodes\030\r " +
+      "\003(\0132..yandex.cloud.dataproc.manager.v1.H" +
+      "DFSNodeInfoJ\004\010\n\020\013\"\233\001\n\010HiveInfo\022\021\n\tavaila" +
+      "ble\030\001 \001(\010\022\031\n\021queries_succeeded\030\002 \001(\003\022\026\n\016" +
+      "queries_failed\030\003 \001(\003\022\031\n\021queries_executin" +
+      "g\030\004 \001(\003\022\025\n\rsessions_open\030\005 \001(\003\022\027\n\017sessio" +
+      "ns_active\030\006 \001(\003\"x\n\014YarnNodeInfo\022\014\n\004name\030" +
+      "\001 \001(\t\022\r\n\005state\030\002 \001(\t\022\026\n\016num_containers\030\003" +
+      " \001(\003\022\026\n\016used_memory_mb\030\004 \001(\003\022\033\n\023availabl" +
+      "e_memory_mb\030\005 \001(\003\"a\n\010YarnInfo\022\021\n\tavailab" +
+      "le\030\001 \001(\010\022B\n\nlive_nodes\030\002 \003(\0132..yandex.cl" +
+      "oud.dataproc.manager.v1.YarnNodeInfo\"\036\n\r" +
+      "ZookeeperInfo\022\r\n\005alive\030\001 \001(\010\"\032\n\tOozieInf" +
+      "o\022\r\n\005alive\030\001 \001(\010\"\360\002\n\004Info\0228\n\004hdfs\030\001 \001(\0132" +
+      "*.yandex.cloud.dataproc.manager.v1.HDFSI" +
+      "nfo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud.datapro" +
+      "c.manager.v1.YarnInfo\0228\n\004hive\030\003 \001(\0132*.ya" +
+      "ndex.cloud.dataproc.manager.v1.HiveInfo\022" +
+      "B\n\tzookeeper\030\004 \001(\0132/.yandex.cloud.datapr" +
+      "oc.manager.v1.ZookeeperInfo\022:\n\005hbase\030\005 \001" +
+      "(\0132+.yandex.cloud.dataproc.manager.v1.Hb" +
+      "aseInfo\022:\n\005oozie\030\006 \001(\0132+.yandex.cloud.da" +
+      "taproc.manager.v1.OozieInfo\"m\n\rReportReq" +
+      "uest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revision\030\002" +
+      " \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud.datapr" +
+      "oc.manager.v1.Info\"s\n\013ReportReply\022\034\n\024dec" +
+      "ommission_timeout\030\001 \001(\003\022\"\n\032yarn_hosts_to" +
+      "_decommission\030\002 \003(\t\022\"\n\032hdfs_hosts_to_dec" +
+      "ommission\030\003 \003(\t2\204\001\n\026DataprocManagerServi" +
+      "ce\022j\n\006Report\022/.yandex.cloud.dataproc.man" +
+      "ager.v1.ReportRequest\032-.yandex.cloud.dat" +
+      "aproc.manager.v1.ReportReply\"\000B}\n$yandex" +
+      ".cloud.api.dataproc.manager.v1ZUgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/dataproc/manager/v1;dataproc_managerb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11528,7 +12486,7 @@ public final class ManagerService {
     internal_static_yandex_cloud_dataproc_manager_v1_HDFSInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_HDFSInfo_descriptor,
-        new java.lang.String[] { "Available", "PercentRemaining", "Used", "Free", "TotalBlocks", "MissingBlocks", "MissingBlocksReplicaOne", "LiveNodes", "DeadNodes", "DecomNodes", });
+        new java.lang.String[] { "Available", "PercentRemaining", "Used", "Free", "TotalBlocks", "MissingBlocks", "MissingBlocksReplicaOne", "LiveNodes", "DeadNodes", "Safemode", "DecommissioningNodes", "DecommissionedNodes", });
     internal_static_yandex_cloud_dataproc_manager_v1_HiveInfo_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_dataproc_manager_v1_HiveInfo_fieldAccessorTable = new
@@ -11576,7 +12534,7 @@ public final class ManagerService {
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "DecommissionTimeout", "YarnHostsToDecommission", "HdfsHostsToDecommission", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

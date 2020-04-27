@@ -362,6 +362,90 @@ public final class UserOuterClass {
      */
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.PermissionOrBuilder getPermissionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList();
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    int getGlobalPermissionsCount();
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index);
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getGlobalPermissionsValueList();
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    int getGlobalPermissionsValue(int index);
+
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    boolean hasConnectionLimits();
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits();
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder();
+
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    int getAuthenticationPluginValue();
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin();
   }
   /**
    * <pre>
@@ -384,6 +468,8 @@ public final class UserOuterClass {
       name_ = "";
       clusterId_ = "";
       permissions_ = java.util.Collections.emptyList();
+      globalPermissions_ = java.util.Collections.emptyList();
+      authenticationPlugin_ = 0;
     }
 
     @java.lang.Override
@@ -431,6 +517,48 @@ public final class UserOuterClass {
                   input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.Permission.parser(), extensionRegistry));
               break;
             }
+            case 32: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                globalPermissions_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              globalPermissions_.add(rawValue);
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  globalPermissions_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                globalPermissions_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder subBuilder = null;
+              if (connectionLimits_ != null) {
+                subBuilder = connectionLimits_.toBuilder();
+              }
+              connectionLimits_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectionLimits_);
+                connectionLimits_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              authenticationPlugin_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -448,6 +576,9 @@ public final class UserOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          globalPermissions_ = java.util.Collections.unmodifiableList(globalPermissions_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -606,6 +737,130 @@ public final class UserOuterClass {
       return permissions_.get(index);
     }
 
+    public static final int GLOBAL_PERMISSIONS_FIELD_NUMBER = 4;
+    private java.util.List<java.lang.Integer> globalPermissions_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> globalPermissions_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission>() {
+              public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission>(globalPermissions_, globalPermissions_converter_);
+    }
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public int getGlobalPermissionsCount() {
+      return globalPermissions_.size();
+    }
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index) {
+      return globalPermissions_converter_.convert(globalPermissions_.get(index));
+    }
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getGlobalPermissionsValueList() {
+      return globalPermissions_;
+    }
+    /**
+     * <pre>
+     * Set of global permissions to grant to the user.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+     */
+    public int getGlobalPermissionsValue(int index) {
+      return globalPermissions_.get(index);
+    }
+    private int globalPermissionsMemoizedSerializedSize;
+
+    public static final int CONNECTION_LIMITS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_;
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public boolean hasConnectionLimits() {
+      return connectionLimits_ != null;
+    }
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
+      return connectionLimits_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+    }
+    /**
+     * <pre>
+     * Set of user connection limits.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder() {
+      return getConnectionLimits();
+    }
+
+    public static final int AUTHENTICATION_PLUGIN_FIELD_NUMBER = 6;
+    private int authenticationPlugin_;
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    public int getAuthenticationPluginValue() {
+      return authenticationPlugin_;
+    }
+    /**
+     * <pre>
+     * User authentication plugin.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -620,6 +875,7 @@ public final class UserOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
@@ -628,6 +884,19 @@ public final class UserOuterClass {
       }
       for (int i = 0; i < permissions_.size(); i++) {
         output.writeMessage(3, permissions_.get(i));
+      }
+      if (getGlobalPermissionsList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(globalPermissionsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < globalPermissions_.size(); i++) {
+        output.writeEnumNoTag(globalPermissions_.get(i));
+      }
+      if (connectionLimits_ != null) {
+        output.writeMessage(5, getConnectionLimits());
+      }
+      if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, authenticationPlugin_);
       }
       unknownFields.writeTo(output);
     }
@@ -647,6 +916,26 @@ public final class UserOuterClass {
       for (int i = 0; i < permissions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, permissions_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < globalPermissions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(globalPermissions_.get(i));
+        }
+        size += dataSize;
+        if (!getGlobalPermissionsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }globalPermissionsMemoizedSerializedSize = dataSize;
+      }
+      if (connectionLimits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getConnectionLimits());
+      }
+      if (authenticationPlugin_ != yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.AUTH_PLUGIN_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, authenticationPlugin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -670,6 +959,13 @@ public final class UserOuterClass {
           .equals(other.getClusterId());
       result = result && getPermissionsList()
           .equals(other.getPermissionsList());
+      result = result && globalPermissions_.equals(other.globalPermissions_);
+      result = result && (hasConnectionLimits() == other.hasConnectionLimits());
+      if (hasConnectionLimits()) {
+        result = result && getConnectionLimits()
+            .equals(other.getConnectionLimits());
+      }
+      result = result && authenticationPlugin_ == other.authenticationPlugin_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -689,6 +985,16 @@ public final class UserOuterClass {
         hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPermissionsList().hashCode();
       }
+      if (getGlobalPermissionsCount() > 0) {
+        hash = (37 * hash) + GLOBAL_PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + globalPermissions_.hashCode();
+      }
+      if (hasConnectionLimits()) {
+        hash = (37 * hash) + CONNECTION_LIMITS_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionLimits().hashCode();
+      }
+      hash = (37 * hash) + AUTHENTICATION_PLUGIN_FIELD_NUMBER;
+      hash = (53 * hash) + authenticationPlugin_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -838,6 +1144,16 @@ public final class UserOuterClass {
         } else {
           permissionsBuilder_.clear();
         }
+        globalPermissions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = null;
+        } else {
+          connectionLimits_ = null;
+          connectionLimitsBuilder_ = null;
+        }
+        authenticationPlugin_ = 0;
+
         return this;
       }
 
@@ -877,6 +1193,17 @@ public final class UserOuterClass {
         } else {
           result.permissions_ = permissionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          globalPermissions_ = java.util.Collections.unmodifiableList(globalPermissions_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.globalPermissions_ = globalPermissions_;
+        if (connectionLimitsBuilder_ == null) {
+          result.connectionLimits_ = connectionLimits_;
+        } else {
+          result.connectionLimits_ = connectionLimitsBuilder_.build();
+        }
+        result.authenticationPlugin_ = authenticationPlugin_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -959,6 +1286,22 @@ public final class UserOuterClass {
               permissionsBuilder_.addAllMessages(other.permissions_);
             }
           }
+        }
+        if (!other.globalPermissions_.isEmpty()) {
+          if (globalPermissions_.isEmpty()) {
+            globalPermissions_ = other.globalPermissions_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureGlobalPermissionsIsMutable();
+            globalPermissions_.addAll(other.globalPermissions_);
+          }
+          onChanged();
+        }
+        if (other.hasConnectionLimits()) {
+          mergeConnectionLimits(other.getConnectionLimits());
+        }
+        if (other.authenticationPlugin_ != 0) {
+          setAuthenticationPluginValue(other.getAuthenticationPluginValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1478,6 +1821,390 @@ public final class UserOuterClass {
           permissions_ = null;
         }
         return permissionsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> globalPermissions_ =
+        java.util.Collections.emptyList();
+      private void ensureGlobalPermissionsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          globalPermissions_ = new java.util.ArrayList<java.lang.Integer>(globalPermissions_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> getGlobalPermissionsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission>(globalPermissions_, globalPermissions_converter_);
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public int getGlobalPermissionsCount() {
+        return globalPermissions_.size();
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission getGlobalPermissions(int index) {
+        return globalPermissions_converter_.convert(globalPermissions_.get(index));
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder setGlobalPermissions(
+          int index, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGlobalPermissionsIsMutable();
+        globalPermissions_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder addGlobalPermissions(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGlobalPermissionsIsMutable();
+        globalPermissions_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder addAllGlobalPermissions(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission> values) {
+        ensureGlobalPermissionsIsMutable();
+        for (yandex.cloud.api.mdb.mysql.v1.UserOuterClass.GlobalPermission value : values) {
+          globalPermissions_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder clearGlobalPermissions() {
+        globalPermissions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getGlobalPermissionsValueList() {
+        return java.util.Collections.unmodifiableList(globalPermissions_);
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public int getGlobalPermissionsValue(int index) {
+        return globalPermissions_.get(index);
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder setGlobalPermissionsValue(
+          int index, int value) {
+        ensureGlobalPermissionsIsMutable();
+        globalPermissions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder addGlobalPermissionsValue(int value) {
+        ensureGlobalPermissionsIsMutable();
+        globalPermissions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of global permissions to grant to the user.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.mysql.v1.GlobalPermission global_permissions = 4;</code>
+       */
+      public Builder addAllGlobalPermissionsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureGlobalPermissionsIsMutable();
+        for (int value : values) {
+          globalPermissions_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits connectionLimits_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder> connectionLimitsBuilder_;
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public boolean hasConnectionLimits() {
+        return connectionLimitsBuilder_ != null || connectionLimits_ != null;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits getConnectionLimits() {
+        if (connectionLimitsBuilder_ == null) {
+          return connectionLimits_ == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+        } else {
+          return connectionLimitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder setConnectionLimits(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits value) {
+        if (connectionLimitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          connectionLimits_ = value;
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder setConnectionLimits(
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder builderForValue) {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder mergeConnectionLimits(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits value) {
+        if (connectionLimitsBuilder_ == null) {
+          if (connectionLimits_ != null) {
+            connectionLimits_ =
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.newBuilder(connectionLimits_).mergeFrom(value).buildPartial();
+          } else {
+            connectionLimits_ = value;
+          }
+          onChanged();
+        } else {
+          connectionLimitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public Builder clearConnectionLimits() {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimits_ = null;
+          onChanged();
+        } else {
+          connectionLimits_ = null;
+          connectionLimitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder getConnectionLimitsBuilder() {
+        
+        onChanged();
+        return getConnectionLimitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder getConnectionLimitsOrBuilder() {
+        if (connectionLimitsBuilder_ != null) {
+          return connectionLimitsBuilder_.getMessageOrBuilder();
+        } else {
+          return connectionLimits_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.getDefaultInstance() : connectionLimits_;
+        }
+      }
+      /**
+       * <pre>
+       * Set of user connection limits.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.ConnectionLimits connection_limits = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder> 
+          getConnectionLimitsFieldBuilder() {
+        if (connectionLimitsBuilder_ == null) {
+          connectionLimitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimits.Builder, yandex.cloud.api.mdb.mysql.v1.UserOuterClass.ConnectionLimitsOrBuilder>(
+                  getConnectionLimits(),
+                  getParentForChildren(),
+                  isClean());
+          connectionLimits_ = null;
+        }
+        return connectionLimitsBuilder_;
+      }
+
+      private int authenticationPlugin_ = 0;
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public int getAuthenticationPluginValue() {
+        return authenticationPlugin_;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder setAuthenticationPluginValue(int value) {
+        authenticationPlugin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin getAuthenticationPlugin() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin result = yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.valueOf(authenticationPlugin_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder setAuthenticationPlugin(yandex.cloud.api.mdb.mysql.v1.UserOuterClass.AuthPlugin value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        authenticationPlugin_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User authentication plugin.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.AuthPlugin authentication_plugin = 6;</code>
+       */
+      public Builder clearAuthenticationPlugin() {
+        
+        authenticationPlugin_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6298,45 +7025,50 @@ public final class UserOuterClass {
       "\n$yandex/cloud/mdb/mysql/v1/user.proto\022\031" +
       "yandex.cloud.mdb.mysql.v1\032\036google/protob" +
       "uf/wrappers.proto\032\035yandex/cloud/validati" +
-      "on.proto\"d\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
-      "r_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132%.yandex" +
-      ".cloud.mdb.mysql.v1.Permission\"\237\003\n\nPermi" +
-      "ssion\022\025\n\rdatabase_name\030\001 \001(\t\022G\n\005roles\030\002 " +
-      "\003(\0162/.yandex.cloud.mdb.mysql.v1.Permissi" +
-      "on.PrivilegeB\007\202\3101\003>=1\"\260\002\n\tPrivilege\022\031\n\025P" +
-      "RIVILEGE_UNSPECIFIED\020\000\022\022\n\016ALL_PRIVILEGES" +
-      "\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_ROUTINE\020\003\022\n\n\006CREA" +
-      "TE\020\004\022\022\n\016CREATE_ROUTINE\020\005\022\033\n\027CREATE_TEMPO" +
-      "RARY_TABLES\020\006\022\017\n\013CREATE_VIEW\020\007\022\n\n\006DELETE" +
-      "\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022\013\n\007EXECUTE\020\013\022\t\n\005" +
-      "INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013LOCK_TABLES\020\016\022\n\n\006" +
-      "SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022\013\n\007TRIGGER\020\021\022\n\n\006" +
-      "UPDATE\020\022\"\250\002\n\020ConnectionLimits\022D\n\026max_que" +
-      "stions_per_hour\030\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022B\n\024max_updates_per_h" +
-      "our\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022F\n\030max_connections_per_hour\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "B\n\024max_user_connections\030\004 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\007\372\3071\003>=0\"\353\002\n\010UserSpec" +
-      "\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z0" +
-      "-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:" +
-      "\n\013permissions\030\003 \003(\0132%.yandex.cloud.mdb.m" +
-      "ysql.v1.Permission\022G\n\022global_permissions" +
-      "\030\004 \003(\0162+.yandex.cloud.mdb.mysql.v1.Globa" +
-      "lPermission\022F\n\021connection_limits\030\005 \001(\0132+" +
-      ".yandex.cloud.mdb.mysql.v1.ConnectionLim" +
-      "its\022D\n\025authentication_plugin\030\006 \001(\0162%.yan" +
-      "dex.cloud.mdb.mysql.v1.AuthPlugin*d\n\020Glo" +
-      "balPermission\022!\n\035GLOBAL_PERMISSION_UNSPE" +
-      "CIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPL" +
-      "ICATION_SLAVE\020\002*t\n\nAuthPlugin\022\033\n\027AUTH_PL" +
-      "UGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSW" +
-      "ORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA2" +
-      "56_PASSWORD\020\003Bd\n\035yandex.cloud.api.mdb.my" +
-      "sql.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/mysql/v1;mysqlb\006pro" +
-      "to3"
+      "on.proto\"\273\002\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
+      "er_id\030\002 \001(\t\022:\n\013permissions\030\003 \003(\0132%.yande" +
+      "x.cloud.mdb.mysql.v1.Permission\022G\n\022globa" +
+      "l_permissions\030\004 \003(\0162+.yandex.cloud.mdb.m" +
+      "ysql.v1.GlobalPermission\022F\n\021connection_l" +
+      "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
+      "ConnectionLimits\022D\n\025authentication_plugi" +
+      "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
+      "Plugin\"\237\003\n\nPermission\022\025\n\rdatabase_name\030\001" +
+      " \001(\t\022G\n\005roles\030\002 \003(\0162/.yandex.cloud.mdb.m" +
+      "ysql.v1.Permission.PrivilegeB\007\202\3101\003>=1\"\260\002" +
+      "\n\tPrivilege\022\031\n\025PRIVILEGE_UNSPECIFIED\020\000\022\022" +
+      "\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_R" +
+      "OUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTINE\020\005" +
+      "\022\033\n\027CREATE_TEMPORARY_TABLES\020\006\022\017\n\013CREATE_" +
+      "VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022" +
+      "\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013L" +
+      "OCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022" +
+      "\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\"\250\002\n\020ConnectionL" +
+      "imits\022D\n\026max_questions_per_hour\030\001 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024m" +
+      "ax_updates_per_hour\030\002 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_connectio" +
+      "ns_per_hour\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022B\n\024max_user_connections\030" +
+      "\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\"\353\002\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004" +
+      "<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB" +
+      "\r\350\3071\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.ya" +
+      "ndex.cloud.mdb.mysql.v1.Permission\022G\n\022gl" +
+      "obal_permissions\030\004 \003(\0162+.yandex.cloud.md" +
+      "b.mysql.v1.GlobalPermission\022F\n\021connectio" +
+      "n_limits\030\005 \001(\0132+.yandex.cloud.mdb.mysql." +
+      "v1.ConnectionLimits\022D\n\025authentication_pl" +
+      "ugin\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.A" +
+      "uthPlugin*d\n\020GlobalPermission\022!\n\035GLOBAL_" +
+      "PERMISSION_UNSPECIFIED\020\000\022\026\n\022REPLICATION_" +
+      "CLIENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002*t\n\nAuthP" +
+      "lugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MY" +
+      "SQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PA" +
+      "SSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex." +
+      "cloud.api.mdb.mysql.v1ZCgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/mys" +
+      "ql/v1;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6357,7 +7089,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "GlobalPermissions", "ConnectionLimits", "AuthenticationPlugin", });
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_Permission_fieldAccessorTable = new

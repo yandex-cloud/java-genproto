@@ -10253,6 +10253,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getBucketBytes();
+
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 9 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    long getDecommissionTimeout();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.UpdateClusterRequest}
@@ -10272,6 +10281,7 @@ public final class ClusterServiceOuterClass {
       name_ = "";
       serviceAccountId_ = "";
       bucket_ = "";
+      decommissionTimeout_ = 0L;
     }
 
     @java.lang.Override
@@ -10365,6 +10375,11 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               bucket_ = s;
+              break;
+            }
+            case 72: {
+
+              decommissionTimeout_ = input.readInt64();
               break;
             }
             default: {
@@ -10782,6 +10797,19 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 9;
+    private long decommissionTimeout_;
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 9 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public long getDecommissionTimeout() {
+      return decommissionTimeout_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10822,6 +10850,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getBucketBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, bucket_);
+      }
+      if (decommissionTimeout_ != 0L) {
+        output.writeInt64(9, decommissionTimeout_);
       }
       unknownFields.writeTo(output);
     }
@@ -10865,6 +10896,10 @@ public final class ClusterServiceOuterClass {
       if (!getBucketBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, bucket_);
       }
+      if (decommissionTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, decommissionTimeout_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10903,6 +10938,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getServiceAccountId());
       result = result && getBucket()
           .equals(other.getBucket());
+      result = result && (getDecommissionTimeout()
+          == other.getDecommissionTimeout());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10936,6 +10973,9 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + BUCKET_FIELD_NUMBER;
       hash = (53 * hash) + getBucket().hashCode();
+      hash = (37 * hash) + DECOMMISSION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecommissionTimeout());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11114,6 +11154,8 @@ public final class ClusterServiceOuterClass {
 
         bucket_ = "";
 
+        decommissionTimeout_ = 0L;
+
         return this;
       }
 
@@ -11159,6 +11201,7 @@ public final class ClusterServiceOuterClass {
         result.name_ = name_;
         result.serviceAccountId_ = serviceAccountId_;
         result.bucket_ = bucket_;
+        result.decommissionTimeout_ = decommissionTimeout_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11235,6 +11278,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getBucket().isEmpty()) {
           bucket_ = other.bucket_;
           onChanged();
+        }
+        if (other.getDecommissionTimeout() != 0L) {
+          setDecommissionTimeout(other.getDecommissionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12172,6 +12218,44 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private long decommissionTimeout_ ;
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 9 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public long getDecommissionTimeout() {
+        return decommissionTimeout_;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 9 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setDecommissionTimeout(long value) {
+        
+        decommissionTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 9 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearDecommissionTimeout() {
+        
+        decommissionTimeout_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12834,6 +12918,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    long getDecommissionTimeout();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.DeleteClusterRequest}
@@ -12849,6 +12942,7 @@ public final class ClusterServiceOuterClass {
     }
     private DeleteClusterRequest() {
       clusterId_ = "";
+      decommissionTimeout_ = 0L;
     }
 
     @java.lang.Override
@@ -12879,6 +12973,11 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
+              break;
+            }
+            case 16: {
+
+              decommissionTimeout_ = input.readInt64();
               break;
             }
             default: {
@@ -12957,6 +13056,19 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 2;
+    private long decommissionTimeout_;
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public long getDecommissionTimeout() {
+      return decommissionTimeout_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12974,6 +13086,9 @@ public final class ClusterServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      if (decommissionTimeout_ != 0L) {
+        output.writeInt64(2, decommissionTimeout_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12985,6 +13100,10 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (decommissionTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, decommissionTimeout_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13004,6 +13123,8 @@ public final class ClusterServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
+      result = result && (getDecommissionTimeout()
+          == other.getDecommissionTimeout());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13017,6 +13138,9 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DECOMMISSION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecommissionTimeout());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13152,6 +13276,8 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        decommissionTimeout_ = 0L;
+
         return this;
       }
 
@@ -13179,6 +13305,7 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest buildPartial() {
         yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest result = new yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.DeleteClusterRequest(this);
         result.clusterId_ = clusterId_;
+        result.decommissionTimeout_ = decommissionTimeout_;
         onBuilt();
         return result;
       }
@@ -13230,6 +13357,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
           onChanged();
+        }
+        if (other.getDecommissionTimeout() != 0L) {
+          setDecommissionTimeout(other.getDecommissionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13350,6 +13480,44 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long decommissionTimeout_ ;
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public long getDecommissionTimeout() {
+        return decommissionTimeout_;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setDecommissionTimeout(long value) {
+        
+        decommissionTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearDecommissionTimeout() {
+        
+        decommissionTimeout_ = 0L;
         onChanged();
         return this;
       }
@@ -15196,6 +15364,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    long getDecommissionTimeout();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.StopClusterRequest}
@@ -15211,6 +15388,7 @@ public final class ClusterServiceOuterClass {
     }
     private StopClusterRequest() {
       clusterId_ = "";
+      decommissionTimeout_ = 0L;
     }
 
     @java.lang.Override
@@ -15241,6 +15419,11 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
+              break;
+            }
+            case 16: {
+
+              decommissionTimeout_ = input.readInt64();
               break;
             }
             default: {
@@ -15319,6 +15502,19 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 2;
+    private long decommissionTimeout_;
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public long getDecommissionTimeout() {
+      return decommissionTimeout_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15336,6 +15532,9 @@ public final class ClusterServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
+      if (decommissionTimeout_ != 0L) {
+        output.writeInt64(2, decommissionTimeout_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15347,6 +15546,10 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (decommissionTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, decommissionTimeout_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15366,6 +15569,8 @@ public final class ClusterServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
+      result = result && (getDecommissionTimeout()
+          == other.getDecommissionTimeout());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -15379,6 +15584,9 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DECOMMISSION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecommissionTimeout());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15514,6 +15722,8 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
+        decommissionTimeout_ = 0L;
+
         return this;
       }
 
@@ -15541,6 +15751,7 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest buildPartial() {
         yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest result = new yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.StopClusterRequest(this);
         result.clusterId_ = clusterId_;
+        result.decommissionTimeout_ = decommissionTimeout_;
         onBuilt();
         return result;
       }
@@ -15592,6 +15803,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
           onChanged();
+        }
+        if (other.getDecommissionTimeout() != 0L) {
+          setDecommissionTimeout(other.getDecommissionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15712,6 +15926,44 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long decommissionTimeout_ ;
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public long getDecommissionTimeout() {
+        return decommissionTimeout_;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setDecommissionTimeout(long value) {
+        
+        decommissionTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes. In seconds. Default value: 0
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 2 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearDecommissionTimeout() {
+        
+        decommissionTimeout_ = 0L;
         onChanged();
         return this;
       }
@@ -20681,7 +20933,7 @@ public final class ClusterServiceOuterClass {
       "_account_id\030\010 \001(\tB\004\350\3071\001\022\016\n\006bucket\030\t \001(\t\032" +
       "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
       "(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"\347\003\n\024UpdateClusterRequest\022\034\n\n" +
+      "er_id\030\001 \001(\t\"\222\004\n\024UpdateClusterRequest\022\034\n\n" +
       "cluster_id\030\001 \001(\tB\010\212\3101\004<=50\022/\n\013update_mas" +
       "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022\036\n\013d" +
       "escription\030\003 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\004" +
@@ -20692,70 +20944,73 @@ public final class ClusterServiceOuterClass {
       "cloud.dataproc.v1.UpdateClusterConfigSpe" +
       "c\022/\n\004name\030\006 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,6" +
       "1}[a-z0-9]\022\032\n\022service_account_id\030\007 \001(\t\022\016" +
-      "\n\006bucket\030\010 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClus" +
-      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClust" +
-      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"~\n\034ListClusterOperationsReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\221\001\n\027ListClusterHostsRequest\022\034" +
-      "\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"b" +
-      "\n\030ListClusterHostsResponse\022-\n\005hosts\030\001 \003(" +
-      "\0132\036.yandex.cloud.dataproc.v1.Host\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t2\354\013\n\016ClusterService\022\201\001" +
-      "\n\003Get\022+.yandex.cloud.dataproc.v1.GetClus" +
-      "terRequest\032!.yandex.cloud.dataproc.v1.Cl" +
-      "uster\"*\202\323\344\223\002$\022\"/dataproc/v1/clusters/{cl" +
-      "uster_id}\022\204\001\n\004List\022-.yandex.cloud.datapr" +
-      "oc.v1.ListClustersRequest\032..yandex.cloud" +
-      ".dataproc.v1.ListClustersResponse\"\035\202\323\344\223\002" +
-      "\027\022\025/dataproc/v1/clusters\022\241\001\n\006Create\022..ya" +
-      "ndex.cloud.dataproc.v1.CreateClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"D" +
-      "\202\323\344\223\002\032\"\025/dataproc/v1/clusters:\001*\262\322* \n\025Cr" +
-      "eateClusterMetadata\022\007Cluster\022\256\001\n\006Update\022" +
-      "..yandex.cloud.dataproc.v1.UpdateCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"Q\202\323\344\223\002\'2\"/dataproc/v1/clusters/{clust" +
-      "er_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cl" +
-      "uster\022\271\001\n\006Delete\022..yandex.cloud.dataproc" +
-      ".v1.DeleteClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"\\\202\323\344\223\002$*\"/dataproc/v" +
-      "1/clusters/{cluster_id}\262\322*.\n\025DeleteClust" +
-      "erMetadata\022\025google.protobuf.Empty\022\256\001\n\005St" +
-      "art\022-.yandex.cloud.dataproc.v1.StartClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"S\202\323\344\223\002*\"(/dataproc/v1/clusters/{cl" +
-      "uster_id}:start\262\322*\037\n\024StartClusterMetadat" +
-      "a\022\007Cluster\022\252\001\n\004Stop\022,.yandex.cloud.datap" +
-      "roc.v1.StopClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"Q\202\323\344\223\002)\"\'/dataproc/" +
-      "v1/clusters/{cluster_id}:stop\262\322*\036\n\023StopC" +
-      "lusterMetadata\022\007Cluster\022\270\001\n\016ListOperatio" +
-      "ns\0226.yandex.cloud.dataproc.v1.ListCluste" +
-      "rOperationsRequest\0327.yandex.cloud.datapr" +
-      "oc.v1.ListClusterOperationsResponse\"5\202\323\344" +
-      "\223\002/\022-/dataproc/v1/clusters/{cluster_id}/" +
-      "operations\022\244\001\n\tListHosts\0221.yandex.cloud." +
-      "dataproc.v1.ListClusterHostsRequest\0322.ya" +
-      "ndex.cloud.dataproc.v1.ListClusterHostsR" +
-      "esponse\"0\202\323\344\223\002*\022(/dataproc/v1/clusters/{" +
-      "cluster_id}/hostsBe\n\034yandex.cloud.api.da" +
-      "taproc.v1ZEgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/dataproc/v1;dataproc" +
-      "b\006proto3"
+      "\n\006bucket\030\010 \001(\t\022)\n\024decommission_timeout\030\t" +
+      " \001(\003B\013\372\3071\0070-86400\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\024DeleteC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022)\n\024decommission_timeout\030\002 \001(\003B\013\372" +
+      "\3071\0070-86400\"+\n\025DeleteClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024Star" +
+      "tClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"a\n\022" +
+      "StopClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022)\n\024decommission_timeout\030\002 \001" +
+      "(\003B\013\372\3071\0070-86400\")\n\023StopClusterMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\"~\n\034ListClusterOperati" +
+      "onsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListCluste" +
+      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t\"\221\001\n\027ListClusterHosts" +
+      "Request\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
+      "\006<=1000\"b\n\030ListClusterHostsResponse\022-\n\005h" +
+      "osts\030\001 \003(\0132\036.yandex.cloud.dataproc.v1.Ho" +
+      "st\022\027\n\017next_page_token\030\002 \001(\t2\357\013\n\016ClusterS" +
+      "ervice\022\201\001\n\003Get\022+.yandex.cloud.dataproc.v" +
+      "1.GetClusterRequest\032!.yandex.cloud.datap" +
+      "roc.v1.Cluster\"*\202\323\344\223\002$\022\"/dataproc/v1/clu" +
+      "sters/{cluster_id}\022\204\001\n\004List\022-.yandex.clo" +
+      "ud.dataproc.v1.ListClustersRequest\032..yan" +
+      "dex.cloud.dataproc.v1.ListClustersRespon" +
+      "se\"\035\202\323\344\223\002\027\022\025/dataproc/v1/clusters\022\241\001\n\006Cr" +
+      "eate\022..yandex.cloud.dataproc.v1.CreateCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"D\202\323\344\223\002\032\"\025/dataproc/v1/clusters:\001" +
+      "*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022\256\001" +
+      "\n\006Update\022..yandex.cloud.dataproc.v1.Upda" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Q\202\323\344\223\002\'2\"/dataproc/v1/cluste" +
+      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
+      "adata\022\007Cluster\022\271\001\n\006Delete\022..yandex.cloud" +
+      ".dataproc.v1.DeleteClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\\\202\323\344\223\002$*\"/d" +
+      "ataproc/v1/clusters/{cluster_id}\262\322*.\n\025De" +
+      "leteClusterMetadata\022\025google.protobuf.Emp" +
+      "ty\022\256\001\n\005Start\022-.yandex.cloud.dataproc.v1." +
+      "StartClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"S\202\323\344\223\002*\"(/dataproc/v1/clu" +
+      "sters/{cluster_id}:start\262\322*\037\n\024StartClust" +
+      "erMetadata\022\007Cluster\022\255\001\n\004Stop\022,.yandex.cl" +
+      "oud.dataproc.v1.StopClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"T\202\323\344\223\002,\"\'/" +
+      "dataproc/v1/clusters/{cluster_id}:stop:\001" +
+      "*\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\270\001\n\016" +
+      "ListOperations\0226.yandex.cloud.dataproc.v" +
+      "1.ListClusterOperationsRequest\0327.yandex." +
+      "cloud.dataproc.v1.ListClusterOperationsR" +
+      "esponse\"5\202\323\344\223\002/\022-/dataproc/v1/clusters/{" +
+      "cluster_id}/operations\022\244\001\n\tListHosts\0221.y" +
+      "andex.cloud.dataproc.v1.ListClusterHosts" +
+      "Request\0322.yandex.cloud.dataproc.v1.ListC" +
+      "lusterHostsResponse\"0\202\323\344\223\002*\022(/dataproc/v" +
+      "1/clusters/{cluster_id}/hostsBe\n\034yandex." +
+      "cloud.api.dataproc.v1ZEgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/dataproc" +
+      "/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20842,7 +21097,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "ServiceAccountId", "Bucket", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "ServiceAccountId", "Bucket", "DecommissionTimeout", });
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -20860,7 +21115,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_dataproc_v1_DeleteClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_DeleteClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "DecommissionTimeout", });
     internal_static_yandex_cloud_dataproc_v1_DeleteClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dataproc_v1_DeleteClusterMetadata_fieldAccessorTable = new
@@ -20884,7 +21139,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_dataproc_v1_StopClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_StopClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", });
+        new java.lang.String[] { "ClusterId", "DecommissionTimeout", });
     internal_static_yandex_cloud_dataproc_v1_StopClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_dataproc_v1_StopClusterMetadata_fieldAccessorTable = new
