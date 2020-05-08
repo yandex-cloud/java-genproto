@@ -126,6 +126,38 @@ public final class JobServiceGrpc {
      return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest,
+      yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> getListLogMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListLog",
+      requestType = yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest.class,
+      responseType = yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest,
+      yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> getListLogMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest, yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> getListLogMethod;
+    if ((getListLogMethod = JobServiceGrpc.getListLogMethod) == null) {
+      synchronized (JobServiceGrpc.class) {
+        if ((getListLogMethod = JobServiceGrpc.getListLogMethod) == null) {
+          JobServiceGrpc.getListLogMethod = getListLogMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest, yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.dataproc.v1.JobService", "ListLog"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new JobServiceMethodDescriptorSupplier("ListLog"))
+                  .build();
+          }
+        }
+     }
+     return getListLogMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -186,6 +218,16 @@ public final class JobServiceGrpc {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns a log for specified job.
+     * </pre>
+     */
+    public void listLog(yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListLogMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -209,6 +251,13 @@ public final class JobServiceGrpc {
                 yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest,
                 yandex.cloud.api.dataproc.v1.PHJ.Job>(
                   this, METHODID_GET)))
+          .addMethod(
+            getListLogMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest,
+                yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse>(
+                  this, METHODID_LIST_LOG)))
           .build();
     }
   }
@@ -266,6 +315,17 @@ public final class JobServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a log for specified job.
+     * </pre>
+     */
+    public void listLog(yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListLogMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -317,6 +377,16 @@ public final class JobServiceGrpc {
     public yandex.cloud.api.dataproc.v1.PHJ.Job get(yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a log for specified job.
+     * </pre>
+     */
+    public yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse listLog(yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListLogMethod(), getCallOptions(), request);
     }
   }
 
@@ -373,11 +443,23 @@ public final class JobServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a log for specified job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse> listLog(
+        yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListLogMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
   private static final int METHODID_CREATE = 1;
   private static final int METHODID_GET = 2;
+  private static final int METHODID_LIST_LOG = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -407,6 +489,10 @@ public final class JobServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.dataproc.v1.PHJS.GetJobRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJ.Job>) responseObserver);
+          break;
+        case METHODID_LIST_LOG:
+          serviceImpl.listLog((yandex.cloud.api.dataproc.v1.PHJS.ListJobLogRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.PHJS.ListJobLogResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -472,6 +558,7 @@ public final class JobServiceGrpc {
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getListLogMethod())
               .build();
         }
       }
