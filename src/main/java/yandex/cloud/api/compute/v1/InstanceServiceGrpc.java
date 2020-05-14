@@ -478,28 +478,28 @@ public final class InstanceServiceGrpc {
      return getRemoveOneToOneNatMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworkInterfaceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateNetworkInterface",
-      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest.class,
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworkInterfaceMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworkInterfaceMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateNetworkInterfaceMethod;
     if ((getUpdateNetworkInterfaceMethod = InstanceServiceGrpc.getUpdateNetworkInterfaceMethod) == null) {
       synchronized (InstanceServiceGrpc.class) {
         if ((getUpdateNetworkInterfaceMethod = InstanceServiceGrpc.getUpdateNetworkInterfaceMethod) == null) {
           InstanceServiceGrpc.getUpdateNetworkInterfaceMethod = getUpdateNetworkInterfaceMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.compute.v1.InstanceService", "UpdateNetworkInterface"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest.getDefaultInstance()))
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
                   .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("UpdateNetworkInterface"))
@@ -711,7 +711,7 @@ public final class InstanceServiceGrpc {
 
     /**
      */
-    public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest request,
+    public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateNetworkInterfaceMethod(), responseObserver);
     }
@@ -830,7 +830,7 @@ public final class InstanceServiceGrpc {
             getUpdateNetworkInterfaceMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest,
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_NETWORK_INTERFACE)))
           .addMethod(
@@ -1018,7 +1018,7 @@ public final class InstanceServiceGrpc {
 
     /**
      */
-    public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest request,
+    public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateNetworkInterfaceMethod(), getCallOptions()), request, responseObserver);
@@ -1196,7 +1196,7 @@ public final class InstanceServiceGrpc {
 
     /**
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateNetworkInterfaceMethod(), getCallOptions(), request);
     }
@@ -1387,7 +1387,7 @@ public final class InstanceServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateNetworkInterface(
-        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest request) {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateNetworkInterfaceMethod(), getCallOptions()), request);
     }
@@ -1495,7 +1495,7 @@ public final class InstanceServiceGrpc {
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_UPDATE_NETWORK_INTERFACE:
-          serviceImpl.updateNetworkInterface((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateNetworkInterfaceRequest) request,
+          serviceImpl.updateNetworkInterface((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:

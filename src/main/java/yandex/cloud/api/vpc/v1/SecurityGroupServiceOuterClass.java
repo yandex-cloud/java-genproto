@@ -4148,32 +4148,35 @@ public final class SecurityGroupServiceOuterClass {
     long getProtocolNumber();
 
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     boolean hasCidrBlocks();
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks();
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder();
+
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string security_group_id = 8;</code>
+     */
+    java.lang.String getSecurityGroupId();
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string security_group_id = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdBytes();
 
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.ProtocolCase getProtocolCase();
 
@@ -4283,6 +4286,12 @@ public final class SecurityGroupServiceOuterClass {
               targetCase_ = 7;
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              targetCase_ = 8;
+              target_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4371,6 +4380,7 @@ public final class SecurityGroupServiceOuterClass {
     public enum TargetCase
         implements com.google.protobuf.Internal.EnumLite {
       CIDR_BLOCKS(7),
+      SECURITY_GROUP_ID(8),
       TARGET_NOT_SET(0);
       private final int value;
       private TargetCase(int value) {
@@ -4387,6 +4397,7 @@ public final class SecurityGroupServiceOuterClass {
       public static TargetCase forNumber(int value) {
         switch (value) {
           case 7: return CIDR_BLOCKS;
+          case 8: return SECURITY_GROUP_ID;
           case 0: return TARGET_NOT_SET;
           default: return null;
         }
@@ -4618,22 +4629,12 @@ public final class SecurityGroupServiceOuterClass {
 
     public static final int CIDR_BLOCKS_FIELD_NUMBER = 7;
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     public boolean hasCidrBlocks() {
       return targetCase_ == 7;
     }
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks() {
@@ -4643,11 +4644,6 @@ public final class SecurityGroupServiceOuterClass {
       return yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.getDefaultInstance();
     }
     /**
-     * <pre>
-     * string security_group_id = .. ;
-     * string subnet_id = .. ;
-     * </pre>
-     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder() {
@@ -4655,6 +4651,57 @@ public final class SecurityGroupServiceOuterClass {
          return (yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks) target_;
       }
       return yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.getDefaultInstance();
+    }
+
+    public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string security_group_id = 8;</code>
+     */
+    public java.lang.String getSecurityGroupId() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 8) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 8) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * string subnet_id = .. ;
+     * </pre>
+     *
+     * <code>string security_group_id = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 8) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 8) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4695,6 +4742,9 @@ public final class SecurityGroupServiceOuterClass {
       }
       if (targetCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks) target_);
+      }
+      if (targetCase_ == 8) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, target_);
       }
       unknownFields.writeTo(output);
     }
@@ -4737,6 +4787,9 @@ public final class SecurityGroupServiceOuterClass {
       if (targetCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks) target_);
+      }
+      if (targetCase_ == 8) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, target_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4787,6 +4840,10 @@ public final class SecurityGroupServiceOuterClass {
           result = result && getCidrBlocks()
               .equals(other.getCidrBlocks());
           break;
+        case 8:
+          result = result && getSecurityGroupId()
+              .equals(other.getSecurityGroupId());
+          break;
         case 0:
         default:
       }
@@ -4830,6 +4887,10 @@ public final class SecurityGroupServiceOuterClass {
         case 7:
           hash = (37 * hash) + CIDR_BLOCKS_FIELD_NUMBER;
           hash = (53 * hash) + getCidrBlocks().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + SECURITY_GROUP_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSecurityGroupId().hashCode();
           break;
         case 0:
         default:
@@ -5054,6 +5115,9 @@ public final class SecurityGroupServiceOuterClass {
             result.target_ = cidrBlocksBuilder_.build();
           }
         }
+        if (targetCase_ == 8) {
+          result.target_ = target_;
+        }
         result.bitField0_ = to_bitField0_;
         result.protocolCase_ = protocolCase_;
         result.targetCase_ = targetCase_;
@@ -5135,6 +5199,12 @@ public final class SecurityGroupServiceOuterClass {
         switch (other.getTargetCase()) {
           case CIDR_BLOCKS: {
             mergeCidrBlocks(other.getCidrBlocks());
+            break;
+          }
+          case SECURITY_GROUP_ID: {
+            targetCase_ = 8;
+            target_ = other.target_;
+            onChanged();
             break;
           }
           case TARGET_NOT_SET: {
@@ -5704,22 +5774,12 @@ public final class SecurityGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder> cidrBlocksBuilder_;
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public boolean hasCidrBlocks() {
         return targetCase_ == 7;
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks() {
@@ -5736,11 +5796,6 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder setCidrBlocks(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks value) {
@@ -5757,11 +5812,6 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder setCidrBlocks(
@@ -5776,11 +5826,6 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder mergeCidrBlocks(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks value) {
@@ -5803,11 +5848,6 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder clearCidrBlocks() {
@@ -5827,22 +5867,12 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.Builder getCidrBlocksBuilder() {
         return getCidrBlocksFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder() {
@@ -5856,11 +5886,6 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * string security_group_id = .. ;
-       * string subnet_id = .. ;
-       * </pre>
-       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5880,6 +5905,106 @@ public final class SecurityGroupServiceOuterClass {
         targetCase_ = 7;
         onChanged();;
         return cidrBlocksBuilder_;
+      }
+
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string security_group_id = 8;</code>
+       */
+      public java.lang.String getSecurityGroupId() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 8) {
+          ref = target_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 8) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string security_group_id = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 8) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 8) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string security_group_id = 8;</code>
+       */
+      public Builder setSecurityGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  targetCase_ = 8;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string security_group_id = 8;</code>
+       */
+      public Builder clearSecurityGroupId() {
+        if (targetCase_ == 8) {
+          targetCase_ = 0;
+          target_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * string subnet_id = .. ;
+       * </pre>
+       *
+       * <code>string security_group_id = 8;</code>
+       */
+      public Builder setSecurityGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        targetCase_ = 8;
+        target_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16184,7 +16309,7 @@ public final class SecurityGroupServiceOuterClass {
       "est.LabelsEntry\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071" +
       "\001\022>\n\nrule_specs\030\006 \003(\0132*.yandex.cloud.vpc" +
       ".v1.SecurityGroupRuleSpec\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\245\003\n\025Sec" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\302\003\n\025Sec" +
       "urityGroupRuleSpec\022\023\n\013description\030\001 \001(\t\022" +
       "F\n\006labels\030\002 \003(\01326.yandex.cloud.vpc.v1.Se" +
       "curityGroupRuleSpec.LabelsEntry\022I\n\tdirec" +
@@ -16193,80 +16318,81 @@ public final class SecurityGroupServiceOuterClass {
       "\0132\036.yandex.cloud.vpc.v1.PortRange\022\027\n\rpro" +
       "tocol_name\030\005 \001(\tH\000\022\031\n\017protocol_number\030\006 " +
       "\001(\003H\000\0226\n\013cidr_blocks\030\007 \001(\0132\037.yandex.clou" +
-      "d.vpc.v1.CidrBlocksH\001\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\n\n\010protocol" +
-      "B\016\n\006target\022\004\300\3011\001\"8\n\033CreateSecurityGroupM" +
-      "etadata\022\031\n\021security_group_id\030\001 \001(\t\"\315\002\n\032U" +
-      "pdateSecurityGroupRequest\022\037\n\021security_gr" +
-      "oup_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022\014\n\004name\030\003 \001(" +
-      "\t\022\023\n\013description\030\004 \001(\t\022K\n\006labels\030\005 \003(\0132;" +
-      ".yandex.cloud.vpc.v1.UpdateSecurityGroup" +
-      "Request.LabelsEntry\022>\n\nrule_specs\030\006 \003(\0132" +
-      "*.yandex.cloud.vpc.v1.SecurityGroupRuleS" +
-      "pec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"8\n\033UpdateSecurityGroupMetadat" +
-      "a\022\031\n\021security_group_id\030\001 \001(\t\"\246\001\n\037UpdateS" +
-      "ecurityGroupRulesRequest\022\037\n\021security_gro" +
-      "up_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021deletion_rule_ids\030\002" +
-      " \003(\t\022G\n\023addition_rule_specs\030\003 \003(\0132*.yand" +
-      "ex.cloud.vpc.v1.SecurityGroupRuleSpec\"\236\002" +
-      "\n\036UpdateSecurityGroupRuleRequest\022\037\n\021secu" +
-      "rity_group_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007rule_id\030\002 \001" +
-      "(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\023\n\013description\030\004 \001(\t\022O" +
-      "\n\006labels\030\005 \003(\0132?.yandex.cloud.vpc.v1.Upd" +
-      "ateSecurityGroupRuleRequest.LabelsEntry\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"M\n\037UpdateSecurityGroupRuleMetadat" +
-      "a\022\031\n\021security_group_id\030\001 \001(\t\022\017\n\007rule_id\030" +
-      "\002 \001(\t\"=\n\032DeleteSecurityGroupRequest\022\037\n\021s" +
-      "ecurity_group_id\030\001 \001(\tB\004\350\3071\001\"8\n\033DeleteSe" +
-      "curityGroupMetadata\022\031\n\021security_group_id" +
-      "\030\001 \001(\t\"l\n\"ListSecurityGroupOperationsReq" +
-      "uest\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022\021\n" +
-      "\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"u\n#" +
-      "ListSecurityGroupOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t\"`\n\030M" +
-      "oveSecurityGroupRequest\022\037\n\021security_grou" +
-      "p_id\030\001 \001(\tB\004\350\3071\001\022#\n\025destination_folder_i" +
-      "d\030\002 \001(\tB\004\350\3071\001\"6\n\031MoveSecurityGroupMetada" +
-      "ta\022\031\n\021security_group_id\030\001 \001(\t2\340\t\n\024Securi" +
-      "tyGroupService\022W\n\003Get\022,.yandex.cloud.vpc" +
-      ".v1.GetSecurityGroupRequest\032\".yandex.clo" +
-      "ud.vpc.v1.SecurityGroup\022g\n\004List\022..yandex" +
-      ".cloud.vpc.v1.ListSecurityGroupsRequest\032" +
-      "/.yandex.cloud.vpc.v1.ListSecurityGroups" +
-      "Response\022\216\001\n\006Create\022/.yandex.cloud.vpc.v" +
-      "1.CreateSecurityGroupRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"0\262\322*,\n\033CreateSec" +
-      "urityGroupMetadata\022\rSecurityGroup\022\216\001\n\006Up" +
-      "date\022/.yandex.cloud.vpc.v1.UpdateSecurit" +
-      "yGroupRequest\032!.yandex.cloud.operation.O" +
-      "peration\"0\262\322*,\n\033UpdateSecurityGroupMetad" +
-      "ata\022\rSecurityGroup\022\230\001\n\013UpdateRules\0224.yan" +
-      "dex.cloud.vpc.v1.UpdateSecurityGroupRule" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"0\262\322*,\n\033UpdateSecurityGroupMetadata\022\r" +
-      "SecurityGroup\022\236\001\n\nUpdateRule\0223.yandex.cl" +
-      "oud.vpc.v1.UpdateSecurityGroupRuleReques" +
-      "t\032!.yandex.cloud.operation.Operation\"8\262\322" +
-      "*4\n\037UpdateSecurityGroupRuleMetadata\022\021Sec" +
-      "urityGroupRule\022\226\001\n\006Delete\022/.yandex.cloud" +
-      ".vpc.v1.DeleteSecurityGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"8\262\322*4\n\033Del" +
-      "eteSecurityGroupMetadata\022\025google.protobu" +
-      "f.Empty\022\210\001\n\004Move\022-.yandex.cloud.vpc.v1.M" +
-      "oveSecurityGroupRequest\032!.yandex.cloud.o" +
-      "peration.Operation\".\262\322**\n\031MoveSecurityGr" +
-      "oupMetadata\022\rSecurityGroup\022\203\001\n\016ListOpera" +
-      "tions\0227.yandex.cloud.vpc.v1.ListSecurity" +
-      "GroupOperationsRequest\0328.yandex.cloud.vp" +
-      "c.v1.ListSecurityGroupOperationsResponse" +
-      "BV\n\027yandex.cloud.api.vpc.v1Z;github.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/vp" +
-      "c/v1;vpcb\006proto3"
+      "d.vpc.v1.CidrBlocksH\001\022\033\n\021security_group_" +
+      "id\030\010 \001(\tH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\n\n\010protocolB\016\n\006target\022" +
+      "\004\300\3011\001\"8\n\033CreateSecurityGroupMetadata\022\031\n\021" +
+      "security_group_id\030\001 \001(\t\"\315\002\n\032UpdateSecuri" +
+      "tyGroupRequest\022\037\n\021security_group_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013descri" +
+      "ption\030\004 \001(\t\022K\n\006labels\030\005 \003(\0132;.yandex.clo" +
+      "ud.vpc.v1.UpdateSecurityGroupRequest.Lab" +
+      "elsEntry\022>\n\nrule_specs\030\006 \003(\0132*.yandex.cl" +
+      "oud.vpc.v1.SecurityGroupRuleSpec\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "8\n\033UpdateSecurityGroupMetadata\022\031\n\021securi" +
+      "ty_group_id\030\001 \001(\t\"\246\001\n\037UpdateSecurityGrou" +
+      "pRulesRequest\022\037\n\021security_group_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\031\n\021deletion_rule_ids\030\002 \003(\t\022G\n\023add" +
+      "ition_rule_specs\030\003 \003(\0132*.yandex.cloud.vp" +
+      "c.v1.SecurityGroupRuleSpec\"\236\002\n\036UpdateSec" +
+      "urityGroupRuleRequest\022\037\n\021security_group_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022\025\n\007rule_id\030\002 \001(\tB\004\350\3071\001\022/\n" +
+      "\013update_mask\030\003 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022\023\n\013description\030\004 \001(\t\022O\n\006labels\030\005 " +
+      "\003(\0132?.yandex.cloud.vpc.v1.UpdateSecurity" +
+      "GroupRuleRequest.LabelsEntry\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"M\n\037U" +
+      "pdateSecurityGroupRuleMetadata\022\031\n\021securi" +
+      "ty_group_id\030\001 \001(\t\022\017\n\007rule_id\030\002 \001(\t\"=\n\032De" +
+      "leteSecurityGroupRequest\022\037\n\021security_gro" +
+      "up_id\030\001 \001(\tB\004\350\3071\001\"8\n\033DeleteSecurityGroup" +
+      "Metadata\022\031\n\021security_group_id\030\001 \001(\t\"l\n\"L" +
+      "istSecurityGroupOperationsRequest\022\037\n\021sec" +
+      "urity_group_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030" +
+      "\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"u\n#ListSecurit" +
+      "yGroupOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"`\n\030MoveSecurity" +
+      "GroupRequest\022\037\n\021security_group_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022#\n\025destination_folder_id\030\002 \001(\tB\004\350\307" +
+      "1\001\"6\n\031MoveSecurityGroupMetadata\022\031\n\021secur" +
+      "ity_group_id\030\001 \001(\t2\340\t\n\024SecurityGroupServ" +
+      "ice\022W\n\003Get\022,.yandex.cloud.vpc.v1.GetSecu" +
+      "rityGroupRequest\032\".yandex.cloud.vpc.v1.S" +
+      "ecurityGroup\022g\n\004List\022..yandex.cloud.vpc." +
+      "v1.ListSecurityGroupsRequest\032/.yandex.cl" +
+      "oud.vpc.v1.ListSecurityGroupsResponse\022\216\001" +
+      "\n\006Create\022/.yandex.cloud.vpc.v1.CreateSec" +
+      "urityGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"0\262\322*,\n\033CreateSecurityGroupM" +
+      "etadata\022\rSecurityGroup\022\216\001\n\006Update\022/.yand" +
+      "ex.cloud.vpc.v1.UpdateSecurityGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"0\262" +
+      "\322*,\n\033UpdateSecurityGroupMetadata\022\rSecuri" +
+      "tyGroup\022\230\001\n\013UpdateRules\0224.yandex.cloud.v" +
+      "pc.v1.UpdateSecurityGroupRulesRequest\032!." +
+      "yandex.cloud.operation.Operation\"0\262\322*,\n\033" +
+      "UpdateSecurityGroupMetadata\022\rSecurityGro" +
+      "up\022\236\001\n\nUpdateRule\0223.yandex.cloud.vpc.v1." +
+      "UpdateSecurityGroupRuleRequest\032!.yandex." +
+      "cloud.operation.Operation\"8\262\322*4\n\037UpdateS" +
+      "ecurityGroupRuleMetadata\022\021SecurityGroupR" +
+      "ule\022\226\001\n\006Delete\022/.yandex.cloud.vpc.v1.Del" +
+      "eteSecurityGroupRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"8\262\322*4\n\033DeleteSecurity" +
+      "GroupMetadata\022\025google.protobuf.Empty\022\210\001\n" +
+      "\004Move\022-.yandex.cloud.vpc.v1.MoveSecurity" +
+      "GroupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\".\262\322**\n\031MoveSecurityGroupMetadata" +
+      "\022\rSecurityGroup\022\203\001\n\016ListOperations\0227.yan" +
+      "dex.cloud.vpc.v1.ListSecurityGroupOperat" +
+      "ionsRequest\0328.yandex.cloud.vpc.v1.ListSe" +
+      "curityGroupOperationsResponseBV\n\027yandex." +
+      "cloud.api.vpc.v1Z;github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16321,7 +16447,7 @@ public final class SecurityGroupServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_SecurityGroupRuleSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_SecurityGroupRuleSpec_descriptor,
-        new java.lang.String[] { "Description", "Labels", "Direction", "Ports", "ProtocolName", "ProtocolNumber", "CidrBlocks", "Protocol", "Target", });
+        new java.lang.String[] { "Description", "Labels", "Direction", "Ports", "ProtocolName", "ProtocolNumber", "CidrBlocks", "SecurityGroupId", "Protocol", "Target", });
     internal_static_yandex_cloud_vpc_v1_SecurityGroupRuleSpec_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_SecurityGroupRuleSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_SecurityGroupRuleSpec_LabelsEntry_fieldAccessorTable = new
