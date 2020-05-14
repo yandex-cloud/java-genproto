@@ -5796,7 +5796,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-1073741824"];</code>
      */
     long getMemory();
   }
@@ -5888,7 +5888,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-1073741824"];</code>
      */
     public long getMemory() {
       return memory_;
@@ -6208,7 +6208,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-1073741824"];</code>
        */
       public long getMemory() {
         return memory_;
@@ -6218,7 +6218,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-1073741824"];</code>
        */
       public Builder setMemory(long value) {
         
@@ -6231,7 +6231,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "33554432-1073741824"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-1073741824"];</code>
        */
       public Builder clearMemory() {
         
@@ -7303,14 +7303,14 @@ public final class FunctionOuterClass {
       "ctions.v1.Version.EnvironmentEntry\0322\n\020En" +
       "vironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
       "(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
-      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014\"4\n\tReso" +
-      "urces\022\'\n\006memory\030\001 \001(\003B\027\372\3071\02333554432-1073" +
-      "741824\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004" +
-      "\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha25" +
-      "6\030\003 \001(\tB~\n(yandex.cloud.api.serverless.f" +
-      "unctions.v1ZRgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/serverless/functio" +
-      "ns/v1;functionsb\006proto3"
+      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014\"5\n\tReso" +
+      "urces\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-107" +
+      "3741824\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB" +
+      "\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha2" +
+      "56\030\003 \001(\tB~\n(yandex.cloud.api.serverless." +
+      "functions.v1ZRgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/serverless/functi" +
+      "ons/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

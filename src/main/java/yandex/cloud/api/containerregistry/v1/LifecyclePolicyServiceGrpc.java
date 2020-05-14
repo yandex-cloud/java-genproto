@@ -219,6 +219,38 @@ public final class LifecyclePolicyServiceGrpc {
      return getDryRunMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest,
+      yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getGetDryRunResultMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDryRunResult",
+      requestType = yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.class,
+      responseType = yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest,
+      yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getGetDryRunResultMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getGetDryRunResultMethod;
+    if ((getGetDryRunResultMethod = LifecyclePolicyServiceGrpc.getGetDryRunResultMethod) == null) {
+      synchronized (LifecyclePolicyServiceGrpc.class) {
+        if ((getGetDryRunResultMethod = LifecyclePolicyServiceGrpc.getGetDryRunResultMethod) == null) {
+          LifecyclePolicyServiceGrpc.getGetDryRunResultMethod = getGetDryRunResultMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.LifecyclePolicyService", "GetDryRunResult"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.getDefaultInstance()))
+                  .setSchemaDescriptor(new LifecyclePolicyServiceMethodDescriptorSupplier("GetDryRunResult"))
+                  .build();
+          }
+        }
+     }
+     return getGetDryRunResultMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest,
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> getListDryRunResultsMethod;
 
@@ -354,6 +386,13 @@ public final class LifecyclePolicyServiceGrpc {
 
     /**
      */
+    public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetDryRunResultMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListDryRunResultsMethod(), responseObserver);
@@ -410,6 +449,13 @@ public final class LifecyclePolicyServiceGrpc {
                 yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DRY_RUN)))
+          .addMethod(
+            getGetDryRunResultMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest,
+                yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>(
+                  this, METHODID_GET_DRY_RUN_RESULT)))
           .addMethod(
             getListDryRunResultsMethod(),
             asyncUnaryCall(
@@ -496,6 +542,14 @@ public final class LifecyclePolicyServiceGrpc {
 
     /**
      */
+    public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetDryRunResultMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
       asyncUnaryCall(
@@ -569,6 +623,13 @@ public final class LifecyclePolicyServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getDryRunMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetDryRunResultMethod(), getCallOptions(), request);
     }
 
     /**
@@ -654,6 +715,14 @@ public final class LifecyclePolicyServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunResult(
+        yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetDryRunResultMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> listDryRunResults(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request) {
       return futureUnaryCall(
@@ -675,8 +744,9 @@ public final class LifecyclePolicyServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_DRY_RUN = 5;
-  private static final int METHODID_LIST_DRY_RUN_RESULTS = 6;
-  private static final int METHODID_LIST_DRY_RUN_RESULT_AFFECTED_IMAGES = 7;
+  private static final int METHODID_GET_DRY_RUN_RESULT = 6;
+  private static final int METHODID_LIST_DRY_RUN_RESULTS = 7;
+  private static final int METHODID_LIST_DRY_RUN_RESULT_AFFECTED_IMAGES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -718,6 +788,10 @@ public final class LifecyclePolicyServiceGrpc {
         case METHODID_DRY_RUN:
           serviceImpl.dryRun((yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_GET_DRY_RUN_RESULT:
+          serviceImpl.getDryRunResult((yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult>) responseObserver);
           break;
         case METHODID_LIST_DRY_RUN_RESULTS:
           serviceImpl.listDryRunResults((yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest) request,
@@ -794,6 +868,7 @@ public final class LifecyclePolicyServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getDryRunMethod())
+              .addMethod(getGetDryRunResultMethod())
               .addMethod(getListDryRunResultsMethod())
               .addMethod(getListDryRunResultAffectedImagesMethod())
               .build();

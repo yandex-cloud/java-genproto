@@ -9928,6 +9928,556 @@ public final class LifecyclePolicyServiceOuterClass {
 
   }
 
+  public interface GetDryRunLifecyclePolicyResultRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDryRunLifecyclePolicyResultId();
+    /**
+     * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDryRunLifecyclePolicyResultIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest}
+   */
+  public  static final class GetDryRunLifecyclePolicyResultRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
+      GetDryRunLifecyclePolicyResultRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetDryRunLifecyclePolicyResultRequest.newBuilder() to construct.
+    private GetDryRunLifecyclePolicyResultRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDryRunLifecyclePolicyResultRequest() {
+      dryRunLifecyclePolicyResultId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetDryRunLifecyclePolicyResultRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dryRunLifecyclePolicyResultId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.Builder.class);
+    }
+
+    public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
+    /**
+     * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDryRunLifecyclePolicyResultId() {
+      java.lang.Object ref = dryRunLifecyclePolicyResultId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dryRunLifecyclePolicyResultId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDryRunLifecyclePolicyResultIdBytes() {
+      java.lang.Object ref = dryRunLifecyclePolicyResultId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dryRunLifecyclePolicyResultId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dryRunLifecyclePolicyResultId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dryRunLifecyclePolicyResultId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest) obj;
+
+      boolean result = true;
+      result = result && getDryRunLifecyclePolicyResultId()
+          .equals(other.getDryRunLifecyclePolicyResultId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDryRunLifecyclePolicyResultId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
+        yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.class, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dryRunLifecyclePolicyResultId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest build() {
+        yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest(this);
+        result.dryRunLifecyclePolicyResultId_ = dryRunLifecyclePolicyResultId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest.getDefaultInstance()) return this;
+        if (!other.getDryRunLifecyclePolicyResultId().isEmpty()) {
+          dryRunLifecyclePolicyResultId_ = other.dryRunLifecyclePolicyResultId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
+      /**
+       * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDryRunLifecyclePolicyResultId() {
+        java.lang.Object ref = dryRunLifecyclePolicyResultId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dryRunLifecyclePolicyResultId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDryRunLifecyclePolicyResultIdBytes() {
+        java.lang.Object ref = dryRunLifecyclePolicyResultId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dryRunLifecyclePolicyResultId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDryRunLifecyclePolicyResultId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dryRunLifecyclePolicyResultId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDryRunLifecyclePolicyResultId() {
+        
+        dryRunLifecyclePolicyResultId_ = getDefaultInstance().getDryRunLifecyclePolicyResultId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDryRunLifecyclePolicyResultIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dryRunLifecyclePolicyResultId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.GetDryRunLifecyclePolicyResultRequest)
+    private static final yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDryRunLifecyclePolicyResultRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetDryRunLifecyclePolicyResultRequest>() {
+      @java.lang.Override
+      public GetDryRunLifecyclePolicyResultRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetDryRunLifecyclePolicyResultRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDryRunLifecyclePolicyResultRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDryRunLifecyclePolicyResultRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListDryRunLifecyclePolicyResultsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.ListDryRunLifecyclePolicyResultsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -12908,70 +13458,32 @@ public final class LifecyclePolicyServiceOuterClass {
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> 
-        getAffectedImages1List();
+        getAffectedImagesList();
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index);
+    yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index);
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    int getAffectedImages1Count();
+    int getAffectedImagesCount();
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-        getAffectedImages1OrBuilderList();
+        getAffectedImagesOrBuilderList();
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+    yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
         int index);
 
     /**
-     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-     */
-    java.lang.String getDryRunLifecyclePolicyResultId();
-    /**
-     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getDryRunLifecyclePolicyResultIdBytes();
-
-    /**
-     * <code>string lifecycle_policy_id = 3;</code>
-     */
-    java.lang.String getLifecyclePolicyId();
-    /**
-     * <code>string lifecycle_policy_id = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getLifecyclePolicyIdBytes();
-
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    boolean hasRunAt();
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    com.google.protobuf.Timestamp getRunAt();
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder();
-
-    /**
-     * <code>int64 affected_images_count = 5;</code>
-     */
-    long getAffectedImagesCount5();
-
-    /**
-     * <code>string next_page_token = 6;</code>
+     * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
-     * <code>string next_page_token = 6;</code>
+     * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
@@ -12989,10 +13501,7 @@ public final class LifecyclePolicyServiceOuterClass {
       super(builder);
     }
     private ListDryRunLifecyclePolicyResultAffectedImagesResponse() {
-      affectedImages1_ = java.util.Collections.emptyList();
-      dryRunLifecyclePolicyResultId_ = "";
-      lifecyclePolicyId_ = "";
-      affectedImagesCount5_ = 0L;
+      affectedImages_ = java.util.Collections.emptyList();
       nextPageToken_ = "";
     }
 
@@ -13022,44 +13531,14 @@ public final class LifecyclePolicyServiceOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                affectedImages1_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>();
+                affectedImages_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              affectedImages1_.add(
+              affectedImages_.add(
                   input.readMessage(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.parser(), extensionRegistry));
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dryRunLifecyclePolicyResultId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lifecyclePolicyId_ = s;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (runAt_ != null) {
-                subBuilder = runAt_.toBuilder();
-              }
-              runAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(runAt_);
-                runAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-
-              affectedImagesCount5_ = input.readInt64();
-              break;
-            }
-            case 50: {
               java.lang.String s = input.readStringRequireUtf8();
 
               nextPageToken_ = s;
@@ -13081,7 +13560,7 @@ public final class LifecyclePolicyServiceOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          affectedImages1_ = java.util.Collections.unmodifiableList(affectedImages1_);
+          affectedImages_ = java.util.Collections.unmodifiableList(affectedImages_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13102,146 +13581,44 @@ public final class LifecyclePolicyServiceOuterClass {
 
     private int bitField0_;
     public static final int AFFECTED_IMAGES_FIELD_NUMBER = 1;
-    private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages1_;
-    // An alternative name is used for field "affected_images" because:
-    //     both repeated field "affected_images" and singular field "affected_images_count" generate the method "getAffectedImagesCount()"
+    private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages_;
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages1List() {
-      return affectedImages1_;
+    public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImagesList() {
+      return affectedImages_;
     }
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-        getAffectedImages1OrBuilderList() {
-      return affectedImages1_;
+        getAffectedImagesOrBuilderList() {
+      return affectedImages_;
     }
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    public int getAffectedImages1Count() {
-      return affectedImages1_.size();
+    public int getAffectedImagesCount() {
+      return affectedImages_.size();
     }
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index) {
-      return affectedImages1_.get(index);
+    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index) {
+      return affectedImages_.get(index);
     }
     /**
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
-    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+    public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
         int index) {
-      return affectedImages1_.get(index);
+      return affectedImages_.get(index);
     }
 
-    public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
-    /**
-     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-     */
-    public java.lang.String getDryRunLifecyclePolicyResultId() {
-      java.lang.Object ref = dryRunLifecyclePolicyResultId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dryRunLifecyclePolicyResultId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDryRunLifecyclePolicyResultIdBytes() {
-      java.lang.Object ref = dryRunLifecyclePolicyResultId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dryRunLifecyclePolicyResultId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object lifecyclePolicyId_;
-    /**
-     * <code>string lifecycle_policy_id = 3;</code>
-     */
-    public java.lang.String getLifecyclePolicyId() {
-      java.lang.Object ref = lifecyclePolicyId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        lifecyclePolicyId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string lifecycle_policy_id = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getLifecyclePolicyIdBytes() {
-      java.lang.Object ref = lifecyclePolicyId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        lifecyclePolicyId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RUN_AT_FIELD_NUMBER = 4;
-    private com.google.protobuf.Timestamp runAt_;
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    public boolean hasRunAt() {
-      return runAt_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    public com.google.protobuf.Timestamp getRunAt() {
-      return runAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp run_at = 4;</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
-      return getRunAt();
-    }
-
-    public static final int AFFECTED_IMAGES_COUNT_FIELD_NUMBER = 5;
-    private long affectedImagesCount5_;
-    // An alternative name is used for field "affected_images_count" because:
-    //     both repeated field "affected_images" and singular field "affected_images_count" generate the method "getAffectedImagesCount()"
-    /**
-     * <code>int64 affected_images_count = 5;</code>
-     */
-    public long getAffectedImagesCount5() {
-      return affectedImagesCount5_;
-    }
-
-    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 6;
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
-     * <code>string next_page_token = 6;</code>
+     * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
@@ -13256,7 +13633,7 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
-     * <code>string next_page_token = 6;</code>
+     * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
@@ -13286,23 +13663,11 @@ public final class LifecyclePolicyServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < affectedImages1_.size(); i++) {
-        output.writeMessage(1, affectedImages1_.get(i));
-      }
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dryRunLifecyclePolicyResultId_);
-      }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lifecyclePolicyId_);
-      }
-      if (runAt_ != null) {
-        output.writeMessage(4, getRunAt());
-      }
-      if (affectedImagesCount5_ != 0L) {
-        output.writeInt64(5, affectedImagesCount5_);
+      for (int i = 0; i < affectedImages_.size(); i++) {
+        output.writeMessage(1, affectedImages_.get(i));
       }
       if (!getNextPageTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, nextPageToken_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
       }
       unknownFields.writeTo(output);
     }
@@ -13313,26 +13678,12 @@ public final class LifecyclePolicyServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < affectedImages1_.size(); i++) {
+      for (int i = 0; i < affectedImages_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, affectedImages1_.get(i));
-      }
-      if (!getDryRunLifecyclePolicyResultIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dryRunLifecyclePolicyResultId_);
-      }
-      if (!getLifecyclePolicyIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lifecyclePolicyId_);
-      }
-      if (runAt_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getRunAt());
-      }
-      if (affectedImagesCount5_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, affectedImagesCount5_);
+          .computeMessageSize(1, affectedImages_.get(i));
       }
       if (!getNextPageTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, nextPageToken_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13350,19 +13701,8 @@ public final class LifecyclePolicyServiceOuterClass {
       yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse other = (yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse) obj;
 
       boolean result = true;
-      result = result && getAffectedImages1List()
-          .equals(other.getAffectedImages1List());
-      result = result && getDryRunLifecyclePolicyResultId()
-          .equals(other.getDryRunLifecyclePolicyResultId());
-      result = result && getLifecyclePolicyId()
-          .equals(other.getLifecyclePolicyId());
-      result = result && (hasRunAt() == other.hasRunAt());
-      if (hasRunAt()) {
-        result = result && getRunAt()
-            .equals(other.getRunAt());
-      }
-      result = result && (getAffectedImagesCount5()
-          == other.getAffectedImagesCount5());
+      result = result && getAffectedImagesList()
+          .equals(other.getAffectedImagesList());
       result = result && getNextPageToken()
           .equals(other.getNextPageToken());
       result = result && unknownFields.equals(other.unknownFields);
@@ -13376,21 +13716,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getAffectedImages1Count() > 0) {
+      if (getAffectedImagesCount() > 0) {
         hash = (37 * hash) + AFFECTED_IMAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getAffectedImages1List().hashCode();
+        hash = (53 * hash) + getAffectedImagesList().hashCode();
       }
-      hash = (37 * hash) + DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDryRunLifecyclePolicyResultId().hashCode();
-      hash = (37 * hash) + LIFECYCLE_POLICY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLifecyclePolicyId().hashCode();
-      if (hasRunAt()) {
-        hash = (37 * hash) + RUN_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getRunAt().hashCode();
-      }
-      hash = (37 * hash) + AFFECTED_IMAGES_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffectedImagesCount5());
       hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getNextPageToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -13521,30 +13850,18 @@ public final class LifecyclePolicyServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getAffectedImages1FieldBuilder();
+          getAffectedImagesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (affectedImages1Builder_ == null) {
-          affectedImages1_ = java.util.Collections.emptyList();
+        if (affectedImagesBuilder_ == null) {
+          affectedImages_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          affectedImages1Builder_.clear();
+          affectedImagesBuilder_.clear();
         }
-        dryRunLifecyclePolicyResultId_ = "";
-
-        lifecyclePolicyId_ = "";
-
-        if (runAtBuilder_ == null) {
-          runAt_ = null;
-        } else {
-          runAt_ = null;
-          runAtBuilder_ = null;
-        }
-        affectedImagesCount5_ = 0L;
-
         nextPageToken_ = "";
 
         return this;
@@ -13575,23 +13892,15 @@ public final class LifecyclePolicyServiceOuterClass {
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse result = new yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (affectedImages1Builder_ == null) {
+        if (affectedImagesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            affectedImages1_ = java.util.Collections.unmodifiableList(affectedImages1_);
+            affectedImages_ = java.util.Collections.unmodifiableList(affectedImages_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.affectedImages1_ = affectedImages1_;
+          result.affectedImages_ = affectedImages_;
         } else {
-          result.affectedImages1_ = affectedImages1Builder_.build();
+          result.affectedImages_ = affectedImagesBuilder_.build();
         }
-        result.dryRunLifecyclePolicyResultId_ = dryRunLifecyclePolicyResultId_;
-        result.lifecyclePolicyId_ = lifecyclePolicyId_;
-        if (runAtBuilder_ == null) {
-          result.runAt_ = runAt_;
-        } else {
-          result.runAt_ = runAtBuilder_.build();
-        }
-        result.affectedImagesCount5_ = affectedImagesCount5_;
         result.nextPageToken_ = nextPageToken_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -13642,45 +13951,31 @@ public final class LifecyclePolicyServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse other) {
         if (other == yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse.getDefaultInstance()) return this;
-        if (affectedImages1Builder_ == null) {
-          if (!other.affectedImages1_.isEmpty()) {
-            if (affectedImages1_.isEmpty()) {
-              affectedImages1_ = other.affectedImages1_;
+        if (affectedImagesBuilder_ == null) {
+          if (!other.affectedImages_.isEmpty()) {
+            if (affectedImages_.isEmpty()) {
+              affectedImages_ = other.affectedImages_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureAffectedImages1IsMutable();
-              affectedImages1_.addAll(other.affectedImages1_);
+              ensureAffectedImagesIsMutable();
+              affectedImages_.addAll(other.affectedImages_);
             }
             onChanged();
           }
         } else {
-          if (!other.affectedImages1_.isEmpty()) {
-            if (affectedImages1Builder_.isEmpty()) {
-              affectedImages1Builder_.dispose();
-              affectedImages1Builder_ = null;
-              affectedImages1_ = other.affectedImages1_;
+          if (!other.affectedImages_.isEmpty()) {
+            if (affectedImagesBuilder_.isEmpty()) {
+              affectedImagesBuilder_.dispose();
+              affectedImagesBuilder_ = null;
+              affectedImages_ = other.affectedImages_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              affectedImages1Builder_ = 
+              affectedImagesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAffectedImages1FieldBuilder() : null;
+                   getAffectedImagesFieldBuilder() : null;
             } else {
-              affectedImages1Builder_.addAllMessages(other.affectedImages1_);
+              affectedImagesBuilder_.addAllMessages(other.affectedImages_);
             }
           }
-        }
-        if (!other.getDryRunLifecyclePolicyResultId().isEmpty()) {
-          dryRunLifecyclePolicyResultId_ = other.dryRunLifecyclePolicyResultId_;
-          onChanged();
-        }
-        if (!other.getLifecyclePolicyId().isEmpty()) {
-          lifecyclePolicyId_ = other.lifecyclePolicyId_;
-          onChanged();
-        }
-        if (other.hasRunAt()) {
-          mergeRunAt(other.getRunAt());
-        }
-        if (other.getAffectedImagesCount5() != 0L) {
-          setAffectedImagesCount5(other.getAffectedImagesCount5());
         }
         if (!other.getNextPageToken().isEmpty()) {
           nextPageToken_ = other.nextPageToken_;
@@ -13716,530 +14011,249 @@ public final class LifecyclePolicyServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages1_ =
+      private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages_ =
         java.util.Collections.emptyList();
-      private void ensureAffectedImages1IsMutable() {
+      private void ensureAffectedImagesIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          affectedImages1_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>(affectedImages1_);
+          affectedImages_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image>(affectedImages_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> affectedImages1Builder_;
+          yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> affectedImagesBuilder_;
 
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImages1List() {
-        if (affectedImages1Builder_ == null) {
-          return java.util.Collections.unmodifiableList(affectedImages1_);
+      public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImagesList() {
+        if (affectedImagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(affectedImages_);
         } else {
-          return affectedImages1Builder_.getMessageList();
+          return affectedImagesBuilder_.getMessageList();
         }
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public int getAffectedImages1Count() {
-        if (affectedImages1Builder_ == null) {
-          return affectedImages1_.size();
+      public int getAffectedImagesCount() {
+        if (affectedImagesBuilder_ == null) {
+          return affectedImages_.size();
         } else {
-          return affectedImages1Builder_.getCount();
+          return affectedImagesBuilder_.getCount();
         }
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages1(int index) {
-        if (affectedImages1Builder_ == null) {
-          return affectedImages1_.get(index);
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index) {
+        if (affectedImagesBuilder_ == null) {
+          return affectedImages_.get(index);
         } else {
-          return affectedImages1Builder_.getMessage(index);
+          return affectedImagesBuilder_.getMessage(index);
         }
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder setAffectedImages1(
+      public Builder setAffectedImages(
           int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages1Builder_ == null) {
+        if (affectedImagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.set(index, value);
+          ensureAffectedImagesIsMutable();
+          affectedImages_.set(index, value);
           onChanged();
         } else {
-          affectedImages1Builder_.setMessage(index, value);
+          affectedImagesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder setAffectedImages1(
+      public Builder setAffectedImages(
           int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages1Builder_ == null) {
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.set(index, builderForValue.build());
+        if (affectedImagesBuilder_ == null) {
+          ensureAffectedImagesIsMutable();
+          affectedImages_.set(index, builderForValue.build());
           onChanged();
         } else {
-          affectedImages1Builder_.setMessage(index, builderForValue.build());
+          affectedImagesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder addAffectedImages1(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages1Builder_ == null) {
+      public Builder addAffectedImages(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
+        if (affectedImagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.add(value);
+          ensureAffectedImagesIsMutable();
+          affectedImages_.add(value);
           onChanged();
         } else {
-          affectedImages1Builder_.addMessage(value);
+          affectedImagesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder addAffectedImages1(
+      public Builder addAffectedImages(
           int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
-        if (affectedImages1Builder_ == null) {
+        if (affectedImagesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.add(index, value);
+          ensureAffectedImagesIsMutable();
+          affectedImages_.add(index, value);
           onChanged();
         } else {
-          affectedImages1Builder_.addMessage(index, value);
+          affectedImagesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder addAffectedImages1(
+      public Builder addAffectedImages(
           yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages1Builder_ == null) {
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.add(builderForValue.build());
+        if (affectedImagesBuilder_ == null) {
+          ensureAffectedImagesIsMutable();
+          affectedImages_.add(builderForValue.build());
           onChanged();
         } else {
-          affectedImages1Builder_.addMessage(builderForValue.build());
+          affectedImagesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder addAffectedImages1(
+      public Builder addAffectedImages(
           int index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder builderForValue) {
-        if (affectedImages1Builder_ == null) {
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.add(index, builderForValue.build());
+        if (affectedImagesBuilder_ == null) {
+          ensureAffectedImagesIsMutable();
+          affectedImages_.add(index, builderForValue.build());
           onChanged();
         } else {
-          affectedImages1Builder_.addMessage(index, builderForValue.build());
+          affectedImagesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder addAllAffectedImages1(
+      public Builder addAllAffectedImages(
           java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> values) {
-        if (affectedImages1Builder_ == null) {
-          ensureAffectedImages1IsMutable();
+        if (affectedImagesBuilder_ == null) {
+          ensureAffectedImagesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, affectedImages1_);
+              values, affectedImages_);
           onChanged();
         } else {
-          affectedImages1Builder_.addAllMessages(values);
+          affectedImagesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder clearAffectedImages1() {
-        if (affectedImages1Builder_ == null) {
-          affectedImages1_ = java.util.Collections.emptyList();
+      public Builder clearAffectedImages() {
+        if (affectedImagesBuilder_ == null) {
+          affectedImages_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          affectedImages1Builder_.clear();
+          affectedImagesBuilder_.clear();
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public Builder removeAffectedImages1(int index) {
-        if (affectedImages1Builder_ == null) {
-          ensureAffectedImages1IsMutable();
-          affectedImages1_.remove(index);
+      public Builder removeAffectedImages(int index) {
+        if (affectedImagesBuilder_ == null) {
+          ensureAffectedImagesIsMutable();
+          affectedImages_.remove(index);
           onChanged();
         } else {
-          affectedImages1Builder_.remove(index);
+          affectedImagesBuilder_.remove(index);
         }
         return this;
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder getAffectedImages1Builder(
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder getAffectedImagesBuilder(
           int index) {
-        return getAffectedImages1FieldBuilder().getBuilder(index);
+        return getAffectedImagesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImages1OrBuilder(
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
           int index) {
-        if (affectedImages1Builder_ == null) {
-          return affectedImages1_.get(index);  } else {
-          return affectedImages1Builder_.getMessageOrBuilder(index);
+        if (affectedImagesBuilder_ == null) {
+          return affectedImages_.get(index);  } else {
+          return affectedImagesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-           getAffectedImages1OrBuilderList() {
-        if (affectedImages1Builder_ != null) {
-          return affectedImages1Builder_.getMessageOrBuilderList();
+           getAffectedImagesOrBuilderList() {
+        if (affectedImagesBuilder_ != null) {
+          return affectedImagesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(affectedImages1_);
+          return java.util.Collections.unmodifiableList(affectedImages_);
         }
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages1Builder() {
-        return getAffectedImages1FieldBuilder().addBuilder(
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImagesBuilder() {
+        return getAffectedImagesFieldBuilder().addBuilder(
             yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
-      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImages1Builder(
+      public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImagesBuilder(
           int index) {
-        return getAffectedImages1FieldBuilder().addBuilder(
+        return getAffectedImagesFieldBuilder().addBuilder(
             index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
       }
       /**
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder> 
-           getAffectedImages1BuilderList() {
-        return getAffectedImages1FieldBuilder().getBuilderList();
+           getAffectedImagesBuilderList() {
+        return getAffectedImagesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
-          getAffectedImages1FieldBuilder() {
-        if (affectedImages1Builder_ == null) {
-          affectedImages1Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getAffectedImagesFieldBuilder() {
+        if (affectedImagesBuilder_ == null) {
+          affectedImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder>(
-                  affectedImages1_,
+                  affectedImages_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
-          affectedImages1_ = null;
+          affectedImages_ = null;
         }
-        return affectedImages1Builder_;
-      }
-
-      private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
-      /**
-       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-       */
-      public java.lang.String getDryRunLifecyclePolicyResultId() {
-        java.lang.Object ref = dryRunLifecyclePolicyResultId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dryRunLifecyclePolicyResultId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDryRunLifecyclePolicyResultIdBytes() {
-        java.lang.Object ref = dryRunLifecyclePolicyResultId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dryRunLifecyclePolicyResultId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-       */
-      public Builder setDryRunLifecyclePolicyResultId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        dryRunLifecyclePolicyResultId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-       */
-      public Builder clearDryRunLifecyclePolicyResultId() {
-        
-        dryRunLifecyclePolicyResultId_ = getDefaultInstance().getDryRunLifecyclePolicyResultId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dry_run_lifecycle_policy_result_id = 2;</code>
-       */
-      public Builder setDryRunLifecyclePolicyResultIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        dryRunLifecyclePolicyResultId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object lifecyclePolicyId_ = "";
-      /**
-       * <code>string lifecycle_policy_id = 3;</code>
-       */
-      public java.lang.String getLifecyclePolicyId() {
-        java.lang.Object ref = lifecyclePolicyId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          lifecyclePolicyId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string lifecycle_policy_id = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getLifecyclePolicyIdBytes() {
-        java.lang.Object ref = lifecyclePolicyId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          lifecyclePolicyId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string lifecycle_policy_id = 3;</code>
-       */
-      public Builder setLifecyclePolicyId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        lifecyclePolicyId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string lifecycle_policy_id = 3;</code>
-       */
-      public Builder clearLifecyclePolicyId() {
-        
-        lifecyclePolicyId_ = getDefaultInstance().getLifecyclePolicyId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string lifecycle_policy_id = 3;</code>
-       */
-      public Builder setLifecyclePolicyIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        lifecyclePolicyId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Timestamp runAt_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> runAtBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public boolean hasRunAt() {
-        return runAtBuilder_ != null || runAt_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public com.google.protobuf.Timestamp getRunAt() {
-        if (runAtBuilder_ == null) {
-          return runAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
-        } else {
-          return runAtBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public Builder setRunAt(com.google.protobuf.Timestamp value) {
-        if (runAtBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          runAt_ = value;
-          onChanged();
-        } else {
-          runAtBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public Builder setRunAt(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (runAtBuilder_ == null) {
-          runAt_ = builderForValue.build();
-          onChanged();
-        } else {
-          runAtBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public Builder mergeRunAt(com.google.protobuf.Timestamp value) {
-        if (runAtBuilder_ == null) {
-          if (runAt_ != null) {
-            runAt_ =
-              com.google.protobuf.Timestamp.newBuilder(runAt_).mergeFrom(value).buildPartial();
-          } else {
-            runAt_ = value;
-          }
-          onChanged();
-        } else {
-          runAtBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public Builder clearRunAt() {
-        if (runAtBuilder_ == null) {
-          runAt_ = null;
-          onChanged();
-        } else {
-          runAt_ = null;
-          runAtBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getRunAtBuilder() {
-        
-        onChanged();
-        return getRunAtFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
-        if (runAtBuilder_ != null) {
-          return runAtBuilder_.getMessageOrBuilder();
-        } else {
-          return runAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp run_at = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getRunAtFieldBuilder() {
-        if (runAtBuilder_ == null) {
-          runAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getRunAt(),
-                  getParentForChildren(),
-                  isClean());
-          runAt_ = null;
-        }
-        return runAtBuilder_;
-      }
-
-      private long affectedImagesCount5_ ;
-      /**
-       * <code>int64 affected_images_count = 5;</code>
-       */
-      public long getAffectedImagesCount5() {
-        return affectedImagesCount5_;
-      }
-      /**
-       * <code>int64 affected_images_count = 5;</code>
-       */
-      public Builder setAffectedImagesCount5(long value) {
-        
-        affectedImagesCount5_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected_images_count = 5;</code>
-       */
-      public Builder clearAffectedImagesCount5() {
-        
-        affectedImagesCount5_ = 0L;
-        onChanged();
-        return this;
+        return affectedImagesBuilder_;
       }
 
       private java.lang.Object nextPageToken_ = "";
       /**
-       * <code>string next_page_token = 6;</code>
+       * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
         java.lang.Object ref = nextPageToken_;
@@ -14254,7 +14268,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string next_page_token = 6;</code>
+       * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
           getNextPageTokenBytes() {
@@ -14270,7 +14284,7 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
-       * <code>string next_page_token = 6;</code>
+       * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
           java.lang.String value) {
@@ -14283,7 +14297,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string next_page_token = 6;</code>
+       * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
         
@@ -14292,7 +14306,7 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
-       * <code>string next_page_token = 6;</code>
+       * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -14419,6 +14433,11 @@ public final class LifecyclePolicyServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_containerregistry_v1_DryRunLifecyclePolicyResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14499,67 +14518,70 @@ public final class LifecyclePolicyServiceOuterClass {
       "cycle_policy_result_id\030\001 \001(\t\022\033\n\023lifecycl" +
       "e_policy_id\030\002 \001(\t\022*\n\006run_at\030\003 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022\035\n\025affected_images" +
-      "_count\030\004 \001(\003\"\313\001\n\'ListDryRunLifecyclePoli" +
-      "cyResultsRequest\022)\n\023lifecycle_policy_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
-      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_b" +
-      "y\030\005 \001(\tB\t\212\3101\005<=100\"\255\001\n(ListDryRunLifecyc" +
-      "lePolicyResultsResponse\022h\n dry_run_lifec" +
-      "ycle_policy_results\030\001 \003(\0132>.yandex.cloud" +
-      ".containerregistry.v1.DryRunLifecyclePol" +
-      "icyResult\022\027\n\017next_page_token\030\002 \001(\t\"\347\001\n4L" +
-      "istDryRunLifecyclePolicyResultAffectedIm" +
-      "agesRequest\0228\n\"dry_run_lifecycle_policy_" +
-      "result_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022" +
-      "\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"\247\002\n5ListDry" +
-      "RunLifecyclePolicyResultAffectedImagesRe" +
-      "sponse\022A\n\017affected_images\030\001 \003(\0132(.yandex" +
-      ".cloud.containerregistry.v1.Image\022*\n\"dry" +
-      "_run_lifecycle_policy_result_id\030\002 \001(\t\022\033\n" +
-      "\023lifecycle_policy_id\030\003 \001(\t\022*\n\006run_at\030\004 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\035\n\025affect" +
-      "ed_images_count\030\005 \001(\003\022\027\n\017next_page_token" +
-      "\030\006 \001(\t2\310\n\n\026LifecyclePolicyService\022w\n\003Get" +
-      "\022<.yandex.cloud.containerregistry.v1.Get" +
-      "LifecyclePolicyRequest\0322.yandex.cloud.co" +
-      "ntainerregistry.v1.LifecyclePolicy\022\211\001\n\004L" +
-      "ist\022?.yandex.cloud.containerregistry.v1." +
-      "ListLifecyclePoliciesRequest\032@.yandex.cl" +
-      "oud.containerregistry.v1.ListLifecyclePo" +
-      "liciesResponse\022\242\001\n\006Create\022?.yandex.cloud" +
-      ".containerregistry.v1.CreateLifecyclePol" +
-      "icyRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"4\262\322*0\n\035CreateLifecyclePolicyMetada" +
-      "ta\022\017LifecyclePolicy\022\242\001\n\006Update\022?.yandex." +
-      "cloud.containerregistry.v1.UpdateLifecyc" +
-      "lePolicyRequest\032!.yandex.cloud.operation" +
-      ".Operation\"4\262\322*0\n\035UpdateLifecyclePolicyM" +
-      "etadata\022\017LifecyclePolicy\022\250\001\n\006Delete\022?.ya" +
-      "ndex.cloud.containerregistry.v1.DeleteLi" +
-      "fecyclePolicyRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\":\262\322*6\n\035DeleteLifecyclePo" +
-      "licyMetadata\022\025google.protobuf.Empty\022\256\001\n\006" +
-      "DryRun\022?.yandex.cloud.containerregistry." +
-      "v1.DryRunLifecyclePolicyRequest\032!.yandex" +
-      ".cloud.operation.Operation\"@\262\322*<\n\035DryRun" +
-      "LifecyclePolicyMetadata\022\033DryRunLifecycle" +
-      "PolicyResult\022\254\001\n\021ListDryRunResults\022J.yan" +
-      "dex.cloud.containerregistry.v1.ListDryRu" +
-      "nLifecyclePolicyResultsRequest\032K.yandex." +
-      "cloud.containerregistry.v1.ListDryRunLif" +
-      "ecyclePolicyResultsResponse\022\323\001\n\036ListDryR" +
-      "unResultAffectedImages\022W.yandex.cloud.co" +
-      "ntainerregistry.v1.ListDryRunLifecyclePo" +
-      "licyResultAffectedImagesRequest\032X.yandex" +
-      ".cloud.containerregistry.v1.ListDryRunLi" +
-      "fecyclePolicyResultAffectedImagesRespons" +
-      "eB\200\001\n%yandex.cloud.api.containerregistry" +
-      ".v1ZWgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/containerregistry/v1;conta" +
-      "inerregistryb\006proto3"
+      "_count\030\004 \001(\003\"a\n%GetDryRunLifecyclePolicy" +
+      "ResultRequest\0228\n\"dry_run_lifecycle_polic" +
+      "y_result_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\313\001\n\'List" +
+      "DryRunLifecyclePolicyResultsRequest\022)\n\023l" +
+      "ifecycle_policy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"\255\001" +
+      "\n(ListDryRunLifecyclePolicyResultsRespon" +
+      "se\022h\n dry_run_lifecycle_policy_results\030\001" +
+      " \003(\0132>.yandex.cloud.containerregistry.v1" +
+      ".DryRunLifecyclePolicyResult\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\347\001\n4ListDryRunLifecyclePol" +
+      "icyResultAffectedImagesRequest\0228\n\"dry_ru" +
+      "n_lifecycle_policy_result_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter" +
+      "\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\310" +
+      "1\005<=100\"\223\001\n5ListDryRunLifecyclePolicyRes" +
+      "ultAffectedImagesResponse\022A\n\017affected_im" +
+      "ages\030\001 \003(\0132(.yandex.cloud.containerregis" +
+      "try.v1.Image\022\027\n\017next_page_token\030\002 \001(\t2\346\013" +
+      "\n\026LifecyclePolicyService\022w\n\003Get\022<.yandex" +
+      ".cloud.containerregistry.v1.GetLifecycle" +
+      "PolicyRequest\0322.yandex.cloud.containerre" +
+      "gistry.v1.LifecyclePolicy\022\211\001\n\004List\022?.yan" +
+      "dex.cloud.containerregistry.v1.ListLifec" +
+      "yclePoliciesRequest\032@.yandex.cloud.conta" +
+      "inerregistry.v1.ListLifecyclePoliciesRes" +
+      "ponse\022\242\001\n\006Create\022?.yandex.cloud.containe" +
+      "rregistry.v1.CreateLifecyclePolicyReques" +
+      "t\032!.yandex.cloud.operation.Operation\"4\262\322" +
+      "*0\n\035CreateLifecyclePolicyMetadata\022\017Lifec" +
+      "yclePolicy\022\242\001\n\006Update\022?.yandex.cloud.con" +
+      "tainerregistry.v1.UpdateLifecyclePolicyR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"4\262\322*0\n\035UpdateLifecyclePolicyMetadata\022\017" +
+      "LifecyclePolicy\022\250\001\n\006Delete\022?.yandex.clou" +
+      "d.containerregistry.v1.DeleteLifecyclePo" +
+      "licyRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\":\262\322*6\n\035DeleteLifecyclePolicyMetad" +
+      "ata\022\025google.protobuf.Empty\022\256\001\n\006DryRun\022?." +
+      "yandex.cloud.containerregistry.v1.DryRun" +
+      "LifecyclePolicyRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"@\262\322*<\n\035DryRunLifecycle" +
+      "PolicyMetadata\022\033DryRunLifecyclePolicyRes" +
+      "ult\022\233\001\n\017GetDryRunResult\022H.yandex.cloud.c" +
+      "ontainerregistry.v1.GetDryRunLifecyclePo" +
+      "licyResultRequest\032>.yandex.cloud.contain" +
+      "erregistry.v1.DryRunLifecyclePolicyResul" +
+      "t\022\254\001\n\021ListDryRunResults\022J.yandex.cloud.c" +
+      "ontainerregistry.v1.ListDryRunLifecycleP" +
+      "olicyResultsRequest\032K.yandex.cloud.conta" +
+      "inerregistry.v1.ListDryRunLifecyclePolic" +
+      "yResultsResponse\022\323\001\n\036ListDryRunResultAff" +
+      "ectedImages\022W.yandex.cloud.containerregi" +
+      "stry.v1.ListDryRunLifecyclePolicyResultA" +
+      "ffectedImagesRequest\032X.yandex.cloud.cont" +
+      "ainerregistry.v1.ListDryRunLifecyclePoli" +
+      "cyResultAffectedImagesResponseB\200\001\n%yande" +
+      "x.cloud.api.containerregistry.v1ZWgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/containerregistry/v1;containerregistr" +
+      "yb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14652,30 +14674,36 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_DryRunLifecyclePolicyResult_descriptor,
         new java.lang.String[] { "DryRunLifecyclePolicyResultId", "LifecyclePolicyId", "RunAt", "AffectedImagesCount", });
-    internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsRequest_descriptor =
+    internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_GetDryRunLifecyclePolicyResultRequest_descriptor,
+        new java.lang.String[] { "DryRunLifecyclePolicyResultId", });
+    internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsRequest_descriptor,
         new java.lang.String[] { "LifecyclePolicyId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultsResponse_descriptor,
         new java.lang.String[] { "DryRunLifecyclePolicyResults", "NextPageToken", });
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesRequest_descriptor,
         new java.lang.String[] { "DryRunLifecyclePolicyResultId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListDryRunLifecyclePolicyResultAffectedImagesResponse_descriptor,
-        new java.lang.String[] { "AffectedImages1", "DryRunLifecyclePolicyResultId", "LifecyclePolicyId", "RunAt", "AffectedImagesCount5", "NextPageToken", });
+        new java.lang.String[] { "AffectedImages", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
