@@ -308,6 +308,19 @@ public final class SubnetOuterClass {
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
+
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    boolean hasDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -445,6 +458,19 @@ public final class SubnetOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               routeTableId_ = s;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder subBuilder = null;
+              if (dhcpOptions_ != null) {
+                subBuilder = dhcpOptions_.toBuilder();
+              }
+              dhcpOptions_ = input.readMessage(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dhcpOptions_);
+                dhcpOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1023,6 +1049,27 @@ public final class SubnetOuterClass {
       }
     }
 
+    public static final int DHCP_OPTIONS_FIELD_NUMBER = 13;
+    private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    public boolean hasDhcpOptions() {
+      return dhcpOptions_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+      return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+      return getDhcpOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1072,6 +1119,9 @@ public final class SubnetOuterClass {
       }
       if (!getRouteTableIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, routeTableId_);
+      }
+      if (dhcpOptions_ != null) {
+        output.writeMessage(13, getDhcpOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -1133,6 +1183,10 @@ public final class SubnetOuterClass {
       if (!getRouteTableIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, routeTableId_);
       }
+      if (dhcpOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getDhcpOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1174,6 +1228,11 @@ public final class SubnetOuterClass {
           .equals(other.getV6CidrBlocksList());
       result = result && getRouteTableId()
           .equals(other.getRouteTableId());
+      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (hasDhcpOptions()) {
+        result = result && getDhcpOptions()
+            .equals(other.getDhcpOptions());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1215,6 +1274,10 @@ public final class SubnetOuterClass {
       }
       hash = (37 * hash) + ROUTE_TABLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRouteTableId().hashCode();
+      if (hasDhcpOptions()) {
+        hash = (37 * hash) + DHCP_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDhcpOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1399,6 +1462,12 @@ public final class SubnetOuterClass {
         bitField0_ = (bitField0_ & ~0x00000200);
         routeTableId_ = "";
 
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1451,6 +1520,11 @@ public final class SubnetOuterClass {
         }
         result.v6CidrBlocks_ = v6CidrBlocks_;
         result.routeTableId_ = routeTableId_;
+        if (dhcpOptionsBuilder_ == null) {
+          result.dhcpOptions_ = dhcpOptions_;
+        } else {
+          result.dhcpOptions_ = dhcpOptionsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1552,6 +1626,9 @@ public final class SubnetOuterClass {
         if (!other.getRouteTableId().isEmpty()) {
           routeTableId_ = other.routeTableId_;
           onChanged();
+        }
+        if (other.hasDhcpOptions()) {
+          mergeDhcpOptions(other.getDhcpOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2805,6 +2882,123 @@ public final class SubnetOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public boolean hasDhcpOptions() {
+        return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        } else {
+          return dhcpOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public Builder setDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dhcpOptions_ = value;
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public Builder setDhcpOptions(
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder builderForValue) {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public Builder mergeDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (dhcpOptions_ != null) {
+            dhcpOptions_ =
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.newBuilder(dhcpOptions_).mergeFrom(value).buildPartial();
+          } else {
+            dhcpOptions_ = value;
+          }
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public Builder clearDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+          onChanged();
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder getDhcpOptionsBuilder() {
+        
+        onChanged();
+        return getDhcpOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+        if (dhcpOptionsBuilder_ != null) {
+          return dhcpOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return dhcpOptions_ == null ?
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> 
+          getDhcpOptionsFieldBuilder() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder>(
+                  getDhcpOptions(),
+                  getParentForChildren(),
+                  isClean());
+          dhcpOptions_ = null;
+        }
+        return dhcpOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2858,6 +3052,750 @@ public final class SubnetOuterClass {
 
   }
 
+  public interface DhcpOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.DhcpOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getDomainNameServersList();
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    int getDomainNameServersCount();
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    java.lang.String getDomainNameServers(int index);
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainNameServersBytes(int index);
+
+    /**
+     * <code>string domain_name = 2;</code>
+     */
+    java.lang.String getDomainName();
+    /**
+     * <code>string domain_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.DhcpOptions}
+   */
+  public  static final class DhcpOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.DhcpOptions)
+      DhcpOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DhcpOptions.newBuilder() to construct.
+    private DhcpOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DhcpOptions() {
+      domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      domainName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DhcpOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                domainNameServers_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              domainNameServers_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          domainNameServers_ = domainNameServers_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetOuterClass.internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetOuterClass.internal_static_yandex_cloud_vpc_v1_DhcpOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.class, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DOMAIN_NAME_SERVERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList domainNameServers_;
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDomainNameServersList() {
+      return domainNameServers_;
+    }
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    public int getDomainNameServersCount() {
+      return domainNameServers_.size();
+    }
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    public java.lang.String getDomainNameServers(int index) {
+      return domainNameServers_.get(index);
+    }
+    /**
+     * <code>repeated string domain_name_servers = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainNameServersBytes(int index) {
+      return domainNameServers_.getByteString(index);
+    }
+
+    public static final int DOMAIN_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domainName_;
+    /**
+     * <code>string domain_name = 2;</code>
+     */
+    public java.lang.String getDomainName() {
+      java.lang.Object ref = domainName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string domain_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainNameBytes() {
+      java.lang.Object ref = domainName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < domainNameServers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domainNameServers_.getRaw(i));
+      }
+      if (!getDomainNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < domainNameServers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(domainNameServers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDomainNameServersList().size();
+      }
+      if (!getDomainNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions other = (yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions) obj;
+
+      boolean result = true;
+      result = result && getDomainNameServersList()
+          .equals(other.getDomainNameServersList());
+      result = result && getDomainName()
+          .equals(other.getDomainName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDomainNameServersCount() > 0) {
+        hash = (37 * hash) + DOMAIN_NAME_SERVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainNameServersList().hashCode();
+      }
+      hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.DhcpOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.DhcpOptions)
+        yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetOuterClass.internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetOuterClass.internal_static_yandex_cloud_vpc_v1_DhcpOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.class, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        domainName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetOuterClass.internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions build() {
+        yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions result = new yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          domainNameServers_ = domainNameServers_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.domainNameServers_ = domainNameServers_;
+        result.domainName_ = domainName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance()) return this;
+        if (!other.domainNameServers_.isEmpty()) {
+          if (domainNameServers_.isEmpty()) {
+            domainNameServers_ = other.domainNameServers_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDomainNameServersIsMutable();
+            domainNameServers_.addAll(other.domainNameServers_);
+          }
+          onChanged();
+        }
+        if (!other.getDomainName().isEmpty()) {
+          domainName_ = other.domainName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDomainNameServersIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          domainNameServers_ = new com.google.protobuf.LazyStringArrayList(domainNameServers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDomainNameServersList() {
+        return domainNameServers_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public int getDomainNameServersCount() {
+        return domainNameServers_.size();
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public java.lang.String getDomainNameServers(int index) {
+        return domainNameServers_.get(index);
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainNameServersBytes(int index) {
+        return domainNameServers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public Builder setDomainNameServers(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDomainNameServersIsMutable();
+        domainNameServers_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public Builder addDomainNameServers(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDomainNameServersIsMutable();
+        domainNameServers_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public Builder addAllDomainNameServers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDomainNameServersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, domainNameServers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public Builder clearDomainNameServers() {
+        domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string domain_name_servers = 1;</code>
+       */
+      public Builder addDomainNameServersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDomainNameServersIsMutable();
+        domainNameServers_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainName_ = "";
+      /**
+       * <code>string domain_name = 2;</code>
+       */
+      public java.lang.String getDomainName() {
+        java.lang.Object ref = domainName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string domain_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainNameBytes() {
+        java.lang.Object ref = domainName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string domain_name = 2;</code>
+       */
+      public Builder setDomainName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain_name = 2;</code>
+       */
+      public Builder clearDomainName() {
+        
+        domainName_ = getDefaultInstance().getDomainName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string domain_name = 2;</code>
+       */
+      public Builder setDomainNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.DhcpOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.DhcpOptions)
+    private static final yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DhcpOptions>
+        PARSER = new com.google.protobuf.AbstractParser<DhcpOptions>() {
+      @java.lang.Override
+      public DhcpOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DhcpOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DhcpOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DhcpOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_Subnet_descriptor;
   private static final 
@@ -2868,6 +3806,11 @@ public final class SubnetOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_Subnet_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_DhcpOptions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2879,18 +3822,21 @@ public final class SubnetOuterClass {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/vpc/v1/subnet.proto\022\023yand" +
       "ex.cloud.vpc.v1\032\037google/protobuf/timesta" +
-      "mp.proto\"\317\002\n\006Subnet\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
+      "mp.proto\"\207\003\n\006Subnet\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
       "r_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google." +
       "protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013desc" +
       "ription\030\005 \001(\t\0227\n\006labels\030\006 \003(\0132\'.yandex.c" +
       "loud.vpc.v1.Subnet.LabelsEntry\022\022\n\nnetwor" +
       "k_id\030\007 \001(\t\022\017\n\007zone_id\030\010 \001(\t\022\026\n\016v4_cidr_b" +
       "locks\030\n \003(\t\022\026\n\016v6_cidr_blocks\030\013 \003(\t\022\026\n\016r" +
-      "oute_table_id\030\014 \001(\t\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BV\n\027yandex.clo" +
-      "ud.api.vpc.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/vpc/v1;vpcb\006prot" +
-      "o3"
+      "oute_table_id\030\014 \001(\t\0226\n\014dhcp_options\030\r \001(" +
+      "\0132 .yandex.cloud.vpc.v1.DhcpOptions\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"?\n\013DhcpOptions\022\033\n\023domain_name_servers" +
+      "\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\tBV\n\027yandex.cl" +
+      "oud.api.vpc.v1Z;github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/vpc/v1;vpcb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2910,13 +3856,19 @@ public final class SubnetOuterClass {
     internal_static_yandex_cloud_vpc_v1_Subnet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_Subnet_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "NetworkId", "ZoneId", "V4CidrBlocks", "V6CidrBlocks", "RouteTableId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "NetworkId", "ZoneId", "V4CidrBlocks", "V6CidrBlocks", "RouteTableId", "DhcpOptions", });
     internal_static_yandex_cloud_vpc_v1_Subnet_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_Subnet_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_Subnet_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_Subnet_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_vpc_v1_DhcpOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor,
+        new java.lang.String[] { "DomainNameServers", "DomainName", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -173,6 +173,23 @@ public final class DeviceOuterClass {
 
     java.lang.String getTopicAliasesOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Status of the device.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the device.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status getStatus();
   }
   /**
    * <pre>
@@ -195,6 +212,7 @@ public final class DeviceOuterClass {
       registryId_ = "";
       name_ = "";
       description_ = "";
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -271,6 +289,12 @@ public final class DeviceOuterClass {
                   topicAliases__.getKey(), topicAliases__.getValue());
               break;
             }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -313,6 +337,146 @@ public final class DeviceOuterClass {
       return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_Device_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.class, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.iot.devices.v1.Device.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Device is being created.
+       * </pre>
+       *
+       * <code>CREATING = 1;</code>
+       */
+      CREATING(1),
+      /**
+       * <pre>
+       * Device is ready to use.
+       * </pre>
+       *
+       * <code>ACTIVE = 2;</code>
+       */
+      ACTIVE(2),
+      /**
+       * <pre>
+       * Device is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 3;</code>
+       */
+      DELETING(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Device is being created.
+       * </pre>
+       *
+       * <code>CREATING = 1;</code>
+       */
+      public static final int CREATING_VALUE = 1;
+      /**
+       * <pre>
+       * Device is ready to use.
+       * </pre>
+       *
+       * <code>ACTIVE = 2;</code>
+       */
+      public static final int ACTIVE_VALUE = 2;
+      /**
+       * <pre>
+       * Device is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 3;</code>
+       */
+      public static final int DELETING_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return CREATING;
+          case 2: return ACTIVE;
+          case 3: return DELETING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.iot.devices.v1.Device.Status)
     }
 
     private int bitField0_;
@@ -613,6 +777,31 @@ public final class DeviceOuterClass {
       return map.get(key);
     }
 
+    public static final int STATUS_FIELD_NUMBER = 7;
+    private int status_;
+    /**
+     * <pre>
+     * Status of the device.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the device.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+     */
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -648,6 +837,9 @@ public final class DeviceOuterClass {
           internalGetTopicAliases(),
           TopicAliasesDefaultEntryHolder.defaultEntry,
           6);
+      if (status_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, status_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -683,6 +875,10 @@ public final class DeviceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, topicAliases__);
       }
+      if (status_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, status_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -714,6 +910,7 @@ public final class DeviceOuterClass {
           .equals(other.getDescription());
       result = result && internalGetTopicAliases().equals(
           other.internalGetTopicAliases());
+      result = result && status_ == other.status_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -741,6 +938,8 @@ public final class DeviceOuterClass {
         hash = (37 * hash) + TOPIC_ALIASES_FIELD_NUMBER;
         hash = (53 * hash) + internalGetTopicAliases().hashCode();
       }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -915,6 +1114,8 @@ public final class DeviceOuterClass {
         description_ = "";
 
         internalGetMutableTopicAliases().clear();
+        status_ = 0;
+
         return this;
       }
 
@@ -954,6 +1155,7 @@ public final class DeviceOuterClass {
         result.description_ = description_;
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
+        result.status_ = status_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1024,6 +1226,9 @@ public final class DeviceOuterClass {
         }
         internalGetMutableTopicAliases().mergeFrom(
             other.internalGetTopicAliases());
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1718,6 +1923,71 @@ public final class DeviceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableTopicAliases().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the device.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+       */
+      public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the device.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the device.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the device.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+       */
+      public Builder setStatus(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the device.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -4020,22 +4290,25 @@ public final class DeviceOuterClass {
       "\n(yandex/cloud/iot/devices/v1/device.pro" +
       "to\022\033yandex.cloud.iot.devices.v1\032\037google/" +
       "protobuf/timestamp.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"\377\001\n\006Device\022\n\n\002id\030\001 \001(\t\022\023" +
+      "alidation.proto\"\205\003\n\006Device\022\n\n\002id\030\001 \001(\t\022\023" +
       "\n\013registry_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
       "\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001(" +
       "\t\022\023\n\013description\030\005 \001(\t\022L\n\rtopic_aliases\030" +
       "\006 \003(\01325.yandex.cloud.iot.devices.v1.Devi" +
-      "ce.TopicAliasesEntry\0323\n\021TopicAliasesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\205\001\n\021De" +
-      "viceCertificate\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013fi" +
-      "ngerprint\030\002 \001(\t\022\030\n\020certificate_data\030\003 \001(" +
-      "\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf." +
-      "Timestamp\"_\n\016DevicePassword\022\021\n\tdevice_id" +
-      "\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
-      ".google.protobuf.TimestampBj\n\037yandex.clo" +
-      "ud.api.iot.devices.v1ZGgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/iot/devi" +
-      "ces/v1;devicesb\006proto3"
+      "ce.TopicAliasesEntry\022:\n\006status\030\007 \001(\0162*.y" +
+      "andex.cloud.iot.devices.v1.Device.Status" +
+      "\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPEC" +
+      "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DEL" +
+      "ETING\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tdevice_" +
+      "id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certifi" +
+      "cate_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\"_\n\016DevicePasswor" +
+      "d\022\021\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncrea" +
+      "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "Bj\n\037yandex.cloud.api.iot.devices.v1ZGgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/iot/devices/v1;devicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4056,7 +4329,7 @@ public final class DeviceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_Device_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_Device_descriptor,
-        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", });
+        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", "Status", });
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_Device_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_fieldAccessorTable = new

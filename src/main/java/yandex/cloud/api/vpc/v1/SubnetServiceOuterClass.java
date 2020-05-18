@@ -3031,6 +3031,19 @@ public final class SubnetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
+
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    boolean hasDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.CreateSubnetRequest}
@@ -3134,6 +3147,19 @@ public final class SubnetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               routeTableId_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder subBuilder = null;
+              if (dhcpOptions_ != null) {
+                subBuilder = dhcpOptions_.toBuilder();
+              }
+              dhcpOptions_ = input.readMessage(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dhcpOptions_);
+                dhcpOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3595,6 +3621,27 @@ public final class SubnetServiceOuterClass {
       }
     }
 
+    public static final int DHCP_OPTIONS_FIELD_NUMBER = 10;
+    private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    public boolean hasDhcpOptions() {
+      return dhcpOptions_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+      return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+      return getDhcpOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3635,6 +3682,9 @@ public final class SubnetServiceOuterClass {
       }
       if (!getRouteTableIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, routeTableId_);
+      }
+      if (dhcpOptions_ != null) {
+        output.writeMessage(10, getDhcpOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3681,6 +3731,10 @@ public final class SubnetServiceOuterClass {
       if (!getRouteTableIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, routeTableId_);
       }
+      if (dhcpOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getDhcpOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3713,6 +3767,11 @@ public final class SubnetServiceOuterClass {
           .equals(other.getV4CidrBlocksList());
       result = result && getRouteTableId()
           .equals(other.getRouteTableId());
+      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (hasDhcpOptions()) {
+        result = result && getDhcpOptions()
+            .equals(other.getDhcpOptions());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3744,6 +3803,10 @@ public final class SubnetServiceOuterClass {
       }
       hash = (37 * hash) + ROUTE_TABLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRouteTableId().hashCode();
+      if (hasDhcpOptions()) {
+        hash = (37 * hash) + DHCP_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDhcpOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3914,6 +3977,12 @@ public final class SubnetServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000040);
         routeTableId_ = "";
 
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3955,6 +4024,11 @@ public final class SubnetServiceOuterClass {
         }
         result.v4CidrBlocks_ = v4CidrBlocks_;
         result.routeTableId_ = routeTableId_;
+        if (dhcpOptionsBuilder_ == null) {
+          result.dhcpOptions_ = dhcpOptions_;
+        } else {
+          result.dhcpOptions_ = dhcpOptionsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4039,6 +4113,9 @@ public final class SubnetServiceOuterClass {
         if (!other.getRouteTableId().isEmpty()) {
           routeTableId_ = other.routeTableId_;
           onChanged();
+        }
+        if (other.hasDhcpOptions()) {
+          mergeDhcpOptions(other.getDhcpOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4935,6 +5012,123 @@ public final class SubnetServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public boolean hasDhcpOptions() {
+        return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        } else {
+          return dhcpOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public Builder setDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dhcpOptions_ = value;
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public Builder setDhcpOptions(
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder builderForValue) {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public Builder mergeDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (dhcpOptions_ != null) {
+            dhcpOptions_ =
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.newBuilder(dhcpOptions_).mergeFrom(value).buildPartial();
+          } else {
+            dhcpOptions_ = value;
+          }
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public Builder clearDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+          onChanged();
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder getDhcpOptionsBuilder() {
+        
+        onChanged();
+        return getDhcpOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+        if (dhcpOptionsBuilder_ != null) {
+          return dhcpOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return dhcpOptions_ == null ?
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> 
+          getDhcpOptionsFieldBuilder() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder>(
+                  getDhcpOptions(),
+                  getParentForChildren(),
+                  isClean());
+          dhcpOptions_ = null;
+        }
+        return dhcpOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5730,6 +5924,19 @@ public final class SubnetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getRouteTableIdBytes();
+
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    boolean hasDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSubnetRequest}
@@ -5822,6 +6029,19 @@ public final class SubnetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               routeTableId_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder subBuilder = null;
+              if (dhcpOptions_ != null) {
+                subBuilder = dhcpOptions_.toBuilder();
+              }
+              dhcpOptions_ = input.readMessage(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dhcpOptions_);
+                dhcpOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6164,6 +6384,27 @@ public final class SubnetServiceOuterClass {
       }
     }
 
+    public static final int DHCP_OPTIONS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    public boolean hasDhcpOptions() {
+      return dhcpOptions_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+      return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+      return getDhcpOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6198,6 +6439,9 @@ public final class SubnetServiceOuterClass {
           5);
       if (!getRouteTableIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, routeTableId_);
+      }
+      if (dhcpOptions_ != null) {
+        output.writeMessage(7, getDhcpOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -6234,6 +6478,10 @@ public final class SubnetServiceOuterClass {
       if (!getRouteTableIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, routeTableId_);
       }
+      if (dhcpOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDhcpOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6265,6 +6513,11 @@ public final class SubnetServiceOuterClass {
           other.internalGetLabels());
       result = result && getRouteTableId()
           .equals(other.getRouteTableId());
+      result = result && (hasDhcpOptions() == other.hasDhcpOptions());
+      if (hasDhcpOptions()) {
+        result = result && getDhcpOptions()
+            .equals(other.getDhcpOptions());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6292,6 +6545,10 @@ public final class SubnetServiceOuterClass {
       }
       hash = (37 * hash) + ROUTE_TABLE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRouteTableId().hashCode();
+      if (hasDhcpOptions()) {
+        hash = (37 * hash) + DHCP_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDhcpOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6462,6 +6719,12 @@ public final class SubnetServiceOuterClass {
         internalGetMutableLabels().clear();
         routeTableId_ = "";
 
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -6501,6 +6764,11 @@ public final class SubnetServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.routeTableId_ = routeTableId_;
+        if (dhcpOptionsBuilder_ == null) {
+          result.dhcpOptions_ = dhcpOptions_;
+        } else {
+          result.dhcpOptions_ = dhcpOptionsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6570,6 +6838,9 @@ public final class SubnetServiceOuterClass {
         if (!other.getRouteTableId().isEmpty()) {
           routeTableId_ = other.routeTableId_;
           onChanged();
+        }
+        if (other.hasDhcpOptions()) {
+          mergeDhcpOptions(other.getDhcpOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7264,6 +7535,123 @@ public final class SubnetServiceOuterClass {
         routeTableId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public boolean hasDhcpOptions() {
+        return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        } else {
+          return dhcpOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public Builder setDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dhcpOptions_ = value;
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public Builder setDhcpOptions(
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder builderForValue) {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public Builder mergeDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
+        if (dhcpOptionsBuilder_ == null) {
+          if (dhcpOptions_ != null) {
+            dhcpOptions_ =
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.newBuilder(dhcpOptions_).mergeFrom(value).buildPartial();
+          } else {
+            dhcpOptions_ = value;
+          }
+          onChanged();
+        } else {
+          dhcpOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public Builder clearDhcpOptions() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptions_ = null;
+          onChanged();
+        } else {
+          dhcpOptions_ = null;
+          dhcpOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder getDhcpOptionsBuilder() {
+        
+        onChanged();
+        return getDhcpOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
+        if (dhcpOptionsBuilder_ != null) {
+          return dhcpOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return dhcpOptions_ == null ?
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> 
+          getDhcpOptionsFieldBuilder() {
+        if (dhcpOptionsBuilder_ == null) {
+          dhcpOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder>(
+                  getDhcpOptions(),
+                  getParentForChildren(),
+                  isClean());
+          dhcpOptions_ = null;
+        }
+        return dhcpOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12487,7 +12875,7 @@ public final class SubnetServiceOuterClass {
       "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\\\n\023ListSubnets" +
       "Response\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud" +
       ".vpc.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\265\003\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
+      "\355\003\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
       "(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-" +
       "z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description" +
       "\030\003 \001(\tB\t\212\3101\005<=256\022\205\001\n\006labels\030\004 \003(\01324.yan" +
@@ -12496,62 +12884,64 @@ public final class SubnetServiceOuterClass {
       "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\nnet" +
       "work_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\007zone_id\030\006" +
       " \001(\tB\010\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\007 \003(\t\022 " +
-      "\n\016route_table_id\030\t \001(\tB\010\212\3101\004<=50\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      ")\n\024CreateSubnetMetadata\022\021\n\tsubnet_id\030\001 \001" +
-      "(\t\"\221\003\n\023UpdateSubnetRequest\022\037\n\tsubnet_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022/\n\004name\030\003 \001" +
-      "(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n" +
-      "\013description\030\004 \001(\tB\t\212\3101\005<=256\022\205\001\n\006labels" +
-      "\030\005 \003(\01324.yandex.cloud.vpc.v1.UpdateSubne" +
-      "tRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
-      "a-z]*\022 \n\016route_table_id\030\006 \001(\tB\010\212\3101\004<=50\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\")\n\024UpdateSubnetMetadata\022\021\n\tsubnet" +
-      "_id\030\001 \001(\t\"6\n\023DeleteSubnetRequest\022\037\n\tsubn" +
-      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSubne" +
-      "tMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSubn" +
-      "etOperationsRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034Li" +
-      "stSubnetOperationsResponse\0225\n\noperations" +
-      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t\"a\n\021MoveSubnet" +
-      "Request\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"\'\n\022MoveSubnetMetadata\022\021\n\tsubnet_id" +
-      "\030\001 \001(\t2\242\010\n\rSubnetService\022n\n\003Get\022%.yandex" +
-      ".cloud.vpc.v1.GetSubnetRequest\032\033.yandex." +
-      "cloud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/sub" +
-      "nets/{subnet_id}\022r\n\004List\022\'.yandex.cloud." +
-      "vpc.v1.ListSubnetsRequest\032(.yandex.cloud" +
-      ".vpc.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vp" +
-      "c/v1/subnets\022\223\001\n\006Create\022(.yandex.cloud.v" +
-      "pc.v1.CreateSubnetRequest\032!.yandex.cloud" +
-      ".operation.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/su" +
-      "bnets:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Subn" +
-      "et\022\237\001\n\006Update\022(.yandex.cloud.vpc.v1.Upda" +
-      "teSubnetRequest\032!.yandex.cloud.operation" +
-      ".Operation\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{sub" +
-      "net_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Su" +
-      "bnet\022\253\001\n\006Delete\022(.yandex.cloud.vpc.v1.De" +
-      "leteSubnetRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{s" +
-      "ubnet_id}\262\322*-\n\024DeleteSubnetMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\245\001\n\016ListOperations\0220." +
-      "yandex.cloud.vpc.v1.ListSubnetOperations" +
-      "Request\0321.yandex.cloud.vpc.v1.ListSubnet" +
-      "OperationsResponse\".\202\323\344\223\002(\022&/vpc/v1/subn" +
-      "ets/{subnet_id}/operations\022\236\001\n\004Move\022&.ya" +
-      "ndex.cloud.vpc.v1.MoveSubnetRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"K\202\323\344\223\002%\" " +
-      "/vpc/v1/subnets/{subnet_id}:move:\001*\262\322*\034\n" +
-      "\022MoveSubnetMetadata\022\006SubnetBV\n\027yandex.cl" +
-      "oud.api.vpc.v1Z;github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/vpc/v1;vpcb\006pro" +
-      "to3"
+      "\n\016route_table_id\030\t \001(\tB\010\212\3101\004<=50\0226\n\014dhcp" +
+      "_options\030\n \001(\0132 .yandex.cloud.vpc.v1.Dhc" +
+      "pOptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\")\n\024CreateSubnetMetadata\022" +
+      "\021\n\tsubnet_id\030\001 \001(\t\"\311\003\n\023UpdateSubnetReque" +
+      "st\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
+      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "Mask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{" +
+      "1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
+      "<=256\022\205\001\n\006labels\030\005 \003(\01324.yandex.cloud.vp" +
+      "c.v1.UpdateSubnetRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\016route_table_id\030" +
+      "\006 \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_options\030\007 \001(\0132 ." +
+      "yandex.cloud.vpc.v1.DhcpOptions\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")" +
+      "\n\024UpdateSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(" +
+      "\t\"6\n\023DeleteSubnetRequest\022\037\n\tsubnet_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSubnetMetadat" +
+      "a\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSubnetOperat" +
+      "ionsRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034ListSubnet" +
+      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
+      ".yandex.cloud.operation.Operation\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"a\n\021MoveSubnetRequest\022" +
+      "\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025dest" +
+      "ination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n" +
+      "\022MoveSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t2\242" +
+      "\010\n\rSubnetService\022n\n\003Get\022%.yandex.cloud.v" +
+      "pc.v1.GetSubnetRequest\032\033.yandex.cloud.vp" +
+      "c.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnets/{su" +
+      "bnet_id}\022r\n\004List\022\'.yandex.cloud.vpc.v1.L" +
+      "istSubnetsRequest\032(.yandex.cloud.vpc.v1." +
+      "ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v1/sub" +
+      "nets\022\223\001\n\006Create\022(.yandex.cloud.vpc.v1.Cr" +
+      "eateSubnetRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/subnets:\001*" +
+      "\262\322*\036\n\024CreateSubnetMetadata\022\006Subnet\022\237\001\n\006U" +
+      "pdate\022(.yandex.cloud.vpc.v1.UpdateSubnet" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet_id}:" +
+      "\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\253\001\n" +
+      "\006Delete\022(.yandex.cloud.vpc.v1.DeleteSubn" +
+      "etRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subnet_id" +
+      "}\262\322*-\n\024DeleteSubnetMetadata\022\025google.prot" +
+      "obuf.Empty\022\245\001\n\016ListOperations\0220.yandex.c" +
+      "loud.vpc.v1.ListSubnetOperationsRequest\032" +
+      "1.yandex.cloud.vpc.v1.ListSubnetOperatio" +
+      "nsResponse\".\202\323\344\223\002(\022&/vpc/v1/subnets/{sub" +
+      "net_id}/operations\022\236\001\n\004Move\022&.yandex.clo" +
+      "ud.vpc.v1.MoveSubnetRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/" +
+      "subnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSub" +
+      "netMetadata\022\006SubnetBV\n\027yandex.cloud.api." +
+      "vpc.v1Z;github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12594,7 +12984,7 @@ public final class SubnetServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_CreateSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_CreateSubnetRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "ZoneId", "V4CidrBlocks", "RouteTableId", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "NetworkId", "ZoneId", "V4CidrBlocks", "RouteTableId", "DhcpOptions", });
     internal_static_yandex_cloud_vpc_v1_CreateSubnetRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_CreateSubnetRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_CreateSubnetRequest_LabelsEntry_fieldAccessorTable = new
@@ -12612,7 +13002,7 @@ public final class SubnetServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_descriptor,
-        new java.lang.String[] { "SubnetId", "UpdateMask", "Name", "Description", "Labels", "RouteTableId", });
+        new java.lang.String[] { "SubnetId", "UpdateMask", "Name", "Description", "Labels", "RouteTableId", "DhcpOptions", });
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_LabelsEntry_fieldAccessorTable = new
