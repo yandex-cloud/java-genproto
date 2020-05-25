@@ -3084,6 +3084,25 @@ public final class SubnetOuterClass {
      */
     com.google.protobuf.ByteString
         getDomainNameBytes();
+
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getNtpServersList();
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    int getNtpServersCount();
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    java.lang.String getNtpServers(int index);
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNtpServersBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.DhcpOptions}
@@ -3100,6 +3119,7 @@ public final class SubnetOuterClass {
     private DhcpOptions() {
       domainNameServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       domainName_ = "";
+      ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3141,6 +3161,15 @@ public final class SubnetOuterClass {
               domainName_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                ntpServers_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              ntpServers_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3158,6 +3187,9 @@ public final class SubnetOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           domainNameServers_ = domainNameServers_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          ntpServers_ = ntpServers_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -3240,6 +3272,35 @@ public final class SubnetOuterClass {
       }
     }
 
+    public static final int NTP_SERVERS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList ntpServers_;
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNtpServersList() {
+      return ntpServers_;
+    }
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    public int getNtpServersCount() {
+      return ntpServers_.size();
+    }
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    public java.lang.String getNtpServers(int index) {
+      return ntpServers_.get(index);
+    }
+    /**
+     * <code>repeated string ntp_servers = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNtpServersBytes(int index) {
+      return ntpServers_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3259,6 +3320,9 @@ public final class SubnetOuterClass {
       }
       if (!getDomainNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainName_);
+      }
+      for (int i = 0; i < ntpServers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ntpServers_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3280,6 +3344,14 @@ public final class SubnetOuterClass {
       if (!getDomainNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainName_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ntpServers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ntpServers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNtpServersList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3300,6 +3372,8 @@ public final class SubnetOuterClass {
           .equals(other.getDomainNameServersList());
       result = result && getDomainName()
           .equals(other.getDomainName());
+      result = result && getNtpServersList()
+          .equals(other.getNtpServersList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3317,6 +3391,10 @@ public final class SubnetOuterClass {
       }
       hash = (37 * hash) + DOMAIN_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDomainName().hashCode();
+      if (getNtpServersCount() > 0) {
+        hash = (37 * hash) + NTP_SERVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getNtpServersList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3454,6 +3532,8 @@ public final class SubnetOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         domainName_ = "";
 
+        ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -3488,6 +3568,11 @@ public final class SubnetOuterClass {
         }
         result.domainNameServers_ = domainNameServers_;
         result.domainName_ = domainName_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          ntpServers_ = ntpServers_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.ntpServers_ = ntpServers_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3549,6 +3634,16 @@ public final class SubnetOuterClass {
         }
         if (!other.getDomainName().isEmpty()) {
           domainName_ = other.domainName_;
+          onChanged();
+        }
+        if (!other.ntpServers_.isEmpty()) {
+          if (ntpServers_.isEmpty()) {
+            ntpServers_ = other.ntpServers_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureNtpServersIsMutable();
+            ntpServers_.addAll(other.ntpServers_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3743,6 +3838,100 @@ public final class SubnetOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNtpServersIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          ntpServers_ = new com.google.protobuf.LazyStringArrayList(ntpServers_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNtpServersList() {
+        return ntpServers_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public int getNtpServersCount() {
+        return ntpServers_.size();
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public java.lang.String getNtpServers(int index) {
+        return ntpServers_.get(index);
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNtpServersBytes(int index) {
+        return ntpServers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public Builder setNtpServers(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNtpServersIsMutable();
+        ntpServers_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public Builder addNtpServers(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNtpServersIsMutable();
+        ntpServers_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public Builder addAllNtpServers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNtpServersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ntpServers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public Builder clearNtpServers() {
+        ntpServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ntp_servers = 3;</code>
+       */
+      public Builder addNtpServersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureNtpServersIsMutable();
+        ntpServers_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3832,11 +4021,11 @@ public final class SubnetOuterClass {
       "oute_table_id\030\014 \001(\t\0226\n\014dhcp_options\030\r \001(" +
       "\0132 .yandex.cloud.vpc.v1.DhcpOptions\032-\n\013L" +
       "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"?\n\013DhcpOptions\022\033\n\023domain_name_servers" +
-      "\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\tBV\n\027yandex.cl" +
-      "oud.api.vpc.v1Z;github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/vpc/v1;vpcb\006pro" +
-      "to3"
+      "8\001\"T\n\013DhcpOptions\022\033\n\023domain_name_servers" +
+      "\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\t\022\023\n\013ntp_serve" +
+      "rs\030\003 \003(\tBV\n\027yandex.cloud.api.vpc.v1Z;git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3868,7 +4057,7 @@ public final class SubnetOuterClass {
     internal_static_yandex_cloud_vpc_v1_DhcpOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_DhcpOptions_descriptor,
-        new java.lang.String[] { "DomainNameServers", "DomainName", });
+        new java.lang.String[] { "DomainNameServers", "DomainName", "NtpServers", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

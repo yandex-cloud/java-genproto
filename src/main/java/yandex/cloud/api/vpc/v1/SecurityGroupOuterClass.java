@@ -147,6 +147,11 @@ public final class SecurityGroupOuterClass {
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRuleOrBuilder getRulesOrBuilder(
         int index);
+
+    /**
+     * <code>bool default_for_network = 10;</code>
+     */
+    boolean getDefaultForNetwork();
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.SecurityGroup}
@@ -168,6 +173,7 @@ public final class SecurityGroupOuterClass {
       networkId_ = "";
       status_ = 0;
       rules_ = java.util.Collections.emptyList();
+      defaultForNetwork_ = false;
     }
 
     @java.lang.Override
@@ -263,6 +269,11 @@ public final class SecurityGroupOuterClass {
               }
               rules_.add(
                   input.readMessage(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              defaultForNetwork_ = input.readBool();
               break;
             }
             default: {
@@ -765,6 +776,15 @@ public final class SecurityGroupOuterClass {
       return rules_.get(index);
     }
 
+    public static final int DEFAULT_FOR_NETWORK_FIELD_NUMBER = 10;
+    private boolean defaultForNetwork_;
+    /**
+     * <code>bool default_for_network = 10;</code>
+     */
+    public boolean getDefaultForNetwork() {
+      return defaultForNetwork_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -808,6 +828,9 @@ public final class SecurityGroupOuterClass {
       }
       for (int i = 0; i < rules_.size(); i++) {
         output.writeMessage(9, rules_.get(i));
+      }
+      if (defaultForNetwork_ != false) {
+        output.writeBool(10, defaultForNetwork_);
       }
       unknownFields.writeTo(output);
     }
@@ -855,6 +878,10 @@ public final class SecurityGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, rules_.get(i));
       }
+      if (defaultForNetwork_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, defaultForNetwork_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -891,6 +918,8 @@ public final class SecurityGroupOuterClass {
       result = result && status_ == other.status_;
       result = result && getRulesList()
           .equals(other.getRulesList());
+      result = result && (getDefaultForNetwork()
+          == other.getDefaultForNetwork());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -926,6 +955,9 @@ public final class SecurityGroupOuterClass {
         hash = (37 * hash) + RULES_FIELD_NUMBER;
         hash = (53 * hash) + getRulesList().hashCode();
       }
+      hash = (37 * hash) + DEFAULT_FOR_NETWORK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDefaultForNetwork());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1107,6 +1139,8 @@ public final class SecurityGroupOuterClass {
         } else {
           rulesBuilder_.clear();
         }
+        defaultForNetwork_ = false;
+
         return this;
       }
 
@@ -1157,6 +1191,7 @@ public final class SecurityGroupOuterClass {
         } else {
           result.rules_ = rulesBuilder_.build();
         }
+        result.defaultForNetwork_ = defaultForNetwork_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1259,6 +1294,9 @@ public final class SecurityGroupOuterClass {
               rulesBuilder_.addAllMessages(other.rules_);
             }
           }
+        }
+        if (other.getDefaultForNetwork() != false) {
+          setDefaultForNetwork(other.getDefaultForNetwork());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2158,6 +2196,32 @@ public final class SecurityGroupOuterClass {
           rules_ = null;
         }
         return rulesBuilder_;
+      }
+
+      private boolean defaultForNetwork_ ;
+      /**
+       * <code>bool default_for_network = 10;</code>
+       */
+      public boolean getDefaultForNetwork() {
+        return defaultForNetwork_;
+      }
+      /**
+       * <code>bool default_for_network = 10;</code>
+       */
+      public Builder setDefaultForNetwork(boolean value) {
+        
+        defaultForNetwork_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool default_for_network = 10;</code>
+       */
+      public Builder clearDefaultForNetwork() {
+        
+        defaultForNetwork_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5775,7 +5839,7 @@ public final class SecurityGroupOuterClass {
       "\n(yandex/cloud/vpc/v1/security_group.pro" +
       "to\022\023yandex.cloud.vpc.v1\032\037google/protobuf" +
       "/timestamp.proto\032\035yandex/cloud/validatio" +
-      "n.proto\"\316\003\n\rSecurityGroup\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "n.proto\"\353\003\n\rSecurityGroup\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..ya" +
@@ -5783,29 +5847,29 @@ public final class SecurityGroupOuterClass {
       "try\022\022\n\nnetwork_id\030\007 \001(\t\0229\n\006status\030\010 \001(\0162" +
       ").yandex.cloud.vpc.v1.SecurityGroup.Stat" +
       "us\0225\n\005rules\030\t \003(\0132&.yandex.cloud.vpc.v1." +
-      "SecurityGroupRule\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022ST" +
-      "ATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTI" +
-      "VE\020\002\022\014\n\010UPDATING\020\003\022\014\n\010DELETING\020\004\"\367\003\n\021Sec" +
-      "urityGroupRule\022\n\n\002id\030\001 \001(\t\022\023\n\013descriptio" +
-      "n\030\002 \001(\t\022B\n\006labels\030\003 \003(\01322.yandex.cloud.v" +
-      "pc.v1.SecurityGroupRule.LabelsEntry\022I\n\td" +
-      "irection\030\004 \001(\01620.yandex.cloud.vpc.v1.Sec" +
-      "urityGroupRule.DirectionB\004\350\3071\001\022-\n\005ports\030" +
-      "\005 \001(\0132\036.yandex.cloud.vpc.v1.PortRange\022\025\n" +
-      "\rprotocol_name\030\006 \001(\t\022\027\n\017protocol_number\030" +
-      "\007 \001(\003\0226\n\013cidr_blocks\030\010 \001(\0132\037.yandex.clou" +
-      "d.vpc.v1.CidrBlocksH\000\022\033\n\021security_group_" +
-      "id\030\t \001(\tH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"?\n\tDirection\022\031\n\025DIRECT" +
-      "ION_UNSPECIFIED\020\000\022\013\n\007INGRESS\020\001\022\n\n\006EGRESS" +
-      "\020\002B\016\n\006target\022\004\300\3011\001\"I\n\tPortRange\022\036\n\tfrom_" +
-      "port\030\001 \001(\003B\013\372\3071\0070-65535\022\034\n\007to_port\030\002 \001(\003" +
-      "B\013\372\3071\0070-65535\"<\n\nCidrBlocks\022\026\n\016v4_cidr_b" +
-      "locks\030\001 \003(\t\022\026\n\016v6_cidr_blocks\030\002 \003(\tBV\n\027y" +
-      "andex.cloud.api.vpc.v1Z;github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/vpc/v1;" +
-      "vpcb\006proto3"
+      "SecurityGroupRule\022\033\n\023default_for_network" +
+      "\030\n \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022STATUS_UNSPEC" +
+      "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010UPD" +
+      "ATING\020\003\022\014\n\010DELETING\020\004\"\367\003\n\021SecurityGroupR" +
+      "ule\022\n\n\002id\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022B\n\006" +
+      "labels\030\003 \003(\01322.yandex.cloud.vpc.v1.Secur" +
+      "ityGroupRule.LabelsEntry\022I\n\tdirection\030\004 " +
+      "\001(\01620.yandex.cloud.vpc.v1.SecurityGroupR" +
+      "ule.DirectionB\004\350\3071\001\022-\n\005ports\030\005 \001(\0132\036.yan" +
+      "dex.cloud.vpc.v1.PortRange\022\025\n\rprotocol_n" +
+      "ame\030\006 \001(\t\022\027\n\017protocol_number\030\007 \001(\003\0226\n\013ci" +
+      "dr_blocks\030\010 \001(\0132\037.yandex.cloud.vpc.v1.Ci" +
+      "drBlocksH\000\022\033\n\021security_group_id\030\t \001(\tH\000\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"?\n\tDirection\022\031\n\025DIRECTION_UNSPECI" +
+      "FIED\020\000\022\013\n\007INGRESS\020\001\022\n\n\006EGRESS\020\002B\016\n\006targe" +
+      "t\022\004\300\3011\001\"I\n\tPortRange\022\036\n\tfrom_port\030\001 \001(\003B" +
+      "\013\372\3071\0070-65535\022\034\n\007to_port\030\002 \001(\003B\013\372\3071\0070-655" +
+      "35\"<\n\nCidrBlocks\022\026\n\016v4_cidr_blocks\030\001 \003(\t" +
+      "\022\026\n\016v6_cidr_blocks\030\002 \003(\tBV\n\027yandex.cloud" +
+      ".api.vpc.v1Z;github.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5826,7 +5890,7 @@ public final class SecurityGroupOuterClass {
     internal_static_yandex_cloud_vpc_v1_SecurityGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_SecurityGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "NetworkId", "Status", "Rules", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "NetworkId", "Status", "Rules", "DefaultForNetwork", });
     internal_static_yandex_cloud_vpc_v1_SecurityGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_SecurityGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_SecurityGroup_LabelsEntry_fieldAccessorTable = new

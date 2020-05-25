@@ -60119,7 +60119,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     boolean hasMongodbSpec36();
     /**
@@ -60127,7 +60127,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6 getMongodbSpec36();
     /**
@@ -60135,7 +60135,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6OrBuilder getMongodbSpec36OrBuilder();
 
@@ -60144,7 +60144,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     boolean hasMongodbSpec40();
     /**
@@ -60152,7 +60152,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0 getMongodbSpec40();
     /**
@@ -60160,7 +60160,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0OrBuilder getMongodbSpec40OrBuilder();
 
@@ -60169,7 +60169,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     boolean hasMongodbSpec42();
     /**
@@ -60177,7 +60177,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2 getMongodbSpec42();
     /**
@@ -60185,7 +60185,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2OrBuilder getMongodbSpec42OrBuilder();
 
@@ -60532,7 +60532,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     public boolean hasMongodbSpec36() {
       return mongodbSpecCase_ == 2;
@@ -60542,7 +60542,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6 getMongodbSpec36() {
       if (mongodbSpecCase_ == 2) {
@@ -60555,7 +60555,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 3.6 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6OrBuilder getMongodbSpec36OrBuilder() {
       if (mongodbSpecCase_ == 2) {
@@ -60570,7 +60570,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     public boolean hasMongodbSpec40() {
       return mongodbSpecCase_ == 4;
@@ -60580,7 +60580,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0 getMongodbSpec40() {
       if (mongodbSpecCase_ == 4) {
@@ -60593,7 +60593,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.0 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0OrBuilder getMongodbSpec40OrBuilder() {
       if (mongodbSpecCase_ == 4) {
@@ -60608,7 +60608,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     public boolean hasMongodbSpec42() {
       return mongodbSpecCase_ == 7;
@@ -60618,7 +60618,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2 getMongodbSpec42() {
       if (mongodbSpecCase_ == 7) {
@@ -60631,7 +60631,7 @@ public final class ClusterServiceOuterClass {
      * Configuration and resource allocation for a MongoDB 4.2 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+     * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
      */
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2OrBuilder getMongodbSpec42OrBuilder() {
       if (mongodbSpecCase_ == 7) {
@@ -61403,7 +61403,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public boolean hasMongodbSpec36() {
         return mongodbSpecCase_ == 2;
@@ -61413,7 +61413,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6 getMongodbSpec36() {
         if (mongodbSpec36Builder_ == null) {
@@ -61433,7 +61433,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public Builder setMongodbSpec36(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6 value) {
         if (mongodbSpec36Builder_ == null) {
@@ -61453,7 +61453,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public Builder setMongodbSpec36(
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6.Builder builderForValue) {
@@ -61471,7 +61471,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public Builder mergeMongodbSpec36(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6 value) {
         if (mongodbSpec36Builder_ == null) {
@@ -61497,7 +61497,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public Builder clearMongodbSpec36() {
         if (mongodbSpec36Builder_ == null) {
@@ -61520,7 +61520,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6.Builder getMongodbSpec36Builder() {
         return getMongodbSpec36FieldBuilder().getBuilder();
@@ -61530,7 +61530,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6OrBuilder getMongodbSpec36OrBuilder() {
         if ((mongodbSpecCase_ == 2) && (mongodbSpec36Builder_ != null)) {
@@ -61547,7 +61547,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 3.6 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec3_6 mongodb_spec_3_6 = 2[json_name = "mongodbSpec_3_6"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec3_6OrBuilder> 
@@ -61575,7 +61575,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public boolean hasMongodbSpec40() {
         return mongodbSpecCase_ == 4;
@@ -61585,7 +61585,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0 getMongodbSpec40() {
         if (mongodbSpec40Builder_ == null) {
@@ -61605,7 +61605,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public Builder setMongodbSpec40(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0 value) {
         if (mongodbSpec40Builder_ == null) {
@@ -61625,7 +61625,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public Builder setMongodbSpec40(
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0.Builder builderForValue) {
@@ -61643,7 +61643,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public Builder mergeMongodbSpec40(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0 value) {
         if (mongodbSpec40Builder_ == null) {
@@ -61669,7 +61669,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public Builder clearMongodbSpec40() {
         if (mongodbSpec40Builder_ == null) {
@@ -61692,7 +61692,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0.Builder getMongodbSpec40Builder() {
         return getMongodbSpec40FieldBuilder().getBuilder();
@@ -61702,7 +61702,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0OrBuilder getMongodbSpec40OrBuilder() {
         if ((mongodbSpecCase_ == 4) && (mongodbSpec40Builder_ != null)) {
@@ -61719,7 +61719,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.0 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_0 mongodb_spec_4_0 = 4[json_name = "mongodbSpec_4_0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_0OrBuilder> 
@@ -61747,7 +61747,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public boolean hasMongodbSpec42() {
         return mongodbSpecCase_ == 7;
@@ -61757,7 +61757,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2 getMongodbSpec42() {
         if (mongodbSpec42Builder_ == null) {
@@ -61777,7 +61777,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public Builder setMongodbSpec42(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2 value) {
         if (mongodbSpec42Builder_ == null) {
@@ -61797,7 +61797,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public Builder setMongodbSpec42(
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2.Builder builderForValue) {
@@ -61815,7 +61815,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public Builder mergeMongodbSpec42(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2 value) {
         if (mongodbSpec42Builder_ == null) {
@@ -61841,7 +61841,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public Builder clearMongodbSpec42() {
         if (mongodbSpec42Builder_ == null) {
@@ -61864,7 +61864,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2.Builder getMongodbSpec42Builder() {
         return getMongodbSpec42FieldBuilder().getBuilder();
@@ -61874,7 +61874,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2OrBuilder getMongodbSpec42OrBuilder() {
         if ((mongodbSpecCase_ == 7) && (mongodbSpec42Builder_ != null)) {
@@ -61891,7 +61891,7 @@ public final class ClusterServiceOuterClass {
        * Configuration and resource allocation for a MongoDB 4.2 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7;</code>
+       * <code>.yandex.cloud.mdb.mongodb.v1.MongodbSpec4_2 mongodb_spec_4_2 = 7[json_name = "mongodbSpec_4_2"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.MongodbSpec4_2OrBuilder> 
@@ -62840,136 +62840,138 @@ public final class ClusterServiceOuterClass {
       "ces\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex." +
       "cloud.mdb.mongodb.v1.config.MongosConfig" +
       "4_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\"\231\003\n\nConfigSpec\022\017\n" +
+      "b.mongodb.v1.Resources\"\314\003\n\nConfigSpec\022\017\n" +
       "\007version\030\001 \001(\t\022%\n\035feature_compatibility_" +
-      "version\030\005 \001(\t\022G\n\020mongodb_spec_3_6\030\002 \001(\0132" +
+      "version\030\005 \001(\t\022X\n\020mongodb_spec_3_6\030\002 \001(\0132" +
       "+.yandex.cloud.mdb.mongodb.v1.MongodbSpe" +
-      "c3_6H\000\022G\n\020mongodb_spec_4_0\030\004 \001(\0132+.yande" +
-      "x.cloud.mdb.mongodb.v1.MongodbSpec4_0H\000\022" +
-      "G\n\020mongodb_spec_4_2\030\007 \001(\0132+.yandex.cloud" +
-      ".mdb.mongodb.v1.MongodbSpec4_2H\000\0223\n\023back" +
-      "up_window_start\030\003 \001(\0132\026.google.type.Time" +
-      "OfDay\0223\n\006access\030\006 \001(\0132#.yandex.cloud.mdb" +
-      ".mongodb.v1.AccessB\016\n\014mongodb_spec2\242$\n\016C" +
-      "lusterService\022\216\001\n\003Get\022..yandex.cloud.mdb" +
-      ".mongodb.v1.GetClusterRequest\032$.yandex.c" +
-      "loud.mdb.mongodb.v1.Cluster\"1\202\323\344\223\002+\022)/ma" +
-      "naged-mongodb/v1/clusters/{cluster_id}\022\221" +
-      "\001\n\004List\0220.yandex.cloud.mdb.mongodb.v1.Li" +
-      "stClustersRequest\0321.yandex.cloud.mdb.mon" +
-      "godb.v1.ListClustersResponse\"$\202\323\344\223\002\036\022\034/m" +
-      "anaged-mongodb/v1/clusters\022\253\001\n\006Create\0221." +
-      "yandex.cloud.mdb.mongodb.v1.CreateCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"K\202\323\344\223\002!\"\034/managed-mongodb/v1/cluster" +
-      "s:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster" +
-      "\022\270\001\n\006Update\0221.yandex.cloud.mdb.mongodb.v" +
-      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"X\202\323\344\223\002.2)/managed-mong" +
-      "odb/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upd" +
-      "ateClusterMetadata\022\007Cluster\022\303\001\n\006Delete\0221" +
-      ".yandex.cloud.mdb.mongodb.v1.DeleteClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"c\202\323\344\223\002+*)/managed-mongodb/v1/cluste" +
-      "rs/{cluster_id}\262\322*.\n\025DeleteClusterMetada" +
-      "ta\022\025google.protobuf.Empty\022\270\001\n\005Start\0220.ya" +
-      "ndex.cloud.mdb.mongodb.v1.StartClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"Z\202\323\344\223\0021\"//managed-mongodb/v1/clusters/{" +
-      "cluster_id}:start\262\322*\037\n\024StartClusterMetad" +
-      "ata\022\007Cluster\022\264\001\n\004Stop\022/.yandex.cloud.mdb" +
-      ".mongodb.v1.StopClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"X\202\323\344\223\0020\"./mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:sto" +
-      "p\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\267\001\n\004" +
-      "Move\022/.yandex.cloud.mdb.mongodb.v1.MoveC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"[\202\323\344\223\0023\"./managed-mongodb/v1/cl" +
-      "usters/{cluster_id}:move:\001*\262\322*\036\n\023MoveClu" +
-      "sterMetadata\022\007Cluster\022\274\001\n\006Backup\0221.yande" +
-      "x.cloud.mdb.mongodb.v1.BackupClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\\" +
-      "\202\323\344\223\0022\"0/managed-mongodb/v1/clusters/{cl" +
-      "uster_id}:backup\262\322* \n\025BackupClusterMetad" +
-      "ata\022\007Cluster\022\266\001\n\007Restore\0222.yandex.cloud." +
-      "mdb.mongodb.v1.RestoreClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"T\202\323\344\223\002)\"" +
-      "$/managed-mongodb/v1/clusters:restore:\001*" +
-      "\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\255\001" +
-      "\n\010ListLogs\0223.yandex.cloud.mdb.mongodb.v1" +
-      ".ListClusterLogsRequest\0324.yandex.cloud.m" +
-      "db.mongodb.v1.ListClusterLogsResponse\"6\202" +
-      "\323\344\223\0020\022./managed-mongodb/v1/clusters/{clu" +
-      "ster_id}:logs\022\254\001\n\nStreamLogs\0225.yandex.cl" +
-      "oud.mdb.mongodb.v1.StreamClusterLogsRequ" +
-      "est\032&.yandex.cloud.mdb.mongodb.v1.LogRec" +
-      "ord\"=\202\323\344\223\0027\0225/managed-mongodb/v1/cluster" +
-      "s/{cluster_id}:stream_logs0\001\022\305\001\n\016ListOpe" +
-      "rations\0229.yandex.cloud.mdb.mongodb.v1.Li" +
-      "stClusterOperationsRequest\032:.yandex.clou" +
-      "d.mdb.mongodb.v1.ListClusterOperationsRe" +
-      "sponse\"<\202\323\344\223\0026\0224/managed-mongodb/v1/clus" +
-      "ters/{cluster_id}/operations\022\271\001\n\013ListBac" +
-      "kups\0226.yandex.cloud.mdb.mongodb.v1.ListC" +
-      "lusterBackupsRequest\0327.yandex.cloud.mdb." +
-      "mongodb.v1.ListClusterBackupsResponse\"9\202" +
-      "\323\344\223\0023\0221/managed-mongodb/v1/clusters/{clu" +
-      "ster_id}/backups\022\261\001\n\tListHosts\0224.yandex." +
-      "cloud.mdb.mongodb.v1.ListClusterHostsReq" +
-      "uest\0325.yandex.cloud.mdb.mongodb.v1.ListC" +
-      "lusterHostsResponse\"7\202\323\344\223\0021\022//managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}/hosts\022\336\001\n" +
-      "\010AddHosts\0223.yandex.cloud.mdb.mongodb.v1." +
-      "AddClusterHostsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"z\202\323\344\223\002@\";/managed-mong" +
-      "odb/v1/clusters/{cluster_id}/hosts:batch" +
-      "Create:\001*\262\322*0\n\027AddClusterHostsMetadata\022\025" +
-      "google.protobuf.Empty\022\347\001\n\013DeleteHosts\0226." +
+      "c3_6H\000R\017mongodbSpec_3_6\022X\n\020mongodb_spec_" +
+      "4_0\030\004 \001(\0132+.yandex.cloud.mdb.mongodb.v1." +
+      "MongodbSpec4_0H\000R\017mongodbSpec_4_0\022X\n\020mon" +
+      "godb_spec_4_2\030\007 \001(\0132+.yandex.cloud.mdb.m" +
+      "ongodb.v1.MongodbSpec4_2H\000R\017mongodbSpec_" +
+      "4_2\0223\n\023backup_window_start\030\003 \001(\0132\026.googl" +
+      "e.type.TimeOfDay\0223\n\006access\030\006 \001(\0132#.yande" +
+      "x.cloud.mdb.mongodb.v1.AccessB\016\n\014mongodb" +
+      "_spec2\242$\n\016ClusterService\022\216\001\n\003Get\022..yande" +
+      "x.cloud.mdb.mongodb.v1.GetClusterRequest" +
+      "\032$.yandex.cloud.mdb.mongodb.v1.Cluster\"1" +
+      "\202\323\344\223\002+\022)/managed-mongodb/v1/clusters/{cl" +
+      "uster_id}\022\221\001\n\004List\0220.yandex.cloud.mdb.mo" +
+      "ngodb.v1.ListClustersRequest\0321.yandex.cl" +
+      "oud.mdb.mongodb.v1.ListClustersResponse\"" +
+      "$\202\323\344\223\002\036\022\034/managed-mongodb/v1/clusters\022\253\001" +
+      "\n\006Create\0221.yandex.cloud.mdb.mongodb.v1.C" +
+      "reateClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"K\202\323\344\223\002!\"\034/managed-mongodb" +
+      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
+      "ta\022\007Cluster\022\270\001\n\006Update\0221.yandex.cloud.md" +
+      "b.mongodb.v1.UpdateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"X\202\323\344\223\002.2)/m" +
+      "anaged-mongodb/v1/clusters/{cluster_id}:" +
+      "\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\303" +
+      "\001\n\006Delete\0221.yandex.cloud.mdb.mongodb.v1." +
+      "DeleteClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"c\202\323\344\223\002+*)/managed-mongod" +
+      "b/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
+      "usterMetadata\022\025google.protobuf.Empty\022\270\001\n" +
+      "\005Start\0220.yandex.cloud.mdb.mongodb.v1.Sta" +
+      "rtClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Z\202\323\344\223\0021\"//managed-mongodb/v1" +
+      "/clusters/{cluster_id}:start\262\322*\037\n\024StartC" +
+      "lusterMetadata\022\007Cluster\022\264\001\n\004Stop\022/.yande" +
+      "x.cloud.mdb.mongodb.v1.StopClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"X\202\323" +
+      "\344\223\0020\"./managed-mongodb/v1/clusters/{clus" +
+      "ter_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007C" +
+      "luster\022\267\001\n\004Move\022/.yandex.cloud.mdb.mongo" +
+      "db.v1.MoveClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"[\202\323\344\223\0023\"./managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}:move:\001*\262\322" +
+      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001\n\006Bac" +
+      "kup\0221.yandex.cloud.mdb.mongodb.v1.Backup" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"\\\202\323\344\223\0022\"0/managed-mongodb/v1/c" +
+      "lusters/{cluster_id}:backup\262\322* \n\025BackupC" +
+      "lusterMetadata\022\007Cluster\022\266\001\n\007Restore\0222.ya" +
+      "ndex.cloud.mdb.mongodb.v1.RestoreCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"T\202\323\344\223\002)\"$/managed-mongodb/v1/clusters" +
+      ":restore:\001*\262\322*!\n\026RestoreClusterMetadata\022" +
+      "\007Cluster\022\255\001\n\010ListLogs\0223.yandex.cloud.mdb" +
+      ".mongodb.v1.ListClusterLogsRequest\0324.yan" +
+      "dex.cloud.mdb.mongodb.v1.ListClusterLogs" +
+      "Response\"6\202\323\344\223\0020\022./managed-mongodb/v1/cl" +
+      "usters/{cluster_id}:logs\022\254\001\n\nStreamLogs\022" +
+      "5.yandex.cloud.mdb.mongodb.v1.StreamClus" +
+      "terLogsRequest\032&.yandex.cloud.mdb.mongod" +
+      "b.v1.LogRecord\"=\202\323\344\223\0027\0225/managed-mongodb" +
+      "/v1/clusters/{cluster_id}:stream_logs0\001\022" +
+      "\305\001\n\016ListOperations\0229.yandex.cloud.mdb.mo" +
+      "ngodb.v1.ListClusterOperationsRequest\032:." +
+      "yandex.cloud.mdb.mongodb.v1.ListClusterO" +
+      "perationsResponse\"<\202\323\344\223\0026\0224/managed-mong" +
+      "odb/v1/clusters/{cluster_id}/operations\022" +
+      "\271\001\n\013ListBackups\0226.yandex.cloud.mdb.mongo" +
+      "db.v1.ListClusterBackupsRequest\0327.yandex" +
+      ".cloud.mdb.mongodb.v1.ListClusterBackups" +
+      "Response\"9\202\323\344\223\0023\0221/managed-mongodb/v1/cl" +
+      "usters/{cluster_id}/backups\022\261\001\n\tListHost" +
+      "s\0224.yandex.cloud.mdb.mongodb.v1.ListClus" +
+      "terHostsRequest\0325.yandex.cloud.mdb.mongo" +
+      "db.v1.ListClusterHostsResponse\"7\202\323\344\223\0021\022/" +
+      "/managed-mongodb/v1/clusters/{cluster_id" +
+      "}/hosts\022\336\001\n\010AddHosts\0223.yandex.cloud.mdb." +
+      "mongodb.v1.AddClusterHostsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"z\202\323\344\223\002@\";/m" +
+      "anaged-mongodb/v1/clusters/{cluster_id}/" +
+      "hosts:batchCreate:\001*\262\322*0\n\027AddClusterHost" +
+      "sMetadata\022\025google.protobuf.Empty\022\347\001\n\013Del" +
+      "eteHosts\0226.yandex.cloud.mdb.mongodb.v1.D" +
+      "eleteClusterHostsRequest\032!.yandex.cloud." +
+      "operation.Operation\"}\202\323\344\223\002@\";/managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}/hosts:bat" +
+      "chDelete:\001*\262\322*3\n\032DeleteClusterHostsMetad" +
+      "ata\022\025google.protobuf.Empty\022\355\001\n\016EnableSha" +
+      "rding\0229.yandex.cloud.mdb.mongodb.v1.Enab" +
+      "leClusterShardingRequest\032!.yandex.cloud." +
+      "operation.Operation\"}\202\323\344\223\002=\"8/managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}:enableSha" +
+      "rding:\001*\262\322*6\n\035EnableClusterShardingMetad" +
+      "ata\022\025google.protobuf.Empty\022\252\001\n\010GetShard\022" +
+      "3.yandex.cloud.mdb.mongodb.v1.GetCluster" +
+      "ShardRequest\032\".yandex.cloud.mdb.mongodb." +
+      "v1.Shard\"E\202\323\344\223\002?\022=/managed-mongodb/v1/cl" +
+      "usters/{cluster_id}/shards/{shard_name}\022" +
+      "\265\001\n\nListShards\0225.yandex.cloud.mdb.mongod" +
+      "b.v1.ListClusterShardsRequest\0326.yandex.c" +
+      "loud.mdb.mongodb.v1.ListClusterShardsRes" +
+      "ponse\"8\202\323\344\223\0022\0220/managed-mongodb/v1/clust" +
+      "ers/{cluster_id}/shards\022\303\001\n\010AddShard\0223.y" +
+      "andex.cloud.mdb.mongodb.v1.AddClusterSha" +
+      "rdRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"_\202\323\344\223\0025\"0/managed-mongodb/v1/cluste" +
+      "rs/{cluster_id}/shards:\001*\262\322* \n\027AddCluste" +
+      "rShardMetadata\022\005Shard\022\346\001\n\013DeleteShard\0226." +
       "yandex.cloud.mdb.mongodb.v1.DeleteCluste" +
-      "rHostsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"}\202\323\344\223\002@\";/managed-mongodb/v1/cl" +
-      "usters/{cluster_id}/hosts:batchDelete:\001*" +
-      "\262\322*3\n\032DeleteClusterHostsMetadata\022\025google" +
-      ".protobuf.Empty\022\355\001\n\016EnableSharding\0229.yan" +
-      "dex.cloud.mdb.mongodb.v1.EnableClusterSh" +
-      "ardingRequest\032!.yandex.cloud.operation.O" +
-      "peration\"}\202\323\344\223\002=\"8/managed-mongodb/v1/cl" +
-      "usters/{cluster_id}:enableSharding:\001*\262\322*" +
-      "6\n\035EnableClusterShardingMetadata\022\025google" +
-      ".protobuf.Empty\022\252\001\n\010GetShard\0223.yandex.cl" +
-      "oud.mdb.mongodb.v1.GetClusterShardReques" +
-      "t\032\".yandex.cloud.mdb.mongodb.v1.Shard\"E\202" +
-      "\323\344\223\002?\022=/managed-mongodb/v1/clusters/{clu" +
-      "ster_id}/shards/{shard_name}\022\265\001\n\nListSha" +
-      "rds\0225.yandex.cloud.mdb.mongodb.v1.ListCl" +
-      "usterShardsRequest\0326.yandex.cloud.mdb.mo" +
-      "ngodb.v1.ListClusterShardsResponse\"8\202\323\344\223" +
-      "\0022\0220/managed-mongodb/v1/clusters/{cluste" +
-      "r_id}/shards\022\303\001\n\010AddShard\0223.yandex.cloud" +
-      ".mdb.mongodb.v1.AddClusterShardRequest\032!" +
-      ".yandex.cloud.operation.Operation\"_\202\323\344\223\002" +
-      "5\"0/managed-mongodb/v1/clusters/{cluster" +
-      "_id}/shards:\001*\262\322* \n\027AddClusterShardMetad" +
-      "ata\022\005Shard\022\346\001\n\013DeleteShard\0226.yandex.clou" +
-      "d.mdb.mongodb.v1.DeleteClusterShardReque" +
-      "st\032!.yandex.cloud.operation.Operation\"|\202" +
-      "\323\344\223\002?*=/managed-mongodb/v1/clusters/{clu" +
-      "ster_id}/shards/{shard_name}\262\322*3\n\032Delete" +
-      "ClusterShardMetadata\022\025google.protobuf.Em" +
-      "pty\022\327\001\n\014ResetupHosts\0220.yandex.cloud.mdb." +
-      "mongodb.v1.ResetupHostsRequest\032!.yandex." +
-      "cloud.operation.Operation\"r\202\323\344\223\002;\"6/mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:res" +
-      "etupHosts:\001*\262\322*-\n\024ResetupHostsMetadata\022\025" +
-      "google.protobuf.Empty\022\327\001\n\014RestartHosts\0220" +
-      ".yandex.cloud.mdb.mongodb.v1.RestartHost" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"r\202\323\344\223\002;\"6/managed-mongodb/v1/cluster" +
-      "s/{cluster_id}:restartHosts:\001*\262\322*-\n\024Rest" +
-      "artHostsMetadata\022\025google.protobuf.EmptyB" +
-      "j\n\037yandex.cloud.api.mdb.mongodb.v1ZGgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/mongodb/v1;mongodbb\006proto3"
+      "rShardRequest\032!.yandex.cloud.operation.O" +
+      "peration\"|\202\323\344\223\002?*=/managed-mongodb/v1/cl" +
+      "usters/{cluster_id}/shards/{shard_name}\262" +
+      "\322*3\n\032DeleteClusterShardMetadata\022\025google." +
+      "protobuf.Empty\022\327\001\n\014ResetupHosts\0220.yandex" +
+      ".cloud.mdb.mongodb.v1.ResetupHostsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"r\202\323" +
+      "\344\223\002;\"6/managed-mongodb/v1/clusters/{clus" +
+      "ter_id}:resetupHosts:\001*\262\322*-\n\024ResetupHost" +
+      "sMetadata\022\025google.protobuf.Empty\022\327\001\n\014Res" +
+      "tartHosts\0220.yandex.cloud.mdb.mongodb.v1." +
+      "RestartHostsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"r\202\323\344\223\002;\"6/managed-mongodb" +
+      "/v1/clusters/{cluster_id}:restartHosts:\001" +
+      "*\262\322*-\n\024RestartHostsMetadata\022\025google.prot" +
+      "obuf.EmptyBj\n\037yandex.cloud.api.mdb.mongo" +
+      "db.v1ZGgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/mongodb/v1;mongodbb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
