@@ -353,6 +353,23 @@ public final class TriggerOuterClass {
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 8 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder();
+
+    /**
+     * <pre>
+     * Trigger status
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Trigger status
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus();
   }
   /**
    * <pre>
@@ -375,6 +392,7 @@ public final class TriggerOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -462,6 +480,12 @@ public final class TriggerOuterClass {
                 rule_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
               break;
             }
             default: {
@@ -747,6 +771,113 @@ public final class TriggerOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.triggers.v1.Trigger.ContainerRegistryEventType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.serverless.triggers.v1.Trigger.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <code>ACTIVE = 1;</code>
+       */
+      ACTIVE(1),
+      /**
+       * <code>PAUSED = 2;</code>
+       */
+      PAUSED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>ACTIVE = 1;</code>
+       */
+      public static final int ACTIVE_VALUE = 1;
+      /**
+       * <code>PAUSED = 2;</code>
+       */
+      public static final int PAUSED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return ACTIVE;
+          case 2: return PAUSED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.triggers.v1.Trigger.Status)
     }
 
     public interface RuleOrBuilder extends
@@ -9889,6 +10020,31 @@ public final class TriggerOuterClass {
       return getRule();
     }
 
+    public static final int STATUS_FIELD_NUMBER = 9;
+    private int status_;
+    /**
+     * <pre>
+     * Trigger status
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Trigger status
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status result = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9926,6 +10082,9 @@ public final class TriggerOuterClass {
           6);
       if (rule_ != null) {
         output.writeMessage(8, getRule());
+      }
+      if (status_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -9966,6 +10125,10 @@ public final class TriggerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRule());
       }
+      if (status_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, status_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10002,6 +10165,7 @@ public final class TriggerOuterClass {
         result = result && getRule()
             .equals(other.getRule());
       }
+      result = result && status_ == other.status_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10033,6 +10197,8 @@ public final class TriggerOuterClass {
         hash = (37 * hash) + RULE_FIELD_NUMBER;
         hash = (53 * hash) + getRule().hashCode();
       }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10213,6 +10379,8 @@ public final class TriggerOuterClass {
           rule_ = null;
           ruleBuilder_ = null;
         }
+        status_ = 0;
+
         return this;
       }
 
@@ -10257,6 +10425,7 @@ public final class TriggerOuterClass {
         } else {
           result.rule_ = ruleBuilder_.build();
         }
+        result.status_ = status_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -10329,6 +10498,9 @@ public final class TriggerOuterClass {
             other.internalGetLabels());
         if (other.hasRule()) {
           mergeRule(other.getRule());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11171,6 +11343,71 @@ public final class TriggerOuterClass {
           rule_ = null;
         }
         return ruleBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Trigger status
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       */
+      public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Trigger status
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trigger status
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status result = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Trigger status
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       */
+      public Builder setStatus(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trigger status
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15988,7 +16225,7 @@ public final class TriggerOuterClass {
       "igger.proto\022#yandex.cloud.serverless.tri" +
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\035yande" +
-      "x/cloud/validation.proto\"\235\024\n\007Trigger\022\n\n\002" +
+      "x/cloud/validation.proto\"\234\025\n\007Trigger\022\n\n\002" +
       "id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
       "Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013des" +
@@ -15996,87 +16233,90 @@ public final class TriggerOuterClass {
       "\01328.yandex.cloud.serverless.triggers.v1." +
       "Trigger.LabelsEntry\022E\n\004rule\030\010 \001(\01321.yand" +
       "ex.cloud.serverless.triggers.v1.Trigger." +
-      "RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\032\261\003\n\004Rule\022C\n\005timer\030\002 \001(" +
-      "\01322.yandex.cloud.serverless.triggers.v1." +
-      "Trigger.TimerH\000\022R\n\rmessage_queue\030\003 \001(\01329" +
-      ".yandex.cloud.serverless.triggers.v1.Tri" +
-      "gger.MessageQueueH\000\022N\n\013iot_message\030\004 \001(\013" +
-      "27.yandex.cloud.serverless.triggers.v1.T" +
-      "rigger.IoTMessageH\000\022T\n\016object_storage\030\005 " +
-      "\001(\0132:.yandex.cloud.serverless.triggers.v" +
-      "1.Trigger.ObjectStorageH\000\022\\\n\022container_r" +
-      "egistry\030\006 \001(\0132>.yandex.cloud.serverless." +
-      "triggers.v1.Trigger.ContainerRegistryH\000B" +
-      "\014\n\004rule\022\004\300\3011\001\032\367\001\n\005Timer\022&\n\017cron_expressi" +
-      "on\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022R\n\017invoke_functi" +
-      "on\030e \001(\01327.yandex.cloud.serverless.trigg" +
-      "ers.v1.InvokeFunctionOnceH\000\022b\n\032invoke_fu" +
-      "nction_with_retry\030g \001(\0132<.yandex.cloud.s" +
-      "erverless.triggers.v1.InvokeFunctionWith" +
-      "RetryH\000B\016\n\006action\022\004\300\3011\001\032\310\002\n\014MessageQueue" +
-      "\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_acco" +
-      "unt_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_sett" +
-      "ings\030\004 \001(\01322.yandex.cloud.serverless.tri" +
-      "ggers.v1.BatchSettingsB\004\350\3071\001\022@\n\022visibili" +
-      "ty_timeout\030\005 \001(\0132\031.google.protobuf.Durat" +
-      "ionB\t\372\3071\005<=12h\022R\n\017invoke_function\030e \001(\0132" +
-      "7.yandex.cloud.serverless.triggers.v1.In" +
-      "vokeFunctionOnceH\000B\016\n\006action\022\004\300\3011\001\032\267\001\n\nI" +
-      "oTMessage\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\t" +
-      "device_id\030\002 \001(\t\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017i" +
-      "nvoke_function\030e \001(\0132<.yandex.cloud.serv" +
-      "erless.triggers.v1.InvokeFunctionWithRet" +
-      "ryH\000B\016\n\006action\022\004\300\3011\001\032\214\002\n\rObjectStorage\022_" +
-      "\n\nevent_type\030\003 \003(\0162C.yandex.cloud.server" +
-      "less.triggers.v1.Trigger.ObjectStorageEv" +
-      "entTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006pr" +
-      "efix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022W\n\017invoke_fun" +
-      "ction\030e \001(\0132<.yandex.cloud.serverless.tr" +
-      "iggers.v1.InvokeFunctionWithRetryH\000B\016\n\006a" +
-      "ction\022\004\300\3011\001\032\227\002\n\021ContainerRegistry\022c\n\neve" +
-      "nt_type\030\003 \003(\0162G.yandex.cloud.serverless." +
-      "triggers.v1.Trigger.ContainerRegistryEve" +
-      "ntTypeB\006\202\3101\002>0\022\023\n\013registry_id\030\004 \001(\t\022\022\n\ni" +
-      "mage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t\022W\n\017invoke_f" +
-      "unction\030e \001(\0132<.yandex.cloud.serverless." +
-      "triggers.v1.InvokeFunctionWithRetryH\000B\016\n" +
-      "\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorageEventType" +
-      "\022)\n%OBJECT_STORAGE_EVENT_TYPE_UNSPECIFIE" +
-      "D\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYPE_CREATE_" +
-      "OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVENT_TYPE_UP" +
-      "DATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE_EVENT_TY" +
-      "PE_DELETE_OBJECT\020\003\"\223\002\n\032ContainerRegistry" +
-      "EventType\022-\n)CONTAINER_REGISTRY_EVENT_TY" +
-      "PE_UNSPECIFIED\020\000\022.\n*CONTAINER_REGISTRY_E" +
-      "VENT_TYPE_CREATE_IMAGE\020\001\022.\n*CONTAINER_RE" +
-      "GISTRY_EVENT_TYPE_DELETE_IMAGE\020\002\0222\n.CONT" +
-      "AINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_T" +
-      "AG\020\003\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_DE" +
-      "LETE_IMAGE_TAG\020\004\"i\n\022InvokeFunctionOnce\022!" +
+      "RuleB\004\350\3071\001\022C\n\006status\030\t \001(\01623.yandex.clou" +
+      "d.serverless.triggers.v1.Trigger.Status\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\032\261\003\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex." +
+      "cloud.serverless.triggers.v1.Trigger.Tim" +
+      "erH\000\022R\n\rmessage_queue\030\003 \001(\01329.yandex.clo" +
+      "ud.serverless.triggers.v1.Trigger.Messag" +
+      "eQueueH\000\022N\n\013iot_message\030\004 \001(\01327.yandex.c" +
+      "loud.serverless.triggers.v1.Trigger.IoTM" +
+      "essageH\000\022T\n\016object_storage\030\005 \001(\0132:.yande" +
+      "x.cloud.serverless.triggers.v1.Trigger.O" +
+      "bjectStorageH\000\022\\\n\022container_registry\030\006 \001" +
+      "(\0132>.yandex.cloud.serverless.triggers.v1" +
+      ".Trigger.ContainerRegistryH\000B\014\n\004rule\022\004\300\301" +
+      "1\001\032\367\001\n\005Timer\022&\n\017cron_expression\030\001 \001(\tB\r\350" +
+      "\3071\001\212\3101\005<=100\022R\n\017invoke_function\030e \001(\01327." +
+      "yandex.cloud.serverless.triggers.v1.Invo" +
+      "keFunctionOnceH\000\022b\n\032invoke_function_with" +
+      "_retry\030g \001(\0132<.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeFunctionWithRetryH\000B\016\n\006" +
+      "action\022\004\300\3011\001\032\310\002\n\014MessageQueue\022\026\n\010queue_i" +
+      "d\030\013 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_settings\030\004 \001(\0132" +
+      "2.yandex.cloud.serverless.triggers.v1.Ba" +
+      "tchSettingsB\004\350\3071\001\022@\n\022visibility_timeout\030" +
+      "\005 \001(\0132\031.google.protobuf.DurationB\t\372\3071\005<=" +
+      "12h\022R\n\017invoke_function\030e \001(\01327.yandex.cl" +
+      "oud.serverless.triggers.v1.InvokeFunctio" +
+      "nOnceH\000B\016\n\006action\022\004\300\3011\001\032\267\001\n\nIoTMessage\022\031" +
+      "\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002" +
+      " \001(\t\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017invoke_funct" +
+      "ion\030e \001(\0132<.yandex.cloud.serverless.trig" +
+      "gers.v1.InvokeFunctionWithRetryH\000B\016\n\006act" +
+      "ion\022\004\300\3011\001\032\214\002\n\rObjectStorage\022_\n\nevent_typ" +
+      "e\030\003 \003(\0162C.yandex.cloud.serverless.trigge" +
+      "rs.v1.Trigger.ObjectStorageEventTypeB\006\202\310" +
+      "1\002>0\022\021\n\tbucket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022" +
+      "\016\n\006suffix\030\007 \001(\t\022W\n\017invoke_function\030e \001(\013" +
+      "2<.yandex.cloud.serverless.triggers.v1.I" +
+      "nvokeFunctionWithRetryH\000B\016\n\006action\022\004\300\3011\001" +
+      "\032\227\002\n\021ContainerRegistry\022c\n\nevent_type\030\003 \003" +
+      "(\0162G.yandex.cloud.serverless.triggers.v1" +
+      ".Trigger.ContainerRegistryEventTypeB\006\202\3101" +
+      "\002>0\022\023\n\013registry_id\030\004 \001(\t\022\022\n\nimage_name\030\005" +
+      " \001(\t\022\013\n\003tag\030\006 \001(\t\022W\n\017invoke_function\030e \001" +
+      "(\0132<.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeFunctionWithRetryH\000B\016\n\006action\022\004\300\301" +
+      "1\001\"\312\001\n\026ObjectStorageEventType\022)\n%OBJECT_" +
+      "STORAGE_EVENT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJE" +
+      "CT_STORAGE_EVENT_TYPE_CREATE_OBJECT\020\001\022+\n" +
+      "\'OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT" +
+      "\020\002\022+\n\'OBJECT_STORAGE_EVENT_TYPE_DELETE_O" +
+      "BJECT\020\003\"\223\002\n\032ContainerRegistryEventType\022-" +
+      "\n)CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIF" +
+      "IED\020\000\022.\n*CONTAINER_REGISTRY_EVENT_TYPE_C" +
+      "REATE_IMAGE\020\001\022.\n*CONTAINER_REGISTRY_EVEN" +
+      "T_TYPE_DELETE_IMAGE\020\002\0222\n.CONTAINER_REGIS" +
+      "TRY_EVENT_TYPE_CREATE_IMAGE_TAG\020\003\0222\n.CON" +
+      "TAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_" +
+      "TAG\020\004\"8\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\n\n\006ACTIVE\020\001\022\n\n\006PAUSED\020\002\"i\n\022InvokeFunctio" +
+      "nOnce\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022service_accoun" +
+      "t_id\030\003 \001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!" +
       "\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014fun" +
       "ction_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 " +
-      "\001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!\n\013funct" +
-      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_t" +
-      "ag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\022J\n\016" +
-      "retry_settings\030\004 \001(\01322.yandex.cloud.serv" +
-      "erless.triggers.v1.RetrySettings\022O\n\021dead" +
-      "_letter_queue\030\005 \001(\01324.yandex.cloud.serve" +
-      "rless.triggers.v1.PutQueueMessage\"M\n\017Put" +
-      "QueueMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022servic" +
-      "e_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatc" +
-      "hSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cut" +
-      "off\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\307" +
-      "1\001\"c\n\rRetrySettings\022\037\n\016retry_attempts\030\001 " +
-      "\001(\003B\007\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031.google." +
-      "protobuf.DurationB\004\350\3071\001*\206\001\n\013TriggerType\022" +
-      "\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002" +
-      "\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\022\n\016" +
-      "OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006" +
-      "B{\n\'yandex.cloud.api.serverless.triggers" +
-      ".v1ZPgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/serverless/triggers/v1;tri" +
-      "ggersb\006proto3"
+      "\001(\t\022J\n\016retry_settings\030\004 \001(\01322.yandex.clo" +
+      "ud.serverless.triggers.v1.RetrySettings\022" +
+      "O\n\021dead_letter_queue\030\005 \001(\01324.yandex.clou" +
+      "d.serverless.triggers.v1.PutQueueMessage" +
+      "\"M\n\017PutQueueMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n" +
+      "\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "X\n\rBatchSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10" +
+      "\022/\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Durat" +
+      "ionB\004\350\3071\001\"c\n\rRetrySettings\022\037\n\016retry_atte" +
+      "mpts\030\001 \001(\003B\007\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031." +
+      "google.protobuf.DurationB\004\350\3071\001*\206\001\n\013Trigg" +
+      "erType\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005" +
+      "TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAG" +
+      "E\020\004\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REG" +
+      "ISTRY\020\006B{\n\'yandex.cloud.api.serverless.t" +
+      "riggers.v1ZPgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/serverless/triggers" +
+      "/v1;triggersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16098,7 +16338,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Rule", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Rule", "Status", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_LabelsEntry_fieldAccessorTable = new

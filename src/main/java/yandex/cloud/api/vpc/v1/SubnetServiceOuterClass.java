@@ -2949,7 +2949,7 @@ public final class SubnetServiceOuterClass {
      * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
-     * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getZoneId();
     /**
@@ -2958,7 +2958,7 @@ public final class SubnetServiceOuterClass {
      * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
-     * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
@@ -2972,7 +2972,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     java.util.List<java.lang.String>
         getV4CidrBlocksList();
@@ -2985,7 +2985,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     int getV4CidrBlocksCount();
     /**
@@ -2997,7 +2997,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getV4CidrBlocks(int index);
     /**
@@ -3009,7 +3009,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index);
@@ -3482,7 +3482,7 @@ public final class SubnetServiceOuterClass {
      * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
-     * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getZoneId() {
       java.lang.Object ref = zoneId_;
@@ -3502,7 +3502,7 @@ public final class SubnetServiceOuterClass {
      * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
      * </pre>
      *
-     * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getZoneIdBytes() {
@@ -3529,7 +3529,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getV4CidrBlocksList() {
@@ -3544,7 +3544,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     public int getV4CidrBlocksCount() {
       return v4CidrBlocks_.size();
@@ -3558,7 +3558,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getV4CidrBlocks(int index) {
       return v4CidrBlocks_.get(index);
@@ -3572,7 +3572,7 @@ public final class SubnetServiceOuterClass {
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
      *
-     * <code>repeated string v4_cidr_blocks = 7;</code>
+     * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
         getV4CidrBlocksBytes(int index) {
@@ -4671,7 +4671,7 @@ public final class SubnetServiceOuterClass {
        * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
-       * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getZoneId() {
         java.lang.Object ref = zoneId_;
@@ -4691,7 +4691,7 @@ public final class SubnetServiceOuterClass {
        * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
-       * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getZoneIdBytes() {
@@ -4712,7 +4712,7 @@ public final class SubnetServiceOuterClass {
        * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
-       * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setZoneId(
           java.lang.String value) {
@@ -4730,7 +4730,7 @@ public final class SubnetServiceOuterClass {
        * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
-       * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearZoneId() {
         
@@ -4744,7 +4744,7 @@ public final class SubnetServiceOuterClass {
        * To get a list of available zones, use the [yandex.cloud.compute.v1.ZoneService.List] request.
        * </pre>
        *
-       * <code>string zone_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setZoneIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4774,7 +4774,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getV4CidrBlocksList() {
@@ -4789,7 +4789,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public int getV4CidrBlocksCount() {
         return v4CidrBlocks_.size();
@@ -4803,7 +4803,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getV4CidrBlocks(int index) {
         return v4CidrBlocks_.get(index);
@@ -4817,7 +4817,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
           getV4CidrBlocksBytes(int index) {
@@ -4832,7 +4832,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setV4CidrBlocks(
           int index, java.lang.String value) {
@@ -4853,7 +4853,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addV4CidrBlocks(
           java.lang.String value) {
@@ -4874,7 +4874,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addAllV4CidrBlocks(
           java.lang.Iterable<java.lang.String> values) {
@@ -4893,7 +4893,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearV4CidrBlocks() {
         v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -4910,7 +4910,7 @@ public final class SubnetServiceOuterClass {
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
        *
-       * <code>repeated string v4_cidr_blocks = 7;</code>
+       * <code>repeated string v4_cidr_blocks = 7 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addV4CidrBlocksBytes(
           com.google.protobuf.ByteString value) {
@@ -12875,73 +12875,74 @@ public final class SubnetServiceOuterClass {
       "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\\\n\023ListSubnets" +
       "Response\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud" +
       ".vpc.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\355\003\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
+      "\367\003\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
       "(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-" +
       "z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description" +
       "\030\003 \001(\tB\t\212\3101\005<=256\022\205\001\n\006labels\030\004 \003(\01324.yan" +
       "dex.cloud.vpc.v1.CreateSubnetRequest.Lab" +
       "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
       "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\nnet" +
-      "work_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\007zone_id\030\006" +
-      " \001(\tB\010\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\007 \003(\t\022 " +
-      "\n\016route_table_id\030\t \001(\tB\010\212\3101\004<=50\0226\n\014dhcp" +
-      "_options\030\n \001(\0132 .yandex.cloud.vpc.v1.Dhc" +
-      "pOptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\")\n\024CreateSubnetMetadata\022" +
-      "\021\n\tsubnet_id\030\001 \001(\t\"\311\003\n\023UpdateSubnetReque" +
-      "st\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
-      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
-      "Mask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{" +
-      "1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
-      "<=256\022\205\001\n\006labels\030\005 \003(\01324.yandex.cloud.vp" +
-      "c.v1.UpdateSubnetRequest.LabelsEntryB?\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\016route_table_id\030" +
-      "\006 \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_options\030\007 \001(\0132 ." +
-      "yandex.cloud.vpc.v1.DhcpOptions\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")" +
-      "\n\024UpdateSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(" +
-      "\t\"6\n\023DeleteSubnetRequest\022\037\n\tsubnet_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSubnetMetadat" +
-      "a\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSubnetOperat" +
-      "ionsRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034ListSubnet" +
-      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
-      ".yandex.cloud.operation.Operation\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"a\n\021MoveSubnetRequest\022" +
-      "\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025dest" +
-      "ination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n" +
-      "\022MoveSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t2\242" +
-      "\010\n\rSubnetService\022n\n\003Get\022%.yandex.cloud.v" +
-      "pc.v1.GetSubnetRequest\032\033.yandex.cloud.vp" +
-      "c.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnets/{su" +
-      "bnet_id}\022r\n\004List\022\'.yandex.cloud.vpc.v1.L" +
-      "istSubnetsRequest\032(.yandex.cloud.vpc.v1." +
-      "ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v1/sub" +
-      "nets\022\223\001\n\006Create\022(.yandex.cloud.vpc.v1.Cr" +
-      "eateSubnetRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/subnets:\001*" +
-      "\262\322*\036\n\024CreateSubnetMetadata\022\006Subnet\022\237\001\n\006U" +
-      "pdate\022(.yandex.cloud.vpc.v1.UpdateSubnet" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet_id}:" +
-      "\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\253\001\n" +
-      "\006Delete\022(.yandex.cloud.vpc.v1.DeleteSubn" +
-      "etRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subnet_id" +
-      "}\262\322*-\n\024DeleteSubnetMetadata\022\025google.prot" +
-      "obuf.Empty\022\245\001\n\016ListOperations\0220.yandex.c" +
-      "loud.vpc.v1.ListSubnetOperationsRequest\032" +
-      "1.yandex.cloud.vpc.v1.ListSubnetOperatio" +
-      "nsResponse\".\202\323\344\223\002(\022&/vpc/v1/subnets/{sub" +
-      "net_id}/operations\022\236\001\n\004Move\022&.yandex.clo" +
-      "ud.vpc.v1.MoveSubnetRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/" +
-      "subnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSub" +
-      "netMetadata\022\006SubnetBV\n\027yandex.cloud.api." +
-      "vpc.v1Z;github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "work_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007zone_id\030\006" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\016v4_cidr_blocks\030\007 \003" +
+      "(\tB\004\350\3071\001\022 \n\016route_table_id\030\t \001(\tB\010\212\3101\004<=" +
+      "50\0226\n\014dhcp_options\030\n \001(\0132 .yandex.cloud." +
+      "vpc.v1.DhcpOptions\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\024CreateSubne" +
+      "tMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"\311\003\n\023UpdateS" +
+      "ubnetRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z]" +
+      "[-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004" +
+      " \001(\tB\t\212\3101\005<=256\022\205\001\n\006labels\030\005 \003(\01324.yande" +
+      "x.cloud.vpc.v1.UpdateSubnetRequest.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\016route" +
+      "_table_id\030\006 \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_option" +
+      "s\030\007 \001(\0132 .yandex.cloud.vpc.v1.DhcpOption" +
+      "s\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\")\n\024UpdateSubnetMetadata\022\021\n\tsubn" +
+      "et_id\030\001 \001(\t\"6\n\023DeleteSubnetRequest\022\037\n\tsu" +
+      "bnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSub" +
+      "netMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSu" +
+      "bnetOperationsRequest\022\037\n\tsubnet_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034" +
+      "ListSubnetOperationsResponse\0225\n\noperatio" +
+      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
+      "ion\022\027\n\017next_page_token\030\002 \001(\t\"a\n\021MoveSubn" +
+      "etRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\'\n\022MoveSubnetMetadata\022\021\n\tsubnet_" +
+      "id\030\001 \001(\t2\242\010\n\rSubnetService\022n\n\003Get\022%.yand" +
+      "ex.cloud.vpc.v1.GetSubnetRequest\032\033.yande" +
+      "x.cloud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/s" +
+      "ubnets/{subnet_id}\022r\n\004List\022\'.yandex.clou" +
+      "d.vpc.v1.ListSubnetsRequest\032(.yandex.clo" +
+      "ud.vpc.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/" +
+      "vpc/v1/subnets\022\223\001\n\006Create\022(.yandex.cloud" +
+      ".vpc.v1.CreateSubnetRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/" +
+      "subnets:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Su" +
+      "bnet\022\237\001\n\006Update\022(.yandex.cloud.vpc.v1.Up" +
+      "dateSubnetRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{s" +
+      "ubnet_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006" +
+      "Subnet\022\253\001\n\006Delete\022(.yandex.cloud.vpc.v1." +
+      "DeleteSubnetRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/" +
+      "{subnet_id}\262\322*-\n\024DeleteSubnetMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\245\001\n\016ListOperations\022" +
+      "0.yandex.cloud.vpc.v1.ListSubnetOperatio" +
+      "nsRequest\0321.yandex.cloud.vpc.v1.ListSubn" +
+      "etOperationsResponse\".\202\323\344\223\002(\022&/vpc/v1/su" +
+      "bnets/{subnet_id}/operations\022\236\001\n\004Move\022&." +
+      "yandex.cloud.vpc.v1.MoveSubnetRequest\032!." +
+      "yandex.cloud.operation.Operation\"K\202\323\344\223\002%" +
+      "\" /vpc/v1/subnets/{subnet_id}:move:\001*\262\322*" +
+      "\034\n\022MoveSubnetMetadata\022\006SubnetBV\n\027yandex." +
+      "cloud.api.vpc.v1Z;github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

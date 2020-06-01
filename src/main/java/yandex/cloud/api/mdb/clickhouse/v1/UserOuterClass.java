@@ -4810,6 +4810,31 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    boolean hasSkipUnavailableShards();
+    /**
+     * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    com.google.protobuf.BoolValue getSkipUnavailableShards();
+    /**
+     * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder();
+
+    /**
+     * <pre>
      * Whether query compilation is enabled.
      * </pre>
      *
@@ -7383,6 +7408,19 @@ public final class UserOuterClass {
 
               break;
             }
+            case 650: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (skipUnavailableShards_ != null) {
+                subBuilder = skipUnavailableShards_.toBuilder();
+              }
+              skipUnavailableShards_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(skipUnavailableShards_);
+                skipUnavailableShards_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8267,6 +8305,39 @@ public final class UserOuterClass {
      */
     public com.google.protobuf.Int64ValueOrBuilder getDistributedDdlTaskTimeoutOrBuilder() {
       return getDistributedDdlTaskTimeout();
+    }
+
+    public static final int SKIP_UNAVAILABLE_SHARDS_FIELD_NUMBER = 81;
+    private com.google.protobuf.BoolValue skipUnavailableShards_;
+    /**
+     * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    public boolean hasSkipUnavailableShards() {
+      return skipUnavailableShards_ != null;
+    }
+    /**
+     * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    public com.google.protobuf.BoolValue getSkipUnavailableShards() {
+      return skipUnavailableShards_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : skipUnavailableShards_;
+    }
+    /**
+     * <pre>
+     * Whether unavailable shards can be skipped.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder() {
+      return getSkipUnavailableShards();
     }
 
     public static final int COMPILE_FIELD_NUMBER = 44;
@@ -10590,6 +10661,9 @@ public final class UserOuterClass {
       if (emptyResultForAggregationByEmptySet_ != null) {
         output.writeMessage(79, getEmptyResultForAggregationByEmptySet());
       }
+      if (skipUnavailableShards_ != null) {
+        output.writeMessage(81, getSkipUnavailableShards());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10915,6 +10989,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(79, getEmptyResultForAggregationByEmptySet());
       }
+      if (skipUnavailableShards_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(81, getSkipUnavailableShards());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10996,6 +11074,11 @@ public final class UserOuterClass {
       if (hasDistributedDdlTaskTimeout()) {
         result = result && getDistributedDdlTaskTimeout()
             .equals(other.getDistributedDdlTaskTimeout());
+      }
+      result = result && (hasSkipUnavailableShards() == other.hasSkipUnavailableShards());
+      if (hasSkipUnavailableShards()) {
+        result = result && getSkipUnavailableShards()
+            .equals(other.getSkipUnavailableShards());
       }
       result = result && (hasCompile() == other.hasCompile());
       if (hasCompile()) {
@@ -11358,6 +11441,10 @@ public final class UserOuterClass {
       if (hasDistributedDdlTaskTimeout()) {
         hash = (37 * hash) + DISTRIBUTED_DDL_TASK_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getDistributedDdlTaskTimeout().hashCode();
+      }
+      if (hasSkipUnavailableShards()) {
+        hash = (37 * hash) + SKIP_UNAVAILABLE_SHARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSkipUnavailableShards().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -11823,6 +11910,12 @@ public final class UserOuterClass {
           distributedDdlTaskTimeout_ = null;
           distributedDdlTaskTimeoutBuilder_ = null;
         }
+        if (skipUnavailableShardsBuilder_ == null) {
+          skipUnavailableShards_ = null;
+        } else {
+          skipUnavailableShards_ = null;
+          skipUnavailableShardsBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -12277,6 +12370,11 @@ public final class UserOuterClass {
         } else {
           result.distributedDdlTaskTimeout_ = distributedDdlTaskTimeoutBuilder_.build();
         }
+        if (skipUnavailableShardsBuilder_ == null) {
+          result.skipUnavailableShards_ = skipUnavailableShards_;
+        } else {
+          result.skipUnavailableShards_ = skipUnavailableShardsBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -12663,6 +12761,9 @@ public final class UserOuterClass {
         }
         if (other.hasDistributedDdlTaskTimeout()) {
           mergeDistributedDdlTaskTimeout(other.getDistributedDdlTaskTimeout());
+        }
+        if (other.hasSkipUnavailableShards()) {
+          mergeSkipUnavailableShards(other.getSkipUnavailableShards());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -14999,6 +15100,159 @@ public final class UserOuterClass {
           distributedDdlTaskTimeout_ = null;
         }
         return distributedDdlTaskTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue skipUnavailableShards_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> skipUnavailableShardsBuilder_;
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public boolean hasSkipUnavailableShards() {
+        return skipUnavailableShardsBuilder_ != null || skipUnavailableShards_ != null;
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public com.google.protobuf.BoolValue getSkipUnavailableShards() {
+        if (skipUnavailableShardsBuilder_ == null) {
+          return skipUnavailableShards_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : skipUnavailableShards_;
+        } else {
+          return skipUnavailableShardsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public Builder setSkipUnavailableShards(com.google.protobuf.BoolValue value) {
+        if (skipUnavailableShardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          skipUnavailableShards_ = value;
+          onChanged();
+        } else {
+          skipUnavailableShardsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public Builder setSkipUnavailableShards(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (skipUnavailableShardsBuilder_ == null) {
+          skipUnavailableShards_ = builderForValue.build();
+          onChanged();
+        } else {
+          skipUnavailableShardsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public Builder mergeSkipUnavailableShards(com.google.protobuf.BoolValue value) {
+        if (skipUnavailableShardsBuilder_ == null) {
+          if (skipUnavailableShards_ != null) {
+            skipUnavailableShards_ =
+              com.google.protobuf.BoolValue.newBuilder(skipUnavailableShards_).mergeFrom(value).buildPartial();
+          } else {
+            skipUnavailableShards_ = value;
+          }
+          onChanged();
+        } else {
+          skipUnavailableShardsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public Builder clearSkipUnavailableShards() {
+        if (skipUnavailableShardsBuilder_ == null) {
+          skipUnavailableShards_ = null;
+          onChanged();
+        } else {
+          skipUnavailableShards_ = null;
+          skipUnavailableShardsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSkipUnavailableShardsBuilder() {
+        
+        onChanged();
+        return getSkipUnavailableShardsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSkipUnavailableShardsOrBuilder() {
+        if (skipUnavailableShardsBuilder_ != null) {
+          return skipUnavailableShardsBuilder_.getMessageOrBuilder();
+        } else {
+          return skipUnavailableShards_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : skipUnavailableShards_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether unavailable shards can be skipped.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSkipUnavailableShardsFieldBuilder() {
+        if (skipUnavailableShardsBuilder_ == null) {
+          skipUnavailableShardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSkipUnavailableShards(),
+                  getParentForChildren(),
+                  isClean());
+          skipUnavailableShards_ = null;
+        }
+        return skipUnavailableShardsBuilder_;
       }
 
       private com.google.protobuf.BoolValue compile_ = null;
@@ -26406,7 +26660,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\230/\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\325/\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.goo" +
@@ -26431,145 +26685,147 @@ public final class UserOuterClass {
       "\n(distributed_aggregation_memory_efficie" +
       "nt\030H \001(\0132\032.google.protobuf.BoolValue\022A\n\034" +
       "distributed_ddl_task_timeout\030I \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022+\n\007compile\030, \001(\013" +
-      "2\032.google.protobuf.BoolValue\022B\n\024min_coun" +
-      "t_to_compile\030- \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\003>=0\0227\n\023compile_expressions\030" +
-      ". \001(\0132\032.google.protobuf.BoolValue\022M\n\037min" +
-      "_count_to_compile_expression\030/ \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_" +
-      "block_size\030\t \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\006\372\3071\002>0\022H\n\032min_insert_block_size_r" +
-      "ows\0300 \001(\0132\033.google.protobuf.Int64ValueB\007" +
-      "\372\3071\003>=0\022I\n\033min_insert_block_size_bytes\0301" +
+      "gle.protobuf.Int64Value\022;\n\027skip_unavaila" +
+      "ble_shards\030Q \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022+\n\007compile\030, \001(\0132\032.google.protobuf." +
+      "BoolValue\022B\n\024min_count_to_compile\030- \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n" +
+      "\023compile_expressions\030. \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022M\n\037min_count_to_compile_e" +
+      "xpression\030/ \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022;\n\016max_block_size\030\t \001(\0132\033." +
+      "google.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032mi" +
+      "n_insert_block_size_rows\0300 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022I\n\033min_inse" +
+      "rt_block_size_bytes\0301 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022B\n\025max_insert_bl" +
+      "ock_size\030\n \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\006\372\3071\002>0\022H\n\032min_bytes_to_use_direct_i" +
+      "o\0302 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022:\n\026use_uncompressed_cache\0303 \001(\0132\032." +
+      "google.protobuf.BoolValue\022M\n merge_tree_" +
+      "max_rows_to_use_cache\0304 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\006\372\3071\002>0\022N\n!merge_tree_m" +
+      "ax_bytes_to_use_cache\0305 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\006\372\3071\002>0\022T\n\'merge_tree_m" +
+      "in_rows_for_concurrent_read\0306 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\006\372\3071\002>0\022U\n(merge_" +
+      "tree_min_bytes_for_concurrent_read\0307 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022G\n" +
+      "\"max_bytes_before_external_group_by\030J \001(" +
+      "\0132\033.google.protobuf.Int64Value\022C\n\036max_by" +
+      "tes_before_external_sort\030K \001(\0132\033.google." +
+      "protobuf.Int64Value\022A\n\034group_by_two_leve" +
+      "l_threshold\030L \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022G\n\"group_by_two_level_threshold_b" +
+      "ytes\030M \001(\0132\033.google.protobuf.Int64Value\022" +
+      "6\n\010priority\0308 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\0228\n\013max_threads\030\010 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022>\n\020max" +
+      "_memory_usage\030\013 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022G\n\031max_memory_usage_fo" +
+      "r_user\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022:\n\025max_network_bandwidth\0309 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022C\n\036max_ne" +
+      "twork_bandwidth_for_user\030: \001(\0132\033.google." +
+      "protobuf.Int64Value\0227\n\023force_index_by_da" +
+      "te\030; \001(\0132\032.google.protobuf.BoolValue\0225\n\021" +
+      "force_primary_key\030< \001(\0132\032.google.protobu" +
+      "f.BoolValue\022>\n\020max_rows_to_read\030\r \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021m" +
+      "ax_bytes_to_read\030\016 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022U\n\022read_overflow_mo" +
+      "de\030\017 \001(\01629.yandex.cloud.mdb.clickhouse.v" +
+      "1.UserSettings.OverflowMode\022B\n\024max_rows_" +
+      "to_group_by\030\020 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022`\n\026group_by_overflow_mod" +
+      "e\030\021 \001(\0162@.yandex.cloud.mdb.clickhouse.v1" +
+      ".UserSettings.GroupByOverflowMode\022>\n\020max" +
+      "_rows_to_sort\030\022 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_sort\030\023" +
       " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
-      "=0\022B\n\025max_insert_block_size\030\n \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032min_by" +
-      "tes_to_use_direct_io\0302 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022:\n\026use_uncompre" +
-      "ssed_cache\0303 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022M\n merge_tree_max_rows_to_use_cache" +
-      "\0304 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
-      "\002>0\022N\n!merge_tree_max_bytes_to_use_cache" +
-      "\0305 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
-      "\002>0\022T\n\'merge_tree_min_rows_for_concurren" +
-      "t_read\0306 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022U\n(merge_tree_min_bytes_for_co" +
-      "ncurrent_read\0307 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\006\372\3071\002>0\022G\n\"max_bytes_before_ext" +
-      "ernal_group_by\030J \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022C\n\036max_bytes_before_external_s" +
-      "ort\030K \001(\0132\033.google.protobuf.Int64Value\022A" +
-      "\n\034group_by_two_level_threshold\030L \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022G\n\"group_by_tw" +
-      "o_level_threshold_bytes\030M \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0226\n\010priority\0308 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\013ma" +
-      "x_threads\030\010 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\006\372\3071\002>0\022>\n\020max_memory_usage\030\013 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022G\n\031" +
-      "max_memory_usage_for_user\030\014 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\007\372\3071\003>=0\022:\n\025max_net" +
-      "work_bandwidth\0309 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022C\n\036max_network_bandwidth_for_u" +
-      "ser\030: \001(\0132\033.google.protobuf.Int64Value\0227" +
-      "\n\023force_index_by_date\030; \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\0225\n\021force_primary_key\030< \001" +
-      "(\0132\032.google.protobuf.BoolValue\022>\n\020max_ro" +
-      "ws_to_read\030\r \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030\016 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "U\n\022read_overflow_mode\030\017 \001(\01629.yandex.clo" +
-      "ud.mdb.clickhouse.v1.UserSettings.Overfl" +
-      "owMode\022B\n\024max_rows_to_group_by\030\020 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n\026gr" +
-      "oup_by_overflow_mode\030\021 \001(\0162@.yandex.clou" +
-      "d.mdb.clickhouse.v1.UserSettings.GroupBy" +
-      "OverflowMode\022>\n\020max_rows_to_sort\030\022 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021" +
-      "max_bytes_to_sort\030\023 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\007\372\3071\003>=0\022U\n\022sort_overflow_m" +
-      "ode\030\024 \001(\01629.yandex.cloud.mdb.clickhouse." +
-      "v1.UserSettings.OverflowMode\022=\n\017max_resu" +
-      "lt_rows\030\025 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n\024r" +
-      "esult_overflow_mode\030\027 \001(\01629.yandex.cloud" +
-      ".mdb.clickhouse.v1.UserSettings.Overflow" +
-      "Mode\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_" +
-      "bytes_in_distinct\030\031 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\007\372\3071\003>=0\022Y\n\026distinct_overfl" +
-      "ow_mode\030\032 \001(\01629.yandex.cloud.mdb.clickho" +
-      "use.v1.UserSettings.OverflowMode\022B\n\024max_" +
-      "rows_to_transfer\030\033 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to_tra" +
-      "nsfer\030\034 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022Y\n\026transfer_overflow_mode\030\035 \001(" +
-      "\01629.yandex.cloud.mdb.clickhouse.v1.UserS" +
-      "ettings.OverflowMode\022@\n\022max_execution_ti" +
-      "me\030\036 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022X\n\025timeout_overflow_mode\030\037 \001(\01629." +
-      "yandex.cloud.mdb.clickhouse.v1.UserSetti" +
-      "ngs.OverflowMode\022A\n\023max_columns_to_read\030" +
-      "  \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\022C\n\025max_temporary_columns\030! \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037max_" +
-      "temporary_non_const_columns\030\" \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_q" +
-      "uery_size\030# \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020max_" +
-      "ast_elements\030% \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\006\372\3071\002>0\022F\n\031max_expanded_ast_elem" +
-      "ents\030& \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\006\372\3071\002>0\022M\n)input_format_values_interpret" +
-      "_expressions\030= \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022L\n(input_format_defaults_for_omit" +
-      "ted_fields\030> \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022K\n\'output_format_json_quote_64bit_i" +
-      "ntegers\030? \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022F\n\"output_format_json_quote_denormals\030" +
-      "@ \001(\0132\032.google.protobuf.BoolValue\022J\n&low" +
-      "_cardinality_allow_in_native_format\030N \001(" +
-      "\0132\032.google.protobuf.BoolValue\022M\n)empty_r" +
-      "esult_for_aggregation_by_empty_set\030O \001(\013" +
-      "2\032.google.protobuf.BoolValue\022<\n\027http_con" +
-      "nection_timeout\030A \001(\0132\033.google.protobuf." +
-      "Int64Value\0229\n\024http_receive_timeout\030B \001(\013" +
-      "2\033.google.protobuf.Int64Value\0226\n\021http_se" +
-      "nd_timeout\030C \001(\0132\033.google.protobuf.Int64" +
-      "Value\022;\n\027enable_http_compression\030D \001(\0132\032" +
-      ".google.protobuf.BoolValue\022A\n\035send_progr" +
-      "ess_in_http_headers\030E \001(\0132\032.google.proto" +
-      "buf.BoolValue\022C\n\036http_headers_progress_i" +
-      "nterval\030F \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0228\n\024add_http_cors_header\030G \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\"_\n\014OverflowMode\022\035\n\031" +
-      "OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_" +
-      "MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001" +
-      "\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OVERFL" +
-      "OW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFL" +
-      "OW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MOD" +
-      "E_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020" +
-      "\003\"\322\001\n\026DistributedProductMode\022(\n$DISTRIBU" +
-      "TED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRI" +
-      "BUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED" +
-      "_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRO" +
-      "DUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUC" +
-      "T_MODE_ALLOW\020\004\"\356\002\n\tUserQuota\022B\n\021interval" +
-      "_duration\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006error" +
-      "s\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 " +
+      "=0\022U\n\022sort_overflow_mode\030\024 \001(\01629.yandex." +
+      "cloud.mdb.clickhouse.v1.UserSettings.Ove" +
+      "rflowMode\022=\n\017max_result_rows\030\025 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022>\n\020max_" +
+      "result_bytes\030\026 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022W\n\024result_overflow_mode" +
+      "\030\027 \001(\01629.yandex.cloud.mdb.clickhouse.v1." +
+      "UserSettings.OverflowMode\022B\n\024max_rows_in" +
+      "_distinct\030\030 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022C\n\025max_bytes_in_distinct\030\031" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
+      "=0\022Y\n\026distinct_overflow_mode\030\032 \001(\01629.yan" +
+      "dex.cloud.mdb.clickhouse.v1.UserSettings" +
+      ".OverflowMode\022B\n\024max_rows_to_transfer\030\033 " +
       "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022<\n\016execution_time\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud." +
-      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
-      "khouse/v1;clickhouseb\006proto3"
+      "0\022C\n\025max_bytes_to_transfer\030\034 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022Y\n\026transf" +
+      "er_overflow_mode\030\035 \001(\01629.yandex.cloud.md" +
+      "b.clickhouse.v1.UserSettings.OverflowMod" +
+      "e\022@\n\022max_execution_time\030\036 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022X\n\025timeout_o" +
+      "verflow_mode\030\037 \001(\01629.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.UserSettings.OverflowMode\022A\n" +
+      "\023max_columns_to_read\030  \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_temporar" +
+      "y_columns\030! \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022M\n\037max_temporary_non_const" +
+      "_columns\030\" \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\022;\n\016max_query_size\030# \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022:\n\rmax" +
+      "_ast_depth\030$ \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\006\372\3071\002>0\022=\n\020max_ast_elements\030% \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022F\n\031" +
+      "max_expanded_ast_elements\030& \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\006\372\3071\002>0\022M\n)input_fo" +
+      "rmat_values_interpret_expressions\030= \001(\0132" +
+      "\032.google.protobuf.BoolValue\022L\n(input_for" +
+      "mat_defaults_for_omitted_fields\030> \001(\0132\032." +
+      "google.protobuf.BoolValue\022K\n\'output_form" +
+      "at_json_quote_64bit_integers\030? \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022F\n\"output_format_" +
+      "json_quote_denormals\030@ \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022J\n&low_cardinality_allow_" +
+      "in_native_format\030N \001(\0132\032.google.protobuf" +
+      ".BoolValue\022M\n)empty_result_for_aggregati" +
+      "on_by_empty_set\030O \001(\0132\032.google.protobuf." +
+      "BoolValue\022<\n\027http_connection_timeout\030A \001" +
+      "(\0132\033.google.protobuf.Int64Value\0229\n\024http_" +
+      "receive_timeout\030B \001(\0132\033.google.protobuf." +
+      "Int64Value\0226\n\021http_send_timeout\030C \001(\0132\033." +
+      "google.protobuf.Int64Value\022;\n\027enable_htt" +
+      "p_compression\030D \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022A\n\035send_progress_in_http_headers" +
+      "\030E \001(\0132\032.google.protobuf.BoolValue\022C\n\036ht" +
+      "tp_headers_progress_interval\030F \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0228\n\024add_http_cors" +
+      "_header\030G \001(\0132\032.google.protobuf.BoolValu" +
+      "e\"_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPE" +
+      "CIFIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVE" +
+      "RFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMo" +
+      "de\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED" +
+      "\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034" +
+      "GROUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_" +
+      "BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedPr" +
+      "oductMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UN" +
+      "SPECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_" +
+      "DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL" +
+      "\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022" +
+      "\"\n\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"\356\002\n\t" +
+      "UserQuota\022B\n\021interval_duration\030\001 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n" +
+      "\007queries\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_row" +
+      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time" +
+      "\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0Bs\n\"yandex.cloud.api.mdb.clickhouse." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26608,7 +26864,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

@@ -8354,6 +8354,2368 @@ public final class TriggerServiceOuterClass {
 
   }
 
+  public interface PauseTriggerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.PauseTriggerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getTriggerId();
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getTriggerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.PauseTriggerRequest}
+   */
+  public  static final class PauseTriggerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.PauseTriggerRequest)
+      PauseTriggerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PauseTriggerRequest.newBuilder() to construct.
+    private PauseTriggerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PauseTriggerRequest() {
+      triggerId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PauseTriggerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              triggerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.Builder.class);
+    }
+
+    public static final int TRIGGER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object triggerId_;
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getTriggerId() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        triggerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getTriggerIdBytes() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        triggerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTriggerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, triggerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTriggerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, triggerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest other = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest) obj;
+
+      boolean result = true;
+      result = result && getTriggerId()
+          .equals(other.getTriggerId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRIGGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTriggerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.PauseTriggerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.PauseTriggerRequest)
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        triggerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest result = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest(this);
+        result.triggerId_ = triggerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.getDefaultInstance()) return this;
+        if (!other.getTriggerId().isEmpty()) {
+          triggerId_ = other.triggerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object triggerId_ = "";
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getTriggerId() {
+        java.lang.Object ref = triggerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          triggerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getTriggerIdBytes() {
+        java.lang.Object ref = triggerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          triggerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTriggerId() {
+        
+        triggerId_ = getDefaultInstance().getTriggerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.PauseTriggerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.PauseTriggerRequest)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PauseTriggerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PauseTriggerRequest>() {
+      @java.lang.Override
+      public PauseTriggerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PauseTriggerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PauseTriggerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PauseTriggerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PauseTriggerMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getTriggerId();
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getTriggerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata}
+   */
+  public  static final class PauseTriggerMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata)
+      PauseTriggerMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PauseTriggerMetadata.newBuilder() to construct.
+    private PauseTriggerMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PauseTriggerMetadata() {
+      triggerId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PauseTriggerMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              triggerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.Builder.class);
+    }
+
+    public static final int TRIGGER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object triggerId_;
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getTriggerId() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        triggerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getTriggerIdBytes() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        triggerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTriggerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, triggerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTriggerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, triggerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata other = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata) obj;
+
+      boolean result = true;
+      result = result && getTriggerId()
+          .equals(other.getTriggerId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRIGGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTriggerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata)
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        triggerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata result = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata(this);
+        result.triggerId_ = triggerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata.getDefaultInstance()) return this;
+        if (!other.getTriggerId().isEmpty()) {
+          triggerId_ = other.triggerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object triggerId_ = "";
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getTriggerId() {
+        java.lang.Object ref = triggerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          triggerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getTriggerIdBytes() {
+        java.lang.Object ref = triggerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          triggerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTriggerId() {
+        
+        triggerId_ = getDefaultInstance().getTriggerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.PauseTriggerMetadata)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PauseTriggerMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<PauseTriggerMetadata>() {
+      @java.lang.Override
+      public PauseTriggerMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PauseTriggerMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PauseTriggerMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PauseTriggerMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResumeTriggerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getTriggerId();
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getTriggerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest}
+   */
+  public  static final class ResumeTriggerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest)
+      ResumeTriggerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResumeTriggerRequest.newBuilder() to construct.
+    private ResumeTriggerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResumeTriggerRequest() {
+      triggerId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResumeTriggerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              triggerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.Builder.class);
+    }
+
+    public static final int TRIGGER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object triggerId_;
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getTriggerId() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        triggerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trigger to pause
+     * To get a trigger ID make a [TriggerService.List] request.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getTriggerIdBytes() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        triggerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTriggerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, triggerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTriggerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, triggerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest other = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest) obj;
+
+      boolean result = true;
+      result = result && getTriggerId()
+          .equals(other.getTriggerId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRIGGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTriggerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest)
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        triggerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest result = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest(this);
+        result.triggerId_ = triggerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.getDefaultInstance()) return this;
+        if (!other.getTriggerId().isEmpty()) {
+          triggerId_ = other.triggerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object triggerId_ = "";
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getTriggerId() {
+        java.lang.Object ref = triggerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          triggerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getTriggerIdBytes() {
+        java.lang.Object ref = triggerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          triggerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTriggerId() {
+        
+        triggerId_ = getDefaultInstance().getTriggerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger to pause
+       * To get a trigger ID make a [TriggerService.List] request.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.ResumeTriggerRequest)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResumeTriggerRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ResumeTriggerRequest>() {
+      @java.lang.Override
+      public ResumeTriggerRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResumeTriggerRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResumeTriggerRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResumeTriggerRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResumeTriggerMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getTriggerId();
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getTriggerIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata}
+   */
+  public  static final class ResumeTriggerMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata)
+      ResumeTriggerMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResumeTriggerMetadata.newBuilder() to construct.
+    private ResumeTriggerMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResumeTriggerMetadata() {
+      triggerId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResumeTriggerMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              triggerId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.Builder.class);
+    }
+
+    public static final int TRIGGER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object triggerId_;
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getTriggerId() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        triggerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the trigger that is being paused.
+     * </pre>
+     *
+     * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getTriggerIdBytes() {
+      java.lang.Object ref = triggerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        triggerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTriggerIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, triggerId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTriggerIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, triggerId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata other = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata) obj;
+
+      boolean result = true;
+      result = result && getTriggerId()
+          .equals(other.getTriggerId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRIGGER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTriggerId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata)
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.class, yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        triggerId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata result = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata(this);
+        result.triggerId_ = triggerId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata.getDefaultInstance()) return this;
+        if (!other.getTriggerId().isEmpty()) {
+          triggerId_ = other.triggerId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object triggerId_ = "";
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getTriggerId() {
+        java.lang.Object ref = triggerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          triggerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getTriggerIdBytes() {
+        java.lang.Object ref = triggerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          triggerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTriggerId() {
+        
+        triggerId_ = getDefaultInstance().getTriggerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the trigger that is being paused.
+       * </pre>
+       *
+       * <code>string trigger_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTriggerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        triggerId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.ResumeTriggerMetadata)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResumeTriggerMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ResumeTriggerMetadata>() {
+      @java.lang.Override
+      public ResumeTriggerMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResumeTriggerMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResumeTriggerMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResumeTriggerMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListTriggerOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.ListTriggerOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -10601,6 +12963,26 @@ public final class TriggerServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_triggers_v1_DeleteTriggerMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10658,13 +13040,18 @@ public final class TriggerServiceOuterClass {
       "ger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024DeleteTriggerReque" +
       "st\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025DeleteTr" +
       "iggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"" +
+      "/\n\023PauseTriggerRequest\022\030\n\ntrigger_id\030\001 \001" +
+      "(\tB\004\350\3071\001\"0\n\024PauseTriggerMetadata\022\030\n\ntrig" +
+      "ger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024ResumeTriggerReque" +
+      "st\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025ResumeTr" +
+      "iggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"" +
       "\222\001\n\034ListTriggerOperationsRequest\022\030\n\ntrig" +
       "ger_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
       "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
       "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListTrig" +
       "gerOperationsResponse\0225\n\noperations\030\001 \003(" +
       "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t2\312\010\n\016TriggerService" +
+      "next_page_token\030\002 \001(\t2\314\013\n\016TriggerService" +
       "\022\227\001\n\003Get\0226.yandex.cloud.serverless.trigg" +
       "ers.v1.GetTriggerRequest\032,.yandex.cloud." +
       "serverless.triggers.v1.Trigger\"*\202\323\344\223\002$\022\"" +
@@ -10686,16 +13073,26 @@ public final class TriggerServiceOuterClass {
       ".v1.DeleteTriggerRequest\032!.yandex.cloud." +
       "operation.Operation\"\\\202\323\344\223\002$*\"/triggers/v" +
       "1/triggers/{trigger_id}\262\322*.\n\025DeleteTrigg" +
-      "erMetadata\022\025google.protobuf.Empty\022\316\001\n\016Li" +
-      "stOperations\022A.yandex.cloud.serverless.t" +
-      "riggers.v1.ListTriggerOperationsRequest\032" +
-      "B.yandex.cloud.serverless.triggers.v1.Li" +
-      "stTriggerOperationsResponse\"5\202\323\344\223\002/\022-/tr" +
-      "iggers/v1/triggers/{trigger_id}/operatio" +
-      "nsB{\n\'yandex.cloud.api.serverless.trigge" +
-      "rs.v1ZPgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/serverless/triggers/v1;t" +
-      "riggersb\006proto3"
+      "erMetadata\022\025google.protobuf.Empty\022\274\001\n\005Pa" +
+      "use\0228.yandex.cloud.serverless.triggers.v" +
+      "1.PauseTriggerRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"V\202\323\344\223\002-\"(/triggers/v1/t" +
+      "riggers/{trigger_id}:pause:\001*\262\322*\037\n\024Pause" +
+      "TriggerMetadata\022\007Trigger\022\300\001\n\006Resume\0229.ya" +
+      "ndex.cloud.serverless.triggers.v1.Resume" +
+      "TriggerRequest\032!.yandex.cloud.operation." +
+      "Operation\"X\202\323\344\223\002.\")/triggers/v1/triggers" +
+      "/{trigger_id}:resume:\001*\262\322* \n\025ResumeTrigg" +
+      "erMetadata\022\007Trigger\022\316\001\n\016ListOperations\022A" +
+      ".yandex.cloud.serverless.triggers.v1.Lis" +
+      "tTriggerOperationsRequest\032B.yandex.cloud" +
+      ".serverless.triggers.v1.ListTriggerOpera" +
+      "tionsResponse\"5\202\323\344\223\002/\022-/triggers/v1/trig" +
+      "gers/{trigger_id}/operationsB{\n\'yandex.c" +
+      "loud.api.serverless.triggers.v1ZPgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/serverless/triggers/v1;triggersb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10781,14 +13178,38 @@ public final class TriggerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DeleteTriggerMetadata_descriptor,
         new java.lang.String[] { "TriggerId", });
-    internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsRequest_descriptor =
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerRequest_descriptor,
+        new java.lang.String[] { "TriggerId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_PauseTriggerMetadata_descriptor,
+        new java.lang.String[] { "TriggerId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerRequest_descriptor,
+        new java.lang.String[] { "TriggerId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_ResumeTriggerMetadata_descriptor,
+        new java.lang.String[] { "TriggerId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsRequest_descriptor,
         new java.lang.String[] { "TriggerId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_ListTriggerOperationsResponse_descriptor,

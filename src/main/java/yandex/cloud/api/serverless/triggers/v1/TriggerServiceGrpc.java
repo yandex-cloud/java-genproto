@@ -190,6 +190,70 @@ public final class TriggerServiceGrpc {
      return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Pause",
+      requestType = yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod;
+    if ((getPauseMethod = TriggerServiceGrpc.getPauseMethod) == null) {
+      synchronized (TriggerServiceGrpc.class) {
+        if ((getPauseMethod = TriggerServiceGrpc.getPauseMethod) == null) {
+          TriggerServiceGrpc.getPauseMethod = getPauseMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Pause"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Pause"))
+                  .build();
+          }
+        }
+     }
+     return getPauseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Resume",
+      requestType = yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
+    if ((getResumeMethod = TriggerServiceGrpc.getResumeMethod) == null) {
+      synchronized (TriggerServiceGrpc.class) {
+        if ((getResumeMethod = TriggerServiceGrpc.getResumeMethod) == null) {
+          TriggerServiceGrpc.getResumeMethod = getResumeMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.triggers.v1.TriggerService", "Resume"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new TriggerServiceMethodDescriptorSupplier("Resume"))
+                  .build();
+          }
+        }
+     }
+     return getResumeMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsRequest,
       yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ListTriggerOperationsResponse> getListOperationsMethod;
 
@@ -305,6 +369,26 @@ public final class TriggerServiceGrpc {
 
     /**
      * <pre>
+     * Pauses the specified trigger.
+     * </pre>
+     */
+    public void pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getPauseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restarts the specified trigger.
+     * </pre>
+     */
+    public void resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getResumeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified trigger.
      * </pre>
      */
@@ -350,6 +434,20 @@ public final class TriggerServiceGrpc {
                 yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getPauseMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_PAUSE)))
+          .addMethod(
+            getResumeMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESUME)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
@@ -440,6 +538,28 @@ public final class TriggerServiceGrpc {
 
     /**
      * <pre>
+     * Pauses the specified trigger.
+     * </pre>
+     */
+    public void pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getPauseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restarts the specified trigger.
+     * </pre>
+     */
+    public void resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getResumeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified trigger.
      * </pre>
      */
@@ -520,6 +640,26 @@ public final class TriggerServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Pauses the specified trigger.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation pause(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getPauseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Restarts the specified trigger.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation resume(yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getResumeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -612,6 +752,28 @@ public final class TriggerServiceGrpc {
 
     /**
      * <pre>
+     * Pauses the specified trigger.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pause(
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getPauseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Restarts the specified trigger.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resume(
+        yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getResumeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified trigger.
      * </pre>
      */
@@ -627,7 +789,9 @@ public final class TriggerServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_OPERATIONS = 5;
+  private static final int METHODID_PAUSE = 5;
+  private static final int METHODID_RESUME = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -664,6 +828,14 @@ public final class TriggerServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.DeleteTriggerRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_PAUSE:
+          serviceImpl.pause((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.PauseTriggerRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESUME:
+          serviceImpl.resume((yandex.cloud.api.serverless.triggers.v1.TriggerServiceOuterClass.ResumeTriggerRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -736,6 +908,8 @@ public final class TriggerServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getPauseMethod())
+              .addMethod(getResumeMethod())
               .addMethod(getListOperationsMethod())
               .build();
         }

@@ -4864,7 +4864,7 @@ public final class KeyServiceOuterClass {
     /**
      * <pre>
      * ID of the Key resource to update.
-     * To get key pair ID, use a [Service.List] request.
+     * To get key pair ID, use a [KeyService.List] request.
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4873,7 +4873,7 @@ public final class KeyServiceOuterClass {
     /**
      * <pre>
      * ID of the Key resource to update.
-     * To get key pair ID, use a [Service.List] request.
+     * To get key pair ID, use a [KeyService.List] request.
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5027,7 +5027,7 @@ public final class KeyServiceOuterClass {
     /**
      * <pre>
      * ID of the Key resource to update.
-     * To get key pair ID, use a [Service.List] request.
+     * To get key pair ID, use a [KeyService.List] request.
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5047,7 +5047,7 @@ public final class KeyServiceOuterClass {
     /**
      * <pre>
      * ID of the Key resource to update.
-     * To get key pair ID, use a [Service.List] request.
+     * To get key pair ID, use a [KeyService.List] request.
      * </pre>
      *
      * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5495,7 +5495,7 @@ public final class KeyServiceOuterClass {
       /**
        * <pre>
        * ID of the Key resource to update.
-       * To get key pair ID, use a [Service.List] request.
+       * To get key pair ID, use a [KeyService.List] request.
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5515,7 +5515,7 @@ public final class KeyServiceOuterClass {
       /**
        * <pre>
        * ID of the Key resource to update.
-       * To get key pair ID, use a [Service.List] request.
+       * To get key pair ID, use a [KeyService.List] request.
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5536,7 +5536,7 @@ public final class KeyServiceOuterClass {
       /**
        * <pre>
        * ID of the Key resource to update.
-       * To get key pair ID, use a [Service.List] request.
+       * To get key pair ID, use a [KeyService.List] request.
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5554,7 +5554,7 @@ public final class KeyServiceOuterClass {
       /**
        * <pre>
        * ID of the Key resource to update.
-       * To get key pair ID, use a [Service.List] request.
+       * To get key pair ID, use a [KeyService.List] request.
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5568,7 +5568,7 @@ public final class KeyServiceOuterClass {
       /**
        * <pre>
        * ID of the Key resource to update.
-       * To get key pair ID, use a [Service.List] request.
+       * To get key pair ID, use a [KeyService.List] request.
        * </pre>
        *
        * <code>string key_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>

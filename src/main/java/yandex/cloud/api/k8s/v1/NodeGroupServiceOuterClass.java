@@ -2854,7 +2854,7 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set `page_token` to the
-     * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+     * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2863,7 +2863,7 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set `page_token` to the
-     * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+     * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3028,7 +3028,7 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set `page_token` to the
-     * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+     * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3048,7 +3048,7 @@ public final class NodeGroupServiceOuterClass {
     /**
      * <pre>
      * Page token. To get the next page of results, set `page_token` to the
-     * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+     * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3553,7 +3553,7 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set `page_token` to the
-       * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+       * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3573,7 +3573,7 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set `page_token` to the
-       * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+       * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3594,7 +3594,7 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set `page_token` to the
-       * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+       * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3612,7 +3612,7 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set `page_token` to the
-       * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+       * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -3626,7 +3626,7 @@ public final class NodeGroupServiceOuterClass {
       /**
        * <pre>
        * Page token. To get the next page of results, set `page_token` to the
-       * [ListNodeGroupNodessResponse.next_page_token] returned by a previous list request.
+       * [ListNodeGroupNodesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>

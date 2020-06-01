@@ -15761,6 +15761,31 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    boolean hasRecoveryTargetSpec();
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getRecoveryTargetSpec();
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder getRecoveryTargetSpecOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest}
@@ -15879,6 +15904,19 @@ public final class ClusterServiceOuterClass {
               folderId_ = s;
               break;
             }
+            case 82: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder subBuilder = null;
+              if (recoveryTargetSpec_ != null) {
+                subBuilder = recoveryTargetSpec_.toBuilder();
+              }
+              recoveryTargetSpec_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recoveryTargetSpec_);
+                recoveryTargetSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15924,6 +15962,503 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.Builder.class);
+    }
+
+    public interface RecoveryTargetSpecOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Timestamp of the recovery target
+       * </pre>
+       *
+       * <code>int64 timestamp = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      long getTimestamp();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec}
+     */
+    public  static final class RecoveryTargetSpec extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec)
+        RecoveryTargetSpecOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RecoveryTargetSpec.newBuilder() to construct.
+      private RecoveryTargetSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RecoveryTargetSpec() {
+        timestamp_ = 0L;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RecoveryTargetSpec(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                timestamp_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder.class);
+      }
+
+      public static final int TIMESTAMP_FIELD_NUMBER = 1;
+      private long timestamp_;
+      /**
+       * <pre>
+       * Timestamp of the recovery target
+       * </pre>
+       *
+       * <code>int64 timestamp = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public long getTimestamp() {
+        return timestamp_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (timestamp_ != 0L) {
+          output.writeInt64(1, timestamp_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (timestamp_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, timestamp_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec other = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec) obj;
+
+        boolean result = true;
+        result = result && (getTimestamp()
+            == other.getTimestamp());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTimestamp());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          timestamp_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec result = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec(this);
+          result.timestamp_ = timestamp_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.getDefaultInstance()) return this;
+          if (other.getTimestamp() != 0L) {
+            setTimestamp(other.getTimestamp());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long timestamp_ ;
+        /**
+         * <pre>
+         * Timestamp of the recovery target
+         * </pre>
+         *
+         * <code>int64 timestamp = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public long getTimestamp() {
+          return timestamp_;
+        }
+        /**
+         * <pre>
+         * Timestamp of the recovery target
+         * </pre>
+         *
+         * <code>int64 timestamp = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setTimestamp(long value) {
+          
+          timestamp_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Timestamp of the recovery target
+         * </pre>
+         *
+         * <code>int64 timestamp = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder clearTimestamp() {
+          
+          timestamp_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RecoveryTargetSpec>
+          PARSER = new com.google.protobuf.AbstractParser<RecoveryTargetSpec>() {
+        @java.lang.Override
+        public RecoveryTargetSpec parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RecoveryTargetSpec(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RecoveryTargetSpec> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RecoveryTargetSpec> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int bitField0_;
@@ -16353,6 +16888,39 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int RECOVERY_TARGET_SPEC_FIELD_NUMBER = 10;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec recoveryTargetSpec_;
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    public boolean hasRecoveryTargetSpec() {
+      return recoveryTargetSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getRecoveryTargetSpec() {
+      return recoveryTargetSpec_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.getDefaultInstance() : recoveryTargetSpec_;
+    }
+    /**
+     * <pre>
+     * Specification of the moment to which the MongoDB cluster should be restored.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder getRecoveryTargetSpecOrBuilder() {
+      return getRecoveryTargetSpec();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16396,6 +16964,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getFolderIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, folderId_);
+      }
+      if (recoveryTargetSpec_ != null) {
+        output.writeMessage(10, getRecoveryTargetSpec());
       }
       unknownFields.writeTo(output);
     }
@@ -16443,6 +17014,10 @@ public final class ClusterServiceOuterClass {
       if (!getFolderIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, folderId_);
       }
+      if (recoveryTargetSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getRecoveryTargetSpec());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16479,6 +17054,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getNetworkId());
       result = result && getFolderId()
           .equals(other.getFolderId());
+      result = result && (hasRecoveryTargetSpec() == other.hasRecoveryTargetSpec());
+      if (hasRecoveryTargetSpec()) {
+        result = result && getRecoveryTargetSpec()
+            .equals(other.getRecoveryTargetSpec());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -16514,6 +17094,10 @@ public final class ClusterServiceOuterClass {
       hash = (53 * hash) + getNetworkId().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      if (hasRecoveryTargetSpec()) {
+        hash = (37 * hash) + RECOVERY_TARGET_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getRecoveryTargetSpec().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16695,6 +17279,12 @@ public final class ClusterServiceOuterClass {
 
         folderId_ = "";
 
+        if (recoveryTargetSpecBuilder_ == null) {
+          recoveryTargetSpec_ = null;
+        } else {
+          recoveryTargetSpec_ = null;
+          recoveryTargetSpecBuilder_ = null;
+        }
         return this;
       }
 
@@ -16745,6 +17335,11 @@ public final class ClusterServiceOuterClass {
         }
         result.networkId_ = networkId_;
         result.folderId_ = folderId_;
+        if (recoveryTargetSpecBuilder_ == null) {
+          result.recoveryTargetSpec_ = recoveryTargetSpec_;
+        } else {
+          result.recoveryTargetSpec_ = recoveryTargetSpecBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -16847,6 +17442,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
+        }
+        if (other.hasRecoveryTargetSpec()) {
+          mergeRecoveryTargetSpec(other.getRecoveryTargetSpec());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18032,6 +18630,159 @@ public final class ClusterServiceOuterClass {
         folderId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec recoveryTargetSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder> recoveryTargetSpecBuilder_;
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public boolean hasRecoveryTargetSpec() {
+        return recoveryTargetSpecBuilder_ != null || recoveryTargetSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec getRecoveryTargetSpec() {
+        if (recoveryTargetSpecBuilder_ == null) {
+          return recoveryTargetSpec_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.getDefaultInstance() : recoveryTargetSpec_;
+        } else {
+          return recoveryTargetSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public Builder setRecoveryTargetSpec(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec value) {
+        if (recoveryTargetSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recoveryTargetSpec_ = value;
+          onChanged();
+        } else {
+          recoveryTargetSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public Builder setRecoveryTargetSpec(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder builderForValue) {
+        if (recoveryTargetSpecBuilder_ == null) {
+          recoveryTargetSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          recoveryTargetSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public Builder mergeRecoveryTargetSpec(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec value) {
+        if (recoveryTargetSpecBuilder_ == null) {
+          if (recoveryTargetSpec_ != null) {
+            recoveryTargetSpec_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.newBuilder(recoveryTargetSpec_).mergeFrom(value).buildPartial();
+          } else {
+            recoveryTargetSpec_ = value;
+          }
+          onChanged();
+        } else {
+          recoveryTargetSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public Builder clearRecoveryTargetSpec() {
+        if (recoveryTargetSpecBuilder_ == null) {
+          recoveryTargetSpec_ = null;
+          onChanged();
+        } else {
+          recoveryTargetSpec_ = null;
+          recoveryTargetSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder getRecoveryTargetSpecBuilder() {
+        
+        onChanged();
+        return getRecoveryTargetSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder getRecoveryTargetSpecOrBuilder() {
+        if (recoveryTargetSpecBuilder_ != null) {
+          return recoveryTargetSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return recoveryTargetSpec_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.getDefaultInstance() : recoveryTargetSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Specification of the moment to which the MongoDB cluster should be restored.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RestoreClusterRequest.RecoveryTargetSpec recovery_target_spec = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder> 
+          getRecoveryTargetSpecFieldBuilder() {
+        if (recoveryTargetSpecBuilder_ == null) {
+          recoveryTargetSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpec.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest.RecoveryTargetSpecOrBuilder>(
+                  getRecoveryTargetSpec(),
+                  getParentForChildren(),
+                  isClean());
+          recoveryTargetSpec_ = null;
+        }
+        return recoveryTargetSpecBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -62376,6 +63127,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -62678,7 +63434,7 @@ public final class ClusterServiceOuterClass {
       "urce_folder_id\030\002 \001(\t\022\035\n\025destination_fold" +
       "er_id\030\003 \001(\t\"8\n\024BackupClusterRequest\022 \n\nc" +
       "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\322\004\n\025R" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\350\005\n\025R" +
       "estoreClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB" +
       "\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
       "zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
@@ -62692,286 +63448,289 @@ public final class ClusterServiceOuterClass {
       "nfigSpecB\004\350\3071\001\022A\n\nhost_specs\030\007 \003(\0132%.yan" +
       "dex.cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>" +
       "0\022 \n\nnetwork_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tf" +
-      "older_id\030\t \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Resto" +
-      "reClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n" +
-      "\tbackup_id\030\002 \001(\t\"\260\001\n\tLogRecord\022-\n\ttimest" +
-      "amp\030\001 \001(\0132\032.google.protobuf.Timestamp\022D\n" +
-      "\007message\030\002 \003(\01323.yandex.cloud.mdb.mongod" +
-      "b.v1.LogRecord.MessageEntry\032.\n\014MessageEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373\002\n\026" +
-      "ListClusterLogsRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022" +
-      "U\n\014service_type\030\003 \001(\0162?.yandex.cloud.mdb" +
-      ".mongodb.v1.ListClusterLogsRequest.Servi" +
-      "ceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google." +
-      "protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100" +
-      "\"7\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIF" +
-      "IED\020\000\022\n\n\006MONGOD\020\001\"h\n\027ListClusterLogsResp" +
-      "onse\0224\n\004logs\030\001 \003(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.LogRecord\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\301\002\n\030StreamClusterLogsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
-      "ter\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.yandex" +
-      ".cloud.mdb.mongodb.v1.StreamClusterLogsR" +
-      "equest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\007to_time\030\005 \001" +
-      "(\0132\032.google.protobuf.Timestamp\"7\n\013Servic" +
+      "older_id\030\t \001(\tB\010\212\3101\004<=50\022c\n\024recovery_tar" +
+      "get_spec\030\n \001(\0132E.yandex.cloud.mdb.mongod" +
+      "b.v1.RestoreClusterRequest.RecoveryTarge" +
+      "tSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\032/\n\022RecoveryTargetSpec\022\031\n\tti" +
+      "mestamp\030\001 \001(\003B\006\372\3071\002>0\"?\n\026RestoreClusterM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id" +
+      "\030\002 \001(\t\"\260\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022D\n\007message\030\002" +
+      " \003(\01323.yandex.cloud.mdb.mongodb.v1.LogRe" +
+      "cord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373\002\n\026ListCluste" +
+      "rLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014service" +
+      "_type\030\003 \001(\0162?.yandex.cloud.mdb.mongodb.v" +
+      "1.ListClusterLogsRequest.ServiceType\022-\n\t" +
+      "from_time\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1000\022" +
+      "\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"7\n\013Servic" +
       "eType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\n\n\006M" +
-      "ONGOD\020\001\"~\n\034ListClusterOperationsRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"{\n\031ListClusterBackupsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"k\n\032ListClusterBackupsRespo" +
-      "nse\0224\n\007backups\030\001 \003(\0132#.yandex.cloud.mdb." +
-      "mongodb.v1.Backup\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\"y\n\027ListClusterHostsRequest\022 \n\ncluster" +
+      "ONGOD\020\001\"h\n\027ListClusterLogsResponse\0224\n\004lo" +
+      "gs\030\001 \003(\0132&.yandex.cloud.mdb.mongodb.v1.L" +
+      "ogRecord\022\027\n\017next_page_token\030\002 \001(\t\"\301\002\n\030St" +
+      "reamClusterLogsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022" +
+      "W\n\014service_type\030\003 \001(\0162A.yandex.cloud.mdb" +
+      ".mongodb.v1.StreamClusterLogsRequest.Ser" +
+      "viceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"7\n\013ServiceType\022\034\n\030S" +
+      "ERVICE_TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\"~\n" +
+      "\034ListClusterOperationsRequest\022 \n\ncluster" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
       "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"e\n\030ListClusterHostsResponse\0220\n\005hos" +
-      "ts\030\001 \003(\0132!.yandex.cloud.mdb.mongodb.v1.H" +
-      "ost\022\027\n\017next_page_token\030\002 \001(\t\"}\n\026AddClust" +
-      "erHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022A\n\nhost_specs\030\002 \003(\0132%.yandex.cl" +
-      "oud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\"A\n\027A" +
-      "ddClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterH" +
-      "ostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=2" +
-      "53\"D\n\032DeleteClusterHostsMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\317\003\n\034Ena" +
-      "bleClusterShardingRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022Z\n\010mongocfg\030\002 \001(\0132B." +
+      "<=100\"o\n\035ListClusterOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"{" +
+      "\n\031ListClusterBackupsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"k\n\032ListClusterBackupsResponse\0224\n\007bac" +
+      "kups\030\001 \003(\0132#.yandex.cloud.mdb.mongodb.v1" +
+      ".Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027List" +
+      "ClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"e\n\030L" +
+      "istClusterHostsResponse\0220\n\005hosts\030\001 \003(\0132!" +
+      ".yandex.cloud.mdb.mongodb.v1.Host\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"}\n\026AddClusterHostsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A" +
+      "\n\nhost_specs\030\002 \003(\0132%.yandex.cloud.mdb.mo" +
+      "ngodb.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterH" +
+      "ostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost" +
+      "_names\030\002 \003(\t\"b\n\031DeleteClusterHostsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nh" +
+      "ost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032Dele" +
+      "teClusterHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\022\022\n\nhost_names\030\002 \003(\t\"\317\003\n\034EnableCluster" +
+      "ShardingRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022Z\n\010mongocfg\030\002 \001(\0132B.yandex.clo" +
+      "ud.mdb.mongodb.v1.EnableClusterShardingR" +
+      "equest.MongoCfgB\004\350\3071\001\022V\n\006mongos\030\003 \001(\0132@." +
       "yandex.cloud.mdb.mongodb.v1.EnableCluste" +
-      "rShardingRequest.MongoCfgB\004\350\3071\001\022V\n\006mongo" +
-      "s\030\003 \001(\0132@.yandex.cloud.mdb.mongodb.v1.En" +
-      "ableClusterShardingRequest.MongosB\004\350\3071\001\022" +
-      "A\n\nhost_specs\030\004 \003(\0132%.yandex.cloud.mdb.m" +
-      "ongodb.v1.HostSpecB\006\202\3101\002>0\032K\n\010MongoCfg\022?" +
-      "\n\tresources\030\001 \001(\0132&.yandex.cloud.mdb.mon" +
-      "godb.v1.ResourcesB\004\350\3071\001\032I\n\006Mongos\022?\n\tres" +
-      "ources\030\001 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.ResourcesB\004\350\3071\001\"3\n\035EnableClusterShard" +
-      "ingMetadata\022\022\n\ncluster_id\030\001 \001(\t\"n\n\026GetCl" +
-      "usterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClusterSh" +
-      "ardsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\031ListClust" +
-      "erShardsResponse\0222\n\006shards\030\001 \003(\0132\".yande" +
-      "x.cloud.mdb.mongodb.v1.Shard\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\261\001\n\026AddClusterShardRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nsh" +
-      "ard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
-      "-9_-]*\022A\n\nhost_specs\030\003 \003(\0132%.yandex.clou" +
-      "d.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\"A\n\027Add" +
-      "ClusterShardMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClusterSha" +
-      "rdRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\"D\n\032DeleteClusterShardMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030" +
-      "\002 \001(\t\"\\\n\023ResetupHostsRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003" +
-      "(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024ResetupHostsMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 " +
-      "\003(\t\"\\\n\023RestartHostsRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\t" +
-      "B\017\202\3101\002>0\212\3101\005<=253\">\n\024RestartHostsMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(" +
-      "\t\"\302\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=5" +
-      "0\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign" +
-      "_public_ip\030\003 \001(\010\0224\n\004type\030\004 \001(\0162&.yandex." +
-      "cloud.mdb.mongodb.v1.Host.Type\022.\n\nshard_" +
-      "name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\205" +
-      "\005\n\016MongodbSpec3_6\022B\n\006mongod\030\001 \001(\01322.yand" +
-      "ex.cloud.mdb.mongodb.v1.MongodbSpec3_6.M" +
-      "ongod\022F\n\010mongocfg\030\002 \001(\01324.yandex.cloud.m" +
-      "db.mongodb.v1.MongodbSpec3_6.MongoCfg\022B\n" +
-      "\006mongos\030\003 \001(\01322.yandex.cloud.mdb.mongodb" +
-      ".v1.MongodbSpec3_6.Mongos\032\210\001\n\006Mongod\022C\n\006" +
-      "config\030\001 \001(\01323.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongodConfig3_6\0229\n\tresources\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\01325.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
-      "onfig3_6\0229\n\tresources\030\002 \001(\0132&.yandex.clo" +
-      "ud.mdb.mongodb.v1.Resources\032\210\001\n\006Mongos\022C" +
-      "\n\006config\030\001 \001(\01323.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongosConfig3_6\0229\n\tresources" +
-      "\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Res" +
-      "ources\"\205\005\n\016MongodbSpec4_0\022B\n\006mongod\030\001 \001(" +
-      "\01322.yandex.cloud.mdb.mongodb.v1.MongodbS" +
-      "pec4_0.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex" +
+      "rShardingRequest.MongosB\004\350\3071\001\022A\n\nhost_sp" +
+      "ecs\030\004 \003(\0132%.yandex.cloud.mdb.mongodb.v1." +
+      "HostSpecB\006\202\3101\002>0\032K\n\010MongoCfg\022?\n\tresource" +
+      "s\030\001 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sourcesB\004\350\3071\001\032I\n\006Mongos\022?\n\tresources\030\001 \001" +
+      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
+      "esB\004\350\3071\001\"3\n\035EnableClusterShardingMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\"n\n\026GetClusterShard" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[" +
+      "a-zA-Z0-9_-]*\"z\n\030ListClusterShardsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"h\n\031ListClusterShardsRe" +
+      "sponse\0222\n\006shards\030\001 \003(\0132\".yandex.cloud.md" +
+      "b.mongodb.v1.Shard\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"\261\001\n\026AddClusterShardRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002" +
+      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022A\n\n" +
+      "host_specs\030\003 \003(\0132%.yandex.cloud.mdb.mong" +
+      "odb.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterSha" +
+      "rdMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_" +
+      "name\030\002 \001(\t\"q\n\031DeleteClusterShardRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nsha" +
+      "rd_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
+      "9_-]*\"D\n\032DeleteClusterShardMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"\\\n\023R" +
+      "esetupHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0" +
+      "\212\3101\005<=253\">\n\024ResetupHostsMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\\\n\023Res" +
+      "tartHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\310" +
+      "1\005<=253\">\n\024RestartHostsMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\302\001\n\010Host" +
+      "Spec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubne" +
+      "t_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip" +
+      "\030\003 \001(\010\0224\n\004type\030\004 \001(\0162&.yandex.cloud.mdb." +
+      "mongodb.v1.Host.Type\022.\n\nshard_name\030\005 \001(\t" +
+      "B\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\205\005\n\016Mongodb" +
+      "Spec3_6\022B\n\006mongod\030\001 \001(\01322.yandex.cloud.m" +
+      "db.mongodb.v1.MongodbSpec3_6.Mongod\022F\n\010m" +
+      "ongocfg\030\002 \001(\01324.yandex.cloud.mdb.mongodb" +
+      ".v1.MongodbSpec3_6.MongoCfg\022B\n\006mongos\030\003 " +
+      "\001(\01322.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "bSpec3_6.Mongos\032\210\001\n\006Mongod\022C\n\006config\030\001 \001" +
+      "(\01323.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfig3_6\0229\n\tresources\030\002 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\032\214\001\n\010M" +
+      "ongoCfg\022E\n\006config\030\001 \001(\01325.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig3_6\0229" +
+      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
+      "godb.v1.Resources\032\210\001\n\006Mongos\022C\n\006config\030\001" +
+      " \001(\01323.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongosConfig3_6\0229\n\tresources\030\002 \001(\0132&.y" +
+      "andex.cloud.mdb.mongodb.v1.Resources\"\205\005\n" +
+      "\016MongodbSpec4_0\022B\n\006mongod\030\001 \001(\01322.yandex" +
       ".cloud.mdb.mongodb.v1.MongodbSpec4_0.Mon" +
-      "goCfg\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.mdb" +
-      ".mongodb.v1.MongodbSpec4_0.Mongos\032\210\001\n\006Mo" +
-      "ngod\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongodConfig4_0\0229\n\tres" +
-      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(" +
-      "\01325.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongoCfgConfig4_0\0229\n\tresources\030\002 \001(\0132&.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Resources\032\210\001\n\006" +
-      "Mongos\022C\n\006config\030\001 \001(\01323.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongosConfig4_0\0229\n\tr" +
-      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
-      "b.v1.Resources\"\205\005\n\016MongodbSpec4_2\022B\n\006mon" +
-      "god\030\001 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
-      "MongodbSpec4_2.Mongod\022F\n\010mongocfg\030\002 \001(\0132" +
-      "4.yandex.cloud.mdb.mongodb.v1.MongodbSpe" +
-      "c4_2.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yandex.c" +
+      "god\022F\n\010mongocfg\030\002 \001(\01324.yandex.cloud.mdb" +
+      ".mongodb.v1.MongodbSpec4_0.MongoCfg\022B\n\006m" +
+      "ongos\030\003 \001(\01322.yandex.cloud.mdb.mongodb.v" +
+      "1.MongodbSpec4_0.Mongos\032\210\001\n\006Mongod\022C\n\006co" +
+      "nfig\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongodConfig4_0\0229\n\tresources\030\002 \001" +
+      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
+      "es\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\01325.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongoCfgCon" +
+      "fig4_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
+      ".mdb.mongodb.v1.Resources\032\210\001\n\006Mongos\022C\n\006" +
+      "config\030\001 \001(\01323.yandex.cloud.mdb.mongodb." +
+      "v1.config.MongosConfig4_0\0229\n\tresources\030\002" +
+      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
+      "rces\"\205\005\n\016MongodbSpec4_2\022B\n\006mongod\030\001 \001(\0132" +
+      "2.yandex.cloud.mdb.mongodb.v1.MongodbSpe" +
+      "c4_2.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex.c" +
       "loud.mdb.mongodb.v1.MongodbSpec4_2.Mongo" +
-      "s\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongodConfig4_" +
-      "2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb." +
-      "mongodb.v1.Resources\032\214\001\n\010MongoCfg\022E\n\006con" +
-      "fig\030\001 \001(\01325.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongoCfgConfig4_2\0229\n\tresources\030\002 " +
-      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
-      "ces\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex." +
-      "cloud.mdb.mongodb.v1.config.MongosConfig" +
-      "4_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\"\314\003\n\nConfigSpec\022\017\n" +
-      "\007version\030\001 \001(\t\022%\n\035feature_compatibility_" +
-      "version\030\005 \001(\t\022X\n\020mongodb_spec_3_6\030\002 \001(\0132" +
+      "Cfg\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.mdb.m" +
+      "ongodb.v1.MongodbSpec4_2.Mongos\032\210\001\n\006Mong" +
+      "od\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.mo" +
+      "ngodb.v1.config.MongodConfig4_2\0229\n\tresou" +
+      "rces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
+      ".Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\0132" +
+      "5.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "goCfgConfig4_2\0229\n\tresources\030\002 \001(\0132&.yand" +
+      "ex.cloud.mdb.mongodb.v1.Resources\032\210\001\n\006Mo" +
+      "ngos\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfig4_2\0229\n\tres" +
+      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
+      "v1.Resources\"\314\003\n\nConfigSpec\022\017\n\007version\030\001" +
+      " \001(\t\022%\n\035feature_compatibility_version\030\005 " +
+      "\001(\t\022X\n\020mongodb_spec_3_6\030\002 \001(\0132+.yandex.c" +
+      "loud.mdb.mongodb.v1.MongodbSpec3_6H\000R\017mo" +
+      "ngodbSpec_3_6\022X\n\020mongodb_spec_4_0\030\004 \001(\0132" +
       "+.yandex.cloud.mdb.mongodb.v1.MongodbSpe" +
-      "c3_6H\000R\017mongodbSpec_3_6\022X\n\020mongodb_spec_" +
-      "4_0\030\004 \001(\0132+.yandex.cloud.mdb.mongodb.v1." +
-      "MongodbSpec4_0H\000R\017mongodbSpec_4_0\022X\n\020mon" +
-      "godb_spec_4_2\030\007 \001(\0132+.yandex.cloud.mdb.m" +
-      "ongodb.v1.MongodbSpec4_2H\000R\017mongodbSpec_" +
-      "4_2\0223\n\023backup_window_start\030\003 \001(\0132\026.googl" +
-      "e.type.TimeOfDay\0223\n\006access\030\006 \001(\0132#.yande" +
-      "x.cloud.mdb.mongodb.v1.AccessB\016\n\014mongodb" +
-      "_spec2\242$\n\016ClusterService\022\216\001\n\003Get\022..yande" +
-      "x.cloud.mdb.mongodb.v1.GetClusterRequest" +
-      "\032$.yandex.cloud.mdb.mongodb.v1.Cluster\"1" +
-      "\202\323\344\223\002+\022)/managed-mongodb/v1/clusters/{cl" +
-      "uster_id}\022\221\001\n\004List\0220.yandex.cloud.mdb.mo" +
-      "ngodb.v1.ListClustersRequest\0321.yandex.cl" +
-      "oud.mdb.mongodb.v1.ListClustersResponse\"" +
-      "$\202\323\344\223\002\036\022\034/managed-mongodb/v1/clusters\022\253\001" +
-      "\n\006Create\0221.yandex.cloud.mdb.mongodb.v1.C" +
-      "reateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"K\202\323\344\223\002!\"\034/managed-mongodb" +
-      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
-      "ta\022\007Cluster\022\270\001\n\006Update\0221.yandex.cloud.md" +
-      "b.mongodb.v1.UpdateClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"X\202\323\344\223\002.2)/m" +
-      "anaged-mongodb/v1/clusters/{cluster_id}:" +
-      "\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\303" +
-      "\001\n\006Delete\0221.yandex.cloud.mdb.mongodb.v1." +
-      "DeleteClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"c\202\323\344\223\002+*)/managed-mongod" +
-      "b/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
-      "usterMetadata\022\025google.protobuf.Empty\022\270\001\n" +
-      "\005Start\0220.yandex.cloud.mdb.mongodb.v1.Sta" +
-      "rtClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"Z\202\323\344\223\0021\"//managed-mongodb/v1" +
-      "/clusters/{cluster_id}:start\262\322*\037\n\024StartC" +
-      "lusterMetadata\022\007Cluster\022\264\001\n\004Stop\022/.yande" +
-      "x.cloud.mdb.mongodb.v1.StopClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"X\202\323" +
-      "\344\223\0020\"./managed-mongodb/v1/clusters/{clus" +
-      "ter_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007C" +
-      "luster\022\267\001\n\004Move\022/.yandex.cloud.mdb.mongo" +
-      "db.v1.MoveClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"[\202\323\344\223\0023\"./managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}:move:\001*\262\322" +
-      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001\n\006Bac" +
-      "kup\0221.yandex.cloud.mdb.mongodb.v1.Backup" +
+      "c4_0H\000R\017mongodbSpec_4_0\022X\n\020mongodb_spec_" +
+      "4_2\030\007 \001(\0132+.yandex.cloud.mdb.mongodb.v1." +
+      "MongodbSpec4_2H\000R\017mongodbSpec_4_2\0223\n\023bac" +
+      "kup_window_start\030\003 \001(\0132\026.google.type.Tim" +
+      "eOfDay\0223\n\006access\030\006 \001(\0132#.yandex.cloud.md" +
+      "b.mongodb.v1.AccessB\016\n\014mongodb_spec2\242$\n\016" +
+      "ClusterService\022\216\001\n\003Get\022..yandex.cloud.md" +
+      "b.mongodb.v1.GetClusterRequest\032$.yandex." +
+      "cloud.mdb.mongodb.v1.Cluster\"1\202\323\344\223\002+\022)/m" +
+      "anaged-mongodb/v1/clusters/{cluster_id}\022" +
+      "\221\001\n\004List\0220.yandex.cloud.mdb.mongodb.v1.L" +
+      "istClustersRequest\0321.yandex.cloud.mdb.mo" +
+      "ngodb.v1.ListClustersResponse\"$\202\323\344\223\002\036\022\034/" +
+      "managed-mongodb/v1/clusters\022\253\001\n\006Create\0221" +
+      ".yandex.cloud.mdb.mongodb.v1.CreateClust" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"K\202\323\344\223\002!\"\034/managed-mongodb/v1/cluste" +
+      "rs:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluste" +
+      "r\022\270\001\n\006Update\0221.yandex.cloud.mdb.mongodb." +
+      "v1.UpdateClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"X\202\323\344\223\002.2)/managed-mon" +
+      "godb/v1/clusters/{cluster_id}:\001*\262\322* \n\025Up" +
+      "dateClusterMetadata\022\007Cluster\022\303\001\n\006Delete\022" +
+      "1.yandex.cloud.mdb.mongodb.v1.DeleteClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"c\202\323\344\223\002+*)/managed-mongodb/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\270\001\n\005Start\0220.y" +
+      "andex.cloud.mdb.mongodb.v1.StartClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Z\202\323\344\223\0021\"//managed-mongodb/v1/clusters/" +
+      "{cluster_id}:start\262\322*\037\n\024StartClusterMeta" +
+      "data\022\007Cluster\022\264\001\n\004Stop\022/.yandex.cloud.md" +
+      "b.mongodb.v1.StopClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"X\202\323\344\223\0020\"./man" +
+      "aged-mongodb/v1/clusters/{cluster_id}:st" +
+      "op\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\267\001\n" +
+      "\004Move\022/.yandex.cloud.mdb.mongodb.v1.Move" +
       "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"\\\202\323\344\223\0022\"0/managed-mongodb/v1/c" +
-      "lusters/{cluster_id}:backup\262\322* \n\025BackupC" +
-      "lusterMetadata\022\007Cluster\022\266\001\n\007Restore\0222.ya" +
-      "ndex.cloud.mdb.mongodb.v1.RestoreCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"T\202\323\344\223\002)\"$/managed-mongodb/v1/clusters" +
-      ":restore:\001*\262\322*!\n\026RestoreClusterMetadata\022" +
-      "\007Cluster\022\255\001\n\010ListLogs\0223.yandex.cloud.mdb" +
-      ".mongodb.v1.ListClusterLogsRequest\0324.yan" +
-      "dex.cloud.mdb.mongodb.v1.ListClusterLogs" +
-      "Response\"6\202\323\344\223\0020\022./managed-mongodb/v1/cl" +
-      "usters/{cluster_id}:logs\022\254\001\n\nStreamLogs\022" +
-      "5.yandex.cloud.mdb.mongodb.v1.StreamClus" +
-      "terLogsRequest\032&.yandex.cloud.mdb.mongod" +
-      "b.v1.LogRecord\"=\202\323\344\223\0027\0225/managed-mongodb" +
-      "/v1/clusters/{cluster_id}:stream_logs0\001\022" +
-      "\305\001\n\016ListOperations\0229.yandex.cloud.mdb.mo" +
-      "ngodb.v1.ListClusterOperationsRequest\032:." +
-      "yandex.cloud.mdb.mongodb.v1.ListClusterO" +
-      "perationsResponse\"<\202\323\344\223\0026\0224/managed-mong" +
-      "odb/v1/clusters/{cluster_id}/operations\022" +
-      "\271\001\n\013ListBackups\0226.yandex.cloud.mdb.mongo" +
-      "db.v1.ListClusterBackupsRequest\0327.yandex" +
-      ".cloud.mdb.mongodb.v1.ListClusterBackups" +
-      "Response\"9\202\323\344\223\0023\0221/managed-mongodb/v1/cl" +
-      "usters/{cluster_id}/backups\022\261\001\n\tListHost" +
-      "s\0224.yandex.cloud.mdb.mongodb.v1.ListClus" +
-      "terHostsRequest\0325.yandex.cloud.mdb.mongo" +
-      "db.v1.ListClusterHostsResponse\"7\202\323\344\223\0021\022/" +
-      "/managed-mongodb/v1/clusters/{cluster_id" +
-      "}/hosts\022\336\001\n\010AddHosts\0223.yandex.cloud.mdb." +
-      "mongodb.v1.AddClusterHostsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"z\202\323\344\223\002@\";/m" +
-      "anaged-mongodb/v1/clusters/{cluster_id}/" +
-      "hosts:batchCreate:\001*\262\322*0\n\027AddClusterHost" +
-      "sMetadata\022\025google.protobuf.Empty\022\347\001\n\013Del" +
-      "eteHosts\0226.yandex.cloud.mdb.mongodb.v1.D" +
-      "eleteClusterHostsRequest\032!.yandex.cloud." +
-      "operation.Operation\"}\202\323\344\223\002@\";/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}/hosts:bat" +
-      "chDelete:\001*\262\322*3\n\032DeleteClusterHostsMetad" +
-      "ata\022\025google.protobuf.Empty\022\355\001\n\016EnableSha" +
-      "rding\0229.yandex.cloud.mdb.mongodb.v1.Enab" +
-      "leClusterShardingRequest\032!.yandex.cloud." +
-      "operation.Operation\"}\202\323\344\223\002=\"8/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}:enableSha" +
-      "rding:\001*\262\322*6\n\035EnableClusterShardingMetad" +
-      "ata\022\025google.protobuf.Empty\022\252\001\n\010GetShard\022" +
-      "3.yandex.cloud.mdb.mongodb.v1.GetCluster" +
-      "ShardRequest\032\".yandex.cloud.mdb.mongodb." +
-      "v1.Shard\"E\202\323\344\223\002?\022=/managed-mongodb/v1/cl" +
-      "usters/{cluster_id}/shards/{shard_name}\022" +
-      "\265\001\n\nListShards\0225.yandex.cloud.mdb.mongod" +
-      "b.v1.ListClusterShardsRequest\0326.yandex.c" +
-      "loud.mdb.mongodb.v1.ListClusterShardsRes" +
-      "ponse\"8\202\323\344\223\0022\0220/managed-mongodb/v1/clust" +
-      "ers/{cluster_id}/shards\022\303\001\n\010AddShard\0223.y" +
-      "andex.cloud.mdb.mongodb.v1.AddClusterSha" +
-      "rdRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"_\202\323\344\223\0025\"0/managed-mongodb/v1/cluste" +
-      "rs/{cluster_id}/shards:\001*\262\322* \n\027AddCluste" +
-      "rShardMetadata\022\005Shard\022\346\001\n\013DeleteShard\0226." +
-      "yandex.cloud.mdb.mongodb.v1.DeleteCluste" +
-      "rShardRequest\032!.yandex.cloud.operation.O" +
-      "peration\"|\202\323\344\223\002?*=/managed-mongodb/v1/cl" +
-      "usters/{cluster_id}/shards/{shard_name}\262" +
-      "\322*3\n\032DeleteClusterShardMetadata\022\025google." +
-      "protobuf.Empty\022\327\001\n\014ResetupHosts\0220.yandex" +
-      ".cloud.mdb.mongodb.v1.ResetupHostsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"r\202\323" +
-      "\344\223\002;\"6/managed-mongodb/v1/clusters/{clus" +
-      "ter_id}:resetupHosts:\001*\262\322*-\n\024ResetupHost" +
-      "sMetadata\022\025google.protobuf.Empty\022\327\001\n\014Res" +
-      "tartHosts\0220.yandex.cloud.mdb.mongodb.v1." +
-      "RestartHostsRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"r\202\323\344\223\002;\"6/managed-mongodb" +
-      "/v1/clusters/{cluster_id}:restartHosts:\001" +
-      "*\262\322*-\n\024RestartHostsMetadata\022\025google.prot" +
-      "obuf.EmptyBj\n\037yandex.cloud.api.mdb.mongo" +
-      "db.v1ZGgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/mongodb/v1;mongodbb\006" +
-      "proto3"
+      "Operation\"[\202\323\344\223\0023\"./managed-mongodb/v1/c" +
+      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
+      "usterMetadata\022\007Cluster\022\274\001\n\006Backup\0221.yand" +
+      "ex.cloud.mdb.mongodb.v1.BackupClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\\\202\323\344\223\0022\"0/managed-mongodb/v1/clusters/{c" +
+      "luster_id}:backup\262\322* \n\025BackupClusterMeta" +
+      "data\022\007Cluster\022\266\001\n\007Restore\0222.yandex.cloud" +
+      ".mdb.mongodb.v1.RestoreClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"T\202\323\344\223\002)" +
+      "\"$/managed-mongodb/v1/clusters:restore:\001" +
+      "*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\255" +
+      "\001\n\010ListLogs\0223.yandex.cloud.mdb.mongodb.v" +
+      "1.ListClusterLogsRequest\0324.yandex.cloud." +
+      "mdb.mongodb.v1.ListClusterLogsResponse\"6" +
+      "\202\323\344\223\0020\022./managed-mongodb/v1/clusters/{cl" +
+      "uster_id}:logs\022\254\001\n\nStreamLogs\0225.yandex.c" +
+      "loud.mdb.mongodb.v1.StreamClusterLogsReq" +
+      "uest\032&.yandex.cloud.mdb.mongodb.v1.LogRe" +
+      "cord\"=\202\323\344\223\0027\0225/managed-mongodb/v1/cluste" +
+      "rs/{cluster_id}:stream_logs0\001\022\305\001\n\016ListOp" +
+      "erations\0229.yandex.cloud.mdb.mongodb.v1.L" +
+      "istClusterOperationsRequest\032:.yandex.clo" +
+      "ud.mdb.mongodb.v1.ListClusterOperationsR" +
+      "esponse\"<\202\323\344\223\0026\0224/managed-mongodb/v1/clu" +
+      "sters/{cluster_id}/operations\022\271\001\n\013ListBa" +
+      "ckups\0226.yandex.cloud.mdb.mongodb.v1.List" +
+      "ClusterBackupsRequest\0327.yandex.cloud.mdb" +
+      ".mongodb.v1.ListClusterBackupsResponse\"9" +
+      "\202\323\344\223\0023\0221/managed-mongodb/v1/clusters/{cl" +
+      "uster_id}/backups\022\261\001\n\tListHosts\0224.yandex" +
+      ".cloud.mdb.mongodb.v1.ListClusterHostsRe" +
+      "quest\0325.yandex.cloud.mdb.mongodb.v1.List" +
+      "ClusterHostsResponse\"7\202\323\344\223\0021\022//managed-m" +
+      "ongodb/v1/clusters/{cluster_id}/hosts\022\336\001" +
+      "\n\010AddHosts\0223.yandex.cloud.mdb.mongodb.v1" +
+      ".AddClusterHostsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"z\202\323\344\223\002@\";/managed-mon" +
+      "godb/v1/clusters/{cluster_id}/hosts:batc" +
+      "hCreate:\001*\262\322*0\n\027AddClusterHostsMetadata\022" +
+      "\025google.protobuf.Empty\022\347\001\n\013DeleteHosts\0226" +
+      ".yandex.cloud.mdb.mongodb.v1.DeleteClust" +
+      "erHostsRequest\032!.yandex.cloud.operation." +
+      "Operation\"}\202\323\344\223\002@\";/managed-mongodb/v1/c" +
+      "lusters/{cluster_id}/hosts:batchDelete:\001" +
+      "*\262\322*3\n\032DeleteClusterHostsMetadata\022\025googl" +
+      "e.protobuf.Empty\022\355\001\n\016EnableSharding\0229.ya" +
+      "ndex.cloud.mdb.mongodb.v1.EnableClusterS" +
+      "hardingRequest\032!.yandex.cloud.operation." +
+      "Operation\"}\202\323\344\223\002=\"8/managed-mongodb/v1/c" +
+      "lusters/{cluster_id}:enableSharding:\001*\262\322" +
+      "*6\n\035EnableClusterShardingMetadata\022\025googl" +
+      "e.protobuf.Empty\022\252\001\n\010GetShard\0223.yandex.c" +
+      "loud.mdb.mongodb.v1.GetClusterShardReque" +
+      "st\032\".yandex.cloud.mdb.mongodb.v1.Shard\"E" +
+      "\202\323\344\223\002?\022=/managed-mongodb/v1/clusters/{cl" +
+      "uster_id}/shards/{shard_name}\022\265\001\n\nListSh" +
+      "ards\0225.yandex.cloud.mdb.mongodb.v1.ListC" +
+      "lusterShardsRequest\0326.yandex.cloud.mdb.m" +
+      "ongodb.v1.ListClusterShardsResponse\"8\202\323\344" +
+      "\223\0022\0220/managed-mongodb/v1/clusters/{clust" +
+      "er_id}/shards\022\303\001\n\010AddShard\0223.yandex.clou" +
+      "d.mdb.mongodb.v1.AddClusterShardRequest\032" +
+      "!.yandex.cloud.operation.Operation\"_\202\323\344\223" +
+      "\0025\"0/managed-mongodb/v1/clusters/{cluste" +
+      "r_id}/shards:\001*\262\322* \n\027AddClusterShardMeta" +
+      "data\022\005Shard\022\346\001\n\013DeleteShard\0226.yandex.clo" +
+      "ud.mdb.mongodb.v1.DeleteClusterShardRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"|" +
+      "\202\323\344\223\002?*=/managed-mongodb/v1/clusters/{cl" +
+      "uster_id}/shards/{shard_name}\262\322*3\n\032Delet" +
+      "eClusterShardMetadata\022\025google.protobuf.E" +
+      "mpty\022\327\001\n\014ResetupHosts\0220.yandex.cloud.mdb" +
+      ".mongodb.v1.ResetupHostsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"r\202\323\344\223\002;\"6/man" +
+      "aged-mongodb/v1/clusters/{cluster_id}:re" +
+      "setupHosts:\001*\262\322*-\n\024ResetupHostsMetadata\022" +
+      "\025google.protobuf.Empty\022\327\001\n\014RestartHosts\022" +
+      "0.yandex.cloud.mdb.mongodb.v1.RestartHos" +
+      "tsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"r\202\323\344\223\002;\"6/managed-mongodb/v1/cluste" +
+      "rs/{cluster_id}:restartHosts:\001*\262\322*-\n\024Res" +
+      "tartHostsMetadata\022\025google.protobuf.Empty" +
+      "Bj\n\037yandex.cloud.api.mdb.mongodb.v1ZGgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/mongodb/v1;mongodbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63118,13 +63877,19 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", });
+        new java.lang.String[] { "BackupId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "RecoveryTargetSpec", });
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterRequest_RecoveryTargetSpec_descriptor,
+        new java.lang.String[] { "Timestamp", });
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterMetadata_fieldAccessorTable = new
