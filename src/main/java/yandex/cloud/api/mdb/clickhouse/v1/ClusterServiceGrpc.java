@@ -766,6 +766,166 @@ public final class ClusterServiceGrpc {
      return getDeleteShardMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getGetShardGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetShardGroup",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.class,
+      responseType = yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getGetShardGroupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getGetShardGroupMethod;
+    if ((getGetShardGroupMethod = ClusterServiceGrpc.getGetShardGroupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getGetShardGroupMethod = ClusterServiceGrpc.getGetShardGroupMethod) == null) {
+          ClusterServiceGrpc.getGetShardGroupMethod = getGetShardGroupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "GetShardGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("GetShardGroup"))
+                  .build();
+          }
+        }
+     }
+     return getGetShardGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> getListShardGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShardGroups",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.class,
+      responseType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest,
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> getListShardGroupsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> getListShardGroupsMethod;
+    if ((getListShardGroupsMethod = ClusterServiceGrpc.getListShardGroupsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListShardGroupsMethod = ClusterServiceGrpc.getListShardGroupsMethod) == null) {
+          ClusterServiceGrpc.getListShardGroupsMethod = getListShardGroupsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "ListShardGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListShardGroups"))
+                  .build();
+          }
+        }
+     }
+     return getListShardGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateShardGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateShardGroup",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateShardGroupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateShardGroupMethod;
+    if ((getCreateShardGroupMethod = ClusterServiceGrpc.getCreateShardGroupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getCreateShardGroupMethod = ClusterServiceGrpc.getCreateShardGroupMethod) == null) {
+          ClusterServiceGrpc.getCreateShardGroupMethod = getCreateShardGroupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "CreateShardGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("CreateShardGroup"))
+                  .build();
+          }
+        }
+     }
+     return getCreateShardGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateShardGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateShardGroup",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateShardGroupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateShardGroupMethod;
+    if ((getUpdateShardGroupMethod = ClusterServiceGrpc.getUpdateShardGroupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateShardGroupMethod = ClusterServiceGrpc.getUpdateShardGroupMethod) == null) {
+          ClusterServiceGrpc.getUpdateShardGroupMethod = getUpdateShardGroupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "UpdateShardGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateShardGroup"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateShardGroupMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardGroupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteShardGroup",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardGroupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardGroupMethod;
+    if ((getDeleteShardGroupMethod = ClusterServiceGrpc.getDeleteShardGroupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getDeleteShardGroupMethod = ClusterServiceGrpc.getDeleteShardGroupMethod) == null) {
+          ClusterServiceGrpc.getDeleteShardGroupMethod = getDeleteShardGroupMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.clickhouse.v1.ClusterService", "DeleteShardGroup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("DeleteShardGroup"))
+                  .build();
+          }
+        }
+     }
+     return getDeleteShardGroupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterExternalDictionaryRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateExternalDictionaryMethod;
 
@@ -1094,6 +1254,56 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Returns the specified shard group.
+     * </pre>
+     */
+    public void getShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetShardGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of shard groups that belong to specified cluster.
+     * </pre>
+     */
+    public void listShardGroups(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListShardGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a new shard group in the specified cluster.
+     * </pre>
+     */
+    public void createShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateShardGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Modifies the specified shard group.
+     * </pre>
+     */
+    public void updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateShardGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shard group.
+     * </pre>
+     */
+    public void deleteShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteShardGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -1275,6 +1485,41 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_SHARD)))
+          .addMethod(
+            getGetShardGroupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest,
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup>(
+                  this, METHODID_GET_SHARD_GROUP)))
+          .addMethod(
+            getListShardGroupsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest,
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse>(
+                  this, METHODID_LIST_SHARD_GROUPS)))
+          .addMethod(
+            getCreateShardGroupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CREATE_SHARD_GROUP)))
+          .addMethod(
+            getUpdateShardGroupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_SHARD_GROUP)))
+          .addMethod(
+            getDeleteShardGroupMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_SHARD_GROUP)))
           .addMethod(
             getCreateExternalDictionaryMethod(),
             asyncUnaryCall(
@@ -1571,6 +1816,61 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Returns the specified shard group.
+     * </pre>
+     */
+    public void getShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetShardGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of shard groups that belong to specified cluster.
+     * </pre>
+     */
+    public void listShardGroups(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListShardGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a new shard group in the specified cluster.
+     * </pre>
+     */
+    public void createShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateShardGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Modifies the specified shard group.
+     * </pre>
+     */
+    public void updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateShardGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shard group.
+     * </pre>
+     */
+    public void deleteShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteShardGroupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -1844,6 +2144,56 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShard(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteShardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified shard group.
+     * </pre>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup getShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetShardGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of shard groups that belong to specified cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse listShardGroups(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListShardGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a new shard group in the specified cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation createShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateShardGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Modifies the specified shard group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateShardGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shard group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteShardGroupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2134,6 +2484,61 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Returns the specified shard group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getShardGroup(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetShardGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of shard groups that belong to specified cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse> listShardGroups(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListShardGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a new shard group in the specified cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> createShardGroup(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateShardGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Modifies the specified shard group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateShardGroup(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateShardGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shard group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteShardGroup(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteShardGroupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates an external dictionary for the specified ClickHouse cluster.
      * </pre>
      */
@@ -2178,8 +2583,13 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_ADD_SHARD = 20;
   private static final int METHODID_UPDATE_SHARD = 21;
   private static final int METHODID_DELETE_SHARD = 22;
-  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 23;
-  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 24;
+  private static final int METHODID_GET_SHARD_GROUP = 23;
+  private static final int METHODID_LIST_SHARD_GROUPS = 24;
+  private static final int METHODID_CREATE_SHARD_GROUP = 25;
+  private static final int METHODID_UPDATE_SHARD_GROUP = 26;
+  private static final int METHODID_DELETE_SHARD_GROUP = 27;
+  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 28;
+  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 29;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2290,6 +2700,26 @@ public final class ClusterServiceGrpc {
           serviceImpl.deleteShard((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_GET_SHARD_GROUP:
+          serviceImpl.getShardGroup((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup>) responseObserver);
+          break;
+        case METHODID_LIST_SHARD_GROUPS:
+          serviceImpl.listShardGroups((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_SHARD_GROUP:
+          serviceImpl.createShardGroup((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_SHARD_GROUP:
+          serviceImpl.updateShardGroup((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_SHARD_GROUP:
+          serviceImpl.deleteShardGroup((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_CREATE_EXTERNAL_DICTIONARY:
           serviceImpl.createExternalDictionary((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterExternalDictionaryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
@@ -2382,6 +2812,11 @@ public final class ClusterServiceGrpc {
               .addMethod(getAddShardMethod())
               .addMethod(getUpdateShardMethod())
               .addMethod(getDeleteShardMethod())
+              .addMethod(getGetShardGroupMethod())
+              .addMethod(getListShardGroupsMethod())
+              .addMethod(getCreateShardGroupMethod())
+              .addMethod(getUpdateShardGroupMethod())
+              .addMethod(getDeleteShardGroupMethod())
               .addMethod(getCreateExternalDictionaryMethod())
               .addMethod(getDeleteExternalDictionaryMethod())
               .build();

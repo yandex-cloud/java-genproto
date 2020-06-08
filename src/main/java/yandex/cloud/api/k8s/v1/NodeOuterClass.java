@@ -12084,6 +12084,15 @@ public final class NodeOuterClass {
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
      */
     long getCoreFraction();
+
+    /**
+     * <pre>
+     * Number of GPUs available to the node.
+     * </pre>
+     *
+     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+     */
+    long getGpus();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.ResourcesSpec}
@@ -12101,6 +12110,7 @@ public final class NodeOuterClass {
       memory_ = 0L;
       cores_ = 0L;
       coreFraction_ = 0L;
+      gpus_ = 0L;
     }
 
     @java.lang.Override
@@ -12140,6 +12150,11 @@ public final class NodeOuterClass {
             case 24: {
 
               coreFraction_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              gpus_ = input.readInt64();
               break;
             }
             default: {
@@ -12214,6 +12229,19 @@ public final class NodeOuterClass {
       return coreFraction_;
     }
 
+    public static final int GPUS_FIELD_NUMBER = 4;
+    private long gpus_;
+    /**
+     * <pre>
+     * Number of GPUs available to the node.
+     * </pre>
+     *
+     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+     */
+    public long getGpus() {
+      return gpus_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12237,6 +12265,9 @@ public final class NodeOuterClass {
       if (coreFraction_ != 0L) {
         output.writeInt64(3, coreFraction_);
       }
+      if (gpus_ != 0L) {
+        output.writeInt64(4, gpus_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12257,6 +12288,10 @@ public final class NodeOuterClass {
       if (coreFraction_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, coreFraction_);
+      }
+      if (gpus_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, gpus_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12280,6 +12315,8 @@ public final class NodeOuterClass {
           == other.getCores());
       result = result && (getCoreFraction()
           == other.getCoreFraction());
+      result = result && (getGpus()
+          == other.getGpus());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12300,6 +12337,9 @@ public final class NodeOuterClass {
       hash = (37 * hash) + CORE_FRACTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCoreFraction());
+      hash = (37 * hash) + GPUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGpus());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12439,6 +12479,8 @@ public final class NodeOuterClass {
 
         coreFraction_ = 0L;
 
+        gpus_ = 0L;
+
         return this;
       }
 
@@ -12468,6 +12510,7 @@ public final class NodeOuterClass {
         result.memory_ = memory_;
         result.cores_ = cores_;
         result.coreFraction_ = coreFraction_;
+        result.gpus_ = gpus_;
         onBuilt();
         return result;
       }
@@ -12524,6 +12567,9 @@ public final class NodeOuterClass {
         }
         if (other.getCoreFraction() != 0L) {
           setCoreFraction(other.getCoreFraction());
+        }
+        if (other.getGpus() != 0L) {
+          setGpus(other.getGpus());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12667,6 +12713,44 @@ public final class NodeOuterClass {
       public Builder clearCoreFraction() {
         
         coreFraction_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long gpus_ ;
+      /**
+       * <pre>
+       * Number of GPUs available to the node.
+       * </pre>
+       *
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       */
+      public long getGpus() {
+        return gpus_;
+      }
+      /**
+       * <pre>
+       * Number of GPUs available to the node.
+       * </pre>
+       *
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       */
+      public Builder setGpus(long value) {
+        
+        gpus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of GPUs available to the node.
+       * </pre>
+       *
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       */
+      public Builder clearGpus() {
+        
+        gpus_ = 0L;
         onChanged();
         return this;
       }
@@ -14025,19 +14109,20 @@ public final class NodeOuterClass {
       "\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex.c" +
       "loud.k8s.v1.OneToOneNatSpec\"E\n\017OneToOneN" +
       "atSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.clou" +
-      "d.k8s.v1.IpVersion\"\274\001\n\rResourcesSpec\022\"\n\006" +
+      "d.k8s.v1.IpVersion\"\327\001\n\rResourcesSpec\022\"\n\006" +
       "memory\030\001 \001(\003B\022\372\3071\016<=824633720832\022]\n\005core" +
       "s\030\002 \001(\003BN\372\3071J0,1,2,4,6,8,10,12,14,16,18," +
       "20,22,24,26,28,30,32,34,36,40,44,48,52,5" +
       "6,60,64\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5," +
-      "20,50,100\"f\n\010DiskSpec\0222\n\014disk_type_id\030\001 " +
-      "\001(\tB\034\362\3071\030|network-ssd|network-hdd\022&\n\tdis" +
-      "k_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Sch" +
-      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010*;\n\tIp" +
-      "Version\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004I" +
-      "PV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api.k8s." +
-      "v1Z;github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/k8s/v1;k8sb\006proto3"
+      "20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"f\n\010" +
+      "DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\3071\030|net" +
+      "work-ssd|network-hdd\022&\n\tdisk_size\030\002 \001(\003B" +
+      "\023\372\3071\0170-4398046511104\"\'\n\020SchedulingPolicy" +
+      "\022\023\n\013preemptible\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP" +
+      "_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6" +
+      "\020\002BV\n\027yandex.cloud.api.k8s.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14124,7 +14209,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_ResourcesSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ResourcesSpec_descriptor,
-        new java.lang.String[] { "Memory", "Cores", "CoreFraction", });
+        new java.lang.String[] { "Memory", "Cores", "CoreFraction", "Gpus", });
     internal_static_yandex_cloud_k8s_v1_DiskSpec_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_k8s_v1_DiskSpec_fieldAccessorTable = new

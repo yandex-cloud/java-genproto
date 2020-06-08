@@ -45223,6 +45223,8420 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface GetClusterShardGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the shard group to request information about.
+     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name of the shard group to request information about.
+     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest}
+   */
+  public  static final class GetClusterShardGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest)
+      GetClusterShardGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetClusterShardGroupRequest.newBuilder() to construct.
+    private GetClusterShardGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetClusterShardGroupRequest() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetClusterShardGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name of the shard group to request information about.
+     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the shard group to request information about.
+     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest(this);
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name of the shard group to request information about.
+       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group to request information about.
+       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group to request information about.
+       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group to request information about.
+       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group to request information about.
+       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.GetClusterShardGroupRequest)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetClusterShardGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetClusterShardGroupRequest>() {
+      @java.lang.Override
+      public GetClusterShardGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetClusterShardGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetClusterShardGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetClusterShardGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListClusterShardGroupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest}
+   */
+  public  static final class ListClusterShardGroupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest)
+      ListClusterShardGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterShardGroupsRequest.newBuilder() to construct.
+    private ListClusterShardGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterShardGroupsRequest() {
+      clusterId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterShardGroupsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster that the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+     * returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest(this);
+        result.clusterId_ = clusterId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
+       * returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsRequest)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterShardGroupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterShardGroupsRequest>() {
+      @java.lang.Override
+      public ListClusterShardGroupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterShardGroupsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterShardGroupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterShardGroupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListClusterShardGroupsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> 
+        getShardGroupsList();
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup getShardGroups(int index);
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    int getShardGroupsCount();
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder> 
+        getShardGroupsOrBuilderList();
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder getShardGroupsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse}
+   */
+  public  static final class ListClusterShardGroupsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse)
+      ListClusterShardGroupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListClusterShardGroupsResponse.newBuilder() to construct.
+    private ListClusterShardGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListClusterShardGroupsResponse() {
+      shardGroups_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListClusterShardGroupsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                shardGroups_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              shardGroups_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          shardGroups_ = java.util.Collections.unmodifiableList(shardGroups_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SHARD_GROUPS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> shardGroups_;
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getShardGroupsList() {
+      return shardGroups_;
+    }
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder> 
+        getShardGroupsOrBuilderList() {
+      return shardGroups_;
+    }
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    public int getShardGroupsCount() {
+      return shardGroups_.size();
+    }
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup getShardGroups(int index) {
+      return shardGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * List of ClickHouse Cluster shard groups.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder getShardGroupsOrBuilder(
+        int index) {
+      return shardGroups_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+     * list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < shardGroups_.size(); i++) {
+        output.writeMessage(1, shardGroups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < shardGroups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, shardGroups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse) obj;
+
+      boolean result = true;
+      result = result && getShardGroupsList()
+          .equals(other.getShardGroupsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getShardGroupsCount() > 0) {
+        hash = (37 * hash) + SHARD_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getShardGroupsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getShardGroupsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (shardGroupsBuilder_ == null) {
+          shardGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          shardGroupsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (shardGroupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            shardGroups_ = java.util.Collections.unmodifiableList(shardGroups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.shardGroups_ = shardGroups_;
+        } else {
+          result.shardGroups_ = shardGroupsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse.getDefaultInstance()) return this;
+        if (shardGroupsBuilder_ == null) {
+          if (!other.shardGroups_.isEmpty()) {
+            if (shardGroups_.isEmpty()) {
+              shardGroups_ = other.shardGroups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureShardGroupsIsMutable();
+              shardGroups_.addAll(other.shardGroups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.shardGroups_.isEmpty()) {
+            if (shardGroupsBuilder_.isEmpty()) {
+              shardGroupsBuilder_.dispose();
+              shardGroupsBuilder_ = null;
+              shardGroups_ = other.shardGroups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              shardGroupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getShardGroupsFieldBuilder() : null;
+            } else {
+              shardGroupsBuilder_.addAllMessages(other.shardGroups_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> shardGroups_ =
+        java.util.Collections.emptyList();
+      private void ensureShardGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          shardGroups_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup>(shardGroups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder> shardGroupsBuilder_;
+
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> getShardGroupsList() {
+        if (shardGroupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(shardGroups_);
+        } else {
+          return shardGroupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public int getShardGroupsCount() {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.size();
+        } else {
+          return shardGroupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup getShardGroups(int index) {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.get(index);
+        } else {
+          return shardGroupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder setShardGroups(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardGroupsIsMutable();
+          shardGroups_.set(index, value);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder setShardGroups(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          shardGroupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder addShardGroups(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(value);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder addShardGroups(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup value) {
+        if (shardGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(index, value);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder addShardGroups(
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder addShardGroups(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder builderForValue) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder addAllShardGroups(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> values) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shardGroups_);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder clearShardGroups() {
+        if (shardGroupsBuilder_ == null) {
+          shardGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public Builder removeShardGroups(int index) {
+        if (shardGroupsBuilder_ == null) {
+          ensureShardGroupsIsMutable();
+          shardGroups_.remove(index);
+          onChanged();
+        } else {
+          shardGroupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder getShardGroupsBuilder(
+          int index) {
+        return getShardGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder getShardGroupsOrBuilder(
+          int index) {
+        if (shardGroupsBuilder_ == null) {
+          return shardGroups_.get(index);  } else {
+          return shardGroupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder> 
+           getShardGroupsOrBuilderList() {
+        if (shardGroupsBuilder_ != null) {
+          return shardGroupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(shardGroups_);
+        }
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder addShardGroupsBuilder() {
+        return getShardGroupsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder addShardGroupsBuilder(
+          int index) {
+        return getShardGroupsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of ClickHouse Cluster shard groups.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder> 
+           getShardGroupsBuilderList() {
+        return getShardGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder> 
+          getShardGroupsFieldBuilder() {
+        if (shardGroupsBuilder_ == null) {
+          shardGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroupOrBuilder>(
+                  shardGroups_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          shardGroups_ = null;
+        }
+        return shardGroupsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
+       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
+       * list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.ListClusterShardGroupsResponse)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListClusterShardGroupsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListClusterShardGroupsResponse>() {
+      @java.lang.Override
+      public ListClusterShardGroupsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListClusterShardGroupsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListClusterShardGroupsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListClusterShardGroupsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterShardGroupsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateClusterShardGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    java.util.List<java.lang.String>
+        getShardNamesList();
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    int getShardNamesCount();
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    java.lang.String getShardNames(int index);
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getShardNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest}
+   */
+  public  static final class CreateClusterShardGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest)
+      CreateClusterShardGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateClusterShardGroupRequest.newBuilder() to construct.
+    private CreateClusterShardGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateClusterShardGroupRequest() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+      description_ = "";
+      shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateClusterShardGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                shardNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              shardNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          shardNames_ = shardNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_NAMES_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList shardNames_;
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getShardNamesList() {
+      return shardNames_;
+    }
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    public int getShardNamesCount() {
+      return shardNames_.size();
+    }
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    public java.lang.String getShardNames(int index) {
+      return shardNames_.get(index);
+    }
+    /**
+     * <pre>
+     * List of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardNamesBytes(int index) {
+      return shardNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      for (int i = 0; i < shardNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, shardNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < shardNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(shardNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getShardNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && getShardNamesList()
+          .equals(other.getShardNamesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getShardNamesCount() > 0) {
+        hash = (37 * hash) + SHARD_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getShardNamesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        description_ = "";
+
+        shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        result.description_ = description_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          shardNames_ = shardNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.shardNames_ = shardNames_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.shardNames_.isEmpty()) {
+          if (shardNames_.isEmpty()) {
+            shardNames_ = other.shardNames_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureShardNamesIsMutable();
+            shardNames_.addAll(other.shardNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 3;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureShardNamesIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          shardNames_ = new com.google.protobuf.LazyStringArrayList(shardNames_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getShardNamesList() {
+        return shardNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public int getShardNamesCount() {
+        return shardNames_.size();
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public java.lang.String getShardNames(int index) {
+        return shardNames_.get(index);
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardNamesBytes(int index) {
+        return shardNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public Builder setShardNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+        shardNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public Builder addShardNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+        shardNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public Builder addAllShardNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureShardNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, shardNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public Builder clearShardNames() {
+        shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 4;</code>
+       */
+      public Builder addShardNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureShardNamesIsMutable();
+        shardNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupRequest)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateClusterShardGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateClusterShardGroupRequest>() {
+      @java.lang.Override
+      public CreateClusterShardGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateClusterShardGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateClusterShardGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateClusterShardGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateClusterShardGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata}
+   */
+  public  static final class CreateClusterShardGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata)
+      CreateClusterShardGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateClusterShardGroupMetadata.newBuilder() to construct.
+    private CreateClusterShardGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateClusterShardGroupMetadata() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateClusterShardGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster to add a shard group to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name for the new shard group.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster to add a shard group to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name for the new shard group.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.CreateClusterShardGroupMetadata)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateClusterShardGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreateClusterShardGroupMetadata>() {
+      @java.lang.Override
+      public CreateClusterShardGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateClusterShardGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateClusterShardGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateClusterShardGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.CreateClusterShardGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateClusterShardGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getShardNamesList();
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    int getShardNamesCount();
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    java.lang.String getShardNames(int index);
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getShardNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest}
+   */
+  public  static final class UpdateClusterShardGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest)
+      UpdateClusterShardGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterShardGroupRequest.newBuilder() to construct.
+    private UpdateClusterShardGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterShardGroupRequest() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+      description_ = "";
+      shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterShardGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                shardNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              shardNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          shardNames_ = shardNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 3;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_NAMES_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList shardNames_;
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getShardNamesList() {
+      return shardNames_;
+    }
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    public int getShardNamesCount() {
+      return shardNames_.size();
+    }
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    public java.lang.String getShardNames(int index) {
+      return shardNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Updated list of shard names that belongs to the new group.
+     * </pre>
+     *
+     * <code>repeated string shard_names = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardNamesBytes(int index) {
+      return shardNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(3, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      for (int i = 0; i < shardNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, shardNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdateMask());
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < shardNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(shardNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getShardNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && (hasUpdateMask() == other.hasUpdateMask());
+      if (hasUpdateMask()) {
+        result = result && getUpdateMask()
+            .equals(other.getUpdateMask());
+      }
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && getShardNamesList()
+          .equals(other.getShardNamesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getShardNamesCount() > 0) {
+        hash = (37 * hash) + SHARD_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getShardNamesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        description_ = "";
+
+        shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.description_ = description_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          shardNames_ = shardNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.shardNames_ = shardNames_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.shardNames_.isEmpty()) {
+          if (shardNames_.isEmpty()) {
+            shardNames_ = other.shardNames_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureShardNamesIsMutable();
+            shardNames_.addAll(other.shardNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureShardNamesIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          shardNames_ = new com.google.protobuf.LazyStringArrayList(shardNames_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getShardNamesList() {
+        return shardNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public int getShardNamesCount() {
+        return shardNames_.size();
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public java.lang.String getShardNames(int index) {
+        return shardNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardNamesBytes(int index) {
+        return shardNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public Builder setShardNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+        shardNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public Builder addShardNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureShardNamesIsMutable();
+        shardNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public Builder addAllShardNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureShardNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, shardNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public Builder clearShardNames() {
+        shardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated list of shard names that belongs to the new group.
+       * </pre>
+       *
+       * <code>repeated string shard_names = 5;</code>
+       */
+      public Builder addShardNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureShardNamesIsMutable();
+        shardNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupRequest)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterShardGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterShardGroupRequest>() {
+      @java.lang.Override
+      public UpdateClusterShardGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterShardGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterShardGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterShardGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateClusterShardGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata}
+   */
+  public  static final class UpdateClusterShardGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata)
+      UpdateClusterShardGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateClusterShardGroupMetadata.newBuilder() to construct.
+    private UpdateClusterShardGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateClusterShardGroupMetadata() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateClusterShardGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cluster that contains the shard group being updated.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the shard group that should be updated.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cluster that contains the shard group being updated.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be updated.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.UpdateClusterShardGroupMetadata)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateClusterShardGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateClusterShardGroupMetadata>() {
+      @java.lang.Override
+      public UpdateClusterShardGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateClusterShardGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateClusterShardGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateClusterShardGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteClusterShardGroupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest}
+   */
+  public  static final class DeleteClusterShardGroupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest)
+      DeleteClusterShardGroupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteClusterShardGroupRequest.newBuilder() to construct.
+    private DeleteClusterShardGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteClusterShardGroupRequest() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteClusterShardGroupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest(this);
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupRequest)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteClusterShardGroupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteClusterShardGroupRequest>() {
+      @java.lang.Override
+      public DeleteClusterShardGroupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteClusterShardGroupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteClusterShardGroupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteClusterShardGroupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteClusterShardGroupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    java.lang.String getShardGroupName();
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getShardGroupNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata}
+   */
+  public  static final class DeleteClusterShardGroupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata)
+      DeleteClusterShardGroupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteClusterShardGroupMetadata.newBuilder() to construct.
+    private DeleteClusterShardGroupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteClusterShardGroupMetadata() {
+      clusterId_ = "";
+      shardGroupName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteClusterShardGroupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shardGroupName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the ClickHouse cluster the shard group belongs to.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHARD_GROUP_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shardGroupName_;
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public java.lang.String getShardGroupName() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shardGroupName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the shard group that should be deleted.
+     * </pre>
+     *
+     * <code>string shard_group_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getShardGroupNameBytes() {
+      java.lang.Object ref = shardGroupName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shardGroupName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardGroupName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getShardGroupNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardGroupName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getShardGroupName()
+          .equals(other.getShardGroupName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + SHARD_GROUP_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShardGroupName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        shardGroupName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.shardGroupName_ = shardGroupName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getShardGroupName().isEmpty()) {
+          shardGroupName_ = other.shardGroupName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the ClickHouse cluster the shard group belongs to.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shardGroupName_ = "";
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public java.lang.String getShardGroupName() {
+        java.lang.Object ref = shardGroupName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shardGroupName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getShardGroupNameBytes() {
+        java.lang.Object ref = shardGroupName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shardGroupName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder clearShardGroupName() {
+        
+        shardGroupName_ = getDefaultInstance().getShardGroupName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the shard group that should be deleted.
+       * </pre>
+       *
+       * <code>string shard_group_name = 2;</code>
+       */
+      public Builder setShardGroupNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shardGroupName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.DeleteClusterShardGroupMetadata)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteClusterShardGroupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteClusterShardGroupMetadata>() {
+      @java.lang.Override
+      public DeleteClusterShardGroupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteClusterShardGroupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteClusterShardGroupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteClusterShardGroupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardGroupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateClusterExternalDictionaryRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.CreateClusterExternalDictionaryRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -54513,6 +62927,51 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -54747,174 +63206,232 @@ public final class ClusterServiceOuterClass {
       "B\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001" +
       "\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteClus" +
       "terShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\n" +
-      "shard_name\030\002 \001(\t\"\263\001\n&CreateClusterExtern" +
-      "alDictionaryRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022g\n\023external_dictionary\030\002 \001" +
-      "(\0132J.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig.ExternalDictionary\"=" +
-      "\n\'CreateClusterExternalDictionaryMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\"l\n&DeleteClusterEx" +
-      "ternalDictionaryRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\030external_dictionary" +
-      "_name\030\002 \001(\t\"=\n\'DeleteClusterExternalDict" +
-      "ionaryMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\313\001\n\010H" +
-      "ostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022=\n\004ty" +
-      "pe\030\002 \001(\0162).yandex.cloud.mdb.clickhouse.v" +
-      "1.Host.TypeB\004\350\3071\001\022\033\n\tsubnet_id\030\003 \001(\tB\010\212\310" +
-      "1\004<=50\022\030\n\020assign_public_ip\030\004 \001(\010\022.\n\nshar" +
-      "d_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
-      "\"\377\003\n\nConfigSpec\022\017\n\007version\030\003 \001(\t\022I\n\nclic" +
-      "khouse\030\001 \001(\01325.yandex.cloud.mdb.clickhou" +
-      "se.v1.ConfigSpec.Clickhouse\022G\n\tzookeeper" +
-      "\030\002 \001(\01324.yandex.cloud.mdb.clickhouse.v1." +
-      "ConfigSpec.Zookeeper\0223\n\023backup_window_st" +
-      "art\030\004 \001(\0132\026.google.type.TimeOfDay\0226\n\006acc" +
-      "ess\030\005 \001(\0132&.yandex.cloud.mdb.clickhouse." +
-      "v1.Access\032\223\001\n\nClickhouse\022G\n\006config\030\001 \001(\013" +
-      "27.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig\022<\n\tresources\030\002 \001(\0132).y" +
-      "andex.cloud.mdb.clickhouse.v1.Resources\032" +
-      "I\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yandex" +
-      ".cloud.mdb.clickhouse.v1.Resources\"\244\002\n\017S" +
-      "hardConfigSpec\022N\n\nclickhouse\030\001 \001(\0132:.yan" +
-      "dex.cloud.mdb.clickhouse.v1.ShardConfigS" +
-      "pec.Clickhouse\032\300\001\n\nClickhouse\022G\n\006config\030" +
-      "\001 \001(\01327.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig\022<\n\tresources\030\002 \001(" +
-      "\0132).yandex.cloud.mdb.clickhouse.v1.Resou" +
-      "rces\022+\n\006weight\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value2\374\'\n\016ClusterService\022\227\001\n\003Get\0221.y" +
-      "andex.cloud.mdb.clickhouse.v1.GetCluster" +
-      "Request\032\'.yandex.cloud.mdb.clickhouse.v1" +
-      ".Cluster\"4\202\323\344\223\002.\022,/managed-clickhouse/v1" +
-      "/clusters/{cluster_id}\022\232\001\n\004List\0223.yandex" +
-      ".cloud.mdb.clickhouse.v1.ListClustersReq" +
-      "uest\0324.yandex.cloud.mdb.clickhouse.v1.Li" +
-      "stClustersResponse\"\'\202\323\344\223\002!\022\037/managed-cli" +
-      "ckhouse/v1/clusters\022\261\001\n\006Create\0224.yandex." +
-      "cloud.mdb.clickhouse.v1.CreateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "N\202\323\344\223\002$\"\037/managed-clickhouse/v1/clusters" +
-      ":\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022" +
-      "\276\001\n\006Update\0224.yandex.cloud.mdb.clickhouse" +
-      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"[\202\323\344\223\00212,/managed-cl" +
-      "ickhouse/v1/clusters/{cluster_id}:\001*\262\322* " +
-      "\n\025UpdateClusterMetadata\022\007Cluster\022\311\001\n\006Del" +
-      "ete\0224.yandex.cloud.mdb.clickhouse.v1.Del" +
-      "eteClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"f\202\323\344\223\002.*,/managed-clickhous" +
-      "e/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
-      "usterMetadata\022\025google.protobuf.Empty\022\276\001\n" +
-      "\005Start\0223.yandex.cloud.mdb.clickhouse.v1." +
-      "StartClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"]\202\323\344\223\0024\"2/managed-clickho" +
-      "use/v1/clusters/{cluster_id}:start\262\322*\037\n\024" +
-      "StartClusterMetadata\022\007Cluster\022\272\001\n\004Stop\0222" +
-      ".yandex.cloud.mdb.clickhouse.v1.StopClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"[\202\323\344\223\0023\"1/managed-clickhouse/v1/cl" +
-      "usters/{cluster_id}:stop\262\322*\036\n\023StopCluste" +
-      "rMetadata\022\007Cluster\022\275\001\n\004Move\0222.yandex.clo" +
-      "ud.mdb.clickhouse.v1.MoveClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"^\202\323\344\223" +
-      "\0026\"1/managed-clickhouse/v1/clusters/{clu" +
-      "ster_id}:move:\001*\262\322*\036\n\023MoveClusterMetadat" +
-      "a\022\007Cluster\022\335\001\n\014AddZookeeper\022:.yandex.clo" +
-      "ud.mdb.clickhouse.v1.AddClusterZookeeper" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"n\202\323\344\223\002>\"9/managed-clickhouse/v1/clust" +
-      "ers/{cluster_id}:addZookeeper:\001*\262\322*&\n\033Ad" +
-      "dClusterZookeeperMetadata\022\007Cluster\022\302\001\n\006B" +
-      "ackup\0224.yandex.cloud.mdb.clickhouse.v1.B" +
-      "ackupClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"_\202\323\344\223\0025\"3/managed-clickho" +
-      "use/v1/clusters/{cluster_id}:backup\262\322* \n" +
-      "\025BackupClusterMetadata\022\007Cluster\022\274\001\n\007Rest" +
-      "ore\0225.yandex.cloud.mdb.clickhouse.v1.Res" +
-      "toreClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"W\202\323\344\223\002,\"\'/managed-clickhou" +
-      "se/v1/clusters:restore:\001*\262\322*!\n\026RestoreCl" +
-      "usterMetadata\022\007Cluster\022\266\001\n\010ListLogs\0226.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.ListCluster" +
-      "LogsRequest\0327.yandex.cloud.mdb.clickhous" +
-      "e.v1.ListClusterLogsResponse\"9\202\323\344\223\0023\0221/m" +
-      "anaged-clickhouse/v1/clusters/{cluster_i" +
-      "d}:logs\022\265\001\n\nStreamLogs\0228.yandex.cloud.md" +
-      "b.clickhouse.v1.StreamClusterLogsRequest" +
-      "\032).yandex.cloud.mdb.clickhouse.v1.LogRec" +
-      "ord\"@\202\323\344\223\002:\0228/managed-clickhouse/v1/clus" +
-      "ters/{cluster_id}:stream_logs0\001\022\316\001\n\016List" +
-      "Operations\022<.yandex.cloud.mdb.clickhouse" +
-      ".v1.ListClusterOperationsRequest\032=.yande" +
-      "x.cloud.mdb.clickhouse.v1.ListClusterOpe" +
-      "rationsResponse\"?\202\323\344\223\0029\0227/managed-clickh" +
-      "ouse/v1/clusters/{cluster_id}/operations" +
-      "\022\302\001\n\013ListBackups\0229.yandex.cloud.mdb.clic" +
-      "khouse.v1.ListClusterBackupsRequest\032:.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.ListCluster" +
-      "BackupsResponse\"<\202\323\344\223\0026\0224/managed-clickh" +
-      "ouse/v1/clusters/{cluster_id}/backups\022\272\001" +
-      "\n\tListHosts\0227.yandex.cloud.mdb.clickhous" +
-      "e.v1.ListClusterHostsRequest\0328.yandex.cl" +
-      "oud.mdb.clickhouse.v1.ListClusterHostsRe" +
-      "sponse\":\202\323\344\223\0024\0222/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}/hosts\022\344\001\n\010AddHosts\022" +
-      "6.yandex.cloud.mdb.clickhouse.v1.AddClus" +
-      "terHostsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"}\202\323\344\223\002C\">/managed-clickhouse/" +
-      "v1/clusters/{cluster_id}/hosts:batchCrea" +
-      "te:\001*\262\322*0\n\027AddClusterHostsMetadata\022\025goog" +
-      "le.protobuf.Empty\022\356\001\n\013DeleteHosts\0229.yand" +
-      "ex.cloud.mdb.clickhouse.v1.DeleteCluster" +
-      "HostsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\200\001\202\323\344\223\002C\">/managed-clickhouse/v1" +
-      "/clusters/{cluster_id}/hosts:batchDelete" +
-      ":\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\263\001\n\010GetShard\0226.yandex" +
-      ".cloud.mdb.clickhouse.v1.GetClusterShard" +
-      "Request\032%.yandex.cloud.mdb.clickhouse.v1" +
-      ".Shard\"H\202\323\344\223\002B\022@/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}/shards/{shard_name}" +
-      "\022\276\001\n\nListShards\0228.yandex.cloud.mdb.click" +
-      "house.v1.ListClusterShardsRequest\0329.yand" +
-      "ex.cloud.mdb.clickhouse.v1.ListClusterSh" +
-      "ardsResponse\";\202\323\344\223\0025\0223/managed-clickhous" +
-      "e/v1/clusters/{cluster_id}/shards\022\311\001\n\010Ad" +
-      "dShard\0226.yandex.cloud.mdb.clickhouse.v1." +
-      "AddClusterShardRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"b\202\323\344\223\0028\"3/managed-clic" +
-      "khouse/v1/clusters/{cluster_id}/shards:\001" +
-      "*\262\322* \n\027AddClusterShardMetadata\022\005Shard\022\337\001" +
-      "\n\013UpdateShard\0229.yandex.cloud.mdb.clickho" +
-      "use.v1.UpdateClusterShardRequest\032!.yande" +
-      "x.cloud.operation.Operation\"r\202\323\344\223\002E2@/ma" +
+      "shard_name\030\002 \001(\t\"y\n\033GetClusterShardGroup" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0228\n\020shard_group_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
+      "3\362\3071\016[a-zA-Z0-9_-]*\"\177\n\035ListClusterShardG" +
+      "roupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"{\n\036ListClus" +
+      "terShardGroupsResponse\022@\n\014shard_groups\030\001" +
+      " \003(\0132*.yandex.cloud.mdb.clickhouse.v1.Sh" +
+      "ardGroup\022\027\n\017next_page_token\030\002 \001(\t\"\246\001\n\036Cr" +
+      "eateClusterShardGroupRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020shard_group_na" +
+      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022\023\n\013description\030\003 \001(\t\022\023\n\013shard_names\030\004 \003" +
+      "(\t\"O\n\037CreateClusterShardGroupMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\022\030\n\020shard_group_name\030\002 " +
+      "\001(\t\"\327\001\n\036UpdateClusterShardGroupRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\020shar" +
+      "d_group_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google" +
+      ".protobuf.FieldMask\022\023\n\013description\030\004 \001(\t" +
+      "\022\023\n\013shard_names\030\005 \003(\t\"O\n\037UpdateClusterSh" +
+      "ardGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020" +
+      "shard_group_name\030\002 \001(\t\"|\n\036DeleteClusterS" +
+      "hardGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\0228\n\020shard_group_name\030\002 \001(\tB\036\350\307" +
+      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"O\n\037DeleteCl" +
+      "usterShardGroupMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\022\030\n\020shard_group_name\030\002 \001(\t\"\263\001\n&Create" +
+      "ClusterExternalDictionaryRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022g\n\023external_d" +
+      "ictionary\030\002 \001(\0132J.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.Externa" +
+      "lDictionary\"=\n\'CreateClusterExternalDict" +
+      "ionaryMetadata\022\022\n\ncluster_id\030\001 \001(\t\"l\n&De" +
+      "leteClusterExternalDictionaryRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\030extern" +
+      "al_dictionary_name\030\002 \001(\t\"=\n\'DeleteCluste" +
+      "rExternalDictionaryMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\"\313\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212" +
+      "\3101\004<=50\022=\n\004type\030\002 \001(\0162).yandex.cloud.mdb" +
+      ".clickhouse.v1.Host.TypeB\004\350\3071\001\022\033\n\tsubnet" +
+      "_id\030\003 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030" +
+      "\004 \001(\010\022.\n\nshard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[" +
+      "a-zA-Z0-9_-]*\"\377\003\n\nConfigSpec\022\017\n\007version\030" +
+      "\003 \001(\t\022I\n\nclickhouse\030\001 \001(\01325.yandex.cloud" +
+      ".mdb.clickhouse.v1.ConfigSpec.Clickhouse" +
+      "\022G\n\tzookeeper\030\002 \001(\01324.yandex.cloud.mdb.c" +
+      "lickhouse.v1.ConfigSpec.Zookeeper\0223\n\023bac" +
+      "kup_window_start\030\004 \001(\0132\026.google.type.Tim" +
+      "eOfDay\0226\n\006access\030\005 \001(\0132&.yandex.cloud.md" +
+      "b.clickhouse.v1.Access\032\223\001\n\nClickhouse\022G\n" +
+      "\006config\030\001 \001(\01327.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig\022<\n\tresour" +
+      "ces\030\002 \001(\0132).yandex.cloud.mdb.clickhouse." +
+      "v1.Resources\032I\n\tZookeeper\022<\n\tresources\030\001" +
+      " \001(\0132).yandex.cloud.mdb.clickhouse.v1.Re" +
+      "sources\"\244\002\n\017ShardConfigSpec\022N\n\nclickhous" +
+      "e\030\001 \001(\0132:.yandex.cloud.mdb.clickhouse.v1" +
+      ".ShardConfigSpec.Clickhouse\032\300\001\n\nClickhou" +
+      "se\022G\n\006config\030\001 \001(\01327.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig\022<\n\tr" +
+      "esources\030\002 \001(\0132).yandex.cloud.mdb.clickh" +
+      "ouse.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value2\2331\n\016ClusterServic" +
+      "e\022\227\001\n\003Get\0221.yandex.cloud.mdb.clickhouse." +
+      "v1.GetClusterRequest\032\'.yandex.cloud.mdb." +
+      "clickhouse.v1.Cluster\"4\202\323\344\223\002.\022,/managed-" +
+      "clickhouse/v1/clusters/{cluster_id}\022\232\001\n\004" +
+      "List\0223.yandex.cloud.mdb.clickhouse.v1.Li" +
+      "stClustersRequest\0324.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.ListClustersResponse\"\'\202\323\344\223\002!\022" +
+      "\037/managed-clickhouse/v1/clusters\022\261\001\n\006Cre" +
+      "ate\0224.yandex.cloud.mdb.clickhouse.v1.Cre" +
+      "ateClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"N\202\323\344\223\002$\"\037/managed-clickhous" +
+      "e/v1/clusters:\001*\262\322* \n\025CreateClusterMetad" +
+      "ata\022\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.m" +
+      "db.clickhouse.v1.UpdateClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"[\202\323\344\223\0021" +
+      "2,/managed-clickhouse/v1/clusters/{clust" +
+      "er_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cl" +
+      "uster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.clic" +
+      "khouse.v1.DeleteClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"f\202\323\344\223\002.*,/mana" +
+      "ged-clickhouse/v1/clusters/{cluster_id}\262" +
+      "\322*.\n\025DeleteClusterMetadata\022\025google.proto" +
+      "buf.Empty\022\276\001\n\005Start\0223.yandex.cloud.mdb.c" +
+      "lickhouse.v1.StartClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"]\202\323\344\223\0024\"2/ma" +
       "naged-clickhouse/v1/clusters/{cluster_id" +
-      "}/shards/{shard_name}:\001*\262\322*#\n\032UpdateClus" +
-      "terShardMetadata\022\005Shard\022\354\001\n\013DeleteShard\022" +
-      "9.yandex.cloud.mdb.clickhouse.v1.DeleteC" +
-      "lusterShardRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\177\202\323\344\223\002B*@/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}/shards/{shar" +
-      "d_name}\262\322*3\n\032DeleteClusterShardMetadata\022" +
-      "\025google.protobuf.Empty\022\216\002\n\030CreateExterna" +
-      "lDictionary\022F.yandex.cloud.mdb.clickhous" +
-      "e.v1.CreateClusterExternalDictionaryRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\206" +
-      "\001\202\323\344\223\002J\"E/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}:createExternalDictionary:\001" +
-      "*\262\322*2\n\'CreateClusterExternalDictionaryMe" +
-      "tadata\022\007Cluster\022\216\002\n\030DeleteExternalDictio" +
-      "nary\022F.yandex.cloud.mdb.clickhouse.v1.De" +
-      "leteClusterExternalDictionaryRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\206\001\202\323\344\223\002J" +
-      "\"E/managed-clickhouse/v1/clusters/{clust" +
-      "er_id}:deleteExternalDictionary:\001*\262\322*2\n\'" +
-      "DeleteClusterExternalDictionaryMetadata\022" +
-      "\007ClusterBs\n\"yandex.cloud.api.mdb.clickho" +
-      "use.v1ZMgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/clickhouse/v1;click" +
-      "houseb\006proto3"
+      "}:start\262\322*\037\n\024StartClusterMetadata\022\007Clust" +
+      "er\022\272\001\n\004Stop\0222.yandex.cloud.mdb.clickhous" +
+      "e.v1.StopClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"[\202\323\344\223\0023\"1/managed-cli" +
+      "ckhouse/v1/clusters/{cluster_id}:stop\262\322*" +
+      "\036\n\023StopClusterMetadata\022\007Cluster\022\275\001\n\004Move" +
+      "\0222.yandex.cloud.mdb.clickhouse.v1.MoveCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"^\202\323\344\223\0026\"1/managed-clickhouse/v1/" +
+      "clusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveC" +
+      "lusterMetadata\022\007Cluster\022\335\001\n\014AddZookeeper" +
+      "\022:.yandex.cloud.mdb.clickhouse.v1.AddClu" +
+      "sterZookeeperRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"n\202\323\344\223\002>\"9/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}:addZookeep" +
+      "er:\001*\262\322*&\n\033AddClusterZookeeperMetadata\022\007" +
+      "Cluster\022\302\001\n\006Backup\0224.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.BackupClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"_\202\323\344\223\0025\"3/ma" +
+      "naged-clickhouse/v1/clusters/{cluster_id" +
+      "}:backup\262\322* \n\025BackupClusterMetadata\022\007Clu" +
+      "ster\022\274\001\n\007Restore\0225.yandex.cloud.mdb.clic" +
+      "khouse.v1.RestoreClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"W\202\323\344\223\002,\"\'/man" +
+      "aged-clickhouse/v1/clusters:restore:\001*\262\322" +
+      "*!\n\026RestoreClusterMetadata\022\007Cluster\022\266\001\n\010" +
+      "ListLogs\0226.yandex.cloud.mdb.clickhouse.v" +
+      "1.ListClusterLogsRequest\0327.yandex.cloud." +
+      "mdb.clickhouse.v1.ListClusterLogsRespons" +
+      "e\"9\202\323\344\223\0023\0221/managed-clickhouse/v1/cluste" +
+      "rs/{cluster_id}:logs\022\265\001\n\nStreamLogs\0228.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.StreamClust" +
+      "erLogsRequest\032).yandex.cloud.mdb.clickho" +
+      "use.v1.LogRecord\"@\202\323\344\223\002:\0228/managed-click" +
+      "house/v1/clusters/{cluster_id}:stream_lo" +
+      "gs0\001\022\316\001\n\016ListOperations\022<.yandex.cloud.m" +
+      "db.clickhouse.v1.ListClusterOperationsRe" +
+      "quest\032=.yandex.cloud.mdb.clickhouse.v1.L" +
+      "istClusterOperationsResponse\"?\202\323\344\223\0029\0227/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}/operations\022\302\001\n\013ListBackups\0229.yandex.c" +
+      "loud.mdb.clickhouse.v1.ListClusterBackup" +
+      "sRequest\032:.yandex.cloud.mdb.clickhouse.v" +
+      "1.ListClusterBackupsResponse\"<\202\323\344\223\0026\0224/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}/backups\022\272\001\n\tListHosts\0227.yandex.cloud." +
+      "mdb.clickhouse.v1.ListClusterHostsReques" +
+      "t\0328.yandex.cloud.mdb.clickhouse.v1.ListC" +
+      "lusterHostsResponse\":\202\323\344\223\0024\0222/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}/hosts\022" +
+      "\344\001\n\010AddHosts\0226.yandex.cloud.mdb.clickhou" +
+      "se.v1.AddClusterHostsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"}\202\323\344\223\002C\">/manage" +
+      "d-clickhouse/v1/clusters/{cluster_id}/ho" +
+      "sts:batchCreate:\001*\262\322*0\n\027AddClusterHostsM" +
+      "etadata\022\025google.protobuf.Empty\022\356\001\n\013Delet" +
+      "eHosts\0229.yandex.cloud.mdb.clickhouse.v1." +
+      "DeleteClusterHostsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\200\001\202\323\344\223\002C\">/managed-" +
+      "clickhouse/v1/clusters/{cluster_id}/host" +
+      "s:batchDelete:\001*\262\322*3\n\032DeleteClusterHosts" +
+      "Metadata\022\025google.protobuf.Empty\022\263\001\n\010GetS" +
+      "hard\0226.yandex.cloud.mdb.clickhouse.v1.Ge" +
+      "tClusterShardRequest\032%.yandex.cloud.mdb." +
+      "clickhouse.v1.Shard\"H\202\323\344\223\002B\022@/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}/shards" +
+      "/{shard_name}\022\276\001\n\nListShards\0228.yandex.cl" +
+      "oud.mdb.clickhouse.v1.ListClusterShardsR" +
+      "equest\0329.yandex.cloud.mdb.clickhouse.v1." +
+      "ListClusterShardsResponse\";\202\323\344\223\0025\0223/mana" +
+      "ged-clickhouse/v1/clusters/{cluster_id}/" +
+      "shards\022\311\001\n\010AddShard\0226.yandex.cloud.mdb.c" +
+      "lickhouse.v1.AddClusterShardRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"b\202\323\344\223\0028\"3" +
+      "/managed-clickhouse/v1/clusters/{cluster" +
+      "_id}/shards:\001*\262\322* \n\027AddClusterShardMetad" +
+      "ata\022\005Shard\022\337\001\n\013UpdateShard\0229.yandex.clou" +
+      "d.mdb.clickhouse.v1.UpdateClusterShardRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"r\202\323\344\223\002E2@/managed-clickhouse/v1/cluster" +
+      "s/{cluster_id}/shards/{shard_name}:\001*\262\322*" +
+      "#\n\032UpdateClusterShardMetadata\022\005Shard\022\354\001\n" +
+      "\013DeleteShard\0229.yandex.cloud.mdb.clickhou" +
+      "se.v1.DeleteClusterShardRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\177\202\323\344\223\002B*@/man" +
+      "aged-clickhouse/v1/clusters/{cluster_id}" +
+      "/shards/{shard_name}\262\322*3\n\032DeleteClusterS" +
+      "hardMetadata\022\025google.protobuf.Empty\022\315\001\n\r" +
+      "GetShardGroup\022;.yandex.cloud.mdb.clickho" +
+      "use.v1.GetClusterShardGroupRequest\032*.yan" +
+      "dex.cloud.mdb.clickhouse.v1.ShardGroup\"S" +
+      "\202\323\344\223\002M\022K/managed-clickhouse/v1/clusters/" +
+      "{cluster_id}/shardGroups/{shard_group_na" +
+      "me}\022\322\001\n\017ListShardGroups\022=.yandex.cloud.m" +
+      "db.clickhouse.v1.ListClusterShardGroupsR" +
+      "equest\032>.yandex.cloud.mdb.clickhouse.v1." +
+      "ListClusterShardGroupsResponse\"@\202\323\344\223\002:\0228" +
+      "/managed-clickhouse/v1/clusters/{cluster" +
+      "_id}/shardGroups\022\353\001\n\020CreateShardGroup\022>." +
+      "yandex.cloud.mdb.clickhouse.v1.CreateClu" +
+      "sterShardGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"t\202\323\344\223\002=\"8/managed-click" +
+      "house/v1/clusters/{cluster_id}/shardGrou" +
+      "ps:\001*\262\322*-\n\037CreateClusterShardGroupMetada" +
+      "ta\022\nShardGroup\022\377\001\n\020UpdateShardGroup\022>.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.UpdateClust" +
+      "erShardGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\207\001\202\323\344\223\002P2K/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}/shardGroup" +
+      "s/{shard_group_name}:\001*\262\322*-\n\037UpdateClust" +
+      "erShardGroupMetadata\022\nShardGroup\022\207\002\n\020Del" +
+      "eteShardGroup\022>.yandex.cloud.mdb.clickho" +
+      "use.v1.DeleteClusterShardGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"\217\001\202\323\344\223\002" +
+      "M*K/managed-clickhouse/v1/clusters/{clus" +
+      "ter_id}/shardGroups/{shard_group_name}\262\322" +
+      "*8\n\037DeleteClusterShardGroupMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\216\002\n\030CreateExternalDic" +
+      "tionary\022F.yandex.cloud.mdb.clickhouse.v1" +
+      ".CreateClusterExternalDictionaryRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\206\001\202\323\344" +
+      "\223\002J\"E/managed-clickhouse/v1/clusters/{cl" +
+      "uster_id}:createExternalDictionary:\001*\262\322*" +
+      "2\n\'CreateClusterExternalDictionaryMetada" +
+      "ta\022\007Cluster\022\216\002\n\030DeleteExternalDictionary" +
+      "\022F.yandex.cloud.mdb.clickhouse.v1.Delete" +
+      "ClusterExternalDictionaryRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\206\001\202\323\344\223\002J\"E/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}:deleteExternalDictionary:\001*\262\322*2\n\'Dele" +
+      "teClusterExternalDictionaryMetadata\022\007Clu" +
+      "sterBs\n\"yandex.cloud.api.mdb.clickhouse." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/",
+      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55229,38 +63746,92 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
-    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor =
+    internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(44);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_GetClusterShardGroupRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_ListClusterShardGroupsResponse_descriptor,
+        new java.lang.String[] { "ShardGroups", "NextPageToken", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", "Description", "ShardNames", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterShardGroupMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", "UpdateMask", "Description", "ShardNames", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_UpdateClusterShardGroupMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(52);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterShardGroupMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "ShardGroupName", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionary", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CreateClusterExternalDictionaryMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ExternalDictionaryName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_DeleteClusterExternalDictionaryMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "Type", "SubnetId", "AssignPublicIp", "ShardName", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor,
@@ -55278,7 +63849,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_Zookeeper_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ShardConfigSpec_descriptor,

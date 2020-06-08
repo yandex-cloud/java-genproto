@@ -1757,15 +1757,15 @@ public final class LifecyclePolicyOuterClass {
         getDescriptionBytes();
 
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     boolean hasExpirePeriod();
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     com.google.protobuf.Duration getExpirePeriod();
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder();
 
@@ -1936,19 +1936,19 @@ public final class LifecyclePolicyOuterClass {
     public static final int EXPIRE_PERIOD_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration expirePeriod_;
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public boolean hasExpirePeriod() {
       return expirePeriod_ != null;
     }
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public com.google.protobuf.Duration getExpirePeriod() {
       return expirePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expirePeriod_;
     }
     /**
-     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+     * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder() {
       return getExpirePeriod();
@@ -2465,13 +2465,13 @@ public final class LifecyclePolicyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> expirePeriodBuilder_;
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public boolean hasExpirePeriod() {
         return expirePeriodBuilder_ != null || expirePeriod_ != null;
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.Duration getExpirePeriod() {
         if (expirePeriodBuilder_ == null) {
@@ -2481,7 +2481,7 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder setExpirePeriod(com.google.protobuf.Duration value) {
         if (expirePeriodBuilder_ == null) {
@@ -2497,7 +2497,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder setExpirePeriod(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -2511,7 +2511,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder mergeExpirePeriod(com.google.protobuf.Duration value) {
         if (expirePeriodBuilder_ == null) {
@@ -2529,7 +2529,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder clearExpirePeriod() {
         if (expirePeriodBuilder_ == null) {
@@ -2543,7 +2543,7 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.Duration.Builder getExpirePeriodBuilder() {
         
@@ -2551,7 +2551,7 @@ public final class LifecyclePolicyOuterClass {
         return getExpirePeriodFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder() {
         if (expirePeriodBuilder_ != null) {
@@ -2562,7 +2562,7 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
-       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;24h"];</code>
+       * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -2783,15 +2783,15 @@ public final class LifecyclePolicyOuterClass {
       "mp\022?\n\005rules\030\007 \003(\01320.yandex.cloud.contain" +
       "erregistry.v1.LifecycleRule\":\n\006Status\022\026\n" +
       "\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\014\n\010DIS" +
-      "ABLED\020\002\"\273\001\n\rLifecycleRule\022\036\n\013description" +
-      "\030\001 \001(\tB\t\212\3101\005<=256\022:\n\rexpire_period\030\002 \001(\013" +
-      "2\031.google.protobuf.DurationB\010\372\3071\004>24h\022\035\n" +
-      "\ntag_regexp\030\003 \001(\tB\t\212\3101\005<=256\022\020\n\010untagged" +
-      "\030\004 \001(\010\022\035\n\014retained_top\030\005 \001(\003B\007\372\3071\003>=0B\200\001" +
-      "\n%yandex.cloud.api.containerregistry.v1Z" +
-      "Wgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/containerregistry/v1;container" +
-      "registryb\006proto3"
+      "ABLED\020\002\"\274\001\n\rLifecycleRule\022\036\n\013description" +
+      "\030\001 \001(\tB\t\212\3101\005<=256\022;\n\rexpire_period\030\002 \001(\013" +
+      "2\031.google.protobuf.DurationB\t\372\3071\005>=24h\022\035" +
+      "\n\ntag_regexp\030\003 \001(\tB\t\212\3101\005<=256\022\020\n\010untagge" +
+      "d\030\004 \001(\010\022\035\n\014retained_top\030\005 \001(\003B\007\372\3071\003>=0B\200" +
+      "\001\n%yandex.cloud.api.containerregistry.v1" +
+      "ZWgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/containerregistry/v1;containe" +
+      "rregistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

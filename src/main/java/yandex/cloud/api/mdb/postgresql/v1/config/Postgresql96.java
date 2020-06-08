@@ -1217,7 +1217,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     boolean hasArchiveTimeout();
     /**
@@ -1225,7 +1225,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     com.google.protobuf.Int64Value getArchiveTimeout();
     /**
@@ -1233,7 +1233,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getArchiveTimeoutOrBuilder();
 
@@ -5624,7 +5624,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     public boolean hasArchiveTimeout() {
       return archiveTimeout_ != null;
@@ -5634,7 +5634,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     public com.google.protobuf.Int64Value getArchiveTimeout() {
       return archiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : archiveTimeout_;
@@ -5644,7 +5644,7 @@ public final class Postgresql96 {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+     * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getArchiveTimeoutOrBuilder() {
       return getArchiveTimeout();
@@ -16943,7 +16943,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public boolean hasArchiveTimeout() {
         return archiveTimeoutBuilder_ != null || archiveTimeout_ != null;
@@ -16953,7 +16953,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public com.google.protobuf.Int64Value getArchiveTimeout() {
         if (archiveTimeoutBuilder_ == null) {
@@ -16967,7 +16967,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public Builder setArchiveTimeout(com.google.protobuf.Int64Value value) {
         if (archiveTimeoutBuilder_ == null) {
@@ -16987,7 +16987,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public Builder setArchiveTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -17005,7 +17005,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public Builder mergeArchiveTimeout(com.google.protobuf.Int64Value value) {
         if (archiveTimeoutBuilder_ == null) {
@@ -17027,7 +17027,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public Builder clearArchiveTimeout() {
         if (archiveTimeoutBuilder_ == null) {
@@ -17045,7 +17045,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getArchiveTimeoutBuilder() {
         
@@ -17057,7 +17057,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getArchiveTimeoutOrBuilder() {
         if (archiveTimeoutBuilder_ != null) {
@@ -17072,7 +17072,7 @@ public final class Postgresql96 {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-600000"];</code>
+       * <code>.google.protobuf.Int64Value archive_timeout = 78 [(.yandex.cloud.value) = "10000-86400000"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -18704,7 +18704,7 @@ public final class Postgresql96 {
       "postgresql9_6.proto\022%yandex.cloud.mdb.po" +
       "stgresql.v1.config\032\036google/protobuf/wrap" +
       "pers.proto\032\035yandex/cloud/validation.prot" +
-      "o\"\3039\n\023PostgresqlConfig9_6\0224\n\017max_connect" +
+      "o\"\3059\n\023PostgresqlConfig9_6\0224\n\017max_connect" +
       "ions\030\001 \001(\0132\033.google.protobuf.Int64Value\022" +
       "3\n\016shared_buffers\030\002 \001(\0132\033.google.protobu" +
       "f.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.goo" +
@@ -18834,71 +18834,71 @@ public final class Postgresql96 {
       "vacuum_cost_limit\030L \001(\0132\033.google.protobu" +
       "f.Int64ValueB\014\372\3071\010-1-10000\022J\n\022autovacuum" +
       "_naptime\030M \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\021\372\3071\r1000-86400000\022F\n\017archive_timeou" +
-      "t\030N \001(\0132\033.google.protobuf.Int64ValueB\020\372\307" +
-      "1\01410000-600000\022N\n\031track_activity_query_s" +
-      "ize\030O \001(\0132\033.google.protobuf.Int64ValueB\016" +
-      "\372\3071\n100-102400\022I\n\030effective_io_concurren" +
-      "cy\030P \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
-      "\3071\0060-1000\022M\n\024effective_cache_size\030Q \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\022\372\3071\0160-5497" +
-      "55813888\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPEC" +
-      "IFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LE" +
-      "VEL_LOGICAL\020\002\"\326\001\n\021SynchronousCommit\022\"\n\036S" +
-      "YNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCH" +
-      "RONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT" +
-      "_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037" +
-      "SYNCHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYN" +
-      "CHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023Const" +
-      "raintExclusion\022$\n CONSTRAINT_EXCLUSION_U" +
-      "NSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020" +
-      "\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONST" +
-      "RAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForcePar" +
-      "allelMode\022#\n\037FORCE_PARALLEL_MODE_UNSPECI" +
-      "FIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FO" +
-      "RCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLE" +
-      "L_MODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEV" +
-      "EL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024" +
-      "\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3" +
-      "\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DE" +
-      "BUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_N" +
-      "OTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LE" +
-      "VEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_" +
-      "LEVEL_PANIC\020\013\"\231\001\n\021LogErrorVerbosity\022#\n\037L" +
-      "OG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_" +
-      "ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VER" +
-      "BOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_" +
-      "VERBOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEM" +
-      "ENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020" +
-      "\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMEN" +
-      "T_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Trans" +
-      "actionIsolation\022%\n!TRANSACTION_ISOLATION" +
-      "_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_" +
-      "READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLAT" +
-      "ION_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOL" +
-      "ATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_I" +
-      "SOLATION_SERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034" +
-      "\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OU" +
-      "TPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\t" +
-      "XmlBinary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n" +
-      "\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002" +
-      "\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020" +
-      "\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION" +
-      "_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLA" +
-      "SH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOT" +
-      "E\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH" +
-      "_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENC" +
-      "ODING\020\004\"\231\002\n\026PostgresqlConfigSet9_6\022Z\n\020ef" +
-      "fective_config\030\001 \001(\0132:.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlConfig9_6" +
-      "B\004\350\3071\001\022O\n\013user_config\030\002 \001(\0132:.yandex.clo" +
-      "ud.mdb.postgresql.v1.config.PostgresqlCo" +
-      "nfig9_6\022R\n\016default_config\030\003 \001(\0132:.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig9_6B\201\001\n)yandex.cloud.api.mdb.pos" +
-      "tgresql.v1.configZTgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/postgres" +
-      "ql/v1/config;postgresqlb\006proto3"
+      "lueB\021\372\3071\r1000-86400000\022H\n\017archive_timeou" +
+      "t\030N \001(\0132\033.google.protobuf.Int64ValueB\022\372\307" +
+      "1\01610000-86400000\022N\n\031track_activity_query" +
+      "_size\030O \001(\0132\033.google.protobuf.Int64Value" +
+      "B\016\372\3071\n100-102400\022I\n\030effective_io_concurr" +
+      "ency\030P \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\n\372\3071\0060-1000\022M\n\024effective_cache_size\030Q \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\022\372\3071\0160-54" +
+      "9755813888\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSP" +
+      "ECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_" +
+      "LEVEL_LOGICAL\020\002\"\326\001\n\021SynchronousCommit\022\"\n" +
+      "\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYN" +
+      "CHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMM" +
+      "IT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LOCAL\020\003\022#" +
+      "\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE\020\004\022#\n\037S" +
+      "YNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"\232\001\n\023Con" +
+      "straintExclusion\022$\n CONSTRAINT_EXCLUSION" +
+      "_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_O" +
+      "N\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CON" +
+      "STRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForceP" +
+      "arallelMode\022#\n\037FORCE_PARALLEL_MODE_UNSPE" +
+      "CIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027" +
+      "FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARAL" +
+      "LEL_MODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_L" +
+      "EVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001" +
+      "\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBU" +
+      "G3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_" +
+      "DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL" +
+      "_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_" +
+      "LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LO" +
+      "G_LEVEL_PANIC\020\013\"\231\001\n\021LogErrorVerbosity\022#\n" +
+      "\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LO" +
+      "G_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_V" +
+      "ERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSIT" +
+      "Y_VERBOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LOG_STAT" +
+      "EMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NON" +
+      "E\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEM" +
+      "ENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Tra" +
+      "nsactionIsolation\022%\n!TRANSACTION_ISOLATI" +
+      "ON_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATIO" +
+      "N_READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOL" +
+      "ATION_READ_COMMITTED\020\002\022)\n%TRANSACTION_IS" +
+      "OLATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTION" +
+      "_ISOLATION_SERIALIZABLE\020\004\"[\n\013ByteaOutput" +
+      "\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_" +
+      "OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R" +
+      "\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022" +
+      "\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX" +
+      "\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIE" +
+      "D\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTI" +
+      "ON_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKS" +
+      "LASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QU" +
+      "OTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLA" +
+      "SH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_E" +
+      "NCODING\020\004\"\231\002\n\026PostgresqlConfigSet9_6\022Z\n\020" +
+      "effective_config\030\001 \001(\0132:.yandex.cloud.md" +
+      "b.postgresql.v1.config.PostgresqlConfig9" +
+      "_6B\004\350\3071\001\022O\n\013user_config\030\002 \001(\0132:.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "Config9_6\022R\n\016default_config\030\003 \001(\0132:.yand" +
+      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
+      "esqlConfig9_6B\201\001\n)yandex.cloud.api.mdb.p" +
+      "ostgresql.v1.configZTgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/postgr" +
+      "esql/v1/config;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
