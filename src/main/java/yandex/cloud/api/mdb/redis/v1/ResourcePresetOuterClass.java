@@ -79,6 +79,15 @@ public final class ResourcePresetOuterClass {
      * <code>int64 memory = 3;</code>
      */
     long getMemory();
+
+    /**
+     * <pre>
+     * Number of CPU cores for a Redis host created with the preset.
+     * </pre>
+     *
+     * <code>int64 cores = 4;</code>
+     */
+    long getCores();
   }
   /**
    * <pre>
@@ -100,6 +109,7 @@ public final class ResourcePresetOuterClass {
       id_ = "";
       zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       memory_ = 0L;
+      cores_ = 0L;
     }
 
     @java.lang.Override
@@ -144,6 +154,11 @@ public final class ResourcePresetOuterClass {
             case 24: {
 
               memory_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              cores_ = input.readInt64();
               break;
             }
             default: {
@@ -282,6 +297,19 @@ public final class ResourcePresetOuterClass {
       return memory_;
     }
 
+    public static final int CORES_FIELD_NUMBER = 4;
+    private long cores_;
+    /**
+     * <pre>
+     * Number of CPU cores for a Redis host created with the preset.
+     * </pre>
+     *
+     * <code>int64 cores = 4;</code>
+     */
+    public long getCores() {
+      return cores_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -304,6 +332,9 @@ public final class ResourcePresetOuterClass {
       }
       if (memory_ != 0L) {
         output.writeInt64(3, memory_);
+      }
+      if (cores_ != 0L) {
+        output.writeInt64(4, cores_);
       }
       unknownFields.writeTo(output);
     }
@@ -329,6 +360,10 @@ public final class ResourcePresetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, memory_);
       }
+      if (cores_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, cores_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -351,6 +386,8 @@ public final class ResourcePresetOuterClass {
           .equals(other.getZoneIdsList());
       result = result && (getMemory()
           == other.getMemory());
+      result = result && (getCores()
+          == other.getCores());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -371,6 +408,9 @@ public final class ResourcePresetOuterClass {
       hash = (37 * hash) + MEMORY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMemory());
+      hash = (37 * hash) + CORES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCores());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -514,6 +554,8 @@ public final class ResourcePresetOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         memory_ = 0L;
 
+        cores_ = 0L;
+
         return this;
       }
 
@@ -549,6 +591,7 @@ public final class ResourcePresetOuterClass {
         }
         result.zoneIds_ = zoneIds_;
         result.memory_ = memory_;
+        result.cores_ = cores_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -614,6 +657,9 @@ public final class ResourcePresetOuterClass {
         }
         if (other.getMemory() != 0L) {
           setMemory(other.getMemory());
+        }
+        if (other.getCores() != 0L) {
+          setCores(other.getCores());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -901,6 +947,44 @@ public final class ResourcePresetOuterClass {
         onChanged();
         return this;
       }
+
+      private long cores_ ;
+      /**
+       * <pre>
+       * Number of CPU cores for a Redis host created with the preset.
+       * </pre>
+       *
+       * <code>int64 cores = 4;</code>
+       */
+      public long getCores() {
+        return cores_;
+      }
+      /**
+       * <pre>
+       * Number of CPU cores for a Redis host created with the preset.
+       * </pre>
+       *
+       * <code>int64 cores = 4;</code>
+       */
+      public Builder setCores(long value) {
+        
+        cores_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of CPU cores for a Redis host created with the preset.
+       * </pre>
+       *
+       * <code>int64 cores = 4;</code>
+       */
+      public Builder clearCores() {
+        
+        cores_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -969,12 +1053,12 @@ public final class ResourcePresetOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/mdb/redis/v1/resource_pre" +
-      "set.proto\022\031yandex.cloud.mdb.redis.v1\">\n\016" +
+      "set.proto\022\031yandex.cloud.mdb.redis.v1\"M\n\016" +
       "ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010zone_ids\030\002" +
-      " \003(\t\022\016\n\006memory\030\003 \001(\003Bd\n\035yandex.cloud.api" +
-      ".mdb.redis.v1ZCgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/mdb/redis/v1;red" +
-      "isb\006proto3"
+      " \003(\t\022\016\n\006memory\030\003 \001(\003\022\r\n\005cores\030\004 \001(\003Bd\n\035y" +
+      "andex.cloud.api.mdb.redis.v1ZCgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -993,7 +1077,7 @@ public final class ResourcePresetOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ResourcePreset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ResourcePreset_descriptor,
-        new java.lang.String[] { "Id", "ZoneIds", "Memory", });
+        new java.lang.String[] { "Id", "ZoneIds", "Memory", "Cores", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

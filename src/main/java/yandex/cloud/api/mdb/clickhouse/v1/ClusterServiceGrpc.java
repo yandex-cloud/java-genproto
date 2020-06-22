@@ -415,21 +415,21 @@ public final class ClusterServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
-      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod;
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "StreamLogs",
       requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.class,
-      responseType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord.class,
+      responseType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
-      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> getStreamLogsMethod;
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> getStreamLogsMethod;
     if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
       synchronized (ClusterServiceGrpc.class) {
         if ((getStreamLogsMethod = ClusterServiceGrpc.getStreamLogsMethod) == null) {
           ClusterServiceGrpc.getStreamLogsMethod = getStreamLogsMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest, yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
                   "yandex.cloud.mdb.clickhouse.v1.ClusterService", "StreamLogs"))
@@ -437,7 +437,7 @@ public final class ClusterServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance()))
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance()))
                   .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StreamLogs"))
                   .build();
           }
@@ -1148,7 +1148,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
       asyncUnimplementedUnaryCall(getStreamLogsMethod(), responseObserver);
     }
 
@@ -1413,7 +1413,7 @@ public final class ClusterServiceGrpc {
             asyncServerStreamingCall(
               new MethodHandlers<
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest,
-                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord>(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord>(
                   this, METHODID_STREAM_LOGS)))
           .addMethod(
             getListOperationsMethod(),
@@ -1699,7 +1699,7 @@ public final class ClusterServiceGrpc {
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> responseObserver) {
+        io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getStreamLogsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -2040,7 +2040,7 @@ public final class ClusterServiceGrpc {
      * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
      * </pre>
      */
-    public java.util.Iterator<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord> streamLogs(
+    public java.util.Iterator<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
         yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request) {
       return blockingServerStreamingCall(
           getChannel(), getStreamLogsMethod(), getCallOptions(), request);
@@ -2658,7 +2658,7 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_STREAM_LOGS:
           serviceImpl.streamLogs((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.LogRecord>) responseObserver);
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.ListClusterOperationsRequest) request,

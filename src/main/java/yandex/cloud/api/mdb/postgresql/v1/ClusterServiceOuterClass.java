@@ -23670,6 +23670,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with `next_record_token` from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23681,6 +23682,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with `next_record_token` from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23843,6 +23845,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with `next_record_token` from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -23865,6 +23868,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * This value is interchangeable with `next_record_token` from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -24564,6 +24568,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with `next_record_token` from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24586,6 +24591,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with `next_record_token` from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24609,6 +24615,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with `next_record_token` from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24629,6 +24636,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with `next_record_token` from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24645,6 +24653,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * This value is interchangeable with `next_record_token` from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -24708,6 +24717,873 @@ public final class ClusterServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ListClusterLogsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StreamLogRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.StreamLogRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    boolean hasRecord();
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord getRecord();
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder();
+
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    java.lang.String getNextRecordToken();
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextRecordTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.StreamLogRecord}
+   */
+  public  static final class StreamLogRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.StreamLogRecord)
+      StreamLogRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamLogRecord.newBuilder() to construct.
+    private StreamLogRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamLogRecord() {
+      nextRecordToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StreamLogRecord(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder subBuilder = null;
+              if (record_ != null) {
+                subBuilder = record_.toBuilder();
+              }
+              record_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(record_);
+                record_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextRecordToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.class, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord record_;
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord getRecord() {
+      return record_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+    }
+    /**
+     * <pre>
+     * One of the requested log records.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder() {
+      return getRecord();
+    }
+
+    public static final int NEXT_RECORD_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextRecordToken_;
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    public java.lang.String getNextRecordToken() {
+      java.lang.Object ref = nextRecordToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextRecordToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to continue streaming logs starting from the exact
+     * same record. To continue streaming, specify value of `next_record_token`
+     * as value for `record_token` parameter in the next StreamLogs request.
+     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * </pre>
+     *
+     * <code>string next_record_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextRecordTokenBytes() {
+      java.lang.Object ref = nextRecordToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextRecordToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (record_ != null) {
+        output.writeMessage(1, getRecord());
+      }
+      if (!getNextRecordTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextRecordToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRecord());
+      }
+      if (!getNextRecordTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextRecordToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord other = (yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord) obj;
+
+      boolean result = true;
+      result = result && (hasRecord() == other.hasRecord());
+      if (hasRecord()) {
+        result = result && getRecord()
+            .equals(other.getRecord());
+      }
+      result = result && getNextRecordToken()
+          .equals(other.getNextRecordToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (37 * hash) + NEXT_RECORD_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextRecordToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.StreamLogRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.postgresql.v1.StreamLogRecord)
+        yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.class, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (recordBuilder_ == null) {
+          record_ = null;
+        } else {
+          record_ = null;
+          recordBuilder_ = null;
+        }
+        nextRecordToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord build() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord buildPartial() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord result = new yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord(this);
+        if (recordBuilder_ == null) {
+          result.record_ = record_;
+        } else {
+          result.record_ = recordBuilder_.build();
+        }
+        result.nextRecordToken_ = nextRecordToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord) {
+          return mergeFrom((yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord other) {
+        if (other == yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord.getDefaultInstance()) return this;
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        if (!other.getNextRecordToken().isEmpty()) {
+          nextRecordToken_ = other.nextRecordToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord record_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder> recordBuilder_;
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public boolean hasRecord() {
+        return recordBuilder_ != null || record_ != null;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public Builder setRecord(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+          onChanged();
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public Builder setRecord(
+          yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+          onChanged();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public Builder mergeRecord(yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord value) {
+        if (recordBuilder_ == null) {
+          if (record_ != null) {
+            record_ =
+              yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.newBuilder(record_).mergeFrom(value).buildPartial();
+          } else {
+            record_ = value;
+          }
+          onChanged();
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public Builder clearRecord() {
+        if (recordBuilder_ == null) {
+          record_ = null;
+          onChanged();
+        } else {
+          record_ = null;
+          recordBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder getRecordBuilder() {
+        
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <pre>
+       * One of the requested log records.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.LogRecord record = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecord.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.LogRecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+
+      private java.lang.Object nextRecordToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public java.lang.String getNextRecordToken() {
+        java.lang.Object ref = nextRecordToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextRecordToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextRecordTokenBytes() {
+        java.lang.Object ref = nextRecordToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextRecordToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder setNextRecordToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextRecordToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder clearNextRecordToken() {
+        
+        nextRecordToken_ = getDefaultInstance().getNextRecordToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to continue streaming logs starting from the exact
+       * same record. To continue streaming, specify value of `next_record_token`
+       * as value for `record_token` parameter in the next StreamLogs request.
+       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * </pre>
+       *
+       * <code>string next_record_token = 2;</code>
+       */
+      public Builder setNextRecordTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextRecordToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.postgresql.v1.StreamLogRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.postgresql.v1.StreamLogRecord)
+    private static final yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord();
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamLogRecord>
+        PARSER = new com.google.protobuf.AbstractParser<StreamLogRecord>() {
+      @java.lang.Override
+      public StreamLogRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StreamLogRecord(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamLogRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamLogRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.StreamLogRecord getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24834,6 +25710,26 @@ public final class ClusterServiceOuterClass {
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getToTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getRecordToken();
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRecordTokenBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.StreamClusterLogsRequest}
@@ -24851,6 +25747,7 @@ public final class ClusterServiceOuterClass {
       clusterId_ = "";
       columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       serviceType_ = 0;
+      recordToken_ = "";
     }
 
     @java.lang.Override
@@ -24922,6 +25819,12 @@ public final class ClusterServiceOuterClass {
                 toTime_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              recordToken_ = s;
               break;
             }
             default: {
@@ -25259,6 +26162,50 @@ public final class ClusterServiceOuterClass {
       return getToTime();
     }
 
+    public static final int RECORD_TOKEN_FIELD_NUMBER = 6;
+    private volatile java.lang.Object recordToken_;
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getRecordToken() {
+      java.lang.Object ref = recordToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * request to start streaming from next log record.
+     * </pre>
+     *
+     * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecordTokenBytes() {
+      java.lang.Object ref = recordToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -25287,6 +26234,9 @@ public final class ClusterServiceOuterClass {
       }
       if (toTime_ != null) {
         output.writeMessage(5, getToTime());
+      }
+      if (!getRecordTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, recordToken_);
       }
       unknownFields.writeTo(output);
     }
@@ -25320,6 +26270,9 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getToTime());
       }
+      if (!getRecordTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, recordToken_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -25351,6 +26304,8 @@ public final class ClusterServiceOuterClass {
         result = result && getToTime()
             .equals(other.getToTime());
       }
+      result = result && getRecordToken()
+          .equals(other.getRecordToken());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -25378,6 +26333,8 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + TO_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getToTime().hashCode();
       }
+      hash = (37 * hash) + RECORD_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25529,6 +26486,8 @@ public final class ClusterServiceOuterClass {
           toTime_ = null;
           toTimeBuilder_ = null;
         }
+        recordToken_ = "";
+
         return this;
       }
 
@@ -25574,6 +26533,7 @@ public final class ClusterServiceOuterClass {
         } else {
           result.toTime_ = toTimeBuilder_.build();
         }
+        result.recordToken_ = recordToken_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -25645,6 +26605,10 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasToTime()) {
           mergeToTime(other.getToTime());
+        }
+        if (!other.getRecordToken().isEmpty()) {
+          recordToken_ = other.recordToken_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -26262,6 +27226,100 @@ public final class ClusterServiceOuterClass {
           toTime_ = null;
         }
         return toTimeBuilder_;
+      }
+
+      private java.lang.Object recordToken_ = "";
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getRecordToken() {
+        java.lang.Object ref = recordToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRecordTokenBytes() {
+        java.lang.Object ref = recordToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setRecordToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        recordToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearRecordToken() {
+        
+        recordToken_ = getDefaultInstance().getRecordToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * request to start streaming from next log record.
+       * </pre>
+       *
+       * <code>string record_token = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setRecordTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        recordToken_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -46035,6 +47093,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterLogsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_postgresql_v1_StreamClusterLogsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46249,190 +47312,193 @@ public final class ClusterServiceOuterClass {
       "UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020" +
       "\002\"k\n\027ListClusterLogsResponse\0227\n\004logs\030\001 \003" +
       "(\0132).yandex.cloud.mdb.postgresql.v1.LogR" +
-      "ecord\022\027\n\017next_page_token\030\002 \001(\t\"\324\002\n\030Strea" +
-      "mClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022Z\n\014" +
-      "service_type\030\003 \001(\0162D.yandex.cloud.mdb.po" +
-      "stgresql.v1.StreamClusterLogsRequest.Ser" +
-      "viceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\"G\n\013ServiceType\022\034\n\030S" +
-      "ERVICE_TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020" +
-      "\001\022\n\n\006POOLER\020\002\"~\n\034ListClusterOperationsRe" +
+      "ecord\022\027\n\017next_page_token\030\002 \001(\t\"g\n\017Stream" +
+      "LogRecord\0229\n\006record\030\001 \001(\0132).yandex.cloud" +
+      ".mdb.postgresql.v1.LogRecord\022\031\n\021next_rec" +
+      "ord_token\030\002 \001(\t\"\365\002\n\030StreamClusterLogsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025" +
+      "\n\rcolumn_filter\030\002 \003(\t\022Z\n\014service_type\030\003 " +
+      "\001(\0162D.yandex.cloud.mdb.postgresql.v1.Str" +
+      "eamClusterLogsRequest.ServiceType\022-\n\tfro" +
+      "m_time\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\"G" +
+      "\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"~\n\034ListC" +
+      "lusterOperationsRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
+      "o\n\035ListClusterOperationsResponse\0225\n\noper" +
+      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
+      "eration\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031List" +
+      "ClusterBackupsRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n" +
+      "\032ListClusterBackupsResponse\0227\n\007backups\030\001" +
+      " \003(\0132&.yandex.cloud.mdb.postgresql.v1.Ba" +
+      "ckup\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListClu" +
+      "sterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\030List" +
+      "ClusterHostsResponse\0223\n\005hosts\030\001 \003(\0132$.ya" +
+      "ndex.cloud.mdb.postgresql.v1.Host\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\200\001\n\026AddClusterHostsRe" +
       "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"{\n\031ListClusterBackupsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032ListClusterBackup" +
-      "sResponse\0227\n\007backups\030\001 \003(\0132&.yandex.clou" +
-      "d.mdb.postgresql.v1.Backup\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\"h\n\030ListClusterHostsRespon" +
-      "se\0223\n\005hosts\030\001 \003(\0132$.yandex.cloud.mdb.pos" +
-      "tgresql.v1.Host\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\200\001\n\026AddClusterHostsRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022D\n\nhost_specs\030\002 \003(" +
-      "\0132(.yandex.cloud.mdb.postgresql.v1.HostS" +
-      "pecB\006\202\3101\002>0\"A\n\027AddClusterHostsMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b" +
-      "\n\031DeleteClusterHostsRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(" +
-      "\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClusterHosts" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_nam" +
-      "es\030\002 \003(\t\"\220\001\n\031UpdateClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022Q\n\021upda" +
-      "te_host_specs\030\002 \003(\0132..yandex.cloud.mdb.p" +
-      "ostgresql.v1.UpdateHostSpecB\006\202\3101\002>0\"D\n\032U" +
-      "pdateClusterHostsMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\271\001\n\016UpdateHost" +
-      "Spec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001\022\032\n\022replica" +
-      "tion_source\030\002 \001(\t\022-\n\010priority\030\003 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022C\n\013config_spec\030" +
-      "\004 \001(\0132..yandex.cloud.mdb.postgresql.v1.C" +
-      "onfigHostSpec\"\354\001\n\010HostSpec\022\031\n\007zone_id\030\001 " +
-      "\001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=" +
-      "50\022\030\n\020assign_public_ip\030\003 \001(\010\022\032\n\022replicat" +
-      "ion_source\030\004 \001(\t\022-\n\010priority\030\005 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022C\n\013config_spec\030\006" +
-      " \001(\0132..yandex.cloud.mdb.postgresql.v1.Co" +
-      "nfigHostSpec\"\255\006\n\nConfigSpec\022\017\n\007version\030\001" +
-      " \001(\t\022[\n\025postgresql_config_9_6\030\002 \001(\0132:.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig9_6H\000\022_\n\027postgresql_config_1" +
-      "0_1c\030\n \001(\0132<.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlConfig10_1CH\000\022Y\n\024po" +
-      "stgresql_config_10\030\003 \001(\01329.yandex.cloud." +
+      "D\n\nhost_specs\030\002 \003(\0132(.yandex.cloud.mdb.p" +
+      "ostgresql.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClus" +
+      "terHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\n" +
+      "host_names\030\002 \003(\t\"b\n\031DeleteClusterHostsRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032" +
+      "DeleteClusterHostsMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\220\001\n\031UpdateClu" +
+      "sterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022Q\n\021update_host_specs\030\002 \003(\0132.." +
+      "yandex.cloud.mdb.postgresql.v1.UpdateHos" +
+      "tSpecB\006\202\3101\002>0\"D\n\032UpdateClusterHostsMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 " +
+      "\003(\t\"\271\001\n\016UpdateHostSpec\022\027\n\thost_name\030\001 \001(" +
+      "\tB\004\350\3071\001\022\032\n\022replication_source\030\002 \001(\t\022-\n\010p" +
+      "riority\030\003 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022C\n\013config_spec\030\004 \001(\0132..yandex.cloud.m" +
+      "db.postgresql.v1.ConfigHostSpec\"\354\001\n\010Host" +
+      "Spec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubne" +
+      "t_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip" +
+      "\030\003 \001(\010\022\032\n\022replication_source\030\004 \001(\t\022-\n\010pr" +
+      "iority\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022C\n\013config_spec\030\006 \001(\0132..yandex.cloud.md" +
+      "b.postgresql.v1.ConfigHostSpec\"\255\006\n\nConfi" +
+      "gSpec\022\017\n\007version\030\001 \001(\t\022[\n\025postgresql_con" +
+      "fig_9_6\030\002 \001(\0132:.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlConfig9_6H\000\022_\n\027p" +
+      "ostgresql_config_10_1c\030\n \001(\0132<.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlC" +
+      "onfig10_1CH\000\022Y\n\024postgresql_config_10\030\003 \001" +
+      "(\01329.yandex.cloud.mdb.postgresql.v1.conf" +
+      "ig.PostgresqlConfig10H\000\022Y\n\024postgresql_co" +
+      "nfig_11\030\007 \001(\01329.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlConfig11H\000\022Y\n\024po" +
+      "stgresql_config_12\030\013 \001(\01329.yandex.cloud." +
       "mdb.postgresql.v1.config.PostgresqlConfi" +
-      "g10H\000\022Y\n\024postgresql_config_11\030\007 \001(\01329.ya" +
+      "g12H\000\022M\n\rpooler_config\030\004 \001(\01326.yandex.cl" +
+      "oud.mdb.postgresql.v1.ConnectionPoolerCo" +
+      "nfig\022<\n\tresources\030\005 \001(\0132).yandex.cloud.m" +
+      "db.postgresql.v1.Resources\0220\n\014autofailov" +
+      "er\030\006 \001(\0132\032.google.protobuf.BoolValue\0223\n\023" +
+      "backup_window_start\030\010 \001(\0132\026.google.type." +
+      "TimeOfDay\0226\n\006access\030\t \001(\0132&.yandex.cloud" +
+      ".mdb.postgresql.v1.AccessB\023\n\021postgresql_" +
+      "config\"\210\004\n\016ConfigHostSpec\022_\n\025postgresql_" +
+      "config_9_6\030\001 \001(\0132>.yandex.cloud.mdb.post" +
+      "gresql.v1.config.PostgresqlHostConfig9_6" +
+      "H\000\022c\n\027postgresql_config_10_1c\030\004 \001(\0132@.ya" +
       "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlConfig11H\000\022Y\n\024postgresql_config_12" +
-      "\030\013 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlConfig12H\000\022M\n\rpooler_co" +
-      "nfig\030\004 \001(\01326.yandex.cloud.mdb.postgresql" +
-      ".v1.ConnectionPoolerConfig\022<\n\tresources\030" +
-      "\005 \001(\0132).yandex.cloud.mdb.postgresql.v1.R" +
-      "esources\0220\n\014autofailover\030\006 \001(\0132\032.google." +
-      "protobuf.BoolValue\0223\n\023backup_window_star" +
-      "t\030\010 \001(\0132\026.google.type.TimeOfDay\0226\n\006acces" +
-      "s\030\t \001(\0132&.yandex.cloud.mdb.postgresql.v1" +
-      ".AccessB\023\n\021postgresql_config\"\210\004\n\016ConfigH" +
-      "ostSpec\022_\n\025postgresql_config_9_6\030\001 \001(\0132>" +
-      ".yandex.cloud.mdb.postgresql.v1.config.P" +
-      "ostgresqlHostConfig9_6H\000\022c\n\027postgresql_c" +
-      "onfig_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig10" +
-      "_1CH\000\022]\n\024postgresql_config_10\030\002 \001(\0132=.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlHostConfig10H\000\022]\n\024postgresql_confi" +
-      "g_11\030\003 \001(\0132=.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlHostConfig11H\000\022]\n\024p" +
-      "ostgresql_config_12\030\005 \001(\0132=.yandex.cloud" +
-      ".mdb.postgresql.v1.config.PostgresqlHost" +
-      "Config12H\000B\023\n\021postgresql_config2\273\035\n\016Clus" +
-      "terService\022\227\001\n\003Get\0221.yandex.cloud.mdb.po" +
-      "stgresql.v1.GetClusterRequest\032\'.yandex.c" +
-      "loud.mdb.postgresql.v1.Cluster\"4\202\323\344\223\002.\022," +
+      "gresqlHostConfig10_1CH\000\022]\n\024postgresql_co" +
+      "nfig_10\030\002 \001(\0132=.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlHostConfig10H\000\022]" +
+      "\n\024postgresql_config_11\030\003 \001(\0132=.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlH" +
+      "ostConfig11H\000\022]\n\024postgresql_config_12\030\005 " +
+      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlHostConfig12H\000B\023\n\021postgres" +
+      "ql_config2\301\035\n\016ClusterService\022\227\001\n\003Get\0221.y" +
+      "andex.cloud.mdb.postgresql.v1.GetCluster" +
+      "Request\032\'.yandex.cloud.mdb.postgresql.v1" +
+      ".Cluster\"4\202\323\344\223\002.\022,/managed-postgresql/v1" +
+      "/clusters/{cluster_id}\022\232\001\n\004List\0223.yandex" +
+      ".cloud.mdb.postgresql.v1.ListClustersReq" +
+      "uest\0324.yandex.cloud.mdb.postgresql.v1.Li" +
+      "stClustersResponse\"\'\202\323\344\223\002!\022\037/managed-pos" +
+      "tgresql/v1/clusters\022\261\001\n\006Create\0224.yandex." +
+      "cloud.mdb.postgresql.v1.CreateClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "N\202\323\344\223\002$\"\037/managed-postgresql/v1/clusters" +
+      ":\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022" +
+      "\276\001\n\006Update\0224.yandex.cloud.mdb.postgresql" +
+      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"[\202\323\344\223\00212,/managed-po" +
+      "stgresql/v1/clusters/{cluster_id}:\001*\262\322* " +
+      "\n\025UpdateClusterMetadata\022\007Cluster\022\311\001\n\006Del" +
+      "ete\0224.yandex.cloud.mdb.postgresql.v1.Del" +
+      "eteClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"f\202\323\344\223\002.*,/managed-postgresq" +
+      "l/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
+      "usterMetadata\022\025google.protobuf.Empty\022\276\001\n" +
+      "\005Start\0223.yandex.cloud.mdb.postgresql.v1." +
+      "StartClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"]\202\323\344\223\0024\"2/managed-postgre" +
+      "sql/v1/clusters/{cluster_id}:start\262\322*\037\n\024" +
+      "StartClusterMetadata\022\007Cluster\022\272\001\n\004Stop\0222" +
+      ".yandex.cloud.mdb.postgresql.v1.StopClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"[\202\323\344\223\0023\"1/managed-postgresql/v1/cl" +
+      "usters/{cluster_id}:stop\262\322*\036\n\023StopCluste" +
+      "rMetadata\022\007Cluster\022\275\001\n\004Move\0222.yandex.clo" +
+      "ud.mdb.postgresql.v1.MoveClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"^\202\323\344\223" +
+      "\0026\"1/managed-postgresql/v1/clusters/{clu" +
+      "ster_id}:move:\001*\262\322*\036\n\023MoveClusterMetadat" +
+      "a\022\007Cluster\022\302\001\n\006Backup\0224.yandex.cloud.mdb" +
+      ".postgresql.v1.BackupClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"_\202\323\344\223\0025\"3" +
       "/managed-postgresql/v1/clusters/{cluster" +
-      "_id}\022\232\001\n\004List\0223.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListClustersRequest\0324.yandex.clou" +
-      "d.mdb.postgresql.v1.ListClustersResponse" +
-      "\"\'\202\323\344\223\002!\022\037/managed-postgresql/v1/cluster" +
-      "s\022\261\001\n\006Create\0224.yandex.cloud.mdb.postgres" +
-      "ql.v1.CreateClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"N\202\323\344\223\002$\"\037/managed-" +
-      "postgresql/v1/clusters:\001*\262\322* \n\025CreateClu" +
-      "sterMetadata\022\007Cluster\022\276\001\n\006Update\0224.yande" +
-      "x.cloud.mdb.postgresql.v1.UpdateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"[\202\323\344\223\00212,/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
-      "adata\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud" +
-      ".mdb.postgresql.v1.DeleteClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"f\202\323\344\223" +
-      "\002.*,/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}\262\322*.\n\025DeleteClusterMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\276\001\n\005Start\0223.yandex.cl" +
-      "oud.mdb.postgresql.v1.StartClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"]\202\323" +
-      "\344\223\0024\"2/managed-postgresql/v1/clusters/{c" +
-      "luster_id}:start\262\322*\037\n\024StartClusterMetada" +
-      "ta\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb." +
-      "postgresql.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"[\202\323\344\223\0023\"1/ma" +
-      "naged-postgresql/v1/clusters/{cluster_id" +
-      "}:stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster" +
-      "\022\275\001\n\004Move\0222.yandex.cloud.mdb.postgresql." +
-      "v1.MoveClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"^\202\323\344\223\0026\"1/managed-postg" +
-      "resql/v1/clusters/{cluster_id}:move:\001*\262\322" +
-      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\302\001\n\006Bac" +
-      "kup\0224.yandex.cloud.mdb.postgresql.v1.Bac" +
-      "kupClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"_\202\323\344\223\0025\"3/managed-postgresq" +
-      "l/v1/clusters/{cluster_id}:backup\262\322* \n\025B" +
-      "ackupClusterMetadata\022\007Cluster\022\274\001\n\007Restor" +
-      "e\0225.yandex.cloud.mdb.postgresql.v1.Resto" +
-      "reClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"W\202\323\344\223\002,\"\'/managed-postgresql" +
-      "/v1/clusters:restore:\001*\262\322*!\n\026RestoreClus" +
-      "terMetadata\022\007Cluster\022\341\001\n\rStartFailover\022;" +
-      ".yandex.cloud.mdb.postgresql.v1.StartClu" +
-      "sterFailoverRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"p\202\323\344\223\002?\":/managed-postgre" +
-      "sql/v1/clusters/{cluster_id}:startFailov" +
-      "er:\001*\262\322*\'\n\034StartClusterFailoverMetadata\022" +
-      "\007Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb" +
-      ".postgresql.v1.ListClusterLogsRequest\0327." +
-      "yandex.cloud.mdb.postgresql.v1.ListClust" +
-      "erLogsResponse\"9\202\323\344\223\0023\0221/managed-postgre" +
-      "sql/v1/clusters/{cluster_id}:logs\022\265\001\n\nSt" +
-      "reamLogs\0228.yandex.cloud.mdb.postgresql.v" +
-      "1.StreamClusterLogsRequest\032).yandex.clou" +
-      "d.mdb.postgresql.v1.LogRecord\"@\202\323\344\223\002:\0228/" +
-      "managed-postgresql/v1/clusters/{cluster_" +
-      "id}:stream_logs0\001\022\316\001\n\016ListOperations\022<.y" +
-      "andex.cloud.mdb.postgresql.v1.ListCluste" +
-      "rOperationsRequest\032=.yandex.cloud.mdb.po" +
-      "stgresql.v1.ListClusterOperationsRespons" +
-      "e\"?\202\323\344\223\0029\0227/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}/operations\022\302\001\n\013ListBacku" +
-      "ps\0229.yandex.cloud.mdb.postgresql.v1.List" +
-      "ClusterBackupsRequest\032:.yandex.cloud.mdb" +
-      ".postgresql.v1.ListClusterBackupsRespons" +
-      "e\"<\202\323\344\223\0026\0224/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}/backups\022\272\001\n\tListHosts\0227." +
-      "yandex.cloud.mdb.postgresql.v1.ListClust" +
-      "erHostsRequest\0328.yandex.cloud.mdb.postgr" +
-      "esql.v1.ListClusterHostsResponse\":\202\323\344\223\0024" +
-      "\0222/managed-postgresql/v1/clusters/{clust" +
-      "er_id}/hosts\022\344\001\n\010AddHosts\0226.yandex.cloud" +
-      ".mdb.postgresql.v1.AddClusterHostsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"}\202\323" +
-      "\344\223\002C\">/managed-postgresql/v1/clusters/{c" +
-      "luster_id}/hosts:batchCreate:\001*\262\322*0\n\027Add" +
-      "ClusterHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\356\001\n\013DeleteHosts\0229.yandex.cloud.mdb.p" +
-      "ostgresql.v1.DeleteClusterHostsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\200\001\202\323\344\223" +
-      "\002C\">/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}/hosts:batchDelete:\001*\262\322*3\n\032Delet" +
-      "eClusterHostsMetadata\022\025google.protobuf.E" +
-      "mpty\022\356\001\n\013UpdateHosts\0229.yandex.cloud.mdb." +
-      "postgresql.v1.UpdateClusterHostsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\200\001\202\323\344" +
-      "\223\002C\">/managed-postgresql/v1/clusters/{cl" +
-      "uster_id}/hosts:batchUpdate:\001*\262\322*3\n\032Upda" +
-      "teClusterHostsMetadata\022\025google.protobuf." +
-      "EmptyBs\n\"yandex.cloud.api.mdb.postgresql" +
-      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/postgresql/v1;postgres" +
-      "qlb\006proto3"
+      "_id}:backup\262\322* \n\025BackupClusterMetadata\022\007" +
+      "Cluster\022\274\001\n\007Restore\0225.yandex.cloud.mdb.p" +
+      "ostgresql.v1.RestoreClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"W\202\323\344\223\002,\"\'/" +
+      "managed-postgresql/v1/clusters:restore:\001" +
+      "*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\341" +
+      "\001\n\rStartFailover\022;.yandex.cloud.mdb.post" +
+      "gresql.v1.StartClusterFailoverRequest\032!." +
+      "yandex.cloud.operation.Operation\"p\202\323\344\223\002?" +
+      "\":/managed-postgresql/v1/clusters/{clust" +
+      "er_id}:startFailover:\001*\262\322*\'\n\034StartCluste" +
+      "rFailoverMetadata\022\007Cluster\022\266\001\n\010ListLogs\022" +
+      "6.yandex.cloud.mdb.postgresql.v1.ListClu" +
+      "sterLogsRequest\0327.yandex.cloud.mdb.postg" +
+      "resql.v1.ListClusterLogsResponse\"9\202\323\344\223\0023" +
+      "\0221/managed-postgresql/v1/clusters/{clust" +
+      "er_id}:logs\022\273\001\n\nStreamLogs\0228.yandex.clou" +
+      "d.mdb.postgresql.v1.StreamClusterLogsReq" +
+      "uest\032/.yandex.cloud.mdb.postgresql.v1.St" +
+      "reamLogRecord\"@\202\323\344\223\002:\0228/managed-postgres" +
+      "ql/v1/clusters/{cluster_id}:stream_logs0" +
+      "\001\022\316\001\n\016ListOperations\022<.yandex.cloud.mdb." +
+      "postgresql.v1.ListClusterOperationsReque" +
+      "st\032=.yandex.cloud.mdb.postgresql.v1.List" +
+      "ClusterOperationsResponse\"?\202\323\344\223\0029\0227/mana" +
+      "ged-postgresql/v1/clusters/{cluster_id}/" +
+      "operations\022\302\001\n\013ListBackups\0229.yandex.clou" +
+      "d.mdb.postgresql.v1.ListClusterBackupsRe" +
+      "quest\032:.yandex.cloud.mdb.postgresql.v1.L" +
+      "istClusterBackupsResponse\"<\202\323\344\223\0026\0224/mana" +
+      "ged-postgresql/v1/clusters/{cluster_id}/" +
+      "backups\022\272\001\n\tListHosts\0227.yandex.cloud.mdb" +
+      ".postgresql.v1.ListClusterHostsRequest\0328" +
+      ".yandex.cloud.mdb.postgresql.v1.ListClus" +
+      "terHostsResponse\":\202\323\344\223\0024\0222/managed-postg" +
+      "resql/v1/clusters/{cluster_id}/hosts\022\344\001\n" +
+      "\010AddHosts\0226.yandex.cloud.mdb.postgresql." +
+      "v1.AddClusterHostsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"}\202\323\344\223\002C\">/managed-p" +
+      "ostgresql/v1/clusters/{cluster_id}/hosts" +
+      ":batchCreate:\001*\262\322*0\n\027AddClusterHostsMeta" +
+      "data\022\025google.protobuf.Empty\022\356\001\n\013DeleteHo" +
+      "sts\0229.yandex.cloud.mdb.postgresql.v1.Del" +
+      "eteClusterHostsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\200\001\202\323\344\223\002C\">/managed-pos" +
+      "tgresql/v1/clusters/{cluster_id}/hosts:b" +
+      "atchDelete:\001*\262\322*3\n\032DeleteClusterHostsMet" +
+      "adata\022\025google.protobuf.Empty\022\356\001\n\013UpdateH" +
+      "osts\0229.yandex.cloud.mdb.postgresql.v1.Up" +
+      "dateClusterHostsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\200\001\202\323\344\223\002C\">/managed-po" +
+      "stgresql/v1/clusters/{cluster_id}/hosts:" +
+      "batchUpdate:\001*\262\322*3\n\032UpdateClusterHostsMe" +
+      "tadata\022\025google.protobuf.EmptyBs\n\"yandex." +
+      "cloud.api.mdb.postgresql.v1ZMgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/md" +
+      "b/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -46636,104 +47702,110 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
-    internal_static_yandex_cloud_mdb_postgresql_v1_StreamClusterLogsRequest_descriptor =
+    internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor =
       getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_postgresql_v1_StreamLogRecord_descriptor,
+        new java.lang.String[] { "Record", "NextRecordToken", });
+    internal_static_yandex_cloud_mdb_postgresql_v1_StreamClusterLogsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_postgresql_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_StreamClusterLogsRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", });
+        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", });
     internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_DeleteClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "UpdateHostSpecs", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateHostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateHostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateHostSpec_descriptor,
         new java.lang.String[] { "HostName", "ReplicationSource", "Priority", "ConfigSpec", });
     internal_static_yandex_cloud_mdb_postgresql_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_postgresql_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", "ReplicationSource", "Priority", "ConfigSpec", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_descriptor,
         new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig12", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_descriptor,
