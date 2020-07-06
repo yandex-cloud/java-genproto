@@ -6382,6 +6382,23 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getAddHttpCorsHeaderOrBuilder();
+
+    /**
+     * <pre>
+     * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     */
+    int getQuotaModeValue();
+    /**
+     * <pre>
+     * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode();
   }
   /**
    * <pre>
@@ -6409,6 +6426,7 @@ public final class UserOuterClass {
       distinctOverflowMode_ = 0;
       transferOverflowMode_ = 0;
       timeoutOverflowMode_ = 0;
+      quotaMode_ = 0;
     }
 
     @java.lang.Override
@@ -7408,6 +7426,12 @@ public final class UserOuterClass {
 
               break;
             }
+            case 640: {
+              int rawValue = input.readEnum();
+
+              quotaMode_ = rawValue;
+              break;
+            }
             case 650: {
               com.google.protobuf.BoolValue.Builder subBuilder = null;
               if (skipUnavailableShards_ != null) {
@@ -7695,7 +7719,7 @@ public final class UserOuterClass {
       DISTRIBUTED_PRODUCT_MODE_DENY(1),
       /**
        * <pre>
-       *Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
+       * Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_LOCAL = 2;</code>
@@ -7703,7 +7727,7 @@ public final class UserOuterClass {
       DISTRIBUTED_PRODUCT_MODE_LOCAL(2),
       /**
        * <pre>
-       *Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
+       * Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_GLOBAL = 3;</code>
@@ -7711,7 +7735,7 @@ public final class UserOuterClass {
       DISTRIBUTED_PRODUCT_MODE_GLOBAL(3),
       /**
        * <pre>
-       *Allows the use of these types of subqueries.
+       * Allows the use of these types of subqueries.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_ALLOW = 4;</code>
@@ -7734,7 +7758,7 @@ public final class UserOuterClass {
       public static final int DISTRIBUTED_PRODUCT_MODE_DENY_VALUE = 1;
       /**
        * <pre>
-       *Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
+       * Replaces the database and table in the subquery with local ones for the destination server (shard), leaving the normal IN/JOIN.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_LOCAL = 2;</code>
@@ -7742,7 +7766,7 @@ public final class UserOuterClass {
       public static final int DISTRIBUTED_PRODUCT_MODE_LOCAL_VALUE = 2;
       /**
        * <pre>
-       *Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
+       * Replaces the IN/JOIN query with GLOBAL IN/GLOBAL JOIN.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_GLOBAL = 3;</code>
@@ -7750,7 +7774,7 @@ public final class UserOuterClass {
       public static final int DISTRIBUTED_PRODUCT_MODE_GLOBAL_VALUE = 3;
       /**
        * <pre>
-       *Allows the use of these types of subqueries.
+       * Allows the use of these types of subqueries.
        * </pre>
        *
        * <code>DISTRIBUTED_PRODUCT_MODE_ALLOW = 4;</code>
@@ -7831,6 +7855,122 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode}
+     */
+    public enum QuotaMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>QUOTA_MODE_UNSPECIFIED = 0;</code>
+       */
+      QUOTA_MODE_UNSPECIFIED(0),
+      /**
+       * <code>QUOTA_MODE_DEFAULT = 1;</code>
+       */
+      QUOTA_MODE_DEFAULT(1),
+      /**
+       * <code>QUOTA_MODE_KEYED = 2;</code>
+       */
+      QUOTA_MODE_KEYED(2),
+      /**
+       * <code>QUOTA_MODE_KEYED_BY_IP = 3;</code>
+       */
+      QUOTA_MODE_KEYED_BY_IP(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>QUOTA_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int QUOTA_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>QUOTA_MODE_DEFAULT = 1;</code>
+       */
+      public static final int QUOTA_MODE_DEFAULT_VALUE = 1;
+      /**
+       * <code>QUOTA_MODE_KEYED = 2;</code>
+       */
+      public static final int QUOTA_MODE_KEYED_VALUE = 2;
+      /**
+       * <code>QUOTA_MODE_KEYED_BY_IP = 3;</code>
+       */
+      public static final int QUOTA_MODE_KEYED_BY_IP_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static QuotaMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static QuotaMode forNumber(int value) {
+        switch (value) {
+          case 0: return QUOTA_MODE_UNSPECIFIED;
+          case 1: return QUOTA_MODE_DEFAULT;
+          case 2: return QUOTA_MODE_KEYED;
+          case 3: return QUOTA_MODE_KEYED_BY_IP;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<QuotaMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          QuotaMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<QuotaMode>() {
+              public QuotaMode findValueByNumber(int number) {
+                return QuotaMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final QuotaMode[] VALUES = values();
+
+      public static QuotaMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private QuotaMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -10410,6 +10550,31 @@ public final class UserOuterClass {
       return getAddHttpCorsHeader();
     }
 
+    public static final int QUOTA_MODE_FIELD_NUMBER = 80;
+    private int quotaMode_;
+    /**
+     * <pre>
+     * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     */
+    public int getQuotaModeValue() {
+      return quotaMode_;
+    }
+    /**
+     * <pre>
+     * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.valueOf(quotaMode_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10660,6 +10825,9 @@ public final class UserOuterClass {
       }
       if (emptyResultForAggregationByEmptySet_ != null) {
         output.writeMessage(79, getEmptyResultForAggregationByEmptySet());
+      }
+      if (quotaMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.QUOTA_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(80, quotaMode_);
       }
       if (skipUnavailableShards_ != null) {
         output.writeMessage(81, getSkipUnavailableShards());
@@ -10988,6 +11156,10 @@ public final class UserOuterClass {
       if (emptyResultForAggregationByEmptySet_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(79, getEmptyResultForAggregationByEmptySet());
+      }
+      if (quotaMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.QUOTA_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(80, quotaMode_);
       }
       if (skipUnavailableShards_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -11377,6 +11549,7 @@ public final class UserOuterClass {
         result = result && getAddHttpCorsHeader()
             .equals(other.getAddHttpCorsHeader());
       }
+      result = result && quotaMode_ == other.quotaMode_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11692,6 +11865,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + ADD_HTTP_CORS_HEADER_FIELD_NUMBER;
         hash = (53 * hash) + getAddHttpCorsHeader().hashCode();
       }
+      hash = (37 * hash) + QUOTA_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + quotaMode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12278,6 +12453,8 @@ public final class UserOuterClass {
           addHttpCorsHeader_ = null;
           addHttpCorsHeaderBuilder_ = null;
         }
+        quotaMode_ = 0;
+
         return this;
       }
 
@@ -12672,6 +12849,7 @@ public final class UserOuterClass {
         } else {
           result.addHttpCorsHeader_ = addHttpCorsHeaderBuilder_.build();
         }
+        result.quotaMode_ = quotaMode_;
         onBuilt();
         return result;
       }
@@ -12959,6 +13137,9 @@ public final class UserOuterClass {
         }
         if (other.hasAddHttpCorsHeader()) {
           mergeAddHttpCorsHeader(other.getAddHttpCorsHeader());
+        }
+        if (other.quotaMode_ != 0) {
+          setQuotaModeValue(other.getQuotaModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24519,6 +24700,71 @@ public final class UserOuterClass {
         }
         return addHttpCorsHeaderBuilder_;
       }
+
+      private int quotaMode_ = 0;
+      /**
+       * <pre>
+       * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       */
+      public int getQuotaModeValue() {
+        return quotaMode_;
+      }
+      /**
+       * <pre>
+       * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       */
+      public Builder setQuotaModeValue(int value) {
+        quotaMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode getQuotaMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.valueOf(quotaMode_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       */
+      public Builder setQuotaMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.QuotaMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        quotaMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quota accounting mode. Possible values: QUOTA_MODE_DEFAULT, QUOTA_MODE_KEYED and QUOTA_MODE_KEYED_BY_IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode quota_mode = 80;</code>
+       */
+      public Builder clearQuotaMode() {
+        
+        quotaMode_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -26660,7 +26906,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\325/\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\2241\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.goo" +
@@ -26801,31 +27047,35 @@ public final class UserOuterClass {
       "tp_headers_progress_interval\030F \001(\0132\033.goo" +
       "gle.protobuf.Int64Value\0228\n\024add_http_cors" +
       "_header\030G \001(\0132\032.google.protobuf.BoolValu" +
-      "e\"_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPE" +
-      "CIFIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVE" +
-      "RFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMo" +
-      "de\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED" +
-      "\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034" +
-      "GROUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_" +
-      "BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedPr" +
-      "oductMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UN" +
-      "SPECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_" +
-      "DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL" +
-      "\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022" +
-      "\"\n\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"\356\002\n\t" +
-      "UserQuota\022B\n\021interval_duration\030\001 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n" +
-      "\007queries\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_row" +
-      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time" +
-      "\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0Bs\n\"yandex.cloud.api.mdb.clickhouse." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
-      "eb\006proto3"
+      "e\022J\n\nquota_mode\030P \001(\01626.yandex.cloud.mdb" +
+      ".clickhouse.v1.UserSettings.QuotaMode\"_\n" +
+      "\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIFI" +
+      "ED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFLO" +
+      "W_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022&" +
+      "\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022 " +
+      "\n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GROU" +
+      "P_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_O" +
+      "VERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProduc" +
+      "tMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPEC" +
+      "IFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DENY" +
+      "\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022#" +
+      "\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036D" +
+      "ISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuota" +
+      "Mode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUOT" +
+      "A_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032" +
+      "\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\356\002\n\tUserQuota" +
+      "\022B\n\021interval_duration\030\001 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\t" +
+      "read_rows\030\005 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"y" +
+      "andex.cloud.api.mdb.clickhouse.v1ZMgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/clickhouse/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26864,7 +27114,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

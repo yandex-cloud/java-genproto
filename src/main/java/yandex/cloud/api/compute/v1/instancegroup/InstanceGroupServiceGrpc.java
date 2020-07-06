@@ -414,6 +414,102 @@ public final class InstanceGroupServiceGrpc {
      return getListLogRecordsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+    if ((getListAccessBindingsMethod = InstanceGroupServiceGrpc.getListAccessBindingsMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getListAccessBindingsMethod = InstanceGroupServiceGrpc.getListAccessBindingsMethod) == null) {
+          InstanceGroupServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.instancegroup.InstanceGroupService", "ListAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("ListAccessBindings"))
+                  .build();
+          }
+        }
+     }
+     return getListAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAccessBindings",
+      requestType = yandex.cloud.api.access.Access.SetAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+    if ((getSetAccessBindingsMethod = InstanceGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getSetAccessBindingsMethod = InstanceGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
+          InstanceGroupServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.instancegroup.InstanceGroupService", "SetAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("SetAccessBindings"))
+                  .build();
+          }
+        }
+     }
+     return getSetAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessBindings",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+    if ((getUpdateAccessBindingsMethod = InstanceGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getUpdateAccessBindingsMethod = InstanceGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+          InstanceGroupServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.instancegroup.InstanceGroupService", "UpdateAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateAccessBindingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -569,6 +665,36 @@ public final class InstanceGroupServiceGrpc {
       asyncUnimplementedUnaryCall(getListLogRecordsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists existing access bindings for the specified instance group.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified instance group.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified instance group.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -655,6 +781,27 @@ public final class InstanceGroupServiceGrpc {
                 yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsRequest,
                 yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsResponse>(
                   this, METHODID_LIST_LOG_RECORDS)))
+          .addMethod(
+            getListAccessBindingsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getSetAccessBindingsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdateAccessBindingsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .build();
     }
   }
@@ -816,6 +963,39 @@ public final class InstanceGroupServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListLogRecordsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists existing access bindings for the specified instance group.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified instance group.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified instance group.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -962,6 +1142,36 @@ public final class InstanceGroupServiceGrpc {
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsResponse listLogRecords(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListLogRecordsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists existing access bindings for the specified instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1122,6 +1332,39 @@ public final class InstanceGroupServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListLogRecordsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists existing access bindings for the specified instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
+        yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
+        yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
+        yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1136,6 +1379,9 @@ public final class InstanceGroupServiceGrpc {
   private static final int METHODID_LIST_INSTANCES = 9;
   private static final int METHODID_LIST_OPERATIONS = 10;
   private static final int METHODID_LIST_LOG_RECORDS = 11;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 12;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 13;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1201,6 +1447,18 @@ public final class InstanceGroupServiceGrpc {
         case METHODID_LIST_LOG_RECORDS:
           serviceImpl.listLogRecords((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ListInstanceGroupLogRecordsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_BINDINGS:
+          serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ACCESS_BINDINGS:
+          serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_BINDINGS:
+          serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1275,6 +1533,9 @@ public final class InstanceGroupServiceGrpc {
               .addMethod(getListInstancesMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListLogRecordsMethod())
+              .addMethod(getListAccessBindingsMethod())
+              .addMethod(getSetAccessBindingsMethod())
+              .addMethod(getUpdateAccessBindingsMethod())
               .build();
         }
       }

@@ -15438,6 +15438,26 @@ public final class FunctionServiceOuterClass {
 
     /**
      * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     */
+    java.lang.String getVersionId();
+    /**
+     * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionIdBytes();
+
+    /**
+     * <pre>
      * Environment settings for the version.
      * </pre>
      *
@@ -15672,11 +15692,17 @@ public final class FunctionServiceOuterClass {
               packageSource_ = input.readBytes();
               break;
             }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+              packageSourceCase_ = 11;
+              packageSource_ = s;
+              break;
+            }
             case 98: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                 environment_ = com.google.protobuf.MapField.newMapField(
                     EnvironmentDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000400;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               environment__ = input.readMessage(
@@ -15687,9 +15713,9 @@ public final class FunctionServiceOuterClass {
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
                 tag_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               tag_.add(s);
               break;
@@ -15722,7 +15748,7 @@ public final class FunctionServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           tag_ = tag_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -15761,6 +15787,7 @@ public final class FunctionServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       PACKAGE(9),
       CONTENT(10),
+      VERSION_ID(11),
       PACKAGESOURCE_NOT_SET(0);
       private final int value;
       private PackageSourceCase(int value) {
@@ -15778,6 +15805,7 @@ public final class FunctionServiceOuterClass {
         switch (value) {
           case 9: return PACKAGE;
           case 10: return CONTENT;
+          case 11: return VERSION_ID;
           case 0: return PACKAGESOURCE_NOT_SET;
           default: return null;
         }
@@ -16127,6 +16155,59 @@ public final class FunctionServiceOuterClass {
       return com.google.protobuf.ByteString.EMPTY;
     }
 
+    public static final int VERSION_ID_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     */
+    public java.lang.String getVersionId() {
+      java.lang.Object ref = "";
+      if (packageSourceCase_ == 11) {
+        ref = packageSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (packageSourceCase_ == 11) {
+          packageSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the version to be copied from. Source version must belong to the same folder as the created version
+     * and the user must have read permissions to the source version.
+     * </pre>
+     *
+     * <code>string version_id = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionIdBytes() {
+      java.lang.Object ref = "";
+      if (packageSourceCase_ == 11) {
+        ref = packageSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (packageSourceCase_ == 11) {
+          packageSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int ENVIRONMENT_FIELD_NUMBER = 12;
     private static final class EnvironmentDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -16339,6 +16420,9 @@ public final class FunctionServiceOuterClass {
         output.writeBytes(
             10, (com.google.protobuf.ByteString) packageSource_);
       }
+      if (packageSourceCase_ == 11) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, packageSource_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -16391,6 +16475,9 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(
               10, (com.google.protobuf.ByteString) packageSource_);
+      }
+      if (packageSourceCase_ == 11) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, packageSource_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetEnvironment().getMap().entrySet()) {
@@ -16471,6 +16558,10 @@ public final class FunctionServiceOuterClass {
           result = result && getContent()
               .equals(other.getContent());
           break;
+        case 11:
+          result = result && getVersionId()
+              .equals(other.getVersionId());
+          break;
         case 0:
         default:
       }
@@ -16523,6 +16614,10 @@ public final class FunctionServiceOuterClass {
         case 10:
           hash = (37 * hash) + CONTENT_FIELD_NUMBER;
           hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + VERSION_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getVersionId().hashCode();
           break;
         case 0:
         default:
@@ -16706,7 +16801,7 @@ public final class FunctionServiceOuterClass {
 
         internalGetMutableEnvironment().clear();
         tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         if (connectivityBuilder_ == null) {
           connectivity_ = null;
         } else {
@@ -16768,11 +16863,14 @@ public final class FunctionServiceOuterClass {
         if (packageSourceCase_ == 10) {
           result.packageSource_ = packageSource_;
         }
+        if (packageSourceCase_ == 11) {
+          result.packageSource_ = packageSource_;
+        }
         result.environment_ = internalGetEnvironment();
         result.environment_.makeImmutable();
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
           tag_ = tag_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.tag_ = tag_;
         if (connectivityBuilder_ == null) {
@@ -16861,7 +16959,7 @@ public final class FunctionServiceOuterClass {
         if (!other.tag_.isEmpty()) {
           if (tag_.isEmpty()) {
             tag_ = other.tag_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureTagIsMutable();
             tag_.addAll(other.tag_);
@@ -16878,6 +16976,12 @@ public final class FunctionServiceOuterClass {
           }
           case CONTENT: {
             setContent(other.getContent());
+            break;
+          }
+          case VERSION_ID: {
+            packageSourceCase_ = 11;
+            packageSource_ = other.packageSource_;
+            onChanged();
             break;
           }
           case PACKAGESOURCE_NOT_SET: {
@@ -17911,6 +18015,111 @@ public final class FunctionServiceOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       */
+      public java.lang.String getVersionId() {
+        java.lang.Object ref = "";
+        if (packageSourceCase_ == 11) {
+          ref = packageSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (packageSourceCase_ == 11) {
+            packageSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionIdBytes() {
+        java.lang.Object ref = "";
+        if (packageSourceCase_ == 11) {
+          ref = packageSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (packageSourceCase_ == 11) {
+            packageSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       */
+      public Builder setVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  packageSourceCase_ = 11;
+        packageSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       */
+      public Builder clearVersionId() {
+        if (packageSourceCase_ == 11) {
+          packageSourceCase_ = 0;
+          packageSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the version to be copied from. Source version must belong to the same folder as the created version
+       * and the user must have read permissions to the source version.
+       * </pre>
+       *
+       * <code>string version_id = 11;</code>
+       */
+      public Builder setVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        packageSourceCase_ = 11;
+        packageSource_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> environment_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -18064,9 +18273,9 @@ public final class FunctionServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
           tag_ = new com.google.protobuf.LazyStringArrayList(tag_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
       /**
@@ -18169,7 +18378,7 @@ public final class FunctionServiceOuterClass {
        */
       public Builder clearTag() {
         tag_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -25726,7 +25935,7 @@ public final class FunctionServiceOuterClass {
       "\212\3101\006<=1000\"p\n\036ListFunctionOperationsResp" +
       "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
       "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\334\005\n\034CreateFunctionVersionRequest\022\031\n" +
+      " \001(\t\"\362\005\n\034CreateFunctionVersionRequest\022\031\n" +
       "\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(" +
       "\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022" +
       "\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005" +
@@ -25736,126 +25945,127 @@ public final class FunctionServiceOuterClass {
       "\032\n\022service_account_id\030\007 \001(\t\022@\n\007package\030\t" +
       " \001(\0132-.yandex.cloud.serverless.functions" +
       ".v1.PackageH\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=52" +
-      "428800H\000\022\217\001\n\013environment\030\014 \003(\0132S.yandex." +
-      "cloud.serverless.functions.v1.CreateFunc" +
-      "tionVersionRequest.EnvironmentEntryB%\212\3101" +
-      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022!\n\003ta" +
-      "g\030\r \003(\tB\024\362\3071\020[a-z][-_0-9a-z]*\022H\n\014connect" +
-      "ivity\030\021 \001(\01322.yandex.cloud.serverless.fu" +
-      "nctions.v1.Connectivity\0322\n\020EnvironmentEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\026\n\016p" +
-      "ackage_source\022\004\300\3011\001\"<\n\035CreateFunctionVer" +
-      "sionMetadata\022\033\n\023function_version_id\030\001 \001(" +
-      "\t\"]\n\025SetFunctionTagRequest\022!\n\023function_v" +
+      "428800H\000\022\024\n\nversion_id\030\013 \001(\tH\000\022\217\001\n\013envir" +
+      "onment\030\014 \003(\0132S.yandex.cloud.serverless.f" +
+      "unctions.v1.CreateFunctionVersionRequest" +
+      ".EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA" +
+      "-Z][a-zA-Z0-9_]*\022!\n\003tag\030\r \003(\tB\024\362\3071\020[a-z]" +
+      "[-_0-9a-z]*\022H\n\014connectivity\030\021 \001(\01322.yand" +
+      "ex.cloud.serverless.functions.v1.Connect" +
+      "ivity\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\026\n\016package_source\022\004\300\3011" +
+      "\001\"<\n\035CreateFunctionVersionMetadata\022\033\n\023fu" +
+      "nction_version_id\030\001 \001(\t\"]\n\025SetFunctionTa" +
+      "gRequest\022!\n\023function_version_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`" +
+      "\n\030RemoveFunctionTagRequest\022!\n\023function_v" +
       "ersion_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020" +
-      "[a-z][-_0-9a-z]*\"`\n\030RemoveFunctionTagReq" +
-      "uest\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"5\n\026Se" +
-      "tFunctionTagMetadata\022\033\n\023function_version" +
-      "_id\030\001 \001(\t\"8\n\031RemoveFunctionTagMetadata\022\033" +
-      "\n\023function_version_id\030\001 \001(\t\"\301\001\n\035ListFunc" +
-      "tionTagHistoryRequest\022\031\n\013function_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[a-z][-_0-9a-" +
-      "z]*|[$]latest\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-" +
-      "1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
-      "ilter\030\005 \001(\tB\n\212\3101\006<=1000\"\200\003\n\036ListFunction" +
-      "TagHistoryResponse\022\202\001\n\033function_tag_hist" +
-      "ory_record\030\001 \003(\0132].yandex.cloud.serverle" +
-      "ss.functions.v1.ListFunctionTagHistoryRe" +
-      "sponse.FunctionTagHistoryRecord\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\032\277\001\n\030FunctionTagHistoryR" +
-      "ecord\022\023\n\013function_id\030\001 \001(\t\022\033\n\023function_v" +
-      "ersion_id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t\0222\n\016effectiv" +
-      "e_from\030\004 \001(\0132\032.google.protobuf.Timestamp" +
-      "\0220\n\014effective_to\030\005 \001(\0132\032.google.protobuf" +
-      ".Timestamp2\235\032\n\017FunctionService\022\236\001\n\003Get\0228" +
+      "[a-z][-_0-9a-z]*\"5\n\026SetFunctionTagMetada" +
+      "ta\022\033\n\023function_version_id\030\001 \001(\t\"8\n\031Remov" +
+      "eFunctionTagMetadata\022\033\n\023function_version" +
+      "_id\030\001 \001(\t\"\301\001\n\035ListFunctionTagHistoryRequ" +
+      "est\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 " +
+      "\001(\tB\036\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tp" +
+      "age_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
+      "\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<" +
+      "=1000\"\200\003\n\036ListFunctionTagHistoryResponse" +
+      "\022\202\001\n\033function_tag_history_record\030\001 \003(\0132]" +
+      ".yandex.cloud.serverless.functions.v1.Li" +
+      "stFunctionTagHistoryResponse.FunctionTag" +
+      "HistoryRecord\022\027\n\017next_page_token\030\002 \001(\t\032\277" +
+      "\001\n\030FunctionTagHistoryRecord\022\023\n\013function_" +
+      "id\030\001 \001(\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n" +
+      "\003tag\030\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\0220\n\014effective_to\030\005" +
+      " \001(\0132\032.google.protobuf.Timestamp2\235\032\n\017Fun" +
+      "ctionService\022\236\001\n\003Get\0228.yandex.cloud.serv" +
+      "erless.functions.v1.GetFunctionRequest\032." +
+      ".yandex.cloud.serverless.functions.v1.Fu" +
+      "nction\"-\202\323\344\223\002\'\022%/functions/v1/functions/" +
+      "{function_id}\022\240\001\n\004List\022:.yandex.cloud.se" +
+      "rverless.functions.v1.ListFunctionsReque" +
+      "st\032;.yandex.cloud.serverless.functions.v" +
+      "1.ListFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functi" +
+      "ons/v1/functions\022\262\001\n\006Create\022;.yandex.clo" +
+      "ud.serverless.functions.v1.CreateFunctio" +
+      "nRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"H\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262" +
+      "\322*\"\n\026CreateFunctionMetadata\022\010Function\022\300\001" +
+      "\n\006Update\022;.yandex.cloud.serverless.funct" +
+      "ions.v1.UpdateFunctionRequest\032!.yandex.c" +
+      "loud.operation.Operation\"V\202\323\344\223\002*2%/funct" +
+      "ions/v1/functions/{function_id}:\001*\262\322*\"\n\026" +
+      "UpdateFunctionMetadata\022\010Function\022\312\001\n\006Del" +
+      "ete\022;.yandex.cloud.serverless.functions." +
+      "v1.DeleteFunctionRequest\032!.yandex.cloud." +
+      "operation.Operation\"`\202\323\344\223\002\'*%/functions/" +
+      "v1/functions/{function_id}\262\322*/\n\026DeleteFu" +
+      "nctionMetadata\022\025google.protobuf.Empty\022\262\001" +
+      "\n\nGetVersion\022?.yandex.cloud.serverless.f" +
+      "unctions.v1.GetFunctionVersionRequest\032-." +
+      "yandex.cloud.serverless.functions.v1.Ver" +
+      "sion\"4\202\323\344\223\002.\022,/functions/v1/versions/{fu" +
+      "nction_version_id}\022\254\001\n\017GetVersionByTag\022D" +
       ".yandex.cloud.serverless.functions.v1.Ge" +
-      "tFunctionRequest\032..yandex.cloud.serverle" +
-      "ss.functions.v1.Function\"-\202\323\344\223\002\'\022%/funct" +
-      "ions/v1/functions/{function_id}\022\240\001\n\004List" +
-      "\022:.yandex.cloud.serverless.functions.v1." +
-      "ListFunctionsRequest\032;.yandex.cloud.serv" +
-      "erless.functions.v1.ListFunctionsRespons" +
-      "e\"\037\202\323\344\223\002\031\022\027/functions/v1/functions\022\262\001\n\006C" +
-      "reate\022;.yandex.cloud.serverless.function" +
-      "s.v1.CreateFunctionRequest\032!.yandex.clou" +
-      "d.operation.Operation\"H\202\323\344\223\002\034\"\027/function" +
-      "s/v1/functions:\001*\262\322*\"\n\026CreateFunctionMet" +
-      "adata\022\010Function\022\300\001\n\006Update\022;.yandex.clou" +
-      "d.serverless.functions.v1.UpdateFunction" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"V\202\323\344\223\002*2%/functions/v1/functions/{fun" +
-      "ction_id}:\001*\262\322*\"\n\026UpdateFunctionMetadata" +
-      "\022\010Function\022\312\001\n\006Delete\022;.yandex.cloud.ser" +
-      "verless.functions.v1.DeleteFunctionReque" +
-      "st\032!.yandex.cloud.operation.Operation\"`\202" +
-      "\323\344\223\002\'*%/functions/v1/functions/{function" +
-      "_id}\262\322*/\n\026DeleteFunctionMetadata\022\025google" +
-      ".protobuf.Empty\022\262\001\n\nGetVersion\022?.yandex." +
-      "cloud.serverless.functions.v1.GetFunctio" +
-      "nVersionRequest\032-.yandex.cloud.serverles" +
-      "s.functions.v1.Version\"4\202\323\344\223\002.\022,/functio" +
-      "ns/v1/versions/{function_version_id}\022\254\001\n" +
-      "\017GetVersionByTag\022D.yandex.cloud.serverle" +
-      "ss.functions.v1.GetFunctionVersionByTagR" +
-      "equest\032-.yandex.cloud.serverless.functio" +
-      "ns.v1.Version\"$\202\323\344\223\002\036\022\034/functions/v1/ver" +
-      "sions:byTag\022\267\001\n\014ListVersions\022B.yandex.cl" +
-      "oud.serverless.functions.v1.ListFunction" +
-      "sVersionsRequest\032C.yandex.cloud.serverle" +
-      "ss.functions.v1.ListFunctionsVersionsRes" +
-      "ponse\"\036\202\323\344\223\002\030\022\026/functions/v1/versions\022\315\001" +
-      "\n\006SetTag\022;.yandex.cloud.serverless.funct" +
-      "ions.v1.SetFunctionTagRequest\032!.yandex.c" +
-      "loud.operation.Operation\"c\202\323\344\223\0028\"3/funct" +
-      "ions/v1/versions/{function_version_id}:s" +
-      "etTag:\001*\262\322*!\n\026SetFunctionTagMetadata\022\007Ve" +
-      "rsion\022\331\001\n\tRemoveTag\022>.yandex.cloud.serve" +
-      "rless.functions.v1.RemoveFunctionTagRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"i" +
-      "\202\323\344\223\002;\"6/functions/v1/versions/{function" +
-      "_version_id}:removeTag:\001*\262\322*$\n\031RemoveFun" +
-      "ctionTagMetadata\022\007Version\022\325\001\n\016ListTagHis" +
-      "tory\022C.yandex.cloud.serverless.functions" +
-      ".v1.ListFunctionTagHistoryRequest\032D.yand" +
-      "ex.cloud.serverless.functions.v1.ListFun" +
-      "ctionTagHistoryResponse\"8\202\323\344\223\0022\0220/functi" +
-      "ons/v1/functions/{function_id}:tagHistor" +
-      "y\022\305\001\n\rCreateVersion\022B.yandex.cloud.serve" +
-      "rless.functions.v1.CreateFunctionVersion" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"M\202\323\344\223\002\033\"\026/functions/v1/versions:\001*\262\322*" +
-      "(\n\035CreateFunctionVersionMetadata\022\007Versio" +
-      "n\022\245\001\n\014ListRuntimes\0229.yandex.cloud.server" +
-      "less.functions.v1.ListRuntimesRequest\032:." +
-      "yandex.cloud.serverless.functions.v1.Lis" +
-      "tRuntimesResponse\"\036\202\323\344\223\002\030\022\026/functions/v1" +
-      "/runtimes\022\325\001\n\016ListOperations\022C.yandex.cl" +
-      "oud.serverless.functions.v1.ListFunction" +
-      "OperationsRequest\032D.yandex.cloud.serverl" +
-      "ess.functions.v1.ListFunctionOperationsR" +
-      "esponse\"8\202\323\344\223\0022\0220/functions/v1/functions" +
-      "/{function_id}/operations\022\267\001\n\022ListAccess" +
-      "Bindings\022..yandex.cloud.access.ListAcces" +
-      "sBindingsRequest\032/.yandex.cloud.access.L" +
-      "istAccessBindingsResponse\"@\202\323\344\223\002:\0228/func" +
-      "tions/v1/functions/{resource_id}:listAcc" +
-      "essBindings\022\346\001\n\021SetAccessBindings\022-.yand" +
-      "ex.cloud.access.SetAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\177\202\323\344" +
-      "\223\002<\"7/functions/v1/functions/{resource_i" +
-      "d}:setAccessBindings:\001*\262\322*9\n access.SetA" +
-      "ccessBindingsMetadata\022\025google.protobuf.E" +
-      "mpty\022\363\001\n\024UpdateAccessBindings\0220.yandex.c" +
-      "loud.access.UpdateAccessBindingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\205\001\202\323\344" +
-      "\223\002?\":/functions/v1/functions/{resource_i" +
-      "d}:updateAccessBindings:\001*\262\322*<\n#access.U" +
-      "pdateAccessBindingsMetadata\022\025google.prot" +
-      "obuf.EmptyB~\n(yandex.cloud.api.serverles" +
-      "s.functions.v1ZRgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/serverless/func" +
-      "tions/v1;functionsb\006proto3"
+      "tFunctionVersionByTagRequest\032-.yandex.cl" +
+      "oud.serverless.functions.v1.Version\"$\202\323\344" +
+      "\223\002\036\022\034/functions/v1/versions:byTag\022\267\001\n\014Li" +
+      "stVersions\022B.yandex.cloud.serverless.fun" +
+      "ctions.v1.ListFunctionsVersionsRequest\032C" +
+      ".yandex.cloud.serverless.functions.v1.Li" +
+      "stFunctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/fu" +
+      "nctions/v1/versions\022\315\001\n\006SetTag\022;.yandex." +
+      "cloud.serverless.functions.v1.SetFunctio" +
+      "nTagRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"c\202\323\344\223\0028\"3/functions/v1/versions/{" +
+      "function_version_id}:setTag:\001*\262\322*!\n\026SetF" +
+      "unctionTagMetadata\022\007Version\022\331\001\n\tRemoveTa" +
+      "g\022>.yandex.cloud.serverless.functions.v1" +
+      ".RemoveFunctionTagRequest\032!.yandex.cloud" +
+      ".operation.Operation\"i\202\323\344\223\002;\"6/functions" +
+      "/v1/versions/{function_version_id}:remov" +
+      "eTag:\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007" +
+      "Version\022\325\001\n\016ListTagHistory\022C.yandex.clou" +
+      "d.serverless.functions.v1.ListFunctionTa" +
+      "gHistoryRequest\032D.yandex.cloud.serverles" +
+      "s.functions.v1.ListFunctionTagHistoryRes" +
+      "ponse\"8\202\323\344\223\0022\0220/functions/v1/functions/{" +
+      "function_id}:tagHistory\022\305\001\n\rCreateVersio" +
+      "n\022B.yandex.cloud.serverless.functions.v1" +
+      ".CreateFunctionVersionRequest\032!.yandex.c" +
+      "loud.operation.Operation\"M\202\323\344\223\002\033\"\026/funct" +
+      "ions/v1/versions:\001*\262\322*(\n\035CreateFunctionV" +
+      "ersionMetadata\022\007Version\022\245\001\n\014ListRuntimes" +
+      "\0229.yandex.cloud.serverless.functions.v1." +
+      "ListRuntimesRequest\032:.yandex.cloud.serve" +
+      "rless.functions.v1.ListRuntimesResponse\"" +
+      "\036\202\323\344\223\002\030\022\026/functions/v1/runtimes\022\325\001\n\016List" +
+      "Operations\022C.yandex.cloud.serverless.fun" +
+      "ctions.v1.ListFunctionOperationsRequest\032" +
+      "D.yandex.cloud.serverless.functions.v1.L" +
+      "istFunctionOperationsResponse\"8\202\323\344\223\0022\0220/" +
+      "functions/v1/functions/{function_id}/ope" +
+      "rations\022\267\001\n\022ListAccessBindings\022..yandex." +
+      "cloud.access.ListAccessBindingsRequest\032/" +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "esponse\"@\202\323\344\223\002:\0228/functions/v1/functions" +
+      "/{resource_id}:listAccessBindings\022\346\001\n\021Se" +
+      "tAccessBindings\022-.yandex.cloud.access.Se" +
+      "tAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\177\202\323\344\223\002<\"7/functions/v1" +
+      "/functions/{resource_id}:setAccessBindin" +
+      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\363\001\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\205\001\202\323\344\223\002?\":/functions/v1" +
+      "/functions/{resource_id}:updateAccessBin" +
+      "dings:\001*\262\322*<\n#access.UpdateAccessBinding" +
+      "sMetadata\022\025google.protobuf.EmptyB~\n(yand" +
+      "ex.cloud.api.serverless.functions.v1ZRgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/serverless/functions/v1;functions" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25997,7 +26207,7 @@ public final class FunctionServiceOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor,
-        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "Environment", "Tag", "Connectivity", "PackageSource", });
+        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "VersionId", "Environment", "Tag", "Connectivity", "PackageSource", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_fieldAccessorTable = new
