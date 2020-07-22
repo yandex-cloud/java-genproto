@@ -40,6 +40,17 @@ public final class UserOuterClass {
      * <code>REPLICATION_SLAVE = 2;</code>
      */
     REPLICATION_SLAVE(2),
+    /**
+     * <pre>
+     * Enables display of information about the threads executing within the server
+     * (that is, information about the statements being executed by sessions).
+     * The privilege enables use of SHOW PROCESSLIST or mysqladmin processlist to see threads belonging
+     * to other accounts; you can always see your own threads. The PROCESS privilege also enables use of SHOW ENGINE.
+     * </pre>
+     *
+     * <code>PROCESS = 3;</code>
+     */
+    PROCESS(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -64,6 +75,17 @@ public final class UserOuterClass {
      * <code>REPLICATION_SLAVE = 2;</code>
      */
     public static final int REPLICATION_SLAVE_VALUE = 2;
+    /**
+     * <pre>
+     * Enables display of information about the threads executing within the server
+     * (that is, information about the statements being executed by sessions).
+     * The privilege enables use of SHOW PROCESSLIST or mysqladmin processlist to see threads belonging
+     * to other accounts; you can always see your own threads. The PROCESS privilege also enables use of SHOW ENGINE.
+     * </pre>
+     *
+     * <code>PROCESS = 3;</code>
+     */
+    public static final int PROCESS_VALUE = 3;
 
 
     public final int getNumber() {
@@ -87,6 +109,7 @@ public final class UserOuterClass {
         case 0: return GLOBAL_PERMISSION_UNSPECIFIED;
         case 1: return REPLICATION_CLIENT;
         case 2: return REPLICATION_SLAVE;
+        case 3: return PROCESS;
         default: return null;
       }
     }
@@ -7060,15 +7083,15 @@ public final class UserOuterClass {
       "n_limits\030\005 \001(\0132+.yandex.cloud.mdb.mysql." +
       "v1.ConnectionLimits\022D\n\025authentication_pl" +
       "ugin\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.A" +
-      "uthPlugin*d\n\020GlobalPermission\022!\n\035GLOBAL_" +
+      "uthPlugin*q\n\020GlobalPermission\022!\n\035GLOBAL_" +
       "PERMISSION_UNSPECIFIED\020\000\022\026\n\022REPLICATION_" +
-      "CLIENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002*t\n\nAuthP" +
-      "lugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MY" +
-      "SQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PA" +
-      "SSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex." +
-      "cloud.api.mdb.mysql.v1ZCgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/mys" +
-      "ql/v1;mysqlb\006proto3"
+      "CLIENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCE" +
+      "SS\020\003*t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPEC" +
+      "IFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CA" +
+      "CHING_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD" +
+      "\020\003Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/mysql/v1;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

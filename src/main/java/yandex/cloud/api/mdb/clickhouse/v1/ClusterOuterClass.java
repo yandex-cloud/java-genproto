@@ -328,6 +328,56 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    boolean hasPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation getPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
   }
   /**
    * <pre>
@@ -483,6 +533,32 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountId_ = s;
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder subBuilder = null;
+              if (plannedOperation_ != null) {
+                subBuilder = plannedOperation_.toBuilder();
+              }
+              plannedOperation_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedOperation_);
+                plannedOperation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1572,6 +1648,72 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
+    public static final int PLANNED_OPERATION_FIELD_NUMBER = 15;
+    private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation plannedOperation_;
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public boolean hasPlannedOperation() {
+      return plannedOperation_ != null;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+      return plannedOperation_ == null ? yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+      return getPlannedOperation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1627,6 +1769,12 @@ public final class ClusterOuterClass {
       }
       if (!getServiceAccountIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, serviceAccountId_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(14, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        output.writeMessage(15, getPlannedOperation());
       }
       unknownFields.writeTo(output);
     }
@@ -1689,6 +1837,14 @@ public final class ClusterOuterClass {
       if (!getServiceAccountIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, serviceAccountId_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getPlannedOperation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1734,6 +1890,16 @@ public final class ClusterOuterClass {
       result = result && status_ == other.status_;
       result = result && getServiceAccountId()
           .equals(other.getServiceAccountId());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
+      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation()) {
+        result = result && getPlannedOperation()
+            .equals(other.getPlannedOperation());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1779,6 +1945,14 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPlannedOperation()) {
+        hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1977,6 +2151,18 @@ public final class ClusterOuterClass {
 
         serviceAccountId_ = "";
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
         return this;
       }
 
@@ -2035,6 +2221,16 @@ public final class ClusterOuterClass {
         result.health_ = health_;
         result.status_ = status_;
         result.serviceAccountId_ = serviceAccountId_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (plannedOperationBuilder_ == null) {
+          result.plannedOperation_ = plannedOperation_;
+        } else {
+          result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2150,6 +2346,12 @@ public final class ClusterOuterClass {
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPlannedOperation()) {
+          mergePlannedOperation(other.getPlannedOperation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3688,6 +3890,312 @@ public final class ClusterOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public boolean hasPlannedOperation() {
+        return plannedOperationBuilder_ != null || plannedOperation_ != null;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          return plannedOperation_ == null ? yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        } else {
+          return plannedOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder setPlannedOperation(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedOperation_ = value;
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder setPlannedOperation(
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder builderForValue) {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder mergePlannedOperation(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (plannedOperation_ != null) {
+            plannedOperation_ =
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.newBuilder(plannedOperation_).mergeFrom(value).buildPartial();
+          } else {
+            plannedOperation_ = value;
+          }
+          onChanged();
+        } else {
+          plannedOperationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder clearPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+          onChanged();
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder getPlannedOperationBuilder() {
+        
+        onChanged();
+        return getPlannedOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+        if (plannedOperationBuilder_ != null) {
+          return plannedOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedOperation_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder> 
+          getPlannedOperationFieldBuilder() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder>(
+                  getPlannedOperation(),
+                  getParentForChildren(),
+                  isClean());
+          plannedOperation_ = null;
+        }
+        return plannedOperationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4780,7 +5288,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -4788,7 +5296,7 @@ public final class ClusterOuterClass {
     boolean hasAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -4796,7 +5304,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Access getAccess();
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -6666,7 +7174,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Access access_;
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -6676,7 +7184,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -6686,7 +7194,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Access policy to DB
+     * Access policy for external services.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7671,7 +8179,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Access, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Access.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.AccessOrBuilder> accessBuilder_;
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7681,7 +8189,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7695,7 +8203,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7715,7 +8223,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7733,7 +8241,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7755,7 +8263,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7773,7 +8281,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7785,7 +8293,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -7800,7 +8308,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Access policy to DB
+       * Access policy for external services.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
@@ -16369,7 +16877,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allow to export data from the cluster to Yandex DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -16378,7 +16886,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for Web SQL
+     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+     * See [SQL queries in the management console](/docs/managed-clickhouse/operations/web-sql-query) for more details.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -16387,7 +16896,8 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for Metrika
+     * Allow to import data from Yandex.Metrica and AppMetrica to the cluster.
+     * See [Export data to Yandex.Cloud](https://appmetrica.yandex.com/docs/cloud/index.html) for more details.
      * </pre>
      *
      * <code>bool metrika = 3;</code>
@@ -16396,7 +16906,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Allow access for Serverless
+     * Allow access to cluster for Serverless.
      * </pre>
      *
      * <code>bool serverless = 4;</code>
@@ -16502,7 +17012,7 @@ public final class ClusterOuterClass {
     private boolean dataLens_;
     /**
      * <pre>
-     * Allow access for DataLens
+     * Allow to export data from the cluster to Yandex DataLens.
      * </pre>
      *
      * <code>bool data_lens = 1;</code>
@@ -16515,7 +17025,8 @@ public final class ClusterOuterClass {
     private boolean webSql_;
     /**
      * <pre>
-     * Allow access for Web SQL
+     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+     * See [SQL queries in the management console](/docs/managed-clickhouse/operations/web-sql-query) for more details.
      * </pre>
      *
      * <code>bool web_sql = 2;</code>
@@ -16528,7 +17039,8 @@ public final class ClusterOuterClass {
     private boolean metrika_;
     /**
      * <pre>
-     * Allow access for Metrika
+     * Allow to import data from Yandex.Metrica and AppMetrica to the cluster.
+     * See [Export data to Yandex.Cloud](https://appmetrica.yandex.com/docs/cloud/index.html) for more details.
      * </pre>
      *
      * <code>bool metrika = 3;</code>
@@ -16541,7 +17053,7 @@ public final class ClusterOuterClass {
     private boolean serverless_;
     /**
      * <pre>
-     * Allow access for Serverless
+     * Allow access to cluster for Serverless.
      * </pre>
      *
      * <code>bool serverless = 4;</code>
@@ -16911,7 +17423,7 @@ public final class ClusterOuterClass {
       private boolean dataLens_ ;
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow to export data from the cluster to Yandex DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -16921,7 +17433,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow to export data from the cluster to Yandex DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -16934,7 +17446,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for DataLens
+       * Allow to export data from the cluster to Yandex DataLens.
        * </pre>
        *
        * <code>bool data_lens = 1;</code>
@@ -16949,7 +17461,8 @@ public final class ClusterOuterClass {
       private boolean webSql_ ;
       /**
        * <pre>
-       * Allow access for Web SQL
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-clickhouse/operations/web-sql-query) for more details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -16959,7 +17472,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Web SQL
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-clickhouse/operations/web-sql-query) for more details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -16972,7 +17486,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Web SQL
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-clickhouse/operations/web-sql-query) for more details.
        * </pre>
        *
        * <code>bool web_sql = 2;</code>
@@ -16987,7 +17502,8 @@ public final class ClusterOuterClass {
       private boolean metrika_ ;
       /**
        * <pre>
-       * Allow access for Metrika
+       * Allow to import data from Yandex.Metrica and AppMetrica to the cluster.
+       * See [Export data to Yandex.Cloud](https://appmetrica.yandex.com/docs/cloud/index.html) for more details.
        * </pre>
        *
        * <code>bool metrika = 3;</code>
@@ -16997,7 +17513,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Metrika
+       * Allow to import data from Yandex.Metrica and AppMetrica to the cluster.
+       * See [Export data to Yandex.Cloud](https://appmetrica.yandex.com/docs/cloud/index.html) for more details.
        * </pre>
        *
        * <code>bool metrika = 3;</code>
@@ -17010,7 +17527,8 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Metrika
+       * Allow to import data from Yandex.Metrica and AppMetrica to the cluster.
+       * See [Export data to Yandex.Cloud](https://appmetrica.yandex.com/docs/cloud/index.html) for more details.
        * </pre>
        *
        * <code>bool metrika = 3;</code>
@@ -17025,7 +17543,7 @@ public final class ClusterOuterClass {
       private boolean serverless_ ;
       /**
        * <pre>
-       * Allow access for Serverless
+       * Allow access to cluster for Serverless.
        * </pre>
        *
        * <code>bool serverless = 4;</code>
@@ -17035,7 +17553,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Serverless
+       * Allow access to cluster for Serverless.
        * </pre>
        *
        * <code>bool serverless = 4;</code>
@@ -17048,7 +17566,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Allow access for Serverless
+       * Allow access to cluster for Serverless.
        * </pre>
        *
        * <code>bool serverless = 4;</code>
@@ -17196,81 +17714,87 @@ public final class ClusterOuterClass {
       "google/protobuf/timestamp.proto\032\036google/" +
       "protobuf/wrappers.proto\032\033google/type/tim" +
       "eofday.proto\0326yandex/cloud/mdb/clickhous" +
-      "e/v1/config/clickhouse.proto\"\357\006\n\007Cluster" +
-      "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
-      "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006la" +
-      "bels\030\006 \003(\01323.yandex.cloud.mdb.clickhouse" +
-      ".v1.Cluster.LabelsEntry\022H\n\013environment\030\007" +
-      " \001(\01623.yandex.cloud.mdb.clickhouse.v1.Cl" +
-      "uster.Environment\022>\n\nmonitoring\030\010 \003(\0132*." +
-      "yandex.cloud.mdb.clickhouse.v1.Monitorin" +
-      "g\022=\n\006config\030\t \001(\0132-.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.ClusterConfig\022\022\n\nnetwork_id\030\n" +
-      " \001(\t\022>\n\006health\030\013 \001(\0162..yandex.cloud.mdb." +
-      "clickhouse.v1.Cluster.Health\022>\n\006status\030\014" +
-      " \001(\0162..yandex.cloud.mdb.clickhouse.v1.Cl" +
-      "uster.Status\022\032\n\022service_account_id\030\r \001(\t" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
-      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
-      "\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n" +
-      "\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNI" +
-      "NG\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPIN" +
-      "G\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonito" +
-      "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
-      "\014\n\004link\030\003 \001(\t\"\213\004\n\rClusterConfig\022\017\n\007versi" +
-      "on\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328.yandex.cl" +
-      "oud.mdb.clickhouse.v1.ClusterConfig.Clic" +
-      "khouse\022J\n\tzookeeper\030\003 \001(\01327.yandex.cloud" +
-      ".mdb.clickhouse.v1.ClusterConfig.Zookeep" +
-      "er\0223\n\023backup_window_start\030\004 \001(\0132\026.google" +
-      ".type.TimeOfDay\0226\n\006access\030\005 \001(\0132&.yandex" +
-      ".cloud.mdb.clickhouse.v1.Access\032\226\001\n\nClic" +
-      "khouse\022J\n\006config\030\001 \001(\0132:.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfigS" +
-      "et\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb" +
-      ".clickhouse.v1.Resources\032I\n\tZookeeper\022<\n" +
-      "\tresources\030\001 \001(\0132).yandex.cloud.mdb.clic" +
-      "khouse.v1.Resources\"f\n\005Shard\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+" +
-      ".yandex.cloud.mdb.clickhouse.v1.ShardCon" +
-      "fig\"X\n\nShardGroup\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
-      "er_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013shar" +
-      "d_names\030\004 \003(\t\"\237\002\n\013ShardConfig\022J\n\nclickho" +
-      "use\030\001 \001(\01326.yandex.cloud.mdb.clickhouse." +
-      "v1.ShardConfig.Clickhouse\032\303\001\n\nClickhouse" +
-      "\022J\n\006config\030\001 \001(\0132:.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfigSet\022<\n\t" +
-      "resources\030\002 \001(\0132).yandex.cloud.mdb.click" +
-      "house.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\340\003\n\004Host\022\014\n\004name" +
-      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
-      "\001(\t\0227\n\004type\030\004 \001(\0162).yandex.cloud.mdb.cli" +
-      "ckhouse.v1.Host.Type\022<\n\tresources\030\005 \001(\0132" +
-      ").yandex.cloud.mdb.clickhouse.v1.Resourc" +
-      "es\022;\n\006health\030\006 \001(\0162+.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.Host.Health\0229\n\010services\030\007 \003(" +
-      "\0132\'.yandex.cloud.mdb.clickhouse.v1.Servi" +
-      "ce\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_i" +
-      "p\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n\004Type\022\024\n\020T" +
-      "YPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOO" +
-      "KEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service\022:" +
-      "\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.clickhou" +
-      "se.v1.Service.Type\022>\n\006health\030\002 \001(\0162..yan" +
-      "dex.cloud.mdb.clickhouse.v1.Service.Heal" +
-      "th\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLIC" +
-      "KHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007UNK" +
-      "NOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources" +
-      "\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_siz" +
-      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"Q\n\006Access\022" +
-      "\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007m" +
-      "etrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001(\010Bs\n\"yand" +
-      "ex.cloud.api.mdb.clickhouse.v1ZMgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/mdb/clickhouse/v1;clickhouseb\006proto3"
+      "e/v1/config/clickhouse.proto\0320yandex/clo" +
+      "ud/mdb/clickhouse/v1/maintenance.proto\"\217" +
+      "\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
+      "\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005" +
+      " \001(\t\022C\n\006labels\030\006 \003(\01323.yandex.cloud.mdb." +
+      "clickhouse.v1.Cluster.LabelsEntry\022H\n\013env" +
+      "ironment\030\007 \001(\01623.yandex.cloud.mdb.clickh" +
+      "ouse.v1.Cluster.Environment\022>\n\nmonitorin" +
+      "g\030\010 \003(\0132*.yandex.cloud.mdb.clickhouse.v1" +
+      ".Monitoring\022=\n\006config\030\t \001(\0132-.yandex.clo" +
+      "ud.mdb.clickhouse.v1.ClusterConfig\022\022\n\nne" +
+      "twork_id\030\n \001(\t\022>\n\006health\030\013 \001(\0162..yandex." +
+      "cloud.mdb.clickhouse.v1.Cluster.Health\022>" +
+      "\n\006status\030\014 \001(\0162..yandex.cloud.mdb.clickh" +
+      "ouse.v1.Cluster.Status\022\032\n\022service_accoun" +
+      "t_id\030\r \001(\t\022M\n\022maintenance_window\030\016 \001(\01321" +
+      ".yandex.cloud.mdb.clickhouse.v1.Maintena" +
+      "nceWindow\022O\n\021planned_operation\030\017 \001(\01324.y" +
+      "andex.cloud.mdb.clickhouse.v1.Maintenanc" +
+      "eOperation\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVI" +
+      "RONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n" +
+      "\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n" +
+      "\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020" +
+      "\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022" +
+      "\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007" +
+      "\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
+      "ion\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\213\004\n\rClusterConfi" +
+      "g\022\017\n\007version\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328" +
+      ".yandex.cloud.mdb.clickhouse.v1.ClusterC" +
+      "onfig.Clickhouse\022J\n\tzookeeper\030\003 \001(\01327.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.ClusterConf" +
+      "ig.Zookeeper\0223\n\023backup_window_start\030\004 \001(" +
+      "\0132\026.google.type.TimeOfDay\0226\n\006access\030\005 \001(" +
+      "\0132&.yandex.cloud.mdb.clickhouse.v1.Acces" +
+      "s\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfigSet\022<\n\tresources\030\002 \001(\0132).yandex" +
+      ".cloud.mdb.clickhouse.v1.Resources\032I\n\tZo" +
+      "okeeper\022<\n\tresources\030\001 \001(\0132).yandex.clou" +
+      "d.mdb.clickhouse.v1.Resources\"f\n\005Shard\022\014" +
+      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006conf" +
+      "ig\030\003 \001(\0132+.yandex.cloud.mdb.clickhouse.v" +
+      "1.ShardConfig\"X\n\nShardGroup\022\014\n\004name\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013description\030\003 \001" +
+      "(\t\022\023\n\013shard_names\030\004 \003(\t\"\237\002\n\013ShardConfig\022" +
+      "J\n\nclickhouse\030\001 \001(\01326.yandex.cloud.mdb.c" +
+      "lickhouse.v1.ShardConfig.Clickhouse\032\303\001\n\n" +
+      "Clickhouse\022J\n\006config\030\001 \001(\0132:.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "figSet\022<\n\tresources\030\002 \001(\0132).yandex.cloud" +
+      ".mdb.clickhouse.v1.Resources\022+\n\006weight\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\"\340\003\n\004Ho" +
+      "st\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007" +
+      "zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex.clo" +
+      "ud.mdb.clickhouse.v1.Host.Type\022<\n\tresour" +
+      "ces\030\005 \001(\0132).yandex.cloud.mdb.clickhouse." +
+      "v1.Resources\022;\n\006health\030\006 \001(\0162+.yandex.cl" +
+      "oud.mdb.clickhouse.v1.Host.Health\0229\n\010ser" +
+      "vices\030\007 \003(\0132\'.yandex.cloud.mdb.clickhous" +
+      "e.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assig" +
+      "n_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUS" +
+      "E\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020" +
+      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n" +
+      "\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud.md" +
+      "b.clickhouse.v1.Service.Type\022>\n\006health\030\002" +
+      " \001(\0162..yandex.cloud.mdb.clickhouse.v1.Se" +
+      "rvice.Health\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
+      "\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Hea" +
+      "lth\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n" +
+      "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
+      "\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"" +
+      "Q\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030" +
+      "\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001" +
+      "(\010Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
+      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17287,13 +17811,14 @@ public final class ClusterOuterClass {
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.getDescriptor(),
+          yandex.cloud.api.mdb.clickhouse.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "ServiceAccountId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "ServiceAccountId", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -17376,6 +17901,7 @@ public final class ClusterOuterClass {
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.getDescriptor();
+    yandex.cloud.api.mdb.clickhouse.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

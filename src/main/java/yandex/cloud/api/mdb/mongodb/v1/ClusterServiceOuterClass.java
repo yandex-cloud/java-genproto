@@ -6838,6 +6838,31 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.UpdateClusterRequest}
@@ -6936,6 +6961,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7281,6 +7319,39 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7315,6 +7386,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(7, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -7352,6 +7426,10 @@ public final class ClusterServiceOuterClass {
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7386,6 +7464,11 @@ public final class ClusterServiceOuterClass {
       }
       result = result && getName()
           .equals(other.getName());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7415,6 +7498,10 @@ public final class ClusterServiceOuterClass {
       }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7589,6 +7676,12 @@ public final class ClusterServiceOuterClass {
         }
         name_ = "";
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -7632,6 +7725,11 @@ public final class ClusterServiceOuterClass {
           result.configSpec_ = configSpecBuilder_.build();
         }
         result.name_ = name_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7700,6 +7798,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8479,6 +8580,159 @@ public final class ClusterServiceOuterClass {
         name_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19591,6 +19845,1932 @@ public final class ClusterServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    int getRescheduleTypeValue();
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType();
+
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest}
+   */
+  public  static final class RescheduleMaintenanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest)
+      RescheduleMaintenanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceRequest.newBuilder() to construct.
+    private RescheduleMaintenanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceRequest() {
+      clusterId_ = "";
+      rescheduleType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              rescheduleType_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType}
+     */
+    public enum RescheduleType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      RESCHEDULE_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>IMMEDIATE = 1;</code>
+       */
+      IMMEDIATE(1),
+      /**
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      NEXT_AVAILABLE_WINDOW(2),
+      /**
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      SPECIFIC_TIME(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int RESCHEDULE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>IMMEDIATE = 1;</code>
+       */
+      public static final int IMMEDIATE_VALUE = 1;
+      /**
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      public static final int NEXT_AVAILABLE_WINDOW_VALUE = 2;
+      /**
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      public static final int SPECIFIC_TIME_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RescheduleType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RescheduleType forNumber(int value) {
+        switch (value) {
+          case 0: return RESCHEDULE_TYPE_UNSPECIFIED;
+          case 1: return IMMEDIATE;
+          case 2: return NEXT_AVAILABLE_WINDOW;
+          case 3: return SPECIFIC_TIME;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RescheduleType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RescheduleType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RescheduleType>() {
+              public RescheduleType findValueByNumber(int number) {
+                return RescheduleType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final RescheduleType[] VALUES = values();
+
+      public static RescheduleType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RescheduleType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType)
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESCHEDULE_TYPE_FIELD_NUMBER = 2;
+    private int rescheduleType_;
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public int getRescheduleTypeValue() {
+      return rescheduleType_;
+    }
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+      return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(3, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && rescheduleType_ == other.rescheduleType_;
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + RESCHEDULE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + rescheduleType_;
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        rescheduleType_ = 0;
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest(this);
+        result.clusterId_ = clusterId_;
+        result.rescheduleType_ = rescheduleType_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.rescheduleType_ != 0) {
+          setRescheduleTypeValue(other.getRescheduleTypeValue());
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int rescheduleType_ = 0;
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public int getRescheduleTypeValue() {
+        return rescheduleType_;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleTypeValue(int value) {
+        rescheduleType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+        return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleType(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        rescheduleType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearRescheduleType() {
+        
+        rescheduleType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceRequest)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceRequest>() {
+      @java.lang.Override
+      public RescheduleMaintenanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata}
+   */
+  public  static final class RescheduleMaintenanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata)
+      RescheduleMaintenanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceMetadata.newBuilder() to construct.
+    private RescheduleMaintenanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(4, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata(this);
+        result.clusterId_ = clusterId_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.RescheduleMaintenanceMetadata)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceMetadata>() {
+      @java.lang.Override
+      public RescheduleMaintenanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -64195,6 +66375,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -64443,361 +66633,381 @@ public final class ClusterServiceOuterClass {
       "\0323yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb3_6.proto\0323yandex/cloud/mdb/mongodb/" +
       "v1/config/mongodb4_0.proto\0323yandex/cloud" +
-      "/mdb/mongodb/v1/config/mongodb4_2.proto\"" +
-      "5\n\021GetClusterRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037" +
-      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"g\n\024ListClustersResponse\0226\n\010clusters\030\001 " +
-      "\003(\0132$.yandex.cloud.mdb.mongodb.v1.Cluste" +
-      "r\022\027\n\017next_page_token\030\002 \001(\t\"\310\005\n\024CreateClu" +
-      "sterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022+\n\004name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-z" +
-      "A-Z0-9_]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
-      "6\022\216\001\n\006labels\030\004 \003(\0132=.yandex.cloud.mdb.mo" +
-      "ngodb.v1.CreateClusterRequest.LabelsEntr" +
-      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
-      "<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013environmen" +
-      "t\030\005 \001(\01620.yandex.cloud.mdb.mongodb.v1.Cl" +
-      "uster.EnvironmentB\004\350\3071\001\022B\n\013config_spec\030\006" +
-      " \001(\0132\'.yandex.cloud.mdb.mongodb.v1.Confi" +
-      "gSpecB\004\350\3071\001\022I\n\016database_specs\030\007 \003(\0132).ya" +
-      "ndex.cloud.mdb.mongodb.v1.DatabaseSpecB\006" +
-      "\202\3101\002>0\022A\n\nuser_specs\030\010 \003(\0132%.yandex.clou" +
-      "d.mdb.mongodb.v1.UserSpecB\006\202\3101\002>0\022A\n\nhos" +
-      "t_specs\030\t \003(\0132%.yandex.cloud.mdb.mongodb" +
-      ".v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_id\030\n \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"\261\003\n\024UpdateClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
-      "\005<=256\022\216\001\n\006labels\030\004 \003(\0132=.yandex.cloud.m" +
-      "db.mongodb.v1.UpdateClusterRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022<\n\013confi" +
-      "g_spec\030\005 \001(\0132\'.yandex.cloud.mdb.mongodb." +
-      "v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopC" +
-      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinatio" +
-      "n_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020so" +
-      "urce_folder_id\030\002 \001(\t\022\035\n\025destination_fold" +
-      "er_id\030\003 \001(\t\"8\n\024BackupClusterRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\350\005\n\025R" +
-      "estoreClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
-      "zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
-      "256\022\217\001\n\006labels\030\004 \003(\0132>.yandex.cloud.mdb." +
-      "mongodb.v1.RestoreClusterRequest.LabelsE" +
-      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
-      "\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013environ" +
-      "ment\030\005 \001(\01620.yandex.cloud.mdb.mongodb.v1" +
-      ".Cluster.EnvironmentB\004\350\3071\001\022B\n\013config_spe" +
-      "c\030\006 \001(\0132\'.yandex.cloud.mdb.mongodb.v1.Co" +
-      "nfigSpecB\004\350\3071\001\022A\n\nhost_specs\030\007 \003(\0132%.yan" +
-      "dex.cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>" +
-      "0\022 \n\nnetwork_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tf" +
-      "older_id\030\t \001(\tB\010\212\3101\004<=50\022c\n\024recovery_tar" +
-      "get_spec\030\n \001(\0132E.yandex.cloud.mdb.mongod" +
-      "b.v1.RestoreClusterRequest.RecoveryTarge" +
-      "tSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\032/\n\022RecoveryTargetSpec\022\031\n\tti" +
-      "mestamp\030\001 \001(\003B\006\372\3071\002>0\"?\n\026RestoreClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id" +
-      "\030\002 \001(\t\"\260\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022D\n\007message\030\002" +
-      " \003(\01323.yandex.cloud.mdb.mongodb.v1.LogRe" +
-      "cord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373\002\n\026ListCluste" +
-      "rLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014service" +
-      "_type\030\003 \001(\0162?.yandex.cloud.mdb.mongodb.v" +
-      "1.ListClusterLogsRequest.ServiceType\022-\n\t" +
-      "from_time\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1000\022" +
-      "\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"7\n\013Servic" +
-      "eType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\n\n\006M" +
-      "ONGOD\020\001\"h\n\027ListClusterLogsResponse\0224\n\004lo" +
-      "gs\030\001 \003(\0132&.yandex.cloud.mdb.mongodb.v1.L" +
-      "ogRecord\022\027\n\017next_page_token\030\002 \001(\t\"d\n\017Str" +
-      "eamLogRecord\0226\n\006record\030\001 \001(\0132&.yandex.cl" +
-      "oud.mdb.mongodb.v1.LogRecord\022\031\n\021next_rec" +
-      "ord_token\030\002 \001(\t\"\342\002\n\030StreamClusterLogsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025" +
-      "\n\rcolumn_filter\030\002 \003(\t\022W\n\014service_type\030\003 " +
-      "\001(\0162A.yandex.cloud.mdb.mongodb.v1.Stream" +
-      "ClusterLogsRequest.ServiceType\022-\n\tfrom_t" +
-      "ime\030\004 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
-      "\007to_time\030\005 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\"7\n\013S" +
-      "erviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000" +
-      "\022\n\n\006MONGOD\020\001\"~\n\034ListClusterOperationsReq" +
+      "/mdb/mongodb/v1/config/mongodb4_2.proto\032" +
+      "-yandex/cloud/mdb/mongodb/v1/maintenance" +
+      ".proto\"5\n\021GetClusterRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRe" +
+      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\"g\n\024ListClustersResponse\0226\n\010clus" +
+      "ters\030\001 \003(\0132$.yandex.cloud.mdb.mongodb.v1" +
+      ".Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\310\005\n\024Cr" +
+      "eateClusterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022+\n\004name\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362" +
+      "\3071\r[a-zA-Z0-9_]*\022\036\n\013description\030\003 \001(\tB\t\212" +
+      "\3101\005<=256\022\216\001\n\006labels\030\004 \003(\0132=.yandex.cloud" +
+      ".mdb.mongodb.v1.CreateClusterRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013env" +
+      "ironment\030\005 \001(\01620.yandex.cloud.mdb.mongod" +
+      "b.v1.Cluster.EnvironmentB\004\350\3071\001\022B\n\013config" +
+      "_spec\030\006 \001(\0132\'.yandex.cloud.mdb.mongodb.v" +
+      "1.ConfigSpecB\004\350\3071\001\022I\n\016database_specs\030\007 \003" +
+      "(\0132).yandex.cloud.mdb.mongodb.v1.Databas" +
+      "eSpecB\006\202\3101\002>0\022A\n\nuser_specs\030\010 \003(\0132%.yand" +
+      "ex.cloud.mdb.mongodb.v1.UserSpecB\006\202\3101\002>0" +
+      "\022A\n\nhost_specs\030\t \003(\0132%.yandex.cloud.mdb." +
+      "mongodb.v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_i" +
+      "d\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\375\003\n\024Up" +
+      "dateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\0132=.yandex." +
+      "cloud.mdb.mongodb.v1.UpdateClusterReques" +
+      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
+      "9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022<" +
+      "\n\013config_spec\030\005 \001(\0132\'.yandex.cloud.mdb.m" +
+      "ongodb.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004" +
+      "<=63\362\3071\016[a-zA-Z0-9_-]*\022J\n\022maintenance_wi" +
+      "ndow\030\007 \001(\0132..yandex.cloud.mdb.mongodb.v1" +
+      ".MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Delete" +
+      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022St" +
+      "opClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destina" +
+      "tion_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Mo" +
+      "veClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n" +
+      "\020source_folder_id\030\002 \001(\t\022\035\n\025destination_f" +
+      "older_id\030\003 \001(\t\"8\n\024BackupClusterRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Back" +
+      "upClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\350\005" +
+      "\n\025RestoreClusterRequest\022\027\n\tbackup_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016" +
+      "[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
+      "\005<=256\022\217\001\n\006labels\030\004 \003(\0132>.yandex.cloud.m" +
+      "db.mongodb.v1.RestoreClusterRequest.Labe" +
+      "lsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*" +
+      "\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022K\n\013envi" +
+      "ronment\030\005 \001(\01620.yandex.cloud.mdb.mongodb" +
+      ".v1.Cluster.EnvironmentB\004\350\3071\001\022B\n\013config_" +
+      "spec\030\006 \001(\0132\'.yandex.cloud.mdb.mongodb.v1" +
+      ".ConfigSpecB\004\350\3071\001\022A\n\nhost_specs\030\007 \003(\0132%." +
+      "yandex.cloud.mdb.mongodb.v1.HostSpecB\006\202\310" +
+      "1\002>0\022 \n\nnetwork_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033" +
+      "\n\tfolder_id\030\t \001(\tB\010\212\3101\004<=50\022c\n\024recovery_" +
+      "target_spec\030\n \001(\0132E.yandex.cloud.mdb.mon" +
+      "godb.v1.RestoreClusterRequest.RecoveryTa" +
+      "rgetSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032/\n\022RecoveryTargetSpec\022\031\n" +
+      "\ttimestamp\030\001 \001(\003B\006\372\3071\002>0\"?\n\026RestoreClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup" +
+      "_id\030\002 \001(\t\"\314\002\n\034RescheduleMaintenanceReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022g\n\017" +
+      "reschedule_type\030\002 \001(\0162H.yandex.cloud.mdb" +
+      ".mongodb.v1.RescheduleMaintenanceRequest" +
+      ".RescheduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\"n\n\016Resc" +
+      "heduleType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WIN" +
+      "DOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035RescheduleMa" +
+      "intenanceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n" +
+      "\rdelayed_until\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"\260\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022D\n\007message" +
+      "\030\002 \003(\01323.yandex.cloud.mdb.mongodb.v1.Log" +
+      "Record.MessageEntry\032.\n\014MessageEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\373\002\n\026ListClus" +
+      "terLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014servi" +
+      "ce_type\030\003 \001(\0162?.yandex.cloud.mdb.mongodb" +
+      ".v1.ListClusterLogsRequest.ServiceType\022-" +
+      "\n\tfrom_time\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=100" +
+      "0\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\"7\n\013Serv" +
+      "iceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\n\n" +
+      "\006MONGOD\020\001\"h\n\027ListClusterLogsResponse\0224\n\004" +
+      "logs\030\001 \003(\0132&.yandex.cloud.mdb.mongodb.v1" +
+      ".LogRecord\022\027\n\017next_page_token\030\002 \001(\t\"d\n\017S" +
+      "treamLogRecord\0226\n\006record\030\001 \001(\0132&.yandex." +
+      "cloud.mdb.mongodb.v1.LogRecord\022\031\n\021next_r" +
+      "ecord_token\030\002 \001(\t\"\342\002\n\030StreamClusterLogsR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014service_type\030" +
+      "\003 \001(\0162A.yandex.cloud.mdb.mongodb.v1.Stre" +
+      "amClusterLogsRequest.ServiceType\022-\n\tfrom" +
+      "_time\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "+\n\007to_time\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\"7\n" +
+      "\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED" +
+      "\020\000\022\n\n\006MONGOD\020\001\"~\n\034ListClusterOperationsR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOpe" +
+      "rationsResponse\0225\n\noperations\030\001 \003(\0132!.ya" +
+      "ndex.cloud.operation.Operation\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"{\n\031ListClusterBackupsReq" +
       "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
       "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"{\n\031ListClusterBackupsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"k\n\032ListClusterBackups" +
-      "Response\0224\n\007backups\030\001 \003(\0132#.yandex.cloud" +
-      ".mdb.mongodb.v1.Backup\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"e\n\030ListClusterHostsResponse\0220" +
-      "\n\005hosts\030\001 \003(\0132!.yandex.cloud.mdb.mongodb" +
-      ".v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"}\n\026Add" +
-      "ClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022A\n\nhost_specs\030\002 \003(\0132%.yand" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"k\n\032ListClusterBacku" +
+      "psResponse\0224\n\007backups\030\001 \003(\0132#.yandex.clo" +
+      "ud.mdb.mongodb.v1.Backup\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"e\n\030ListClusterHostsResponse" +
+      "\0220\n\005hosts\030\001 \003(\0132!.yandex.cloud.mdb.mongo" +
+      "db.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"}\n\026A" +
+      "ddClusterHostsRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022A\n\nhost_specs\030\002 \003(\0132%.ya" +
+      "ndex.cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002" +
+      ">0\"A\n\027AddClusterHostsMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteC" +
+      "lusterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0" +
+      "\212\3101\005<=253\"D\n\032DeleteClusterHostsMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"" +
+      "\317\003\n\034EnableClusterShardingRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022Z\n\010mongocfg\030\002" +
+      " \001(\0132B.yandex.cloud.mdb.mongodb.v1.Enabl" +
+      "eClusterShardingRequest.MongoCfgB\004\350\3071\001\022V" +
+      "\n\006mongos\030\003 \001(\0132@.yandex.cloud.mdb.mongod" +
+      "b.v1.EnableClusterShardingRequest.Mongos" +
+      "B\004\350\3071\001\022A\n\nhost_specs\030\004 \003(\0132%.yandex.clou" +
+      "d.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\032K\n\010Mon" +
+      "goCfg\022?\n\tresources\030\001 \001(\0132&.yandex.cloud." +
+      "mdb.mongodb.v1.ResourcesB\004\350\3071\001\032I\n\006Mongos" +
+      "\022?\n\tresources\030\001 \001(\0132&.yandex.cloud.mdb.m" +
+      "ongodb.v1.ResourcesB\004\350\3071\001\"3\n\035EnableClust" +
+      "erShardingMetadata\022\022\n\ncluster_id\030\001 \001(\t\"n" +
+      "\n\026GetClusterShardRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036" +
+      "\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListCl" +
+      "usterShardsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\031Li" +
+      "stClusterShardsResponse\0222\n\006shards\030\001 \003(\0132" +
+      "\".yandex.cloud.mdb.mongodb.v1.Shard\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"\261\001\n\026AddClusterShard" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[" +
+      "a-zA-Z0-9_-]*\022A\n\nhost_specs\030\003 \003(\0132%.yand" +
       "ex.cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0" +
-      "\"A\n\027AddClusterHostsMetadata\022\022\n\ncluster_i" +
-      "d\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClu" +
-      "sterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\310" +
-      "1\005<=253\"D\n\032DeleteClusterHostsMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\317\003" +
-      "\n\034EnableClusterShardingRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022Z\n\010mongocfg\030\002 \001" +
-      "(\0132B.yandex.cloud.mdb.mongodb.v1.EnableC" +
-      "lusterShardingRequest.MongoCfgB\004\350\3071\001\022V\n\006" +
-      "mongos\030\003 \001(\0132@.yandex.cloud.mdb.mongodb." +
-      "v1.EnableClusterShardingRequest.MongosB\004" +
-      "\350\3071\001\022A\n\nhost_specs\030\004 \003(\0132%.yandex.cloud." +
-      "mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\032K\n\010Mongo" +
-      "Cfg\022?\n\tresources\030\001 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.ResourcesB\004\350\3071\001\032I\n\006Mongos\022?" +
-      "\n\tresources\030\001 \001(\0132&.yandex.cloud.mdb.mon" +
-      "godb.v1.ResourcesB\004\350\3071\001\"3\n\035EnableCluster" +
-      "ShardingMetadata\022\022\n\ncluster_id\030\001 \001(\t\"n\n\026" +
-      "GetClusterShardRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\307" +
-      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030ListClus" +
-      "terShardsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\031List" +
-      "ClusterShardsResponse\0222\n\006shards\030\001 \003(\0132\"." +
-      "yandex.cloud.mdb.mongodb.v1.Shard\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\261\001\n\026AddClusterShardRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "2\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
-      "zA-Z0-9_-]*\022A\n\nhost_specs\030\003 \003(\0132%.yandex" +
-      ".cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\"A" +
-      "\n\027AddClusterShardMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClust" +
-      "erShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteClusterSha" +
-      "rdMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_" +
-      "name\030\002 \001(\t\"\\\n\023ResetupHostsRequest\022 \n\nclu" +
+      "\"A\n\027AddClusterShardMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteClu" +
+      "sterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004" +
+      "<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteClusterS" +
+      "hardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshar" +
+      "d_name\030\002 \001(\t\"\\\n\023ResetupHostsRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_na" +
+      "mes\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024ResetupHos" +
+      "tsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_n" +
+      "ames\030\002 \003(\t\"\\\n\023RestartHostsRequest\022 \n\nclu" +
       "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_name" +
-      "s\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024ResetupHosts" +
+      "s\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024RestartHosts" +
       "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_nam" +
-      "es\030\002 \003(\t\"\\\n\023RestartHostsRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030" +
-      "\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024RestartHostsMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names" +
-      "\030\002 \003(\t\"\302\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\310" +
-      "1\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020a" +
-      "ssign_public_ip\030\003 \001(\010\0224\n\004type\030\004 \001(\0162&.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Host.Type\022.\n\ns" +
-      "hard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
-      "-]*\"\205\005\n\016MongodbSpec3_6\022B\n\006mongod\030\001 \001(\01322" +
-      ".yandex.cloud.mdb.mongodb.v1.MongodbSpec" +
-      "3_6.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex.cl" +
-      "oud.mdb.mongodb.v1.MongodbSpec3_6.MongoC" +
-      "fg\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.mdb.mo" +
-      "ngodb.v1.MongodbSpec3_6.Mongos\032\210\001\n\006Mongo" +
-      "d\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongodConfig3_6\0229\n\tresour" +
-      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
-      "Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\01325" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "oCfgConfig3_6\0229\n\tresources\030\002 \001(\0132&.yande" +
-      "x.cloud.mdb.mongodb.v1.Resources\032\210\001\n\006Mon" +
-      "gos\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig3_6\0229\n\treso" +
+      "es\030\002 \003(\t\"\302\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010" +
+      "\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n" +
+      "\020assign_public_ip\030\003 \001(\010\0224\n\004type\030\004 \001(\0162&." +
+      "yandex.cloud.mdb.mongodb.v1.Host.Type\022.\n" +
+      "\nshard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
+      "9_-]*\"\205\005\n\016MongodbSpec3_6\022B\n\006mongod\030\001 \001(\013" +
+      "22.yandex.cloud.mdb.mongodb.v1.MongodbSp" +
+      "ec3_6.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex." +
+      "cloud.mdb.mongodb.v1.MongodbSpec3_6.Mong" +
+      "oCfg\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.mdb." +
+      "mongodb.v1.MongodbSpec3_6.Mongos\032\210\001\n\006Mon" +
+      "god\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.m" +
+      "ongodb.v1.config.MongodConfig3_6\0229\n\treso" +
       "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
-      "1.Resources\"\205\005\n\016MongodbSpec4_0\022B\n\006mongod" +
-      "\030\001 \001(\01322.yandex.cloud.mdb.mongodb.v1.Mon" +
-      "godbSpec4_0.Mongod\022F\n\010mongocfg\030\002 \001(\01324.y" +
-      "andex.cloud.mdb.mongodb.v1.MongodbSpec4_" +
-      "0.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yandex.clou" +
-      "d.mdb.mongodb.v1.MongodbSpec4_0.Mongos\032\210" +
-      "\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongodConfig4_0\0229" +
-      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
-      "godb.v1.Resources\032\214\001\n\010MongoCfg\022E\n\006config" +
-      "\030\001 \001(\01325.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongoCfgConfig4_0\0229\n\tresources\030\002 \001(\013" +
-      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongosConfig4_0" +
+      "1.Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\013" +
+      "25.yandex.cloud.mdb.mongodb.v1.config.Mo" +
+      "ngoCfgConfig3_6\0229\n\tresources\030\002 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\032\210\001\n\006M" +
+      "ongos\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongosConfig3_6\0229\n\tre" +
+      "sources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb" +
+      ".v1.Resources\"\205\005\n\016MongodbSpec4_0\022B\n\006mong" +
+      "od\030\001 \001(\01322.yandex.cloud.mdb.mongodb.v1.M" +
+      "ongodbSpec4_0.Mongod\022F\n\010mongocfg\030\002 \001(\01324" +
+      ".yandex.cloud.mdb.mongodb.v1.MongodbSpec" +
+      "4_0.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yandex.cl" +
+      "oud.mdb.mongodb.v1.MongodbSpec4_0.Mongos" +
+      "\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongodConfig4_0" +
       "\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.m" +
-      "ongodb.v1.Resources\"\205\005\n\016MongodbSpec4_2\022B" +
-      "\n\006mongod\030\001 \001(\01322.yandex.cloud.mdb.mongod" +
-      "b.v1.MongodbSpec4_2.Mongod\022F\n\010mongocfg\030\002" +
-      " \001(\01324.yandex.cloud.mdb.mongodb.v1.Mongo" +
-      "dbSpec4_2.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yan" +
-      "dex.cloud.mdb.mongodb.v1.MongodbSpec4_2." +
-      "Mongos\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongodCon" +
-      "fig4_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\032\214\001\n\010MongoCfg\022E" +
-      "\n\006config\030\001 \001(\01325.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongoCfgConfig4_2\0229\n\tresourc" +
-      "es\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.R" +
-      "esources\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
+      "ongodb.v1.Resources\032\214\001\n\010MongoCfg\022E\n\006conf" +
+      "ig\030\001 \001(\01325.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfig4_0\0229\n\tresources\030\002 \001" +
+      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
+      "es\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongosConfig4" +
+      "_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
+      ".mongodb.v1.Resources\"\205\005\n\016MongodbSpec4_2" +
+      "\022B\n\006mongod\030\001 \001(\01322.yandex.cloud.mdb.mong" +
+      "odb.v1.MongodbSpec4_2.Mongod\022F\n\010mongocfg" +
+      "\030\002 \001(\01324.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godbSpec4_2.MongoCfg\022B\n\006mongos\030\003 \001(\01322.y" +
+      "andex.cloud.mdb.mongodb.v1.MongodbSpec4_" +
+      "2.Mongos\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongodC" +
       "onfig4_2\0229\n\tresources\030\002 \001(\0132&.yandex.clo" +
-      "ud.mdb.mongodb.v1.Resources\"\314\003\n\nConfigSp" +
-      "ec\022\017\n\007version\030\001 \001(\t\022%\n\035feature_compatibi" +
-      "lity_version\030\005 \001(\t\022X\n\020mongodb_spec_3_6\030\002" +
-      " \001(\0132+.yandex.cloud.mdb.mongodb.v1.Mongo" +
-      "dbSpec3_6H\000R\017mongodbSpec_3_6\022X\n\020mongodb_" +
-      "spec_4_0\030\004 \001(\0132+.yandex.cloud.mdb.mongod" +
-      "b.v1.MongodbSpec4_0H\000R\017mongodbSpec_4_0\022X" +
-      "\n\020mongodb_spec_4_2\030\007 \001(\0132+.yandex.cloud." +
-      "mdb.mongodb.v1.MongodbSpec4_2H\000R\017mongodb" +
-      "Spec_4_2\0223\n\023backup_window_start\030\003 \001(\0132\026." +
-      "google.type.TimeOfDay\0223\n\006access\030\006 \001(\0132#." +
-      "yandex.cloud.mdb.mongodb.v1.AccessB\016\n\014mo" +
-      "ngodb_spec2\250$\n\016ClusterService\022\216\001\n\003Get\022.." +
-      "yandex.cloud.mdb.mongodb.v1.GetClusterRe" +
-      "quest\032$.yandex.cloud.mdb.mongodb.v1.Clus" +
-      "ter\"1\202\323\344\223\002+\022)/managed-mongodb/v1/cluster" +
-      "s/{cluster_id}\022\221\001\n\004List\0220.yandex.cloud.m" +
-      "db.mongodb.v1.ListClustersRequest\0321.yand" +
-      "ex.cloud.mdb.mongodb.v1.ListClustersResp" +
-      "onse\"$\202\323\344\223\002\036\022\034/managed-mongodb/v1/cluste" +
-      "rs\022\253\001\n\006Create\0221.yandex.cloud.mdb.mongodb" +
-      ".v1.CreateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"K\202\323\344\223\002!\"\034/managed-mo" +
-      "ngodb/v1/clusters:\001*\262\322* \n\025CreateClusterM" +
-      "etadata\022\007Cluster\022\270\001\n\006Update\0221.yandex.clo" +
-      "ud.mdb.mongodb.v1.UpdateClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
-      ".2)/managed-mongodb/v1/clusters/{cluster" +
-      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
-      "ter\022\303\001\n\006Delete\0221.yandex.cloud.mdb.mongod" +
-      "b.v1.DeleteClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"c\202\323\344\223\002+*)/managed-m" +
-      "ongodb/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
-      "eteClusterMetadata\022\025google.protobuf.Empt" +
-      "y\022\270\001\n\005Start\0220.yandex.cloud.mdb.mongodb.v" +
-      "1.StartClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"Z\202\323\344\223\0021\"//managed-mongo" +
-      "db/v1/clusters/{cluster_id}:start\262\322*\037\n\024S" +
-      "tartClusterMetadata\022\007Cluster\022\264\001\n\004Stop\022/." +
-      "yandex.cloud.mdb.mongodb.v1.StopClusterR" +
+      "ud.mdb.mongodb.v1.Resources\032\214\001\n\010MongoCfg" +
+      "\022E\n\006config\030\001 \001(\01325.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig4_2\0229\n\tresou" +
+      "rces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
+      ".Resources\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "sConfig4_2\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\"\314\003\n\nConfig" +
+      "Spec\022\017\n\007version\030\001 \001(\t\022%\n\035feature_compati" +
+      "bility_version\030\005 \001(\t\022X\n\020mongodb_spec_3_6" +
+      "\030\002 \001(\0132+.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godbSpec3_6H\000R\017mongodbSpec_3_6\022X\n\020mongod" +
+      "b_spec_4_0\030\004 \001(\0132+.yandex.cloud.mdb.mong" +
+      "odb.v1.MongodbSpec4_0H\000R\017mongodbSpec_4_0" +
+      "\022X\n\020mongodb_spec_4_2\030\007 \001(\0132+.yandex.clou" +
+      "d.mdb.mongodb.v1.MongodbSpec4_2H\000R\017mongo" +
+      "dbSpec_4_2\0223\n\023backup_window_start\030\003 \001(\0132" +
+      "\026.google.type.TimeOfDay\0223\n\006access\030\006 \001(\0132" +
+      "#.yandex.cloud.mdb.mongodb.v1.AccessB\016\n\014" +
+      "mongodb_spec2\230&\n\016ClusterService\022\216\001\n\003Get\022" +
+      "..yandex.cloud.mdb.mongodb.v1.GetCluster" +
+      "Request\032$.yandex.cloud.mdb.mongodb.v1.Cl" +
+      "uster\"1\202\323\344\223\002+\022)/managed-mongodb/v1/clust" +
+      "ers/{cluster_id}\022\221\001\n\004List\0220.yandex.cloud" +
+      ".mdb.mongodb.v1.ListClustersRequest\0321.ya" +
+      "ndex.cloud.mdb.mongodb.v1.ListClustersRe" +
+      "sponse\"$\202\323\344\223\002\036\022\034/managed-mongodb/v1/clus" +
+      "ters\022\253\001\n\006Create\0221.yandex.cloud.mdb.mongo" +
+      "db.v1.CreateClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"K\202\323\344\223\002!\"\034/managed-" +
+      "mongodb/v1/clusters:\001*\262\322* \n\025CreateCluste" +
+      "rMetadata\022\007Cluster\022\270\001\n\006Update\0221.yandex.c" +
+      "loud.mdb.mongodb.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"X\202\323\344" +
+      "\223\002.2)/managed-mongodb/v1/clusters/{clust" +
+      "er_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cl" +
+      "uster\022\303\001\n\006Delete\0221.yandex.cloud.mdb.mong" +
+      "odb.v1.DeleteClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"c\202\323\344\223\002+*)/managed" +
+      "-mongodb/v1/clusters/{cluster_id}\262\322*.\n\025D" +
+      "eleteClusterMetadata\022\025google.protobuf.Em" +
+      "pty\022\270\001\n\005Start\0220.yandex.cloud.mdb.mongodb" +
+      ".v1.StartClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"Z\202\323\344\223\0021\"//managed-mon" +
+      "godb/v1/clusters/{cluster_id}:start\262\322*\037\n" +
+      "\024StartClusterMetadata\022\007Cluster\022\264\001\n\004Stop\022" +
+      "/.yandex.cloud.mdb.mongodb.v1.StopCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"X\202\323\344\223\0020\"./managed-mongodb/v1/cluster" +
+      "s/{cluster_id}:stop\262\322*\036\n\023StopClusterMeta" +
+      "data\022\007Cluster\022\267\001\n\004Move\022/.yandex.cloud.md" +
+      "b.mongodb.v1.MoveClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"[\202\323\344\223\0023\"./man" +
+      "aged-mongodb/v1/clusters/{cluster_id}:mo" +
+      "ve:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022" +
+      "\274\001\n\006Backup\0221.yandex.cloud.mdb.mongodb.v1" +
+      ".BackupClusterRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\\\202\323\344\223\0022\"0/managed-mongo" +
+      "db/v1/clusters/{cluster_id}:backup\262\322* \n\025" +
+      "BackupClusterMetadata\022\007Cluster\022\266\001\n\007Resto" +
+      "re\0222.yandex.cloud.mdb.mongodb.v1.Restore" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"T\202\323\344\223\002)\"$/managed-mongodb/v1/c" +
+      "lusters:restore:\001*\262\322*!\n\026RestoreClusterMe" +
+      "tadata\022\007Cluster\022\355\001\n\025RescheduleMaintenanc" +
+      "e\0229.yandex.cloud.mdb.mongodb.v1.Reschedu" +
+      "leMaintenanceRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"v\202\323\344\223\002D\"?/managed-mongod" +
+      "b/v1/clusters/{cluster_id}:rescheduleMai" +
+      "ntenance:\001*\262\322*(\n\035RescheduleMaintenanceMe" +
+      "tadata\022\007Cluster\022\255\001\n\010ListLogs\0223.yandex.cl" +
+      "oud.mdb.mongodb.v1.ListClusterLogsReques" +
+      "t\0324.yandex.cloud.mdb.mongodb.v1.ListClus" +
+      "terLogsResponse\"6\202\323\344\223\0020\022./managed-mongod" +
+      "b/v1/clusters/{cluster_id}:logs\022\262\001\n\nStre" +
+      "amLogs\0225.yandex.cloud.mdb.mongodb.v1.Str" +
+      "eamClusterLogsRequest\032,.yandex.cloud.mdb" +
+      ".mongodb.v1.StreamLogRecord\"=\202\323\344\223\0027\0225/ma" +
+      "naged-mongodb/v1/clusters/{cluster_id}:s" +
+      "tream_logs0\001\022\305\001\n\016ListOperations\0229.yandex" +
+      ".cloud.mdb.mongodb.v1.ListClusterOperati" +
+      "onsRequest\032:.yandex.cloud.mdb.mongodb.v1" +
+      ".ListClusterOperationsResponse\"<\202\323\344\223\0026\0224" +
+      "/managed-mongodb/v1/clusters/{cluster_id" +
+      "}/operations\022\271\001\n\013ListBackups\0226.yandex.cl" +
+      "oud.mdb.mongodb.v1.ListClusterBackupsReq" +
+      "uest\0327.yandex.cloud.mdb.mongodb.v1.ListC" +
+      "lusterBackupsResponse\"9\202\323\344\223\0023\0221/managed-" +
+      "mongodb/v1/clusters/{cluster_id}/backups" +
+      "\022\261\001\n\tListHosts\0224.yandex.cloud.mdb.mongod" +
+      "b.v1.ListClusterHostsRequest\0325.yandex.cl" +
+      "oud.mdb.mongodb.v1.ListClusterHostsRespo" +
+      "nse\"7\202\323\344\223\0021\022//managed-mongodb/v1/cluster" +
+      "s/{cluster_id}/hosts\022\336\001\n\010AddHosts\0223.yand" +
+      "ex.cloud.mdb.mongodb.v1.AddClusterHostsR" +
       "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"X\202\323\344\223\0020\"./managed-mongodb/v1/clusters/" +
-      "{cluster_id}:stop\262\322*\036\n\023StopClusterMetada" +
-      "ta\022\007Cluster\022\267\001\n\004Move\022/.yandex.cloud.mdb." +
-      "mongodb.v1.MoveClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"[\202\323\344\223\0023\"./manag" +
-      "ed-mongodb/v1/clusters/{cluster_id}:move" +
-      ":\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001" +
-      "\n\006Backup\0221.yandex.cloud.mdb.mongodb.v1.B" +
-      "ackupClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"\\\202\323\344\223\0022\"0/managed-mongodb" +
-      "/v1/clusters/{cluster_id}:backup\262\322* \n\025Ba" +
-      "ckupClusterMetadata\022\007Cluster\022\266\001\n\007Restore" +
-      "\0222.yandex.cloud.mdb.mongodb.v1.RestoreCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"T\202\323\344\223\002)\"$/managed-mongodb/v1/clu" +
-      "sters:restore:\001*\262\322*!\n\026RestoreClusterMeta" +
-      "data\022\007Cluster\022\255\001\n\010ListLogs\0223.yandex.clou" +
-      "d.mdb.mongodb.v1.ListClusterLogsRequest\032" +
-      "4.yandex.cloud.mdb.mongodb.v1.ListCluste" +
-      "rLogsResponse\"6\202\323\344\223\0020\022./managed-mongodb/" +
-      "v1/clusters/{cluster_id}:logs\022\262\001\n\nStream" +
-      "Logs\0225.yandex.cloud.mdb.mongodb.v1.Strea" +
-      "mClusterLogsRequest\032,.yandex.cloud.mdb.m" +
-      "ongodb.v1.StreamLogRecord\"=\202\323\344\223\0027\0225/mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:str" +
-      "eam_logs0\001\022\305\001\n\016ListOperations\0229.yandex.c" +
-      "loud.mdb.mongodb.v1.ListClusterOperation" +
-      "sRequest\032:.yandex.cloud.mdb.mongodb.v1.L" +
-      "istClusterOperationsResponse\"<\202\323\344\223\0026\0224/m" +
-      "anaged-mongodb/v1/clusters/{cluster_id}/" +
-      "operations\022\271\001\n\013ListBackups\0226.yandex.clou" +
-      "d.mdb.mongodb.v1.ListClusterBackupsReque" +
-      "st\0327.yandex.cloud.mdb.mongodb.v1.ListClu" +
-      "sterBackupsResponse\"9\202\323\344\223\0023\0221/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}/backups\022\261" +
-      "\001\n\tListHosts\0224.yandex.cloud.mdb.mongodb." +
-      "v1.ListClusterHostsRequest\0325.yandex.clou" +
-      "d.mdb.mongodb.v1.ListClusterHostsRespons" +
-      "e\"7\202\323\344\223\0021\022//managed-mongodb/v1/clusters/" +
-      "{cluster_id}/hosts\022\336\001\n\010AddHosts\0223.yandex" +
-      ".cloud.mdb.mongodb.v1.AddClusterHostsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "z\202\323\344\223\002@\";/managed-mongodb/v1/clusters/{c" +
-      "luster_id}/hosts:batchCreate:\001*\262\322*0\n\027Add" +
-      "ClusterHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\347\001\n\013DeleteHosts\0226.yandex.cloud.mdb.m" +
-      "ongodb.v1.DeleteClusterHostsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"}\202\323\344\223\002@\";" +
-      "/managed-mongodb/v1/clusters/{cluster_id" +
-      "}/hosts:batchDelete:\001*\262\322*3\n\032DeleteCluste" +
-      "rHostsMetadata\022\025google.protobuf.Empty\022\355\001" +
-      "\n\016EnableSharding\0229.yandex.cloud.mdb.mong" +
-      "odb.v1.EnableClusterShardingRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"}\202\323\344\223\002=\"8" +
-      "/managed-mongodb/v1/clusters/{cluster_id" +
-      "}:enableSharding:\001*\262\322*6\n\035EnableClusterSh" +
-      "ardingMetadata\022\025google.protobuf.Empty\022\252\001" +
-      "\n\010GetShard\0223.yandex.cloud.mdb.mongodb.v1" +
-      ".GetClusterShardRequest\032\".yandex.cloud.m" +
-      "db.mongodb.v1.Shard\"E\202\323\344\223\002?\022=/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}/shards/{s" +
-      "hard_name}\022\265\001\n\nListShards\0225.yandex.cloud" +
-      ".mdb.mongodb.v1.ListClusterShardsRequest" +
-      "\0326.yandex.cloud.mdb.mongodb.v1.ListClust" +
-      "erShardsResponse\"8\202\323\344\223\0022\0220/managed-mongo" +
-      "db/v1/clusters/{cluster_id}/shards\022\303\001\n\010A" +
-      "ddShard\0223.yandex.cloud.mdb.mongodb.v1.Ad" +
-      "dClusterShardRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"_\202\323\344\223\0025\"0/managed-mongod" +
-      "b/v1/clusters/{cluster_id}/shards:\001*\262\322* " +
-      "\n\027AddClusterShardMetadata\022\005Shard\022\346\001\n\013Del" +
-      "eteShard\0226.yandex.cloud.mdb.mongodb.v1.D" +
-      "eleteClusterShardRequest\032!.yandex.cloud." +
-      "operation.Operation\"|\202\323\344\223\002?*=/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}/shards/{s" +
-      "hard_name}\262\322*3\n\032DeleteClusterShardMetada" +
-      "ta\022\025google.protobuf.Empty\022\327\001\n\014ResetupHos" +
-      "ts\0220.yandex.cloud.mdb.mongodb.v1.Resetup" +
-      "HostsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"r\202\323\344\223\002;\"6/managed-mongodb/v1/clu" +
-      "sters/{cluster_id}:resetupHosts:\001*\262\322*-\n\024" +
-      "ResetupHostsMetadata\022\025google.protobuf.Em" +
-      "pty\022\327\001\n\014RestartHosts\0220.yandex.cloud.mdb." +
-      "mongodb.v1.RestartHostsRequest\032!.yandex." +
-      "cloud.operation.Operation\"r\202\323\344\223\002;\"6/mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:res" +
-      "tartHosts:\001*\262\322*-\n\024RestartHostsMetadata\022\025" +
-      "google.protobuf.EmptyBj\n\037yandex.cloud.ap" +
-      "i.mdb.mongodb.v1ZGgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/mongodb/v" +
-      "1;mongodbb\006proto3"
+      "n\"z\202\323\344\223\002@\";/managed-mongodb/v1/clusters/" +
+      "{cluster_id}/hosts:batchCreate:\001*\262\322*0\n\027A" +
+      "ddClusterHostsMetadata\022\025google.protobuf." +
+      "Empty\022\347\001\n\013DeleteHosts\0226.yandex.cloud.mdb" +
+      ".mongodb.v1.DeleteClusterHostsRequest\032!." +
+      "yandex.cloud.operation.Operation\"}\202\323\344\223\002@" +
+      "\";/managed-mongodb/v1/clusters/{cluster_" +
+      "id}/hosts:batchDelete:\001*\262\322*3\n\032DeleteClus" +
+      "terHostsMetadata\022\025google.protobuf.Empty\022" +
+      "\355\001\n\016EnableSharding\0229.yandex.cloud.mdb.mo" +
+      "ngodb.v1.EnableClusterShardingRequest\032!." +
+      "yandex.cloud.operation.Operation\"}\202\323\344\223\002=" +
+      "\"8/managed-mongodb/v1/clusters/{cluster_" +
+      "id}:enableSharding:\001*\262\322*6\n\035EnableCluster" +
+      "ShardingMetadata\022\025google.protobuf.Empty\022" +
+      "\252\001\n\010GetShard\0223.yandex.cloud.mdb.mongodb." +
+      "v1.GetClusterShardRequest\032\".yandex.cloud" +
+      ".mdb.mongodb.v1.Shard\"E\202\323\344\223\002?\022=/managed-" +
+      "mongodb/v1/clusters/{cluster_id}/shards/" +
+      "{shard_name}\022\265\001\n\nListShards\0225.yandex.clo" +
+      "ud.mdb.mongodb.v1.ListClusterShardsReque" +
+      "st\0326.yandex.cloud.mdb.mongodb.v1.ListClu" +
+      "sterShardsResponse\"8\202\323\344\223\0022\0220/managed-mon" +
+      "godb/v1/clusters/{cluster_id}/shards\022\303\001\n" +
+      "\010AddShard\0223.yandex.cloud.mdb.mongodb.v1." +
+      "AddClusterShardRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"_\202\323\344\223\0025\"0/managed-mong" +
+      "odb/v1/clusters/{cluster_id}/shards:\001*\262\322" +
+      "* \n\027AddClusterShardMetadata\022\005Shard\022\346\001\n\013D" +
+      "eleteShard\0226.yandex.cloud.mdb.mongodb.v1" +
+      ".DeleteClusterShardRequest\032!.yandex.clou" +
+      "d.operation.Operation\"|\202\323\344\223\002?*=/managed-" +
+      "mongodb/v1/clusters/{cluster_id}/shards/" +
+      "{shard_name}\262\322*3\n\032DeleteClusterShardMeta" +
+      "data\022\025google.protobuf.Empty\022\327\001\n\014ResetupH" +
+      "osts\0220.yandex.cloud.mdb.mongodb.v1.Reset" +
+      "upHostsRequest\032!.yandex.cloud.operation." +
+      "Operation\"r\202\323\344\223\002;\"6/managed-mongodb/v1/c" +
+      "lusters/{cluster_id}:resetupHosts:\001*\262\322*-" +
+      "\n\024ResetupHostsMetadata\022\025google.protobuf." +
+      "Empty\022\327\001\n\014RestartHosts\0220.yandex.cloud.md" +
+      "b.mongodb.v1.RestartHostsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"r\202\323\344\223\002;\"6/ma" +
+      "naged-mongodb/v1/clusters/{cluster_id}:r" +
+      "estartHosts:\001*\262\322*-\n\024RestartHostsMetadata" +
+      "\022\025google.protobuf.EmptyBj\n\037yandex.cloud." +
+      "api.mdb.mongodb.v1ZGgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/mongodb" +
+      "/v1;mongodbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64824,6 +67034,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.getDescriptor(),
+          yandex.cloud.api.mdb.mongodb.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_mongodb_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -64866,7 +67077,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_mongodb_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -64963,8 +67174,20 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestoreClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "BackupId", });
-    internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_descriptor =
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_RescheduleMaintenanceMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_descriptor =
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_descriptor,
@@ -64976,91 +67199,91 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_LogRecord_MessageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_StreamLogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_mongodb_v1_StreamLogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_StreamLogRecord_descriptor,
         new java.lang.String[] { "Record", "NextRecordToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_StreamClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_mongodb_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_StreamClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", });
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingRequest_descriptor,
@@ -65078,85 +67301,85 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingRequest_Mongos_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_EnableClusterShardingMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_mongodb_v1_GetClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_mongodb_v1_GetClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_GetClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterShardsResponse_descriptor,
         new java.lang.String[] { "Shards", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", "HostSpecs", });
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_AddClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardRequest_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_DeleteClusterShardMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ResetupHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", "Type", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_descriptor,
@@ -65180,7 +67403,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_Mongos_descriptor,
         new java.lang.String[] { "Config", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_descriptor,
@@ -65204,7 +67427,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_Mongos_descriptor,
         new java.lang.String[] { "Config", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_descriptor,
@@ -65228,7 +67451,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_Mongos_descriptor,
         new java.lang.String[] { "Config", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_descriptor,
@@ -65259,6 +67482,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.getDescriptor();
+    yandex.cloud.api.mdb.mongodb.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

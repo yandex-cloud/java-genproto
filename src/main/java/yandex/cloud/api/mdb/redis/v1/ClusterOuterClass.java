@@ -316,6 +316,56 @@ public final class ClusterOuterClass {
      * <code>bool sharded = 13;</code>
      */
     boolean getSharded();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    boolean hasPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation getPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
   }
   /**
    * <pre>
@@ -470,6 +520,32 @@ public final class ClusterOuterClass {
             case 104: {
 
               sharded_ = input.readBool();
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder subBuilder = null;
+              if (plannedOperation_ != null) {
+                subBuilder = plannedOperation_.toBuilder();
+              }
+              plannedOperation_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedOperation_);
+                plannedOperation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1522,6 +1598,72 @@ public final class ClusterOuterClass {
       return sharded_;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
+    public static final int PLANNED_OPERATION_FIELD_NUMBER = 15;
+    private yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation plannedOperation_;
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public boolean hasPlannedOperation() {
+      return plannedOperation_ != null;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+      return plannedOperation_ == null ? yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+     */
+    public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+      return getPlannedOperation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1577,6 +1719,12 @@ public final class ClusterOuterClass {
       }
       if (sharded_ != false) {
         output.writeBool(13, sharded_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(14, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        output.writeMessage(15, getPlannedOperation());
       }
       unknownFields.writeTo(output);
     }
@@ -1640,6 +1788,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(13, sharded_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getPlannedOperation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1685,6 +1841,16 @@ public final class ClusterOuterClass {
       result = result && status_ == other.status_;
       result = result && (getSharded()
           == other.getSharded());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
+      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation()) {
+        result = result && getPlannedOperation()
+            .equals(other.getPlannedOperation());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1731,6 +1897,14 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + SHARDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSharded());
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPlannedOperation()) {
+        hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1929,6 +2103,18 @@ public final class ClusterOuterClass {
 
         sharded_ = false;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1987,6 +2173,16 @@ public final class ClusterOuterClass {
         result.health_ = health_;
         result.status_ = status_;
         result.sharded_ = sharded_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (plannedOperationBuilder_ == null) {
+          result.plannedOperation_ = plannedOperation_;
+        } else {
+          result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2101,6 +2297,12 @@ public final class ClusterOuterClass {
         }
         if (other.getSharded() != false) {
           setSharded(other.getSharded());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPlannedOperation()) {
+          mergePlannedOperation(other.getPlannedOperation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3574,6 +3776,312 @@ public final class ClusterOuterClass {
         sharded_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceWindow maintenance_window = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public boolean hasPlannedOperation() {
+        return plannedOperationBuilder_ != null || plannedOperation_ != null;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          return plannedOperation_ == null ? yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        } else {
+          return plannedOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder setPlannedOperation(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedOperation_ = value;
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder setPlannedOperation(
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder builderForValue) {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder mergePlannedOperation(yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (plannedOperation_ != null) {
+            plannedOperation_ =
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.newBuilder(plannedOperation_).mergeFrom(value).buildPartial();
+          } else {
+            plannedOperation_ = value;
+          }
+          onChanged();
+        } else {
+          plannedOperationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public Builder clearPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+          onChanged();
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder getPlannedOperationBuilder() {
+        
+        onChanged();
+        return getPlannedOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+        if (plannedOperationBuilder_ != null) {
+          return plannedOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedOperation_ == null ?
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.MaintenanceOperation planned_operation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder> 
+          getPlannedOperationFieldBuilder() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.redis.v1.Maintenance.MaintenanceOperationOrBuilder>(
+                  getPlannedOperation(),
+                  getParentForChildren(),
+                  isClean());
+          plannedOperation_ = null;
+        }
+        return plannedOperationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12016,62 +12524,67 @@ public final class ClusterOuterClass {
       "tobuf/timestamp.proto\032\033google/type/timeo" +
       "fday.proto\032/yandex/cloud/mdb/redis/v1/co" +
       "nfig/redis5_0.proto\032/yandex/cloud/mdb/re" +
-      "dis/v1/config/redis6_0.proto\"\306\006\n\007Cluster" +
-      "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
-      "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006la" +
-      "bels\030\006 \003(\0132..yandex.cloud.mdb.redis.v1.C" +
-      "luster.LabelsEntry\022C\n\013environment\030\007 \001(\0162" +
-      "..yandex.cloud.mdb.redis.v1.Cluster.Envi" +
-      "ronment\0229\n\nmonitoring\030\010 \003(\0132%.yandex.clo" +
-      "ud.mdb.redis.v1.Monitoring\0228\n\006config\030\t \001" +
-      "(\0132(.yandex.cloud.mdb.redis.v1.ClusterCo" +
-      "nfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030\013 \001(\016" +
-      "2).yandex.cloud.mdb.redis.v1.Cluster.Hea" +
-      "lth\0229\n\006status\030\014 \001(\0162).yandex.cloud.mdb.r" +
-      "edis.v1.Cluster.Status\022\017\n\007sharded\030\r \001(\010\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNS" +
-      "PECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020" +
-      "\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016" +
-      "STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNIN" +
-      "G\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING" +
-      "\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitor" +
-      "ing\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014" +
-      "\n\004link\030\003 \001(\t\"\363\002\n\rClusterConfig\022\017\n\007versio" +
-      "n\030\001 \001(\t\022O\n\020redis_config_5_0\030\002 \001(\01323.yand" +
-      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
-      "Set5_0H\000\022O\n\020redis_config_6_0\030\006 \001(\01323.yan" +
-      "dex.cloud.mdb.redis.v1.config.RedisConfi" +
-      "gSet6_0H\000\0227\n\tresources\030\003 \001(\0132$.yandex.cl" +
-      "oud.mdb.redis.v1.Resources\0223\n\023backup_win" +
-      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
-      "1\n\006access\030\005 \001(\0132!.yandex.cloud.mdb.redis" +
-      ".v1.AccessB\016\n\014redis_config\")\n\005Shard\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\257\003\n\004Host\022\014" +
-      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone" +
-      "_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresource" +
-      "s\030\005 \001(\0132$.yandex.cloud.mdb.redis.v1.Reso" +
-      "urces\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.r" +
-      "edis.v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yand" +
-      "ex.cloud.mdb.redis.v1.Host.Health\0224\n\010ser" +
-      "vices\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1." +
-      "Service\022\022\n\nshard_name\030\t \001(\t\"1\n\004Role\022\020\n\014R" +
-      "OLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?" +
-      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
-      "\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004t" +
-      "ype\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.Se" +
-      "rvice.Type\0229\n\006health\030\002 \001(\0162).yandex.clou" +
-      "d.mdb.redis.v1.Service.Health\"G\n\004Type\022\024\n" +
-      "\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITE" +
-      "R\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEAL" +
-      "TH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\":\n\tRes" +
-      "ources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdi" +
-      "sk_size\030\002 \001(\003\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001" +
-      "(\010Bd\n\035yandex.cloud.api.mdb.redis.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/redis/v1;redisb\006proto3"
+      "dis/v1/config/redis6_0.proto\032+yandex/clo" +
+      "ud/mdb/redis/v1/maintenance.proto\"\334\007\n\007Cl" +
+      "uster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
+      "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
+      ">\n\006labels\030\006 \003(\0132..yandex.cloud.mdb.redis" +
+      ".v1.Cluster.LabelsEntry\022C\n\013environment\030\007" +
+      " \001(\0162..yandex.cloud.mdb.redis.v1.Cluster" +
+      ".Environment\0229\n\nmonitoring\030\010 \003(\0132%.yande" +
+      "x.cloud.mdb.redis.v1.Monitoring\0228\n\006confi" +
+      "g\030\t \001(\0132(.yandex.cloud.mdb.redis.v1.Clus" +
+      "terConfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030" +
+      "\013 \001(\0162).yandex.cloud.mdb.redis.v1.Cluste" +
+      "r.Health\0229\n\006status\030\014 \001(\0162).yandex.cloud." +
+      "mdb.redis.v1.Cluster.Status\022\017\n\007sharded\030\r" +
+      " \001(\010\022H\n\022maintenance_window\030\016 \001(\0132,.yande" +
+      "x.cloud.mdb.redis.v1.MaintenanceWindow\022J" +
+      "\n\021planned_operation\030\017 \001(\0132/.yandex.cloud" +
+      ".mdb.redis.v1.MaintenanceOperation\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIF" +
+      "IED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006" +
+      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATU" +
+      "S_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t" +
+      "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
+      "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
+      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
+      "k\030\003 \001(\t\"\363\002\n\rClusterConfig\022\017\n\007version\030\001 \001" +
+      "(\t\022O\n\020redis_config_5_0\030\002 \001(\01323.yandex.cl" +
+      "oud.mdb.redis.v1.config.RedisConfigSet5_" +
+      "0H\000\022O\n\020redis_config_6_0\030\006 \001(\01323.yandex.c" +
+      "loud.mdb.redis.v1.config.RedisConfigSet6" +
+      "_0H\000\0227\n\tresources\030\003 \001(\0132$.yandex.cloud.m" +
+      "db.redis.v1.Resources\0223\n\023backup_window_s" +
+      "tart\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006ac" +
+      "cess\030\005 \001(\0132!.yandex.cloud.mdb.redis.v1.A" +
+      "ccessB\016\n\014redis_config\")\n\005Shard\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\257\003\n\004Host\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003" +
+      " \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001" +
+      "(\0132$.yandex.cloud.mdb.redis.v1.Resources" +
+      "\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis." +
+      "v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.cl" +
+      "oud.mdb.redis.v1.Host.Health\0224\n\010services" +
+      "\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1.Servi" +
+      "ce\022\022\n\nshard_name\030\t \001(\t\"1\n\004Role\022\020\n\014ROLE_U" +
+      "NKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Hea" +
+      "lth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DE" +
+      "AD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001" +
+      " \001(\0162\'.yandex.cloud.mdb.redis.v1.Service" +
+      ".Type\0229\n\006health\030\002 \001(\0162).yandex.cloud.mdb" +
+      ".redis.v1.Service.Health\"G\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021" +
+      "\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UN" +
+      "KNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\":\n\tResource" +
+      "s\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_si" +
+      "ze\030\002 \001(\003\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n" +
+      "\035yandex.cloud.api.mdb.redis.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12088,13 +12601,14 @@ public final class ClusterOuterClass {
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor(),
+          yandex.cloud.api.mdb.redis.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -12147,6 +12661,7 @@ public final class ClusterOuterClass {
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor();
+    yandex.cloud.api.mdb.redis.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

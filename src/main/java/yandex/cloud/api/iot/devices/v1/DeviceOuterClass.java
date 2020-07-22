@@ -14,6 +14,122 @@ public final class DeviceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.iot.devices.v1.DeviceView}
+   */
+  public enum DeviceView
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Server responses without monitoring data.
+     * The default value.
+     * </pre>
+     *
+     * <code>BASIC = 0;</code>
+     */
+    BASIC(0),
+    /**
+     * <pre>
+     * Server responses with monitoring data.
+     * </pre>
+     *
+     * <code>FULL = 1;</code>
+     */
+    FULL(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Server responses without monitoring data.
+     * The default value.
+     * </pre>
+     *
+     * <code>BASIC = 0;</code>
+     */
+    public static final int BASIC_VALUE = 0;
+    /**
+     * <pre>
+     * Server responses with monitoring data.
+     * </pre>
+     *
+     * <code>FULL = 1;</code>
+     */
+    public static final int FULL_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DeviceView valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DeviceView forNumber(int value) {
+      switch (value) {
+        case 0: return BASIC;
+        case 1: return FULL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DeviceView>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DeviceView> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DeviceView>() {
+            public DeviceView findValueByNumber(int number) {
+              return DeviceView.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DeviceView[] VALUES = values();
+
+    public static DeviceView valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DeviceView(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.iot.devices.v1.DeviceView)
+  }
+
   public interface DeviceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.Device)
       com.google.protobuf.MessageOrBuilder {
@@ -190,6 +306,31 @@ public final class DeviceOuterClass {
      * <code>.yandex.cloud.iot.devices.v1.Device.Status status = 7;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status getStatus();
+
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    boolean hasMonitoringData();
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getMonitoringData();
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder getMonitoringDataOrBuilder();
   }
   /**
    * <pre>
@@ -293,6 +434,19 @@ public final class DeviceOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder subBuilder = null;
+              if (monitoringData_ != null) {
+                subBuilder = monitoringData_.toBuilder();
+              }
+              monitoringData_ = input.readMessage(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(monitoringData_);
+                monitoringData_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -802,6 +956,39 @@ public final class DeviceOuterClass {
       return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.UNRECOGNIZED : result;
     }
 
+    public static final int MONITORING_DATA_FIELD_NUMBER = 8;
+    private yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData monitoringData_;
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    public boolean hasMonitoringData() {
+      return monitoringData_ != null;
+    }
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getMonitoringData() {
+      return monitoringData_ == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.getDefaultInstance() : monitoringData_;
+    }
+    /**
+     * <pre>
+     * Device monitoring data, returns if FULL view specified.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+     */
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder getMonitoringDataOrBuilder() {
+      return getMonitoringData();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -839,6 +1026,9 @@ public final class DeviceOuterClass {
           6);
       if (status_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, status_);
+      }
+      if (monitoringData_ != null) {
+        output.writeMessage(8, getMonitoringData());
       }
       unknownFields.writeTo(output);
     }
@@ -879,6 +1069,10 @@ public final class DeviceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, status_);
       }
+      if (monitoringData_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getMonitoringData());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -911,6 +1105,11 @@ public final class DeviceOuterClass {
       result = result && internalGetTopicAliases().equals(
           other.internalGetTopicAliases());
       result = result && status_ == other.status_;
+      result = result && (hasMonitoringData() == other.hasMonitoringData());
+      if (hasMonitoringData()) {
+        result = result && getMonitoringData()
+            .equals(other.getMonitoringData());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -940,6 +1139,10 @@ public final class DeviceOuterClass {
       }
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasMonitoringData()) {
+        hash = (37 * hash) + MONITORING_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMonitoringData().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1116,6 +1319,12 @@ public final class DeviceOuterClass {
         internalGetMutableTopicAliases().clear();
         status_ = 0;
 
+        if (monitoringDataBuilder_ == null) {
+          monitoringData_ = null;
+        } else {
+          monitoringData_ = null;
+          monitoringDataBuilder_ = null;
+        }
         return this;
       }
 
@@ -1156,6 +1365,11 @@ public final class DeviceOuterClass {
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
         result.status_ = status_;
+        if (monitoringDataBuilder_ == null) {
+          result.monitoringData_ = monitoringData_;
+        } else {
+          result.monitoringData_ = monitoringDataBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1228,6 +1442,9 @@ public final class DeviceOuterClass {
             other.internalGetTopicAliases());
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasMonitoringData()) {
+          mergeMonitoringData(other.getMonitoringData());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1989,6 +2206,159 @@ public final class DeviceOuterClass {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData monitoringData_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder> monitoringDataBuilder_;
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public boolean hasMonitoringData() {
+        return monitoringDataBuilder_ != null || monitoringData_ != null;
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getMonitoringData() {
+        if (monitoringDataBuilder_ == null) {
+          return monitoringData_ == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.getDefaultInstance() : monitoringData_;
+        } else {
+          return monitoringDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public Builder setMonitoringData(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData value) {
+        if (monitoringDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          monitoringData_ = value;
+          onChanged();
+        } else {
+          monitoringDataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public Builder setMonitoringData(
+          yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder builderForValue) {
+        if (monitoringDataBuilder_ == null) {
+          monitoringData_ = builderForValue.build();
+          onChanged();
+        } else {
+          monitoringDataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public Builder mergeMonitoringData(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData value) {
+        if (monitoringDataBuilder_ == null) {
+          if (monitoringData_ != null) {
+            monitoringData_ =
+              yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.newBuilder(monitoringData_).mergeFrom(value).buildPartial();
+          } else {
+            monitoringData_ = value;
+          }
+          onChanged();
+        } else {
+          monitoringDataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public Builder clearMonitoringData() {
+        if (monitoringDataBuilder_ == null) {
+          monitoringData_ = null;
+          onChanged();
+        } else {
+          monitoringData_ = null;
+          monitoringDataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder getMonitoringDataBuilder() {
+        
+        onChanged();
+        return getMonitoringDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder getMonitoringDataOrBuilder() {
+        if (monitoringDataBuilder_ != null) {
+          return monitoringDataBuilder_.getMessageOrBuilder();
+        } else {
+          return monitoringData_ == null ?
+              yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.getDefaultInstance() : monitoringData_;
+        }
+      }
+      /**
+       * <pre>
+       * Device monitoring data, returns if FULL view specified.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder> 
+          getMonitoringDataFieldBuilder() {
+        if (monitoringDataBuilder_ == null) {
+          monitoringDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder>(
+                  getMonitoringData(),
+                  getParentForChildren(),
+                  isClean());
+          monitoringData_ = null;
+        }
+        return monitoringDataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4258,6 +4628,1332 @@ public final class DeviceOuterClass {
 
   }
 
+  public interface DeviceMonitoringDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.DeviceMonitoringData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string last_auth_ip = 1;</code>
+     */
+    java.lang.String getLastAuthIp();
+    /**
+     * <code>string last_auth_ip = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getLastAuthIpBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    boolean hasLastAuthTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    com.google.protobuf.Timestamp getLastAuthTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastAuthTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    boolean hasLastPubActivityTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    com.google.protobuf.Timestamp getLastPubActivityTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastPubActivityTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    boolean hasLastSubActivityTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    com.google.protobuf.Timestamp getLastSubActivityTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastSubActivityTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    boolean hasLastOnlineTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    com.google.protobuf.Timestamp getLastOnlineTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastOnlineTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceMonitoringData}
+   */
+  public  static final class DeviceMonitoringData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DeviceMonitoringData)
+      DeviceMonitoringDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeviceMonitoringData.newBuilder() to construct.
+    private DeviceMonitoringData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeviceMonitoringData() {
+      lastAuthIp_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeviceMonitoringData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lastAuthIp_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastAuthTime_ != null) {
+                subBuilder = lastAuthTime_.toBuilder();
+              }
+              lastAuthTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastAuthTime_);
+                lastAuthTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastPubActivityTime_ != null) {
+                subBuilder = lastPubActivityTime_.toBuilder();
+              }
+              lastPubActivityTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastPubActivityTime_);
+                lastPubActivityTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastSubActivityTime_ != null) {
+                subBuilder = lastSubActivityTime_.toBuilder();
+              }
+              lastSubActivityTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastSubActivityTime_);
+                lastSubActivityTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastOnlineTime_ != null) {
+                subBuilder = lastOnlineTime_.toBuilder();
+              }
+              lastOnlineTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastOnlineTime_);
+                lastOnlineTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.class, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder.class);
+    }
+
+    public static final int LAST_AUTH_IP_FIELD_NUMBER = 1;
+    private volatile java.lang.Object lastAuthIp_;
+    /**
+     * <code>string last_auth_ip = 1;</code>
+     */
+    public java.lang.String getLastAuthIp() {
+      java.lang.Object ref = lastAuthIp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastAuthIp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string last_auth_ip = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLastAuthIpBytes() {
+      java.lang.Object ref = lastAuthIp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastAuthIp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_AUTH_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp lastAuthTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    public boolean hasLastAuthTime() {
+      return lastAuthTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getLastAuthTime() {
+      return lastAuthTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastAuthTimeOrBuilder() {
+      return getLastAuthTime();
+    }
+
+    public static final int LAST_PUB_ACTIVITY_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp lastPubActivityTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    public boolean hasLastPubActivityTime() {
+      return lastPubActivityTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getLastPubActivityTime() {
+      return lastPubActivityTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastPubActivityTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastPubActivityTimeOrBuilder() {
+      return getLastPubActivityTime();
+    }
+
+    public static final int LAST_SUB_ACTIVITY_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp lastSubActivityTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    public boolean hasLastSubActivityTime() {
+      return lastSubActivityTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getLastSubActivityTime() {
+      return lastSubActivityTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSubActivityTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastSubActivityTimeOrBuilder() {
+      return getLastSubActivityTime();
+    }
+
+    public static final int LAST_ONLINE_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp lastOnlineTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    public boolean hasLastOnlineTime() {
+      return lastOnlineTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    public com.google.protobuf.Timestamp getLastOnlineTime() {
+      return lastOnlineTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastOnlineTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getLastOnlineTimeOrBuilder() {
+      return getLastOnlineTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getLastAuthIpBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lastAuthIp_);
+      }
+      if (lastAuthTime_ != null) {
+        output.writeMessage(2, getLastAuthTime());
+      }
+      if (lastPubActivityTime_ != null) {
+        output.writeMessage(3, getLastPubActivityTime());
+      }
+      if (lastSubActivityTime_ != null) {
+        output.writeMessage(4, getLastSubActivityTime());
+      }
+      if (lastOnlineTime_ != null) {
+        output.writeMessage(5, getLastOnlineTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getLastAuthIpBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lastAuthIp_);
+      }
+      if (lastAuthTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLastAuthTime());
+      }
+      if (lastPubActivityTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getLastPubActivityTime());
+      }
+      if (lastSubActivityTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLastSubActivityTime());
+      }
+      if (lastOnlineTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLastOnlineTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData other = (yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData) obj;
+
+      boolean result = true;
+      result = result && getLastAuthIp()
+          .equals(other.getLastAuthIp());
+      result = result && (hasLastAuthTime() == other.hasLastAuthTime());
+      if (hasLastAuthTime()) {
+        result = result && getLastAuthTime()
+            .equals(other.getLastAuthTime());
+      }
+      result = result && (hasLastPubActivityTime() == other.hasLastPubActivityTime());
+      if (hasLastPubActivityTime()) {
+        result = result && getLastPubActivityTime()
+            .equals(other.getLastPubActivityTime());
+      }
+      result = result && (hasLastSubActivityTime() == other.hasLastSubActivityTime());
+      if (hasLastSubActivityTime()) {
+        result = result && getLastSubActivityTime()
+            .equals(other.getLastSubActivityTime());
+      }
+      result = result && (hasLastOnlineTime() == other.hasLastOnlineTime());
+      if (hasLastOnlineTime()) {
+        result = result && getLastOnlineTime()
+            .equals(other.getLastOnlineTime());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LAST_AUTH_IP_FIELD_NUMBER;
+      hash = (53 * hash) + getLastAuthIp().hashCode();
+      if (hasLastAuthTime()) {
+        hash = (37 * hash) + LAST_AUTH_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastAuthTime().hashCode();
+      }
+      if (hasLastPubActivityTime()) {
+        hash = (37 * hash) + LAST_PUB_ACTIVITY_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastPubActivityTime().hashCode();
+      }
+      if (hasLastSubActivityTime()) {
+        hash = (37 * hash) + LAST_SUB_ACTIVITY_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastSubActivityTime().hashCode();
+      }
+      if (hasLastOnlineTime()) {
+        hash = (37 * hash) + LAST_ONLINE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastOnlineTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.DeviceMonitoringData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.DeviceMonitoringData)
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.class, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        lastAuthIp_ = "";
+
+        if (lastAuthTimeBuilder_ == null) {
+          lastAuthTime_ = null;
+        } else {
+          lastAuthTime_ = null;
+          lastAuthTimeBuilder_ = null;
+        }
+        if (lastPubActivityTimeBuilder_ == null) {
+          lastPubActivityTime_ = null;
+        } else {
+          lastPubActivityTime_ = null;
+          lastPubActivityTimeBuilder_ = null;
+        }
+        if (lastSubActivityTimeBuilder_ == null) {
+          lastSubActivityTime_ = null;
+        } else {
+          lastSubActivityTime_ = null;
+          lastSubActivityTimeBuilder_ = null;
+        }
+        if (lastOnlineTimeBuilder_ == null) {
+          lastOnlineTime_ = null;
+        } else {
+          lastOnlineTime_ = null;
+          lastOnlineTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData build() {
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData buildPartial() {
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData result = new yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData(this);
+        result.lastAuthIp_ = lastAuthIp_;
+        if (lastAuthTimeBuilder_ == null) {
+          result.lastAuthTime_ = lastAuthTime_;
+        } else {
+          result.lastAuthTime_ = lastAuthTimeBuilder_.build();
+        }
+        if (lastPubActivityTimeBuilder_ == null) {
+          result.lastPubActivityTime_ = lastPubActivityTime_;
+        } else {
+          result.lastPubActivityTime_ = lastPubActivityTimeBuilder_.build();
+        }
+        if (lastSubActivityTimeBuilder_ == null) {
+          result.lastSubActivityTime_ = lastSubActivityTime_;
+        } else {
+          result.lastSubActivityTime_ = lastSubActivityTimeBuilder_.build();
+        }
+        if (lastOnlineTimeBuilder_ == null) {
+          result.lastOnlineTime_ = lastOnlineTime_;
+        } else {
+          result.lastOnlineTime_ = lastOnlineTimeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData other) {
+        if (other == yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData.getDefaultInstance()) return this;
+        if (!other.getLastAuthIp().isEmpty()) {
+          lastAuthIp_ = other.lastAuthIp_;
+          onChanged();
+        }
+        if (other.hasLastAuthTime()) {
+          mergeLastAuthTime(other.getLastAuthTime());
+        }
+        if (other.hasLastPubActivityTime()) {
+          mergeLastPubActivityTime(other.getLastPubActivityTime());
+        }
+        if (other.hasLastSubActivityTime()) {
+          mergeLastSubActivityTime(other.getLastSubActivityTime());
+        }
+        if (other.hasLastOnlineTime()) {
+          mergeLastOnlineTime(other.getLastOnlineTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object lastAuthIp_ = "";
+      /**
+       * <code>string last_auth_ip = 1;</code>
+       */
+      public java.lang.String getLastAuthIp() {
+        java.lang.Object ref = lastAuthIp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastAuthIp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string last_auth_ip = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLastAuthIpBytes() {
+        java.lang.Object ref = lastAuthIp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastAuthIp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string last_auth_ip = 1;</code>
+       */
+      public Builder setLastAuthIp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        lastAuthIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_auth_ip = 1;</code>
+       */
+      public Builder clearLastAuthIp() {
+        
+        lastAuthIp_ = getDefaultInstance().getLastAuthIp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_auth_ip = 1;</code>
+       */
+      public Builder setLastAuthIpBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        lastAuthIp_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp lastAuthTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastAuthTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public boolean hasLastAuthTime() {
+        return lastAuthTimeBuilder_ != null || lastAuthTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getLastAuthTime() {
+        if (lastAuthTimeBuilder_ == null) {
+          return lastAuthTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthTime_;
+        } else {
+          return lastAuthTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public Builder setLastAuthTime(com.google.protobuf.Timestamp value) {
+        if (lastAuthTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastAuthTime_ = value;
+          onChanged();
+        } else {
+          lastAuthTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public Builder setLastAuthTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastAuthTimeBuilder_ == null) {
+          lastAuthTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastAuthTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public Builder mergeLastAuthTime(com.google.protobuf.Timestamp value) {
+        if (lastAuthTimeBuilder_ == null) {
+          if (lastAuthTime_ != null) {
+            lastAuthTime_ =
+              com.google.protobuf.Timestamp.newBuilder(lastAuthTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastAuthTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastAuthTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public Builder clearLastAuthTime() {
+        if (lastAuthTimeBuilder_ == null) {
+          lastAuthTime_ = null;
+          onChanged();
+        } else {
+          lastAuthTime_ = null;
+          lastAuthTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastAuthTimeBuilder() {
+        
+        onChanged();
+        return getLastAuthTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastAuthTimeOrBuilder() {
+        if (lastAuthTimeBuilder_ != null) {
+          return lastAuthTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastAuthTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_auth_time = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastAuthTimeFieldBuilder() {
+        if (lastAuthTimeBuilder_ == null) {
+          lastAuthTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastAuthTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastAuthTime_ = null;
+        }
+        return lastAuthTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp lastPubActivityTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastPubActivityTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public boolean hasLastPubActivityTime() {
+        return lastPubActivityTimeBuilder_ != null || lastPubActivityTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getLastPubActivityTime() {
+        if (lastPubActivityTimeBuilder_ == null) {
+          return lastPubActivityTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastPubActivityTime_;
+        } else {
+          return lastPubActivityTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public Builder setLastPubActivityTime(com.google.protobuf.Timestamp value) {
+        if (lastPubActivityTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastPubActivityTime_ = value;
+          onChanged();
+        } else {
+          lastPubActivityTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public Builder setLastPubActivityTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastPubActivityTimeBuilder_ == null) {
+          lastPubActivityTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastPubActivityTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public Builder mergeLastPubActivityTime(com.google.protobuf.Timestamp value) {
+        if (lastPubActivityTimeBuilder_ == null) {
+          if (lastPubActivityTime_ != null) {
+            lastPubActivityTime_ =
+              com.google.protobuf.Timestamp.newBuilder(lastPubActivityTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastPubActivityTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastPubActivityTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public Builder clearLastPubActivityTime() {
+        if (lastPubActivityTimeBuilder_ == null) {
+          lastPubActivityTime_ = null;
+          onChanged();
+        } else {
+          lastPubActivityTime_ = null;
+          lastPubActivityTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastPubActivityTimeBuilder() {
+        
+        onChanged();
+        return getLastPubActivityTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastPubActivityTimeOrBuilder() {
+        if (lastPubActivityTimeBuilder_ != null) {
+          return lastPubActivityTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastPubActivityTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastPubActivityTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_pub_activity_time = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastPubActivityTimeFieldBuilder() {
+        if (lastPubActivityTimeBuilder_ == null) {
+          lastPubActivityTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastPubActivityTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastPubActivityTime_ = null;
+        }
+        return lastPubActivityTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp lastSubActivityTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastSubActivityTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public boolean hasLastSubActivityTime() {
+        return lastSubActivityTimeBuilder_ != null || lastSubActivityTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getLastSubActivityTime() {
+        if (lastSubActivityTimeBuilder_ == null) {
+          return lastSubActivityTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastSubActivityTime_;
+        } else {
+          return lastSubActivityTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public Builder setLastSubActivityTime(com.google.protobuf.Timestamp value) {
+        if (lastSubActivityTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastSubActivityTime_ = value;
+          onChanged();
+        } else {
+          lastSubActivityTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public Builder setLastSubActivityTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastSubActivityTimeBuilder_ == null) {
+          lastSubActivityTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastSubActivityTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public Builder mergeLastSubActivityTime(com.google.protobuf.Timestamp value) {
+        if (lastSubActivityTimeBuilder_ == null) {
+          if (lastSubActivityTime_ != null) {
+            lastSubActivityTime_ =
+              com.google.protobuf.Timestamp.newBuilder(lastSubActivityTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastSubActivityTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastSubActivityTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public Builder clearLastSubActivityTime() {
+        if (lastSubActivityTimeBuilder_ == null) {
+          lastSubActivityTime_ = null;
+          onChanged();
+        } else {
+          lastSubActivityTime_ = null;
+          lastSubActivityTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastSubActivityTimeBuilder() {
+        
+        onChanged();
+        return getLastSubActivityTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastSubActivityTimeOrBuilder() {
+        if (lastSubActivityTimeBuilder_ != null) {
+          return lastSubActivityTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastSubActivityTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastSubActivityTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_sub_activity_time = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastSubActivityTimeFieldBuilder() {
+        if (lastSubActivityTimeBuilder_ == null) {
+          lastSubActivityTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastSubActivityTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastSubActivityTime_ = null;
+        }
+        return lastSubActivityTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp lastOnlineTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastOnlineTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public boolean hasLastOnlineTime() {
+        return lastOnlineTimeBuilder_ != null || lastOnlineTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp getLastOnlineTime() {
+        if (lastOnlineTimeBuilder_ == null) {
+          return lastOnlineTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastOnlineTime_;
+        } else {
+          return lastOnlineTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public Builder setLastOnlineTime(com.google.protobuf.Timestamp value) {
+        if (lastOnlineTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastOnlineTime_ = value;
+          onChanged();
+        } else {
+          lastOnlineTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public Builder setLastOnlineTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastOnlineTimeBuilder_ == null) {
+          lastOnlineTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastOnlineTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public Builder mergeLastOnlineTime(com.google.protobuf.Timestamp value) {
+        if (lastOnlineTimeBuilder_ == null) {
+          if (lastOnlineTime_ != null) {
+            lastOnlineTime_ =
+              com.google.protobuf.Timestamp.newBuilder(lastOnlineTime_).mergeFrom(value).buildPartial();
+          } else {
+            lastOnlineTime_ = value;
+          }
+          onChanged();
+        } else {
+          lastOnlineTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public Builder clearLastOnlineTime() {
+        if (lastOnlineTimeBuilder_ == null) {
+          lastOnlineTime_ = null;
+          onChanged();
+        } else {
+          lastOnlineTime_ = null;
+          lastOnlineTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastOnlineTimeBuilder() {
+        
+        onChanged();
+        return getLastOnlineTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastOnlineTimeOrBuilder() {
+        if (lastOnlineTimeBuilder_ != null) {
+          return lastOnlineTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastOnlineTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastOnlineTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_online_time = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastOnlineTimeFieldBuilder() {
+        if (lastOnlineTimeBuilder_ == null) {
+          lastOnlineTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastOnlineTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastOnlineTime_ = null;
+        }
+        return lastOnlineTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.DeviceMonitoringData)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.DeviceMonitoringData)
+    private static final yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeviceMonitoringData>
+        PARSER = new com.google.protobuf.AbstractParser<DeviceMonitoringData>() {
+      @java.lang.Override
+      public DeviceMonitoringData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeviceMonitoringData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeviceMonitoringData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeviceMonitoringData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_Device_descriptor;
   private static final 
@@ -4278,6 +5974,11 @@ public final class DeviceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_DevicePassword_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4290,25 +5991,35 @@ public final class DeviceOuterClass {
       "\n(yandex/cloud/iot/devices/v1/device.pro" +
       "to\022\033yandex.cloud.iot.devices.v1\032\037google/" +
       "protobuf/timestamp.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"\205\003\n\006Device\022\n\n\002id\030\001 \001(\t\022\023" +
+      "alidation.proto\"\321\003\n\006Device\022\n\n\002id\030\001 \001(\t\022\023" +
       "\n\013registry_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
       "\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001(" +
       "\t\022\023\n\013description\030\005 \001(\t\022L\n\rtopic_aliases\030" +
       "\006 \003(\01325.yandex.cloud.iot.devices.v1.Devi" +
       "ce.TopicAliasesEntry\022:\n\006status\030\007 \001(\0162*.y" +
       "andex.cloud.iot.devices.v1.Device.Status" +
-      "\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPEC" +
-      "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DEL" +
-      "ETING\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tdevice_" +
-      "id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certifi" +
-      "cate_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\"_\n\016DevicePasswor" +
-      "d\022\021\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncrea" +
-      "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "Bj\n\037yandex.cloud.api.iot.devices.v1ZGgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/iot/devices/v1;devicesb\006proto3"
+      "\022J\n\017monitoring_data\030\010 \001(\01321.yandex.cloud" +
+      ".iot.devices.v1.DeviceMonitoringData\0323\n\021" +
+      "TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIE" +
+      "D\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETIN" +
+      "G\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tdevice_id\030\001" +
+      " \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certificate" +
+      "_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\"_\n\016DevicePassword\022\021\n" +
+      "\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncreated_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\"\216\002\n" +
+      "\024DeviceMonitoringData\022\024\n\014last_auth_ip\030\001 " +
+      "\001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022:\n\026last_pub_activity_tim" +
+      "e\030\003 \001(\0132\032.google.protobuf.Timestamp\022:\n\026l" +
+      "ast_sub_activity_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\0224\n\020last_online_time\030\005 \001(" +
+      "\0132\032.google.protobuf.Timestamp*!\n\nDeviceV" +
+      "iew\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\001Bj\n\037yandex.cloud" +
+      ".api.iot.devices.v1ZGgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/iot/device" +
+      "s/v1;devicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4329,7 +6040,7 @@ public final class DeviceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_Device_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_Device_descriptor,
-        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", "Status", });
+        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", "Status", "MonitoringData", });
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_Device_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_fieldAccessorTable = new
@@ -4348,6 +6059,12 @@ public final class DeviceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DevicePassword_descriptor,
         new java.lang.String[] { "DeviceId", "Id", "CreatedAt", });
+    internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_DeviceMonitoringData_descriptor,
+        new java.lang.String[] { "LastAuthIp", "LastAuthTime", "LastPubActivityTime", "LastSubActivityTime", "LastOnlineTime", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

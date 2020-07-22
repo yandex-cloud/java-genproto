@@ -305,6 +305,56 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Status status = 12;</code>
      */
     yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster.Status getStatus();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    boolean hasPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation getPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
   }
   /**
    * <pre>
@@ -453,6 +503,32 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder subBuilder = null;
+              if (plannedOperation_ != null) {
+                subBuilder = plannedOperation_.toBuilder();
+              }
+              plannedOperation_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedOperation_);
+                plannedOperation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1490,6 +1566,72 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster.Status.UNRECOGNIZED : result;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 13;
+    private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
+    public static final int PLANNED_OPERATION_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation plannedOperation_;
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public boolean hasPlannedOperation() {
+      return plannedOperation_ != null;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+      return plannedOperation_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+      return getPlannedOperation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1542,6 +1684,12 @@ public final class ClusterOuterClass {
       }
       if (status_ != yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Cluster.Status.STATUS_UNKNOWN.getNumber()) {
         output.writeEnum(12, status_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(13, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        output.writeMessage(14, getPlannedOperation());
       }
       unknownFields.writeTo(output);
     }
@@ -1601,6 +1749,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, status_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getPlannedOperation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1644,6 +1800,16 @@ public final class ClusterOuterClass {
           .equals(other.getNetworkId());
       result = result && health_ == other.health_;
       result = result && status_ == other.status_;
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
+      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation()) {
+        result = result && getPlannedOperation()
+            .equals(other.getPlannedOperation());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1687,6 +1853,14 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + health_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPlannedOperation()) {
+        hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1883,6 +2057,18 @@ public final class ClusterOuterClass {
 
         status_ = 0;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1940,6 +2126,16 @@ public final class ClusterOuterClass {
         result.networkId_ = networkId_;
         result.health_ = health_;
         result.status_ = status_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (plannedOperationBuilder_ == null) {
+          result.plannedOperation_ = plannedOperation_;
+        } else {
+          result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2051,6 +2247,12 @@ public final class ClusterOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPlannedOperation()) {
+          mergePlannedOperation(other.getPlannedOperation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3475,6 +3677,312 @@ public final class ClusterOuterClass {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public boolean hasPlannedOperation() {
+        return plannedOperationBuilder_ != null || plannedOperation_ != null;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          return plannedOperation_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        } else {
+          return plannedOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder setPlannedOperation(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedOperation_ = value;
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder setPlannedOperation(
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder builderForValue) {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder mergePlannedOperation(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (plannedOperation_ != null) {
+            plannedOperation_ =
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.newBuilder(plannedOperation_).mergeFrom(value).buildPartial();
+          } else {
+            plannedOperation_ = value;
+          }
+          onChanged();
+        } else {
+          plannedOperationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder clearPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+          onChanged();
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder getPlannedOperationBuilder() {
+        
+        onChanged();
+        return getPlannedOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+        if (plannedOperationBuilder_ != null) {
+          return plannedOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedOperation_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder> 
+          getPlannedOperationFieldBuilder() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceOperationOrBuilder>(
+                  getPlannedOperation(),
+                  getParentForChildren(),
+                  isClean());
+          plannedOperation_ = null;
+        }
+        return plannedOperationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11275,61 +11783,66 @@ public final class ClusterOuterClass {
       "tobuf/timestamp.proto\032\033google/type/timeo" +
       "fday.proto\032/yandex/cloud/mdb/mysql/v1/co" +
       "nfig/mysql5_7.proto\032/yandex/cloud/mdb/my" +
-      "sql/v1/config/mysql8_0.proto\"\265\006\n\007Cluster" +
-      "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreat" +
-      "ed_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006la" +
-      "bels\030\006 \003(\0132..yandex.cloud.mdb.mysql.v1.C" +
-      "luster.LabelsEntry\022C\n\013environment\030\007 \001(\0162" +
-      "..yandex.cloud.mdb.mysql.v1.Cluster.Envi" +
-      "ronment\0229\n\nmonitoring\030\010 \003(\0132%.yandex.clo" +
-      "ud.mdb.mysql.v1.Monitoring\0228\n\006config\030\t \001" +
-      "(\0132(.yandex.cloud.mdb.mysql.v1.ClusterCo" +
-      "nfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030\013 \001(\016" +
-      "2).yandex.cloud.mdb.mysql.v1.Cluster.Hea" +
-      "lth\0229\n\006status\030\014 \001(\0162).yandex.cloud.mdb.m" +
-      "ysql.v1.Cluster.Status\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environ" +
-      "ment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRO" +
-      "DUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HE" +
-      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010D" +
-      "EGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022" +
-      "\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n" +
-      "\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014" +
-      "\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t" +
-      "\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\363\002\n\r" +
-      "ClusterConfig\022\017\n\007version\030\001 \001(\t\022O\n\020mysql_" +
-      "config_5_7\030\002 \001(\01323.yandex.cloud.mdb.mysq" +
-      "l.v1.config.MysqlConfigSet5_7H\000\022O\n\020mysql" +
-      "_config_8_0\030\006 \001(\01323.yandex.cloud.mdb.mys" +
-      "ql.v1.config.MysqlConfigSet8_0H\000\0227\n\treso" +
-      "urces\030\003 \001(\0132$.yandex.cloud.mdb.mysql.v1." +
-      "Resources\0223\n\023backup_window_start\030\004 \001(\0132\026" +
-      ".google.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!" +
-      ".yandex.cloud.mdb.mysql.v1.AccessB\016\n\014mys" +
-      "ql_config\"\265\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclus" +
-      "ter_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresourc" +
-      "es\030\004 \001(\0132$.yandex.cloud.mdb.mysql.v1.Res" +
-      "ources\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb." +
-      "mysql.v1.Host.Role\0226\n\006health\030\006 \001(\0162&.yan" +
-      "dex.cloud.mdb.mysql.v1.Host.Health\0224\n\010se" +
-      "rvices\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1" +
-      ".Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_pu" +
-      "blic_ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022" +
-      "\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HE" +
-      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010D" +
-      "EGRADED\020\003\"\327\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.ya" +
-      "ndex.cloud.mdb.mysql.v1.Service.Type\0229\n\006" +
-      "health\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1" +
-      ".Service.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNK" +
-      "NOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources" +
-      "\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_siz" +
-      "e\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022" +
-      "\021\n\tdata_lens\030\001 \001(\010Bd\n\035yandex.cloud.api.m" +
-      "db.mysql.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/mysql/v1;mysql" +
-      "b\006proto3"
+      "sql/v1/config/mysql8_0.proto\032+yandex/clo" +
+      "ud/mdb/mysql/v1/maintenance.proto\"\313\007\n\007Cl" +
+      "uster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
+      "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
+      ">\n\006labels\030\006 \003(\0132..yandex.cloud.mdb.mysql" +
+      ".v1.Cluster.LabelsEntry\022C\n\013environment\030\007" +
+      " \001(\0162..yandex.cloud.mdb.mysql.v1.Cluster" +
+      ".Environment\0229\n\nmonitoring\030\010 \003(\0132%.yande" +
+      "x.cloud.mdb.mysql.v1.Monitoring\0228\n\006confi" +
+      "g\030\t \001(\0132(.yandex.cloud.mdb.mysql.v1.Clus" +
+      "terConfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006health\030" +
+      "\013 \001(\0162).yandex.cloud.mdb.mysql.v1.Cluste" +
+      "r.Health\0229\n\006status\030\014 \001(\0162).yandex.cloud." +
+      "mdb.mysql.v1.Cluster.Status\022H\n\022maintenan" +
+      "ce_window\030\r \001(\0132,.yandex.cloud.mdb.mysql" +
+      ".v1.MaintenanceWindow\022J\n\021planned_operati" +
+      "on\030\016 \001(\0132/.yandex.cloud.mdb.mysql.v1.Mai" +
+      "ntenanceOperation\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022" +
+      "\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTI" +
+      "ON\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_" +
+      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
+      "ED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CR" +
+      "EATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDA" +
+      "TING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STA" +
+      "RTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
+      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\363\002\n\rClust" +
+      "erConfig\022\017\n\007version\030\001 \001(\t\022O\n\020mysql_confi" +
+      "g_5_7\030\002 \001(\01323.yandex.cloud.mdb.mysql.v1." +
+      "config.MysqlConfigSet5_7H\000\022O\n\020mysql_conf" +
+      "ig_8_0\030\006 \001(\01323.yandex.cloud.mdb.mysql.v1" +
+      ".config.MysqlConfigSet8_0H\000\0227\n\tresources" +
+      "\030\003 \001(\0132$.yandex.cloud.mdb.mysql.v1.Resou" +
+      "rces\0223\n\023backup_window_start\030\004 \001(\0132\026.goog" +
+      "le.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yand" +
+      "ex.cloud.mdb.mysql.v1.AccessB\016\n\014mysql_co" +
+      "nfig\"\265\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
+      "d\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources\030\004 " +
+      "\001(\0132$.yandex.cloud.mdb.mysql.v1.Resource" +
+      "s\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb.mysql" +
+      ".v1.Host.Role\0226\n\006health\030\006 \001(\0162&.yandex.c" +
+      "loud.mdb.mysql.v1.Host.Health\0224\n\010service" +
+      "s\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1.Serv" +
+      "ice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_" +
+      "ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MA" +
+      "STER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_" +
+      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
+      "ED\020\003\"\327\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex." +
+      "cloud.mdb.mysql.v1.Service.Type\0229\n\006healt" +
+      "h\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.Serv" +
+      "ice.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000" +
+      "\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020" +
+      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022r" +
+      "esource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001" +
+      "(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tda" +
+      "ta_lens\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.my" +
+      "sql.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/mysql/v1;mysqlb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11346,13 +11859,14 @@ public final class ClusterOuterClass {
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor(),
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_mysql_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_mdb_mysql_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mysql_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -11399,6 +11913,7 @@ public final class ClusterOuterClass {
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor();
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

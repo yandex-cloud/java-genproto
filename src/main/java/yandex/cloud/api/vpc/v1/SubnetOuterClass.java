@@ -14,6 +14,113 @@ public final class SubnetOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.vpc.v1.IpVersion}
+   */
+  public enum IpVersion
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>IP_VERSION_UNSPECIFIED = 0;</code>
+     */
+    IP_VERSION_UNSPECIFIED(0),
+    /**
+     * <code>IPV4 = 1;</code>
+     */
+    IPV4(1),
+    /**
+     * <code>IPV6 = 2;</code>
+     */
+    IPV6(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>IP_VERSION_UNSPECIFIED = 0;</code>
+     */
+    public static final int IP_VERSION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>IPV4 = 1;</code>
+     */
+    public static final int IPV4_VALUE = 1;
+    /**
+     * <code>IPV6 = 2;</code>
+     */
+    public static final int IPV6_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IpVersion valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static IpVersion forNumber(int value) {
+      switch (value) {
+        case 0: return IP_VERSION_UNSPECIFIED;
+        case 1: return IPV4;
+        case 2: return IPV6;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IpVersion>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IpVersion> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IpVersion>() {
+            public IpVersion findValueByNumber(int number) {
+              return IpVersion.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final IpVersion[] VALUES = values();
+
+    public static IpVersion valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IpVersion(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.vpc.v1.IpVersion)
+  }
+
   public interface SubnetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.Subnet)
       com.google.protobuf.MessageOrBuilder {
@@ -4023,9 +4130,11 @@ public final class SubnetOuterClass {
       "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
       "8\001\"T\n\013DhcpOptions\022\033\n\023domain_name_servers" +
       "\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\t\022\023\n\013ntp_serve" +
-      "rs\030\003 \003(\tBV\n\027yandex.cloud.api.vpc.v1Z;git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/vpc/v1;vpcb\006proto3"
+      "rs\030\003 \003(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSP" +
+      "ECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex." +
+      "cloud.api.vpc.v1Z;github.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

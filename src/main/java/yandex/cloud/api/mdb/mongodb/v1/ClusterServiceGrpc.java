@@ -350,6 +350,38 @@ public final class ClusterServiceGrpc {
      return getRestoreMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RescheduleMaintenance",
+      requestType = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRescheduleMaintenanceMethod;
+    if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRescheduleMaintenanceMethod = ClusterServiceGrpc.getRescheduleMaintenanceMethod) == null) {
+          ClusterServiceGrpc.getRescheduleMaintenanceMethod = getRescheduleMaintenanceMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.mongodb.v1.ClusterService", "RescheduleMaintenance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RescheduleMaintenance"))
+                  .build();
+          }
+        }
+     }
+     return getRescheduleMaintenanceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsRequest,
       yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ListClusterLogsResponse> getListLogsMethod;
 
@@ -932,6 +964,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRescheduleMaintenanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves logs for the specified MongoDB cluster.
      * </pre>
      */
@@ -1143,6 +1185,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTORE)))
+          .addMethod(
+            getRescheduleMaintenanceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESCHEDULE_MAINTENANCE)))
           .addMethod(
             getListLogsMethod(),
             asyncUnaryCall(
@@ -1376,6 +1425,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getRestoreMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public void rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1659,6 +1719,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRescheduleMaintenanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves logs for the specified MongoDB cluster.
      * </pre>
      */
@@ -1935,6 +2005,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Reschedule planned maintenance operation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRescheduleMaintenanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves logs for the specified MongoDB cluster.
      * </pre>
      */
@@ -2088,20 +2169,21 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_MOVE = 7;
   private static final int METHODID_BACKUP = 8;
   private static final int METHODID_RESTORE = 9;
-  private static final int METHODID_LIST_LOGS = 10;
-  private static final int METHODID_STREAM_LOGS = 11;
-  private static final int METHODID_LIST_OPERATIONS = 12;
-  private static final int METHODID_LIST_BACKUPS = 13;
-  private static final int METHODID_LIST_HOSTS = 14;
-  private static final int METHODID_ADD_HOSTS = 15;
-  private static final int METHODID_DELETE_HOSTS = 16;
-  private static final int METHODID_ENABLE_SHARDING = 17;
-  private static final int METHODID_GET_SHARD = 18;
-  private static final int METHODID_LIST_SHARDS = 19;
-  private static final int METHODID_ADD_SHARD = 20;
-  private static final int METHODID_DELETE_SHARD = 21;
-  private static final int METHODID_RESETUP_HOSTS = 22;
-  private static final int METHODID_RESTART_HOSTS = 23;
+  private static final int METHODID_RESCHEDULE_MAINTENANCE = 10;
+  private static final int METHODID_LIST_LOGS = 11;
+  private static final int METHODID_STREAM_LOGS = 12;
+  private static final int METHODID_LIST_OPERATIONS = 13;
+  private static final int METHODID_LIST_BACKUPS = 14;
+  private static final int METHODID_LIST_HOSTS = 15;
+  private static final int METHODID_ADD_HOSTS = 16;
+  private static final int METHODID_DELETE_HOSTS = 17;
+  private static final int METHODID_ENABLE_SHARDING = 18;
+  private static final int METHODID_GET_SHARD = 19;
+  private static final int METHODID_LIST_SHARDS = 20;
+  private static final int METHODID_ADD_SHARD = 21;
+  private static final int METHODID_DELETE_SHARD = 22;
+  private static final int METHODID_RESETUP_HOSTS = 23;
+  private static final int METHODID_RESTART_HOSTS = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2158,6 +2240,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_RESTORE:
           serviceImpl.restore((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestoreClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESCHEDULE_MAINTENANCE:
+          serviceImpl.rescheduleMaintenance((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_LOGS:
@@ -2287,6 +2373,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getMoveMethod())
               .addMethod(getBackupMethod())
               .addMethod(getRestoreMethod())
+              .addMethod(getRescheduleMaintenanceMethod())
               .addMethod(getListLogsMethod())
               .addMethod(getStreamLogsMethod())
               .addMethod(getListOperationsMethod())

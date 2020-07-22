@@ -315,6 +315,56 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.postgresql.v1.Cluster.Status status = 12;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Cluster.Status getStatus();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    boolean hasPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation getPlannedOperation();
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
   }
   /**
    * <pre>
@@ -463,6 +513,32 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder subBuilder = null;
+              if (plannedOperation_ != null) {
+                subBuilder = plannedOperation_.toBuilder();
+              }
+              plannedOperation_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedOperation_);
+                plannedOperation_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1510,6 +1586,72 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Cluster.Status.UNRECOGNIZED : result;
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 13;
+    private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
+    public static final int PLANNED_OPERATION_FIELD_NUMBER = 14;
+    private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation plannedOperation_;
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public boolean hasPlannedOperation() {
+      return plannedOperation_ != null;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+      return plannedOperation_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+    }
+    /**
+     * <pre>
+     * Maintenance operation planned at nearest maintenance_window.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+      return getPlannedOperation();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1562,6 +1704,12 @@ public final class ClusterOuterClass {
       }
       if (status_ != yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Cluster.Status.STATUS_UNKNOWN.getNumber()) {
         output.writeEnum(12, status_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(13, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        output.writeMessage(14, getPlannedOperation());
       }
       unknownFields.writeTo(output);
     }
@@ -1621,6 +1769,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, status_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getMaintenanceWindow());
+      }
+      if (plannedOperation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getPlannedOperation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1664,6 +1820,16 @@ public final class ClusterOuterClass {
           .equals(other.getNetworkId());
       result = result && health_ == other.health_;
       result = result && status_ == other.status_;
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
+      result = result && (hasPlannedOperation() == other.hasPlannedOperation());
+      if (hasPlannedOperation()) {
+        result = result && getPlannedOperation()
+            .equals(other.getPlannedOperation());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1707,6 +1873,14 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + health_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (hasPlannedOperation()) {
+        hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1903,6 +2077,18 @@ public final class ClusterOuterClass {
 
         status_ = 0;
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1960,6 +2146,16 @@ public final class ClusterOuterClass {
         result.networkId_ = networkId_;
         result.health_ = health_;
         result.status_ = status_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
+        if (plannedOperationBuilder_ == null) {
+          result.plannedOperation_ = plannedOperation_;
+        } else {
+          result.plannedOperation_ = plannedOperationBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2071,6 +2267,12 @@ public final class ClusterOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (other.hasPlannedOperation()) {
+          mergePlannedOperation(other.getPlannedOperation());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3526,6 +3728,312 @@ public final class ClusterOuterClass {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation plannedOperation_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public boolean hasPlannedOperation() {
+        return plannedOperationBuilder_ != null || plannedOperation_ != null;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation getPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          return plannedOperation_ == null ? yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        } else {
+          return plannedOperationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder setPlannedOperation(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedOperation_ = value;
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder setPlannedOperation(
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder builderForValue) {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedOperationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder mergePlannedOperation(yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation value) {
+        if (plannedOperationBuilder_ == null) {
+          if (plannedOperation_ != null) {
+            plannedOperation_ =
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.newBuilder(plannedOperation_).mergeFrom(value).buildPartial();
+          } else {
+            plannedOperation_ = value;
+          }
+          onChanged();
+        } else {
+          plannedOperationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public Builder clearPlannedOperation() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperation_ = null;
+          onChanged();
+        } else {
+          plannedOperation_ = null;
+          plannedOperationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder getPlannedOperationBuilder() {
+        
+        onChanged();
+        return getPlannedOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder() {
+        if (plannedOperationBuilder_ != null) {
+          return plannedOperationBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedOperation_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.getDefaultInstance() : plannedOperation_;
+        }
+      }
+      /**
+       * <pre>
+       * Maintenance operation planned at nearest maintenance_window.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder> 
+          getPlannedOperationFieldBuilder() {
+        if (plannedOperationBuilder_ == null) {
+          plannedOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder>(
+                  getPlannedOperation(),
+                  getParentForChildren(),
+                  isClean());
+          plannedOperation_ = null;
+        }
+        return plannedOperationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16462,100 +16970,106 @@ public final class ClusterOuterClass {
       "/v1/config/host10_1c.proto\0322yandex/cloud" +
       "/mdb/postgresql/v1/config/host11.proto\0322" +
       "yandex/cloud/mdb/postgresql/v1/config/ho" +
-      "st12.proto\"\323\006\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfo" +
-      "lder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013d" +
-      "escription\030\005 \001(\t\022C\n\006labels\030\006 \003(\01323.yande" +
-      "x.cloud.mdb.postgresql.v1.Cluster.Labels" +
-      "Entry\022H\n\013environment\030\007 \001(\01623.yandex.clou" +
-      "d.mdb.postgresql.v1.Cluster.Environment\022" +
-      ">\n\nmonitoring\030\010 \003(\0132*.yandex.cloud.mdb.p" +
-      "ostgresql.v1.Monitoring\022=\n\006config\030\t \001(\0132" +
-      "-.yandex.cloud.mdb.postgresql.v1.Cluster" +
-      "Config\022\022\n\nnetwork_id\030\n \001(\t\022>\n\006health\030\013 \001" +
-      "(\0162..yandex.cloud.mdb.postgresql.v1.Clus" +
-      "ter.Health\022>\n\006status\030\014 \001(\0162..yandex.clou" +
-      "d.mdb.postgresql.v1.Cluster.Status\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIF" +
-      "IED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006" +
-      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATU" +
-      "S_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t" +
-      "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
-      "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
-      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
-      "k\030\003 \001(\t\"\277\006\n\rClusterConfig\022\017\n\007version\030\001 \001" +
-      "(\t\022^\n\025postgresql_config_9_6\030\002 \001(\0132=.yand" +
-      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
-      "esqlConfigSet9_6H\000\022b\n\027postgresql_config_" +
-      "10_1c\030\n \001(\0132?.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlConfigSet10_1CH\000\022\\" +
-      "\n\024postgresql_config_10\030\003 \001(\0132<.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlC" +
-      "onfigSet10H\000\022\\\n\024postgresql_config_11\030\010 \001" +
-      "(\0132<.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfigSet11H\000\022\\\n\024postgresql" +
-      "_config_12\030\013 \001(\0132<.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlConfigSet12H\000" +
-      "\022M\n\rpooler_config\030\004 \001(\01326.yandex.cloud.m" +
-      "db.postgresql.v1.ConnectionPoolerConfig\022" +
-      "<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb.po" +
-      "stgresql.v1.Resources\0220\n\014autofailover\030\006 " +
-      "\001(\0132\032.google.protobuf.BoolValue\0223\n\023backu" +
-      "p_window_start\030\007 \001(\0132\026.google.type.TimeO" +
-      "fDay\0226\n\006access\030\t \001(\0132&.yandex.cloud.mdb." +
-      "postgresql.v1.AccessB\023\n\021postgresql_confi" +
-      "g\"\376\001\n\026ConnectionPoolerConfig\022X\n\014pooling_" +
-      "mode\030\001 \001(\0162B.yandex.cloud.mdb.postgresql" +
-      ".v1.ConnectionPoolerConfig.PoolingMode\0220" +
-      "\n\014pool_discard\030\002 \001(\0132\032.google.protobuf.B" +
-      "oolValue\"X\n\013PoolingMode\022\034\n\030POOLING_MODE_" +
-      "UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTIO" +
-      "N\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n\004name\030\001 \001(" +
-      "\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<" +
-      "\n\tresources\030\004 \001(\0132).yandex.cloud.mdb.pos" +
-      "tgresql.v1.Resources\0227\n\004role\030\005 \001(\0162).yan" +
-      "dex.cloud.mdb.postgresql.v1.Host.Role\022;\n" +
-      "\006health\030\006 \001(\0162+.yandex.cloud.mdb.postgre" +
-      "sql.v1.Host.Health\0229\n\010services\030\007 \003(\0132\'.y" +
-      "andex.cloud.mdb.postgresql.v1.Service\022\021\n" +
-      "\tsubnet_id\030\010 \001(\t\022\032\n\022replication_source\030\t" +
-      " \001(\t\022-\n\010priority\030\n \001(\0132\033.google.protobuf" +
-      ".Int64Value\022:\n\006config\030\013 \001(\0132*.yandex.clo" +
-      "ud.mdb.postgresql.v1.HostConfig\022\030\n\020assig" +
-      "n_public_ip\030\014 \001(\010\022F\n\014replica_type\030\r \001(\0162" +
-      "0.yandex.cloud.mdb.postgresql.v1.Host.Re" +
-      "plicaType\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006M" +
-      "ASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024R" +
-      "EPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC" +
-      "\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
-      "\204\004\n\nHostConfig\022_\n\025postgresql_config_9_6\030" +
-      "\001 \001(\0132>.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlHostConfig9_6H\000\022c\n\027postg" +
-      "resql_config_10_1c\030\004 \001(\0132@.yandex.cloud." +
-      "mdb.postgresql.v1.config.PostgresqlHostC" +
-      "onfig10_1CH\000\022]\n\024postgresql_config_10\030\002 \001" +
+      "st12.proto\0320yandex/cloud/mdb/postgresql/" +
+      "v1/maintenance.proto\"\363\007\n\007Cluster\022\n\n\002id\030\001" +
+      " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030" +
+      "\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006labels\030\006 \003" +
+      "(\01323.yandex.cloud.mdb.postgresql.v1.Clus" +
+      "ter.LabelsEntry\022H\n\013environment\030\007 \001(\01623.y" +
+      "andex.cloud.mdb.postgresql.v1.Cluster.En" +
+      "vironment\022>\n\nmonitoring\030\010 \003(\0132*.yandex.c" +
+      "loud.mdb.postgresql.v1.Monitoring\022=\n\006con" +
+      "fig\030\t \001(\0132-.yandex.cloud.mdb.postgresql." +
+      "v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\022>\n\006" +
+      "health\030\013 \001(\0162..yandex.cloud.mdb.postgres" +
+      "ql.v1.Cluster.Health\022>\n\006status\030\014 \001(\0162..y" +
+      "andex.cloud.mdb.postgresql.v1.Cluster.St" +
+      "atus\022M\n\022maintenance_window\030\r \001(\01321.yande" +
+      "x.cloud.mdb.postgresql.v1.MaintenanceWin" +
+      "dow\022O\n\021planned_operation\030\016 \001(\01324.yandex." +
+      "cloud.mdb.postgresql.v1.MaintenanceOpera" +
+      "tion\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMEN" +
+      "T_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPREST" +
+      "ABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005" +
+      "ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Statu" +
+      "s\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007R" +
+      "UNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STO" +
+      "PPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMo" +
+      "nitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
+      "\001(\t\022\014\n\004link\030\003 \001(\t\"\277\006\n\rClusterConfig\022\017\n\007v" +
+      "ersion\030\001 \001(\t\022^\n\025postgresql_config_9_6\030\002 " +
+      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlConfigSet9_6H\000\022b\n\027postgres" +
+      "ql_config_10_1c\030\n \001(\0132?.yandex.cloud.mdb" +
+      ".postgresql.v1.config.PostgresqlConfigSe" +
+      "t10_1CH\000\022\\\n\024postgresql_config_10\030\003 \001(\0132<" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlConfigSet10H\000\022\\\n\024postgresql_con" +
+      "fig_11\030\010 \001(\0132<.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlConfigSet11H\000\022\\\n\024" +
+      "postgresql_config_12\030\013 \001(\0132<.yandex.clou" +
+      "d.mdb.postgresql.v1.config.PostgresqlCon" +
+      "figSet12H\000\022M\n\rpooler_config\030\004 \001(\01326.yand" +
+      "ex.cloud.mdb.postgresql.v1.ConnectionPoo" +
+      "lerConfig\022<\n\tresources\030\005 \001(\0132).yandex.cl" +
+      "oud.mdb.postgresql.v1.Resources\0220\n\014autof" +
+      "ailover\030\006 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\0223\n\023backup_window_start\030\007 \001(\0132\026.google." +
+      "type.TimeOfDay\0226\n\006access\030\t \001(\0132&.yandex." +
+      "cloud.mdb.postgresql.v1.AccessB\023\n\021postgr" +
+      "esql_config\"\376\001\n\026ConnectionPoolerConfig\022X" +
+      "\n\014pooling_mode\030\001 \001(\0162B.yandex.cloud.mdb." +
+      "postgresql.v1.ConnectionPoolerConfig.Poo" +
+      "lingMode\0220\n\014pool_discard\030\002 \001(\0132\032.google." +
+      "protobuf.BoolValue\"X\n\013PoolingMode\022\034\n\030POO" +
+      "LING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013" +
+      "TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n" +
+      "\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_" +
+      "id\030\003 \001(\t\022<\n\tresources\030\004 \001(\0132).yandex.clo" +
+      "ud.mdb.postgresql.v1.Resources\0227\n\004role\030\005" +
+      " \001(\0162).yandex.cloud.mdb.postgresql.v1.Ho" +
+      "st.Role\022;\n\006health\030\006 \001(\0162+.yandex.cloud.m" +
+      "db.postgresql.v1.Host.Health\0229\n\010services" +
+      "\030\007 \003(\0132\'.yandex.cloud.mdb.postgresql.v1." +
+      "Service\022\021\n\tsubnet_id\030\010 \001(\t\022\032\n\022replicatio" +
+      "n_source\030\t \001(\t\022-\n\010priority\030\n \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022:\n\006config\030\013 \001(\0132*." +
+      "yandex.cloud.mdb.postgresql.v1.HostConfi" +
+      "g\022\030\n\020assign_public_ip\030\014 \001(\010\022F\n\014replica_t" +
+      "ype\030\r \001(\01620.yandex.cloud.mdb.postgresql." +
+      "v1.Host.ReplicaType\"1\n\004Role\022\020\n\014ROLE_UNKN" +
+      "OWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013Replic" +
+      "aType\022\030\n\024REPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC" +
+      "\020\001\022\010\n\004SYNC\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016HE" +
+      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010D" +
+      "EGRADED\020\003\"\204\004\n\nHostConfig\022_\n\025postgresql_c" +
+      "onfig_9_6\030\001 \001(\0132>.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlHostConfig9_6H" +
+      "\000\022c\n\027postgresql_config_10_1c\030\004 \001(\0132@.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlHostConfig10_1CH\000\022]\n\024postgresql_con" +
+      "fig_10\030\002 \001(\0132=.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlHostConfig10H\000\022]\n" +
+      "\024postgresql_config_11\030\003 \001(\0132=.yandex.clo" +
+      "ud.mdb.postgresql.v1.config.PostgresqlHo" +
+      "stConfig11H\000\022]\n\024postgresql_config_12\030\005 \001" +
       "(\0132=.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlHostConfig10H\000\022]\n\024postgresq" +
-      "l_config_11\030\003 \001(\0132=.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig11" +
-      "H\000\022]\n\024postgresql_config_12\030\005 \001(\0132=.yande" +
-      "x.cloud.mdb.postgresql.v1.config.Postgre" +
-      "sqlHostConfig12H\000B\023\n\021postgresql_config\"\362" +
-      "\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud." +
-      "mdb.postgresql.v1.Service.Type\022>\n\006health" +
-      "\030\002 \001(\0162..yandex.cloud.mdb.postgresql.v1." +
-      "Service.Health\"8\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Heal" +
-      "th\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEA" +
-      "D\020\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001" +
-      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030" +
-      "\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bs\n\"ya" +
-      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
+      "ig.PostgresqlHostConfig12H\000B\023\n\021postgresq" +
+      "l_config\"\362\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yan" +
+      "dex.cloud.mdb.postgresql.v1.Service.Type" +
+      "\022>\n\006health\030\002 \001(\0162..yandex.cloud.mdb.post" +
+      "gresql.v1.Service.Health\"8\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER" +
+      "\020\002\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_p" +
+      "reset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014dis" +
+      "k_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001" +
+      " \001(\010Bs\n\"yandex.cloud.api.mdb.postgresql." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/postgresql/v1;postgresq" +
+      "lb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16581,13 +17095,14 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.config.Host101C.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host11.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host12.getDescriptor(),
+          yandex.cloud.api.mdb.postgresql.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -16655,6 +17170,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.config.Host101C.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host11.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host12.getDescriptor();
+    yandex.cloud.api.mdb.postgresql.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

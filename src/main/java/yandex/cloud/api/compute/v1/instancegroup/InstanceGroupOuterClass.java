@@ -22522,6 +22522,16 @@ public final class InstanceGroupOuterClass {
       com.google.protobuf.ByteString
           getSnapshotIdBytes();
 
+      /**
+       * <pre>
+       * When set to true, disk will not be deleted even after managed instance is deleted.
+       * It will be a user's responsibility to delete such disks.
+       * </pre>
+       *
+       * <code>bool preserve_after_instance_delete = 6;</code>
+       */
+      boolean getPreserveAfterInstanceDelete();
+
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AttachedDiskSpec.DiskSpec.SourceOneofCase getSourceOneofCase();
     }
     /**
@@ -22540,6 +22550,7 @@ public final class InstanceGroupOuterClass {
         description_ = "";
         typeId_ = "";
         size_ = 0L;
+        preserveAfterInstanceDelete_ = false;
       }
 
       @java.lang.Override
@@ -22593,6 +22604,11 @@ public final class InstanceGroupOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
                 sourceOneofCase_ = 5;
                 sourceOneof_ = s;
+                break;
+              }
+              case 48: {
+
+                preserveAfterInstanceDelete_ = input.readBool();
                 break;
               }
               default: {
@@ -22864,6 +22880,20 @@ public final class InstanceGroupOuterClass {
         }
       }
 
+      public static final int PRESERVE_AFTER_INSTANCE_DELETE_FIELD_NUMBER = 6;
+      private boolean preserveAfterInstanceDelete_;
+      /**
+       * <pre>
+       * When set to true, disk will not be deleted even after managed instance is deleted.
+       * It will be a user's responsibility to delete such disks.
+       * </pre>
+       *
+       * <code>bool preserve_after_instance_delete = 6;</code>
+       */
+      public boolean getPreserveAfterInstanceDelete() {
+        return preserveAfterInstanceDelete_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -22893,6 +22923,9 @@ public final class InstanceGroupOuterClass {
         if (sourceOneofCase_ == 5) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sourceOneof_);
         }
+        if (preserveAfterInstanceDelete_ != false) {
+          output.writeBool(6, preserveAfterInstanceDelete_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -22918,6 +22951,10 @@ public final class InstanceGroupOuterClass {
         if (sourceOneofCase_ == 5) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sourceOneof_);
         }
+        if (preserveAfterInstanceDelete_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(6, preserveAfterInstanceDelete_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -22940,6 +22977,8 @@ public final class InstanceGroupOuterClass {
             .equals(other.getTypeId());
         result = result && (getSize()
             == other.getSize());
+        result = result && (getPreserveAfterInstanceDelete()
+            == other.getPreserveAfterInstanceDelete());
         result = result && getSourceOneofCase().equals(
             other.getSourceOneofCase());
         if (!result) return false;
@@ -22973,6 +23012,9 @@ public final class InstanceGroupOuterClass {
         hash = (37 * hash) + SIZE_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getSize());
+        hash = (37 * hash) + PRESERVE_AFTER_INSTANCE_DELETE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPreserveAfterInstanceDelete());
         switch (sourceOneofCase_) {
           case 4:
             hash = (37 * hash) + IMAGE_ID_FIELD_NUMBER;
@@ -23124,6 +23166,8 @@ public final class InstanceGroupOuterClass {
 
           size_ = 0L;
 
+          preserveAfterInstanceDelete_ = false;
+
           sourceOneofCase_ = 0;
           sourceOneof_ = null;
           return this;
@@ -23161,6 +23205,7 @@ public final class InstanceGroupOuterClass {
           if (sourceOneofCase_ == 5) {
             result.sourceOneof_ = sourceOneof_;
           }
+          result.preserveAfterInstanceDelete_ = preserveAfterInstanceDelete_;
           result.sourceOneofCase_ = sourceOneofCase_;
           onBuilt();
           return result;
@@ -23220,6 +23265,9 @@ public final class InstanceGroupOuterClass {
           }
           if (other.getSize() != 0L) {
             setSize(other.getSize());
+          }
+          if (other.getPreserveAfterInstanceDelete() != false) {
+            setPreserveAfterInstanceDelete(other.getPreserveAfterInstanceDelete());
           }
           switch (other.getSourceOneofCase()) {
             case IMAGE_ID: {
@@ -23694,6 +23742,47 @@ public final class InstanceGroupOuterClass {
   checkByteStringIsUtf8(value);
           sourceOneofCase_ = 5;
           sourceOneof_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean preserveAfterInstanceDelete_ ;
+        /**
+         * <pre>
+         * When set to true, disk will not be deleted even after managed instance is deleted.
+         * It will be a user's responsibility to delete such disks.
+         * </pre>
+         *
+         * <code>bool preserve_after_instance_delete = 6;</code>
+         */
+        public boolean getPreserveAfterInstanceDelete() {
+          return preserveAfterInstanceDelete_;
+        }
+        /**
+         * <pre>
+         * When set to true, disk will not be deleted even after managed instance is deleted.
+         * It will be a user's responsibility to delete such disks.
+         * </pre>
+         *
+         * <code>bool preserve_after_instance_delete = 6;</code>
+         */
+        public Builder setPreserveAfterInstanceDelete(boolean value) {
+          
+          preserveAfterInstanceDelete_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * When set to true, disk will not be deleted even after managed instance is deleted.
+         * It will be a user's responsibility to delete such disks.
+         * </pre>
+         *
+         * <code>bool preserve_after_instance_delete = 6;</code>
+         */
+        public Builder clearPreserveAfterInstanceDelete() {
+          
+          preserveAfterInstanceDelete_ = false;
           onChanged();
           return this;
         }
@@ -41149,19 +41238,20 @@ public final class InstanceGroupOuterClass {
       "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30" +
       ",32,34,36,40,44,48,52,56,60,64\022(\n\rcore_f" +
       "raction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus" +
-      "\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\232\004\n\020AttachedDiskSpec" +
+      "\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\302\004\n\020AttachedDiskSpec" +
       "\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1" +
       ".instancegroup.AttachedDiskSpec.ModeB\004\350\307" +
       "1\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-" +
       "9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex." +
       "cloud.compute.v1.instancegroup.AttachedD" +
       "iskSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004 \001(\tB" +
-      "\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\032\271\001\n\010Disk" +
+      "\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\032\341\001\n\010Disk" +
       "Spec\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007" +
       "type_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003B\031\372\3071\0254" +
       "194304-4398046511104\022\034\n\010image_id\030\004 \001(\tB\010" +
       "\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=5" +
-      "0H\000B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSP" +
+      "0H\000\022&\n\036preserve_after_instance_delete\030\006 " +
+      "\001(\010B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSP" +
       "ECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002" +
       "\"\222\002\n\024NetworkInterfaceSpec\022\022\n\nnetwork_id\030" +
       "\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_" +
@@ -41384,7 +41474,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_DiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_AttachedDiskSpec_DiskSpec_descriptor,
-        new java.lang.String[] { "Description", "TypeId", "Size", "ImageId", "SnapshotId", "SourceOneof", });
+        new java.lang.String[] { "Description", "TypeId", "Size", "ImageId", "SnapshotId", "PreserveAfterInstanceDelete", "SourceOneof", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterfaceSpec_fieldAccessorTable = new

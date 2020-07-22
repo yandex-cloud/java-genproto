@@ -6868,6 +6868,31 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.UpdateClusterRequest}
@@ -6966,6 +6991,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7311,6 +7349,39 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7345,6 +7416,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(7, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -7382,6 +7456,10 @@ public final class ClusterServiceOuterClass {
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7416,6 +7494,11 @@ public final class ClusterServiceOuterClass {
       }
       result = result && getName()
           .equals(other.getName());
+      result = result && (hasMaintenanceWindow() == other.hasMaintenanceWindow());
+      if (hasMaintenanceWindow()) {
+        result = result && getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7445,6 +7528,10 @@ public final class ClusterServiceOuterClass {
       }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7619,6 +7706,12 @@ public final class ClusterServiceOuterClass {
         }
         name_ = "";
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -7662,6 +7755,11 @@ public final class ClusterServiceOuterClass {
           result.configSpec_ = configSpecBuilder_.build();
         }
         result.name_ = name_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7730,6 +7828,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8509,6 +8610,159 @@ public final class ClusterServiceOuterClass {
         name_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16434,6 +16688,1932 @@ public final class ClusterServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.StartClusterFailoverMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    int getRescheduleTypeValue();
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType();
+
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest}
+   */
+  public  static final class RescheduleMaintenanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest)
+      RescheduleMaintenanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceRequest.newBuilder() to construct.
+    private RescheduleMaintenanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceRequest() {
+      clusterId_ = "";
+      rescheduleType_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              rescheduleType_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType}
+     */
+    public enum RescheduleType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      RESCHEDULE_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>IMMEDIATE = 1;</code>
+       */
+      IMMEDIATE(1),
+      /**
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      NEXT_AVAILABLE_WINDOW(2),
+      /**
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      SPECIFIC_TIME(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RESCHEDULE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int RESCHEDULE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>IMMEDIATE = 1;</code>
+       */
+      public static final int IMMEDIATE_VALUE = 1;
+      /**
+       * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
+       */
+      public static final int NEXT_AVAILABLE_WINDOW_VALUE = 2;
+      /**
+       * <code>SPECIFIC_TIME = 3;</code>
+       */
+      public static final int SPECIFIC_TIME_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RescheduleType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RescheduleType forNumber(int value) {
+        switch (value) {
+          case 0: return RESCHEDULE_TYPE_UNSPECIFIED;
+          case 1: return IMMEDIATE;
+          case 2: return NEXT_AVAILABLE_WINDOW;
+          case 3: return SPECIFIC_TIME;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RescheduleType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RescheduleType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RescheduleType>() {
+              public RescheduleType findValueByNumber(int number) {
+                return RescheduleType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final RescheduleType[] VALUES = values();
+
+      public static RescheduleType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RescheduleType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType)
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESCHEDULE_TYPE_FIELD_NUMBER = 2;
+    private int rescheduleType_;
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public int getRescheduleTypeValue() {
+      return rescheduleType_;
+    }
+    /**
+     * <pre>
+     * Required. The type of reschedule request.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(3, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (rescheduleType_ != yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.RESCHEDULE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, rescheduleType_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other = (yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && rescheduleType_ == other.rescheduleType_;
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + RESCHEDULE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + rescheduleType_;
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest)
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.class, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        rescheduleType_ = 0;
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest build() {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest result = new yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest(this);
+        result.clusterId_ = clusterId_;
+        result.rescheduleType_ = rescheduleType_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.rescheduleType_ != 0) {
+          setRescheduleTypeValue(other.getRescheduleTypeValue());
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int rescheduleType_ = 0;
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public int getRescheduleTypeValue() {
+        return rescheduleType_;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleTypeValue(int value) {
+        rescheduleType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType getRescheduleType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType result = yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.valueOf(rescheduleType_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRescheduleType(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest.RescheduleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        rescheduleType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The type of reschedule request.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearRescheduleType() {
+        
+        rescheduleType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest)
+    private static final yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceRequest>() {
+      @java.lang.Override
+      public RescheduleMaintenanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RescheduleMaintenanceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    boolean hasDelayedUntil();
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.Timestamp getDelayedUntil();
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
+   */
+  public  static final class RescheduleMaintenanceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata)
+      RescheduleMaintenanceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RescheduleMaintenanceMetadata.newBuilder() to construct.
+    private RescheduleMaintenanceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RescheduleMaintenanceMetadata() {
+      clusterId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RescheduleMaintenanceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (delayedUntil_ != null) {
+                subBuilder = delayedUntil_.toBuilder();
+              }
+              delayedUntil_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(delayedUntil_);
+                delayedUntil_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MySQL cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELAYED_UNTIL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp delayedUntil_;
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public boolean hasDelayedUntil() {
+      return delayedUntil_ != null;
+    }
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getDelayedUntil() {
+      return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+    }
+    /**
+     * <pre>
+     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+      return getDelayedUntil();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        output.writeMessage(4, getDelayedUntil());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (delayedUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDelayedUntil());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other = (yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && (hasDelayedUntil() == other.hasDelayedUntil());
+      if (hasDelayedUntil()) {
+        result = result && getDelayedUntil()
+            .equals(other.getDelayedUntil());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (hasDelayedUntil()) {
+        hash = (37 * hash) + DELAYED_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getDelayedUntil().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata)
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.class, yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata build() {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata buildPartial() {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata result = new yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata(this);
+        result.clusterId_ = clusterId_;
+        if (delayedUntilBuilder_ == null) {
+          result.delayedUntil_ = delayedUntil_;
+        } else {
+          result.delayedUntil_ = delayedUntilBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata other) {
+        if (other == yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.hasDelayedUntil()) {
+          mergeDelayedUntil(other.getDelayedUntil());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MySQL cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp delayedUntil_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public boolean hasDelayedUntil() {
+        return delayedUntilBuilder_ != null || delayedUntil_ != null;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        } else {
+          return delayedUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delayedUntil_ = value;
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder setDelayedUntil(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          delayedUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
+        if (delayedUntilBuilder_ == null) {
+          if (delayedUntil_ != null) {
+            delayedUntil_ =
+              com.google.protobuf.Timestamp.newBuilder(delayedUntil_).mergeFrom(value).buildPartial();
+          } else {
+            delayedUntil_ = value;
+          }
+          onChanged();
+        } else {
+          delayedUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public Builder clearDelayedUntil() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntil_ = null;
+          onChanged();
+        } else {
+          delayedUntil_ = null;
+          delayedUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
+        
+        onChanged();
+        return getDelayedUntilFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
+        if (delayedUntilBuilder_ != null) {
+          return delayedUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return delayedUntil_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
+        }
+      }
+      /**
+       * <pre>
+       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDelayedUntilFieldBuilder() {
+        if (delayedUntilBuilder_ == null) {
+          delayedUntilBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDelayedUntil(),
+                  getParentForChildren(),
+                  isClean());
+          delayedUntil_ = null;
+        }
+        return delayedUntilBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata)
+    private static final yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RescheduleMaintenanceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RescheduleMaintenanceMetadata>() {
+      @java.lang.Override
+      public RescheduleMaintenanceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RescheduleMaintenanceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RescheduleMaintenanceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RescheduleMaintenanceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.ClusterServiceOuterClass.RescheduleMaintenanceMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -40698,6 +42878,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mysql_v1_StartClusterFailoverMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -40845,237 +43035,257 @@ public final class ClusterServiceOuterClass {
       "loud/mdb/mysql/v1/user.proto\032/yandex/clo" +
       "ud/mdb/mysql/v1/config/mysql5_7.proto\032/y" +
       "andex/cloud/mdb/mysql/v1/config/mysql8_0" +
-      ".proto\"5\n\021GetClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRe" +
-      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
-      "1\006<=1000\"e\n\024ListClustersResponse\0224\n\010clus" +
-      "ters\030\001 \003(\0132\".yandex.cloud.mdb.mysql.v1.C" +
-      "luster\022\027\n\017next_page_token\030\002 \001(\t\"\225\005\n\024Crea" +
-      "teClusterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
-      "\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\310" +
-      "1\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.cloud." +
-      "mdb.mysql.v1.CreateClusterRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013enviro" +
-      "nment\030\005 \001(\0162..yandex.cloud.mdb.mysql.v1." +
-      "Cluster.Environment\022:\n\013config_spec\030\006 \001(\013" +
-      "2%.yandex.cloud.mdb.mysql.v1.ConfigSpec\022" +
-      "?\n\016database_specs\030\007 \003(\0132\'.yandex.cloud.m" +
-      "db.mysql.v1.DatabaseSpec\0227\n\nuser_specs\030\010" +
-      " \003(\0132#.yandex.cloud.mdb.mysql.v1.UserSpe" +
-      "c\0227\n\nhost_specs\030\t \003(\0132#.yandex.cloud.mdb" +
-      ".mysql.v1.HostSpec\022\034\n\nnetwork_id\030\n \001(\tB\010" +
-      "\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"\255\003\n\024UpdateClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256" +
-      "\022\214\001\n\006labels\030\004 \003(\0132;.yandex.cloud.mdb.mys" +
-      "ql.v1.UpdateClusterRequest.LabelsEntryB?" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013config_spec\030\005" +
-      " \001(\0132%.yandex.cloud.mdb.mysql.v1.ConfigS" +
-      "pec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\"8\n\024DeleteClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025D" +
-      "eleteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\332\004\n\025RestoreClust" +
-      "erRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022.\n\004ti" +
-      "me\030\002 \001(\0132\032.google.protobuf.TimestampB\004\350\307" +
-      "1\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0-9_-]*" +
-      "\022\036\n\013description\030\005 \001(\tB\t\212\3101\005<=256\022\215\001\n\006lab" +
-      "els\030\006 \003(\0132<.yandex.cloud.mdb.mysql.v1.Re" +
-      "storeClusterRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022C\n\013environment\030\007 \001(\0162.." +
-      "yandex.cloud.mdb.mysql.v1.Cluster.Enviro" +
-      "nment\022:\n\013config_spec\030\010 \001(\0132%.yandex.clou" +
-      "d.mdb.mysql.v1.ConfigSpec\0227\n\nhost_specs\030" +
-      "\t \003(\0132#.yandex.cloud.mdb.mysql.v1.HostSp" +
-      "ec\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101\004<=50\022\033\n\tfold" +
-      "er_id\030\013 \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tba" +
-      "ckup_id\030\002 \001(\t\"]\n\033StartClusterFailoverReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034" +
-      "\n\thost_name\030\002 \001(\tB\t\212\3101\005<=253\"2\n\034StartClu" +
-      "sterFailoverMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022B\n\007message\030\002 \003(\01321" +
-      ".yandex.cloud.mdb.mysql.v1.LogRecord.Mes" +
-      "sageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"\330\003\n\026ListClusterLogsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025" +
-      "\n\rcolumn_filter\030\002 \003(\t\022S\n\014service_type\030\003 " +
-      "\001(\0162=.yandex.cloud.mdb.mysql.v1.ListClus" +
-      "terLogsRequest.ServiceType\022-\n\tfrom_time\030" +
-      "\004 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to_" +
-      "time\030\005 \001(\0132\032.google.protobuf.Timestamp\022\035" +
-      "\n\tpage_size\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026always_next_page" +
-      "_token\030\010 \001(\010\"v\n\013ServiceType\022\034\n\030SERVICE_T" +
-      "YPE_UNSPECIFIED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMY" +
-      "SQL_GENERAL\020\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013M" +
-      "YSQL_AUDIT\020\004\"f\n\027ListClusterLogsResponse\022" +
-      "2\n\004logs\030\001 \003(\0132$.yandex.cloud.mdb.mysql.v" +
-      "1.LogRecord\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017" +
-      "StreamLogRecord\0224\n\006record\030\001 \001(\0132$.yandex" +
-      ".cloud.mdb.mysql.v1.LogRecord\022\031\n\021next_re" +
-      "cord_token\030\002 \001(\t\"\237\003\n\030StreamClusterLogsRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\025\n\rcolumn_filter\030\002 \003(\t\022U\n\014service_type\030\003" +
-      " \001(\0162?.yandex.cloud.mdb.mysql.v1.StreamC" +
-      "lusterLogsRequest.ServiceType\022-\n\tfrom_ti" +
-      "me\030\004 \001(\0132\032.google.protobuf.Timestamp\022+\n\007" +
-      "to_time\030\005 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=100\"v\n\013Se" +
-      "rviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022" +
-      "\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024\n\020M" +
-      "YSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"~\n\034Li" +
-      "stClusterOperationsRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"o\n\035ListClusterOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031L" +
-      "istClusterBackupsRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"i\n\032ListClusterBackupsResponse\0222\n\007backup" +
-      "s\030\001 \003(\0132!.yandex.cloud.mdb.mysql.v1.Back" +
-      "up\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListClust" +
-      "erHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListCl" +
-      "usterHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yand" +
-      "ex.cloud.mdb.mysql.v1.Host\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"{\n\026AddClusterHostsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\nhost_" +
-      "specs\030\002 \003(\0132#.yandex.cloud.mdb.mysql.v1." +
-      "HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHostsMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 " +
-      "\003(\t\"b\n\031DeleteClusterHostsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names" +
-      "\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteCluster" +
-      "HostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhos" +
-      "t_names\030\002 \003(\t\"7\n\023StartClusterRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022St" +
-      "opClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destina" +
-      "tion_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Mo" +
-      "veClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n" +
-      "\020source_folder_id\030\002 \001(\t\022\035\n\025destination_f" +
-      "older_id\030\003 \001(\t\"D\n\032UpdateClusterHostsMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002" +
-      " \003(\t\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<" +
-      "=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assi" +
-      "gn_public_ip\030\003 \001(\010\"\352\002\n\nConfigSpec\022\017\n\007ver" +
-      "sion\030\001 \001(\t\022L\n\020mysql_config_5_7\030\002 \001(\01320.y" +
-      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig5_7H\000\022L\n\020mysql_config_8_0\030\006 \001(\01320.yan" +
-      "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
-      "g8_0H\000\0227\n\tresources\030\003 \001(\0132$.yandex.cloud" +
-      ".mdb.mysql.v1.Resources\0223\n\023backup_window" +
-      "_start\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006" +
-      "access\030\005 \001(\0132!.yandex.cloud.mdb.mysql.v1" +
-      ".AccessB\016\n\014mysql_config2\370\031\n\016ClusterServi" +
-      "ce\022\210\001\n\003Get\022,.yandex.cloud.mdb.mysql.v1.G" +
-      "etClusterRequest\032\".yandex.cloud.mdb.mysq" +
-      "l.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-mysql/v1/" +
-      "clusters/{cluster_id}\022\213\001\n\004List\022..yandex." +
-      "cloud.mdb.mysql.v1.ListClustersRequest\032/" +
-      ".yandex.cloud.mdb.mysql.v1.ListClustersR" +
-      "esponse\"\"\202\323\344\223\002\034\022\032/managed-mysql/v1/clust" +
-      "ers\022\247\001\n\006Create\022/.yandex.cloud.mdb.mysql." +
-      "v1.CreateClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"I\202\323\344\223\002\037\"\032/managed-mys" +
-      "ql/v1/clusters:\001*\262\322* \n\025CreateClusterMeta" +
-      "data\022\007Cluster\022\264\001\n\006Update\022/.yandex.cloud." +
-      "mdb.mysql.v1.UpdateClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"V\202\323\344\223\002,2\'/m" +
-      "anaged-mysql/v1/clusters/{cluster_id}:\001*" +
-      "\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\277\001\n" +
-      "\006Delete\022/.yandex.cloud.mdb.mysql.v1.Dele" +
-      "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"a\202\323\344\223\002)*\'/managed-mysql/v1/c" +
-      "lusters/{cluster_id}\262\322*.\n\025DeleteClusterM" +
-      "etadata\022\025google.protobuf.Empty\022\264\001\n\005Start" +
-      "\022..yandex.cloud.mdb.mysql.v1.StartCluste" +
+      ".proto\032+yandex/cloud/mdb/mysql/v1/mainte" +
+      "nance.proto\"5\n\021GetClusterRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClust" +
+      "ersRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
+      "\tB\n\212\3101\006<=1000\"e\n\024ListClustersResponse\0224\n" +
+      "\010clusters\030\001 \003(\0132\".yandex.cloud.mdb.mysql" +
+      ".v1.Cluster\022\027\n\017next_page_token\030\002 \001(\t\"\225\005\n" +
+      "\024CreateClusterRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
+      "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(" +
+      "\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.c" +
+      "loud.mdb.mysql.v1.CreateClusterRequest.L" +
+      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013e" +
+      "nvironment\030\005 \001(\0162..yandex.cloud.mdb.mysq" +
+      "l.v1.Cluster.Environment\022:\n\013config_spec\030" +
+      "\006 \001(\0132%.yandex.cloud.mdb.mysql.v1.Config" +
+      "Spec\022?\n\016database_specs\030\007 \003(\0132\'.yandex.cl" +
+      "oud.mdb.mysql.v1.DatabaseSpec\0227\n\nuser_sp" +
+      "ecs\030\010 \003(\0132#.yandex.cloud.mdb.mysql.v1.Us" +
+      "erSpec\0227\n\nhost_specs\030\t \003(\0132#.yandex.clou" +
+      "d.mdb.mysql.v1.HostSpec\022\034\n\nnetwork_id\030\n " +
+      "\001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\"\367\003\n\024UpdateClus" +
+      "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.cloud.md" +
+      "b.mysql.v1.UpdateClusterRequest.LabelsEn" +
+      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013config_s" +
+      "pec\030\005 \001(\0132%.yandex.cloud.mdb.mysql.v1.Co" +
+      "nfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022H\n\022maintenance_window\030\007 \001(\0132," +
+      ".yandex.cloud.mdb.mysql.v1.MaintenanceWi" +
+      "ndow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025De" +
+      "leteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
+      "8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\332\004\n\025RestoreCluste" +
+      "rRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022.\n\004tim" +
+      "e\030\002 \001(\0132\032.google.protobuf.TimestampB\004\350\3071" +
+      "\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "\036\n\013description\030\005 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labe" +
+      "ls\030\006 \003(\0132<.yandex.cloud.mdb.mysql.v1.Res" +
+      "toreClusterRequest.LabelsEntryB?\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\022C\n\013environment\030\007 \001(\0162..y" +
+      "andex.cloud.mdb.mysql.v1.Cluster.Environ" +
+      "ment\022:\n\013config_spec\030\010 \001(\0132%.yandex.cloud" +
+      ".mdb.mysql.v1.ConfigSpec\0227\n\nhost_specs\030\t" +
+      " \003(\0132#.yandex.cloud.mdb.mysql.v1.HostSpe" +
+      "c\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101\004<=50\022\033\n\tfolde" +
+      "r_id\030\013 \001(\tB\010\212\3101\004<=50\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbac" +
+      "kup_id\030\002 \001(\t\"]\n\033StartClusterFailoverRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n" +
+      "\thost_name\030\002 \001(\tB\t\212\3101\005<=253\"2\n\034StartClus" +
+      "terFailoverMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
+      "\312\002\n\034RescheduleMaintenanceRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017reschedule" +
+      "_type\030\002 \001(\0162F.yandex.cloud.mdb.mysql.v1." +
+      "RescheduleMaintenanceRequest.RescheduleT" +
+      "ypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"n\n\016RescheduleType\022\037" +
+      "\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMED" +
+      "IATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPE" +
+      "CIFIC_TIME\020\003\"f\n\035RescheduleMaintenanceMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_unt" +
+      "il\030\004 \001(\0132\032.google.protobuf.Timestamp\"\256\001\n" +
+      "\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022B\n\007message\030\002 \003(\01321.yan" +
+      "dex.cloud.mdb.mysql.v1.LogRecord.Message" +
+      "Entry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"\330\003\n\026ListClusterLogsRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rco" +
+      "lumn_filter\030\002 \003(\t\022S\n\014service_type\030\003 \001(\0162" +
+      "=.yandex.cloud.mdb.mysql.v1.ListClusterL" +
+      "ogsRequest.ServiceType\022-\n\tfrom_time\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022+\n\007to_time" +
+      "\030\005 \001(\0132\032.google.protobuf.Timestamp\022\035\n\tpa" +
+      "ge_size\030\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
+      "\007 \001(\tB\t\212\3101\005<=100\022\036\n\026always_next_page_tok" +
+      "en\030\010 \001(\010\"v\n\013ServiceType\022\034\n\030SERVICE_TYPE_" +
+      "UNSPECIFIED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_" +
+      "GENERAL\020\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL" +
+      "_AUDIT\020\004\"f\n\027ListClusterLogsResponse\0222\n\004l" +
+      "ogs\030\001 \003(\0132$.yandex.cloud.mdb.mysql.v1.Lo" +
+      "gRecord\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017Stre" +
+      "amLogRecord\0224\n\006record\030\001 \001(\0132$.yandex.clo" +
+      "ud.mdb.mysql.v1.LogRecord\022\031\n\021next_record" +
+      "_token\030\002 \001(\t\"\237\003\n\030StreamClusterLogsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rc" +
+      "olumn_filter\030\002 \003(\t\022U\n\014service_type\030\003 \001(\016" +
+      "2?.yandex.cloud.mdb.mysql.v1.StreamClust" +
+      "erLogsRequest.ServiceType\022-\n\tfrom_time\030\004" +
+      " \001(\0132\032.google.protobuf.Timestamp\022+\n\007to_t" +
+      "ime\030\005 \001(\0132\032.google.protobuf.Timestamp\022\037\n" +
+      "\014record_token\030\006 \001(\tB\t\212\3101\005<=100\"v\n\013Servic" +
+      "eType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\017\n\013M" +
+      "YSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024\n\020MYSQL" +
+      "_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"~\n\034ListCl" +
+      "usterOperationsRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o" +
+      "\n\035ListClusterOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListC" +
+      "lusterBackupsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"i\n\032" +
+      "ListClusterBackupsResponse\0222\n\007backups\030\001 " +
+      "\003(\0132!.yandex.cloud.mdb.mysql.v1.Backup\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"y\n\027ListClusterHo" +
+      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListCluste" +
+      "rHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yandex.c" +
+      "loud.mdb.mysql.v1.Host\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"{\n\026AddClusterHostsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\nhost_spec" +
+      "s\030\002 \003(\0132#.yandex.cloud.mdb.mysql.v1.Host" +
+      "SpecB\006\202\3101\002>0\"A\n\027AddClusterHostsMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"" +
+      "b\n\031DeleteClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003" +
+      "(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClusterHost" +
+      "sMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_na" +
+      "mes\030\002 \003(\t\"7\n\023StartClusterRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClust" +
+      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCl" +
+      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination" +
+      "_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCl" +
+      "usterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020sou" +
+      "rce_folder_id\030\002 \001(\t\022\035\n\025destination_folde" +
+      "r_id\030\003 \001(\t\"D\n\032UpdateClusterHostsMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t" +
+      "\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
+      "\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_p" +
+      "ublic_ip\030\003 \001(\010\"\352\002\n\nConfigSpec\022\017\n\007version" +
+      "\030\001 \001(\t\022L\n\020mysql_config_5_7\030\002 \001(\01320.yande" +
+      "x.cloud.mdb.mysql.v1.config.MysqlConfig5" +
+      "_7H\000\022L\n\020mysql_config_8_0\030\006 \001(\01320.yandex." +
+      "cloud.mdb.mysql.v1.config.MysqlConfig8_0" +
+      "H\000\0227\n\tresources\030\003 \001(\0132$.yandex.cloud.mdb" +
+      ".mysql.v1.Resources\0223\n\023backup_window_sta" +
+      "rt\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006acce" +
+      "ss\030\005 \001(\0132!.yandex.cloud.mdb.mysql.v1.Acc" +
+      "essB\016\n\014mysql_config2\344\033\n\016ClusterService\022\210" +
+      "\001\n\003Get\022,.yandex.cloud.mdb.mysql.v1.GetCl" +
+      "usterRequest\032\".yandex.cloud.mdb.mysql.v1" +
+      ".Cluster\"/\202\323\344\223\002)\022\'/managed-mysql/v1/clus" +
+      "ters/{cluster_id}\022\213\001\n\004List\022..yandex.clou" +
+      "d.mdb.mysql.v1.ListClustersRequest\032/.yan" +
+      "dex.cloud.mdb.mysql.v1.ListClustersRespo" +
+      "nse\"\"\202\323\344\223\002\034\022\032/managed-mysql/v1/clusters\022" +
+      "\247\001\n\006Create\022/.yandex.cloud.mdb.mysql.v1.C" +
+      "reateClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"I\202\323\344\223\002\037\"\032/managed-mysql/v" +
+      "1/clusters:\001*\262\322* \n\025CreateClusterMetadata" +
+      "\022\007Cluster\022\264\001\n\006Update\022/.yandex.cloud.mdb." +
+      "mysql.v1.UpdateClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"V\202\323\344\223\002,2\'/manag" +
+      "ed-mysql/v1/clusters/{cluster_id}:\001*\262\322* " +
+      "\n\025UpdateClusterMetadata\022\007Cluster\022\277\001\n\006Del" +
+      "ete\022/.yandex.cloud.mdb.mysql.v1.DeleteCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"a\202\323\344\223\002)*\'/managed-mysql/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\264\001\n\005Start\022..y" +
+      "andex.cloud.mdb.mysql.v1.StartClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "X\202\323\344\223\002/\"-/managed-mysql/v1/clusters/{clu" +
+      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
+      "\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.mdb.my" +
+      "sql.v1.StopClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"V\202\323\344\223\002.\",/managed-m" +
+      "ysql/v1/clusters/{cluster_id}:stop\262\322*\036\n\023" +
+      "StopClusterMetadata\022\007Cluster\022\263\001\n\004Move\022-." +
+      "yandex.cloud.mdb.mysql.v1.MoveClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "Y\202\323\344\223\0021\",/managed-mysql/v1/clusters/{clu" +
+      "ster_id}:move:\001*\262\322*\036\n\023MoveClusterMetadat" +
+      "a\022\007Cluster\022\270\001\n\006Backup\022/.yandex.cloud.mdb" +
+      ".mysql.v1.BackupClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"Z\202\323\344\223\0020\"./mana" +
+      "ged-mysql/v1/clusters/{cluster_id}:backu" +
+      "p\262\322* \n\025BackupClusterMetadata\022\007Cluster\022\262\001" +
+      "\n\007Restore\0220.yandex.cloud.mdb.mysql.v1.Re" +
+      "storeClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"R\202\323\344\223\002\'\"\"/managed-mysql/v" +
+      "1/clusters:restore:\001*\262\322*!\n\026RestoreCluste" +
+      "rMetadata\022\007Cluster\022\351\001\n\025RescheduleMainten" +
+      "ance\0227.yandex.cloud.mdb.mysql.v1.Resched" +
+      "uleMaintenanceRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"t\202\323\344\223\002B\"=/managed-mysql" +
+      "/v1/clusters/{cluster_id}:rescheduleMain" +
+      "tenance:\001*\262\322*(\n\035RescheduleMaintenanceMet" +
+      "adata\022\007Cluster\022\327\001\n\rStartFailover\0226.yande" +
+      "x.cloud.mdb.mysql.v1.StartClusterFailove" +
       "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"X\202\323\344\223\002/\"-/managed-mysql/v1/clusters/" +
-      "{cluster_id}:start\262\322*\037\n\024StartClusterMeta" +
-      "data\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.md" +
-      "b.mysql.v1.StopClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"V\202\323\344\223\002.\",/manag" +
-      "ed-mysql/v1/clusters/{cluster_id}:stop\262\322" +
-      "*\036\n\023StopClusterMetadata\022\007Cluster\022\263\001\n\004Mov" +
-      "e\022-.yandex.cloud.mdb.mysql.v1.MoveCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"Y\202\323\344\223\0021\",/managed-mysql/v1/clusters/" +
-      "{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMet" +
-      "adata\022\007Cluster\022\270\001\n\006Backup\022/.yandex.cloud" +
-      ".mdb.mysql.v1.BackupClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"Z\202\323\344\223\0020\"./" +
-      "managed-mysql/v1/clusters/{cluster_id}:b" +
-      "ackup\262\322* \n\025BackupClusterMetadata\022\007Cluste" +
-      "r\022\262\001\n\007Restore\0220.yandex.cloud.mdb.mysql.v" +
-      "1.RestoreClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"R\202\323\344\223\002\'\"\"/managed-mys" +
-      "ql/v1/clusters:restore:\001*\262\322*!\n\026RestoreCl" +
-      "usterMetadata\022\007Cluster\022\327\001\n\rStartFailover" +
-      "\0226.yandex.cloud.mdb.mysql.v1.StartCluste" +
-      "rFailoverRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"k\202\323\344\223\002:\"5/managed-mysql/v1/c" +
-      "lusters/{cluster_id}:startFailover:\001*\262\322*" +
-      "\'\n\034StartClusterFailoverMetadata\022\007Cluster" +
-      "\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.mysql.v" +
-      "1.ListClusterLogsRequest\0322.yandex.cloud." +
-      "mdb.mysql.v1.ListClusterLogsResponse\"4\202\323" +
-      "\344\223\002.\022,/managed-mysql/v1/clusters/{cluste" +
-      "r_id}:logs\022\254\001\n\nStreamLogs\0223.yandex.cloud" +
-      ".mdb.mysql.v1.StreamClusterLogsRequest\032*" +
-      ".yandex.cloud.mdb.mysql.v1.StreamLogReco" +
-      "rd\";\202\323\344\223\0025\0223/managed-mysql/v1/clusters/{" +
-      "cluster_id}:stream_logs0\001\022\277\001\n\016ListOperat" +
-      "ions\0227.yandex.cloud.mdb.mysql.v1.ListClu" +
-      "sterOperationsRequest\0328.yandex.cloud.mdb" +
-      ".mysql.v1.ListClusterOperationsResponse\"" +
-      ":\202\323\344\223\0024\0222/managed-mysql/v1/clusters/{clu" +
-      "ster_id}/operations\022\263\001\n\013ListBackups\0224.ya" +
-      "ndex.cloud.mdb.mysql.v1.ListClusterBacku" +
-      "psRequest\0325.yandex.cloud.mdb.mysql.v1.Li" +
-      "stClusterBackupsResponse\"7\202\323\344\223\0021\022//manag" +
-      "ed-mysql/v1/clusters/{cluster_id}/backup" +
-      "s\022\253\001\n\tListHosts\0222.yandex.cloud.mdb.mysql" +
-      ".v1.ListClusterHostsRequest\0323.yandex.clo" +
-      "ud.mdb.mysql.v1.ListClusterHostsResponse" +
-      "\"5\202\323\344\223\002/\022-/managed-mysql/v1/clusters/{cl" +
-      "uster_id}/hosts\022\332\001\n\010AddHosts\0221.yandex.cl" +
-      "oud.mdb.mysql.v1.AddClusterHostsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"x\202\323\344\223" +
-      "\002>\"9/managed-mysql/v1/clusters/{cluster_" +
-      "id}/hosts:batchCreate:\001*\262\322*0\n\027AddCluster" +
-      "HostsMetadata\022\025google.protobuf.Empty\022\343\001\n" +
-      "\013DeleteHosts\0224.yandex.cloud.mdb.mysql.v1" +
-      ".DeleteClusterHostsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"{\202\323\344\223\002>\"9/managed-" +
-      "mysql/v1/clusters/{cluster_id}/hosts:bat" +
-      "chDelete:\001*\262\322*3\n\032DeleteClusterHostsMetad" +
-      "ata\022\025google.protobuf.EmptyBd\n\035yandex.clo" +
-      "ud.api.mdb.mysql.v1ZCgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/mysql/" +
-      "v1;mysqlb\006proto3"
+      "ion\"k\202\323\344\223\002:\"5/managed-mysql/v1/clusters/" +
+      "{cluster_id}:startFailover:\001*\262\322*\'\n\034Start" +
+      "ClusterFailoverMetadata\022\007Cluster\022\247\001\n\010Lis" +
+      "tLogs\0221.yandex.cloud.mdb.mysql.v1.ListCl" +
+      "usterLogsRequest\0322.yandex.cloud.mdb.mysq" +
+      "l.v1.ListClusterLogsResponse\"4\202\323\344\223\002.\022,/m" +
+      "anaged-mysql/v1/clusters/{cluster_id}:lo" +
+      "gs\022\254\001\n\nStreamLogs\0223.yandex.cloud.mdb.mys" +
+      "ql.v1.StreamClusterLogsRequest\032*.yandex." +
+      "cloud.mdb.mysql.v1.StreamLogRecord\";\202\323\344\223" +
+      "\0025\0223/managed-mysql/v1/clusters/{cluster_" +
+      "id}:stream_logs0\001\022\277\001\n\016ListOperations\0227.y" +
+      "andex.cloud.mdb.mysql.v1.ListClusterOper" +
+      "ationsRequest\0328.yandex.cloud.mdb.mysql.v" +
+      "1.ListClusterOperationsResponse\":\202\323\344\223\0024\022" +
+      "2/managed-mysql/v1/clusters/{cluster_id}" +
+      "/operations\022\263\001\n\013ListBackups\0224.yandex.clo" +
+      "ud.mdb.mysql.v1.ListClusterBackupsReques" +
+      "t\0325.yandex.cloud.mdb.mysql.v1.ListCluste" +
+      "rBackupsResponse\"7\202\323\344\223\0021\022//managed-mysql" +
+      "/v1/clusters/{cluster_id}/backups\022\253\001\n\tLi" +
+      "stHosts\0222.yandex.cloud.mdb.mysql.v1.List" +
+      "ClusterHostsRequest\0323.yandex.cloud.mdb.m" +
+      "ysql.v1.ListClusterHostsResponse\"5\202\323\344\223\002/" +
+      "\022-/managed-mysql/v1/clusters/{cluster_id" +
+      "}/hosts\022\332\001\n\010AddHosts\0221.yandex.cloud.mdb." +
+      "mysql.v1.AddClusterHostsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"x\202\323\344\223\002>\"9/man" +
+      "aged-mysql/v1/clusters/{cluster_id}/host" +
+      "s:batchCreate:\001*\262\322*0\n\027AddClusterHostsMet" +
+      "adata\022\025google.protobuf.Empty\022\343\001\n\013DeleteH" +
+      "osts\0224.yandex.cloud.mdb.mysql.v1.DeleteC" +
+      "lusterHostsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"{\202\323\344\223\002>\"9/managed-mysql/v1" +
+      "/clusters/{cluster_id}/hosts:batchDelete" +
+      ":\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025goo" +
+      "gle.protobuf.EmptyBd\n\035yandex.cloud.api.m" +
+      "db.mysql.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/mysql/v1;mysql" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -41101,6 +43311,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.UserOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor(),
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_mdb_mysql_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -41143,7 +43354,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -41210,8 +43421,20 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StartClusterFailoverMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
-    internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_descriptor =
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "RescheduleType", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mysql_v1_RescheduleMaintenanceMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "DelayedUntil", });
+    internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_descriptor,
@@ -41223,139 +43446,139 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mysql_v1_LogRecord_MessageEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "PageSize", "PageToken", "AlwaysNextPageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterLogsResponse_descriptor,
         new java.lang.String[] { "Logs", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_StreamLogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_mdb_mysql_v1_StreamLogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StreamLogRecord_descriptor,
         new java.lang.String[] { "Record", "NextRecordToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_StreamClusterLogsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_mdb_mysql_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StreamClusterLogsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ListClusterHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
     internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", });
     internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_DeleteClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mysql_v1_StartClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_mdb_mysql_v1_StartClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StartClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_mysql_v1_StartClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_mdb_mysql_v1_StartClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StartClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_mysql_v1_StopClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_mdb_mysql_v1_StopClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StopClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_mysql_v1_StopClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_mdb_mysql_v1_StopClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_StopClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterRequest_descriptor,
         new java.lang.String[] { "ClusterId", "DestinationFolderId", });
     internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_MoveClusterMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "SourceFolderId", "DestinationFolderId", });
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_UpdateClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_mysql_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_mdb_mysql_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_ConfigSpec_descriptor,
@@ -41385,6 +43608,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.UserOuterClass.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.getDescriptor();
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

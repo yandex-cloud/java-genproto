@@ -325,6 +325,15 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getBucketBytes();
+
+    /**
+     * <pre>
+     * Whether UI Proxy feature is enabled.
+     * </pre>
+     *
+     * <code>bool ui_proxy = 14;</code>
+     */
+    boolean getUiProxy();
   }
   /**
    * <pre>
@@ -353,6 +362,7 @@ public final class ClusterOuterClass {
       zoneId_ = "";
       serviceAccountId_ = "";
       bucket_ = "";
+      uiProxy_ = false;
     }
 
     @java.lang.Override
@@ -479,6 +489,11 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               bucket_ = s;
+              break;
+            }
+            case 112: {
+
+              uiProxy_ = input.readBool();
               break;
             }
             default: {
@@ -1285,6 +1300,19 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int UI_PROXY_FIELD_NUMBER = 14;
+    private boolean uiProxy_;
+    /**
+     * <pre>
+     * Whether UI Proxy feature is enabled.
+     * </pre>
+     *
+     * <code>bool ui_proxy = 14;</code>
+     */
+    public boolean getUiProxy() {
+      return uiProxy_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1340,6 +1368,9 @@ public final class ClusterOuterClass {
       }
       if (!getBucketBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, bucket_);
+      }
+      if (uiProxy_ != false) {
+        output.writeBool(14, uiProxy_);
       }
       unknownFields.writeTo(output);
     }
@@ -1401,6 +1432,10 @@ public final class ClusterOuterClass {
       if (!getBucketBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, bucket_);
       }
+      if (uiProxy_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, uiProxy_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1447,6 +1482,8 @@ public final class ClusterOuterClass {
           .equals(other.getServiceAccountId());
       result = result && getBucket()
           .equals(other.getBucket());
+      result = result && (getUiProxy()
+          == other.getUiProxy());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1492,6 +1529,9 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + BUCKET_FIELD_NUMBER;
       hash = (53 * hash) + getBucket().hashCode();
+      hash = (37 * hash) + UI_PROXY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUiProxy());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1689,6 +1729,8 @@ public final class ClusterOuterClass {
 
         bucket_ = "";
 
+        uiProxy_ = false;
+
         return this;
       }
 
@@ -1747,6 +1789,7 @@ public final class ClusterOuterClass {
         result.zoneId_ = zoneId_;
         result.serviceAccountId_ = serviceAccountId_;
         result.bucket_ = bucket_;
+        result.uiProxy_ = uiProxy_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1863,6 +1906,9 @@ public final class ClusterOuterClass {
         if (!other.getBucket().isEmpty()) {
           bucket_ = other.bucket_;
           onChanged();
+        }
+        if (other.getUiProxy() != false) {
+          setUiProxy(other.getUiProxy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3412,6 +3458,44 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         bucket_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean uiProxy_ ;
+      /**
+       * <pre>
+       * Whether UI Proxy feature is enabled.
+       * </pre>
+       *
+       * <code>bool ui_proxy = 14;</code>
+       */
+      public boolean getUiProxy() {
+        return uiProxy_;
+      }
+      /**
+       * <pre>
+       * Whether UI Proxy feature is enabled.
+       * </pre>
+       *
+       * <code>bool ui_proxy = 14;</code>
+       */
+      public Builder setUiProxy(boolean value) {
+        
+        uiProxy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether UI Proxy feature is enabled.
+       * </pre>
+       *
+       * <code>bool ui_proxy = 14;</code>
+       */
+      public Builder clearUiProxy() {
+        
+        uiProxy_ = false;
         onChanged();
         return this;
       }
@@ -6941,7 +7025,7 @@ public final class ClusterOuterClass {
       "\022\030yandex.cloud.dataproc.v1\032\037google/proto" +
       "buf/timestamp.proto\032%yandex/cloud/datapr" +
       "oc/v1/common.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\221\005\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "ion.proto\"\243\005\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\004" +
       "1-63\022\036\n\013description\030\005 \001(\tB\t\212\3101\0050-256\022G\n\006" +
@@ -6953,28 +7037,29 @@ public final class ClusterOuterClass {
       "2 .yandex.cloud.dataproc.v1.Health\0228\n\006st" +
       "atus\030\n \001(\0162(.yandex.cloud.dataproc.v1.Cl" +
       "uster.Status\022\017\n\007zone_id\030\013 \001(\t\022\032\n\022service" +
-      "_account_id\030\014 \001(\t\022\016\n\006bucket\030\r \001(\t\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"k\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATI" +
-      "NG\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPING" +
-      "\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\"=\n\nMonitor" +
-      "ing\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014" +
-      "\n\004link\030\003 \001(\t\"\227\003\n\014HadoopConfig\022@\n\010service" +
-      "s\030\001 \003(\0162..yandex.cloud.dataproc.v1.Hadoo" +
-      "pConfig.Service\022J\n\nproperties\030\002 \003(\01326.ya" +
-      "ndex.cloud.dataproc.v1.HadoopConfig.Prop" +
-      "ertiesEntry\022\027\n\017ssh_public_keys\030\003 \003(\t\0321\n\017" +
-      "PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"\254\001\n\007Service\022\027\n\023SERVICE_UNSPECIFI" +
-      "ED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN\020\002\022\r\n\tMAPREDUCE\020\003\022" +
-      "\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\tZOOKEEPER\020\006\022\t\n\005HBA" +
-      "SE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLUME\020\t\022\t\n\005SPARK\020\n\022\014\n" +
-      "\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014\"[\n\rClusterConfig\022" +
-      "\022\n\nversion_id\030\001 \001(\t\0226\n\006hadoop\030\002 \001(\0132&.ya" +
-      "ndex.cloud.dataproc.v1.HadoopConfigBe\n\034y" +
-      "andex.cloud.api.dataproc.v1ZEgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/da" +
-      "taproc/v1;dataprocb\006proto3"
+      "_account_id\030\014 \001(\t\022\016\n\006bucket\030\r \001(\t\022\020\n\010ui_" +
+      "proxy\030\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"k\n\006Status\022\022\n\016STATUS_U" +
+      "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
+      "RROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STA" +
+      "RTING\020\006\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
+      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\227\003\n\014Hadoo" +
+      "pConfig\022@\n\010services\030\001 \003(\0162..yandex.cloud" +
+      ".dataproc.v1.HadoopConfig.Service\022J\n\npro" +
+      "perties\030\002 \003(\01326.yandex.cloud.dataproc.v1" +
+      ".HadoopConfig.PropertiesEntry\022\027\n\017ssh_pub" +
+      "lic_keys\030\003 \003(\t\0321\n\017PropertiesEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\007Service\022\027\n" +
+      "\023SERVICE_UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN" +
+      "\020\002\022\r\n\tMAPREDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\t" +
+      "ZOOKEEPER\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLU" +
+      "ME\020\t\022\t\n\005SPARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014" +
+      "\"[\n\rClusterConfig\022\022\n\nversion_id\030\001 \001(\t\0226\n" +
+      "\006hadoop\030\002 \001(\0132&.yandex.cloud.dataproc.v1" +
+      ".HadoopConfigBe\n\034yandex.cloud.api.datapr" +
+      "oc.v1ZEgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/dataproc/v1;dataprocb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6996,7 +7081,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", });
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_fieldAccessorTable = new

@@ -318,6 +318,38 @@ public final class ClusterServiceGrpc {
      return getListHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest,
+      yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> getListUILinksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUILinks",
+      requestType = yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest.class,
+      responseType = yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest,
+      yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> getListUILinksMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> getListUILinksMethod;
+    if ((getListUILinksMethod = ClusterServiceGrpc.getListUILinksMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getListUILinksMethod = ClusterServiceGrpc.getListUILinksMethod) == null) {
+          ClusterServiceGrpc.getListUILinksMethod = getListUILinksMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest, yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.dataproc.v1.ClusterService", "ListUILinks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("ListUILinks"))
+                  .build();
+          }
+        }
+     }
+     return getListUILinksMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -439,6 +471,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getListHostsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * </pre>
+     */
+    public void listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListUILinksMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -504,6 +546,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest,
                 yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsResponse>(
                   this, METHODID_LIST_HOSTS)))
+          .addMethod(
+            getListUILinksMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest,
+                yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse>(
+                  this, METHODID_LIST_UILINKS)))
           .build();
     }
   }
@@ -628,6 +677,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * </pre>
+     */
+    public void listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListUILinksMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -740,6 +800,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsResponse listHosts(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * </pre>
+     */
+    public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListUILinksMethod(), getCallOptions(), request);
     }
   }
 
@@ -863,6 +933,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListHostsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> listUILinks(
+        yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListUILinksMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -874,6 +955,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_STOP = 6;
   private static final int METHODID_LIST_OPERATIONS = 7;
   private static final int METHODID_LIST_HOSTS = 8;
+  private static final int METHODID_LIST_UILINKS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -927,6 +1009,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_HOSTS:
           serviceImpl.listHosts((yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListClusterHostsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_UILINKS:
+          serviceImpl.listUILinks((yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -998,6 +1084,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getStopMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListHostsMethod())
+              .addMethod(getListUILinksMethod())
               .build();
         }
       }

@@ -12777,6 +12777,2832 @@ public final class SubnetServiceOuterClass {
 
   }
 
+  public interface ListUsedAddressesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <code>int64 page_size = 2;</code>
+     */
+    long getPageSize();
+
+    /**
+     * <code>string page_token = 3;</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <code>string filter = 4;</code>
+     */
+    java.lang.String getFilter();
+    /**
+     * <code>string filter = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesRequest}
+   */
+  public  static final class ListUsedAddressesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
+      ListUsedAddressesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListUsedAddressesRequest.newBuilder() to construct.
+    private ListUsedAddressesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListUsedAddressesRequest() {
+      subnetId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListUsedAddressesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.Builder.class);
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <code>int64 page_size = 2;</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <code>string page_token = 3;</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string page_token = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <code>string filter = 4;</code>
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string filter = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubnetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubnetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest) obj;
+
+      boolean result = true;
+      result = result && getSubnetId()
+          .equals(other.getSubnetId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && getFilter()
+          .equals(other.getFilter());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest(this);
+        result.subnetId_ = subnetId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <code>int64 page_size = 2;</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <code>int64 page_size = 2;</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 page_size = 2;</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <code>string page_token = 3;</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string page_token = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string page_token = 3;</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string page_token = 3;</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string page_token = 3;</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <code>string filter = 4;</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string filter = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string filter = 4;</code>
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string filter = 4;</code>
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string filter = 4;</code>
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListUsedAddressesRequest)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListUsedAddressesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListUsedAddressesRequest>() {
+      @java.lang.Override
+      public ListUsedAddressesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListUsedAddressesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListUsedAddressesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListUsedAddressesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListUsedAddressesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> 
+        getAddressesList();
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getAddresses(int index);
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    int getAddressesCount();
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> 
+        getAddressesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder getAddressesOrBuilder(
+        int index);
+
+    /**
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesResponse}
+   */
+  public  static final class ListUsedAddressesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
+      ListUsedAddressesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListUsedAddressesResponse.newBuilder() to construct.
+    private ListUsedAddressesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListUsedAddressesResponse() {
+      addresses_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListUsedAddressesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                addresses_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              addresses_.add(
+                  input.readMessage(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          addresses_ = java.util.Collections.unmodifiableList(addresses_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ADDRESSES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> addresses_;
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> getAddressesList() {
+      return addresses_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> 
+        getAddressesOrBuilderList() {
+      return addresses_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    public int getAddressesCount() {
+      return addresses_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getAddresses(int index) {
+      return addresses_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder getAddressesOrBuilder(
+        int index) {
+      return addresses_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < addresses_.size(); i++) {
+        output.writeMessage(1, addresses_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < addresses_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, addresses_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse) obj;
+
+      boolean result = true;
+      result = result && getAddressesList()
+          .equals(other.getAddressesList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAddressesCount() > 0) {
+        hash = (37 * hash) + ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getAddressesList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListUsedAddressesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAddressesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (addressesBuilder_ == null) {
+          addresses_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          addressesBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (addressesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            addresses_ = java.util.Collections.unmodifiableList(addresses_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.addresses_ = addresses_;
+        } else {
+          result.addresses_ = addressesBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse.getDefaultInstance()) return this;
+        if (addressesBuilder_ == null) {
+          if (!other.addresses_.isEmpty()) {
+            if (addresses_.isEmpty()) {
+              addresses_ = other.addresses_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAddressesIsMutable();
+              addresses_.addAll(other.addresses_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.addresses_.isEmpty()) {
+            if (addressesBuilder_.isEmpty()) {
+              addressesBuilder_.dispose();
+              addressesBuilder_ = null;
+              addresses_ = other.addresses_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              addressesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAddressesFieldBuilder() : null;
+            } else {
+              addressesBuilder_.addAllMessages(other.addresses_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> addresses_ =
+        java.util.Collections.emptyList();
+      private void ensureAddressesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          addresses_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress>(addresses_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> addressesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> getAddressesList() {
+        if (addressesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(addresses_);
+        } else {
+          return addressesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public int getAddressesCount() {
+        if (addressesBuilder_ == null) {
+          return addresses_.size();
+        } else {
+          return addressesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getAddresses(int index) {
+        if (addressesBuilder_ == null) {
+          return addresses_.get(index);
+        } else {
+          return addressesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder setAddresses(
+          int index, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress value) {
+        if (addressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddressesIsMutable();
+          addresses_.set(index, value);
+          onChanged();
+        } else {
+          addressesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder setAddresses(
+          int index, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder builderForValue) {
+        if (addressesBuilder_ == null) {
+          ensureAddressesIsMutable();
+          addresses_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          addressesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder addAddresses(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress value) {
+        if (addressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddressesIsMutable();
+          addresses_.add(value);
+          onChanged();
+        } else {
+          addressesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder addAddresses(
+          int index, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress value) {
+        if (addressesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAddressesIsMutable();
+          addresses_.add(index, value);
+          onChanged();
+        } else {
+          addressesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder addAddresses(
+          yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder builderForValue) {
+        if (addressesBuilder_ == null) {
+          ensureAddressesIsMutable();
+          addresses_.add(builderForValue.build());
+          onChanged();
+        } else {
+          addressesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder addAddresses(
+          int index, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder builderForValue) {
+        if (addressesBuilder_ == null) {
+          ensureAddressesIsMutable();
+          addresses_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          addressesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder addAllAddresses(
+          java.lang.Iterable<? extends yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress> values) {
+        if (addressesBuilder_ == null) {
+          ensureAddressesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, addresses_);
+          onChanged();
+        } else {
+          addressesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder clearAddresses() {
+        if (addressesBuilder_ == null) {
+          addresses_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          addressesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public Builder removeAddresses(int index) {
+        if (addressesBuilder_ == null) {
+          ensureAddressesIsMutable();
+          addresses_.remove(index);
+          onChanged();
+        } else {
+          addressesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder getAddressesBuilder(
+          int index) {
+        return getAddressesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder getAddressesOrBuilder(
+          int index) {
+        if (addressesBuilder_ == null) {
+          return addresses_.get(index);  } else {
+          return addressesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> 
+           getAddressesOrBuilderList() {
+        if (addressesBuilder_ != null) {
+          return addressesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(addresses_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder addAddressesBuilder() {
+        return getAddressesFieldBuilder().addBuilder(
+            yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder addAddressesBuilder(
+          int index) {
+        return getAddressesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.vpc.v1.UsedAddress addresses = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder> 
+           getAddressesBuilderList() {
+        return getAddressesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder> 
+          getAddressesFieldBuilder() {
+        if (addressesBuilder_ == null) {
+          addressesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder>(
+                  addresses_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          addresses_ = null;
+        }
+        return addressesBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListUsedAddressesResponse)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListUsedAddressesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListUsedAddressesResponse>() {
+      @java.lang.Override
+      public ListUsedAddressesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListUsedAddressesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListUsedAddressesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListUsedAddressesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UsedAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.UsedAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     */
+    int getIpVersionValue();
+    /**
+     * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     */
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion();
+
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> 
+        getReferencesList();
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    yandex.cloud.api.reference.ReferenceOuterClass.Reference getReferences(int index);
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    int getReferencesCount();
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> 
+        getReferencesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder getReferencesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.UsedAddress}
+   */
+  public  static final class UsedAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.UsedAddress)
+      UsedAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UsedAddress.newBuilder() to construct.
+    private UsedAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UsedAddress() {
+      address_ = "";
+      ipVersion_ = 0;
+      references_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UsedAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              ipVersion_ = rawValue;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                references_ = new java.util.ArrayList<yandex.cloud.api.reference.ReferenceOuterClass.Reference>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              references_.add(
+                  input.readMessage(yandex.cloud.api.reference.ReferenceOuterClass.Reference.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          references_ = java.util.Collections.unmodifiableList(references_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object address_;
+    /**
+     * <code>string address = 1;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_VERSION_FIELD_NUMBER = 2;
+    private int ipVersion_;
+    /**
+     * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     */
+    public int getIpVersionValue() {
+      return ipVersion_;
+    }
+    /**
+     * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion result = yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.valueOf(ipVersion_);
+      return result == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.UNRECOGNIZED : result;
+    }
+
+    public static final int REFERENCES_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> references_;
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    public java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> getReferencesList() {
+      return references_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> 
+        getReferencesOrBuilderList() {
+      return references_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    public int getReferencesCount() {
+      return references_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    public yandex.cloud.api.reference.ReferenceOuterClass.Reference getReferences(int index) {
+      return references_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+     */
+    public yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder getReferencesOrBuilder(
+        int index) {
+      return references_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (ipVersion_ != yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, ipVersion_);
+      }
+      for (int i = 0; i < references_.size(); i++) {
+        output.writeMessage(3, references_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (ipVersion_ != yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, ipVersion_);
+      }
+      for (int i = 0; i < references_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, references_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress) obj;
+
+      boolean result = true;
+      result = result && getAddress()
+          .equals(other.getAddress());
+      result = result && ipVersion_ == other.ipVersion_;
+      result = result && getReferencesList()
+          .equals(other.getReferencesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + IP_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + ipVersion_;
+      if (getReferencesCount() > 0) {
+        hash = (37 * hash) + REFERENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getReferencesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.UsedAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.UsedAddress)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getReferencesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        address_ = "";
+
+        ipVersion_ = 0;
+
+        if (referencesBuilder_ == null) {
+          references_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          referencesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.address_ = address_;
+        result.ipVersion_ = ipVersion_;
+        if (referencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            references_ = java.util.Collections.unmodifiableList(references_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.references_ = references_;
+        } else {
+          result.references_ = referencesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
+        }
+        if (other.ipVersion_ != 0) {
+          setIpVersionValue(other.getIpVersionValue());
+        }
+        if (referencesBuilder_ == null) {
+          if (!other.references_.isEmpty()) {
+            if (references_.isEmpty()) {
+              references_ = other.references_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureReferencesIsMutable();
+              references_.addAll(other.references_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.references_.isEmpty()) {
+            if (referencesBuilder_.isEmpty()) {
+              referencesBuilder_.dispose();
+              referencesBuilder_ = null;
+              references_ = other.references_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              referencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getReferencesFieldBuilder() : null;
+            } else {
+              referencesBuilder_.addAllMessages(other.references_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int ipVersion_ = 0;
+      /**
+       * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       */
+      public int getIpVersionValue() {
+        return ipVersion_;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       */
+      public Builder setIpVersionValue(int value) {
+        ipVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion getIpVersion() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion result = yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.valueOf(ipVersion_);
+        return result == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       */
+      public Builder setIpVersion(yandex.cloud.api.vpc.v1.SubnetOuterClass.IpVersion value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        ipVersion_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.vpc.v1.IpVersion ip_version = 2;</code>
+       */
+      public Builder clearIpVersion() {
+        
+        ipVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> references_ =
+        java.util.Collections.emptyList();
+      private void ensureReferencesIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          references_ = new java.util.ArrayList<yandex.cloud.api.reference.ReferenceOuterClass.Reference>(references_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.reference.ReferenceOuterClass.Reference, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder, yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> referencesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference> getReferencesList() {
+        if (referencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(references_);
+        } else {
+          return referencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public int getReferencesCount() {
+        if (referencesBuilder_ == null) {
+          return references_.size();
+        } else {
+          return referencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public yandex.cloud.api.reference.ReferenceOuterClass.Reference getReferences(int index) {
+        if (referencesBuilder_ == null) {
+          return references_.get(index);
+        } else {
+          return referencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder setReferences(
+          int index, yandex.cloud.api.reference.ReferenceOuterClass.Reference value) {
+        if (referencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencesIsMutable();
+          references_.set(index, value);
+          onChanged();
+        } else {
+          referencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder setReferences(
+          int index, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder builderForValue) {
+        if (referencesBuilder_ == null) {
+          ensureReferencesIsMutable();
+          references_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          referencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder addReferences(yandex.cloud.api.reference.ReferenceOuterClass.Reference value) {
+        if (referencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencesIsMutable();
+          references_.add(value);
+          onChanged();
+        } else {
+          referencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder addReferences(
+          int index, yandex.cloud.api.reference.ReferenceOuterClass.Reference value) {
+        if (referencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureReferencesIsMutable();
+          references_.add(index, value);
+          onChanged();
+        } else {
+          referencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder addReferences(
+          yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder builderForValue) {
+        if (referencesBuilder_ == null) {
+          ensureReferencesIsMutable();
+          references_.add(builderForValue.build());
+          onChanged();
+        } else {
+          referencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder addReferences(
+          int index, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder builderForValue) {
+        if (referencesBuilder_ == null) {
+          ensureReferencesIsMutable();
+          references_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          referencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder addAllReferences(
+          java.lang.Iterable<? extends yandex.cloud.api.reference.ReferenceOuterClass.Reference> values) {
+        if (referencesBuilder_ == null) {
+          ensureReferencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, references_);
+          onChanged();
+        } else {
+          referencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder clearReferences() {
+        if (referencesBuilder_ == null) {
+          references_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          referencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public Builder removeReferences(int index) {
+        if (referencesBuilder_ == null) {
+          ensureReferencesIsMutable();
+          references_.remove(index);
+          onChanged();
+        } else {
+          referencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder getReferencesBuilder(
+          int index) {
+        return getReferencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder getReferencesOrBuilder(
+          int index) {
+        if (referencesBuilder_ == null) {
+          return references_.get(index);  } else {
+          return referencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> 
+           getReferencesOrBuilderList() {
+        if (referencesBuilder_ != null) {
+          return referencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(references_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder addReferencesBuilder() {
+        return getReferencesFieldBuilder().addBuilder(
+            yandex.cloud.api.reference.ReferenceOuterClass.Reference.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder addReferencesBuilder(
+          int index) {
+        return getReferencesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.reference.ReferenceOuterClass.Reference.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.reference.Reference references = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder> 
+           getReferencesBuilderList() {
+        return getReferencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.reference.ReferenceOuterClass.Reference, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder, yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder> 
+          getReferencesFieldBuilder() {
+        if (referencesBuilder_ == null) {
+          referencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.reference.ReferenceOuterClass.Reference, yandex.cloud.api.reference.ReferenceOuterClass.Reference.Builder, yandex.cloud.api.reference.ReferenceOuterClass.ReferenceOrBuilder>(
+                  references_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          references_ = null;
+        }
+        return referencesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.UsedAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.UsedAddress)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UsedAddress>
+        PARSER = new com.google.protobuf.AbstractParser<UsedAddress>() {
+      @java.lang.Override
+      public UsedAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UsedAddress(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UsedAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UsedAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.UsedAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_descriptor;
   private static final 
@@ -12852,6 +15678,21 @@ public final class SubnetServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_MoveSubnetMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12867,7 +15708,8 @@ public final class SubnetServiceOuterClass {
       "k.proto\032 yandex/cloud/api/operation.prot" +
       "o\032 yandex/cloud/vpc/v1/subnet.proto\032&yan" +
       "dex/cloud/operation/operation.proto\032\035yan" +
-      "dex/cloud/validation.proto\"3\n\020GetSubnetR" +
+      "dex/cloud/validation.proto\032&yandex/cloud" +
+      "/reference/reference.proto\"3\n\020GetSubnetR" +
       "equest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
       "\217\001\n\022ListSubnetsRequest\022\037\n\tfolder_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
@@ -12913,36 +15755,47 @@ public final class SubnetServiceOuterClass {
       "etRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212" +
       "\3101\004<=50\"\'\n\022MoveSubnetMetadata\022\021\n\tsubnet_" +
-      "id\030\001 \001(\t2\242\010\n\rSubnetService\022n\n\003Get\022%.yand" +
-      "ex.cloud.vpc.v1.GetSubnetRequest\032\033.yande" +
-      "x.cloud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/s" +
-      "ubnets/{subnet_id}\022r\n\004List\022\'.yandex.clou" +
-      "d.vpc.v1.ListSubnetsRequest\032(.yandex.clo" +
-      "ud.vpc.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/" +
-      "vpc/v1/subnets\022\223\001\n\006Create\022(.yandex.cloud" +
-      ".vpc.v1.CreateSubnetRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/" +
-      "subnets:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Su" +
-      "bnet\022\237\001\n\006Update\022(.yandex.cloud.vpc.v1.Up" +
-      "dateSubnetRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{s" +
-      "ubnet_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006" +
-      "Subnet\022\253\001\n\006Delete\022(.yandex.cloud.vpc.v1." +
-      "DeleteSubnetRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/" +
-      "{subnet_id}\262\322*-\n\024DeleteSubnetMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\245\001\n\016ListOperations\022" +
-      "0.yandex.cloud.vpc.v1.ListSubnetOperatio" +
-      "nsRequest\0321.yandex.cloud.vpc.v1.ListSubn" +
-      "etOperationsResponse\".\202\323\344\223\002(\022&/vpc/v1/su" +
-      "bnets/{subnet_id}/operations\022\236\001\n\004Move\022&." +
-      "yandex.cloud.vpc.v1.MoveSubnetRequest\032!." +
-      "yandex.cloud.operation.Operation\"K\202\323\344\223\002%" +
-      "\" /vpc/v1/subnets/{subnet_id}:move:\001*\262\322*" +
-      "\034\n\022MoveSubnetMetadata\022\006SubnetBV\n\027yandex." +
-      "cloud.api.vpc.v1Z;github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
-      "roto3"
+      "id\030\001 \001(\t\"j\n\030ListUsedAddressesRequest\022\027\n\t" +
+      "subnet_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003" +
+      "\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"i\n\031" +
+      "ListUsedAddressesResponse\0223\n\taddresses\030\001" +
+      " \003(\0132 .yandex.cloud.vpc.v1.UsedAddress\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\211\001\n\013UsedAddress\022" +
+      "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
+      "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
+      "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
+      "nce2\226\t\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
+      "oud.vpc.v1.GetSubnetRequest\032\033.yandex.clo" +
+      "ud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnet" +
+      "s/{subnet_id}\022r\n\004List\022\'.yandex.cloud.vpc" +
+      ".v1.ListSubnetsRequest\032(.yandex.cloud.vp" +
+      "c.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v" +
+      "1/subnets\022\223\001\n\006Create\022(.yandex.cloud.vpc." +
+      "v1.CreateSubnetRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/subne" +
+      "ts:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Subnet\022" +
+      "\237\001\n\006Update\022(.yandex.cloud.vpc.v1.UpdateS" +
+      "ubnetRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet" +
+      "_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subne" +
+      "t\022\253\001\n\006Delete\022(.yandex.cloud.vpc.v1.Delet" +
+      "eSubnetRequest\032!.yandex.cloud.operation." +
+      "Operation\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subn" +
+      "et_id}\262\322*-\n\024DeleteSubnetMetadata\022\025google" +
+      ".protobuf.Empty\022\245\001\n\016ListOperations\0220.yan" +
+      "dex.cloud.vpc.v1.ListSubnetOperationsReq" +
+      "uest\0321.yandex.cloud.vpc.v1.ListSubnetOpe" +
+      "rationsResponse\".\202\323\344\223\002(\022&/vpc/v1/subnets" +
+      "/{subnet_id}/operations\022\236\001\n\004Move\022&.yande" +
+      "x.cloud.vpc.v1.MoveSubnetRequest\032!.yande" +
+      "x.cloud.operation.Operation\"K\202\323\344\223\002%\" /vp" +
+      "c/v1/subnets/{subnet_id}:move:\001*\262\322*\034\n\022Mo" +
+      "veSubnetMetadata\022\006Subnet\022r\n\021ListUsedAddr" +
+      "esses\022-.yandex.cloud.vpc.v1.ListUsedAddr" +
+      "essesRequest\032..yandex.cloud.vpc.v1.ListU" +
+      "sedAddressesResponseBV\n\027yandex.cloud.api" +
+      ".vpc.v1Z;github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12961,6 +15814,7 @@ public final class SubnetServiceOuterClass {
           yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.reference.ReferenceOuterClass.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13052,6 +15906,24 @@ public final class SubnetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_MoveSubnetMetadata_descriptor,
         new java.lang.String[] { "SubnetId", });
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListUsedAddressesRequest_descriptor,
+        new java.lang.String[] { "SubnetId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListUsedAddressesResponse_descriptor,
+        new java.lang.String[] { "Addresses", "NextPageToken", });
+    internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor,
+        new java.lang.String[] { "Address", "IpVersion", "References", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -13070,6 +15942,7 @@ public final class SubnetServiceOuterClass {
     yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.reference.ReferenceOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
