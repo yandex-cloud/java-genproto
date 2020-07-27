@@ -14452,6 +14452,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The maximum number of instances that can be deleted at the same time.
+     *The value 0 is any number of virtual machines within the allowed values.
      * </pre>
      *
      * <code>int64 max_deleting = 2 [(.yandex.cloud.value) = "0-100"];</code>
@@ -14461,6 +14462,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The maximum number of instances that can be created at the same time.
+     *The value 0 is any number of virtual machines within the allowed values.
      * </pre>
      *
      * <code>int64 max_creating = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -14640,6 +14642,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The maximum number of instances that can be deleted at the same time.
+     *The value 0 is any number of virtual machines within the allowed values.
      * </pre>
      *
      * <code>int64 max_deleting = 2 [(.yandex.cloud.value) = "0-100"];</code>
@@ -14653,6 +14656,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The maximum number of instances that can be created at the same time.
+     *The value 0 is any number of virtual machines within the allowed values.
      * </pre>
      *
      * <code>int64 max_creating = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15154,6 +15158,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be deleted at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_deleting = 2 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15164,6 +15169,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be deleted at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_deleting = 2 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15177,6 +15183,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be deleted at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_deleting = 2 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15192,6 +15199,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be created at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_creating = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15202,6 +15210,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be created at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_creating = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -15215,6 +15224,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The maximum number of instances that can be created at the same time.
+       *The value 0 is any number of virtual machines within the allowed values.
        * </pre>
        *
        * <code>int64 max_creating = 3 [(.yandex.cloud.value) = "0-100"];</code>
