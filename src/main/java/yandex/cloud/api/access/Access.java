@@ -153,7 +153,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getId();
     /**
@@ -168,7 +168,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -184,7 +184,7 @@ public final class Access {
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getType();
     /**
@@ -198,7 +198,7 @@ public final class Access {
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -302,7 +302,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -328,7 +328,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -357,7 +357,7 @@ public final class Access {
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -382,7 +382,7 @@ public final class Access {
      * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
      * </pre>
      *
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -731,7 +731,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -757,7 +757,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -784,7 +784,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setId(
           java.lang.String value) {
@@ -808,7 +808,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearId() {
         
@@ -828,7 +828,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -854,7 +854,7 @@ public final class Access {
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -879,7 +879,7 @@ public final class Access {
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -905,7 +905,7 @@ public final class Access {
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -928,7 +928,7 @@ public final class Access {
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearType() {
         
@@ -947,7 +947,7 @@ public final class Access {
        * For more information, see [Subject to which the role is assigned](/docs/iam/concepts/access-control/#subject).
        * </pre>
        *
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1022,7 +1022,7 @@ public final class Access {
      * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
      * </pre>
      *
-     * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRoleId();
     /**
@@ -1030,7 +1030,7 @@ public final class Access {
      * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
      * </pre>
      *
-     * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRoleIdBytes();
@@ -1161,7 +1161,7 @@ public final class Access {
      * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
      * </pre>
      *
-     * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRoleId() {
       java.lang.Object ref = roleId_;
@@ -1180,7 +1180,7 @@ public final class Access {
      * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
      * </pre>
      *
-     * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getRoleIdBytes() {
@@ -1571,7 +1571,7 @@ public final class Access {
        * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
        * </pre>
        *
-       * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRoleId() {
         java.lang.Object ref = roleId_;
@@ -1590,7 +1590,7 @@ public final class Access {
        * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
        * </pre>
        *
-       * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getRoleIdBytes() {
@@ -1610,7 +1610,7 @@ public final class Access {
        * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
        * </pre>
        *
-       * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRoleId(
           java.lang.String value) {
@@ -1627,7 +1627,7 @@ public final class Access {
        * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
        * </pre>
        *
-       * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRoleId() {
         
@@ -1640,7 +1640,7 @@ public final class Access {
        * ID of the [yandex.cloud.iam.v1.Role] that is assigned to the [subject].
        * </pre>
        *
-       * <code>string role_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string role_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRoleIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1879,7 +1879,7 @@ public final class Access {
      * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getResourceId();
     /**
@@ -1889,7 +1889,7 @@ public final class Access {
      * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -2029,7 +2029,7 @@ public final class Access {
      * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
@@ -2050,7 +2050,7 @@ public final class Access {
      * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
@@ -2475,7 +2475,7 @@ public final class Access {
        * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -2496,7 +2496,7 @@ public final class Access {
        * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -2518,7 +2518,7 @@ public final class Access {
        * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -2537,7 +2537,7 @@ public final class Access {
        * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearResourceId() {
         
@@ -2552,7 +2552,7 @@ public final class Access {
        * For example, use the [yandex.cloud.resourcemanager.v1.CloudService.List] request to get the Cloud resource ID.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3892,7 +3892,7 @@ public final class Access {
      * To get the resource ID, use a corresponding List request.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getResourceId();
     /**
@@ -3901,7 +3901,7 @@ public final class Access {
      * To get the resource ID, use a corresponding List request.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -4050,7 +4050,7 @@ public final class Access {
      * To get the resource ID, use a corresponding List request.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
@@ -4070,7 +4070,7 @@ public final class Access {
      * To get the resource ID, use a corresponding List request.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
@@ -4510,7 +4510,7 @@ public final class Access {
        * To get the resource ID, use a corresponding List request.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -4530,7 +4530,7 @@ public final class Access {
        * To get the resource ID, use a corresponding List request.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -4551,7 +4551,7 @@ public final class Access {
        * To get the resource ID, use a corresponding List request.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -4569,7 +4569,7 @@ public final class Access {
        * To get the resource ID, use a corresponding List request.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearResourceId() {
         
@@ -4583,7 +4583,7 @@ public final class Access {
        * To get the resource ID, use a corresponding List request.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5556,7 +5556,7 @@ public final class Access {
      * ID of the resource for which access bindings are being updated.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getResourceId();
     /**
@@ -5564,7 +5564,7 @@ public final class Access {
      * ID of the resource for which access bindings are being updated.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getResourceIdBytes();
@@ -5574,7 +5574,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> 
         getAccessBindingDeltasList();
@@ -5583,7 +5583,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index);
     /**
@@ -5591,7 +5591,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getAccessBindingDeltasCount();
     /**
@@ -5599,7 +5599,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
         getAccessBindingDeltasOrBuilderList();
@@ -5608,7 +5608,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
         int index);
@@ -5712,7 +5712,7 @@ public final class Access {
      * ID of the resource for which access bindings are being updated.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getResourceId() {
       java.lang.Object ref = resourceId_;
@@ -5731,7 +5731,7 @@ public final class Access {
      * ID of the resource for which access bindings are being updated.
      * </pre>
      *
-     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getResourceIdBytes() {
@@ -5754,7 +5754,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getAccessBindingDeltasList() {
       return accessBindingDeltas_;
@@ -5764,7 +5764,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
         getAccessBindingDeltasOrBuilderList() {
@@ -5775,7 +5775,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getAccessBindingDeltasCount() {
       return accessBindingDeltas_.size();
@@ -5785,7 +5785,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index) {
       return accessBindingDeltas_.get(index);
@@ -5795,7 +5795,7 @@ public final class Access {
      * Updates to access bindings.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
         int index) {
@@ -6170,7 +6170,7 @@ public final class Access {
        * ID of the resource for which access bindings are being updated.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getResourceId() {
         java.lang.Object ref = resourceId_;
@@ -6189,7 +6189,7 @@ public final class Access {
        * ID of the resource for which access bindings are being updated.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getResourceIdBytes() {
@@ -6209,7 +6209,7 @@ public final class Access {
        * ID of the resource for which access bindings are being updated.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceId(
           java.lang.String value) {
@@ -6226,7 +6226,7 @@ public final class Access {
        * ID of the resource for which access bindings are being updated.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearResourceId() {
         
@@ -6239,7 +6239,7 @@ public final class Access {
        * ID of the resource for which access bindings are being updated.
        * </pre>
        *
-       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setResourceIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6270,7 +6270,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta> getAccessBindingDeltasList() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6284,7 +6284,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getAccessBindingDeltasCount() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6298,7 +6298,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta getAccessBindingDeltas(int index) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6312,7 +6312,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
@@ -6333,7 +6333,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6351,7 +6351,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAccessBindingDeltas(yandex.cloud.api.access.Access.AccessBindingDelta value) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6371,7 +6371,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta value) {
@@ -6392,7 +6392,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAccessBindingDeltas(
           yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6410,7 +6410,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAccessBindingDeltas(
           int index, yandex.cloud.api.access.Access.AccessBindingDelta.Builder builderForValue) {
@@ -6428,7 +6428,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllAccessBindingDeltas(
           java.lang.Iterable<? extends yandex.cloud.api.access.Access.AccessBindingDelta> values) {
@@ -6447,7 +6447,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearAccessBindingDeltas() {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6464,7 +6464,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder removeAccessBindingDeltas(int index) {
         if (accessBindingDeltasBuilder_ == null) {
@@ -6481,7 +6481,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder getAccessBindingDeltasBuilder(
           int index) {
@@ -6492,7 +6492,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder getAccessBindingDeltasOrBuilder(
           int index) {
@@ -6506,7 +6506,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.access.Access.AccessBindingDeltaOrBuilder> 
            getAccessBindingDeltasOrBuilderList() {
@@ -6521,7 +6521,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addAccessBindingDeltasBuilder() {
         return getAccessBindingDeltasFieldBuilder().addBuilder(
@@ -6532,7 +6532,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.access.Access.AccessBindingDelta.Builder addAccessBindingDeltasBuilder(
           int index) {
@@ -6544,7 +6544,7 @@ public final class Access {
        * Updates to access bindings.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>repeated .yandex.cloud.access.AccessBindingDelta access_binding_deltas = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.access.Access.AccessBindingDelta.Builder> 
            getAccessBindingDeltasBuilderList() {
@@ -8056,34 +8056,35 @@ public final class Access {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/access/access.proto\022\023yand" +
       "ex.cloud.access\032\035yandex/cloud/validation" +
-      ".proto\"-\n\007Subject\022\024\n\002id\030\001 \001(\tB\010\212\3101\004<=50\022" +
-      "\014\n\004type\030\002 \001(\t\"_\n\rAccessBinding\022\031\n\007role_i" +
-      "d\030\001 \001(\tB\010\212\3101\004<=50\0223\n\007subject\030\002 \001(\0132\034.yan" +
-      "dex.cloud.access.SubjectB\004\350\3071\001\"t\n\031ListAc" +
-      "cessBindingsRequest\022\031\n\013resource_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAcce" +
-      "ssBindingsResponse\022;\n\017access_bindings\030\001 " +
-      "\003(\0132\".yandex.cloud.access.AccessBinding\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"x\n\030SetAccessBin" +
-      "dingsRequest\022\031\n\013resource_id\030\001 \001(\tB\004\350\3071\001\022" +
+      ".proto\"@\n\007Subject\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\033\n\004type\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"c\n\rAcce" +
+      "ssBinding\022\035\n\007role_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\0223\n\007subject\030\002 \001(\0132\034.yandex.cloud.access." +
+      "SubjectB\004\350\3071\001\"|\n\031ListAccessBindingsReque" +
+      "st\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBinding" +
+      "sResponse\022;\n\017access_bindings\030\001 \003(\0132\".yan" +
+      "dex.cloud.access.AccessBinding\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\200\001\n\030SetAccessBindingsReq" +
+      "uest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "A\n\017access_bindings\030\002 \003(\0132\".yandex.cloud." +
       "access.AccessBindingB\004\350\3071\001\"0\n\031SetAccessB" +
-      "indingsMetadata\022\023\n\013resource_id\030\001 \001(\t\"\206\001\n" +
-      "\033UpdateAccessBindingsRequest\022\031\n\013resource" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022L\n\025access_binding_deltas" +
-      "\030\002 \003(\0132\'.yandex.cloud.access.AccessBindi" +
-      "ngDeltaB\004\350\3071\001\"3\n\034UpdateAccessBindingsMet" +
-      "adata\022\023\n\013resource_id\030\001 \001(\t\"\226\001\n\022AccessBin" +
-      "dingDelta\022>\n\006action\030\001 \001(\0162(.yandex.cloud" +
-      ".access.AccessBindingActionB\004\350\3071\001\022@\n\016acc" +
-      "ess_binding\030\002 \001(\0132\".yandex.cloud.access." +
-      "AccessBindingB\004\350\3071\001*Q\n\023AccessBindingActi" +
-      "on\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED\020" +
-      "\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud.a" +
-      "pi.accessZ>github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/access;accessb\006proto" +
-      "3"
+      "indingsMetadata\022\023\n\013resource_id\030\001 \001(\t\"\224\001\n" +
+      "\033UpdateAccessBindingsRequest\022!\n\013resource" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access_bindin" +
+      "g_deltas\030\002 \003(\0132\'.yandex.cloud.access.Acc" +
+      "essBindingDeltaB\n\202\3101\002>0\350\3071\001\"3\n\034UpdateAcc" +
+      "essBindingsMetadata\022\023\n\013resource_id\030\001 \001(\t" +
+      "\"\226\001\n\022AccessBindingDelta\022>\n\006action\030\001 \001(\0162" +
+      "(.yandex.cloud.access.AccessBindingActio" +
+      "nB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\".yandex" +
+      ".cloud.access.AccessBindingB\004\350\3071\001*Q\n\023Acc" +
+      "essBindingAction\022%\n!ACCESS_BINDING_ACTIO" +
+      "N_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027" +
+      "yandex.cloud.api.accessZ>github.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/access" +
+      ";accessb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8156,6 +8157,7 @@ public final class Access {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

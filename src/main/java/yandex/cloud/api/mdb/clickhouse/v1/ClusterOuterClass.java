@@ -5310,6 +5310,19 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.Access access = 5;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    boolean hasCloudStorage();
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getCloudStorage();
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ClusterConfig}
@@ -5405,6 +5418,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(access_);
                 access_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder subBuilder = null;
+              if (cloudStorage_ != null) {
+                subBuilder = cloudStorage_.toBuilder();
+              }
+              cloudStorage_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cloudStorage_);
+                cloudStorage_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7203,6 +7229,27 @@ public final class ClusterOuterClass {
       return getAccess();
     }
 
+    public static final int CLOUD_STORAGE_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage cloudStorage_;
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    public boolean hasCloudStorage() {
+      return cloudStorage_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getCloudStorage() {
+      return cloudStorage_ == null ? yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.getDefaultInstance() : cloudStorage_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder() {
+      return getCloudStorage();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7232,6 +7279,9 @@ public final class ClusterOuterClass {
       if (access_ != null) {
         output.writeMessage(5, getAccess());
       }
+      if (cloudStorage_ != null) {
+        output.writeMessage(6, getCloudStorage());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7259,6 +7309,10 @@ public final class ClusterOuterClass {
       if (access_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getAccess());
+      }
+      if (cloudStorage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCloudStorage());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7298,6 +7352,11 @@ public final class ClusterOuterClass {
         result = result && getAccess()
             .equals(other.getAccess());
       }
+      result = result && (hasCloudStorage() == other.hasCloudStorage());
+      if (hasCloudStorage()) {
+        result = result && getCloudStorage()
+            .equals(other.getCloudStorage());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7326,6 +7385,10 @@ public final class ClusterOuterClass {
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
+      }
+      if (hasCloudStorage()) {
+        hash = (37 * hash) + CLOUD_STORAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getCloudStorage().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7486,6 +7549,12 @@ public final class ClusterOuterClass {
           access_ = null;
           accessBuilder_ = null;
         }
+        if (cloudStorageBuilder_ == null) {
+          cloudStorage_ = null;
+        } else {
+          cloudStorage_ = null;
+          cloudStorageBuilder_ = null;
+        }
         return this;
       }
 
@@ -7532,6 +7601,11 @@ public final class ClusterOuterClass {
           result.access_ = access_;
         } else {
           result.access_ = accessBuilder_.build();
+        }
+        if (cloudStorageBuilder_ == null) {
+          result.cloudStorage_ = cloudStorage_;
+        } else {
+          result.cloudStorage_ = cloudStorageBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7596,6 +7670,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
+        }
+        if (other.hasCloudStorage()) {
+          mergeCloudStorage(other.getCloudStorage());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8325,6 +8402,123 @@ public final class ClusterOuterClass {
           access_ = null;
         }
         return accessBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage cloudStorage_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder> cloudStorageBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public boolean hasCloudStorage() {
+        return cloudStorageBuilder_ != null || cloudStorage_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getCloudStorage() {
+        if (cloudStorageBuilder_ == null) {
+          return cloudStorage_ == null ? yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.getDefaultInstance() : cloudStorage_;
+        } else {
+          return cloudStorageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public Builder setCloudStorage(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage value) {
+        if (cloudStorageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cloudStorage_ = value;
+          onChanged();
+        } else {
+          cloudStorageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public Builder setCloudStorage(
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder builderForValue) {
+        if (cloudStorageBuilder_ == null) {
+          cloudStorage_ = builderForValue.build();
+          onChanged();
+        } else {
+          cloudStorageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public Builder mergeCloudStorage(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage value) {
+        if (cloudStorageBuilder_ == null) {
+          if (cloudStorage_ != null) {
+            cloudStorage_ =
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.newBuilder(cloudStorage_).mergeFrom(value).buildPartial();
+          } else {
+            cloudStorage_ = value;
+          }
+          onChanged();
+        } else {
+          cloudStorageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public Builder clearCloudStorage() {
+        if (cloudStorageBuilder_ == null) {
+          cloudStorage_ = null;
+          onChanged();
+        } else {
+          cloudStorage_ = null;
+          cloudStorageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder getCloudStorageBuilder() {
+        
+        onChanged();
+        return getCloudStorageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder() {
+        if (cloudStorageBuilder_ != null) {
+          return cloudStorageBuilder_.getMessageOrBuilder();
+        } else {
+          return cloudStorage_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.getDefaultInstance() : cloudStorage_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder> 
+          getCloudStorageFieldBuilder() {
+        if (cloudStorageBuilder_ == null) {
+          cloudStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder>(
+                  getCloudStorage(),
+                  getParentForChildren(),
+                  isClean());
+          cloudStorage_ = null;
+        }
+        return cloudStorageBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17630,6 +17824,503 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface CloudStorageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.CloudStorage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether to use Yandex Object Storage for storing ClickHouse data.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CloudStorage}
+   */
+  public  static final class CloudStorage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.CloudStorage)
+      CloudStorageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CloudStorage.newBuilder() to construct.
+    private CloudStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CloudStorage() {
+      enabled_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CloudStorage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Whether to use Yandex Object Storage for storing ClickHouse data.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage other = (yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage) obj;
+
+      boolean result = true;
+      result = result && (getEnabled()
+          == other.getEnabled());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CloudStorage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.CloudStorage)
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.class, yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage build() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage buildPartial() {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage result = new yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage) {
+          return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage other) {
+        if (other == yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Whether to use Yandex Object Storage for storing ClickHouse data.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Whether to use Yandex Object Storage for storing ClickHouse data.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to use Yandex Object Storage for storing ClickHouse data.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.CloudStorage)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.CloudStorage)
+    private static final yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage();
+    }
+
+    public static yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CloudStorage>
+        PARSER = new com.google.protobuf.AbstractParser<CloudStorage>() {
+      @java.lang.Override
+      public CloudStorage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CloudStorage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CloudStorage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CloudStorage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor;
   private static final 
@@ -17700,6 +18391,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_Access_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17743,7 +18439,7 @@ public final class ClusterOuterClass {
       "\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022" +
       "\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007" +
       "\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
-      "ion\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\213\004\n\rClusterConfi" +
+      "ion\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\320\004\n\rClusterConfi" +
       "g\022\017\n\007version\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328" +
       ".yandex.cloud.mdb.clickhouse.v1.ClusterC" +
       "onfig.Clickhouse\022J\n\tzookeeper\030\003 \001(\01327.ya" +
@@ -17751,50 +18447,52 @@ public final class ClusterOuterClass {
       "ig.Zookeeper\0223\n\023backup_window_start\030\004 \001(" +
       "\0132\026.google.type.TimeOfDay\0226\n\006access\030\005 \001(" +
       "\0132&.yandex.cloud.mdb.clickhouse.v1.Acces" +
-      "s\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfigSet\022<\n\tresources\030\002 \001(\0132).yandex" +
-      ".cloud.mdb.clickhouse.v1.Resources\032I\n\tZo" +
-      "okeeper\022<\n\tresources\030\001 \001(\0132).yandex.clou" +
-      "d.mdb.clickhouse.v1.Resources\"f\n\005Shard\022\014" +
-      "\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006conf" +
-      "ig\030\003 \001(\0132+.yandex.cloud.mdb.clickhouse.v" +
-      "1.ShardConfig\"X\n\nShardGroup\022\014\n\004name\030\001 \001(" +
-      "\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013description\030\003 \001" +
-      "(\t\022\023\n\013shard_names\030\004 \003(\t\"\237\002\n\013ShardConfig\022" +
-      "J\n\nclickhouse\030\001 \001(\01326.yandex.cloud.mdb.c" +
-      "lickhouse.v1.ShardConfig.Clickhouse\032\303\001\n\n" +
-      "Clickhouse\022J\n\006config\030\001 \001(\0132:.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "figSet\022<\n\tresources\030\002 \001(\0132).yandex.cloud" +
-      ".mdb.clickhouse.v1.Resources\022+\n\006weight\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\"\340\003\n\004Ho" +
-      "st\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007" +
-      "zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex.clo" +
-      "ud.mdb.clickhouse.v1.Host.Type\022<\n\tresour" +
-      "ces\030\005 \001(\0132).yandex.cloud.mdb.clickhouse." +
-      "v1.Resources\022;\n\006health\030\006 \001(\0162+.yandex.cl" +
-      "oud.mdb.clickhouse.v1.Host.Health\0229\n\010ser" +
-      "vices\030\007 \003(\0132\'.yandex.cloud.mdb.clickhous" +
-      "e.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assig" +
-      "n_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n" +
-      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUS" +
-      "E\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020" +
-      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n" +
-      "\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud.md" +
-      "b.clickhouse.v1.Service.Type\022>\n\006health\030\002" +
-      " \001(\0162..yandex.cloud.mdb.clickhouse.v1.Se" +
-      "rvice.Health\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
-      "\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Hea" +
-      "lth\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n" +
-      "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
-      "\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"" +
-      "Q\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030" +
-      "\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001" +
-      "(\010Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
-      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
-      "\006proto3"
+      "s\022C\n\rcloud_storage\030\006 \001(\0132,.yandex.cloud." +
+      "mdb.clickhouse.v1.CloudStorage\032\226\001\n\nClick" +
+      "house\022J\n\006config\030\001 \001(\0132:.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfigSe" +
+      "t\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb." +
+      "clickhouse.v1.Resources\032I\n\tZookeeper\022<\n\t" +
+      "resources\030\001 \001(\0132).yandex.cloud.mdb.click" +
+      "house.v1.Resources\"f\n\005Shard\022\014\n\004name\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+." +
+      "yandex.cloud.mdb.clickhouse.v1.ShardConf" +
+      "ig\"X\n\nShardGroup\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
+      "r_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013shard" +
+      "_names\030\004 \003(\t\"\237\002\n\013ShardConfig\022J\n\nclickhou" +
+      "se\030\001 \001(\01326.yandex.cloud.mdb.clickhouse.v" +
+      "1.ShardConfig.Clickhouse\032\303\001\n\nClickhouse\022" +
+      "J\n\006config\030\001 \001(\0132:.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfigSet\022<\n\tr" +
+      "esources\030\002 \001(\0132).yandex.cloud.mdb.clickh" +
+      "ouse.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\"\340\003\n\004Host\022\014\n\004name\030" +
+      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001" +
+      "(\t\0227\n\004type\030\004 \001(\0162).yandex.cloud.mdb.clic" +
+      "khouse.v1.Host.Type\022<\n\tresources\030\005 \001(\0132)" +
+      ".yandex.cloud.mdb.clickhouse.v1.Resource" +
+      "s\022;\n\006health\030\006 \001(\0162+.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.Host.Health\0229\n\010services\030\007 \003(\013" +
+      "2\'.yandex.cloud.mdb.clickhouse.v1.Servic" +
+      "e\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_ip" +
+      "\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOK" +
+      "EEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020" +
+      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service\022:\n" +
+      "\004type\030\001 \001(\0162,.yandex.cloud.mdb.clickhous" +
+      "e.v1.Service.Type\022>\n\006health\030\002 \001(\0162..yand" +
+      "ex.cloud.mdb.clickhouse.v1.Service.Healt" +
+      "h\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICK" +
+      "HOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007UNKN" +
+      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
+      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
+      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"Q\n\006Access\022\021" +
+      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007me" +
+      "trika\030\003 \001(\010\022\022\n\nserverless\030\004 \001(\010\"\037\n\014Cloud" +
+      "Storage\022\017\n\007enabled\030\001 \001(\010Bs\n\"yandex.cloud" +
+      ".api.mdb.clickhouse.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
+      "ckhouse/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17836,7 +18534,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", });
+        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_fieldAccessorTable = new
@@ -17897,6 +18595,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Access_descriptor,
         new java.lang.String[] { "DataLens", "WebSql", "Metrika", "Serverless", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor,
+        new java.lang.String[] { "Enabled", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();

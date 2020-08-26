@@ -9639,6 +9639,483 @@ public final class ManagerService {
 
   }
 
+  public interface LivyInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.LivyInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool alive = 1;</code>
+     */
+    boolean getAlive();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.manager.v1.LivyInfo}
+   */
+  public  static final class LivyInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.LivyInfo)
+      LivyInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LivyInfo.newBuilder() to construct.
+    private LivyInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LivyInfo() {
+      alive_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LivyInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              alive_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder.class);
+    }
+
+    public static final int ALIVE_FIELD_NUMBER = 1;
+    private boolean alive_;
+    /**
+     * <code>bool alive = 1;</code>
+     */
+    public boolean getAlive() {
+      return alive_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (alive_ != false) {
+        output.writeBool(1, alive_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (alive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, alive_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo other = (yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo) obj;
+
+      boolean result = true;
+      result = result && (getAlive()
+          == other.getAlive());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ALIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAlive());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.manager.v1.LivyInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.manager.v1.LivyInfo)
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.class, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        alive_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo build() {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo buildPartial() {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo result = new yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo(this);
+        result.alive_ = alive_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo) {
+          return mergeFrom((yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo other) {
+        if (other == yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance()) return this;
+        if (other.getAlive() != false) {
+          setAlive(other.getAlive());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean alive_ ;
+      /**
+       * <code>bool alive = 1;</code>
+       */
+      public boolean getAlive() {
+        return alive_;
+      }
+      /**
+       * <code>bool alive = 1;</code>
+       */
+      public Builder setAlive(boolean value) {
+        
+        alive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool alive = 1;</code>
+       */
+      public Builder clearAlive() {
+        
+        alive_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.manager.v1.LivyInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.manager.v1.LivyInfo)
+    private static final yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo();
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LivyInfo>
+        PARSER = new com.google.protobuf.AbstractParser<LivyInfo>() {
+      @java.lang.Override
+      public LivyInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LivyInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LivyInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LivyInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface InfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.Info)
       com.google.protobuf.MessageOrBuilder {
@@ -9731,6 +10208,19 @@ public final class ManagerService {
      * <code>int64 report_count = 7;</code>
      */
     long getReportCount();
+
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    boolean hasLivy();
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy();
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder getLivyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.Info}
@@ -9853,6 +10343,19 @@ public final class ManagerService {
             case 56: {
 
               reportCount_ = input.readInt64();
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder subBuilder = null;
+              if (livy_ != null) {
+                subBuilder = livy_.toBuilder();
+              }
+              livy_ = input.readMessage(yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(livy_);
+                livy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -10028,6 +10531,27 @@ public final class ManagerService {
       return reportCount_;
     }
 
+    public static final int LIVY_FIELD_NUMBER = 8;
+    private yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo livy_;
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    public boolean hasLivy() {
+      return livy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy() {
+      return livy_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance() : livy_;
+    }
+    /**
+     * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+     */
+    public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder getLivyOrBuilder() {
+      return getLivy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10062,6 +10586,9 @@ public final class ManagerService {
       }
       if (reportCount_ != 0L) {
         output.writeInt64(7, reportCount_);
+      }
+      if (livy_ != null) {
+        output.writeMessage(8, getLivy());
       }
       unknownFields.writeTo(output);
     }
@@ -10099,6 +10626,10 @@ public final class ManagerService {
       if (reportCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(7, reportCount_);
+      }
+      if (livy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLivy());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10148,6 +10679,11 @@ public final class ManagerService {
       }
       result = result && (getReportCount()
           == other.getReportCount());
+      result = result && (hasLivy() == other.hasLivy());
+      if (hasLivy()) {
+        result = result && getLivy()
+            .equals(other.getLivy());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10186,6 +10722,10 @@ public final class ManagerService {
       hash = (37 * hash) + REPORT_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getReportCount());
+      if (hasLivy()) {
+        hash = (37 * hash) + LIVY_FIELD_NUMBER;
+        hash = (53 * hash) + getLivy().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10357,6 +10897,12 @@ public final class ManagerService {
         }
         reportCount_ = 0L;
 
+        if (livyBuilder_ == null) {
+          livy_ = null;
+        } else {
+          livy_ = null;
+          livyBuilder_ = null;
+        }
         return this;
       }
 
@@ -10414,6 +10960,11 @@ public final class ManagerService {
           result.oozie_ = oozieBuilder_.build();
         }
         result.reportCount_ = reportCount_;
+        if (livyBuilder_ == null) {
+          result.livy_ = livy_;
+        } else {
+          result.livy_ = livyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -10482,6 +11033,9 @@ public final class ManagerService {
         }
         if (other.getReportCount() != 0L) {
           setReportCount(other.getReportCount());
+        }
+        if (other.hasLivy()) {
+          mergeLivy(other.getLivy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11256,6 +11810,123 @@ public final class ManagerService {
         reportCount_ = 0L;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo livy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder> livyBuilder_;
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public boolean hasLivy() {
+        return livyBuilder_ != null || livy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo getLivy() {
+        if (livyBuilder_ == null) {
+          return livy_ == null ? yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance() : livy_;
+        } else {
+          return livyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public Builder setLivy(yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo value) {
+        if (livyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          livy_ = value;
+          onChanged();
+        } else {
+          livyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public Builder setLivy(
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder builderForValue) {
+        if (livyBuilder_ == null) {
+          livy_ = builderForValue.build();
+          onChanged();
+        } else {
+          livyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public Builder mergeLivy(yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo value) {
+        if (livyBuilder_ == null) {
+          if (livy_ != null) {
+            livy_ =
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.newBuilder(livy_).mergeFrom(value).buildPartial();
+          } else {
+            livy_ = value;
+          }
+          onChanged();
+        } else {
+          livyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public Builder clearLivy() {
+        if (livyBuilder_ == null) {
+          livy_ = null;
+          onChanged();
+        } else {
+          livy_ = null;
+          livyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder getLivyBuilder() {
+        
+        onChanged();
+        return getLivyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      public yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder getLivyOrBuilder() {
+        if (livyBuilder_ != null) {
+          return livyBuilder_.getMessageOrBuilder();
+        } else {
+          return livy_ == null ?
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.getDefaultInstance() : livy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.dataproc.manager.v1.LivyInfo livy = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder> 
+          getLivyFieldBuilder() {
+        if (livyBuilder_ == null) {
+          livyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfo.Builder, yandex.cloud.api.dataproc.manager.v1.ManagerService.LivyInfoOrBuilder>(
+                  getLivy(),
+                  getParentForChildren(),
+                  isClean());
+          livy_ = null;
+        }
+        return livyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13040,6 +13711,11 @@ public final class ManagerService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dataproc_manager_v1_OozieInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13101,30 +13777,32 @@ public final class ManagerService {
       "des\030\002 \003(\0132..yandex.cloud.dataproc.manage" +
       "r.v1.YarnNodeInfo\022$\n\034requested_decommiss" +
       "ion_hosts\030\003 \003(\t\"\036\n\rZookeeperInfo\022\r\n\005aliv" +
-      "e\030\001 \001(\010\"\032\n\tOozieInfo\022\r\n\005alive\030\001 \001(\010\"\206\003\n\004" +
-      "Info\0228\n\004hdfs\030\001 \001(\0132*.yandex.cloud.datapr" +
-      "oc.manager.v1.HDFSInfo\0228\n\004yarn\030\002 \001(\0132*.y" +
-      "andex.cloud.dataproc.manager.v1.YarnInfo" +
-      "\0228\n\004hive\030\003 \001(\0132*.yandex.cloud.dataproc.m" +
-      "anager.v1.HiveInfo\022B\n\tzookeeper\030\004 \001(\0132/." +
-      "yandex.cloud.dataproc.manager.v1.Zookeep" +
-      "erInfo\022:\n\005hbase\030\005 \001(\0132+.yandex.cloud.dat" +
-      "aproc.manager.v1.HbaseInfo\022:\n\005oozie\030\006 \001(" +
-      "\0132+.yandex.cloud.dataproc.manager.v1.Ooz" +
-      "ieInfo\022\024\n\014report_count\030\007 \001(\003\"m\n\rReportRe" +
-      "quest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revision\030" +
-      "\002 \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud.datap" +
-      "roc.manager.v1.Info\"s\n\013ReportReply\022\034\n\024de" +
-      "commission_timeout\030\001 \001(\003\022\"\n\032yarn_hosts_t" +
-      "o_decommission\030\002 \003(\t\022\"\n\032hdfs_hosts_to_de" +
-      "commission\030\003 \003(\t2\204\001\n\026DataprocManagerServ" +
-      "ice\022j\n\006Report\022/.yandex.cloud.dataproc.ma" +
-      "nager.v1.ReportRequest\032-.yandex.cloud.da" +
-      "taproc.manager.v1.ReportReply\"\000B}\n$yande" +
-      "x.cloud.api.dataproc.manager.v1ZUgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/dataproc/manager/v1;dataproc_managerb\006" +
-      "proto3"
+      "e\030\001 \001(\010\"\032\n\tOozieInfo\022\r\n\005alive\030\001 \001(\010\"\031\n\010L" +
+      "ivyInfo\022\r\n\005alive\030\001 \001(\010\"\300\003\n\004Info\0228\n\004hdfs\030" +
+      "\001 \001(\0132*.yandex.cloud.dataproc.manager.v1" +
+      ".HDFSInfo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud.d" +
+      "ataproc.manager.v1.YarnInfo\0228\n\004hive\030\003 \001(" +
+      "\0132*.yandex.cloud.dataproc.manager.v1.Hiv" +
+      "eInfo\022B\n\tzookeeper\030\004 \001(\0132/.yandex.cloud." +
+      "dataproc.manager.v1.ZookeeperInfo\022:\n\005hba" +
+      "se\030\005 \001(\0132+.yandex.cloud.dataproc.manager" +
+      ".v1.HbaseInfo\022:\n\005oozie\030\006 \001(\0132+.yandex.cl" +
+      "oud.dataproc.manager.v1.OozieInfo\022\024\n\014rep" +
+      "ort_count\030\007 \001(\003\0228\n\004livy\030\010 \001(\0132*.yandex.c" +
+      "loud.dataproc.manager.v1.LivyInfo\"m\n\rRep" +
+      "ortRequest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revi" +
+      "sion\030\002 \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud." +
+      "dataproc.manager.v1.Info\"s\n\013ReportReply\022" +
+      "\034\n\024decommission_timeout\030\001 \001(\003\022\"\n\032yarn_ho" +
+      "sts_to_decommission\030\002 \003(\t\022\"\n\032hdfs_hosts_" +
+      "to_decommission\030\003 \003(\t2\204\001\n\026DataprocManage" +
+      "rService\022j\n\006Report\022/.yandex.cloud.datapr" +
+      "oc.manager.v1.ReportRequest\032-.yandex.clo" +
+      "ud.dataproc.manager.v1.ReportReply\"\000B}\n$" +
+      "yandex.cloud.api.dataproc.manager.v1ZUgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/dataproc/manager/v1;dataproc_mana" +
+      "gerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13192,20 +13870,26 @@ public final class ManagerService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_OozieInfo_descriptor,
         new java.lang.String[] { "Alive", });
-    internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor =
+    internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_manager_v1_LivyInfo_descriptor,
+        new java.lang.String[] { "Alive", });
+    internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_dataproc_manager_v1_Info_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_Info_descriptor,
-        new java.lang.String[] { "Hdfs", "Yarn", "Hive", "Zookeeper", "Hbase", "Oozie", "ReportCount", });
+        new java.lang.String[] { "Hdfs", "Yarn", "Hive", "Zookeeper", "Hbase", "Oozie", "ReportCount", "Livy", });
     internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_descriptor,
         new java.lang.String[] { "Cid", "TopologyRevision", "Info", });
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor,
