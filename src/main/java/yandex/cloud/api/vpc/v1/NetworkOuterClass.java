@@ -170,6 +170,24 @@ public final class NetworkOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * ID of default security group for network.
+     * </pre>
+     *
+     * <code>string default_security_group_id = 7;</code>
+     */
+    java.lang.String getDefaultSecurityGroupId();
+    /**
+     * <pre>
+     * ID of default security group for network.
+     * </pre>
+     *
+     * <code>string default_security_group_id = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getDefaultSecurityGroupIdBytes();
   }
   /**
    * <pre>
@@ -192,6 +210,7 @@ public final class NetworkOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
+      defaultSecurityGroupId_ = "";
     }
 
     @java.lang.Override
@@ -266,6 +285,12 @@ public final class NetworkOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultSecurityGroupId_ = s;
               break;
             }
             default: {
@@ -608,6 +633,48 @@ public final class NetworkOuterClass {
       return map.get(key);
     }
 
+    public static final int DEFAULT_SECURITY_GROUP_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object defaultSecurityGroupId_;
+    /**
+     * <pre>
+     * ID of default security group for network.
+     * </pre>
+     *
+     * <code>string default_security_group_id = 7;</code>
+     */
+    public java.lang.String getDefaultSecurityGroupId() {
+      java.lang.Object ref = defaultSecurityGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultSecurityGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of default security group for network.
+     * </pre>
+     *
+     * <code>string default_security_group_id = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDefaultSecurityGroupIdBytes() {
+      java.lang.Object ref = defaultSecurityGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultSecurityGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -643,6 +710,9 @@ public final class NetworkOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
+      if (!getDefaultSecurityGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, defaultSecurityGroupId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -678,6 +748,9 @@ public final class NetworkOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
+      if (!getDefaultSecurityGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, defaultSecurityGroupId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -709,6 +782,8 @@ public final class NetworkOuterClass {
           .equals(other.getDescription());
       result = result && internalGetLabels().equals(
           other.internalGetLabels());
+      result = result && getDefaultSecurityGroupId()
+          .equals(other.getDefaultSecurityGroupId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -736,6 +811,8 @@ public final class NetworkOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + DEFAULT_SECURITY_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultSecurityGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -910,6 +987,8 @@ public final class NetworkOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        defaultSecurityGroupId_ = "";
+
         return this;
       }
 
@@ -949,6 +1028,7 @@ public final class NetworkOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.defaultSecurityGroupId_ = defaultSecurityGroupId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1019,6 +1099,10 @@ public final class NetworkOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getDefaultSecurityGroupId().isEmpty()) {
+          defaultSecurityGroupId_ = other.defaultSecurityGroupId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1713,6 +1797,95 @@ public final class NetworkOuterClass {
             .putAll(values);
         return this;
       }
+
+      private java.lang.Object defaultSecurityGroupId_ = "";
+      /**
+       * <pre>
+       * ID of default security group for network.
+       * </pre>
+       *
+       * <code>string default_security_group_id = 7;</code>
+       */
+      public java.lang.String getDefaultSecurityGroupId() {
+        java.lang.Object ref = defaultSecurityGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultSecurityGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of default security group for network.
+       * </pre>
+       *
+       * <code>string default_security_group_id = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDefaultSecurityGroupIdBytes() {
+        java.lang.Object ref = defaultSecurityGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultSecurityGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of default security group for network.
+       * </pre>
+       *
+       * <code>string default_security_group_id = 7;</code>
+       */
+      public Builder setDefaultSecurityGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultSecurityGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of default security group for network.
+       * </pre>
+       *
+       * <code>string default_security_group_id = 7;</code>
+       */
+      public Builder clearDefaultSecurityGroupId() {
+        
+        defaultSecurityGroupId_ = getDefaultInstance().getDefaultSecurityGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of default security group for network.
+       * </pre>
+       *
+       * <code>string default_security_group_id = 7;</code>
+       */
+      public Builder setDefaultSecurityGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultSecurityGroupId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1787,15 +1960,16 @@ public final class NetworkOuterClass {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/vpc/v1/network.proto\022\023yan" +
       "dex.cloud.vpc.v1\032\037google/protobuf/timest" +
-      "amp.proto\"\344\001\n\007Network\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "amp.proto\"\207\002\n\007Network\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013de" +
       "scription\030\005 \001(\t\0228\n\006labels\030\006 \003(\0132(.yandex" +
-      ".cloud.vpc.v1.Network.LabelsEntry\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "BV\n\027yandex.cloud.api.vpc.v1Z;github.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/vp" +
-      "c/v1;vpcb\006proto3"
+      ".cloud.vpc.v1.Network.LabelsEntry\022!\n\031def" +
+      "ault_security_group_id\030\007 \001(\t\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BV\n\027y" +
+      "andex.cloud.api.vpc.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/vpc/v1;" +
+      "vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1815,7 +1989,7 @@ public final class NetworkOuterClass {
     internal_static_yandex_cloud_vpc_v1_Network_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_Network_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "DefaultSecurityGroupId", });
     internal_static_yandex_cloud_vpc_v1_Network_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_Network_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_Network_LabelsEntry_fieldAccessorTable = new

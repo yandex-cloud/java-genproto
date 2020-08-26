@@ -1044,7 +1044,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongocfg and 2 mongos hosts
+     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -1517,7 +1517,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongocfg and 2 mongos hosts
+     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -1800,7 +1800,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongocfg and 2 mongos hosts
+     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */
@@ -2082,7 +2082,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Enables sharding for the cluster: creates 3 mongocfg and 2 mongos hosts
+     * Enables sharding for the cluster: creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
      * </pre>
      */

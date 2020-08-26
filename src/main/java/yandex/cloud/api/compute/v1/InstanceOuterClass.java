@@ -11867,6 +11867,50 @@ public final class InstanceOuterClass {
      */
     com.google.protobuf.ByteString
         getPlacementGroupIdBytes();
+
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> 
+        getHostAffinityRulesList();
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getHostAffinityRules(int index);
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    int getHostAffinityRulesCount();
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder> 
+        getHostAffinityRulesOrBuilderList();
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder getHostAffinityRulesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.PlacementPolicy}
@@ -11882,6 +11926,7 @@ public final class InstanceOuterClass {
     }
     private PlacementPolicy() {
       placementGroupId_ = "";
+      hostAffinityRules_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -11914,6 +11959,15 @@ public final class InstanceOuterClass {
               placementGroupId_ = s;
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostAffinityRules_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostAffinityRules_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11929,6 +11983,9 @@ public final class InstanceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostAffinityRules_ = java.util.Collections.unmodifiableList(hostAffinityRules_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -11946,6 +12003,1100 @@ public final class InstanceOuterClass {
               yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.class, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder.class);
     }
 
+    public interface HostAffinityRuleOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       */
+      java.lang.String getKey();
+      /**
+       * <pre>
+       * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getKeyBytes();
+
+      /**
+       * <pre>
+       * Include or exclude action
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+       */
+      int getOpValue();
+      /**
+       * <pre>
+       * Include or exclude action
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+       */
+      yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator getOp();
+
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      java.util.List<java.lang.String>
+          getValuesList();
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      int getValuesCount();
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      java.lang.String getValues(int index);
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getValuesBytes(int index);
+    }
+    /**
+     * <pre>
+     * Affinitity definition
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule}
+     */
+    public  static final class HostAffinityRule extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule)
+        HostAffinityRuleOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HostAffinityRule.newBuilder() to construct.
+      private HostAffinityRule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HostAffinityRule() {
+        key_ = "";
+        op_ = 0;
+        values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HostAffinityRule(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                key_ = s;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                op_ = rawValue;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  values_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                values_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            values_ = values_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.class, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator}
+       */
+      public enum Operator
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>OPERATOR_UNSPECIFIED = 0;</code>
+         */
+        OPERATOR_UNSPECIFIED(0),
+        /**
+         * <code>IN = 1;</code>
+         */
+        IN(1),
+        /**
+         * <code>NOT_IN = 2;</code>
+         */
+        NOT_IN(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>OPERATOR_UNSPECIFIED = 0;</code>
+         */
+        public static final int OPERATOR_UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>IN = 1;</code>
+         */
+        public static final int IN_VALUE = 1;
+        /**
+         * <code>NOT_IN = 2;</code>
+         */
+        public static final int NOT_IN_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Operator valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static Operator forNumber(int value) {
+          switch (value) {
+            case 0: return OPERATOR_UNSPECIFIED;
+            case 1: return IN;
+            case 2: return NOT_IN;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Operator>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Operator> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Operator>() {
+                public Operator findValueByNumber(int number) {
+                  return Operator.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Operator[] VALUES = values();
+
+        public static Operator valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Operator(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator)
+      }
+
+      private int bitField0_;
+      public static final int KEY_FIELD_NUMBER = 1;
+      private volatile java.lang.Object key_;
+      /**
+       * <pre>
+       * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int OP_FIELD_NUMBER = 2;
+      private int op_;
+      /**
+       * <pre>
+       * Include or exclude action
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+       */
+      public int getOpValue() {
+        return op_;
+      }
+      /**
+       * <pre>
+       * Include or exclude action
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator getOp() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator result = yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.valueOf(op_);
+        return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.UNRECOGNIZED : result;
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 3;
+      private com.google.protobuf.LazyStringList values_;
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <pre>
+       * Affinity value or host ID or host group ID
+       * </pre>
+       *
+       * <code>repeated string values = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getKeyBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+        }
+        if (op_ != yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.OPERATOR_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, op_);
+        }
+        for (int i = 0; i < values_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, values_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getKeyBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+        }
+        if (op_ != yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.OPERATOR_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, op_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += computeStringSizeNoTag(values_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValuesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule other = (yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule) obj;
+
+        boolean result = true;
+        result = result && getKey()
+            .equals(other.getKey());
+        result = result && op_ == other.op_;
+        result = result && getValuesList()
+            .equals(other.getValuesList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+        hash = (37 * hash) + OP_FIELD_NUMBER;
+        hash = (53 * hash) + op_;
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Affinitity definition
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule)
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.class, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          key_ = "";
+
+          op_ = 0;
+
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getDefaultInstanceForType() {
+          return yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule build() {
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule buildPartial() {
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule result = new yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.key_ = key_;
+          result.op_ = op_;
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            values_ = values_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.values_ = values_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule) {
+            return mergeFrom((yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule other) {
+          if (other == yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.getDefaultInstance()) return this;
+          if (!other.getKey().isEmpty()) {
+            key_ = other.key_;
+            onChanged();
+          }
+          if (other.op_ != 0) {
+            setOpValue(other.getOpValue());
+          }
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object key_ = "";
+        /**
+         * <pre>
+         * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public java.lang.String getKey() {
+          java.lang.Object ref = key_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            key_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getKeyBytes() {
+          java.lang.Object ref = key_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            key_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public Builder setKey(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          key_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public Builder clearKey() {
+          
+          key_ = getDefaultInstance().getKey();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity label or one of reserved values - 'yc.hostId', 'yc.hostGroupId'
+         * </pre>
+         *
+         * <code>string key = 1;</code>
+         */
+        public Builder setKeyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          key_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int op_ = 0;
+        /**
+         * <pre>
+         * Include or exclude action
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+         */
+        public int getOpValue() {
+          return op_;
+        }
+        /**
+         * <pre>
+         * Include or exclude action
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+         */
+        public Builder setOpValue(int value) {
+          op_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Include or exclude action
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+         */
+        public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator getOp() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator result = yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.valueOf(op_);
+          return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * Include or exclude action
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+         */
+        public Builder setOp(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Operator value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          op_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Include or exclude action
+         * </pre>
+         *
+         * <code>.yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule.Operator op = 2;</code>
+         */
+        public Builder clearOp() {
+          
+          op_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+            values_ = new com.google.protobuf.LazyStringArrayList(values_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValuesList() {
+          return values_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public java.lang.String getValues(int index) {
+          return values_.get(index);
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getValuesBytes(int index) {
+          return values_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public Builder setValues(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public Builder addValues(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public Builder clearValues() {
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Affinity value or host ID or host group ID
+         * </pre>
+         *
+         * <code>repeated string values = 3;</code>
+         */
+        public Builder addValuesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule)
+      private static final yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule();
+      }
+
+      public static yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<HostAffinityRule>
+          PARSER = new com.google.protobuf.AbstractParser<HostAffinityRule>() {
+        @java.lang.Override
+        public HostAffinityRule parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HostAffinityRule(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HostAffinityRule> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HostAffinityRule> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
     public static final int PLACEMENT_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object placementGroupId_;
     /**
@@ -11988,6 +13139,61 @@ public final class InstanceOuterClass {
       }
     }
 
+    public static final int HOST_AFFINITY_RULES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> hostAffinityRules_;
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> getHostAffinityRulesList() {
+      return hostAffinityRules_;
+    }
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder> 
+        getHostAffinityRulesOrBuilderList() {
+      return hostAffinityRules_;
+    }
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    public int getHostAffinityRulesCount() {
+      return hostAffinityRules_.size();
+    }
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getHostAffinityRules(int index) {
+      return hostAffinityRules_.get(index);
+    }
+    /**
+     * <pre>
+     * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder getHostAffinityRulesOrBuilder(
+        int index) {
+      return hostAffinityRules_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12005,6 +13211,9 @@ public final class InstanceOuterClass {
       if (!getPlacementGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
       }
+      for (int i = 0; i < hostAffinityRules_.size(); i++) {
+        output.writeMessage(2, hostAffinityRules_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12016,6 +13225,10 @@ public final class InstanceOuterClass {
       size = 0;
       if (!getPlacementGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
+      }
+      for (int i = 0; i < hostAffinityRules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, hostAffinityRules_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12035,6 +13248,8 @@ public final class InstanceOuterClass {
       boolean result = true;
       result = result && getPlacementGroupId()
           .equals(other.getPlacementGroupId());
+      result = result && getHostAffinityRulesList()
+          .equals(other.getHostAffinityRulesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12048,6 +13263,10 @@ public final class InstanceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PLACEMENT_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPlacementGroupId().hashCode();
+      if (getHostAffinityRulesCount() > 0) {
+        hash = (37 * hash) + HOST_AFFINITY_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostAffinityRulesList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12176,6 +13395,7 @@ public final class InstanceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getHostAffinityRulesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -12183,6 +13403,12 @@ public final class InstanceOuterClass {
         super.clear();
         placementGroupId_ = "";
 
+        if (hostAffinityRulesBuilder_ == null) {
+          hostAffinityRules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          hostAffinityRulesBuilder_.clear();
+        }
         return this;
       }
 
@@ -12209,7 +13435,19 @@ public final class InstanceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy buildPartial() {
         yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy result = new yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.placementGroupId_ = placementGroupId_;
+        if (hostAffinityRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            hostAffinityRules_ = java.util.Collections.unmodifiableList(hostAffinityRules_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.hostAffinityRules_ = hostAffinityRules_;
+        } else {
+          result.hostAffinityRules_ = hostAffinityRulesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -12262,6 +13500,32 @@ public final class InstanceOuterClass {
           placementGroupId_ = other.placementGroupId_;
           onChanged();
         }
+        if (hostAffinityRulesBuilder_ == null) {
+          if (!other.hostAffinityRules_.isEmpty()) {
+            if (hostAffinityRules_.isEmpty()) {
+              hostAffinityRules_ = other.hostAffinityRules_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureHostAffinityRulesIsMutable();
+              hostAffinityRules_.addAll(other.hostAffinityRules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hostAffinityRules_.isEmpty()) {
+            if (hostAffinityRulesBuilder_.isEmpty()) {
+              hostAffinityRulesBuilder_.dispose();
+              hostAffinityRulesBuilder_ = null;
+              hostAffinityRules_ = other.hostAffinityRules_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              hostAffinityRulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHostAffinityRulesFieldBuilder() : null;
+            } else {
+              hostAffinityRulesBuilder_.addAllMessages(other.hostAffinityRules_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12290,6 +13554,7 @@ public final class InstanceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object placementGroupId_ = "";
       /**
@@ -12378,6 +13643,318 @@ public final class InstanceOuterClass {
         placementGroupId_ = value;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> hostAffinityRules_ =
+        java.util.Collections.emptyList();
+      private void ensureHostAffinityRulesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostAffinityRules_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule>(hostAffinityRules_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder> hostAffinityRulesBuilder_;
+
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> getHostAffinityRulesList() {
+        if (hostAffinityRulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hostAffinityRules_);
+        } else {
+          return hostAffinityRulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public int getHostAffinityRulesCount() {
+        if (hostAffinityRulesBuilder_ == null) {
+          return hostAffinityRules_.size();
+        } else {
+          return hostAffinityRulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule getHostAffinityRules(int index) {
+        if (hostAffinityRulesBuilder_ == null) {
+          return hostAffinityRules_.get(index);
+        } else {
+          return hostAffinityRulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder setHostAffinityRules(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule value) {
+        if (hostAffinityRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.set(index, value);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder setHostAffinityRules(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder builderForValue) {
+        if (hostAffinityRulesBuilder_ == null) {
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder addHostAffinityRules(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule value) {
+        if (hostAffinityRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.add(value);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder addHostAffinityRules(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule value) {
+        if (hostAffinityRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.add(index, value);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder addHostAffinityRules(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder builderForValue) {
+        if (hostAffinityRulesBuilder_ == null) {
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder addHostAffinityRules(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder builderForValue) {
+        if (hostAffinityRulesBuilder_ == null) {
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder addAllHostAffinityRules(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule> values) {
+        if (hostAffinityRulesBuilder_ == null) {
+          ensureHostAffinityRulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hostAffinityRules_);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder clearHostAffinityRules() {
+        if (hostAffinityRulesBuilder_ == null) {
+          hostAffinityRules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public Builder removeHostAffinityRules(int index) {
+        if (hostAffinityRulesBuilder_ == null) {
+          ensureHostAffinityRulesIsMutable();
+          hostAffinityRules_.remove(index);
+          onChanged();
+        } else {
+          hostAffinityRulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder getHostAffinityRulesBuilder(
+          int index) {
+        return getHostAffinityRulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder getHostAffinityRulesOrBuilder(
+          int index) {
+        if (hostAffinityRulesBuilder_ == null) {
+          return hostAffinityRules_.get(index);  } else {
+          return hostAffinityRulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder> 
+           getHostAffinityRulesOrBuilderList() {
+        if (hostAffinityRulesBuilder_ != null) {
+          return hostAffinityRulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hostAffinityRules_);
+        }
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder addHostAffinityRulesBuilder() {
+        return getHostAffinityRulesFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder addHostAffinityRulesBuilder(
+          int index) {
+        return getHostAffinityRulesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of affinity rules. Scheduler will attempt to allocate instances according to order of rules.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.PlacementPolicy.HostAffinityRule host_affinity_rules = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder> 
+           getHostAffinityRulesBuilderList() {
+        return getHostAffinityRulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder> 
+          getHostAffinityRulesFieldBuilder() {
+        if (hostAffinityRulesBuilder_ == null) {
+          hostAffinityRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder>(
+                  hostAffinityRules_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          hostAffinityRules_ = null;
+        }
+        return hostAffinityRulesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12487,6 +14064,11 @@ public final class InstanceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_PlacementPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12549,12 +14131,19 @@ public final class InstanceOuterClass {
       "andex.cloud.compute.v1.NetworkSettings.T" +
       "ype\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STA" +
       "NDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HAR" +
-      "DWARE_ACCELERATED\020\003\"-\n\017PlacementPolicy\022\032" +
-      "\n\022placement_group_id\030\001 \001(\t*;\n\tIpVersion\022" +
-      "\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n" +
-      "\004IPV6\020\002Bb\n\033yandex.cloud.api.compute.v1ZC" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/compute/v1;computeb\006proto3"
+      "DWARE_ACCELERATED\020\003\"\301\002\n\017PlacementPolicy\022" +
+      "\032\n\022placement_group_id\030\001 \001(\t\022V\n\023host_affi" +
+      "nity_rules\030\002 \003(\01329.yandex.cloud.compute." +
+      "v1.PlacementPolicy.HostAffinityRule\032\271\001\n\020" +
+      "HostAffinityRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(" +
+      "\0162B.yandex.cloud.compute.v1.PlacementPol" +
+      "icy.HostAffinityRule.Operator\022\016\n\006values\030" +
+      "\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR_UNSPECIFIE" +
+      "D\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002*;\n\tIpVersion\022\032\n\026" +
+      "IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IP" +
+      "V6\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12634,7 +14223,13 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor,
-        new java.lang.String[] { "PlacementGroupId", });
+        new java.lang.String[] { "PlacementGroupId", "HostAffinityRules", });
+    internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor =
+      internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor,
+        new java.lang.String[] { "Key", "Op", "Values", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

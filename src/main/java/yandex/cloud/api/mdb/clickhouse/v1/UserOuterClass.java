@@ -4448,8 +4448,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4457,8 +4460,11 @@ public final class UserOuterClass {
     boolean hasReadonly();
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4466,8 +4472,11 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getReadonly();
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4476,7 +4485,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4484,7 +4495,9 @@ public final class UserOuterClass {
     boolean hasAllowDdl();
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4492,7 +4505,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getAllowDdl();
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -4501,8 +4516,13 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4510,8 +4530,13 @@ public final class UserOuterClass {
     boolean hasInsertQuorum();
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4519,8 +4544,13 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getInsertQuorum();
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4530,6 +4560,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4538,6 +4569,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4546,6 +4578,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4555,6 +4588,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4563,6 +4597,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4571,6 +4606,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4580,6 +4616,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4588,6 +4625,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4596,6 +4634,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4604,7 +4643,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4612,7 +4654,10 @@ public final class UserOuterClass {
     boolean hasInsertQuorumTimeout();
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4620,7 +4665,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getInsertQuorumTimeout();
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4629,8 +4677,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -4638,8 +4686,8 @@ public final class UserOuterClass {
     boolean hasSelectSequentialConsistency();
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -4647,8 +4695,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getSelectSequentialConsistency();
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -4657,8 +4705,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4666,8 +4715,9 @@ public final class UserOuterClass {
     boolean hasMaxReplicaDelayForDistributedQueries();
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4675,8 +4725,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxReplicaDelayForDistributedQueries();
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -4685,8 +4736,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4694,8 +4748,11 @@ public final class UserOuterClass {
     boolean hasFallbackToStaleReplicasForDistributedQueries();
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4703,8 +4760,11 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getFallbackToStaleReplicasForDistributedQueries();
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -4713,8 +4773,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4722,8 +4785,11 @@ public final class UserOuterClass {
     boolean hasReplicationAlterPartitionsSync();
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4731,8 +4797,11 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getReplicationAlterPartitionsSync();
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -4741,8 +4810,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-     * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+     * Determine the behavior of distributed subqueries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -4750,8 +4819,8 @@ public final class UserOuterClass {
     int getDistributedProductModeValue();
     /**
      * <pre>
-     * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-     * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+     * Determine the behavior of distributed subqueries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -4760,7 +4829,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4768,7 +4841,11 @@ public final class UserOuterClass {
     boolean hasDistributedAggregationMemoryEfficient();
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4776,7 +4853,11 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getDistributedAggregationMemoryEfficient();
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -4810,7 +4891,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4818,7 +4902,10 @@ public final class UserOuterClass {
     boolean hasSkipUnavailableShards();
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4826,7 +4913,10 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getSkipUnavailableShards();
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -4835,7 +4925,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4843,7 +4938,12 @@ public final class UserOuterClass {
     boolean hasCompile();
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4851,7 +4951,12 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getCompile();
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -4860,7 +4965,13 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4868,7 +4979,13 @@ public final class UserOuterClass {
     boolean hasMinCountToCompile();
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4876,7 +4993,13 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMinCountToCompile();
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4885,7 +5008,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -4893,7 +5020,11 @@ public final class UserOuterClass {
     boolean hasCompileExpressions();
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -4901,7 +5032,11 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getCompileExpressions();
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -4910,7 +5045,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4918,7 +5058,12 @@ public final class UserOuterClass {
     boolean hasMinCountToCompileExpression();
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4926,7 +5071,12 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMinCountToCompileExpression();
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4936,6 +5086,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4944,6 +5099,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4952,6 +5112,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -4960,8 +5125,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4969,8 +5135,9 @@ public final class UserOuterClass {
     boolean hasMinInsertBlockSizeRows();
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4978,8 +5145,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMinInsertBlockSizeRows();
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4988,8 +5156,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -4997,8 +5166,9 @@ public final class UserOuterClass {
     boolean hasMinInsertBlockSizeBytes();
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5006,8 +5176,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMinInsertBlockSizeBytes();
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5016,7 +5187,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5024,7 +5198,10 @@ public final class UserOuterClass {
     boolean hasMaxInsertBlockSize();
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5032,7 +5209,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxInsertBlockSize();
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5041,7 +5221,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5049,7 +5234,12 @@ public final class UserOuterClass {
     boolean hasMinBytesToUseDirectIo();
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5057,7 +5247,12 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMinBytesToUseDirectIo();
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5066,7 +5261,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5074,7 +5274,12 @@ public final class UserOuterClass {
     boolean hasUseUncompressedCache();
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5082,7 +5287,12 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getUseUncompressedCache();
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -5091,8 +5301,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5100,8 +5312,10 @@ public final class UserOuterClass {
     boolean hasMergeTreeMaxRowsToUseCache();
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5109,8 +5323,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMergeTreeMaxRowsToUseCache();
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5119,8 +5335,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5128,8 +5346,10 @@ public final class UserOuterClass {
     boolean hasMergeTreeMaxBytesToUseCache();
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5137,8 +5357,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMergeTreeMaxBytesToUseCache();
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5147,7 +5369,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5155,7 +5380,10 @@ public final class UserOuterClass {
     boolean hasMergeTreeMinRowsForConcurrentRead();
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5163,7 +5391,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMergeTreeMinRowsForConcurrentRead();
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5172,7 +5403,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5180,7 +5414,10 @@ public final class UserOuterClass {
     boolean hasMergeTreeMinBytesForConcurrentRead();
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5188,7 +5425,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMergeTreeMinBytesForConcurrentRead();
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5196,60 +5436,141 @@ public final class UserOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getMergeTreeMinBytesForConcurrentReadOrBuilder();
 
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     boolean hasMaxBytesBeforeExternalGroupBy();
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy();
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalGroupByOrBuilder();
 
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     boolean hasMaxBytesBeforeExternalSort();
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort();
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalSortOrBuilder();
 
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     boolean hasGroupByTwoLevelThreshold();
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     com.google.protobuf.Int64Value getGroupByTwoLevelThreshold();
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdOrBuilder();
 
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     boolean hasGroupByTwoLevelThresholdBytes();
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes();
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdBytesOrBuilder();
 
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5257,7 +5578,13 @@ public final class UserOuterClass {
     boolean hasPriority();
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5265,7 +5592,13 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getPriority();
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5274,7 +5607,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5282,7 +5618,10 @@ public final class UserOuterClass {
     boolean hasMaxThreads();
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5290,7 +5629,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxThreads();
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5299,7 +5641,13 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5307,7 +5655,13 @@ public final class UserOuterClass {
     boolean hasMaxMemoryUsage();
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5315,7 +5669,13 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxMemoryUsage();
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5324,7 +5684,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5332,7 +5695,10 @@ public final class UserOuterClass {
     boolean hasMaxMemoryUsageForUser();
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5340,7 +5706,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxMemoryUsageForUser();
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5350,6 +5719,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -5358,6 +5728,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -5366,6 +5737,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -5375,6 +5747,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -5383,6 +5756,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -5391,6 +5765,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -5399,7 +5774,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5407,7 +5785,10 @@ public final class UserOuterClass {
     boolean hasForceIndexByDate();
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5415,7 +5796,10 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getForceIndexByDate();
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -5424,7 +5808,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5432,7 +5819,10 @@ public final class UserOuterClass {
     boolean hasForcePrimaryKey();
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5440,7 +5830,10 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getForcePrimaryKey();
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -5449,7 +5842,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5457,7 +5852,9 @@ public final class UserOuterClass {
     boolean hasMaxRowsToRead();
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5465,7 +5862,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxRowsToRead();
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5474,7 +5873,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5482,7 +5882,8 @@ public final class UserOuterClass {
     boolean hasMaxBytesToRead();
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5490,7 +5891,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxBytesToRead();
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5499,8 +5901,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -5508,8 +5911,9 @@ public final class UserOuterClass {
     int getReadOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -5518,7 +5922,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5526,7 +5932,9 @@ public final class UserOuterClass {
     boolean hasMaxRowsToGroupBy();
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5534,7 +5942,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxRowsToGroupBy();
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5543,8 +5953,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-     * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
+     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -5552,8 +5964,10 @@ public final class UserOuterClass {
     int getGroupByOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-     * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
+     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -5562,7 +5976,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5570,7 +5986,9 @@ public final class UserOuterClass {
     boolean hasMaxRowsToSort();
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5578,7 +5996,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxRowsToSort();
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5587,7 +6007,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5595,7 +6017,9 @@ public final class UserOuterClass {
     boolean hasMaxBytesToSort();
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5603,7 +6027,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxBytesToSort();
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5612,8 +6038,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -5621,8 +6048,9 @@ public final class UserOuterClass {
     int getSortOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -5631,7 +6059,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5639,7 +6069,9 @@ public final class UserOuterClass {
     boolean hasMaxResultRows();
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5647,7 +6079,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxResultRows();
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5656,7 +6090,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5664,7 +6100,9 @@ public final class UserOuterClass {
     boolean hasMaxResultBytes();
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5672,7 +6110,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxResultBytes();
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5681,8 +6121,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -5690,8 +6131,9 @@ public final class UserOuterClass {
     int getResultOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -5700,7 +6142,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5708,7 +6151,8 @@ public final class UserOuterClass {
     boolean hasMaxRowsInDistinct();
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5716,7 +6160,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxRowsInDistinct();
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5725,7 +6170,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5733,7 +6178,7 @@ public final class UserOuterClass {
     boolean hasMaxBytesInDistinct();
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5741,7 +6186,7 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxBytesInDistinct();
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5750,8 +6195,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -5759,8 +6205,9 @@ public final class UserOuterClass {
     int getDistinctOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -5769,7 +6216,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5777,7 +6225,8 @@ public final class UserOuterClass {
     boolean hasMaxRowsToTransfer();
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5785,7 +6234,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxRowsToTransfer();
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5794,8 +6244,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5803,8 +6254,9 @@ public final class UserOuterClass {
     boolean hasMaxBytesToTransfer();
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5812,8 +6264,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxBytesToTransfer();
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5822,8 +6275,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -5831,8 +6285,9 @@ public final class UserOuterClass {
     int getTransferOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -5841,7 +6296,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5849,7 +6306,9 @@ public final class UserOuterClass {
     boolean hasMaxExecutionTime();
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5857,7 +6316,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxExecutionTime();
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5866,8 +6327,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Determine the behavior on exceeding max_execution_time limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -5875,8 +6337,9 @@ public final class UserOuterClass {
     int getTimeoutOverflowModeValue();
     /**
      * <pre>
-     * Determine the behavior on exceeding max_execution_time limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -5885,7 +6348,147 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxRowsInSet();
+    /**
+     * <pre>
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxRowsInSet();
+    /**
+     * <pre>
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxRowsInSetOrBuilder();
+
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxBytesInSet();
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxBytesInSet();
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxBytesInSetOrBuilder();
+
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     */
+    int getSetOverflowModeValue();
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode();
+
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxRowsInJoin();
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxRowsInJoin();
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxRowsInJoinOrBuilder();
+
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMaxBytesInJoin();
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMaxBytesInJoin();
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxBytesInJoinOrBuilder();
+
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     */
+    int getJoinOverflowModeValue();
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode();
+
+    /**
+     * <pre>
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5893,7 +6496,9 @@ public final class UserOuterClass {
     boolean hasMaxColumnsToRead();
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5901,7 +6506,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxColumnsToRead();
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5910,7 +6517,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5918,7 +6526,8 @@ public final class UserOuterClass {
     boolean hasMaxTemporaryColumns();
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5926,7 +6535,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxTemporaryColumns();
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5935,7 +6545,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5943,7 +6554,8 @@ public final class UserOuterClass {
     boolean hasMaxTemporaryNonConstColumns();
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5951,7 +6563,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxTemporaryNonConstColumns();
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5960,7 +6573,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5968,7 +6583,9 @@ public final class UserOuterClass {
     boolean hasMaxQuerySize();
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5976,7 +6593,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxQuerySize();
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5985,7 +6604,14 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -5993,7 +6619,14 @@ public final class UserOuterClass {
     boolean hasMaxAstDepth();
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6001,7 +6634,14 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxAstDepth();
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6010,7 +6650,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6018,7 +6663,12 @@ public final class UserOuterClass {
     boolean hasMaxAstElements();
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6026,7 +6676,12 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxAstElements();
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6035,7 +6690,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6043,7 +6702,11 @@ public final class UserOuterClass {
     boolean hasMaxExpandedAstElements();
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6051,7 +6714,11 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxExpandedAstElements();
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -6060,7 +6727,80 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMinExecutionSpeed();
+    /**
+     * <pre>
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMinExecutionSpeed();
+    /**
+     * <pre>
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedOrBuilder();
+
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasMinExecutionSpeedBytes();
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getMinExecutionSpeedBytes();
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Aggregate function to use for implementation of count(DISTINCT ...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     */
+    int getCountDistinctImplementationValue();
+    /**
+     * <pre>
+     * Aggregate function to use for implementation of count(DISTINCT ...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation();
+
+    /**
+     * <pre>
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -6068,7 +6808,13 @@ public final class UserOuterClass {
     boolean hasInputFormatValuesInterpretExpressions();
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -6076,7 +6822,13 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getInputFormatValuesInterpretExpressions();
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -6085,7 +6837,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -6093,7 +6846,8 @@ public final class UserOuterClass {
     boolean hasInputFormatDefaultsForOmittedFields();
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -6101,7 +6855,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getInputFormatDefaultsForOmittedFields();
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -6110,7 +6865,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -6118,7 +6876,10 @@ public final class UserOuterClass {
     boolean hasOutputFormatJsonQuote64BitIntegers();
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -6126,7 +6887,10 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers();
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -6135,7 +6899,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -6143,7 +6908,8 @@ public final class UserOuterClass {
     boolean hasOutputFormatJsonQuoteDenormals();
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -6151,7 +6917,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getOutputFormatJsonQuoteDenormals();
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -6160,7 +6927,15 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -6168,7 +6943,15 @@ public final class UserOuterClass {
     boolean hasLowCardinalityAllowInNativeFormat();
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -6176,7 +6959,15 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getLowCardinalityAllowInNativeFormat();
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -6185,7 +6976,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -6193,7 +6986,9 @@ public final class UserOuterClass {
     boolean hasEmptyResultForAggregationByEmptySet();
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -6201,7 +6996,9 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getEmptyResultForAggregationByEmptySet();
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -6211,6 +7008,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -6219,6 +7017,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -6227,6 +7026,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -6236,6 +7036,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -6244,6 +7045,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -6252,6 +7054,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -6261,6 +7064,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -6269,6 +7073,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -6277,6 +7082,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -6285,7 +7091,13 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -6293,7 +7105,13 @@ public final class UserOuterClass {
     boolean hasEnableHttpCompression();
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -6301,7 +7119,13 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getEnableHttpCompression();
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -6310,7 +7134,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -6318,7 +7143,8 @@ public final class UserOuterClass {
     boolean hasSendProgressInHttpHeaders();
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -6326,7 +7152,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getSendProgressInHttpHeaders();
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -6335,7 +7162,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -6343,7 +7171,8 @@ public final class UserOuterClass {
     boolean hasHttpHeadersProgressInterval();
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -6351,7 +7180,8 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getHttpHeadersProgressInterval();
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -6360,7 +7190,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -6368,7 +7199,8 @@ public final class UserOuterClass {
     boolean hasAddHttpCorsHeader();
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -6376,7 +7208,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getAddHttpCorsHeader();
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -6426,6 +7259,9 @@ public final class UserOuterClass {
       distinctOverflowMode_ = 0;
       transferOverflowMode_ = 0;
       timeoutOverflowMode_ = 0;
+      setOverflowMode_ = 0;
+      joinOverflowMode_ = 0;
+      countDistinctImplementation_ = 0;
       quotaMode_ = 0;
     }
 
@@ -7445,6 +8281,102 @@ public final class UserOuterClass {
 
               break;
             }
+            case 674: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minExecutionSpeed_ != null) {
+                subBuilder = minExecutionSpeed_.toBuilder();
+              }
+              minExecutionSpeed_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minExecutionSpeed_);
+                minExecutionSpeed_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 682: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minExecutionSpeedBytes_ != null) {
+                subBuilder = minExecutionSpeedBytes_.toBuilder();
+              }
+              minExecutionSpeedBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minExecutionSpeedBytes_);
+                minExecutionSpeedBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 688: {
+              int rawValue = input.readEnum();
+
+              countDistinctImplementation_ = rawValue;
+              break;
+            }
+            case 698: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxRowsInSet_ != null) {
+                subBuilder = maxRowsInSet_.toBuilder();
+              }
+              maxRowsInSet_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxRowsInSet_);
+                maxRowsInSet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 706: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxBytesInSet_ != null) {
+                subBuilder = maxBytesInSet_.toBuilder();
+              }
+              maxBytesInSet_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxBytesInSet_);
+                maxBytesInSet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 712: {
+              int rawValue = input.readEnum();
+
+              setOverflowMode_ = rawValue;
+              break;
+            }
+            case 722: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxRowsInJoin_ != null) {
+                subBuilder = maxRowsInJoin_.toBuilder();
+              }
+              maxRowsInJoin_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxRowsInJoin_);
+                maxRowsInJoin_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 730: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxBytesInJoin_ != null) {
+                subBuilder = maxBytesInJoin_.toBuilder();
+              }
+              maxBytesInJoin_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxBytesInJoin_);
+                maxBytesInJoin_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 736: {
+              int rawValue = input.readEnum();
+
+              joinOverflowMode_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7973,12 +8905,149 @@ public final class UserOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.QuotaMode)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation}
+     */
+    public enum CountDistinctImplementation
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED = 0;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED(0),
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ = 1;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNIQ(1),
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED = 2;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED(2),
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64 = 3;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64(3),
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12 = 4;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12(4),
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXACT = 5;</code>
+       */
+      COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXACT(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED = 0;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ = 1;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNIQ_VALUE = 1;
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED = 2;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_VALUE = 2;
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64 = 3;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64_VALUE = 3;
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12 = 4;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12_VALUE = 4;
+      /**
+       * <code>COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXACT = 5;</code>
+       */
+      public static final int COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXACT_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static CountDistinctImplementation valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static CountDistinctImplementation forNumber(int value) {
+        switch (value) {
+          case 0: return COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED;
+          case 1: return COUNT_DISTINCT_IMPLEMENTATION_UNIQ;
+          case 2: return COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED;
+          case 3: return COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED_64;
+          case 4: return COUNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12;
+          case 5: return COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXACT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<CountDistinctImplementation>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          CountDistinctImplementation> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<CountDistinctImplementation>() {
+              public CountDistinctImplementation findValueByNumber(int number) {
+                return CountDistinctImplementation.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final CountDistinctImplementation[] VALUES = values();
+
+      public static CountDistinctImplementation valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private CountDistinctImplementation(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation)
+    }
+
     public static final int READONLY_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value readonly_;
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -7988,8 +9057,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -7999,8 +9071,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-     * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+     * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+     * * **0** (default)—no restrictions.
+     * * **1**—only read data queries are allowed.
+     * * **2**—read data and change settings queries are allowed.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -8013,7 +9088,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue allowDdl_;
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -8023,7 +9100,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -8033,7 +9112,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether DDL queries are allowed. Default value: false.
+     * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+     * Default value: **true**.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -8046,8 +9127,13 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value insertQuorum_;
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8057,8 +9143,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8068,8 +9159,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-     * the addition of the data.
+     * Enables or disables write quorum for ClickHouse cluster.
+     * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+     * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+     * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+     * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+     * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8083,6 +9179,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8093,6 +9190,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8103,6 +9201,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Connection timeout in milliseconds.
+     * Value must be greater than **0** (default: **10000**, 10 seconds).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8116,6 +9215,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8126,6 +9226,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8136,6 +9237,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Receive timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8149,6 +9251,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8159,6 +9262,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8169,6 +9273,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Send timeout in milliseconds.
+     * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8181,7 +9286,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value insertQuorumTimeout_;
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8191,7 +9299,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8201,7 +9312,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Quorum write timeout in milliseconds. Default value: 60000.
+     * Quorum write timeout in milliseconds.
+     * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+     * In this case, the client must send the query again to write the data block into the same or another replica.
+     * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8214,8 +9328,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue selectSequentialConsistency_;
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -8225,8 +9339,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -8236,8 +9350,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-     * with the quorum; do not read the parts that have not yet been written with the quorum.
+     * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+     * Default value: **false** (sequential consistency is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -8250,8 +9364,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxReplicaDelayForDistributedQueries_;
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8261,8 +9376,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8272,8 +9388,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-     * Default value: 300000.
+     * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+     * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -8286,8 +9403,11 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue fallbackToStaleReplicasForDistributedQueries_;
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -8297,8 +9417,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -8308,8 +9431,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-     * performed anyway. Otherwise, the error will be thrown.
+     * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+     * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+     * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+     * Default value: **true** (query forcing is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -8322,8 +9448,11 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value replicationAlterPartitionsSync_;
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -8333,8 +9462,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -8344,8 +9476,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Wait mode for ALTER queries on replicated tables.
-     * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+     * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+     * * **0**—do not wait for replicas.
+     * * **1**—only wait for own execution (default).
+     * * **2**—wait for all replicas.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -8358,8 +9493,8 @@ public final class UserOuterClass {
     private int distributedProductMode_;
     /**
      * <pre>
-     * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-     * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+     * Determine the behavior of distributed subqueries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -8369,8 +9504,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-     * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+     * Determine the behavior of distributed subqueries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -8385,7 +9520,11 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue distributedAggregationMemoryEfficient_;
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -8395,7 +9534,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -8405,7 +9548,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether the memory-saving mode of distributed aggregation is enabled.
+     * Enables of disables memory saving mode when doing distributed aggregation.
+     * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+     * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+     * Default value: **false** (memory saving mode is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -8451,7 +9598,10 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue skipUnavailableShards_;
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -8461,7 +9611,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -8471,7 +9624,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether unavailable shards can be skipped.
+     * Enables or disables silent skipping of unavailable shards.
+     * A shard is considered unavailable if all its replicas are also unavailable.
+     * Default value: **false** (silent skipping is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -8484,7 +9640,12 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue compile_;
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -8494,7 +9655,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -8504,7 +9670,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether query compilation is enabled.
+     * Enables or disables query compilation.
+     * If you execute a lot of structurally identical queries, then enable this setting.
+     * As a result, such queries may be executed faster due to use of queries' compiled parts.
+     * Use this setting in combination with [min_count_to_compile] setting.
+     * Default value: **false** (compilation is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -8517,7 +9688,13 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value minCountToCompile_;
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8527,7 +9704,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8537,7 +9720,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The number of structurally identical queries before they are compiled.
+     * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8550,7 +9739,11 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue compileExpressions_;
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -8560,7 +9753,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -8570,7 +9767,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether expression compilation is enabled.
+     * Enables or disables expression compilation.
+     * If you execute a lot of queries that contain identical expressions, then enable this setting.
+     * As a result, such queries may be executed faster due to use of compiled expressions.
+     * Use this setting in combination with [min_count_to_compile_expression] setting.
+     * Default value: **false** (expression compilation is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -8583,7 +9784,12 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value minCountToCompileExpression_;
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8593,7 +9799,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8603,7 +9814,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The number of identical expressions before they are compiled.
+     * How many identical expressions ClickHouse has to encounter before they are compiled.
+     * Minimum value: **0** (default: **3**).
+     * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+     * It is recommended to set this value only for testing purposes.
+     * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+     * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8617,6 +9833,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8627,6 +9848,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8637,6 +9863,11 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum block size for reading.
+     * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+     * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+     * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+     * Value must be greater than **0** (default: **65536**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8649,8 +9880,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value minInsertBlockSizeRows_;
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8660,8 +9892,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8671,8 +9904,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **1048576**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8685,8 +9919,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value minInsertBlockSizeBytes_;
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8696,8 +9931,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8707,8 +9943,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-     * blocks will never be squashed.
+     * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+     * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8721,7 +9958,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxInsertBlockSize_;
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8731,7 +9971,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8741,7 +9984,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum block size for insertion.
+     * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+     * This setting has effect only if server is creating such blocks by itself.
+     * Value must be greater than **0** (default: **1048576**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8754,7 +10000,12 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value minBytesToUseDirectIo_;
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8764,7 +10015,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8774,7 +10030,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+     * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+     * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+     * Such reading strategy is effective when the data volume is small.
+     * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+     * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+     * Minimal value and default value: **0**, Direct I/O is disabled.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -8787,7 +10048,12 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue useUncompressedCache_;
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -8797,7 +10063,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -8807,7 +10078,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether to use the cache of uncompressed blocks.
+     * Determines whether to use the cache of uncompressed blocks, or not.
+     * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+     * Enable this setting for the users who instantiates small queries frequently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (uncompressed cache is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -8820,8 +10096,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value mergeTreeMaxRowsToUseCache_;
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8831,8 +10109,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8842,8 +10122,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **128x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8856,8 +10138,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value mergeTreeMaxBytesToUseCache_;
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8867,8 +10151,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8878,8 +10164,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+     * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
      * than the specified value.
+     * Use this setting in combination with [use_uncompressed_cache] setting.
+     * Value must be greater than **0** (default: **192x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8892,7 +10180,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value mergeTreeMinRowsForConcurrentRead_;
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8902,7 +10193,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8912,7 +10206,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of rows to be read from a file to enable concurrent read.
+     * Limits the minimum number of rows to be read from a file to enable concurrent read.
+     * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **20x8192**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8925,7 +10222,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value mergeTreeMinBytesForConcurrentRead_;
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8935,7 +10235,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8945,7 +10248,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The minimum number of bytes to be read from a file to enable concurrent read.
+     * Limits the number of bytes to be read from a file to enable concurrent read.
+     * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+     * This setting has effect only for tables of the MergeTree family.
+     * Value must be greater than **0** (default: **24x10x1024x1024**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -8957,18 +10263,51 @@ public final class UserOuterClass {
     public static final int MAX_BYTES_BEFORE_EXTERNAL_GROUP_BY_FIELD_NUMBER = 74;
     private com.google.protobuf.Int64Value maxBytesBeforeExternalGroupBy_;
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     public boolean hasMaxBytesBeforeExternalGroupBy() {
       return maxBytesBeforeExternalGroupBy_ != null;
     }
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     public com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy() {
       return maxBytesBeforeExternalGroupBy_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesBeforeExternalGroupBy_;
     }
     /**
+     * <pre>
+     * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+     * By default, aggregation is done by employing hash table that resides in RAM.
+     * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+     * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+     * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+     * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+     * See also: the [distributed_aggregation_memory_efficient] setting.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalGroupByOrBuilder() {
@@ -8978,18 +10317,30 @@ public final class UserOuterClass {
     public static final int MAX_BYTES_BEFORE_EXTERNAL_SORT_FIELD_NUMBER = 75;
     private com.google.protobuf.Int64Value maxBytesBeforeExternalSort_;
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     public boolean hasMaxBytesBeforeExternalSort() {
       return maxBytesBeforeExternalSort_ != null;
     }
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     public com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort() {
       return maxBytesBeforeExternalSort_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesBeforeExternalSort_;
     }
     /**
+     * <pre>
+     * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalSortOrBuilder() {
@@ -8999,18 +10350,33 @@ public final class UserOuterClass {
     public static final int GROUP_BY_TWO_LEVEL_THRESHOLD_FIELD_NUMBER = 76;
     private com.google.protobuf.Int64Value groupByTwoLevelThreshold_;
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     public boolean hasGroupByTwoLevelThreshold() {
       return groupByTwoLevelThreshold_ != null;
     }
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     public com.google.protobuf.Int64Value getGroupByTwoLevelThreshold() {
       return groupByTwoLevelThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : groupByTwoLevelThreshold_;
     }
     /**
+     * <pre>
+     * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdOrBuilder() {
@@ -9020,18 +10386,33 @@ public final class UserOuterClass {
     public static final int GROUP_BY_TWO_LEVEL_THRESHOLD_BYTES_FIELD_NUMBER = 77;
     private com.google.protobuf.Int64Value groupByTwoLevelThresholdBytes_;
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     public boolean hasGroupByTwoLevelThresholdBytes() {
       return groupByTwoLevelThresholdBytes_ != null;
     }
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     public com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes() {
       return groupByTwoLevelThresholdBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : groupByTwoLevelThresholdBytes_;
     }
     /**
+     * <pre>
+     * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdBytesOrBuilder() {
@@ -9042,7 +10423,13 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value priority_;
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9052,7 +10439,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9062,7 +10455,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Priority of the query.
+     * Sets the priority of a query.
+     * * **0**—priority is not used.
+     * * **1**—the highest priority.
+     * * and so on. The higher the number, the lower a query's priority.
+     * This setting should be set up for each query individually.
+     * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+     * Minimal value and default value: **0**, priority is not used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9075,7 +10474,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxThreads_;
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -9085,7 +10487,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -9095,7 +10500,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of threads to execute the request.
+     * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+     * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+     * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -9108,7 +10516,13 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxMemoryUsage_;
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9118,7 +10532,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9128,7 +10548,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum memory usage for processing of a single query.
+     * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for any user's single query on a single server.
+     * Minimal value: **0**, no limitation is set.
+     * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+     * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9141,7 +10567,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxMemoryUsageForUser_;
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9151,7 +10580,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9161,7 +10593,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum memory usage for processing all concurrently running queries for the user.
+     * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+     * This setting does not take server's free RAM amount or total RAM amount into account.
+     * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9175,6 +10610,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -9185,6 +10621,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -9195,6 +10632,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -9208,6 +10646,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -9218,6 +10657,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -9228,6 +10668,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -9240,7 +10681,10 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue forceIndexByDate_;
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -9250,7 +10694,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -9260,7 +10707,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Disables query execution if the index can’t be used by date.
+     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -9273,7 +10723,10 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue forcePrimaryKey_;
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -9283,7 +10736,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -9293,7 +10749,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Disables query execution if indexing by the primary key is not possible.
+     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * This setting has effect only for tables of the MergeTree family.
+     * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -9306,7 +10765,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxRowsToRead_;
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9316,7 +10777,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9326,7 +10789,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows that can be read from a table when running a query.
+     * Limits the maximum number of rows that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9339,7 +10804,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxBytesToRead_;
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9349,7 +10815,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9359,7 +10826,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9372,8 +10840,9 @@ public final class UserOuterClass {
     private int readOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -9383,8 +10852,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -9399,7 +10869,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxRowsToGroupBy_;
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9409,7 +10881,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9419,7 +10893,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of unique keys received from aggregation.
+     * Limits the maximum number of unique keys received from aggregation function.
+     * This setting helps to reduce RAM consumption while doing aggregation.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9432,8 +10908,10 @@ public final class UserOuterClass {
     private int groupByOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-     * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
+     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -9443,8 +10921,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-     * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
+     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -9459,7 +10939,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxRowsToSort_;
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9469,7 +10951,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9479,7 +10963,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows before sorting.
+     * Limits the maximum number of rows that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9492,7 +10978,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxBytesToSort_;
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9502,7 +10990,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9512,7 +11002,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes before sorting.
+     * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+     * This setting helps to reduce RAM consumption.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9525,8 +11017,9 @@ public final class UserOuterClass {
     private int sortOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -9536,8 +11029,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -9552,7 +11046,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxResultRows_;
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9562,7 +11058,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9572,7 +11070,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Limit on the number of rows in the result.
+     * Limits the number of rows in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9585,7 +11085,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxResultBytes_;
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9595,7 +11097,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9605,7 +11109,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Limit on the number of bytes in the result.
+     * Limits the number of bytes in the result.
+     * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9618,8 +11124,9 @@ public final class UserOuterClass {
     private int resultOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -9629,8 +11136,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -9645,7 +11153,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxRowsInDistinct_;
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9655,7 +11164,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9665,7 +11175,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of different rows when using DISTINCT.
+     * Limits the maximum number of different rows when using **DISTINCT**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9678,7 +11189,7 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxBytesInDistinct_;
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9688,7 +11199,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9698,7 +11209,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes used by a hash table when using DISTINCT.
+     * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9711,8 +11222,9 @@ public final class UserOuterClass {
     private int distinctOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -9722,8 +11234,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -9738,7 +11251,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxRowsToTransfer_;
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9748,7 +11262,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9758,7 +11273,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+     * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9771,8 +11287,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxBytesToTransfer_;
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9782,8 +11299,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9793,8 +11311,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-     * table when using GLOBAL IN.
+     * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+     * table when using **GLOBAL IN**.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9807,8 +11326,9 @@ public final class UserOuterClass {
     private int transferOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -9818,8 +11338,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -9834,7 +11355,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxExecutionTime_;
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9844,7 +11367,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9854,7 +11379,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum query execution time in milliseconds.
+     * Limits the maximum query execution time in milliseconds.
+     * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9867,8 +11394,9 @@ public final class UserOuterClass {
     private int timeoutOverflowMode_;
     /**
      * <pre>
-     * Determine the behavior on exceeding max_execution_time limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -9878,8 +11406,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Determine the behavior on exceeding max_execution_time limit.
-     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+     * * **throw**—abort query execution, return an error.
+     * * **break**—stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -9890,11 +11419,199 @@ public final class UserOuterClass {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
     }
 
+    public static final int MAX_ROWS_IN_SET_FIELD_NUMBER = 87;
+    private com.google.protobuf.Int64Value maxRowsInSet_;
+    /**
+     * <pre>
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxRowsInSet() {
+      return maxRowsInSet_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxRowsInSet() {
+      return maxRowsInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInSet_;
+    }
+    /**
+     * <pre>
+     * Limit on the number of rows in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInSetOrBuilder() {
+      return getMaxRowsInSet();
+    }
+
+    public static final int MAX_BYTES_IN_SET_FIELD_NUMBER = 88;
+    private com.google.protobuf.Int64Value maxBytesInSet_;
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxBytesInSet() {
+      return maxBytesInSet_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxBytesInSet() {
+      return maxBytesInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInSet_;
+    }
+    /**
+     * <pre>
+     * Limit on the number of bytes in the set resulting from the execution of the IN section.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInSetOrBuilder() {
+      return getMaxBytesInSet();
+    }
+
+    public static final int SET_OVERFLOW_MODE_FIELD_NUMBER = 89;
+    private int setOverflowMode_;
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     */
+    public int getSetOverflowModeValue() {
+      return setOverflowMode_;
+    }
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(setOverflowMode_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
+    }
+
+    public static final int MAX_ROWS_IN_JOIN_FIELD_NUMBER = 90;
+    private com.google.protobuf.Int64Value maxRowsInJoin_;
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxRowsInJoin() {
+      return maxRowsInJoin_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxRowsInJoin() {
+      return maxRowsInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInJoin_;
+    }
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in rows.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInJoinOrBuilder() {
+      return getMaxRowsInJoin();
+    }
+
+    public static final int MAX_BYTES_IN_JOIN_FIELD_NUMBER = 91;
+    private com.google.protobuf.Int64Value maxBytesInJoin_;
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMaxBytesInJoin() {
+      return maxBytesInJoin_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMaxBytesInJoin() {
+      return maxBytesInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInJoin_;
+    }
+    /**
+     * <pre>
+     * Limit on maximum size of the hash table for JOIN, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInJoinOrBuilder() {
+      return getMaxBytesInJoin();
+    }
+
+    public static final int JOIN_OVERFLOW_MODE_FIELD_NUMBER = 92;
+    private int joinOverflowMode_;
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     */
+    public int getJoinOverflowModeValue() {
+      return joinOverflowMode_;
+    }
+    /**
+     * <pre>
+     * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+     * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(joinOverflowMode_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
+    }
+
     public static final int MAX_COLUMNS_TO_READ_FIELD_NUMBER = 32;
     private com.google.protobuf.Int64Value maxColumnsToRead_;
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9904,7 +11621,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9914,7 +11633,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of columns that can be read from a table in a single query.
+     * Limits the maximum number of columns that can be read from a table in a single query.
+     * If the query requires to read more columns to complete, then it will be aborted.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9927,7 +11648,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxTemporaryColumns_;
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9937,7 +11659,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9947,7 +11670,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9960,7 +11684,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxTemporaryNonConstColumns_;
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9970,7 +11695,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9980,7 +11706,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+     * Minimal value and default value: **0**, no limitation is set.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -9993,7 +11720,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxQuerySize_;
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10003,7 +11732,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10013,7 +11744,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+     * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+     * Value must be greater than **0** (default: **262144**).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10026,7 +11759,14 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxAstDepth_;
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10036,7 +11776,14 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10046,7 +11793,14 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum depth of query syntax tree. Default value: 1000.
+     * Limits the maximum depth of query syntax tree.
+     * Executing a big and complex query may result in building a syntax tree of enormous depth.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+     * A user can be forced to construct more optimized queries, if this setting is used.
+     * Value must be greater than **0** (default: **1000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10059,7 +11813,12 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxAstElements_;
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10069,7 +11828,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10079,7 +11843,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+     * Limits the maximum size of query syntax tree in number of nodes.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **50000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10092,7 +11861,11 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxExpandedAstElements_;
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10102,7 +11875,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10112,7 +11889,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+     * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+     * Executing a big and complex query may result in building a syntax tree of enormous size.
+     * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+     * Value must be greater than **0** (default: **500000**).
+     * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -10121,11 +11902,108 @@ public final class UserOuterClass {
       return getMaxExpandedAstElements();
     }
 
+    public static final int MIN_EXECUTION_SPEED_FIELD_NUMBER = 84;
+    private com.google.protobuf.Int64Value minExecutionSpeed_;
+    /**
+     * <pre>
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMinExecutionSpeed() {
+      return minExecutionSpeed_ != null;
+    }
+    /**
+     * <pre>
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMinExecutionSpeed() {
+      return minExecutionSpeed_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeed_;
+    }
+    /**
+     * <pre>
+     * Minimal execution speed in rows per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedOrBuilder() {
+      return getMinExecutionSpeed();
+    }
+
+    public static final int MIN_EXECUTION_SPEED_BYTES_FIELD_NUMBER = 85;
+    private com.google.protobuf.Int64Value minExecutionSpeedBytes_;
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasMinExecutionSpeedBytes() {
+      return minExecutionSpeedBytes_ != null;
+    }
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getMinExecutionSpeedBytes() {
+      return minExecutionSpeedBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeedBytes_;
+    }
+    /**
+     * <pre>
+     * Minimal execution speed in bytes per second.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedBytesOrBuilder() {
+      return getMinExecutionSpeedBytes();
+    }
+
+    public static final int COUNT_DISTINCT_IMPLEMENTATION_FIELD_NUMBER = 86;
+    private int countDistinctImplementation_;
+    /**
+     * <pre>
+     * Aggregate function to use for implementation of count(DISTINCT ...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     */
+    public int getCountDistinctImplementationValue() {
+      return countDistinctImplementation_;
+    }
+    /**
+     * <pre>
+     * Aggregate function to use for implementation of count(DISTINCT ...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.valueOf(countDistinctImplementation_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.UNRECOGNIZED : result;
+    }
+
     public static final int INPUT_FORMAT_VALUES_INTERPRET_EXPRESSIONS_FIELD_NUMBER = 61;
     private com.google.protobuf.BoolValue inputFormatValuesInterpretExpressions_;
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -10135,7 +12013,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -10145,7 +12029,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+     * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+     * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+     * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+     * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+     * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+     * Default value: **true** (SQL parser is enabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -10158,7 +12048,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue inputFormatDefaultsForOmittedFields_;
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -10168,7 +12059,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -10178,7 +12070,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+     * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+     * Default value: **true** (replacing is enabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -10191,7 +12084,10 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue outputFormatJsonQuote64BitIntegers_;
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -10201,7 +12097,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -10211,7 +12110,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether quoting of 64-bit integers is enabled in JSON output format.
+     * Enables quoting of 64-bit integers in JSON output format.
+     * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+     * Otherwise, such integers will not be quoted.
+     * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -10224,7 +12126,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue outputFormatJsonQuoteDenormals_;
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -10234,7 +12137,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -10244,7 +12148,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+     * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+     * Default value: **false** (special values do not present in output).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -10257,7 +12162,15 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue lowCardinalityAllowInNativeFormat_;
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -10267,7 +12180,15 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -10277,7 +12198,15 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether LowCardinality type is enabled in Native format.
+     * Determines whether to use LowCardinality type in Native format.
+     * * **true** (default)—yes, use.
+     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+     * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+     * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+     * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+     * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+     * Default value: **true** (LowCardinality columns are used in Native format).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -10290,7 +12219,9 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue emptyResultForAggregationByEmptySet_;
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -10300,7 +12231,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -10310,7 +12243,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Return empty result when aggregating without keys on empty set.
+     * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+     * * **true**—ClickHouse will return an empty result for such queries.
+     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -10324,6 +12259,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -10334,6 +12270,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -10344,6 +12281,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP connection timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1000**, 1 second).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -10357,6 +12295,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -10367,6 +12306,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -10377,6 +12317,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP receive timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -10390,6 +12331,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -10400,6 +12342,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -10410,6 +12353,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * HTTP send timeout, in milliseconds.
+     * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -10422,7 +12366,13 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue enableHttpCompression_;
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -10432,7 +12382,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -10442,7 +12398,13 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether data compression is enabled in HTTP responses.
+     * Enables or disables data compression in HTTP responses.
+     * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+     * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+     * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+     * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+     * Default value: **false** (compression is disabled).
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -10455,7 +12417,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue sendProgressInHttpHeaders_;
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -10465,7 +12428,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -10475,7 +12439,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+     * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+     * Default value: **false** (notifications disabled).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -10488,7 +12453,8 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value httpHeadersProgressInterval_;
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -10498,7 +12464,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -10508,7 +12475,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+     * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+     * Value must be greater than **0** (default: **100**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -10521,7 +12489,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue addHttpCorsHeader_;
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -10531,7 +12500,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -10541,7 +12511,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Whether CORS header in HTTP responses is enabled. Default value: false.
+     * Adds CORS header in HTTP responses.
+     * Default value: **false** (header is not added).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -10831,6 +12802,33 @@ public final class UserOuterClass {
       }
       if (skipUnavailableShards_ != null) {
         output.writeMessage(81, getSkipUnavailableShards());
+      }
+      if (minExecutionSpeed_ != null) {
+        output.writeMessage(84, getMinExecutionSpeed());
+      }
+      if (minExecutionSpeedBytes_ != null) {
+        output.writeMessage(85, getMinExecutionSpeedBytes());
+      }
+      if (countDistinctImplementation_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(86, countDistinctImplementation_);
+      }
+      if (maxRowsInSet_ != null) {
+        output.writeMessage(87, getMaxRowsInSet());
+      }
+      if (maxBytesInSet_ != null) {
+        output.writeMessage(88, getMaxBytesInSet());
+      }
+      if (setOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(89, setOverflowMode_);
+      }
+      if (maxRowsInJoin_ != null) {
+        output.writeMessage(90, getMaxRowsInJoin());
+      }
+      if (maxBytesInJoin_ != null) {
+        output.writeMessage(91, getMaxBytesInJoin());
+      }
+      if (joinOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(92, joinOverflowMode_);
       }
       unknownFields.writeTo(output);
     }
@@ -11165,6 +13163,42 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(81, getSkipUnavailableShards());
       }
+      if (minExecutionSpeed_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(84, getMinExecutionSpeed());
+      }
+      if (minExecutionSpeedBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(85, getMinExecutionSpeedBytes());
+      }
+      if (countDistinctImplementation_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.COUNT_DISTINCT_IMPLEMENTATION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(86, countDistinctImplementation_);
+      }
+      if (maxRowsInSet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(87, getMaxRowsInSet());
+      }
+      if (maxBytesInSet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(88, getMaxBytesInSet());
+      }
+      if (setOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(89, setOverflowMode_);
+      }
+      if (maxRowsInJoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(90, getMaxRowsInJoin());
+      }
+      if (maxBytesInJoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(91, getMaxBytesInJoin());
+      }
+      if (joinOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(92, joinOverflowMode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11449,6 +13483,28 @@ public final class UserOuterClass {
             .equals(other.getMaxExecutionTime());
       }
       result = result && timeoutOverflowMode_ == other.timeoutOverflowMode_;
+      result = result && (hasMaxRowsInSet() == other.hasMaxRowsInSet());
+      if (hasMaxRowsInSet()) {
+        result = result && getMaxRowsInSet()
+            .equals(other.getMaxRowsInSet());
+      }
+      result = result && (hasMaxBytesInSet() == other.hasMaxBytesInSet());
+      if (hasMaxBytesInSet()) {
+        result = result && getMaxBytesInSet()
+            .equals(other.getMaxBytesInSet());
+      }
+      result = result && setOverflowMode_ == other.setOverflowMode_;
+      result = result && (hasMaxRowsInJoin() == other.hasMaxRowsInJoin());
+      if (hasMaxRowsInJoin()) {
+        result = result && getMaxRowsInJoin()
+            .equals(other.getMaxRowsInJoin());
+      }
+      result = result && (hasMaxBytesInJoin() == other.hasMaxBytesInJoin());
+      if (hasMaxBytesInJoin()) {
+        result = result && getMaxBytesInJoin()
+            .equals(other.getMaxBytesInJoin());
+      }
+      result = result && joinOverflowMode_ == other.joinOverflowMode_;
       result = result && (hasMaxColumnsToRead() == other.hasMaxColumnsToRead());
       if (hasMaxColumnsToRead()) {
         result = result && getMaxColumnsToRead()
@@ -11484,6 +13540,17 @@ public final class UserOuterClass {
         result = result && getMaxExpandedAstElements()
             .equals(other.getMaxExpandedAstElements());
       }
+      result = result && (hasMinExecutionSpeed() == other.hasMinExecutionSpeed());
+      if (hasMinExecutionSpeed()) {
+        result = result && getMinExecutionSpeed()
+            .equals(other.getMinExecutionSpeed());
+      }
+      result = result && (hasMinExecutionSpeedBytes() == other.hasMinExecutionSpeedBytes());
+      if (hasMinExecutionSpeedBytes()) {
+        result = result && getMinExecutionSpeedBytes()
+            .equals(other.getMinExecutionSpeedBytes());
+      }
+      result = result && countDistinctImplementation_ == other.countDistinctImplementation_;
       result = result && (hasInputFormatValuesInterpretExpressions() == other.hasInputFormatValuesInterpretExpressions());
       if (hasInputFormatValuesInterpretExpressions()) {
         result = result && getInputFormatValuesInterpretExpressions()
@@ -11785,6 +13852,26 @@ public final class UserOuterClass {
       }
       hash = (37 * hash) + TIMEOUT_OVERFLOW_MODE_FIELD_NUMBER;
       hash = (53 * hash) + timeoutOverflowMode_;
+      if (hasMaxRowsInSet()) {
+        hash = (37 * hash) + MAX_ROWS_IN_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxRowsInSet().hashCode();
+      }
+      if (hasMaxBytesInSet()) {
+        hash = (37 * hash) + MAX_BYTES_IN_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxBytesInSet().hashCode();
+      }
+      hash = (37 * hash) + SET_OVERFLOW_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + setOverflowMode_;
+      if (hasMaxRowsInJoin()) {
+        hash = (37 * hash) + MAX_ROWS_IN_JOIN_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxRowsInJoin().hashCode();
+      }
+      if (hasMaxBytesInJoin()) {
+        hash = (37 * hash) + MAX_BYTES_IN_JOIN_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxBytesInJoin().hashCode();
+      }
+      hash = (37 * hash) + JOIN_OVERFLOW_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + joinOverflowMode_;
       if (hasMaxColumnsToRead()) {
         hash = (37 * hash) + MAX_COLUMNS_TO_READ_FIELD_NUMBER;
         hash = (53 * hash) + getMaxColumnsToRead().hashCode();
@@ -11813,6 +13900,16 @@ public final class UserOuterClass {
         hash = (37 * hash) + MAX_EXPANDED_AST_ELEMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxExpandedAstElements().hashCode();
       }
+      if (hasMinExecutionSpeed()) {
+        hash = (37 * hash) + MIN_EXECUTION_SPEED_FIELD_NUMBER;
+        hash = (53 * hash) + getMinExecutionSpeed().hashCode();
+      }
+      if (hasMinExecutionSpeedBytes()) {
+        hash = (37 * hash) + MIN_EXECUTION_SPEED_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMinExecutionSpeedBytes().hashCode();
+      }
+      hash = (37 * hash) + COUNT_DISTINCT_IMPLEMENTATION_FIELD_NUMBER;
+      hash = (53 * hash) + countDistinctImplementation_;
       if (hasInputFormatValuesInterpretExpressions()) {
         hash = (37 * hash) + INPUT_FORMAT_VALUES_INTERPRET_EXPRESSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getInputFormatValuesInterpretExpressions().hashCode();
@@ -12333,6 +14430,34 @@ public final class UserOuterClass {
         }
         timeoutOverflowMode_ = 0;
 
+        if (maxRowsInSetBuilder_ == null) {
+          maxRowsInSet_ = null;
+        } else {
+          maxRowsInSet_ = null;
+          maxRowsInSetBuilder_ = null;
+        }
+        if (maxBytesInSetBuilder_ == null) {
+          maxBytesInSet_ = null;
+        } else {
+          maxBytesInSet_ = null;
+          maxBytesInSetBuilder_ = null;
+        }
+        setOverflowMode_ = 0;
+
+        if (maxRowsInJoinBuilder_ == null) {
+          maxRowsInJoin_ = null;
+        } else {
+          maxRowsInJoin_ = null;
+          maxRowsInJoinBuilder_ = null;
+        }
+        if (maxBytesInJoinBuilder_ == null) {
+          maxBytesInJoin_ = null;
+        } else {
+          maxBytesInJoin_ = null;
+          maxBytesInJoinBuilder_ = null;
+        }
+        joinOverflowMode_ = 0;
+
         if (maxColumnsToReadBuilder_ == null) {
           maxColumnsToRead_ = null;
         } else {
@@ -12375,6 +14500,20 @@ public final class UserOuterClass {
           maxExpandedAstElements_ = null;
           maxExpandedAstElementsBuilder_ = null;
         }
+        if (minExecutionSpeedBuilder_ == null) {
+          minExecutionSpeed_ = null;
+        } else {
+          minExecutionSpeed_ = null;
+          minExecutionSpeedBuilder_ = null;
+        }
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          minExecutionSpeedBytes_ = null;
+        } else {
+          minExecutionSpeedBytes_ = null;
+          minExecutionSpeedBytesBuilder_ = null;
+        }
+        countDistinctImplementation_ = 0;
+
         if (inputFormatValuesInterpretExpressionsBuilder_ == null) {
           inputFormatValuesInterpretExpressions_ = null;
         } else {
@@ -12749,6 +14888,28 @@ public final class UserOuterClass {
           result.maxExecutionTime_ = maxExecutionTimeBuilder_.build();
         }
         result.timeoutOverflowMode_ = timeoutOverflowMode_;
+        if (maxRowsInSetBuilder_ == null) {
+          result.maxRowsInSet_ = maxRowsInSet_;
+        } else {
+          result.maxRowsInSet_ = maxRowsInSetBuilder_.build();
+        }
+        if (maxBytesInSetBuilder_ == null) {
+          result.maxBytesInSet_ = maxBytesInSet_;
+        } else {
+          result.maxBytesInSet_ = maxBytesInSetBuilder_.build();
+        }
+        result.setOverflowMode_ = setOverflowMode_;
+        if (maxRowsInJoinBuilder_ == null) {
+          result.maxRowsInJoin_ = maxRowsInJoin_;
+        } else {
+          result.maxRowsInJoin_ = maxRowsInJoinBuilder_.build();
+        }
+        if (maxBytesInJoinBuilder_ == null) {
+          result.maxBytesInJoin_ = maxBytesInJoin_;
+        } else {
+          result.maxBytesInJoin_ = maxBytesInJoinBuilder_.build();
+        }
+        result.joinOverflowMode_ = joinOverflowMode_;
         if (maxColumnsToReadBuilder_ == null) {
           result.maxColumnsToRead_ = maxColumnsToRead_;
         } else {
@@ -12784,6 +14945,17 @@ public final class UserOuterClass {
         } else {
           result.maxExpandedAstElements_ = maxExpandedAstElementsBuilder_.build();
         }
+        if (minExecutionSpeedBuilder_ == null) {
+          result.minExecutionSpeed_ = minExecutionSpeed_;
+        } else {
+          result.minExecutionSpeed_ = minExecutionSpeedBuilder_.build();
+        }
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          result.minExecutionSpeedBytes_ = minExecutionSpeedBytes_;
+        } else {
+          result.minExecutionSpeedBytes_ = minExecutionSpeedBytesBuilder_.build();
+        }
+        result.countDistinctImplementation_ = countDistinctImplementation_;
         if (inputFormatValuesInterpretExpressionsBuilder_ == null) {
           result.inputFormatValuesInterpretExpressions_ = inputFormatValuesInterpretExpressions_;
         } else {
@@ -13078,6 +15250,24 @@ public final class UserOuterClass {
         if (other.timeoutOverflowMode_ != 0) {
           setTimeoutOverflowModeValue(other.getTimeoutOverflowModeValue());
         }
+        if (other.hasMaxRowsInSet()) {
+          mergeMaxRowsInSet(other.getMaxRowsInSet());
+        }
+        if (other.hasMaxBytesInSet()) {
+          mergeMaxBytesInSet(other.getMaxBytesInSet());
+        }
+        if (other.setOverflowMode_ != 0) {
+          setSetOverflowModeValue(other.getSetOverflowModeValue());
+        }
+        if (other.hasMaxRowsInJoin()) {
+          mergeMaxRowsInJoin(other.getMaxRowsInJoin());
+        }
+        if (other.hasMaxBytesInJoin()) {
+          mergeMaxBytesInJoin(other.getMaxBytesInJoin());
+        }
+        if (other.joinOverflowMode_ != 0) {
+          setJoinOverflowModeValue(other.getJoinOverflowModeValue());
+        }
         if (other.hasMaxColumnsToRead()) {
           mergeMaxColumnsToRead(other.getMaxColumnsToRead());
         }
@@ -13098,6 +15288,15 @@ public final class UserOuterClass {
         }
         if (other.hasMaxExpandedAstElements()) {
           mergeMaxExpandedAstElements(other.getMaxExpandedAstElements());
+        }
+        if (other.hasMinExecutionSpeed()) {
+          mergeMinExecutionSpeed(other.getMinExecutionSpeed());
+        }
+        if (other.hasMinExecutionSpeedBytes()) {
+          mergeMinExecutionSpeedBytes(other.getMinExecutionSpeedBytes());
+        }
+        if (other.countDistinctImplementation_ != 0) {
+          setCountDistinctImplementationValue(other.getCountDistinctImplementationValue());
         }
         if (other.hasInputFormatValuesInterpretExpressions()) {
           mergeInputFormatValuesInterpretExpressions(other.getInputFormatValuesInterpretExpressions());
@@ -13175,8 +15374,11 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> readonlyBuilder_;
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13186,8 +15388,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13201,8 +15406,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13222,8 +15430,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13241,8 +15452,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13264,8 +15478,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13283,8 +15500,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13296,8 +15516,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13312,8 +15535,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Restricts permissions for non-DDL queries. Possible values: 0 (default) — no restrictions,
-       * 1 — only read data queries are allowed, 2 — read data and change settings queries are allowed.
+       * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
+       * * **0** (default)—no restrictions.
+       * * **1**—only read data queries are allowed.
+       * * **2**—read data and change settings queries are allowed.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value readonly = 1 [(.yandex.cloud.value) = "0-2"];</code>
@@ -13337,7 +15563,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> allowDdlBuilder_;
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13347,7 +15575,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13361,7 +15591,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13381,7 +15613,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13399,7 +15633,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13421,7 +15657,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13439,7 +15677,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13451,7 +15691,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13466,7 +15708,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether DDL queries are allowed. Default value: false.
+       * Determines whether DDL queries are allowed (e.g., **CREATE**, **ALTER**, **RENAME**, etc).
+       * Default value: **true**.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_allow_ddl).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue allow_ddl = 2;</code>
@@ -13490,8 +15734,13 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumBuilder_;
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13501,8 +15750,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13516,8 +15770,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13537,8 +15796,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13556,8 +15820,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13579,8 +15848,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13598,8 +15872,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13611,8 +15890,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13627,8 +15911,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For INSERT queries in the replicated table, wait writing for the specified number of replicas and linearize
-       * the addition of the data.
+       * Enables or disables write quorum for ClickHouse cluster.
+       * If the value is less than **2**, then write quorum is disabled, otherwise it is enabled.
+       * When used, write quorum guarantees that ClickHouse has written data to the quorum of **insert_quorum** replicas with no errors until the [insert_quorum_timeout] expires.
+       * All replicas in the quorum are in the consistent state, meaning that they contain linearized data from the previous **INSERT** queries.
+       * Employ write quorum, if you need the guarantees that the written data would not be lost in case of one or more replicas failure.
+       * You can use [select_sequential_consistency] setting to read the data written with write quorum.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-insert_quorum).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -13653,6 +15942,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13663,6 +15953,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13677,6 +15968,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13697,6 +15989,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13715,6 +16008,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13737,6 +16031,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13755,6 +16050,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13767,6 +16063,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13782,6 +16079,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Connection timeout in milliseconds.
+       * Value must be greater than **0** (default: **10000**, 10 seconds).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connect_timeout = 39 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13806,6 +16104,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13816,6 +16115,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13830,6 +16130,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13850,6 +16151,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13868,6 +16170,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13890,6 +16193,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13908,6 +16212,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13920,6 +16225,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13935,6 +16241,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Receive timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value receive_timeout = 40 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13959,6 +16266,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13969,6 +16277,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -13983,6 +16292,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14003,6 +16313,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14021,6 +16332,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14043,6 +16355,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14061,6 +16374,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14073,6 +16387,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14088,6 +16403,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Send timeout in milliseconds.
+       * Value must be greater than **0** (default: **300000**, 300 seconds or 5 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value send_timeout = 41 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -14111,7 +16427,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertQuorumTimeoutBuilder_;
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14121,7 +16440,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14135,7 +16457,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14155,7 +16480,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14173,7 +16501,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14195,7 +16526,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14213,7 +16547,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14225,7 +16562,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14240,7 +16580,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Quorum write timeout in milliseconds. Default value: 60000.
+       * Quorum write timeout in milliseconds.
+       * If the write quorum is enabled in the cluster, this timeout expires and some data is not written to the [insert_quorum] replicas, then ClickHouse will abort the execution of **INSERT** query and return an error.
+       * In this case, the client must send the query again to write the data block into the same or another replica.
+       * Minimum value: **1000**, 1 second (default: **60000**, 1 minute).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value insert_quorum_timeout = 4 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14264,8 +16607,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectSequentialConsistencyBuilder_;
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14275,8 +16618,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14290,8 +16633,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14311,8 +16654,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14330,8 +16673,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14353,8 +16696,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14372,8 +16715,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14385,8 +16728,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14401,8 +16744,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * For SELECT queries from the replicated table, throw an exception if the replica does not have a chunk written
-       * with the quorum; do not read the parts that have not yet been written with the quorum.
+       * Determines the behavior of **SELECT** queries from the replicated table: if enabled, ClickHouse will terminate a query with error message in case the replica does not have a chunk written with the quorum and will not read the parts that have not yet been written with the quorum.
+       * Default value: **false** (sequential consistency is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue select_sequential_consistency = 5;</code>
@@ -14426,8 +16769,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxReplicaDelayForDistributedQueriesBuilder_;
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14437,8 +16781,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14452,8 +16797,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14473,8 +16819,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14492,8 +16839,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14515,8 +16863,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14534,8 +16883,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14547,8 +16897,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14563,8 +16914,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used.
-       * Default value: 300000.
+       * Max replica delay in milliseconds. If a replica lags more than the set value, this replica is not used and becomes a stale one.
+       * Minimum value: **1000**, 1 second (default: **300000**, 300 seconds or 5 minutes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_replica_delay_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_replica_delay_for_distributed_queries = 6 [(.yandex.cloud.value) = "&gt;=1000"];</code>
@@ -14588,8 +16940,11 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fallbackToStaleReplicasForDistributedQueriesBuilder_;
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14599,8 +16954,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14614,8 +16972,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14635,8 +16996,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14654,8 +17018,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14677,8 +17044,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14696,8 +17066,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14709,8 +17082,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14725,8 +17101,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior when all replicas for the queried table are stale. If enabled, the query will be
-       * performed anyway. Otherwise, the error will be thrown.
+       * Enables or disables query forcing to a stale replica in case the actual data is unavailable.
+       * If enabled, ClickHouse will choose the most up-to-date replica and force the query to use the data in this replica.
+       * This setting can be used when doing **SELECT** query from a distributed table that points to replicated tables.
+       * Default value: **true** (query forcing is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-fallback_to_stale_replicas_for_distributed_queries).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue fallback_to_stale_replicas_for_distributed_queries = 7;</code>
@@ -14750,8 +17129,11 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> replicationAlterPartitionsSyncBuilder_;
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14761,8 +17143,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14776,8 +17161,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14797,8 +17185,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14816,8 +17207,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14839,8 +17233,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14858,8 +17255,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14871,8 +17271,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14887,8 +17290,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Wait mode for ALTER queries on replicated tables.
-       * Possible values: 0 - do not wait, 1 - wait for execution only of itself, 2 - wait for everyone.
+       * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
+       * * **0**—do not wait for replicas.
+       * * **1**—only wait for own execution (default).
+       * * **2**—wait for all replicas.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value replication_alter_partitions_sync = 42 [(.yandex.cloud.value) = "0-2"];</code>
@@ -14910,8 +17316,8 @@ public final class UserOuterClass {
       private int distributedProductMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-       * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+       * Determine the behavior of distributed subqueries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -14921,8 +17327,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-       * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+       * Determine the behavior of distributed subqueries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -14934,8 +17340,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-       * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+       * Determine the behavior of distributed subqueries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -14947,8 +17353,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-       * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+       * Determine the behavior of distributed subqueries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -14964,8 +17370,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior of distributed subqueries. Possible values: DISTRIBUTED_PRODUCT_MODE_DENY,
-       * DISTRIBUTED_PRODUCT_MODE_LOCAL, DISTRIBUTED_PRODUCT_MODE_GLOBAL, DISTRIBUTED_PRODUCT_MODE_ALLOW.
+       * Determine the behavior of distributed subqueries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#distributed-product-mode).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.DistributedProductMode distributed_product_mode = 43;</code>
@@ -14982,7 +17388,11 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> distributedAggregationMemoryEfficientBuilder_;
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -14992,7 +17402,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15006,7 +17420,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15026,7 +17444,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15044,7 +17466,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15066,7 +17492,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15084,7 +17514,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15096,7 +17530,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15111,7 +17549,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether the memory-saving mode of distributed aggregation is enabled.
+       * Enables of disables memory saving mode when doing distributed aggregation.
+       * When ClickHouse works with a distributed query, external aggregation is done on remote servers.
+       * Enable this setting to achieve a smaller memory footprint on the server that sourced such a distributed query.
+       * Default value: **false** (memory saving mode is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue distributed_aggregation_memory_efficient = 72;</code>
@@ -15288,7 +17730,10 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> skipUnavailableShardsBuilder_;
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15298,7 +17743,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15312,7 +17760,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15332,7 +17783,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15350,7 +17804,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15372,7 +17829,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15390,7 +17850,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15402,7 +17865,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15417,7 +17883,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether unavailable shards can be skipped.
+       * Enables or disables silent skipping of unavailable shards.
+       * A shard is considered unavailable if all its replicas are also unavailable.
+       * Default value: **false** (silent skipping is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-skip_unavailable_shards).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue skip_unavailable_shards = 81;</code>
@@ -15441,7 +17910,12 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15451,7 +17925,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15465,7 +17944,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15485,7 +17969,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15503,7 +17992,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15525,7 +18019,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15543,7 +18042,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15555,7 +18059,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15570,7 +18079,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether query compilation is enabled.
+       * Enables or disables query compilation.
+       * If you execute a lot of structurally identical queries, then enable this setting.
+       * As a result, such queries may be executed faster due to use of queries' compiled parts.
+       * Use this setting in combination with [min_count_to_compile] setting.
+       * Default value: **false** (compilation is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#compile).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile = 44;</code>
@@ -15594,7 +18108,13 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileBuilder_;
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15604,7 +18124,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15618,7 +18144,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15638,7 +18170,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15656,7 +18194,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15678,7 +18222,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15696,7 +18246,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15708,7 +18264,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15723,7 +18285,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of structurally identical queries before they are compiled.
+       * How many structurally identical queries ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled part of query is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#min-count-to-compile).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile = 45 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15747,7 +18315,11 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileExpressionsBuilder_;
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15757,7 +18329,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15771,7 +18347,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15791,7 +18371,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15809,7 +18393,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15831,7 +18419,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15849,7 +18441,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15861,7 +18457,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15876,7 +18476,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether expression compilation is enabled.
+       * Enables or disables expression compilation.
+       * If you execute a lot of queries that contain identical expressions, then enable this setting.
+       * As a result, such queries may be executed faster due to use of compiled expressions.
+       * Use this setting in combination with [min_count_to_compile_expression] setting.
+       * Default value: **false** (expression compilation is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue compile_expressions = 46;</code>
@@ -15900,7 +18504,12 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minCountToCompileExpressionBuilder_;
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15910,7 +18519,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15924,7 +18538,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15944,7 +18563,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15962,7 +18586,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -15984,7 +18613,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16002,7 +18636,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16014,7 +18653,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16029,7 +18673,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The number of identical expressions before they are compiled.
+       * How many identical expressions ClickHouse has to encounter before they are compiled.
+       * Minimum value: **0** (default: **3**).
+       * For the **0** value compilation is synchronous: a query waits for expression compilation process to complete prior to continuing execution.
+       * It is recommended to set this value only for testing purposes.
+       * For all other values, compilation is asynchronous: the compilation process executes in a separate thread.
+       * When a compiled expression is ready, it will be used by ClickHouse for eligible queries, including the ones that are currently running.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_count_to_compile_expression = 47 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16054,6 +18703,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16064,6 +18718,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16078,6 +18737,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16098,6 +18762,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16116,6 +18785,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16138,6 +18812,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16156,6 +18835,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16168,6 +18852,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16183,6 +18872,11 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum block size for reading.
+       * Data in ClickHouse is organized and processed by blocks (block is a set of columns' parts).
+       * The internal processing cycles for a single block are efficient enough, but there are noticeable expenditures on each block.
+       * This setting is a recommendation for size of block (in a count of rows) that should be loaded from tables.
+       * Value must be greater than **0** (default: **65536**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-max_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_block_size = 9 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16206,8 +18900,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsertBlockSizeRowsBuilder_;
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16217,8 +18912,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16232,8 +18928,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16253,8 +18950,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16272,8 +18970,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16295,8 +18994,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16314,8 +19014,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16327,8 +19028,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16343,8 +19045,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in rows, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of rows in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **1048576**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_rows = 48 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16368,8 +19071,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsertBlockSizeBytesBuilder_;
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16379,8 +19083,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16394,8 +19099,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16415,8 +19121,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16434,8 +19141,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16457,8 +19165,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16476,8 +19185,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16489,8 +19199,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16505,8 +19216,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Squash blocks passed to INSERT query to specified size in bytes, if blocks are not big enough. If set to 0,
-       * blocks will never be squashed.
+       * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
+       * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
+       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16530,7 +19242,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxInsertBlockSizeBuilder_;
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16540,7 +19255,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16554,7 +19272,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16574,7 +19295,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16592,7 +19316,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16614,7 +19341,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16632,7 +19362,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16644,7 +19377,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16659,7 +19395,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum block size for insertion.
+       * Allows to form blocks of the specified size (in bytes) when inserting data in a table.
+       * This setting has effect only if server is creating such blocks by itself.
+       * Value must be greater than **0** (default: **1048576**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_insert_block_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_insert_block_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -16683,7 +19422,12 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minBytesToUseDirectIoBuilder_;
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16693,7 +19437,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16707,7 +19456,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16727,7 +19481,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16745,7 +19504,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16767,7 +19531,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16785,7 +19554,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16797,7 +19571,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16812,7 +19591,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes for reading the data with O_DIRECT option during SELECT queries execution.
+       * Limits the minimum number of bytes to enable unbuffered direct reads from disk (Direct I/O).
+       * By default, ClickHouse does not read data directly from disk, but relies on the filesystem and its cache instead.
+       * Such reading strategy is effective when the data volume is small.
+       * If the amount of the data to read is huge, it is more effective to read directly from the disk, bypassing the filesystem cache.
+       * If the total amount of the data to read is greater than the value of this setting, then ClickHouse will fetch this data directly from the disk.
+       * Minimal value and default value: **0**, Direct I/O is disabled.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_bytes_to_use_direct_io = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -16836,7 +19620,12 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useUncompressedCacheBuilder_;
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16846,7 +19635,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16860,7 +19654,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16880,7 +19679,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16898,7 +19702,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16920,7 +19729,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16938,7 +19752,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16950,7 +19769,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16965,7 +19789,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether to use the cache of uncompressed blocks.
+       * Determines whether to use the cache of uncompressed blocks, or not.
+       * Using this cache can significantly reduce latency and increase the throughput when a huge amount of small queries is to be processed.
+       * Enable this setting for the users who instantiates small queries frequently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (uncompressed cache is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#setting-use_uncompressed_cache).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_uncompressed_cache = 51;</code>
@@ -16989,8 +19818,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMaxRowsToUseCacheBuilder_;
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17000,8 +19831,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17015,8 +19848,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17036,8 +19871,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17055,8 +19892,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17078,8 +19917,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17097,8 +19938,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17110,8 +19953,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17126,8 +19971,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in rows to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in rows of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **128x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_rows_to_use_cache = 52 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17151,8 +19998,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMaxBytesToUseCacheBuilder_;
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17162,8 +20011,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17177,8 +20028,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17198,8 +20051,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17217,8 +20072,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17240,8 +20097,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17259,8 +20118,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17272,8 +20133,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17288,8 +20151,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum request size in bytes to use the cache of uncompressed data. The cache is not used for requests larger
+       * Limits the maximum size in bytes of the request that can use the cache of uncompressed data. The cache is not used for requests larger
        * than the specified value.
+       * Use this setting in combination with [use_uncompressed_cache] setting.
+       * Value must be greater than **0** (default: **192x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_max_bytes_to_use_cache = 53 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17313,7 +20178,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMinRowsForConcurrentReadBuilder_;
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17323,7 +20191,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17337,7 +20208,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17357,7 +20231,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17375,7 +20252,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17397,7 +20277,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17415,7 +20298,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17427,7 +20313,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17442,7 +20331,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of rows to be read from a file to enable concurrent read.
+       * Limits the minimum number of rows to be read from a file to enable concurrent read.
+       * If the number of rows to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **20x8192**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_rows_for_concurrent_read = 54 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17466,7 +20358,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeTreeMinBytesForConcurrentReadBuilder_;
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17476,7 +20371,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17490,7 +20388,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17510,7 +20411,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17528,7 +20432,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17550,7 +20457,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17568,7 +20478,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17580,7 +20493,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17595,7 +20511,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The minimum number of bytes to be read from a file to enable concurrent read.
+       * Limits the number of bytes to be read from a file to enable concurrent read.
+       * If the number of bytes to be read exceeds this value, then ClickHouse will try to use a few threads to read from a file concurrently.
+       * This setting has effect only for tables of the MergeTree family.
+       * Value must be greater than **0** (default: **24x10x1024x1024**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value merge_tree_min_bytes_for_concurrent_read = 55 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -17618,12 +20537,34 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesBeforeExternalGroupByBuilder_;
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public boolean hasMaxBytesBeforeExternalGroupBy() {
         return maxBytesBeforeExternalGroupByBuilder_ != null || maxBytesBeforeExternalGroupBy_ != null;
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public com.google.protobuf.Int64Value getMaxBytesBeforeExternalGroupBy() {
@@ -17634,6 +20575,17 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public Builder setMaxBytesBeforeExternalGroupBy(com.google.protobuf.Int64Value value) {
@@ -17650,6 +20602,17 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public Builder setMaxBytesBeforeExternalGroupBy(
@@ -17664,6 +20627,17 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public Builder mergeMaxBytesBeforeExternalGroupBy(com.google.protobuf.Int64Value value) {
@@ -17682,6 +20656,17 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public Builder clearMaxBytesBeforeExternalGroupBy() {
@@ -17696,6 +20681,17 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxBytesBeforeExternalGroupByBuilder() {
@@ -17704,6 +20700,17 @@ public final class UserOuterClass {
         return getMaxBytesBeforeExternalGroupByFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalGroupByOrBuilder() {
@@ -17715,6 +20722,17 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of RAM consumption (in bytes) after that the temporary data, collected during the **GROUP BY** operation, should be flushed to disk to limit the RAM comsumption.
+       * By default, aggregation is done by employing hash table that resides in RAM.
+       * A query can result in aggregation of huge data volumes that can lead to memory exhaustion and abortion of the query (see the [max_memory_usage] setting).
+       * For such queries, you can use this setting to force ClickHouse to do flushing and complete aggregation successfully.
+       * Minimal value and default value: **0**, **GROUP BY** in the external memory is disabled.
+       * When using aggregation in external memory, it is recommended to set the value of this setting twice as low as the [max_memory_usage] setting value (by default, the maximum memory usage is limited to ten gigabytes).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/select/group-by/#select-group-by-in-external-memory).
+       * See also: the [distributed_aggregation_memory_efficient] setting.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_group_by = 74;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17735,12 +20753,20 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesBeforeExternalSortBuilder_;
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public boolean hasMaxBytesBeforeExternalSort() {
         return maxBytesBeforeExternalSortBuilder_ != null || maxBytesBeforeExternalSort_ != null;
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public com.google.protobuf.Int64Value getMaxBytesBeforeExternalSort() {
@@ -17751,6 +20777,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public Builder setMaxBytesBeforeExternalSort(com.google.protobuf.Int64Value value) {
@@ -17767,6 +20797,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public Builder setMaxBytesBeforeExternalSort(
@@ -17781,6 +20815,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public Builder mergeMaxBytesBeforeExternalSort(com.google.protobuf.Int64Value value) {
@@ -17799,6 +20837,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public Builder clearMaxBytesBeforeExternalSort() {
@@ -17813,6 +20855,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxBytesBeforeExternalSortBuilder() {
@@ -17821,6 +20867,10 @@ public final class UserOuterClass {
         return getMaxBytesBeforeExternalSortFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxBytesBeforeExternalSortOrBuilder() {
@@ -17832,6 +20882,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * This setting is equivalent of the [max_bytes_before_external_group_by] setting, except for it is for sort operation (**ORDER BY**), not aggregation.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value max_bytes_before_external_sort = 75;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17852,12 +20906,22 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> groupByTwoLevelThresholdBuilder_;
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public boolean hasGroupByTwoLevelThreshold() {
         return groupByTwoLevelThresholdBuilder_ != null || groupByTwoLevelThreshold_ != null;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public com.google.protobuf.Int64Value getGroupByTwoLevelThreshold() {
@@ -17868,6 +20932,11 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public Builder setGroupByTwoLevelThreshold(com.google.protobuf.Int64Value value) {
@@ -17884,6 +20953,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public Builder setGroupByTwoLevelThreshold(
@@ -17898,6 +20972,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public Builder mergeGroupByTwoLevelThreshold(com.google.protobuf.Int64Value value) {
@@ -17916,6 +20995,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public Builder clearGroupByTwoLevelThreshold() {
@@ -17930,6 +21014,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public com.google.protobuf.Int64Value.Builder getGroupByTwoLevelThresholdBuilder() {
@@ -17938,6 +21027,11 @@ public final class UserOuterClass {
         return getGroupByTwoLevelThresholdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdOrBuilder() {
@@ -17949,6 +21043,11 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17969,12 +21068,22 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> groupByTwoLevelThresholdBytesBuilder_;
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public boolean hasGroupByTwoLevelThresholdBytes() {
         return groupByTwoLevelThresholdBytesBuilder_ != null || groupByTwoLevelThresholdBytes_ != null;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public com.google.protobuf.Int64Value getGroupByTwoLevelThresholdBytes() {
@@ -17985,6 +21094,11 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public Builder setGroupByTwoLevelThresholdBytes(com.google.protobuf.Int64Value value) {
@@ -18001,6 +21115,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public Builder setGroupByTwoLevelThresholdBytes(
@@ -18015,6 +21134,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public Builder mergeGroupByTwoLevelThresholdBytes(com.google.protobuf.Int64Value value) {
@@ -18033,6 +21157,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public Builder clearGroupByTwoLevelThresholdBytes() {
@@ -18047,6 +21176,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public com.google.protobuf.Int64Value.Builder getGroupByTwoLevelThresholdBytesBuilder() {
@@ -18055,6 +21189,11 @@ public final class UserOuterClass {
         return getGroupByTwoLevelThresholdBytesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getGroupByTwoLevelThresholdBytesOrBuilder() {
@@ -18066,6 +21205,11 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
+       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -18087,7 +21231,13 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> priorityBuilder_;
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18097,7 +21247,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18111,7 +21267,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18131,7 +21293,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18149,7 +21317,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18171,7 +21345,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18189,7 +21369,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18201,7 +21387,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18216,7 +21408,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Priority of the query.
+       * Sets the priority of a query.
+       * * **0**—priority is not used.
+       * * **1**—the highest priority.
+       * * and so on. The higher the number, the lower a query's priority.
+       * This setting should be set up for each query individually.
+       * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
+       * Minimal value and default value: **0**, priority is not used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value priority = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18240,7 +21438,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxThreadsBuilder_;
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18250,7 +21451,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18264,7 +21468,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18284,7 +21491,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18302,7 +21512,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18324,7 +21537,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18342,7 +21558,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18354,7 +21573,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18369,7 +21591,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of threads to execute the request.
+       * Limits the maximum number of threads to process the request (setting does not take threads that read data from remote servers into account).
+       * This setting applies to threads that perform the same stages of the query processing pipeline in parallel.
+       * Minimal value and default value: **0** (the thread number is calculated automatically based on the number of physical CPU cores, no HyperThreading cores are taken into account).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_threads).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 8 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -18393,7 +21618,13 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMemoryUsageBuilder_;
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18403,7 +21634,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18417,7 +21654,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18437,7 +21680,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18455,7 +21704,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18477,7 +21732,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18495,7 +21756,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18507,7 +21774,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18522,7 +21795,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing of a single query.
+       * Limits the maximum memory usage (in bytes) for processing of a single user's query on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for any user's single query on a single server.
+       * Minimal value: **0**, no limitation is set.
+       * Value that is set in the ClickHouse default config file: **10737418240** (10 GB).
+       * If you use [max_bytes_before_external_group_by] or [max_bytes_before_external_sort] setting, then it is recommended to set their values twice as low as [max_memory_usage] setting value.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#settings_max_memory_usage).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage = 11 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18546,7 +21825,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMemoryUsageForUserBuilder_;
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18556,7 +21838,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18570,7 +21855,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18590,7 +21878,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18608,7 +21899,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18630,7 +21924,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18648,7 +21945,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18660,7 +21960,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18675,7 +21978,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum memory usage for processing all concurrently running queries for the user.
+       * Limits the maximum memory usage (in bytes) for processing of user's queries on a single server.
+       * This setting does not take server's free RAM amount or total RAM amount into account.
+       * This limitation is enforced for all queries that belong to one user and run simultaneously on a single server.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_memory_usage_for_user = 12 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -18700,6 +22006,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18710,6 +22017,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18724,6 +22032,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18744,6 +22053,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18762,6 +22072,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18784,6 +22095,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18802,6 +22114,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18814,6 +22127,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18829,6 +22143,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth = 57;</code>
@@ -18853,6 +22168,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18863,6 +22179,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18877,6 +22194,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18897,6 +22215,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18915,6 +22234,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18937,6 +22257,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18955,6 +22276,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18967,6 +22289,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -18982,6 +22305,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * The maximum speed of data exchange over the network in bytes per second for all concurrently running user queries.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_network_bandwidth_for_user = 58;</code>
@@ -19005,7 +22329,10 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forceIndexByDateBuilder_;
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19015,7 +22342,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19029,7 +22359,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19049,7 +22382,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19067,7 +22403,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19089,7 +22428,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19107,7 +22449,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19119,7 +22464,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19134,7 +22482,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if the index can’t be used by date.
+       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_index_by_date = 59;</code>
@@ -19158,7 +22509,10 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forcePrimaryKeyBuilder_;
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19168,7 +22522,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19182,7 +22539,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19202,7 +22562,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19220,7 +22583,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19242,7 +22608,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19260,7 +22629,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19272,7 +22644,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19287,7 +22662,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Disables query execution if indexing by the primary key is not possible.
+       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * This setting has effect only for tables of the MergeTree family.
+       * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue force_primary_key = 60;</code>
@@ -19311,7 +22689,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToReadBuilder_;
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19321,7 +22701,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19335,7 +22717,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19355,7 +22739,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19373,7 +22759,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19395,7 +22783,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19413,7 +22803,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19425,7 +22817,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19440,7 +22834,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be read from a table when running a query.
+       * Limits the maximum number of rows that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-rows-to-read).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_read = 13 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19464,7 +22860,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToReadBuilder_;
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19474,7 +22871,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19488,7 +22886,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19508,7 +22907,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19526,7 +22926,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19548,7 +22949,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19566,7 +22968,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19578,7 +22981,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19593,7 +22997,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table when running a query.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_read = 14 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19615,8 +23020,9 @@ public final class UserOuterClass {
       private int readOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -19626,8 +23032,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -19639,8 +23046,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -19652,8 +23060,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -19669,8 +23078,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_read or max_bytes_to_read limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -19687,7 +23097,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToGroupByBuilder_;
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19697,7 +23109,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19711,7 +23125,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19731,7 +23147,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19749,7 +23167,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19771,7 +23191,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19789,7 +23211,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19801,7 +23225,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19816,7 +23242,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of unique keys received from aggregation.
+       * Limits the maximum number of unique keys received from aggregation function.
+       * This setting helps to reduce RAM consumption while doing aggregation.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_group_by = 16 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19838,8 +23266,10 @@ public final class UserOuterClass {
       private int groupByOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-       * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
+       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -19849,8 +23279,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-       * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
+       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -19862,8 +23294,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-       * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
+       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -19875,8 +23309,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-       * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
+       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -19892,8 +23328,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_group_by limit. Possible values: GROUP_BY_OVERFLOW_MODE_THROW,
-       * GROUP_BY_OVERFLOW_MODE_BREAK, GROUP_BY_OVERFLOW_MODE_ANY.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
+       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -19910,7 +23348,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToSortBuilder_;
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19920,7 +23360,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19934,7 +23376,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19954,7 +23398,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19972,7 +23418,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19994,7 +23442,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20012,7 +23462,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20024,7 +23476,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20039,7 +23493,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows before sorting.
+       * Limits the maximum number of rows that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_sort = 18 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20063,7 +23519,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToSortBuilder_;
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20073,7 +23531,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20087,7 +23547,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20107,7 +23569,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20125,7 +23589,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20147,7 +23613,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20165,7 +23633,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20177,7 +23647,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20192,7 +23664,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes before sorting.
+       * Limits the maximum number of bytes (uncompressed data) that can be read from a table for sorting.
+       * This setting helps to reduce RAM consumption.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_sort = 19 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20214,8 +23688,9 @@ public final class UserOuterClass {
       private int sortOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -20225,8 +23700,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -20238,8 +23714,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -20251,8 +23728,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -20268,8 +23746,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_sort or max_bytes_to_sort limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -20286,7 +23765,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxResultRowsBuilder_;
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20296,7 +23777,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20310,7 +23793,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20330,7 +23815,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20348,7 +23835,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20370,7 +23859,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20388,7 +23879,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20400,7 +23893,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20415,7 +23910,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of rows in the result.
+       * Limits the number of rows in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_rows = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20439,7 +23936,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxResultBytesBuilder_;
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20449,7 +23948,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20463,7 +23964,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20483,7 +23986,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20501,7 +24006,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20523,7 +24030,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20541,7 +24050,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20553,7 +24064,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20568,7 +24081,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Limit on the number of bytes in the result.
+       * Limits the number of bytes in the result.
+       * This limitation is also checked for subqueries and parts of distributed queries that run on remote servers.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_result_bytes = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20590,8 +24105,9 @@ public final class UserOuterClass {
       private int resultOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -20601,8 +24117,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -20614,8 +24131,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -20627,8 +24145,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -20644,8 +24163,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_result_rows or max_result_bytes limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -20662,7 +24182,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInDistinctBuilder_;
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20672,7 +24193,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20686,7 +24208,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20706,7 +24229,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20724,7 +24248,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20746,7 +24271,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20764,7 +24290,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20776,7 +24303,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20791,7 +24319,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of different rows when using DISTINCT.
+       * Limits the maximum number of different rows when using **DISTINCT**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_in_distinct = 24 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20815,7 +24344,7 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInDistinctBuilder_;
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20825,7 +24354,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20839,7 +24368,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20859,7 +24388,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20877,7 +24406,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20899,7 +24428,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20917,7 +24446,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20929,7 +24458,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20944,7 +24473,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes used by a hash table when using DISTINCT.
+       * Limits the maximum size of a hash table in bytes (uncompressed data) when using **DISTINCT**.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_in_distinct = 25 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -20966,8 +24495,9 @@ public final class UserOuterClass {
       private int distinctOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -20977,8 +24507,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -20990,8 +24521,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -21003,8 +24535,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -21020,8 +24553,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_in_distinct or max_bytes_in_distinct limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -21038,7 +24572,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsToTransferBuilder_;
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21048,7 +24583,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21062,7 +24598,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21082,7 +24619,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21100,7 +24638,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21122,7 +24661,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21140,7 +24680,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21152,7 +24693,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21167,7 +24709,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of rows that can be passed to a remote server or saved in a temporary table when using GLOBAL IN.
+       * Limits the maximum number of rows that can be passed to a remote server or saved in a temporary table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_rows_to_transfer = 27 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21191,8 +24734,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToTransferBuilder_;
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21202,8 +24746,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21217,8 +24762,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21238,8 +24784,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21257,8 +24804,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21280,8 +24828,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21299,8 +24848,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21312,8 +24862,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21328,8 +24879,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
-       * table when using GLOBAL IN.
+       * Limits the maximum number of bytes (uncompressed data) that can be passed to a remote server or saved in a temporary
+       * table when using **GLOBAL IN**.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_bytes_to_transfer = 28 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21351,8 +24903,9 @@ public final class UserOuterClass {
       private int transferOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -21362,8 +24915,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -21375,8 +24929,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -21388,8 +24943,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -21405,8 +24961,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_rows_to_transfer or max_bytes_to_transfer limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -21423,7 +24980,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxExecutionTimeBuilder_;
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21433,7 +24992,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21447,7 +25008,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21467,7 +25030,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21485,7 +25050,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21507,7 +25074,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21525,7 +25094,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21537,7 +25108,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21552,7 +25125,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum query execution time in milliseconds.
+       * Limits the maximum query execution time in milliseconds.
+       * At this moment, this limitation is not checked when passing one of the sorting stages, as well as merging and finalizing aggregation funictions.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_execution_time = 30 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21574,8 +25149,9 @@ public final class UserOuterClass {
       private int timeoutOverflowMode_ = 0;
       /**
        * <pre>
-       * Determine the behavior on exceeding max_execution_time limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -21585,8 +25161,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_execution_time limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -21598,8 +25175,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_execution_time limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -21611,8 +25189,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_execution_time limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -21628,8 +25207,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Determine the behavior on exceeding max_execution_time limit.
-       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
+       * * **throw**—abort query execution, return an error.
+       * * **break**—stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -21641,12 +25221,766 @@ public final class UserOuterClass {
         return this;
       }
 
+      private com.google.protobuf.Int64Value maxRowsInSet_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInSetBuilder_;
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxRowsInSet() {
+        return maxRowsInSetBuilder_ != null || maxRowsInSet_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxRowsInSet() {
+        if (maxRowsInSetBuilder_ == null) {
+          return maxRowsInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInSet_;
+        } else {
+          return maxRowsInSetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxRowsInSet(com.google.protobuf.Int64Value value) {
+        if (maxRowsInSetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxRowsInSet_ = value;
+          onChanged();
+        } else {
+          maxRowsInSetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxRowsInSet(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxRowsInSetBuilder_ == null) {
+          maxRowsInSet_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxRowsInSetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxRowsInSet(com.google.protobuf.Int64Value value) {
+        if (maxRowsInSetBuilder_ == null) {
+          if (maxRowsInSet_ != null) {
+            maxRowsInSet_ =
+              com.google.protobuf.Int64Value.newBuilder(maxRowsInSet_).mergeFrom(value).buildPartial();
+          } else {
+            maxRowsInSet_ = value;
+          }
+          onChanged();
+        } else {
+          maxRowsInSetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxRowsInSet() {
+        if (maxRowsInSetBuilder_ == null) {
+          maxRowsInSet_ = null;
+          onChanged();
+        } else {
+          maxRowsInSet_ = null;
+          maxRowsInSetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxRowsInSetBuilder() {
+        
+        onChanged();
+        return getMaxRowsInSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInSetOrBuilder() {
+        if (maxRowsInSetBuilder_ != null) {
+          return maxRowsInSetBuilder_.getMessageOrBuilder();
+        } else {
+          return maxRowsInSet_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInSet_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on the number of rows in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_set = 87 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxRowsInSetFieldBuilder() {
+        if (maxRowsInSetBuilder_ == null) {
+          maxRowsInSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxRowsInSet(),
+                  getParentForChildren(),
+                  isClean());
+          maxRowsInSet_ = null;
+        }
+        return maxRowsInSetBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxBytesInSet_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInSetBuilder_;
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxBytesInSet() {
+        return maxBytesInSetBuilder_ != null || maxBytesInSet_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxBytesInSet() {
+        if (maxBytesInSetBuilder_ == null) {
+          return maxBytesInSet_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInSet_;
+        } else {
+          return maxBytesInSetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBytesInSet(com.google.protobuf.Int64Value value) {
+        if (maxBytesInSetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxBytesInSet_ = value;
+          onChanged();
+        } else {
+          maxBytesInSetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBytesInSet(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxBytesInSetBuilder_ == null) {
+          maxBytesInSet_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxBytesInSetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxBytesInSet(com.google.protobuf.Int64Value value) {
+        if (maxBytesInSetBuilder_ == null) {
+          if (maxBytesInSet_ != null) {
+            maxBytesInSet_ =
+              com.google.protobuf.Int64Value.newBuilder(maxBytesInSet_).mergeFrom(value).buildPartial();
+          } else {
+            maxBytesInSet_ = value;
+          }
+          onChanged();
+        } else {
+          maxBytesInSetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxBytesInSet() {
+        if (maxBytesInSetBuilder_ == null) {
+          maxBytesInSet_ = null;
+          onChanged();
+        } else {
+          maxBytesInSet_ = null;
+          maxBytesInSetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxBytesInSetBuilder() {
+        
+        onChanged();
+        return getMaxBytesInSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInSetOrBuilder() {
+        if (maxBytesInSetBuilder_ != null) {
+          return maxBytesInSetBuilder_.getMessageOrBuilder();
+        } else {
+          return maxBytesInSet_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInSet_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on the number of bytes in the set resulting from the execution of the IN section.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_set = 88 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxBytesInSetFieldBuilder() {
+        if (maxBytesInSetBuilder_ == null) {
+          maxBytesInSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxBytesInSet(),
+                  getParentForChildren(),
+                  isClean());
+          maxBytesInSet_ = null;
+        }
+        return maxBytesInSetBuilder_;
+      }
+
+      private int setOverflowMode_ = 0;
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       */
+      public int getSetOverflowModeValue() {
+        return setOverflowMode_;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       */
+      public Builder setSetOverflowModeValue(int value) {
+        setOverflowMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getSetOverflowMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(setOverflowMode_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       */
+      public Builder setSetOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        setOverflowMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_set or max_bytes_in_set limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode set_overflow_mode = 89;</code>
+       */
+      public Builder clearSetOverflowMode() {
+        
+        setOverflowMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value maxRowsInJoin_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxRowsInJoinBuilder_;
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxRowsInJoin() {
+        return maxRowsInJoinBuilder_ != null || maxRowsInJoin_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxRowsInJoin() {
+        if (maxRowsInJoinBuilder_ == null) {
+          return maxRowsInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInJoin_;
+        } else {
+          return maxRowsInJoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxRowsInJoin(com.google.protobuf.Int64Value value) {
+        if (maxRowsInJoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxRowsInJoin_ = value;
+          onChanged();
+        } else {
+          maxRowsInJoinBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxRowsInJoin(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxRowsInJoinBuilder_ == null) {
+          maxRowsInJoin_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxRowsInJoinBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxRowsInJoin(com.google.protobuf.Int64Value value) {
+        if (maxRowsInJoinBuilder_ == null) {
+          if (maxRowsInJoin_ != null) {
+            maxRowsInJoin_ =
+              com.google.protobuf.Int64Value.newBuilder(maxRowsInJoin_).mergeFrom(value).buildPartial();
+          } else {
+            maxRowsInJoin_ = value;
+          }
+          onChanged();
+        } else {
+          maxRowsInJoinBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxRowsInJoin() {
+        if (maxRowsInJoinBuilder_ == null) {
+          maxRowsInJoin_ = null;
+          onChanged();
+        } else {
+          maxRowsInJoin_ = null;
+          maxRowsInJoinBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxRowsInJoinBuilder() {
+        
+        onChanged();
+        return getMaxRowsInJoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxRowsInJoinOrBuilder() {
+        if (maxRowsInJoinBuilder_ != null) {
+          return maxRowsInJoinBuilder_.getMessageOrBuilder();
+        } else {
+          return maxRowsInJoin_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxRowsInJoin_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in rows.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_rows_in_join = 90 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxRowsInJoinFieldBuilder() {
+        if (maxRowsInJoinBuilder_ == null) {
+          maxRowsInJoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxRowsInJoin(),
+                  getParentForChildren(),
+                  isClean());
+          maxRowsInJoin_ = null;
+        }
+        return maxRowsInJoinBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxBytesInJoin_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesInJoinBuilder_;
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMaxBytesInJoin() {
+        return maxBytesInJoinBuilder_ != null || maxBytesInJoin_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMaxBytesInJoin() {
+        if (maxBytesInJoinBuilder_ == null) {
+          return maxBytesInJoin_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInJoin_;
+        } else {
+          return maxBytesInJoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBytesInJoin(com.google.protobuf.Int64Value value) {
+        if (maxBytesInJoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxBytesInJoin_ = value;
+          onChanged();
+        } else {
+          maxBytesInJoinBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxBytesInJoin(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxBytesInJoinBuilder_ == null) {
+          maxBytesInJoin_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxBytesInJoinBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxBytesInJoin(com.google.protobuf.Int64Value value) {
+        if (maxBytesInJoinBuilder_ == null) {
+          if (maxBytesInJoin_ != null) {
+            maxBytesInJoin_ =
+              com.google.protobuf.Int64Value.newBuilder(maxBytesInJoin_).mergeFrom(value).buildPartial();
+          } else {
+            maxBytesInJoin_ = value;
+          }
+          onChanged();
+        } else {
+          maxBytesInJoinBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxBytesInJoin() {
+        if (maxBytesInJoinBuilder_ == null) {
+          maxBytesInJoin_ = null;
+          onChanged();
+        } else {
+          maxBytesInJoin_ = null;
+          maxBytesInJoinBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxBytesInJoinBuilder() {
+        
+        onChanged();
+        return getMaxBytesInJoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxBytesInJoinOrBuilder() {
+        if (maxBytesInJoinBuilder_ != null) {
+          return maxBytesInJoinBuilder_.getMessageOrBuilder();
+        } else {
+          return maxBytesInJoin_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesInJoin_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on maximum size of the hash table for JOIN, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_bytes_in_join = 91 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxBytesInJoinFieldBuilder() {
+        if (maxBytesInJoinBuilder_ == null) {
+          maxBytesInJoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxBytesInJoin(),
+                  getParentForChildren(),
+                  isClean());
+          maxBytesInJoin_ = null;
+        }
+        return maxBytesInJoinBuilder_;
+      }
+
+      private int joinOverflowMode_ = 0;
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       */
+      public int getJoinOverflowModeValue() {
+        return joinOverflowMode_;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       */
+      public Builder setJoinOverflowModeValue(int value) {
+        joinOverflowMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode getJoinOverflowMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.valueOf(joinOverflowMode_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       */
+      public Builder setJoinOverflowMode(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        joinOverflowMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determine the behavior on exceeding max_rows_in_join or max_bytes_in_join limit.
+       * Possible values: OVERFLOW_MODE_THROW, OVERFLOW_MODE_BREAK.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode join_overflow_mode = 92;</code>
+       */
+      public Builder clearJoinOverflowMode() {
+        
+        joinOverflowMode_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.Int64Value maxColumnsToRead_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxColumnsToReadBuilder_;
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21656,7 +25990,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21670,7 +26006,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21690,7 +26028,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21708,7 +26048,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21730,7 +26072,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21748,7 +26092,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21760,7 +26106,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21775,7 +26123,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of columns that can be read from a table in a single query.
+       * Limits the maximum number of columns that can be read from a table in a single query.
+       * If the query requires to read more columns to complete, then it will be aborted.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_columns_to_read = 32 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21799,7 +26149,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryColumnsBuilder_;
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21809,7 +26160,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21823,7 +26175,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21843,7 +26196,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21861,7 +26215,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21883,7 +26238,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21901,7 +26257,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21913,7 +26270,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21928,7 +26286,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, including constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_columns = 33 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21952,7 +26311,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryNonConstColumnsBuilder_;
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21962,7 +26322,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21976,7 +26337,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21996,7 +26358,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22014,7 +26377,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22036,7 +26400,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22054,7 +26419,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22066,7 +26432,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22081,7 +26448,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Limits the maximum number of temporary columns that must be kept in RAM at the same time when running a query, excluding constant columns.
+       * Minimal value and default value: **0**, no limitation is set.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_temporary_non_const_columns = 34 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -22105,7 +26473,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxQuerySizeBuilder_;
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22115,7 +26485,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22129,7 +26501,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22149,7 +26523,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22167,7 +26543,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22189,7 +26567,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22207,7 +26587,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22219,7 +26601,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22234,7 +26618,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum part of a query that can be taken to RAM for parsing with the SQL parser, in bytes. Default value: 262144.
+       * Limits the size of the part of a query that can be transferred to RAM for parsing with the SQL parser, in bytes.
+       * Value must be greater than **0** (default: **262144**).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-max_query_size).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_query_size = 35 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22258,7 +26644,14 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAstDepthBuilder_;
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22268,7 +26661,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22282,7 +26682,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22302,7 +26709,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22320,7 +26734,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22342,7 +26763,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22360,7 +26788,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22372,7 +26807,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22387,7 +26829,14 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum depth of query syntax tree. Default value: 1000.
+       * Limits the maximum depth of query syntax tree.
+       * Executing a big and complex query may result in building a syntax tree of enormous depth.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * For example, the **SELECT *** query may result in more complex and deeper syntax tree, compared to the **SELECT ... WHERE ...** query, containing constraints and conditions, in the most cases.
+       * A user can be forced to construct more optimized queries, if this setting is used.
+       * Value must be greater than **0** (default: **1000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-depth).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_depth = 36 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22411,7 +26860,12 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAstElementsBuilder_;
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22421,7 +26875,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22435,7 +26894,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22455,7 +26919,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22473,7 +26942,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22495,7 +26969,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22513,7 +26992,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22525,7 +27009,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22540,7 +27029,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes. Default value: 50000.
+       * Limits the maximum size of query syntax tree in number of nodes.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **50000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#max-ast-elements).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_ast_elements = 37 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22564,7 +27058,11 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxExpandedAstElementsBuilder_;
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22574,7 +27072,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22588,7 +27090,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22608,7 +27114,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22626,7 +27136,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22648,7 +27162,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22666,7 +27184,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22678,7 +27200,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22693,7 +27219,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk. Default value: 500000.
+       * Limits the maximum size of query syntax tree in number of nodes after expansion of aliases and the asterisk values.
+       * Executing a big and complex query may result in building a syntax tree of enormous size.
+       * By using this setting, you can prohibit execution of over-sized or non-optimized queries for huge tables.
+       * Value must be greater than **0** (default: **500000**).
+       * If a too small value is set, it may render ClickHouse unable to execute even simple queries.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_expanded_ast_elements = 38 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -22712,12 +27242,389 @@ public final class UserOuterClass {
         return maxExpandedAstElementsBuilder_;
       }
 
+      private com.google.protobuf.Int64Value minExecutionSpeed_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minExecutionSpeedBuilder_;
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMinExecutionSpeed() {
+        return minExecutionSpeedBuilder_ != null || minExecutionSpeed_ != null;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMinExecutionSpeed() {
+        if (minExecutionSpeedBuilder_ == null) {
+          return minExecutionSpeed_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeed_;
+        } else {
+          return minExecutionSpeedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMinExecutionSpeed(com.google.protobuf.Int64Value value) {
+        if (minExecutionSpeedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minExecutionSpeed_ = value;
+          onChanged();
+        } else {
+          minExecutionSpeedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMinExecutionSpeed(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minExecutionSpeedBuilder_ == null) {
+          minExecutionSpeed_ = builderForValue.build();
+          onChanged();
+        } else {
+          minExecutionSpeedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMinExecutionSpeed(com.google.protobuf.Int64Value value) {
+        if (minExecutionSpeedBuilder_ == null) {
+          if (minExecutionSpeed_ != null) {
+            minExecutionSpeed_ =
+              com.google.protobuf.Int64Value.newBuilder(minExecutionSpeed_).mergeFrom(value).buildPartial();
+          } else {
+            minExecutionSpeed_ = value;
+          }
+          onChanged();
+        } else {
+          minExecutionSpeedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMinExecutionSpeed() {
+        if (minExecutionSpeedBuilder_ == null) {
+          minExecutionSpeed_ = null;
+          onChanged();
+        } else {
+          minExecutionSpeed_ = null;
+          minExecutionSpeedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinExecutionSpeedBuilder() {
+        
+        onChanged();
+        return getMinExecutionSpeedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedOrBuilder() {
+        if (minExecutionSpeedBuilder_ != null) {
+          return minExecutionSpeedBuilder_.getMessageOrBuilder();
+        } else {
+          return minExecutionSpeed_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeed_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in rows per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed = 84 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinExecutionSpeedFieldBuilder() {
+        if (minExecutionSpeedBuilder_ == null) {
+          minExecutionSpeedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinExecutionSpeed(),
+                  getParentForChildren(),
+                  isClean());
+          minExecutionSpeed_ = null;
+        }
+        return minExecutionSpeedBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minExecutionSpeedBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minExecutionSpeedBytesBuilder_;
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasMinExecutionSpeedBytes() {
+        return minExecutionSpeedBytesBuilder_ != null || minExecutionSpeedBytes_ != null;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getMinExecutionSpeedBytes() {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          return minExecutionSpeedBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeedBytes_;
+        } else {
+          return minExecutionSpeedBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMinExecutionSpeedBytes(com.google.protobuf.Int64Value value) {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minExecutionSpeedBytes_ = value;
+          onChanged();
+        } else {
+          minExecutionSpeedBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMinExecutionSpeedBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          minExecutionSpeedBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          minExecutionSpeedBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMinExecutionSpeedBytes(com.google.protobuf.Int64Value value) {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          if (minExecutionSpeedBytes_ != null) {
+            minExecutionSpeedBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(minExecutionSpeedBytes_).mergeFrom(value).buildPartial();
+          } else {
+            minExecutionSpeedBytes_ = value;
+          }
+          onChanged();
+        } else {
+          minExecutionSpeedBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMinExecutionSpeedBytes() {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          minExecutionSpeedBytes_ = null;
+          onChanged();
+        } else {
+          minExecutionSpeedBytes_ = null;
+          minExecutionSpeedBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinExecutionSpeedBytesBuilder() {
+        
+        onChanged();
+        return getMinExecutionSpeedBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinExecutionSpeedBytesOrBuilder() {
+        if (minExecutionSpeedBytesBuilder_ != null) {
+          return minExecutionSpeedBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return minExecutionSpeedBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minExecutionSpeedBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimal execution speed in bytes per second.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_execution_speed_bytes = 85 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinExecutionSpeedBytesFieldBuilder() {
+        if (minExecutionSpeedBytesBuilder_ == null) {
+          minExecutionSpeedBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinExecutionSpeedBytes(),
+                  getParentForChildren(),
+                  isClean());
+          minExecutionSpeedBytes_ = null;
+        }
+        return minExecutionSpeedBytesBuilder_;
+      }
+
+      private int countDistinctImplementation_ = 0;
+      /**
+       * <pre>
+       * Aggregate function to use for implementation of count(DISTINCT ...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       */
+      public int getCountDistinctImplementationValue() {
+        return countDistinctImplementation_;
+      }
+      /**
+       * <pre>
+       * Aggregate function to use for implementation of count(DISTINCT ...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       */
+      public Builder setCountDistinctImplementationValue(int value) {
+        countDistinctImplementation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Aggregate function to use for implementation of count(DISTINCT ...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation getCountDistinctImplementation() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.valueOf(countDistinctImplementation_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Aggregate function to use for implementation of count(DISTINCT ...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       */
+      public Builder setCountDistinctImplementation(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.CountDistinctImplementation value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        countDistinctImplementation_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Aggregate function to use for implementation of count(DISTINCT ...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.CountDistinctImplementation count_distinct_implementation = 86;</code>
+       */
+      public Builder clearCountDistinctImplementation() {
+        
+        countDistinctImplementation_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.BoolValue inputFormatValuesInterpretExpressions_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatValuesInterpretExpressionsBuilder_;
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22727,7 +27634,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22741,7 +27654,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22761,7 +27680,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22779,7 +27704,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22801,7 +27732,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22819,7 +27756,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22831,7 +27774,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22846,7 +27795,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Enables or disables the full SQL parser if the fast stream parser cannot parse the data.
+       * Enables or disables SQL parser if the fast stream parser cannot parse the data.
+       * Enable this setting, if the data that you want to insert into a table contains SQL expressions.
+       * For example, the stream parser is unable to parse a value that contains **now()** expression; therefore an **INSERT** query for this value will fail and no data will be inserted into a table.
+       * With enabled SQL parser, this expression is parsed correctly: the **now()** expression will be parsed as SQL function, interpreted, and the current date and time will be inserted into the table as a result.
+       * This setting has effect only if you use [Values](https://clickhouse.tech/docs/en/interfaces/formats/#data-format-values) format when inserting data.
+       * Default value: **true** (SQL parser is enabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-input_format_values_interpret_expressions).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_values_interpret_expressions = 61;</code>
@@ -22870,7 +27825,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatDefaultsForOmittedFieldsBuilder_;
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22880,7 +27836,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22894,7 +27851,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22914,7 +27872,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22932,7 +27891,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22954,7 +27914,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22972,7 +27933,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22984,7 +27946,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -22999,7 +27962,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * When performing INSERT queries, replace omitted input column values with default values of the respective columns.
+       * Enables or disables replacing omitted input values with default values of the respective columns when performing **INSERT** queries.
+       * Default value: **true** (replacing is enabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue input_format_defaults_for_omitted_fields = 62;</code>
@@ -23023,7 +27987,10 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> outputFormatJsonQuote64BitIntegersBuilder_;
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23033,7 +28000,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23047,7 +28017,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23067,7 +28040,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23085,7 +28061,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23107,7 +28086,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23125,7 +28107,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23137,7 +28122,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23152,7 +28140,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether quoting of 64-bit integers is enabled in JSON output format.
+       * Enables quoting of 64-bit integers in JSON output format.
+       * If this setting is enabled, then 64-bit integers (**UInt64** and **Int64**) will be quoted when written to JSON output in order to maintain compatibility with the most of the JavaScript engines.
+       * Otherwise, such integers will not be quoted.
+       * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
@@ -23176,7 +28167,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> outputFormatJsonQuoteDenormalsBuilder_;
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23186,7 +28178,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23200,7 +28193,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23220,7 +28214,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23238,7 +28233,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23260,7 +28256,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23278,7 +28275,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23290,7 +28288,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23305,7 +28304,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether output of special floating-point values (+nan, -nan, +inf and -inf) is enabled in JSON output format.
+       * Enables special floating-point values (**+nan**, **-nan**, **+inf** and **-inf**) in JSON output format.
+       * Default value: **false** (special values do not present in output).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue output_format_json_quote_denormals = 64;</code>
@@ -23329,7 +28329,15 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> lowCardinalityAllowInNativeFormatBuilder_;
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23339,7 +28347,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23353,7 +28369,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23373,7 +28397,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23391,7 +28423,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23413,7 +28453,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23431,7 +28479,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23443,7 +28499,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23458,7 +28522,15 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether LowCardinality type is enabled in Native format.
+       * Determines whether to use LowCardinality type in Native format.
+       * * **true** (default)—yes, use.
+       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
+       * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
+       * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
+       * Disable this setting to convert LowCardinality column to regular column when creating the result, so such clients will be able to process the result.
+       * Official ClickHouse client works with LowCardinality columns out-of-the-box.
+       * Default value: **true** (LowCardinality columns are used in Native format).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue low_cardinality_allow_in_native_format = 78;</code>
@@ -23482,7 +28554,9 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> emptyResultForAggregationByEmptySetBuilder_;
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23492,7 +28566,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23506,7 +28582,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23526,7 +28604,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23544,7 +28624,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23566,7 +28648,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23584,7 +28668,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23596,7 +28682,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23611,7 +28699,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Return empty result when aggregating without keys on empty set.
+       * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
+       * * **true**—ClickHouse will return an empty result for such queries.
+       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -23636,6 +28726,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23646,6 +28737,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23660,6 +28752,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23680,6 +28773,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23698,6 +28792,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23720,6 +28815,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23738,6 +28834,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23750,6 +28847,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23765,6 +28863,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP connection timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1000**, 1 second).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_connection_timeout = 65;</code>
@@ -23789,6 +28888,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23799,6 +28899,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23813,6 +28914,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23833,6 +28935,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23851,6 +28954,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23873,6 +28977,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23891,6 +28996,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23903,6 +29009,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23918,6 +29025,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP receive timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_receive_timeout = 66;</code>
@@ -23942,6 +29050,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -23952,6 +29061,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -23966,6 +29076,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -23986,6 +29097,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24004,6 +29116,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24026,6 +29139,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24044,6 +29158,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24056,6 +29171,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24071,6 +29187,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * HTTP send timeout, in milliseconds.
+       * Value must be greater than **0** (default: **1800000**, 1800 seconds, 30 minutes).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_send_timeout = 67;</code>
@@ -24094,7 +29211,13 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableHttpCompressionBuilder_;
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24104,7 +29227,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24118,7 +29247,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24138,7 +29273,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24156,7 +29297,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24178,7 +29325,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24196,7 +29349,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24208,7 +29367,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24223,7 +29388,13 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether data compression is enabled in HTTP responses.
+       * Enables or disables data compression in HTTP responses.
+       * By default, ClickHouse stores data compressed. When executing a query, its result is uncompressed.
+       * Use this setting to command ClickHouse to compress the result when sending it via HTTP.
+       * Enable this setting and add the **Accept-Encoding: &lt;compression method&gt;** HTTP header in a HTTP request to force compression of HTTP response from ClickHouse.
+       * ClickHouse support the following compression methods: **gzip**, **br** and **deflate**.
+       * Default value: **false** (compression is disabled).
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/interfaces/http/).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_http_compression = 68;</code>
@@ -24247,7 +29418,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sendProgressInHttpHeadersBuilder_;
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24257,7 +29429,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24271,7 +29444,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24291,7 +29465,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24309,7 +29484,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24331,7 +29507,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24349,7 +29526,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24361,7 +29539,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24376,7 +29555,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether progress notifications using X-ClickHouse-Progress headers are enabled. Default value: false.
+       * Enables progress notifications using **X-ClickHouse-Progress** HTTP header.
+       * Default value: **false** (notifications disabled).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue send_progress_in_http_headers = 69;</code>
@@ -24400,7 +29580,8 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> httpHeadersProgressIntervalBuilder_;
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24410,7 +29591,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24424,7 +29606,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24444,7 +29627,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24462,7 +29646,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24484,7 +29669,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24502,7 +29688,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24514,7 +29701,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24529,7 +29717,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Minimum interval between progress notifications, in milliseconds. Default value: 100.
+       * Minimum interval between progress notifications with **X-ClickHouse-Progress** HTTP header, in milliseconds.
+       * Value must be greater than **0** (default: **100**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value http_headers_progress_interval = 70;</code>
@@ -24553,7 +29742,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> addHttpCorsHeaderBuilder_;
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24563,7 +29753,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24577,7 +29768,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24597,7 +29789,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24615,7 +29808,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24637,7 +29831,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24655,7 +29850,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24667,7 +29863,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -24682,7 +29879,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Whether CORS header in HTTP responses is enabled. Default value: false.
+       * Adds CORS header in HTTP responses.
+       * Default value: **false** (header is not added).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue add_http_cors_header = 71;</code>
@@ -26906,7 +32104,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\2241\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\3678\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.goo" +
@@ -27012,70 +32210,95 @@ public final class UserOuterClass {
       "e\022@\n\022max_execution_time\030\036 \001(\0132\033.google.p" +
       "rotobuf.Int64ValueB\007\372\3071\003>=0\022X\n\025timeout_o" +
       "verflow_mode\030\037 \001(\01629.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.UserSettings.OverflowMode\022A\n" +
-      "\023max_columns_to_read\030  \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_temporar" +
-      "y_columns\030! \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022M\n\037max_temporary_non_const" +
-      "_columns\030\" \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\022;\n\016max_query_size\030# \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022:\n\rmax" +
-      "_ast_depth\030$ \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\006\372\3071\002>0\022=\n\020max_ast_elements\030% \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022F\n\031" +
-      "max_expanded_ast_elements\030& \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\006\372\3071\002>0\022M\n)input_fo" +
-      "rmat_values_interpret_expressions\030= \001(\0132" +
-      "\032.google.protobuf.BoolValue\022L\n(input_for" +
-      "mat_defaults_for_omitted_fields\030> \001(\0132\032." +
-      "google.protobuf.BoolValue\022K\n\'output_form" +
-      "at_json_quote_64bit_integers\030? \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022F\n\"output_format_" +
-      "json_quote_denormals\030@ \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022J\n&low_cardinality_allow_" +
-      "in_native_format\030N \001(\0132\032.google.protobuf" +
-      ".BoolValue\022M\n)empty_result_for_aggregati" +
-      "on_by_empty_set\030O \001(\0132\032.google.protobuf." +
-      "BoolValue\022<\n\027http_connection_timeout\030A \001" +
-      "(\0132\033.google.protobuf.Int64Value\0229\n\024http_" +
-      "receive_timeout\030B \001(\0132\033.google.protobuf." +
-      "Int64Value\0226\n\021http_send_timeout\030C \001(\0132\033." +
-      "google.protobuf.Int64Value\022;\n\027enable_htt" +
-      "p_compression\030D \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022A\n\035send_progress_in_http_headers" +
-      "\030E \001(\0132\032.google.protobuf.BoolValue\022C\n\036ht" +
-      "tp_headers_progress_interval\030F \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0228\n\024add_http_cors" +
-      "_header\030G \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022J\n\nquota_mode\030P \001(\01626.yandex.cloud.mdb" +
-      ".clickhouse.v1.UserSettings.QuotaMode\"_\n" +
-      "\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIFI" +
-      "ED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFLO" +
-      "W_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022&" +
-      "\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022 " +
-      "\n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GROU" +
-      "P_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_O" +
-      "VERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProduc" +
-      "tMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPEC" +
-      "IFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DENY" +
-      "\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022#" +
-      "\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036D" +
-      "ISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuota" +
-      "Mode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUOT" +
-      "A_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032" +
-      "\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\356\002\n\tUserQuota" +
-      "\022B\n\021interval_duration\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\t" +
-      "read_rows\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"y" +
-      "andex.cloud.api.mdb.clickhouse.v1ZMgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/clickhouse/v1;clickhouseb\006proto3"
+      "ickhouse.v1.UserSettings.OverflowMode\022=\n" +
+      "\017max_rows_in_set\030W \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022>\n\020max_bytes_in_set" +
+      "\030X \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022T\n\021set_overflow_mode\030Y \001(\01629.yandex" +
+      ".cloud.mdb.clickhouse.v1.UserSettings.Ov" +
+      "erflowMode\022>\n\020max_rows_in_join\030Z \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021ma" +
+      "x_bytes_in_join\030[ \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022U\n\022join_overflow_mod" +
+      "e\030\\ \001(\01629.yandex.cloud.mdb.clickhouse.v1" +
+      ".UserSettings.OverflowMode\022A\n\023max_column" +
+      "s_to_read\030  \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022C\n\025max_temporary_columns\030!" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
+      "=0\022M\n\037max_temporary_non_const_columns\030\" " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022;\n\016max_query_size\030# \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\006\372\3071\002>0\022:\n\rmax_ast_depth\030" +
+      "$ \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
+      ">0\022=\n\020max_ast_elements\030% \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\006\372\3071\002>0\022F\n\031max_expande" +
+      "d_ast_elements\030& \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022A\n\023min_execution_speed" +
+      "\030T \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022G\n\031min_execution_speed_bytes\030U \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022o\n" +
+      "\035count_distinct_implementation\030V \001(\0162H.y" +
+      "andex.cloud.mdb.clickhouse.v1.UserSettin" +
+      "gs.CountDistinctImplementation\022M\n)input_" +
+      "format_values_interpret_expressions\030= \001(" +
+      "\0132\032.google.protobuf.BoolValue\022L\n(input_f" +
+      "ormat_defaults_for_omitted_fields\030> \001(\0132" +
+      "\032.google.protobuf.BoolValue\022K\n\'output_fo" +
+      "rmat_json_quote_64bit_integers\030? \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022F\n\"output_forma" +
+      "t_json_quote_denormals\030@ \001(\0132\032.google.pr" +
+      "otobuf.BoolValue\022J\n&low_cardinality_allo" +
+      "w_in_native_format\030N \001(\0132\032.google.protob" +
+      "uf.BoolValue\022M\n)empty_result_for_aggrega" +
+      "tion_by_empty_set\030O \001(\0132\032.google.protobu" +
+      "f.BoolValue\022<\n\027http_connection_timeout\030A" +
+      " \001(\0132\033.google.protobuf.Int64Value\0229\n\024htt" +
+      "p_receive_timeout\030B \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021http_send_timeout\030C \001(\0132" +
+      "\033.google.protobuf.Int64Value\022;\n\027enable_h" +
+      "ttp_compression\030D \001(\0132\032.google.protobuf." +
+      "BoolValue\022A\n\035send_progress_in_http_heade" +
+      "rs\030E \001(\0132\032.google.protobuf.BoolValue\022C\n\036" +
+      "http_headers_progress_interval\030F \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0228\n\024add_http_co" +
+      "rs_header\030G \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022J\n\nquota_mode\030P \001(\01626.yandex.cloud.m" +
+      "db.clickhouse.v1.UserSettings.QuotaMode\"" +
+      "_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECI" +
+      "FIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERF" +
+      "LOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode" +
+      "\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000" +
+      "\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GR" +
+      "OUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY" +
+      "_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProd" +
+      "uctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSP" +
+      "ECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DE" +
+      "NY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002" +
+      "\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n" +
+      "\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuo" +
+      "taMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QU" +
+      "OTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002" +
+      "\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDi" +
+      "stinctImplementation\022-\n)COUNT_DISTINCT_I" +
+      "MPLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIS" +
+      "TINCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIS" +
+      "TINCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n." +
+      "COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBI" +
+      "NED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATIO" +
+      "N_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEM" +
+      "ENTATION_UNIQ_EXACT\020\005\"\356\002\n\tUserQuota\022B\n\021i" +
+      "nterval_duration\030\001 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0224" +
+      "\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_" +
+      "rows\030\005 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex" +
+      ".cloud.api.mdb.clickhouse.v1ZMgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/clickhouse/v1;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27114,7 +32337,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

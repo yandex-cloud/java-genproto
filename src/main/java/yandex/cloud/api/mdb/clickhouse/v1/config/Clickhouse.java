@@ -898,11 +898,37 @@ public final class Clickhouse {
      * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.LogLevel text_log_level = 32;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel();
+
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    boolean hasBackgroundPoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64Value getBackgroundPoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    boolean hasBackgroundSchedulePoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64Value getBackgroundSchedulePoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundSchedulePoolSizeOrBuilder();
   }
   /**
    * <pre>
    * ClickHouse configuration options. Detailed description for each set of options
-   * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/ru/operations/server_settings/settings/).
+   * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/).
    * Any options not listed here are not supported.
    * </pre>
    *
@@ -941,6 +967,7 @@ public final class Clickhouse {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1325,6 +1352,32 @@ public final class Clickhouse {
               int rawValue = input.readEnum();
 
               textLogLevel_ = rawValue;
+              break;
+            }
+            case 266: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backgroundPoolSize_ != null) {
+                subBuilder = backgroundPoolSize_.toBuilder();
+              }
+              backgroundPoolSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundPoolSize_);
+                backgroundPoolSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 274: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backgroundSchedulePoolSize_ != null) {
+                subBuilder = backgroundSchedulePoolSize_.toBuilder();
+              }
+              backgroundSchedulePoolSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundSchedulePoolSize_);
+                backgroundSchedulePoolSize_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -26603,6 +26656,48 @@ public final class Clickhouse {
       return result == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.UNRECOGNIZED : result;
     }
 
+    public static final int BACKGROUND_POOL_SIZE_FIELD_NUMBER = 33;
+    private com.google.protobuf.Int64Value backgroundPoolSize_;
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public boolean hasBackgroundPoolSize() {
+      return backgroundPoolSize_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64Value getBackgroundPoolSize() {
+      return backgroundPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundPoolSize_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder() {
+      return getBackgroundPoolSize();
+    }
+
+    public static final int BACKGROUND_SCHEDULE_POOL_SIZE_FIELD_NUMBER = 34;
+    private com.google.protobuf.Int64Value backgroundSchedulePoolSize_;
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public boolean hasBackgroundSchedulePoolSize() {
+      return backgroundSchedulePoolSize_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64Value getBackgroundSchedulePoolSize() {
+      return backgroundSchedulePoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundSchedulePoolSize_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundSchedulePoolSizeOrBuilder() {
+      return getBackgroundSchedulePoolSize();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -26712,6 +26807,12 @@ public final class Clickhouse {
       }
       if (textLogLevel_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         output.writeEnum(32, textLogLevel_);
+      }
+      if (backgroundPoolSize_ != null) {
+        output.writeMessage(33, getBackgroundPoolSize());
+      }
+      if (backgroundSchedulePoolSize_ != null) {
+        output.writeMessage(34, getBackgroundSchedulePoolSize());
       }
       unknownFields.writeTo(output);
     }
@@ -26847,6 +26948,14 @@ public final class Clickhouse {
       if (textLogLevel_ != yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel.LOG_LEVEL_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(32, textLogLevel_);
+      }
+      if (backgroundPoolSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getBackgroundPoolSize());
+      }
+      if (backgroundSchedulePoolSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getBackgroundSchedulePoolSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27001,6 +27110,16 @@ public final class Clickhouse {
             .equals(other.getTextLogRetentionTime());
       }
       result = result && textLogLevel_ == other.textLogLevel_;
+      result = result && (hasBackgroundPoolSize() == other.hasBackgroundPoolSize());
+      if (hasBackgroundPoolSize()) {
+        result = result && getBackgroundPoolSize()
+            .equals(other.getBackgroundPoolSize());
+      }
+      result = result && (hasBackgroundSchedulePoolSize() == other.hasBackgroundSchedulePoolSize());
+      if (hasBackgroundSchedulePoolSize()) {
+        result = result && getBackgroundSchedulePoolSize()
+            .equals(other.getBackgroundSchedulePoolSize());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -27132,6 +27251,14 @@ public final class Clickhouse {
       }
       hash = (37 * hash) + TEXT_LOG_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + textLogLevel_;
+      if (hasBackgroundPoolSize()) {
+        hash = (37 * hash) + BACKGROUND_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundPoolSize().hashCode();
+      }
+      if (hasBackgroundSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundSchedulePoolSize().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27230,7 +27357,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * ClickHouse configuration options. Detailed description for each set of options
-     * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/ru/operations/server_settings/settings/).
+     * is available in [ClickHouse documentation](https://clickhouse.yandex/docs/en/operations/server_settings/settings/).
      * Any options not listed here are not supported.
      * </pre>
      *
@@ -27450,6 +27577,18 @@ public final class Clickhouse {
         }
         textLogLevel_ = 0;
 
+        if (backgroundPoolSizeBuilder_ == null) {
+          backgroundPoolSize_ = null;
+        } else {
+          backgroundPoolSize_ = null;
+          backgroundPoolSizeBuilder_ = null;
+        }
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          backgroundSchedulePoolSize_ = null;
+        } else {
+          backgroundSchedulePoolSize_ = null;
+          backgroundSchedulePoolSizeBuilder_ = null;
+        }
         return this;
       }
 
@@ -27477,6 +27616,7 @@ public final class Clickhouse {
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig buildPartial() {
         yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
         result.logLevel_ = logLevel_;
         if (mergeTreeBuilder_ == null) {
@@ -27634,6 +27774,16 @@ public final class Clickhouse {
           result.textLogRetentionTime_ = textLogRetentionTimeBuilder_.build();
         }
         result.textLogLevel_ = textLogLevel_;
+        if (backgroundPoolSizeBuilder_ == null) {
+          result.backgroundPoolSize_ = backgroundPoolSize_;
+        } else {
+          result.backgroundPoolSize_ = backgroundPoolSizeBuilder_.build();
+        }
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSize_;
+        } else {
+          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSizeBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -27850,6 +28000,12 @@ public final class Clickhouse {
         if (other.textLogLevel_ != 0) {
           setTextLogLevelValue(other.getTextLogLevelValue());
         }
+        if (other.hasBackgroundPoolSize()) {
+          mergeBackgroundPoolSize(other.getBackgroundPoolSize());
+        }
+        if (other.hasBackgroundSchedulePoolSize()) {
+          mergeBackgroundSchedulePoolSize(other.getBackgroundSchedulePoolSize());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -27879,6 +28035,7 @@ public final class Clickhouse {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private int logLevel_ = 0;
       /**
@@ -33119,6 +33276,240 @@ public final class Clickhouse {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Int64Value backgroundPoolSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundPoolSizeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public boolean hasBackgroundPoolSize() {
+        return backgroundPoolSizeBuilder_ != null || backgroundPoolSize_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value getBackgroundPoolSize() {
+        if (backgroundPoolSizeBuilder_ == null) {
+          return backgroundPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundPoolSize_;
+        } else {
+          return backgroundPoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundPoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundPoolSize_ = value;
+          onChanged();
+        } else {
+          backgroundPoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundPoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundPoolSizeBuilder_ == null) {
+          backgroundPoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundPoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundPoolSizeBuilder_ == null) {
+          if (backgroundPoolSize_ != null) {
+            backgroundPoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundPoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundPoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundPoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundPoolSize() {
+        if (backgroundPoolSizeBuilder_ == null) {
+          backgroundPoolSize_ = null;
+          onChanged();
+        } else {
+          backgroundPoolSize_ = null;
+          backgroundPoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundPoolSizeBuilder() {
+        
+        onChanged();
+        return getBackgroundPoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder() {
+        if (backgroundPoolSizeBuilder_ != null) {
+          return backgroundPoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundPoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundPoolSize_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundPoolSizeFieldBuilder() {
+        if (backgroundPoolSizeBuilder_ == null) {
+          backgroundPoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundPoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundPoolSize_ = null;
+        }
+        return backgroundPoolSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backgroundSchedulePoolSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundSchedulePoolSizeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public boolean hasBackgroundSchedulePoolSize() {
+        return backgroundSchedulePoolSizeBuilder_ != null || backgroundSchedulePoolSize_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value getBackgroundSchedulePoolSize() {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          return backgroundSchedulePoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundSchedulePoolSize_;
+        } else {
+          return backgroundSchedulePoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundSchedulePoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundSchedulePoolSize_ = value;
+          onChanged();
+        } else {
+          backgroundSchedulePoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundSchedulePoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          backgroundSchedulePoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundSchedulePoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundSchedulePoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          if (backgroundSchedulePoolSize_ != null) {
+            backgroundSchedulePoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundSchedulePoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundSchedulePoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundSchedulePoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundSchedulePoolSize() {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          backgroundSchedulePoolSize_ = null;
+          onChanged();
+        } else {
+          backgroundSchedulePoolSize_ = null;
+          backgroundSchedulePoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundSchedulePoolSizeBuilder() {
+        
+        onChanged();
+        return getBackgroundSchedulePoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundSchedulePoolSizeOrBuilder() {
+        if (backgroundSchedulePoolSizeBuilder_ != null) {
+          return backgroundSchedulePoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundSchedulePoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundSchedulePoolSize_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundSchedulePoolSizeFieldBuilder() {
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          backgroundSchedulePoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundSchedulePoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundSchedulePoolSize_ = null;
+        }
+        return backgroundSchedulePoolSizeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -34474,8 +34865,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\274" +
-      "4\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\313" +
+      "5\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -34528,132 +34919,135 @@ public final class Clickhouse {
       "_time\030\037 \001(\0132\033.google.protobuf.Int64Value" +
       "\022X\n\016text_log_level\030  \001(\0162@.yandex.cloud." +
       "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.LogLevel\032\212\004\n\tMergeTree\022D\n\037replicated_d" +
-      "eduplication_window\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022L\n\'replicated_deduplicati" +
-      "on_window_seconds\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022:\n\025parts_to_delay_insert\030\003 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022:\n\025part" +
-      "s_to_throw_insert\030\004 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022C\n\036max_replicated_merges_in" +
-      "_queue\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022^\n9number_of_free_entries_in_pool_to_l" +
-      "ower_max_size_of_merge\030\006 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022L\n\'max_bytes_to_merge_" +
-      "at_min_space_in_pool\030\007 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\032\333\001\n\013Compression\022Z\n\006metho" +
-      "d\030\001 \001(\0162J.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.Compression.Met" +
-      "hod\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023m" +
-      "in_part_size_ratio\030\003 \001(\001\"3\n\006Method\022\026\n\022ME" +
-      "THOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\240\032" +
-      "\n\022ExternalDictionary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
-      "\022m\n\tstructure\030\002 \001(\0132T.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Ext" +
-      "ernalDictionary.StructureB\004\350\3071\001\022g\n\006layou" +
-      "t\030\003 \001(\0132Q.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.ExternalDiction" +
-      "ary.LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001(\003" +
-      "H\000\022j\n\016lifetime_range\030\005 \001(\0132P.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.RangeH\000\022l\n\013http_s" +
-      "ource\030\006 \001(\0132U.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.HttpSourceH\001\022n\n\014mysql_source\030\007 \001" +
-      "(\0132V.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig.ExternalDictionary.M" +
-      "ysqlSourceH\001\022x\n\021clickhouse_source\030\010 \001(\0132" +
-      "[.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Clic" +
-      "khouseSourceH\001\022r\n\016mongodb_source\030\t \001(\0132X" +
-      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
-      "lickhouseConfig.ExternalDictionary.Mongo" +
-      "dbSourceH\001\022x\n\021postgresql_source\030\n \001(\0132[." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfig.ExternalDictionary.Postgr" +
-      "esqlSourceH\001\0325\n\nHttpSource\022\021\n\003url\030\001 \001(\tB" +
-      "\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlSou" +
-      "rce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\307" +
-      "1\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 " +
-      "\001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132" +
-      "^.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Mysq" +
-      "lSource.ReplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030" +
-      "\n\020invalidate_query\030\010 \001(\t\032\177\n\007Replica\022\033\n\004h" +
-      "ost\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002 \001" +
-      "(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-6553" +
-      "5\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\246\001\n\020Cl" +
-      "ickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005tabl" +
-      "e\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=2" +
-      "53\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 " +
-      "\001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007 \001" +
-      "(\t\032\231\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030" +
-      "\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r" +
-      "\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535" +
-      "\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\032\213" +
-      "\003\n\020PostgresqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n" +
-      "\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>" +
-      "0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001" +
-      "(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\030\n\020invalidate" +
-      "_query\030\007 \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yandex." +
+      "g.LogLevel\022A\n\024background_pool_size\030! \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022J\n" +
+      "\035background_schedule_pool_size\030\" \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\032\212\004\n\tMe" +
+      "rgeTree\022D\n\037replicated_deduplication_wind" +
+      "ow\030\001 \001(\0132\033.google.protobuf.Int64Value\022L\n" +
+      "\'replicated_deduplication_window_seconds" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025p" +
+      "arts_to_delay_insert\030\003 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022:\n\025parts_to_throw_insert" +
+      "\030\004 \001(\0132\033.google.protobuf.Int64Value\022C\n\036m" +
+      "ax_replicated_merges_in_queue\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022^\n9number_of_fr" +
+      "ee_entries_in_pool_to_lower_max_size_of_" +
+      "merge\030\006 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022L\n\'max_bytes_to_merge_at_min_space_in_p" +
+      "ool\030\007 \001(\0132\033.google.protobuf.Int64Value\032\333" +
+      "\001\n\013Compression\022Z\n\006method\030\001 \001(\0162J.yandex." +
       "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.PostgresqlSou" +
-      "rce.SslMode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNSPE" +
-      "CIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREF" +
-      "ER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n" +
-      "\tStructure\022c\n\002id\030\001 \001(\0132W.yandex.cloud.md" +
+      "eConfig.Compression.Method\022\036\n\rmin_part_s" +
+      "ize\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_rati" +
+      "o\030\003 \001(\001\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020" +
+      "\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDiction" +
+      "ary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001" +
+      "(\0132T.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.ExternalDictionary.S" +
+      "tructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.ExternalDictionary.LayoutB\004\350\3071\001\022" +
+      "\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_ra" +
+      "nge\030\005 \001(\0132P.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.ExternalDicti" +
+      "onary.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfig.ExternalDictionary.HttpSourc" +
+      "eH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.MysqlSourceH\001\022x\n\021c" +
+      "lickhouse_source\030\010 \001(\0132[.yandex.cloud.md" +
       "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.Structure.Id\022e\n\003key\030\003" +
-      " \001(\0132X.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".Structure.Key\022q\n\trange_min\030\004 \001(\0132^.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.ExternalDictionary.Structure." +
-      "Attribute\022q\n\trange_max\030\005 \001(\0132^.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary.Structure.Attri" +
-      "bute\022z\n\nattributes\030\002 \003(\0132^.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.Structure.Attribute" +
-      "B\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004\350\307" +
-      "1\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001" +
-      "(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014hierarchical\030\005" +
-      " \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 " +
-      "\001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattributes\030\001 \003(\0132^." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfig.ExternalDictionary.Struct" +
-      "ure.AttributeB\006\202\3101\002>0\032\213\002\n\006Layout\022j\n\004type" +
-      "\030\001 \001(\0162V.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.Layout.TypeB\004\350\3071\001\022\025\n\rsize_in_cells\030\002 " +
-      "\001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004FLA" +
-      "T\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020\003\022" +
-      "\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX_" +
-      "KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003max" +
-      "\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001" +
-      "\032\364\002\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
-      "h\n\010patterns\030\002 \003(\0132N.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Graph" +
-      "iteRollup.PatternB\006\202\3101\002>0\032\343\001\n\007Pattern\022\016\n" +
-      "\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n" +
-      "\tretention\030\003 \003(\0132X.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Graphi" +
-      "teRollup.Pattern.RetentionB\006\202\3101\002>0\032;\n\tRe" +
-      "tention\022\023\n\003age\030\001 \001(\003B\006\372\3071\002>0\022\031\n\tprecisio" +
-      "n\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLevel\022\031\n\025LOG_LEVEL" +
-      "_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013" +
-      "INFORMATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002" +
-      "\n\023ClickhouseConfigSet\022W\n\020effective_confi" +
-      "g\030\001 \001(\01327.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfigB\004\350\3071\001\022L\n\013user_c" +
-      "onfig\030\002 \001(\01327.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig\022O\n\016default_" +
-      "config\030\003 \001(\01327.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfigB\201\001\n)yandex" +
-      ".cloud.api.mdb.clickhouse.v1.configZTgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/clickhouse/v1/config;clickhous" +
-      "eb\006proto3"
+      "ExternalDictionary.ClickhouseSourceH\001\022r\n" +
+      "\016mongodb_source\030\t \001(\0132X.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfig.E" +
+      "xternalDictionary.MongodbSourceH\001\022x\n\021pos" +
+      "tgresql_source\030\n \001(\0132[.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ex" +
+      "ternalDictionary.PostgresqlSourceH\001\0325\n\nH" +
+      "ttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002" +
+      " \001(\tB\004\350\3071\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004" +
+      "\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B" +
+      "\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005" +
+      " \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.MysqlSource.ReplicaB\006" +
+      "\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_quer" +
+      "y\030\010 \001(\t\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\310" +
+      "1\005<=253\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n" +
+      "\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020" +
+      "\n\010password\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022\020\n" +
+      "\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033\n\004" +
+      "host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B" +
+      "\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pass" +
+      "word\030\006 \001(\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbSou" +
+      "rce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(" +
+      "\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004" +
+      "port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350" +
+      "\3071\001\022\020\n\010password\030\006 \001(\t\032\213\003\n\020PostgresqlSour" +
+      "ce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071" +
+      "\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013" +
+      "\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010passw" +
+      "ord\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010s" +
+      "sl_mode\030\010 \001(\0162c.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.PostgresqlSource.SslMode\"g\n\007Ss" +
+      "lMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISAB" +
+      "LE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA" +
+      "\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030" +
+      "\001 \001(\0132W.yandex.cloud.mdb.clickhouse.v1.c" +
+      "onfig.ClickhouseConfig.ExternalDictionar" +
+      "y.Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.Structure.Key\022q\n" +
+      "\trange_min\030\004 \001(\0132^.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Extern" +
+      "alDictionary.Structure.Attribute\022q\n\trang" +
+      "e_max\030\005 \001(\0132^.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.Structure.Attribute\022z\n\nattribute" +
+      "s\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAttr" +
+      "ibute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB" +
+      "\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpression\030" +
+      "\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjective" +
+      "\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key" +
+      "\022z\n\nattributes\030\001 \003(\0132^.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ex" +
+      "ternalDictionary.Structure.AttributeB\006\202\310" +
+      "1\002>0\032\213\002\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex.c" +
+      "loud.mdb.clickhouse.v1.config.Clickhouse" +
+      "Config.ExternalDictionary.Layout.TypeB\004\350" +
+      "\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026" +
+      "\n\022COMPLEX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004" +
+      "\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Ra" +
+      "nge\022\013\n\003min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetim" +
+      "e\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRoll" +
+      "up\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\013" +
+      "2N.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.GraphiteRollup.Pattern" +
+      "B\006\202\3101\002>0\032\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010" +
+      "function\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132" +
+      "X.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfig.GraphiteRollup.Pattern." +
+      "RetentionB\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030\001 " +
+      "\001(\003B\006\372\3071\002>0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d" +
+      "\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n" +
+      "\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007" +
+      "WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfi" +
+      "gSet\022W\n\020effective_config\030\001 \001(\01327.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfig\022O\n\016default_config\030\003 \001(\01327.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfigB\201\001\n)yandex.cloud.api.mdb.cl" +
+      "ickhouse.v1.configZTgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/clickho" +
+      "use/v1/config;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -34674,7 +35068,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "BackgroundPoolSize", "BackgroundSchedulePoolSize", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new

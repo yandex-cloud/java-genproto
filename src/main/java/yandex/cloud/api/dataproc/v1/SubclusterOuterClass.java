@@ -186,6 +186,1505 @@ public final class SubclusterOuterClass {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.dataproc.v1.Role)
   }
 
+  public interface AutoscalingConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.v1.AutoscalingConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Upper limit for total instance subcluster count.
+     * </pre>
+     *
+     * <code>int64 max_hosts_count = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     */
+    long getMaxHostsCount();
+
+    /**
+     * <pre>
+     * Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time
+     * if their resources are needed by Compute.
+     * For more information, see [Preemptible Virtual Machines](/docs/compute/concepts/preemptible-vm).
+     * </pre>
+     *
+     * <code>bool preemptible = 2;</code>
+     */
+    boolean getPreemptible();
+
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    boolean hasMeasurementDuration();
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    com.google.protobuf.Duration getMeasurementDuration();
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMeasurementDurationOrBuilder();
+
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    boolean hasWarmupDuration();
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    com.google.protobuf.Duration getWarmupDuration();
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getWarmupDurationOrBuilder();
+
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    boolean hasStabilizationDuration();
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    com.google.protobuf.Duration getStabilizationDuration();
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getStabilizationDurationOrBuilder();
+
+    /**
+     * <pre>
+     * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+     * </pre>
+     *
+     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+     */
+    double getCpuUtilizationTarget();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.dataproc.v1.AutoscalingConfig}
+   */
+  public  static final class AutoscalingConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.v1.AutoscalingConfig)
+      AutoscalingConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoscalingConfig.newBuilder() to construct.
+    private AutoscalingConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoscalingConfig() {
+      maxHostsCount_ = 0L;
+      preemptible_ = false;
+      cpuUtilizationTarget_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoscalingConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              maxHostsCount_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              preemptible_ = input.readBool();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (measurementDuration_ != null) {
+                subBuilder = measurementDuration_.toBuilder();
+              }
+              measurementDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(measurementDuration_);
+                measurementDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (warmupDuration_ != null) {
+                subBuilder = warmupDuration_.toBuilder();
+              }
+              warmupDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(warmupDuration_);
+                warmupDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (stabilizationDuration_ != null) {
+                subBuilder = stabilizationDuration_.toBuilder();
+              }
+              stabilizationDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stabilizationDuration_);
+                stabilizationDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 49: {
+
+              cpuUtilizationTarget_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.class, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder.class);
+    }
+
+    public static final int MAX_HOSTS_COUNT_FIELD_NUMBER = 1;
+    private long maxHostsCount_;
+    /**
+     * <pre>
+     * Upper limit for total instance subcluster count.
+     * </pre>
+     *
+     * <code>int64 max_hosts_count = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     */
+    public long getMaxHostsCount() {
+      return maxHostsCount_;
+    }
+
+    public static final int PREEMPTIBLE_FIELD_NUMBER = 2;
+    private boolean preemptible_;
+    /**
+     * <pre>
+     * Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time
+     * if their resources are needed by Compute.
+     * For more information, see [Preemptible Virtual Machines](/docs/compute/concepts/preemptible-vm).
+     * </pre>
+     *
+     * <code>bool preemptible = 2;</code>
+     */
+    public boolean getPreemptible() {
+      return preemptible_;
+    }
+
+    public static final int MEASUREMENT_DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration measurementDuration_;
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    public boolean hasMeasurementDuration() {
+      return measurementDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    public com.google.protobuf.Duration getMeasurementDuration() {
+      return measurementDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : measurementDuration_;
+    }
+    /**
+     * <pre>
+     * Time in seconds allotted for averaging metrics.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getMeasurementDurationOrBuilder() {
+      return getMeasurementDuration();
+    }
+
+    public static final int WARMUP_DURATION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration warmupDuration_;
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    public boolean hasWarmupDuration() {
+      return warmupDuration_ != null;
+    }
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    public com.google.protobuf.Duration getWarmupDuration() {
+      return warmupDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : warmupDuration_;
+    }
+    /**
+     * <pre>
+     * The warmup time of the instance in seconds. During this time,
+     * traffic is sent to the instance, but instance metrics are not collected.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getWarmupDurationOrBuilder() {
+      return getWarmupDuration();
+    }
+
+    public static final int STABILIZATION_DURATION_FIELD_NUMBER = 5;
+    private com.google.protobuf.Duration stabilizationDuration_;
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    public boolean hasStabilizationDuration() {
+      return stabilizationDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    public com.google.protobuf.Duration getStabilizationDuration() {
+      return stabilizationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : stabilizationDuration_;
+    }
+    /**
+     * <pre>
+     * Minimum amount of time in seconds allotted for monitoring before
+     * Instance Groups can reduce the number of instances in the group.
+     * During this time, the group size doesn't decrease, even if the new metric values
+     * indicate that it should.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getStabilizationDurationOrBuilder() {
+      return getStabilizationDuration();
+    }
+
+    public static final int CPU_UTILIZATION_TARGET_FIELD_NUMBER = 6;
+    private double cpuUtilizationTarget_;
+    /**
+     * <pre>
+     * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+     * </pre>
+     *
+     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+     */
+    public double getCpuUtilizationTarget() {
+      return cpuUtilizationTarget_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (maxHostsCount_ != 0L) {
+        output.writeInt64(1, maxHostsCount_);
+      }
+      if (preemptible_ != false) {
+        output.writeBool(2, preemptible_);
+      }
+      if (measurementDuration_ != null) {
+        output.writeMessage(3, getMeasurementDuration());
+      }
+      if (warmupDuration_ != null) {
+        output.writeMessage(4, getWarmupDuration());
+      }
+      if (stabilizationDuration_ != null) {
+        output.writeMessage(5, getStabilizationDuration());
+      }
+      if (cpuUtilizationTarget_ != 0D) {
+        output.writeDouble(6, cpuUtilizationTarget_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (maxHostsCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, maxHostsCount_);
+      }
+      if (preemptible_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, preemptible_);
+      }
+      if (measurementDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMeasurementDuration());
+      }
+      if (warmupDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getWarmupDuration());
+      }
+      if (stabilizationDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStabilizationDuration());
+      }
+      if (cpuUtilizationTarget_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(6, cpuUtilizationTarget_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig other = (yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig) obj;
+
+      boolean result = true;
+      result = result && (getMaxHostsCount()
+          == other.getMaxHostsCount());
+      result = result && (getPreemptible()
+          == other.getPreemptible());
+      result = result && (hasMeasurementDuration() == other.hasMeasurementDuration());
+      if (hasMeasurementDuration()) {
+        result = result && getMeasurementDuration()
+            .equals(other.getMeasurementDuration());
+      }
+      result = result && (hasWarmupDuration() == other.hasWarmupDuration());
+      if (hasWarmupDuration()) {
+        result = result && getWarmupDuration()
+            .equals(other.getWarmupDuration());
+      }
+      result = result && (hasStabilizationDuration() == other.hasStabilizationDuration());
+      if (hasStabilizationDuration()) {
+        result = result && getStabilizationDuration()
+            .equals(other.getStabilizationDuration());
+      }
+      result = result && (
+          java.lang.Double.doubleToLongBits(getCpuUtilizationTarget())
+          == java.lang.Double.doubleToLongBits(
+              other.getCpuUtilizationTarget()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_HOSTS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxHostsCount());
+      hash = (37 * hash) + PREEMPTIBLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPreemptible());
+      if (hasMeasurementDuration()) {
+        hash = (37 * hash) + MEASUREMENT_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMeasurementDuration().hashCode();
+      }
+      if (hasWarmupDuration()) {
+        hash = (37 * hash) + WARMUP_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getWarmupDuration().hashCode();
+      }
+      if (hasStabilizationDuration()) {
+        hash = (37 * hash) + STABILIZATION_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getStabilizationDuration().hashCode();
+      }
+      hash = (37 * hash) + CPU_UTILIZATION_TARGET_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCpuUtilizationTarget()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.dataproc.v1.AutoscalingConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.v1.AutoscalingConfig)
+        yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.class, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        maxHostsCount_ = 0L;
+
+        preemptible_ = false;
+
+        if (measurementDurationBuilder_ == null) {
+          measurementDuration_ = null;
+        } else {
+          measurementDuration_ = null;
+          measurementDurationBuilder_ = null;
+        }
+        if (warmupDurationBuilder_ == null) {
+          warmupDuration_ = null;
+        } else {
+          warmupDuration_ = null;
+          warmupDurationBuilder_ = null;
+        }
+        if (stabilizationDurationBuilder_ == null) {
+          stabilizationDuration_ = null;
+        } else {
+          stabilizationDuration_ = null;
+          stabilizationDurationBuilder_ = null;
+        }
+        cpuUtilizationTarget_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig build() {
+        yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig buildPartial() {
+        yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig result = new yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig(this);
+        result.maxHostsCount_ = maxHostsCount_;
+        result.preemptible_ = preemptible_;
+        if (measurementDurationBuilder_ == null) {
+          result.measurementDuration_ = measurementDuration_;
+        } else {
+          result.measurementDuration_ = measurementDurationBuilder_.build();
+        }
+        if (warmupDurationBuilder_ == null) {
+          result.warmupDuration_ = warmupDuration_;
+        } else {
+          result.warmupDuration_ = warmupDurationBuilder_.build();
+        }
+        if (stabilizationDurationBuilder_ == null) {
+          result.stabilizationDuration_ = stabilizationDuration_;
+        } else {
+          result.stabilizationDuration_ = stabilizationDurationBuilder_.build();
+        }
+        result.cpuUtilizationTarget_ = cpuUtilizationTarget_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig) {
+          return mergeFrom((yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig other) {
+        if (other == yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance()) return this;
+        if (other.getMaxHostsCount() != 0L) {
+          setMaxHostsCount(other.getMaxHostsCount());
+        }
+        if (other.getPreemptible() != false) {
+          setPreemptible(other.getPreemptible());
+        }
+        if (other.hasMeasurementDuration()) {
+          mergeMeasurementDuration(other.getMeasurementDuration());
+        }
+        if (other.hasWarmupDuration()) {
+          mergeWarmupDuration(other.getWarmupDuration());
+        }
+        if (other.hasStabilizationDuration()) {
+          mergeStabilizationDuration(other.getStabilizationDuration());
+        }
+        if (other.getCpuUtilizationTarget() != 0D) {
+          setCpuUtilizationTarget(other.getCpuUtilizationTarget());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long maxHostsCount_ ;
+      /**
+       * <pre>
+       * Upper limit for total instance subcluster count.
+       * </pre>
+       *
+       * <code>int64 max_hosts_count = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       */
+      public long getMaxHostsCount() {
+        return maxHostsCount_;
+      }
+      /**
+       * <pre>
+       * Upper limit for total instance subcluster count.
+       * </pre>
+       *
+       * <code>int64 max_hosts_count = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       */
+      public Builder setMaxHostsCount(long value) {
+        
+        maxHostsCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit for total instance subcluster count.
+       * </pre>
+       *
+       * <code>int64 max_hosts_count = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       */
+      public Builder clearMaxHostsCount() {
+        
+        maxHostsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean preemptible_ ;
+      /**
+       * <pre>
+       * Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time
+       * if their resources are needed by Compute.
+       * For more information, see [Preemptible Virtual Machines](/docs/compute/concepts/preemptible-vm).
+       * </pre>
+       *
+       * <code>bool preemptible = 2;</code>
+       */
+      public boolean getPreemptible() {
+        return preemptible_;
+      }
+      /**
+       * <pre>
+       * Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time
+       * if their resources are needed by Compute.
+       * For more information, see [Preemptible Virtual Machines](/docs/compute/concepts/preemptible-vm).
+       * </pre>
+       *
+       * <code>bool preemptible = 2;</code>
+       */
+      public Builder setPreemptible(boolean value) {
+        
+        preemptible_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preemptible instances are stopped at least once every 24 hours, and can be stopped at any time
+       * if their resources are needed by Compute.
+       * For more information, see [Preemptible Virtual Machines](/docs/compute/concepts/preemptible-vm).
+       * </pre>
+       *
+       * <code>bool preemptible = 2;</code>
+       */
+      public Builder clearPreemptible() {
+        
+        preemptible_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration measurementDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> measurementDurationBuilder_;
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public boolean hasMeasurementDuration() {
+        return measurementDurationBuilder_ != null || measurementDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public com.google.protobuf.Duration getMeasurementDuration() {
+        if (measurementDurationBuilder_ == null) {
+          return measurementDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : measurementDuration_;
+        } else {
+          return measurementDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public Builder setMeasurementDuration(com.google.protobuf.Duration value) {
+        if (measurementDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          measurementDuration_ = value;
+          onChanged();
+        } else {
+          measurementDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public Builder setMeasurementDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (measurementDurationBuilder_ == null) {
+          measurementDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          measurementDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public Builder mergeMeasurementDuration(com.google.protobuf.Duration value) {
+        if (measurementDurationBuilder_ == null) {
+          if (measurementDuration_ != null) {
+            measurementDuration_ =
+              com.google.protobuf.Duration.newBuilder(measurementDuration_).mergeFrom(value).buildPartial();
+          } else {
+            measurementDuration_ = value;
+          }
+          onChanged();
+        } else {
+          measurementDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public Builder clearMeasurementDuration() {
+        if (measurementDurationBuilder_ == null) {
+          measurementDuration_ = null;
+          onChanged();
+        } else {
+          measurementDuration_ = null;
+          measurementDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMeasurementDurationBuilder() {
+        
+        onChanged();
+        return getMeasurementDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMeasurementDurationOrBuilder() {
+        if (measurementDurationBuilder_ != null) {
+          return measurementDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return measurementDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : measurementDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Time in seconds allotted for averaging metrics.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration measurement_duration = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.value) = "1m-10m"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMeasurementDurationFieldBuilder() {
+        if (measurementDurationBuilder_ == null) {
+          measurementDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMeasurementDuration(),
+                  getParentForChildren(),
+                  isClean());
+          measurementDuration_ = null;
+        }
+        return measurementDurationBuilder_;
+      }
+
+      private com.google.protobuf.Duration warmupDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> warmupDurationBuilder_;
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public boolean hasWarmupDuration() {
+        return warmupDurationBuilder_ != null || warmupDuration_ != null;
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public com.google.protobuf.Duration getWarmupDuration() {
+        if (warmupDurationBuilder_ == null) {
+          return warmupDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : warmupDuration_;
+        } else {
+          return warmupDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public Builder setWarmupDuration(com.google.protobuf.Duration value) {
+        if (warmupDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          warmupDuration_ = value;
+          onChanged();
+        } else {
+          warmupDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public Builder setWarmupDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (warmupDurationBuilder_ == null) {
+          warmupDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          warmupDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public Builder mergeWarmupDuration(com.google.protobuf.Duration value) {
+        if (warmupDurationBuilder_ == null) {
+          if (warmupDuration_ != null) {
+            warmupDuration_ =
+              com.google.protobuf.Duration.newBuilder(warmupDuration_).mergeFrom(value).buildPartial();
+          } else {
+            warmupDuration_ = value;
+          }
+          onChanged();
+        } else {
+          warmupDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public Builder clearWarmupDuration() {
+        if (warmupDurationBuilder_ == null) {
+          warmupDuration_ = null;
+          onChanged();
+        } else {
+          warmupDuration_ = null;
+          warmupDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getWarmupDurationBuilder() {
+        
+        onChanged();
+        return getWarmupDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getWarmupDurationOrBuilder() {
+        if (warmupDurationBuilder_ != null) {
+          return warmupDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return warmupDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : warmupDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * The warmup time of the instance in seconds. During this time,
+       * traffic is sent to the instance, but instance metrics are not collected.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration warmup_duration = 4 [(.yandex.cloud.value) = "&lt;=10m"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getWarmupDurationFieldBuilder() {
+        if (warmupDurationBuilder_ == null) {
+          warmupDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getWarmupDuration(),
+                  getParentForChildren(),
+                  isClean());
+          warmupDuration_ = null;
+        }
+        return warmupDurationBuilder_;
+      }
+
+      private com.google.protobuf.Duration stabilizationDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> stabilizationDurationBuilder_;
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public boolean hasStabilizationDuration() {
+        return stabilizationDurationBuilder_ != null || stabilizationDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public com.google.protobuf.Duration getStabilizationDuration() {
+        if (stabilizationDurationBuilder_ == null) {
+          return stabilizationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : stabilizationDuration_;
+        } else {
+          return stabilizationDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public Builder setStabilizationDuration(com.google.protobuf.Duration value) {
+        if (stabilizationDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stabilizationDuration_ = value;
+          onChanged();
+        } else {
+          stabilizationDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public Builder setStabilizationDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (stabilizationDurationBuilder_ == null) {
+          stabilizationDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          stabilizationDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public Builder mergeStabilizationDuration(com.google.protobuf.Duration value) {
+        if (stabilizationDurationBuilder_ == null) {
+          if (stabilizationDuration_ != null) {
+            stabilizationDuration_ =
+              com.google.protobuf.Duration.newBuilder(stabilizationDuration_).mergeFrom(value).buildPartial();
+          } else {
+            stabilizationDuration_ = value;
+          }
+          onChanged();
+        } else {
+          stabilizationDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public Builder clearStabilizationDuration() {
+        if (stabilizationDurationBuilder_ == null) {
+          stabilizationDuration_ = null;
+          onChanged();
+        } else {
+          stabilizationDuration_ = null;
+          stabilizationDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getStabilizationDurationBuilder() {
+        
+        onChanged();
+        return getStabilizationDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getStabilizationDurationOrBuilder() {
+        if (stabilizationDurationBuilder_ != null) {
+          return stabilizationDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return stabilizationDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : stabilizationDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Minimum amount of time in seconds allotted for monitoring before
+       * Instance Groups can reduce the number of instances in the group.
+       * During this time, the group size doesn't decrease, even if the new metric values
+       * indicate that it should.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration stabilization_duration = 5 [(.yandex.cloud.value) = "1m-30m"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getStabilizationDurationFieldBuilder() {
+        if (stabilizationDurationBuilder_ == null) {
+          stabilizationDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getStabilizationDuration(),
+                  getParentForChildren(),
+                  isClean());
+          stabilizationDuration_ = null;
+        }
+        return stabilizationDurationBuilder_;
+      }
+
+      private double cpuUtilizationTarget_ ;
+      /**
+       * <pre>
+       * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * </pre>
+       *
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       */
+      public double getCpuUtilizationTarget() {
+        return cpuUtilizationTarget_;
+      }
+      /**
+       * <pre>
+       * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * </pre>
+       *
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       */
+      public Builder setCpuUtilizationTarget(double value) {
+        
+        cpuUtilizationTarget_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines an autoscaling rule based on the average CPU utilization of the instance group.
+       * </pre>
+       *
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       */
+      public Builder clearCpuUtilizationTarget() {
+        
+        cpuUtilizationTarget_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.v1.AutoscalingConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.v1.AutoscalingConfig)
+    private static final yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig();
+    }
+
+    public static yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoscalingConfig>
+        PARSER = new com.google.protobuf.AbstractParser<AutoscalingConfig>() {
+      @java.lang.Override
+      public AutoscalingConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoscalingConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoscalingConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoscalingConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SubclusterOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.v1.Subcluster)
       com.google.protobuf.MessageOrBuilder {
@@ -337,6 +1836,49 @@ public final class SubclusterOuterClass {
      * <code>int64 hosts_count = 8;</code>
      */
     long getHostsCount();
+
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    boolean hasAutoscalingConfig();
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig();
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder getAutoscalingConfigOrBuilder();
+
+    /**
+     * <pre>
+     * ID of Compute Instance Group for autoscaling subclusters
+     * </pre>
+     *
+     * <code>string instance_group_id = 11;</code>
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <pre>
+     * ID of Compute Instance Group for autoscaling subclusters
+     * </pre>
+     *
+     * <code>string instance_group_id = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
   }
   /**
    * <pre>
@@ -361,6 +1903,7 @@ public final class SubclusterOuterClass {
       role_ = 0;
       subnetId_ = "";
       hostsCount_ = 0L;
+      instanceGroupId_ = "";
     }
 
     @java.lang.Override
@@ -446,6 +1989,25 @@ public final class SubclusterOuterClass {
             case 64: {
 
               hostsCount_ = input.readInt64();
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder subBuilder = null;
+              if (autoscalingConfig_ != null) {
+                subBuilder = autoscalingConfig_.toBuilder();
+              }
+              autoscalingConfig_ = input.readMessage(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoscalingConfig_);
+                autoscalingConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
               break;
             }
             default: {
@@ -752,6 +2314,81 @@ public final class SubclusterOuterClass {
       return hostsCount_;
     }
 
+    public static final int AUTOSCALING_CONFIG_FIELD_NUMBER = 10;
+    private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_;
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    public boolean hasAutoscalingConfig() {
+      return autoscalingConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
+      return autoscalingConfig_ == null ? yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance() : autoscalingConfig_;
+    }
+    /**
+     * <pre>
+     * Configuration for instance group based subclusters
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+     */
+    public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder getAutoscalingConfigOrBuilder() {
+      return getAutoscalingConfig();
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <pre>
+     * ID of Compute Instance Group for autoscaling subclusters
+     * </pre>
+     *
+     * <code>string instance_group_id = 11;</code>
+     */
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of Compute Instance Group for autoscaling subclusters
+     * </pre>
+     *
+     * <code>string instance_group_id = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -790,6 +2427,12 @@ public final class SubclusterOuterClass {
       if (hostsCount_ != 0L) {
         output.writeInt64(8, hostsCount_);
       }
+      if (autoscalingConfig_ != null) {
+        output.writeMessage(10, getAutoscalingConfig());
+      }
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, instanceGroupId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -826,6 +2469,13 @@ public final class SubclusterOuterClass {
       if (hostsCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, hostsCount_);
+      }
+      if (autoscalingConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getAutoscalingConfig());
+      }
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, instanceGroupId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -864,6 +2514,13 @@ public final class SubclusterOuterClass {
           .equals(other.getSubnetId());
       result = result && (getHostsCount()
           == other.getHostsCount());
+      result = result && (hasAutoscalingConfig() == other.hasAutoscalingConfig());
+      if (hasAutoscalingConfig()) {
+        result = result && getAutoscalingConfig()
+            .equals(other.getAutoscalingConfig());
+      }
+      result = result && getInstanceGroupId()
+          .equals(other.getInstanceGroupId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -896,6 +2553,12 @@ public final class SubclusterOuterClass {
       hash = (37 * hash) + HOSTS_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHostsCount());
+      if (hasAutoscalingConfig()) {
+        hash = (37 * hash) + AUTOSCALING_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoscalingConfig().hashCode();
+      }
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1057,6 +2720,14 @@ public final class SubclusterOuterClass {
 
         hostsCount_ = 0L;
 
+        if (autoscalingConfigBuilder_ == null) {
+          autoscalingConfig_ = null;
+        } else {
+          autoscalingConfig_ = null;
+          autoscalingConfigBuilder_ = null;
+        }
+        instanceGroupId_ = "";
+
         return this;
       }
 
@@ -1099,6 +2770,12 @@ public final class SubclusterOuterClass {
         }
         result.subnetId_ = subnetId_;
         result.hostsCount_ = hostsCount_;
+        if (autoscalingConfigBuilder_ == null) {
+          result.autoscalingConfig_ = autoscalingConfig_;
+        } else {
+          result.autoscalingConfig_ = autoscalingConfigBuilder_.build();
+        }
+        result.instanceGroupId_ = instanceGroupId_;
         onBuilt();
         return result;
       }
@@ -1174,6 +2851,13 @@ public final class SubclusterOuterClass {
         }
         if (other.getHostsCount() != 0L) {
           setHostsCount(other.getHostsCount());
+        }
+        if (other.hasAutoscalingConfig()) {
+          mergeAutoscalingConfig(other.getAutoscalingConfig());
+        }
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1965,6 +3649,248 @@ public final class SubclusterOuterClass {
       public Builder clearHostsCount() {
         
         hostsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig autoscalingConfig_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder> autoscalingConfigBuilder_;
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public boolean hasAutoscalingConfig() {
+        return autoscalingConfigBuilder_ != null || autoscalingConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig getAutoscalingConfig() {
+        if (autoscalingConfigBuilder_ == null) {
+          return autoscalingConfig_ == null ? yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance() : autoscalingConfig_;
+        } else {
+          return autoscalingConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public Builder setAutoscalingConfig(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig value) {
+        if (autoscalingConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoscalingConfig_ = value;
+          onChanged();
+        } else {
+          autoscalingConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public Builder setAutoscalingConfig(
+          yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder builderForValue) {
+        if (autoscalingConfigBuilder_ == null) {
+          autoscalingConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoscalingConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public Builder mergeAutoscalingConfig(yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig value) {
+        if (autoscalingConfigBuilder_ == null) {
+          if (autoscalingConfig_ != null) {
+            autoscalingConfig_ =
+              yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.newBuilder(autoscalingConfig_).mergeFrom(value).buildPartial();
+          } else {
+            autoscalingConfig_ = value;
+          }
+          onChanged();
+        } else {
+          autoscalingConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public Builder clearAutoscalingConfig() {
+        if (autoscalingConfigBuilder_ == null) {
+          autoscalingConfig_ = null;
+          onChanged();
+        } else {
+          autoscalingConfig_ = null;
+          autoscalingConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder getAutoscalingConfigBuilder() {
+        
+        onChanged();
+        return getAutoscalingConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      public yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder getAutoscalingConfigOrBuilder() {
+        if (autoscalingConfigBuilder_ != null) {
+          return autoscalingConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return autoscalingConfig_ == null ?
+              yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.getDefaultInstance() : autoscalingConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for instance group based subclusters
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.v1.AutoscalingConfig autoscaling_config = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder> 
+          getAutoscalingConfigFieldBuilder() {
+        if (autoscalingConfigBuilder_ == null) {
+          autoscalingConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfig.Builder, yandex.cloud.api.dataproc.v1.SubclusterOuterClass.AutoscalingConfigOrBuilder>(
+                  getAutoscalingConfig(),
+                  getParentForChildren(),
+                  isClean());
+          autoscalingConfig_ = null;
+        }
+        return autoscalingConfigBuilder_;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <pre>
+       * ID of Compute Instance Group for autoscaling subclusters
+       * </pre>
+       *
+       * <code>string instance_group_id = 11;</code>
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of Compute Instance Group for autoscaling subclusters
+       * </pre>
+       *
+       * <code>string instance_group_id = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of Compute Instance Group for autoscaling subclusters
+       * </pre>
+       *
+       * <code>string instance_group_id = 11;</code>
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of Compute Instance Group for autoscaling subclusters
+       * </pre>
+       *
+       * <code>string instance_group_id = 11;</code>
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of Compute Instance Group for autoscaling subclusters
+       * </pre>
+       *
+       * <code>string instance_group_id = 11;</code>
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
         onChanged();
         return this;
       }
@@ -3240,6 +5166,11 @@ public final class SubclusterOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3262,22 +5193,34 @@ public final class SubclusterOuterClass {
       "oto\022\030yandex.cloud.dataproc.v1\032\037google/pr" +
       "otobuf/timestamp.proto\032%yandex/cloud/dat" +
       "aproc/v1/common.proto\032\035yandex/cloud/vali" +
-      "dation.proto\"\202\002\n\nSubcluster\022\n\n\002id\030\001 \001(\t\022" +
-      "\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\026\n\004name\030\004 \001(" +
-      "\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex.cloud" +
-      ".dataproc.v1.Role\0226\n\tresources\030\006 \001(\0132#.y" +
-      "andex.cloud.dataproc.v1.Resources\022\021\n\tsub" +
-      "net_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\"\250\001\n\004Ho" +
-      "st\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\022" +
-      "0\n\006health\030\003 \001(\0162 .yandex.cloud.dataproc." +
-      "v1.Health\022\033\n\023compute_instance_id\030\004 \001(\t\022," +
-      "\n\004role\030\005 \001(\0162\036.yandex.cloud.dataproc.v1." +
-      "Role*K\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMA" +
-      "STERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020" +
-      "\003Be\n\034yandex.cloud.api.dataproc.v1ZEgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/dataproc/v1;dataprocb\006proto3"
+      "dation.proto\032\036google/protobuf/duration.p" +
+      "roto\"\307\002\n\021AutoscalingConfig\022\"\n\017max_hosts_" +
+      "count\030\001 \001(\003B\t\372\3071\0051-100\022\023\n\013preemptible\030\002 " +
+      "\001(\010\022G\n\024measurement_duration\030\003 \001(\0132\031.goog" +
+      "le.protobuf.DurationB\016\350\3071\001\372\3071\0061m-10m\022=\n\017" +
+      "warmup_duration\030\004 \001(\0132\031.google.protobuf." +
+      "DurationB\t\372\3071\005<=10m\022E\n\026stabilization_dur" +
+      "ation\030\005 \001(\0132\031.google.protobuf.DurationB\n" +
+      "\372\3071\0061m-30m\022*\n\026cpu_utilization_target\030\006 \001" +
+      "(\001B\n\372\3071\00610-100\"\354\002\n\nSubcluster\022\n\n\002id\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\026\n\004name\030\004 " +
+      "\001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex.clo" +
+      "ud.dataproc.v1.Role\0226\n\tresources\030\006 \001(\0132#" +
+      ".yandex.cloud.dataproc.v1.Resources\022\021\n\ts" +
+      "ubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022G\n\022a" +
+      "utoscaling_config\030\n \001(\0132+.yandex.cloud.d" +
+      "ataproc.v1.AutoscalingConfig\022\031\n\021instance" +
+      "_group_id\030\013 \001(\tJ\004\010\t\020\n\"\250\001\n\004Host\022\014\n\004name\030\001" +
+      " \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\0220\n\006health\030\003 " +
+      "\001(\0162 .yandex.cloud.dataproc.v1.Health\022\033\n" +
+      "\023compute_instance_id\030\004 \001(\t\022,\n\004role\030\005 \001(\016" +
+      "2\036.yandex.cloud.dataproc.v1.Role*K\n\004Role" +
+      "\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMASTERNODE\020\001\022\014" +
+      "\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020\003Be\n\034yandex." +
+      "cloud.api.dataproc.v1ZEgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/dataproc" +
+      "/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3293,15 +5236,22 @@ public final class SubclusterOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.dataproc.v1.Common.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         }, assigner);
-    internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor =
+    internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor,
+        new java.lang.String[] { "MaxHostsCount", "Preemptible", "MeasurementDuration", "WarmupDuration", "StabilizationDuration", "CpuUtilizationTarget", });
+    internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_dataproc_v1_Subcluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor,
-        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Role", "Resources", "SubnetId", "HostsCount", });
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "Name", "Role", "Resources", "SubnetId", "HostsCount", "AutoscalingConfig", "InstanceGroupId", });
     internal_static_yandex_cloud_dataproc_v1_Host_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_dataproc_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Host_descriptor,
@@ -3309,11 +5259,14 @@ public final class SubclusterOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.dataproc.v1.Common.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

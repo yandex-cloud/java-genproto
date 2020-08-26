@@ -4840,6 +4840,10 @@ public final class ClusterOuterClass {
        * <code>OOZIE = 12;</code>
        */
       OOZIE(12),
+      /**
+       * <code>LIVY = 13;</code>
+       */
+      LIVY(13),
       UNRECOGNIZED(-1),
       ;
 
@@ -4895,6 +4899,10 @@ public final class ClusterOuterClass {
        * <code>OOZIE = 12;</code>
        */
       public static final int OOZIE_VALUE = 12;
+      /**
+       * <code>LIVY = 13;</code>
+       */
+      public static final int LIVY_VALUE = 13;
 
 
       public final int getNumber() {
@@ -4928,6 +4936,7 @@ public final class ClusterOuterClass {
           case 10: return SPARK;
           case 11: return ZEPPELIN;
           case 12: return OOZIE;
+          case 13: return LIVY;
           default: return null;
         }
       }
@@ -7043,23 +7052,23 @@ public final class ClusterOuterClass {
       "NKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005E" +
       "RROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STA" +
       "RTING\020\006\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
-      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\227\003\n\014Hadoo" +
+      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\241\003\n\014Hadoo" +
       "pConfig\022@\n\010services\030\001 \003(\0162..yandex.cloud" +
       ".dataproc.v1.HadoopConfig.Service\022J\n\npro" +
       "perties\030\002 \003(\01326.yandex.cloud.dataproc.v1" +
       ".HadoopConfig.PropertiesEntry\022\027\n\017ssh_pub" +
       "lic_keys\030\003 \003(\t\0321\n\017PropertiesEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\007Service\022\027\n" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\266\001\n\007Service\022\027\n" +
       "\023SERVICE_UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN" +
       "\020\002\022\r\n\tMAPREDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\t" +
       "ZOOKEEPER\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLU" +
       "ME\020\t\022\t\n\005SPARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014" +
-      "\"[\n\rClusterConfig\022\022\n\nversion_id\030\001 \001(\t\0226\n" +
-      "\006hadoop\030\002 \001(\0132&.yandex.cloud.dataproc.v1" +
-      ".HadoopConfigBe\n\034yandex.cloud.api.datapr" +
-      "oc.v1ZEgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/dataproc/v1;dataprocb\006pr" +
-      "oto3"
+      "\022\010\n\004LIVY\020\r\"[\n\rClusterConfig\022\022\n\nversion_i" +
+      "d\030\001 \001(\t\0226\n\006hadoop\030\002 \001(\0132&.yandex.cloud.d" +
+      "ataproc.v1.HadoopConfigBe\n\034yandex.cloud." +
+      "api.dataproc.v1ZEgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/dataproc/v1;da" +
+      "taprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
