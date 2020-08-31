@@ -2846,7 +2846,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -2855,7 +2855,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -2871,7 +2871,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -2881,7 +2881,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -2893,7 +2893,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -3483,7 +3483,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -3504,7 +3504,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -3516,7 +3516,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -3533,7 +3533,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -4847,7 +4847,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4868,7 +4868,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4880,7 +4880,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4897,7 +4897,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4922,7 +4922,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4946,7 +4946,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -4963,7 +4963,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -7105,7 +7105,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7116,7 +7116,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7134,7 +7134,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7146,7 +7146,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7160,7 +7160,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7569,7 +7569,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7592,7 +7592,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7606,7 +7606,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -7625,7 +7625,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * The new set of labels will completely replace the old ones. To add a label, request the current
      * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8656,7 +8656,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8679,7 +8679,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8693,7 +8693,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8712,7 +8712,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8739,7 +8739,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8765,7 +8765,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -8784,7 +8784,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * The new set of labels will completely replace the old ones. To add a label, request the current
        * set with the [ClusterService.Get] method, then send an [ClusterService.Update] request with the new label added to the set.
@@ -18291,7 +18291,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18300,7 +18300,7 @@ public final class ClusterServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18316,7 +18316,7 @@ public final class ClusterServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18326,7 +18326,7 @@ public final class ClusterServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18338,7 +18338,7 @@ public final class ClusterServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18821,7 +18821,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18842,7 +18842,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18854,7 +18854,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -18871,7 +18871,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+     * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
      * For example, "project": "mvp" or "source": "dictionary".
      * </pre>
      *
@@ -19975,7 +19975,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -19996,7 +19996,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -20008,7 +20008,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -20025,7 +20025,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -20050,7 +20050,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -20074,7 +20074,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -20091,7 +20091,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Custom labels for the ClickHouse cluster as `` key:value `` pairs. Maximum 64 per resource.
+       * Custom labels for the ClickHouse cluster as `key:value` pairs. Maximum 64 per resource.
        * For example, "project": "mvp" or "source": "dictionary".
        * </pre>
        *
@@ -26648,7 +26648,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -26660,7 +26660,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -26823,7 +26823,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -26846,7 +26846,7 @@ public final class ClusterServiceOuterClass {
      * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
      * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-     * This value is interchangeable with `next_record_token` from StreamLogs method.
+     * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -27546,7 +27546,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27569,7 +27569,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27593,7 +27593,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27614,7 +27614,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27631,7 +27631,7 @@ public final class ClusterServiceOuterClass {
        * is larger than [ListClusterLogsRequest.page_size], use the [next_page_token] as the value
        * for the [ListClusterLogsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
-       * This value is interchangeable with `next_record_token` from StreamLogs method.
+       * This value is interchangeable with the [StreamLogRecord.next_record_token] from StreamLogs method.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -27732,9 +27732,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * same record. To continue streaming, specify value of [next_record_token[
+     * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+     * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27743,9 +27743,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * same record. To continue streaming, specify value of [next_record_token[
+     * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+     * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27882,9 +27882,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * same record. To continue streaming, specify value of [next_record_token[
+     * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+     * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -27904,9 +27904,9 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * This token allows you to continue streaming logs starting from the exact
-     * same record. To continue streaming, specify value of `next_record_token`
-     * as value for `record_token` parameter in the next StreamLogs request.
-     * This value is interchangeable with `next_page_token` from ListLogs method.
+     * same record. To continue streaming, specify value of [next_record_token[
+     * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+     * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
      * </pre>
      *
      * <code>string next_record_token = 2;</code>
@@ -28415,9 +28415,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * same record. To continue streaming, specify value of [next_record_token[
+       * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+       * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28437,9 +28437,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * same record. To continue streaming, specify value of [next_record_token[
+       * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+       * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28460,9 +28460,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * same record. To continue streaming, specify value of [next_record_token[
+       * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+       * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28480,9 +28480,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * same record. To continue streaming, specify value of [next_record_token[
+       * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+       * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28496,9 +28496,9 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * This token allows you to continue streaming logs starting from the exact
-       * same record. To continue streaming, specify value of `next_record_token`
-       * as value for `record_token` parameter in the next StreamLogs request.
-       * This value is interchangeable with `next_page_token` from ListLogs method.
+       * same record. To continue streaming, specify value of [next_record_token[
+       * as value for the [StreamClusterLogsRequest.record_token] parameter in the next StreamLogs request.
+       * This value is interchangeable with the [ListClusterLogsResponse.next_page_token] from ListLogs method.
        * </pre>
        *
        * <code>string next_record_token = 2;</code>
@@ -28662,7 +28662,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28672,7 +28672,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28682,7 +28682,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -28691,7 +28691,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
      * request to start streaming from next log record.
      * </pre>
      *
@@ -28700,7 +28700,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getRecordToken();
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
      * request to start streaming from next log record.
      * </pre>
      *
@@ -29090,7 +29090,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29102,7 +29102,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29114,7 +29114,7 @@ public final class ClusterServiceOuterClass {
      * <pre>
      * End timestamp for the logs request.
      * If this field is not set, all existing logs will be sent and then the new ones as
-     * they appear. In essence it has 'tail -f' semantics.
+     * they appear. In essence it has `tail -f` semantics.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -29127,7 +29127,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object recordToken_;
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
      * request to start streaming from next log record.
      * </pre>
      *
@@ -29147,7 +29147,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+     * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
      * request to start streaming from next log record.
      * </pre>
      *
@@ -30025,7 +30025,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30037,7 +30037,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30053,7 +30053,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30075,7 +30075,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30095,7 +30095,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30119,7 +30119,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30139,7 +30139,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30153,7 +30153,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30170,7 +30170,7 @@ public final class ClusterServiceOuterClass {
        * <pre>
        * End timestamp for the logs request.
        * If this field is not set, all existing logs will be sent and then the new ones as
-       * they appear. In essence it has 'tail -f' semantics.
+       * they appear. In essence it has `tail -f` semantics.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 5;</code>
@@ -30192,7 +30192,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object recordToken_ = "";
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
        * request to start streaming from next log record.
        * </pre>
        *
@@ -30212,7 +30212,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
        * request to start streaming from next log record.
        * </pre>
        *
@@ -30233,7 +30233,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
        * request to start streaming from next log record.
        * </pre>
        *
@@ -30251,7 +30251,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
        * request to start streaming from next log record.
        * </pre>
        *
@@ -30265,7 +30265,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Record token. Set `record_token` to the `next_record_token` returned by a previous StreamLogs
+       * Record token. Set [record_token] to the [StreamLogRecord.next_record_token] returned by a previous StreamLogs
        * request to start streaming from next log record.
        * </pre>
        *

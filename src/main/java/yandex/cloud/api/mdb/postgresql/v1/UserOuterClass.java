@@ -56,7 +56,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -65,7 +65,7 @@ public final class UserOuterClass {
         getPermissionsList();
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -73,7 +73,7 @@ public final class UserOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission getPermissions(int index);
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -81,7 +81,7 @@ public final class UserOuterClass {
     int getPermissionsCount();
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -90,7 +90,7 @@ public final class UserOuterClass {
         getPermissionsOrBuilderList();
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -100,7 +100,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Number of database connections available to the user.
+     * Maximum number of database connections available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>int64 conn_limit = 4;</code>
@@ -108,33 +111,22 @@ public final class UserOuterClass {
     long getConnLimit();
 
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     boolean hasSettings();
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings();
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
 
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -142,7 +134,8 @@ public final class UserOuterClass {
     boolean hasLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -150,7 +143,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -159,7 +153,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -168,7 +163,8 @@ public final class UserOuterClass {
         getGrantsList();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -176,7 +172,8 @@ public final class UserOuterClass {
     int getGrantsCount();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -184,7 +181,8 @@ public final class UserOuterClass {
     java.lang.String getGrants(int index);
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -429,7 +427,7 @@ public final class UserOuterClass {
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission> permissions_;
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -439,7 +437,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -450,7 +448,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -460,7 +458,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -470,7 +468,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions granted to the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -484,7 +482,10 @@ public final class UserOuterClass {
     private long connLimit_;
     /**
      * <pre>
-     * Number of database connections available to the user.
+     * Maximum number of database connections available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>int64 conn_limit = 4;</code>
@@ -496,30 +497,18 @@ public final class UserOuterClass {
     public static final int SETTINGS_FIELD_NUMBER = 5;
     private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings settings_;
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.getDefaultInstance() : settings_;
     }
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
@@ -530,7 +519,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue login_;
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -540,7 +530,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -550,7 +541,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -563,7 +555,8 @@ public final class UserOuterClass {
     private com.google.protobuf.LazyStringList grants_;
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -574,7 +567,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -584,7 +578,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -594,7 +589,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1292,7 +1288,7 @@ public final class UserOuterClass {
 
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1306,7 +1302,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1320,7 +1316,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1334,7 +1330,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1355,7 +1351,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1373,7 +1369,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1393,7 +1389,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1414,7 +1410,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1432,7 +1428,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1450,7 +1446,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1469,7 +1465,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1486,7 +1482,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1503,7 +1499,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1514,7 +1510,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1528,7 +1524,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1543,7 +1539,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1554,7 +1550,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1566,7 +1562,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions granted to the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -1593,7 +1589,10 @@ public final class UserOuterClass {
       private long connLimit_ ;
       /**
        * <pre>
-       * Number of database connections available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 4;</code>
@@ -1603,7 +1602,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 4;</code>
@@ -1616,7 +1618,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 4;</code>
@@ -1632,20 +1637,12 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings() {
@@ -1656,10 +1653,6 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder setSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -1676,10 +1669,6 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder setSettings(
@@ -1694,10 +1683,6 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -1716,10 +1701,6 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public Builder clearSettings() {
@@ -1734,10 +1715,6 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder getSettingsBuilder() {
@@ -1746,10 +1723,6 @@ public final class UserOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
@@ -1761,10 +1734,6 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1786,7 +1755,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> loginBuilder_;
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1796,7 +1766,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1810,7 +1781,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1830,7 +1802,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1848,7 +1821,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1870,7 +1844,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1888,7 +1863,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1900,7 +1876,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1915,7 +1892,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -1943,7 +1921,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1954,7 +1933,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1964,7 +1944,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1974,7 +1955,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -1985,7 +1967,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2002,7 +1985,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2019,7 +2003,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2034,7 +2019,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2047,7 +2033,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2744,7 +2731,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -2753,7 +2740,7 @@ public final class UserOuterClass {
         getPermissionsList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -2761,7 +2748,7 @@ public final class UserOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission getPermissions(int index);
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -2769,7 +2756,7 @@ public final class UserOuterClass {
     int getPermissionsCount();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -2778,7 +2765,7 @@ public final class UserOuterClass {
         getPermissionsOrBuilderList();
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -2788,7 +2775,10 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -2796,7 +2786,10 @@ public final class UserOuterClass {
     boolean hasConnLimit();
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -2804,7 +2797,10 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getConnLimit();
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -2813,7 +2809,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -2821,7 +2817,7 @@ public final class UserOuterClass {
     boolean hasSettings();
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -2829,7 +2825,7 @@ public final class UserOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings();
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -2838,7 +2834,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -2846,7 +2843,8 @@ public final class UserOuterClass {
     boolean hasLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -2854,7 +2852,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -2863,7 +2862,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2872,7 +2872,8 @@ public final class UserOuterClass {
         getGrantsList();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2880,7 +2881,8 @@ public final class UserOuterClass {
     int getGrantsCount();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -2888,7 +2890,8 @@ public final class UserOuterClass {
     java.lang.String getGrants(int index);
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3135,7 +3138,7 @@ public final class UserOuterClass {
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission> permissions_;
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -3145,7 +3148,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -3156,7 +3159,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -3166,7 +3169,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -3176,7 +3179,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Set of permissions to grant to the user.
+     * Set of permissions to grant to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -3190,7 +3193,10 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value connLimit_;
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -3200,7 +3206,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -3210,7 +3219,10 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Number of database connections that should be available to the user.
+     * Maximum number of database connections that should be available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -3223,7 +3235,7 @@ public final class UserOuterClass {
     private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings settings_;
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -3233,7 +3245,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -3243,7 +3255,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Postgresql settings for this user
+     * PostgreSQL settings for the user.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -3256,7 +3268,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue login_;
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -3266,7 +3279,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -3276,7 +3290,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -3289,7 +3304,8 @@ public final class UserOuterClass {
     private com.google.protobuf.LazyStringList grants_;
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3300,7 +3316,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3310,7 +3327,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -3320,7 +3338,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4025,7 +4044,7 @@ public final class UserOuterClass {
 
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4039,7 +4058,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4053,7 +4072,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4067,7 +4086,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4088,7 +4107,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4106,7 +4125,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4126,7 +4145,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4147,7 +4166,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4165,7 +4184,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4183,7 +4202,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4202,7 +4221,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4219,7 +4238,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4236,7 +4255,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4247,7 +4266,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4261,7 +4280,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4276,7 +4295,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4287,7 +4306,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4299,7 +4318,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Set of permissions to grant to the user.
+       * Set of permissions to grant to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 3;</code>
@@ -4328,7 +4347,10 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> connLimitBuilder_;
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4338,7 +4360,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4352,7 +4377,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4372,7 +4400,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4390,7 +4421,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4412,7 +4446,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4430,7 +4467,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4442,7 +4482,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4457,7 +4500,10 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Number of database connections that should be available to the user.
+       * Maximum number of database connections that should be available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config_12.effective_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value conn_limit = 4 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4481,7 +4527,7 @@ public final class UserOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4491,7 +4537,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4505,7 +4551,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4525,7 +4571,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4543,7 +4589,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4565,7 +4611,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4583,7 +4629,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4595,7 +4641,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4610,7 +4656,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Postgresql settings for this user
+       * PostgreSQL settings for the user.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 5;</code>
@@ -4634,7 +4680,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> loginBuilder_;
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4644,7 +4691,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4658,7 +4706,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4678,7 +4727,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4696,7 +4746,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4718,7 +4769,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4736,7 +4788,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4748,7 +4801,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4763,7 +4817,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 6;</code>
@@ -4791,7 +4846,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4802,7 +4858,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4812,7 +4869,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4822,7 +4880,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4833,7 +4892,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4850,7 +4910,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4867,7 +4928,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4882,7 +4944,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4895,7 +4958,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 7 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4969,17 +5033,31 @@ public final class UserOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * SQL sets an isolation level for each transaction.
+     * This setting defines the default isolation level to be set for all new SQL transactions.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
      */
     int getDefaultTransactionIsolationValue();
     /**
+     * <pre>
+     * SQL sets an isolation level for each transaction.
+     * This setting defines the default isolation level to be set for all new SQL transactions.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.TransactionIsolation getDefaultTransactionIsolation();
 
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -4987,7 +5065,9 @@ public final class UserOuterClass {
     boolean hasLockTimeout();
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -4995,7 +5075,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getLockTimeout();
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -5004,7 +5086,12 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5012,7 +5099,12 @@ public final class UserOuterClass {
     boolean hasLogMinDurationStatement();
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5020,7 +5112,12 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getLogMinDurationStatement();
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5028,17 +5125,33 @@ public final class UserOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getLogMinDurationStatementOrBuilder();
 
     /**
+     * <pre>
+     * This setting defines whether DBMS will commit transaction in a synchronous way.
+     * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+     * These operations guarantee different levels of the data safety and visibility in the cluster.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
      */
     int getSynchronousCommitValue();
     /**
+     * <pre>
+     * This setting defines whether DBMS will commit transaction in a synchronous way.
+     * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+     * These operations guarantee different levels of the data safety and visibility in the cluster.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.SynchronousCommit getSynchronousCommit();
 
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5046,7 +5159,9 @@ public final class UserOuterClass {
     boolean hasTempFileLimit();
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5054,7 +5169,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getTempFileLimit();
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5062,17 +5179,27 @@ public final class UserOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getTempFileLimitOrBuilder();
 
     /**
+     * <pre>
+     * This setting specifies which SQL statements should be logged (on the user level).
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
      */
     int getLogStatementValue();
     /**
+     * <pre>
+     * This setting specifies which SQL statements should be logged (on the user level).
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement getLogStatement();
   }
   /**
    * <pre>
-   * Postgresql user settings config
+   * PostgreSQL user settings.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSettings}
@@ -5215,22 +5342,46 @@ public final class UserOuterClass {
        */
       SYNCHRONOUS_COMMIT_UNSPECIFIED(0),
       /**
+       * <pre>
+       * (default value) success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
        */
       SYNCHRONOUS_COMMIT_ON(1),
       /**
+       * <pre>
+       * success is reported to the client even if the data is not in WAL.
+       * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
        */
       SYNCHRONOUS_COMMIT_OFF(2),
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * The transaction may be lost due to storage subsystem failure on the master server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
        */
       SYNCHRONOUS_COMMIT_LOCAL(3),
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
        */
       SYNCHRONOUS_COMMIT_REMOTE_WRITE(4),
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
        */
       SYNCHRONOUS_COMMIT_REMOTE_APPLY(5),
@@ -5242,22 +5393,46 @@ public final class UserOuterClass {
        */
       public static final int SYNCHRONOUS_COMMIT_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * (default value) success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_ON_VALUE = 1;
       /**
+       * <pre>
+       * success is reported to the client even if the data is not in WAL.
+       * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_OFF = 2;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_OFF_VALUE = 2;
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * The transaction may be lost due to storage subsystem failure on the master server.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_LOCAL = 3;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_LOCAL_VALUE = 3;
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_WRITE = 4;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_REMOTE_WRITE_VALUE = 4;
       /**
+       * <pre>
+       * success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
+       * </pre>
+       *
        * <code>SYNCHRONOUS_COMMIT_REMOTE_APPLY = 5;</code>
        */
       public static final int SYNCHRONOUS_COMMIT_REMOTE_APPLY_VALUE = 5;
@@ -5349,18 +5524,34 @@ public final class UserOuterClass {
        */
       LOG_STATEMENT_UNSPECIFIED(0),
       /**
+       * <pre>
+       * (default) logs none of SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_NONE = 1;</code>
        */
       LOG_STATEMENT_NONE(1),
       /**
+       * <pre>
+       * logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
+       * </pre>
+       *
        * <code>LOG_STATEMENT_DDL = 2;</code>
        */
       LOG_STATEMENT_DDL(2),
       /**
+       * <pre>
+       * logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
+       * </pre>
+       *
        * <code>LOG_STATEMENT_MOD = 3;</code>
        */
       LOG_STATEMENT_MOD(3),
       /**
+       * <pre>
+       * logs all SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_ALL = 4;</code>
        */
       LOG_STATEMENT_ALL(4),
@@ -5372,18 +5563,34 @@ public final class UserOuterClass {
        */
       public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * (default) logs none of SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_NONE = 1;</code>
        */
       public static final int LOG_STATEMENT_NONE_VALUE = 1;
       /**
+       * <pre>
+       * logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
+       * </pre>
+       *
        * <code>LOG_STATEMENT_DDL = 2;</code>
        */
       public static final int LOG_STATEMENT_DDL_VALUE = 2;
       /**
+       * <pre>
+       * logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
+       * </pre>
+       *
        * <code>LOG_STATEMENT_MOD = 3;</code>
        */
       public static final int LOG_STATEMENT_MOD_VALUE = 3;
       /**
+       * <pre>
+       * logs all SQL statements.
+       * </pre>
+       *
        * <code>LOG_STATEMENT_ALL = 4;</code>
        */
       public static final int LOG_STATEMENT_ALL_VALUE = 4;
@@ -5474,18 +5681,36 @@ public final class UserOuterClass {
        */
       TRANSACTION_ISOLATION_UNSPECIFIED(0),
       /**
+       * <pre>
+       * this level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
        */
       TRANSACTION_ISOLATION_READ_UNCOMMITTED(1),
       /**
+       * <pre>
+       * (default) on this level query sees only data committed before the query began.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
        */
       TRANSACTION_ISOLATION_READ_COMMITTED(2),
       /**
+       * <pre>
+       * on this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
        */
       TRANSACTION_ISOLATION_REPEATABLE_READ(3),
       /**
+       * <pre>
+       * this level provides the strictest transaction isolation.
+       * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
+       * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
        */
       TRANSACTION_ISOLATION_SERIALIZABLE(4),
@@ -5497,18 +5722,36 @@ public final class UserOuterClass {
        */
       public static final int TRANSACTION_ISOLATION_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * this level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
        */
       public static final int TRANSACTION_ISOLATION_READ_UNCOMMITTED_VALUE = 1;
       /**
+       * <pre>
+       * (default) on this level query sees only data committed before the query began.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
        */
       public static final int TRANSACTION_ISOLATION_READ_COMMITTED_VALUE = 2;
       /**
+       * <pre>
+       * on this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
        */
       public static final int TRANSACTION_ISOLATION_REPEATABLE_READ_VALUE = 3;
       /**
+       * <pre>
+       * this level provides the strictest transaction isolation.
+       * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
+       * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
+       * </pre>
+       *
        * <code>TRANSACTION_ISOLATION_SERIALIZABLE = 4;</code>
        */
       public static final int TRANSACTION_ISOLATION_SERIALIZABLE_VALUE = 4;
@@ -5592,12 +5835,24 @@ public final class UserOuterClass {
     public static final int DEFAULT_TRANSACTION_ISOLATION_FIELD_NUMBER = 1;
     private int defaultTransactionIsolation_;
     /**
+     * <pre>
+     * SQL sets an isolation level for each transaction.
+     * This setting defines the default isolation level to be set for all new SQL transactions.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
      */
     public int getDefaultTransactionIsolationValue() {
       return defaultTransactionIsolation_;
     }
     /**
+     * <pre>
+     * SQL sets an isolation level for each transaction.
+     * This setting defines the default isolation level to be set for all new SQL transactions.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.TransactionIsolation getDefaultTransactionIsolation() {
@@ -5610,7 +5865,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value lockTimeout_;
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -5620,7 +5877,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -5630,7 +5889,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in milliseconds.
+     * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+     * If the wait time is longer than the specified amount, then this statement is aborted.
+     * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -5643,7 +5904,12 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value logMinDurationStatement_;
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5653,7 +5919,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5663,7 +5934,12 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in milliseconds.
+     * This setting controls logging of the duration of statements.
+     * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+     * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+     * Value of `0` forces PostgreSQL to log the duration of all statements.
+     * Value of `-1` (default) disables logging of the duration of statements.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -5675,12 +5951,26 @@ public final class UserOuterClass {
     public static final int SYNCHRONOUS_COMMIT_FIELD_NUMBER = 4;
     private int synchronousCommit_;
     /**
+     * <pre>
+     * This setting defines whether DBMS will commit transaction in a synchronous way.
+     * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+     * These operations guarantee different levels of the data safety and visibility in the cluster.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
      */
     public int getSynchronousCommitValue() {
       return synchronousCommit_;
     }
     /**
+     * <pre>
+     * This setting defines whether DBMS will commit transaction in a synchronous way.
+     * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+     * These operations guarantee different levels of the data safety and visibility in the cluster.
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.SynchronousCommit getSynchronousCommit() {
@@ -5693,7 +5983,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value tempFileLimit_;
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5703,7 +5995,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5713,7 +6007,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * in bytes.
+     * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+     * If a transaction exceeds this limit during execution, it will be aborted.
+     * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -5725,12 +6021,22 @@ public final class UserOuterClass {
     public static final int LOG_STATEMENT_FIELD_NUMBER = 6;
     private int logStatement_;
     /**
+     * <pre>
+     * This setting specifies which SQL statements should be logged (on the user level).
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
      */
     public int getLogStatementValue() {
       return logStatement_;
     }
     /**
+     * <pre>
+     * This setting specifies which SQL statements should be logged (on the user level).
+     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement getLogStatement() {
@@ -5964,7 +6270,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Postgresql user settings config
+     * PostgreSQL user settings.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSettings}
@@ -6169,12 +6475,24 @@ public final class UserOuterClass {
 
       private int defaultTransactionIsolation_ = 0;
       /**
+       * <pre>
+       * SQL sets an isolation level for each transaction.
+       * This setting defines the default isolation level to be set for all new SQL transactions.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
        */
       public int getDefaultTransactionIsolationValue() {
         return defaultTransactionIsolation_;
       }
       /**
+       * <pre>
+       * SQL sets an isolation level for each transaction.
+       * This setting defines the default isolation level to be set for all new SQL transactions.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
        */
       public Builder setDefaultTransactionIsolationValue(int value) {
@@ -6183,6 +6501,12 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SQL sets an isolation level for each transaction.
+       * This setting defines the default isolation level to be set for all new SQL transactions.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.TransactionIsolation getDefaultTransactionIsolation() {
@@ -6191,6 +6515,12 @@ public final class UserOuterClass {
         return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.TransactionIsolation.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * SQL sets an isolation level for each transaction.
+       * This setting defines the default isolation level to be set for all new SQL transactions.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
        */
       public Builder setDefaultTransactionIsolation(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.TransactionIsolation value) {
@@ -6203,6 +6533,12 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SQL sets an isolation level for each transaction.
+       * This setting defines the default isolation level to be set for all new SQL transactions.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
        */
       public Builder clearDefaultTransactionIsolation() {
@@ -6217,7 +6553,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> lockTimeoutBuilder_;
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6227,7 +6565,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6241,7 +6581,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6261,7 +6603,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6279,7 +6623,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6301,7 +6647,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6319,7 +6667,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6331,7 +6681,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6346,7 +6698,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * The maximum time (in milliseconds) for any statement to wait for acquiring a lock on an table, index, row or other database object.
+       * If the wait time is longer than the specified amount, then this statement is aborted.
+       * Default value: `0` (no control is enforced, a statement waiting time is unlimited).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value lock_timeout = 2;</code>
@@ -6370,7 +6724,12 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logMinDurationStatementBuilder_;
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6380,7 +6739,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6394,7 +6758,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6414,7 +6783,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6432,7 +6806,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6454,7 +6833,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6472,7 +6856,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6484,7 +6873,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6499,7 +6893,12 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in milliseconds.
+       * This setting controls logging of the duration of statements.
+       * The duration of each completed statement will be logged if the statement ran for at least the specified amount of time (in milliseconds).
+       * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
+       * Value of `0` forces PostgreSQL to log the duration of all statements.
+       * Value of `-1` (default) disables logging of the duration of statements.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -6520,12 +6919,26 @@ public final class UserOuterClass {
 
       private int synchronousCommit_ = 0;
       /**
+       * <pre>
+       * This setting defines whether DBMS will commit transaction in a synchronous way.
+       * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+       * These operations guarantee different levels of the data safety and visibility in the cluster.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
        */
       public int getSynchronousCommitValue() {
         return synchronousCommit_;
       }
       /**
+       * <pre>
+       * This setting defines whether DBMS will commit transaction in a synchronous way.
+       * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+       * These operations guarantee different levels of the data safety and visibility in the cluster.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
        */
       public Builder setSynchronousCommitValue(int value) {
@@ -6534,6 +6947,13 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting defines whether DBMS will commit transaction in a synchronous way.
+       * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+       * These operations guarantee different levels of the data safety and visibility in the cluster.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.SynchronousCommit getSynchronousCommit() {
@@ -6542,6 +6962,13 @@ public final class UserOuterClass {
         return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.SynchronousCommit.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * This setting defines whether DBMS will commit transaction in a synchronous way.
+       * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+       * These operations guarantee different levels of the data safety and visibility in the cluster.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
        */
       public Builder setSynchronousCommit(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.SynchronousCommit value) {
@@ -6554,6 +6981,13 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting defines whether DBMS will commit transaction in a synchronous way.
+       * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
+       * These operations guarantee different levels of the data safety and visibility in the cluster.
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
        */
       public Builder clearSynchronousCommit() {
@@ -6568,7 +7002,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tempFileLimitBuilder_;
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6578,7 +7014,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6592,7 +7030,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6612,7 +7052,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6630,7 +7072,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6652,7 +7096,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6670,7 +7116,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6682,7 +7130,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6697,7 +7147,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * in bytes.
+       * The maximum storage space size (in kilobytes) that a single process can use to create temporary files.
+       * If a transaction exceeds this limit during execution, it will be aborted.
+       * A huge query may not fit into a server's RAM, therefore PostgreSQL will use some storage to store and execute such a query. Too big queries can make excessive use of the storage system, effectively making other quieries to run slow. This setting prevents execution of a big queries that can influence other queries by limiting size of temporary files.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value temp_file_limit = 5;</code>
@@ -6718,12 +7170,22 @@ public final class UserOuterClass {
 
       private int logStatement_ = 0;
       /**
+       * <pre>
+       * This setting specifies which SQL statements should be logged (on the user level).
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
        */
       public int getLogStatementValue() {
         return logStatement_;
       }
       /**
+       * <pre>
+       * This setting specifies which SQL statements should be logged (on the user level).
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
        */
       public Builder setLogStatementValue(int value) {
@@ -6732,6 +7194,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting specifies which SQL statements should be logged (on the user level).
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement getLogStatement() {
@@ -6740,6 +7207,11 @@ public final class UserOuterClass {
         return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * This setting specifies which SQL statements should be logged (on the user level).
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
        */
       public Builder setLogStatement(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.LogStatement value) {
@@ -6752,6 +7224,11 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This setting specifies which SQL statements should be logged (on the user level).
+       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
        */
       public Builder clearLogStatement() {

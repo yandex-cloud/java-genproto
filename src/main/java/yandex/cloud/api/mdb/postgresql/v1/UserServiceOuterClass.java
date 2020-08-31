@@ -818,7 +818,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -828,7 +828,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
      * returned by a previous list request.
      * </pre>
      *
@@ -837,7 +837,7 @@ public final class UserServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
      * returned by a previous list request.
      * </pre>
      *
@@ -986,7 +986,7 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -1000,7 +1000,7 @@ public final class UserServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
      * returned by a previous list request.
      * </pre>
      *
@@ -1020,7 +1020,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+     * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
      * returned by a previous list request.
      * </pre>
      *
@@ -1476,7 +1476,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1488,7 +1488,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1503,7 +1503,7 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListUsersResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListUsersResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -1519,7 +1519,7 @@ public final class UserServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
        * returned by a previous list request.
        * </pre>
        *
@@ -1539,7 +1539,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
        * returned by a previous list request.
        * </pre>
        *
@@ -1560,7 +1560,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
        * returned by a previous list request.
        * </pre>
        *
@@ -1578,7 +1578,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
        * returned by a previous list request.
        * </pre>
        *
@@ -1592,7 +1592,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListUsersResponse.next_page_token]
+       * Page token. To get the next page of results, set `page_token` to the [ListUsersResponse.next_page_token]
        * returned by a previous list request.
        * </pre>
        *
@@ -1713,9 +1713,9 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
      * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1724,9 +1724,9 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
      * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1886,9 +1886,9 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
      * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1908,9 +1908,9 @@ public final class UserServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
      * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * list request will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2607,9 +2607,9 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
        * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2629,9 +2629,9 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
        * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2652,9 +2652,9 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
        * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2672,9 +2672,9 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
        * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2688,9 +2688,9 @@ public final class UserServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListUsersRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListUsersRequest.page_size], use the `next_page_token` as the value
        * for the [ListUsersRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * list request will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4456,7 +4456,7 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4465,7 +4465,7 @@ public final class UserServiceOuterClass {
         getPermissionsList();
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4473,7 +4473,7 @@ public final class UserServiceOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission getPermissions(int index);
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4481,7 +4481,7 @@ public final class UserServiceOuterClass {
     int getPermissionsCount();
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4490,7 +4490,7 @@ public final class UserServiceOuterClass {
         getPermissionsOrBuilderList();
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4500,7 +4500,10 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * Number of connections that should be available to the user.
+     * Maximum number of database connections available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>int64 conn_limit = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4508,33 +4511,22 @@ public final class UserServiceOuterClass {
     long getConnLimit();
 
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     boolean hasSettings();
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings();
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder();
 
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -4542,7 +4534,8 @@ public final class UserServiceOuterClass {
     boolean hasLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -4550,7 +4543,8 @@ public final class UserServiceOuterClass {
     com.google.protobuf.BoolValue getLogin();
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -4559,7 +4553,8 @@ public final class UserServiceOuterClass {
 
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4568,7 +4563,8 @@ public final class UserServiceOuterClass {
         getGrantsList();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4576,7 +4572,8 @@ public final class UserServiceOuterClass {
     int getGrantsCount();
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4584,7 +4581,8 @@ public final class UserServiceOuterClass {
     java.lang.String getGrants(int index);
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -4923,7 +4921,7 @@ public final class UserServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.Permission> permissions_;
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4933,7 +4931,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4944,7 +4942,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4954,7 +4952,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4964,7 +4962,7 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * New set of permissions for the user.
+     * Set of permissions granted to the user to access specific databases.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -4978,7 +4976,10 @@ public final class UserServiceOuterClass {
     private long connLimit_;
     /**
      * <pre>
-     * Number of connections that should be available to the user.
+     * Maximum number of database connections available to the user.
+     * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config.max_connections] setting.
+     * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+     * Minimum value: `10` (default: `50`), when used in session pooling.
      * </pre>
      *
      * <code>int64 conn_limit = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -4990,30 +4991,18 @@ public final class UserServiceOuterClass {
     public static final int SETTINGS_FIELD_NUMBER = 7;
     private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings settings_;
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     public boolean hasSettings() {
       return settings_ != null;
     }
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings() {
       return settings_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.getDefaultInstance() : settings_;
     }
     /**
-     * <pre>
-     * Postgresql settings for this user
-     * </pre>
-     *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
      */
     public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
@@ -5024,7 +5013,8 @@ public final class UserServiceOuterClass {
     private com.google.protobuf.BoolValue login_;
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -5034,7 +5024,8 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -5044,7 +5035,8 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * User can login (default True)
+     * This flag defines whether the user can login to a PostgreSQL database.
+     * Default value: `true` (login is allowed).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -5057,7 +5049,8 @@ public final class UserServiceOuterClass {
     private com.google.protobuf.LazyStringList grants_;
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5068,7 +5061,8 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5078,7 +5072,8 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -5088,7 +5083,8 @@ public final class UserServiceOuterClass {
     }
     /**
      * <pre>
-     * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+     * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+     * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
      * </pre>
      *
      * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6080,7 +6076,7 @@ public final class UserServiceOuterClass {
 
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6094,7 +6090,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6108,7 +6104,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6122,7 +6118,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6143,7 +6139,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6161,7 +6157,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6181,7 +6177,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6202,7 +6198,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6220,7 +6216,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6238,7 +6234,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6257,7 +6253,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6274,7 +6270,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6291,7 +6287,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6302,7 +6298,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6316,7 +6312,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6331,7 +6327,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6342,7 +6338,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6354,7 +6350,7 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * New set of permissions for the user.
+       * Set of permissions granted to the user to access specific databases.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.Permission permissions = 5;</code>
@@ -6381,7 +6377,10 @@ public final class UserServiceOuterClass {
       private long connLimit_ ;
       /**
        * <pre>
-       * Number of connections that should be available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -6391,7 +6390,10 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of connections that should be available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -6404,7 +6406,10 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * Number of connections that should be available to the user.
+       * Maximum number of database connections available to the user.
+       * When used in session pooling, this setting limits the number of connections to every single host in PostgreSQL cluster. In this case, the setting's value must be greater than the total number of connections that backend services can open to access the PostgreSQL cluster. The setting's value should not exceed the value of the [Cluster.config.postgresql_config.max_connections] setting.
+       * When used in transaction pooling, this setting limits the number of user's active transactions; therefore, in this mode user can open thousands of connections, but only `N` concurrent connections will be opened, where `N` is the value of the setting.
+       * Minimum value: `10` (default: `50`), when used in session pooling.
        * </pre>
        *
        * <code>int64 conn_limit = 6 [(.yandex.cloud.value) = "&gt;=10"];</code>
@@ -6420,20 +6425,12 @@ public final class UserServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder> settingsBuilder_;
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public boolean hasSettings() {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings getSettings() {
@@ -6444,10 +6441,6 @@ public final class UserServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public Builder setSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -6464,10 +6457,6 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public Builder setSettings(
@@ -6482,10 +6471,6 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings value) {
@@ -6504,10 +6489,6 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public Builder clearSettings() {
@@ -6522,10 +6503,6 @@ public final class UserServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettings.Builder getSettingsBuilder() {
@@ -6534,10 +6511,6 @@ public final class UserServiceOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserSettingsOrBuilder getSettingsOrBuilder() {
@@ -6549,10 +6522,6 @@ public final class UserServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * Postgresql settings for this user
-       * </pre>
-       *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings settings = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6574,7 +6543,8 @@ public final class UserServiceOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> loginBuilder_;
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6584,7 +6554,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6598,7 +6569,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6618,7 +6590,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6636,7 +6609,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6658,7 +6632,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6676,7 +6651,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6688,7 +6664,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6703,7 +6680,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User can login (default True)
+       * This flag defines whether the user can login to a PostgreSQL database.
+       * Default value: `true` (login is allowed).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue login = 8;</code>
@@ -6731,7 +6709,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6742,7 +6721,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6752,7 +6732,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6762,7 +6743,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6773,7 +6755,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6790,7 +6773,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6807,7 +6791,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6822,7 +6807,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -6835,7 +6821,8 @@ public final class UserServiceOuterClass {
       }
       /**
        * <pre>
-       * User grants (GRANT &lt;role&gt; TO &lt;user&gt;), role must be other user
+       * Roles and privileges that are granted to the user (`GRANT &lt;role&gt; TO &lt;user&gt;`).
+       * For more information, see [the documentation](/docs/managed-postgresql/operations/grant).
        * </pre>
        *
        * <code>repeated string grants = 9 [(.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>

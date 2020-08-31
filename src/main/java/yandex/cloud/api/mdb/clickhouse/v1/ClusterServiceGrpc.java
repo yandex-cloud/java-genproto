@@ -1186,7 +1186,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as ListLogs but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -1755,7 +1755,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as ListLogs but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public void streamLogs(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamClusterLogsRequest request,
@@ -2107,7 +2107,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Same as ListLogs but using server-side streaming. Also allows for 'tail -f' semantics.
+     * Same as ListLogs but using server-side streaming. Also allows for `tail -f` semantics.
      * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.StreamLogRecord> streamLogs(
