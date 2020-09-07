@@ -20030,8 +20030,8 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the InstanceGroup resource to delete instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being deleted from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20039,8 +20039,8 @@ public final class InstanceGroupServiceOuterClass {
     java.lang.String getInstanceGroupId();
     /**
      * <pre>
-     * ID of the InstanceGroup resource to delete instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being deleted from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20050,8 +20050,8 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20060,8 +20060,8 @@ public final class InstanceGroupServiceOuterClass {
         getManagedInstanceIdsList();
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20069,8 +20069,8 @@ public final class InstanceGroupServiceOuterClass {
     int getManagedInstanceIdsCount();
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20078,8 +20078,8 @@ public final class InstanceGroupServiceOuterClass {
     java.lang.String getManagedInstanceIds(int index);
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20089,9 +20089,9 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * When set to true instance group target size will not be decreased and
-     * new instance will be created in place of deleted. By default the group target size
-     * will be decreased by specified instance ids count.
+     * If set to true, the target size of instance group will not be reduced and
+     * a new instance will be created instead of the deleted one. By default, the target size of instance group
+     * will be reduced by the specified number of instance IDs.
      * </pre>
      *
      * <code>bool create_another = 3;</code>
@@ -20200,8 +20200,8 @@ public final class InstanceGroupServiceOuterClass {
     private volatile java.lang.Object instanceGroupId_;
     /**
      * <pre>
-     * ID of the InstanceGroup resource to delete instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being deleted from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20220,8 +20220,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the InstanceGroup resource to delete instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being deleted from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20244,8 +20244,8 @@ public final class InstanceGroupServiceOuterClass {
     private com.google.protobuf.LazyStringList managedInstanceIds_;
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20256,8 +20256,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20267,8 +20267,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20278,8 +20278,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20293,9 +20293,9 @@ public final class InstanceGroupServiceOuterClass {
     private boolean createAnother_;
     /**
      * <pre>
-     * When set to true instance group target size will not be decreased and
-     * new instance will be created in place of deleted. By default the group target size
-     * will be decreased by specified instance ids count.
+     * If set to true, the target size of instance group will not be reduced and
+     * a new instance will be created instead of the deleted one. By default, the target size of instance group
+     * will be reduced by the specified number of instance IDs.
      * </pre>
      *
      * <code>bool create_another = 3;</code>
@@ -20666,8 +20666,8 @@ public final class InstanceGroupServiceOuterClass {
       private java.lang.Object instanceGroupId_ = "";
       /**
        * <pre>
-       * ID of the InstanceGroup resource to delete instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being deleted from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20686,8 +20686,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to delete instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being deleted from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20707,8 +20707,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to delete instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being deleted from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20725,8 +20725,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to delete instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being deleted from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20739,8 +20739,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to delete instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being deleted from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20766,8 +20766,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20778,8 +20778,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20789,8 +20789,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20800,8 +20800,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20812,8 +20812,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20830,8 +20830,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20848,8 +20848,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20864,8 +20864,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20878,8 +20878,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to delete. Instances will be deleted along with any dependent resources.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * IDs of the instances to delete. Instances will be deleted along with all dependent resources.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -20899,9 +20899,9 @@ public final class InstanceGroupServiceOuterClass {
       private boolean createAnother_ ;
       /**
        * <pre>
-       * When set to true instance group target size will not be decreased and
-       * new instance will be created in place of deleted. By default the group target size
-       * will be decreased by specified instance ids count.
+       * If set to true, the target size of instance group will not be reduced and
+       * a new instance will be created instead of the deleted one. By default, the target size of instance group
+       * will be reduced by the specified number of instance IDs.
        * </pre>
        *
        * <code>bool create_another = 3;</code>
@@ -20911,9 +20911,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * When set to true instance group target size will not be decreased and
-       * new instance will be created in place of deleted. By default the group target size
-       * will be decreased by specified instance ids count.
+       * If set to true, the target size of instance group will not be reduced and
+       * a new instance will be created instead of the deleted one. By default, the target size of instance group
+       * will be reduced by the specified number of instance IDs.
        * </pre>
        *
        * <code>bool create_another = 3;</code>
@@ -20926,9 +20926,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * When set to true instance group target size will not be decreased and
-       * new instance will be created in place of deleted. By default the group target size
-       * will be decreased by specified instance ids count.
+       * If set to true, the target size of instance group will not be reduced and
+       * a new instance will be created instead of the deleted one. By default, the target size of instance group
+       * will be reduced by the specified number of instance IDs.
        * </pre>
        *
        * <code>bool create_another = 3;</code>
@@ -20998,8 +20998,8 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the InstanceGroup resource to stop instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being stopped from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21007,8 +21007,8 @@ public final class InstanceGroupServiceOuterClass {
     java.lang.String getInstanceGroupId();
     /**
      * <pre>
-     * ID of the InstanceGroup resource to stop instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being stopped from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21018,9 +21018,9 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21029,9 +21029,9 @@ public final class InstanceGroupServiceOuterClass {
         getManagedInstanceIdsList();
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21039,9 +21039,9 @@ public final class InstanceGroupServiceOuterClass {
     int getManagedInstanceIdsCount();
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21049,9 +21049,9 @@ public final class InstanceGroupServiceOuterClass {
     java.lang.String getManagedInstanceIds(int index);
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21155,8 +21155,8 @@ public final class InstanceGroupServiceOuterClass {
     private volatile java.lang.Object instanceGroupId_;
     /**
      * <pre>
-     * ID of the InstanceGroup resource to stop instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being stopped from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21175,8 +21175,8 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the InstanceGroup resource to stop instances from.
-     * To get the instance group ID, use a [InstanceGroupService.List] request.
+     * ID of the instance group that the instances are being stopped from.
+     * To get the ID of the instance group, use the [InstanceGroupService.List] request.
      * </pre>
      *
      * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21199,9 +21199,9 @@ public final class InstanceGroupServiceOuterClass {
     private com.google.protobuf.LazyStringList managedInstanceIds_;
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21212,9 +21212,9 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21224,9 +21224,9 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21236,9 +21236,9 @@ public final class InstanceGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of instances to stop. After stop instance could be updated, started or deleted
+     * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
      * according to scale and deploy policies.
-     * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+     * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
      * </pre>
      *
      * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21592,8 +21592,8 @@ public final class InstanceGroupServiceOuterClass {
       private java.lang.Object instanceGroupId_ = "";
       /**
        * <pre>
-       * ID of the InstanceGroup resource to stop instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being stopped from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21612,8 +21612,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to stop instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being stopped from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21633,8 +21633,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to stop instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being stopped from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21651,8 +21651,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to stop instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being stopped from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21665,8 +21665,8 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the InstanceGroup resource to stop instances from.
-       * To get the instance group ID, use a [InstanceGroupService.List] request.
+       * ID of the instance group that the instances are being stopped from.
+       * To get the ID of the instance group, use the [InstanceGroupService.List] request.
        * </pre>
        *
        * <code>string instance_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21692,9 +21692,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21705,9 +21705,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21717,9 +21717,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21729,9 +21729,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21742,9 +21742,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21761,9 +21761,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21780,9 +21780,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21797,9 +21797,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -21812,9 +21812,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of instances to stop. After stop instance could be updated, started or deleted
+       * IDs of the instances to stop. After stopping, the instance can be updated, started, or deleted
        * according to scale and deploy policies.
-       * Only allowed ids from ManagedInstance.id field, not ManagedInstance.instance_id.
+       * Only IDs from the ManagedInstance.id field are allowed, not ManagedInstance.instance_id.
        * </pre>
        *
        * <code>repeated string managed_instance_ids = 2 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.length) = "&lt;=50"];</code>

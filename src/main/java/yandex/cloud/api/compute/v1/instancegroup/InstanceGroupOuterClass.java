@@ -14516,7 +14516,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Affects instance lifecycle during deploy.
+     * Affects the lifecycle of the instance during deployment.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -14524,7 +14524,7 @@ public final class InstanceGroupOuterClass {
     int getStrategyValue();
     /**
      * <pre>
-     * Affects instance lifecycle during deploy.
+     * Affects the lifecycle of the instance during deployment.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -14657,7 +14657,7 @@ public final class InstanceGroupOuterClass {
       STRATEGY_UNSPECIFIED(0),
       /**
        * <pre>
-       * Instance group may force running instance to stop. This is the default.
+       * Instance Groups can forcefully stop a running instance. This is the default.
        * </pre>
        *
        * <code>PROACTIVE = 1;</code>
@@ -14665,8 +14665,8 @@ public final class InstanceGroupOuterClass {
       PROACTIVE(1),
       /**
        * <pre>
-       * Instance group doesn't force running instance to stop.
-       * Instead, it will wait until instance stops itself or becomes unhealthy.
+       * Instance Groups does not stop a running instance.
+       * Instead, it will wait until the instance stops itself or becomes unhealthy.
        * </pre>
        *
        * <code>OPPORTUNISTIC = 2;</code>
@@ -14681,7 +14681,7 @@ public final class InstanceGroupOuterClass {
       public static final int STRATEGY_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Instance group may force running instance to stop. This is the default.
+       * Instance Groups can forcefully stop a running instance. This is the default.
        * </pre>
        *
        * <code>PROACTIVE = 1;</code>
@@ -14689,8 +14689,8 @@ public final class InstanceGroupOuterClass {
       public static final int PROACTIVE_VALUE = 1;
       /**
        * <pre>
-       * Instance group doesn't force running instance to stop.
-       * Instead, it will wait until instance stops itself or becomes unhealthy.
+       * Instance Groups does not stop a running instance.
+       * Instead, it will wait until the instance stops itself or becomes unhealthy.
        * </pre>
        *
        * <code>OPPORTUNISTIC = 2;</code>
@@ -14875,7 +14875,7 @@ public final class InstanceGroupOuterClass {
     private int strategy_;
     /**
      * <pre>
-     * Affects instance lifecycle during deploy.
+     * Affects the lifecycle of the instance during deployment.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -14885,7 +14885,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Affects instance lifecycle during deploy.
+     * Affects the lifecycle of the instance during deployment.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -15653,7 +15653,7 @@ public final class InstanceGroupOuterClass {
       private int strategy_ = 0;
       /**
        * <pre>
-       * Affects instance lifecycle during deploy.
+       * Affects the lifecycle of the instance during deployment.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -15663,7 +15663,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Affects instance lifecycle during deploy.
+       * Affects the lifecycle of the instance during deployment.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -15675,7 +15675,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Affects instance lifecycle during deploy.
+       * Affects the lifecycle of the instance during deployment.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -15687,7 +15687,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Affects instance lifecycle during deploy.
+       * Affects the lifecycle of the instance during deployment.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>
@@ -15703,7 +15703,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Affects instance lifecycle during deploy.
+       * Affects the lifecycle of the instance during deployment.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy strategy = 8;</code>

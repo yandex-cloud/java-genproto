@@ -711,7 +711,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Delete instances from instance group
+     * Delete instances from the instance group.
      * </pre>
      */
     public void deleteInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DeleteInstancesRequest request,
@@ -721,7 +721,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Stop instances from instance group
+     * Stop instances from the instance group.
      * </pre>
      */
     public void stopInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StopInstancesRequest request,
@@ -1042,7 +1042,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Delete instances from instance group
+     * Delete instances from the instance group.
      * </pre>
      */
     public void deleteInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DeleteInstancesRequest request,
@@ -1053,7 +1053,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Stop instances from instance group
+     * Stop instances from the instance group.
      * </pre>
      */
     public void stopInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StopInstancesRequest request,
@@ -1246,7 +1246,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Delete instances from instance group
+     * Delete instances from the instance group.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.DeleteInstancesRequest request) {
@@ -1256,7 +1256,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Stop instances from instance group
+     * Stop instances from the instance group.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stopInstances(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StopInstancesRequest request) {
@@ -1453,7 +1453,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Delete instances from instance group
+     * Delete instances from the instance group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteInstances(
@@ -1464,7 +1464,7 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Stop instances from instance group
+     * Stop instances from the instance group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stopInstances(

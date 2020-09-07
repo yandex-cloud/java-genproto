@@ -2935,7 +2935,7 @@ public final class TargetGroupServiceOuterClass {
      * ID of the availability zone where the target group resides.
      * </pre>
      *
-     * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegionId();
     /**
@@ -2943,7 +2943,7 @@ public final class TargetGroupServiceOuterClass {
      * ID of the availability zone where the target group resides.
      * </pre>
      *
-     * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegionIdBytes();
@@ -3359,7 +3359,7 @@ public final class TargetGroupServiceOuterClass {
      * ID of the availability zone where the target group resides.
      * </pre>
      *
-     * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
@@ -3378,7 +3378,7 @@ public final class TargetGroupServiceOuterClass {
      * ID of the availability zone where the target group resides.
      * </pre>
      *
-     * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
@@ -4345,7 +4345,7 @@ public final class TargetGroupServiceOuterClass {
        * ID of the availability zone where the target group resides.
        * </pre>
        *
-       * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegionId() {
         java.lang.Object ref = regionId_;
@@ -4364,7 +4364,7 @@ public final class TargetGroupServiceOuterClass {
        * ID of the availability zone where the target group resides.
        * </pre>
        *
-       * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getRegionIdBytes() {
@@ -4384,7 +4384,7 @@ public final class TargetGroupServiceOuterClass {
        * ID of the availability zone where the target group resides.
        * </pre>
        *
-       * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegionId(
           java.lang.String value) {
@@ -4401,7 +4401,7 @@ public final class TargetGroupServiceOuterClass {
        * ID of the availability zone where the target group resides.
        * </pre>
        *
-       * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegionId() {
         
@@ -4414,7 +4414,7 @@ public final class TargetGroupServiceOuterClass {
        * ID of the availability zone where the target group resides.
        * </pre>
        *
-       * <code>string region_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string region_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
@@ -14633,92 +14633,92 @@ public final class TargetGroupServiceOuterClass {
       "\"u\n\030ListTargetGroupsResponse\022@\n\rtarget_g" +
       "roups\030\001 \003(\0132).yandex.cloud.loadbalancer." +
       "v1.TargetGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\251\003\n\030CreateTargetGroupRequest\022\037\n\tfolder_i" +
+      "\245\003\n\030CreateTargetGroupRequest\022\037\n\tfolder_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071" +
       "\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descri" +
       "ption\030\003 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\004 \003(\0132" +
       "B.yandex.cloud.loadbalancer.v1.CreateTar" +
       "getGroupRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
       "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022\037\n\tregion_id\030\005 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0225\n\007targets\030\007 \003(\0132$.yandex.cloud.lo" +
-      "adbalancer.v1.Target\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\031CreateTar" +
-      "getGroupMetadata\022\027\n\017target_group_id\030\001 \001(" +
-      "\t\"\277\003\n\030UpdateTargetGroupRequest\022%\n\017target" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/" +
-      "\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[" +
-      "a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
-      "\223\001\n\006labels\030\005 \003(\0132B.yandex.cloud.loadbala" +
-      "ncer.v1.UpdateTargetGroupRequest.LabelsE" +
-      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\0225\n\007targets" +
-      "\030\006 \003(\0132$.yandex.cloud.loadbalancer.v1.Ta" +
-      "rget\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"4\n\031UpdateTargetGroupMetadata" +
-      "\022\027\n\017target_group_id\030\001 \001(\t\"A\n\030DeleteTarge" +
-      "tGroupRequest\022%\n\017target_group_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"4\n\031DeleteTargetGroupMetadat" +
-      "a\022\027\n\017target_group_id\030\001 \001(\t\"z\n\021AddTargets" +
+      "][-_0-9a-z]*\022\033\n\tregion_id\030\005 \001(\tB\010\212\3101\004<=5" +
+      "0\0225\n\007targets\030\007 \003(\0132$.yandex.cloud.loadba" +
+      "lancer.v1.Target\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\031CreateTargetG" +
+      "roupMetadata\022\027\n\017target_group_id\030\001 \001(\t\"\277\003" +
+      "\n\030UpdateTargetGroupRequest\022%\n\017target_gro" +
+      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004na" +
+      "me\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0" +
+      "-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006" +
+      "labels\030\005 \003(\0132B.yandex.cloud.loadbalancer" +
+      ".v1.UpdateTargetGroupRequest.LabelsEntry" +
+      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\0225\n\007targets\030\006 \003" +
+      "(\0132$.yandex.cloud.loadbalancer.v1.Target" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"4\n\031UpdateTargetGroupMetadata\022\027\n\017" +
+      "target_group_id\030\001 \001(\t\"A\n\030DeleteTargetGro" +
+      "upRequest\022%\n\017target_group_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"4\n\031DeleteTargetGroupMetadata\022\027\n" +
+      "\017target_group_id\030\001 \001(\t\"z\n\021AddTargetsRequ" +
+      "est\022%\n\017target_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022>\n\007targets\030\002 \003(\0132$.yandex.cloud.loadb" +
+      "alancer.v1.TargetB\007\202\3101\003>=1\"-\n\022AddTargets" +
+      "Metadata\022\027\n\017target_group_id\030\001 \001(\t\"}\n\024Rem" +
+      "oveTargetsRequest\022%\n\017target_group_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022>\n\007targets\030\002 \003(\0132$.yand" +
+      "ex.cloud.loadbalancer.v1.TargetB\007\202\3101\003>=1" +
+      "\"0\n\025RemoveTargetsMetadata\022\027\n\017target_grou" +
+      "p_id\030\001 \001(\t\"\207\001\n ListTargetGroupOperations" +
       "Request\022%\n\017target_group_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022>\n\007targets\030\002 \003(\0132$.yandex.cloud.l" +
-      "oadbalancer.v1.TargetB\007\202\3101\003>=1\"-\n\022AddTar" +
-      "getsMetadata\022\027\n\017target_group_id\030\001 \001(\t\"}\n" +
-      "\024RemoveTargetsRequest\022%\n\017target_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\007targets\030\002 \003(\0132$." +
-      "yandex.cloud.loadbalancer.v1.TargetB\007\202\3101" +
-      "\003>=1\"0\n\025RemoveTargetsMetadata\022\027\n\017target_" +
-      "group_id\030\001 \001(\t\"\207\001\n ListTargetGroupOperat" +
-      "ionsRequest\022%\n\017target_group_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!List" +
-      "TargetGroupOperationsResponse\0225\n\noperati" +
-      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
-      "tion\022\027\n\017next_page_token\030\002 \001(\t2\275\014\n\022Target" +
-      "GroupService\022\237\001\n\003Get\0223.yandex.cloud.load" +
-      "balancer.v1.GetTargetGroupRequest\032).yand" +
-      "ex.cloud.loadbalancer.v1.TargetGroup\"8\202\323" +
-      "\344\223\0022\0220/load-balancer/v1/targetGroups/{ta" +
-      "rget_group_id}\022\235\001\n\004List\0225.yandex.cloud.l" +
-      "oadbalancer.v1.ListTargetGroupsRequest\0326" +
-      ".yandex.cloud.loadbalancer.v1.ListTarget" +
-      "GroupsResponse\"&\202\323\344\223\002 \022\036/load-balancer/v" +
-      "1/targetGroups\022\272\001\n\006Create\0226.yandex.cloud" +
-      ".loadbalancer.v1.CreateTargetGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"U\202\323" +
-      "\344\223\002#\"\036/load-balancer/v1/targetGroups:\001*\262" +
-      "\322*(\n\031CreateTargetGroupMetadata\022\013TargetGr" +
-      "oup\022\314\001\n\006Update\0226.yandex.cloud.loadbalanc" +
-      "er.v1.UpdateTargetGroupRequest\032!.yandex." +
-      "cloud.operation.Operation\"g\202\323\344\223\002520/load" +
-      "-balancer/v1/targetGroups/{target_group_" +
-      "id}:\001*\262\322*(\n\031UpdateTargetGroupMetadata\022\013T" +
-      "argetGroup\022\323\001\n\006Delete\0226.yandex.cloud.loa" +
-      "dbalancer.v1.DeleteTargetGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"n\202\323\344\223\0022" +
-      "*0/load-balancer/v1/targetGroups/{target" +
-      "_group_id}\262\322*2\n\031DeleteTargetGroupMetadat" +
-      "a\022\025google.protobuf.Empty\022\315\001\n\nAddTargets\022" +
-      "/.yandex.cloud.loadbalancer.v1.AddTarget" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"k\202\323\344\223\002@\";/load-balancer/v1/targetGro" +
-      "ups/{target_group_id}:addTargets:\001*\262\322*!\n" +
-      "\022AddTargetsMetadata\022\013TargetGroup\022\331\001\n\rRem" +
-      "oveTargets\0222.yandex.cloud.loadbalancer.v" +
-      "1.RemoveTargetsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"q\202\323\344\223\002C\">/load-balance" +
-      "r/v1/targetGroups/{target_group_id}:remo" +
-      "veTargets:\001*\262\322*$\n\025RemoveTargetsMetadata\022" +
-      "\013TargetGroup\022\326\001\n\016ListOperations\022>.yandex" +
-      ".cloud.loadbalancer.v1.ListTargetGroupOp" +
-      "erationsRequest\032?.yandex.cloud.loadbalan" +
-      "cer.v1.ListTargetGroupOperationsResponse" +
-      "\"C\202\323\344\223\002=\022;/load-balancer/v1/targetGroups" +
-      "/{target_group_id}/operationsBq\n yandex." +
-      "cloud.api.loadbalancer.v1ZMgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/load" +
-      "balancer/v1;loadbalancerb\006proto3"
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListTarg" +
+      "etGroupOperationsResponse\0225\n\noperations\030" +
+      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
+      "\022\027\n\017next_page_token\030\002 \001(\t2\275\014\n\022TargetGrou" +
+      "pService\022\237\001\n\003Get\0223.yandex.cloud.loadbala" +
+      "ncer.v1.GetTargetGroupRequest\032).yandex.c" +
+      "loud.loadbalancer.v1.TargetGroup\"8\202\323\344\223\0022" +
+      "\0220/load-balancer/v1/targetGroups/{target" +
+      "_group_id}\022\235\001\n\004List\0225.yandex.cloud.loadb" +
+      "alancer.v1.ListTargetGroupsRequest\0326.yan" +
+      "dex.cloud.loadbalancer.v1.ListTargetGrou" +
+      "psResponse\"&\202\323\344\223\002 \022\036/load-balancer/v1/ta" +
+      "rgetGroups\022\272\001\n\006Create\0226.yandex.cloud.loa" +
+      "dbalancer.v1.CreateTargetGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"U\202\323\344\223\002#" +
+      "\"\036/load-balancer/v1/targetGroups:\001*\262\322*(\n" +
+      "\031CreateTargetGroupMetadata\022\013TargetGroup\022" +
+      "\314\001\n\006Update\0226.yandex.cloud.loadbalancer.v" +
+      "1.UpdateTargetGroupRequest\032!.yandex.clou" +
+      "d.operation.Operation\"g\202\323\344\223\002520/load-bal" +
+      "ancer/v1/targetGroups/{target_group_id}:" +
+      "\001*\262\322*(\n\031UpdateTargetGroupMetadata\022\013Targe" +
+      "tGroup\022\323\001\n\006Delete\0226.yandex.cloud.loadbal" +
+      "ancer.v1.DeleteTargetGroupRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"n\202\323\344\223\0022*0/l" +
+      "oad-balancer/v1/targetGroups/{target_gro" +
+      "up_id}\262\322*2\n\031DeleteTargetGroupMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\315\001\n\nAddTargets\022/.ya" +
+      "ndex.cloud.loadbalancer.v1.AddTargetsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "k\202\323\344\223\002@\";/load-balancer/v1/targetGroups/" +
+      "{target_group_id}:addTargets:\001*\262\322*!\n\022Add" +
+      "TargetsMetadata\022\013TargetGroup\022\331\001\n\rRemoveT" +
+      "argets\0222.yandex.cloud.loadbalancer.v1.Re" +
+      "moveTargetsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"q\202\323\344\223\002C\">/load-balancer/v1" +
+      "/targetGroups/{target_group_id}:removeTa" +
+      "rgets:\001*\262\322*$\n\025RemoveTargetsMetadata\022\013Tar" +
+      "getGroup\022\326\001\n\016ListOperations\022>.yandex.clo" +
+      "ud.loadbalancer.v1.ListTargetGroupOperat" +
+      "ionsRequest\032?.yandex.cloud.loadbalancer." +
+      "v1.ListTargetGroupOperationsResponse\"C\202\323" +
+      "\344\223\002=\022;/load-balancer/v1/targetGroups/{ta" +
+      "rget_group_id}/operationsBq\n yandex.clou" +
+      "d.api.loadbalancer.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/loadbala" +
+      "ncer/v1;loadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

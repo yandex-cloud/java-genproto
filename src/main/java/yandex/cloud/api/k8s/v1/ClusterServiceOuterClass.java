@@ -4009,24 +4009,6 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
-
-    /**
-     * <pre>
-     * ID of the service account which has permission to stop the Kubernetes cluster.
-     * </pre>
-     *
-     * <code>string service_account_id = 2;</code>
-     */
-    java.lang.String getServiceAccountId();
-    /**
-     * <pre>
-     * ID of the service account which has permission to stop the Kubernetes cluster.
-     * </pre>
-     *
-     * <code>string service_account_id = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.StopClusterRequest}
@@ -4042,7 +4024,6 @@ public final class ClusterServiceOuterClass {
     }
     private StopClusterRequest() {
       clusterId_ = "";
-      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -4073,12 +4054,6 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               clusterId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -4157,48 +4132,6 @@ public final class ClusterServiceOuterClass {
       }
     }
 
-    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object serviceAccountId_;
-    /**
-     * <pre>
-     * ID of the service account which has permission to stop the Kubernetes cluster.
-     * </pre>
-     *
-     * <code>string service_account_id = 2;</code>
-     */
-    public java.lang.String getServiceAccountId() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serviceAccountId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the service account which has permission to stop the Kubernetes cluster.
-     * </pre>
-     *
-     * <code>string service_account_id = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getServiceAccountIdBytes() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serviceAccountId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4216,9 +4149,6 @@ public final class ClusterServiceOuterClass {
       if (!getClusterIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
       }
-      if (!getServiceAccountIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -4230,9 +4160,6 @@ public final class ClusterServiceOuterClass {
       size = 0;
       if (!getClusterIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
-      }
-      if (!getServiceAccountIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4252,8 +4179,6 @@ public final class ClusterServiceOuterClass {
       boolean result = true;
       result = result && getClusterId()
           .equals(other.getClusterId());
-      result = result && getServiceAccountId()
-          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4267,8 +4192,6 @@ public final class ClusterServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getClusterId().hashCode();
-      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4404,8 +4327,6 @@ public final class ClusterServiceOuterClass {
         super.clear();
         clusterId_ = "";
 
-        serviceAccountId_ = "";
-
         return this;
       }
 
@@ -4433,7 +4354,6 @@ public final class ClusterServiceOuterClass {
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest(this);
         result.clusterId_ = clusterId_;
-        result.serviceAccountId_ = serviceAccountId_;
         onBuilt();
         return result;
       }
@@ -4484,10 +4404,6 @@ public final class ClusterServiceOuterClass {
         if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.StopClusterRequest.getDefaultInstance()) return this;
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
-          onChanged();
-        }
-        if (!other.getServiceAccountId().isEmpty()) {
-          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4609,95 +4525,6 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         clusterId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serviceAccountId_ = "";
-      /**
-       * <pre>
-       * ID of the service account which has permission to stop the Kubernetes cluster.
-       * </pre>
-       *
-       * <code>string service_account_id = 2;</code>
-       */
-      public java.lang.String getServiceAccountId() {
-        java.lang.Object ref = serviceAccountId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceAccountId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the service account which has permission to stop the Kubernetes cluster.
-       * </pre>
-       *
-       * <code>string service_account_id = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getServiceAccountIdBytes() {
-        java.lang.Object ref = serviceAccountId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceAccountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the service account which has permission to stop the Kubernetes cluster.
-       * </pre>
-       *
-       * <code>string service_account_id = 2;</code>
-       */
-      public Builder setServiceAccountId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the service account which has permission to stop the Kubernetes cluster.
-       * </pre>
-       *
-       * <code>string service_account_id = 2;</code>
-       */
-      public Builder clearServiceAccountId() {
-        
-        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the service account which has permission to stop the Kubernetes cluster.
-       * </pre>
-       *
-       * <code>string service_account_id = 2;</code>
-       */
-      public Builder setServiceAccountIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -27273,136 +27100,138 @@ public final class ClusterServiceOuterClass {
       "\0132\034.yandex.cloud.k8s.v1.Cluster\022\027\n\017next_" +
       "page_token\030\002 \001(\t\"0\n\024DeleteClusterRequest" +
       "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\"+\n\025DeleteClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"J\n\022StopC" +
-      "lusterRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\032\n\022service_account_id\030\002 \001(\t\")\n\023StopClust" +
-      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\023StartC" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\".\n\022StopC" +
       "lusterRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\"" +
-      "*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"\335\004\n\024UpdateClusterRequest\022\030\n\ncluster_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362" +
-      "\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013desc" +
-      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\005 \003(" +
-      "\01325.yandex.cloud.k8s.v1.UpdateClusterReq" +
-      "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +
-      "_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]" +
-      "*\022(\n\024gateway_ipv4_address\030\006 \001(\tB\010\212\3101\004<=1" +
-      "5H\000\022:\n\013master_spec\030\007 \001(\0132%.yandex.cloud." +
-      "k8s.v1.MasterUpdateSpec\022\032\n\022service_accou" +
-      "nt_id\030\t \001(\t\022\037\n\027node_service_account_id\030\010" +
-      " \001(\t\022:\n\016network_policy\030\n \001(\0132\".yandex.cl" +
-      "oud.k8s.v1.NetworkPolicy\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020inter" +
-      "net_gateway\"\225\001\n\020MasterUpdateSpec\0227\n\007vers" +
-      "ion\030\001 \001(\0132&.yandex.cloud.k8s.v1.UpdateVe" +
-      "rsionSpec\022H\n\022maintenance_policy\030\002 \001(\0132,." +
-      "yandex.cloud.k8s.v1.MasterMaintenancePol" +
-      "icy\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"\204\006\n\024CreateClusterRequest\022\027\n\tfol" +
-      "der_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|[" +
-      "a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descripti" +
-      "on\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325.y" +
-      "andex.cloud.k8s.v1.CreateClusterRequest." +
-      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
-      "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\030\n\n" +
-      "network_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 " +
-      "\001(\0132\037.yandex.cloud.k8s.v1.MasterSpecB\004\350\307" +
-      "1\001\022E\n\024ip_allocation_policy\030\007 \001(\0132\'.yande" +
-      "x.cloud.k8s.v1.IPAllocationPolicy\022\036\n\024gat" +
-      "eway_ipv4_address\030\010 \001(\tH\000\022 \n\022service_acc" +
-      "ount_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_acco" +
-      "unt_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 " +
-      "\001(\0162#.yandex.cloud.k8s.v1.ReleaseChannel" +
-      "\022:\n\016network_policy\030\014 \001(\0132\".yandex.cloud." +
-      "k8s.v1.NetworkPolicy\0226\n\014kms_provider\030\r \001" +
-      "(\0132 .yandex.cloud.k8s.v1.KMSProvider\032-\n\013" +
+      ")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\"/\n\023StartClusterRequest\022\030\n\ncluster_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"\335\004\n\024UpdateClusterRequest" +
+      "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004n" +
+      "ame\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z" +
+      "0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\206\001\n" +
+      "\006labels\030\005 \003(\01325.yandex.cloud.k8s.v1.Upda" +
+      "teClusterRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
+      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
+      "z][-_0-9a-z]*\022(\n\024gateway_ipv4_address\030\006 " +
+      "\001(\tB\010\212\3101\004<=15H\000\022:\n\013master_spec\030\007 \001(\0132%.y" +
+      "andex.cloud.k8s.v1.MasterUpdateSpec\022\032\n\022s" +
+      "ervice_account_id\030\t \001(\t\022\037\n\027node_service_" +
+      "account_id\030\010 \001(\t\022:\n\016network_policy\030\n \001(\013" +
+      "2\".yandex.cloud.k8s.v1.NetworkPolicy\032-\n\013" +
       "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\022\n\020internet_gateway\"+\n\025CreateCluster" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgr" +
-      "adeMasterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001" +
-      "\n\034ListClusterOperationsRequest\022\030\n\ncluste" +
-      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListCluste" +
-      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeG" +
-      "roupsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
-      "1\006<=1000\"m\n\035ListClusterNodeGroupsRespons" +
-      "e\0223\n\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8" +
-      "s.v1.NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "q\n\027ListClusterNodesRequest\022\030\n\ncluster_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030Li" +
-      "stClusterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031." +
-      "yandex.cloud.k8s.v1.Node\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\210\002\n\nMasterSpec\022A\n\021zonal_master" +
-      "_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalM" +
-      "asterSpecH\000\022G\n\024regional_master_spec\030\002 \001(" +
-      "\0132\'.yandex.cloud.k8s.v1.RegionalMasterSp" +
-      "ecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022maintenance_pol" +
-      "icy\030\004 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
-      "intenancePolicyB\023\n\013master_type\022\004\300\3011\001\"\300\001\n" +
-      "\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "J\n\030internal_v4_address_spec\030\002 \001(\0132(.yand" +
-      "ex.cloud.k8s.v1.InternalAddressSpec\022J\n\030e" +
-      "xternal_v4_address_spec\030\003 \001(\0132(.yandex.c" +
-      "loud.k8s.v1.ExternalAddressSpec\"\261\001\n\022Regi" +
-      "onalMasterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "6\n\tlocations\030\002 \003(\0132#.yandex.cloud.k8s.v1" +
-      ".MasterLocation\022J\n\030external_v4_address_s" +
-      "pec\030\003 \001(\0132(.yandex.cloud.k8s.v1.External" +
-      "AddressSpec\"(\n\023InternalAddressSpec\022\021\n\tsu" +
-      "bnet_id\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"s\n\016" +
-      "MasterLocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n" +
-      "\030internal_v4_address_spec\030\002 \001(\0132(.yandex" +
-      ".cloud.k8s.v1.InternalAddressSpec2\313\014\n\016Cl" +
-      "usterService\022\201\001\n\003Get\022&.yandex.cloud.k8s." +
-      "v1.GetClusterRequest\032\034.yandex.cloud.k8s." +
-      "v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/" +
-      "v1/clusters/{cluster_id}\022\204\001\n\004List\022(.yand" +
-      "ex.cloud.k8s.v1.ListClustersRequest\032).ya" +
-      "ndex.cloud.k8s.v1.ListClustersResponse\"\'" +
-      "\202\323\344\223\002!\022\037/managed-kubernetes/v1/clusters\022" +
-      "\246\001\n\006Create\022).yandex.cloud.k8s.v1.CreateC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1" +
-      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
-      "\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8s.v" +
-      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"[\202\323\344\223\00212,/managed-kube" +
-      "rnetes/v1/clusters/{cluster_id}:\001*\262\322* \n\025" +
-      "UpdateClusterMetadata\022\007Cluster\022\276\001\n\006Delet" +
-      "e\022).yandex.cloud.k8s.v1.DeleteClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "f\202\323\344\223\002.*,/managed-kubernetes/v1/clusters" +
-      "/{cluster_id}\262\322*.\n\025DeleteClusterMetadata" +
-      "\022\025google.protobuf.Empty\022v\n\004Stop\022\'.yandex" +
-      ".cloud.k8s.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\"\262\322*\036\n\023StopC" +
-      "lusterMetadata\022\007Cluster\022y\n\005Start\022(.yande" +
-      "x.cloud.k8s.v1.StartClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"#\262\322*\037\n\024Sta" +
-      "rtClusterMetadata\022\007Cluster\022\270\001\n\016ListNodeG" +
-      "roups\0221.yandex.cloud.k8s.v1.ListClusterN" +
-      "odeGroupsRequest\0322.yandex.cloud.k8s.v1.L" +
-      "istClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/m" +
-      "anaged-kubernetes/v1/clusters/{cluster_i" +
-      "d}/nodeGroups\022\270\001\n\016ListOperations\0221.yande" +
-      "x.cloud.k8s.v1.ListClusterOperationsRequ" +
-      "est\0322.yandex.cloud.k8s.v1.ListClusterOpe" +
-      "rationsResponse\"?\202\323\344\223\0029\0227/managed-kubern" +
-      "etes/v1/clusters/{cluster_id}/operations" +
-      "\022\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.Lis" +
-      "tClusterNodesRequest\032-.yandex.cloud.k8s." +
-      "v1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/ma" +
-      "naged-kubernetes/v1/clusters/{cluster_id" +
-      "}/nodesBV\n\027yandex.cloud.api.k8s.v1Z;gith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/k8s/v1;k8sb\006proto3"
+      "\0028\001B\022\n\020internet_gateway\"\225\001\n\020MasterUpdate" +
+      "Spec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k8s" +
+      ".v1.UpdateVersionSpec\022H\n\022maintenance_pol" +
+      "icy\030\002 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
+      "intenancePolicy\"+\n\025UpdateClusterMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\"\204\006\n\024CreateClusterRe" +
+      "quest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002" +
+      " \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022" +
+      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labe" +
+      "ls\030\004 \003(\01325.yandex.cloud.k8s.v1.CreateClu" +
+      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013ma" +
+      "ster_spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.Ma" +
+      "sterSpecB\004\350\3071\001\022E\n\024ip_allocation_policy\030\007" +
+      " \001(\0132\'.yandex.cloud.k8s.v1.IPAllocationP" +
+      "olicy\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 \n" +
+      "\022service_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_" +
+      "service_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017releas" +
+      "e_channel\030\013 \001(\0162#.yandex.cloud.k8s.v1.Re" +
+      "leaseChannel\022:\n\016network_policy\030\014 \001(\0132\".y" +
+      "andex.cloud.k8s.v1.NetworkPolicy\0226\n\014kms_" +
+      "provider\030\r \001(\0132 .yandex.cloud.k8s.v1.KMS" +
+      "Provider\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"+\n\025C" +
+      "reateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"/\n\031AutoUpgradeMasterMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\"\222\001\n\034ListClusterOperationsReque" +
+      "st\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o" +
+      "\n\035ListClusterOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t\"\222\001\n\034List" +
+      "ClusterNodeGroupsRequest\022\030\n\ncluster_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListClusterNodeG" +
+      "roupsResponse\0223\n\013node_groups\030\001 \003(\0132\036.yan" +
+      "dex.cloud.k8s.v1.NodeGroup\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"q\n\027ListClusterNodesRequest\022\030" +
+      "\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"]\n\030ListClusterNodesResponse\022(\n\005no" +
+      "des\030\001 \003(\0132\031.yandex.cloud.k8s.v1.Node\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"\210\002\n\nMasterSpec\022A\n\021" +
+      "zonal_master_spec\030\001 \001(\0132$.yandex.cloud.k" +
+      "8s.v1.ZonalMasterSpecH\000\022G\n\024regional_mast" +
+      "er_spec\030\002 \001(\0132\'.yandex.cloud.k8s.v1.Regi" +
+      "onalMasterSpecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022mai" +
+      "ntenance_policy\030\004 \001(\0132,.yandex.cloud.k8s" +
+      ".v1.MasterMaintenancePolicyB\023\n\013master_ty" +
+      "pe\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030" +
+      "\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAddr" +
+      "essSpec\022J\n\030external_v4_address_spec\030\003 \001(" +
+      "\0132(.yandex.cloud.k8s.v1.ExternalAddressS" +
+      "pec\"\261\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030" +
+      "\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex." +
+      "cloud.k8s.v1.MasterLocation\022J\n\030external_" +
+      "v4_address_spec\030\003 \001(\0132(.yandex.cloud.k8s" +
+      ".v1.ExternalAddressSpec\"(\n\023InternalAddre" +
+      "ssSpec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n\023ExternalAdd" +
+      "ressSpec\"s\n\016MasterLocation\022\025\n\007zone_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 " +
+      "\001(\0132(.yandex.cloud.k8s.v1.InternalAddres" +
+      "sSpec2\306\r\n\016ClusterService\022\201\001\n\003Get\022&.yande" +
+      "x.cloud.k8s.v1.GetClusterRequest\032\034.yande" +
+      "x.cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed" +
+      "-kubernetes/v1/clusters/{cluster_id}\022\204\001\n" +
+      "\004List\022(.yandex.cloud.k8s.v1.ListClusters" +
+      "Request\032).yandex.cloud.k8s.v1.ListCluste" +
+      "rsResponse\"\'\202\323\344\223\002!\022\037/managed-kubernetes/" +
+      "v1/clusters\022\246\001\n\006Create\022).yandex.cloud.k8" +
+      "s.v1.CreateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"N\202\323\344\223\002$\"\037/managed-k" +
+      "ubernetes/v1/clusters:\001*\262\322* \n\025CreateClus" +
+      "terMetadata\022\007Cluster\022\263\001\n\006Update\022).yandex" +
+      ".cloud.k8s.v1.UpdateClusterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"[\202\323\344\223\00212,/" +
+      "managed-kubernetes/v1/clusters/{cluster_" +
+      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
+      "er\022\276\001\n\006Delete\022).yandex.cloud.k8s.v1.Dele" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"f\202\323\344\223\002.*,/managed-kubernetes" +
+      "/v1/clusters/{cluster_id}\262\322*.\n\025DeleteClu" +
+      "sterMetadata\022\025google.protobuf.Empty\022\262\001\n\004" +
+      "Stop\022\'.yandex.cloud.k8s.v1.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0026\"1/managed-kubernetes/v1/cluster" +
+      "s/{cluster_id}:stop:\001*\262\322*\036\n\023StopClusterM" +
+      "etadata\022\007Cluster\022\266\001\n\005Start\022(.yandex.clou" +
+      "d.k8s.v1.StartClusterRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"`\202\323\344\223\0027\"2/manage" +
+      "d-kubernetes/v1/clusters/{cluster_id}:st" +
+      "art:\001*\262\322*\037\n\024StartClusterMetadata\022\007Cluste" +
+      "r\022\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s." +
+      "v1.ListClusterNodeGroupsRequest\0322.yandex" +
+      ".cloud.k8s.v1.ListClusterNodeGroupsRespo" +
+      "nse\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/clus" +
+      "ters/{cluster_id}/nodeGroups\022\270\001\n\016ListOpe" +
+      "rations\0221.yandex.cloud.k8s.v1.ListCluste" +
+      "rOperationsRequest\0322.yandex.cloud.k8s.v1" +
+      ".ListClusterOperationsResponse\"?\202\323\344\223\0029\0227" +
+      "/managed-kubernetes/v1/clusters/{cluster" +
+      "_id}/operations\022\244\001\n\tListNodes\022,.yandex.c" +
+      "loud.k8s.v1.ListClusterNodesRequest\032-.ya" +
+      "ndex.cloud.k8s.v1.ListClusterNodesRespon" +
+      "se\":\202\323\344\223\0024\0222/managed-kubernetes/v1/clust" +
+      "ers/{cluster_id}/nodesBV\n\027yandex.cloud.a" +
+      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27460,7 +27289,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_StopClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_StopClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "ServiceAccountId", });
+        new java.lang.String[] { "ClusterId", });
     internal_static_yandex_cloud_k8s_v1_StopClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_k8s_v1_StopClusterMetadata_fieldAccessorTable = new
