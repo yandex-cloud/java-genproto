@@ -354,6 +354,31 @@ public final class DiskOuterClass {
     com.google.protobuf.ByteString
         getInstanceIdsBytes(int index);
 
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    boolean hasDiskPlacementPolicy();
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy();
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder();
+
     public yandex.cloud.api.compute.v1.DiskOuterClass.Disk.SourceCase getSourceCase();
   }
   /**
@@ -516,6 +541,19 @@ public final class DiskOuterClass {
             case 120: {
 
               blockSize_ = input.readInt64();
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder subBuilder = null;
+              if (diskPlacementPolicy_ != null) {
+                subBuilder = diskPlacementPolicy_.toBuilder();
+              }
+              diskPlacementPolicy_ = input.readMessage(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskPlacementPolicy_);
+                diskPlacementPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1392,6 +1430,39 @@ public final class DiskOuterClass {
       return instanceIds_.getByteString(index);
     }
 
+    public static final int DISK_PLACEMENT_POLICY_FIELD_NUMBER = 16;
+    private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_;
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    public boolean hasDiskPlacementPolicy() {
+      return diskPlacementPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
+      return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+    }
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+     */
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
+      return getDiskPlacementPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1453,6 +1524,9 @@ public final class DiskOuterClass {
       }
       if (blockSize_ != 0L) {
         output.writeInt64(15, blockSize_);
+      }
+      if (diskPlacementPolicy_ != null) {
+        output.writeMessage(16, getDiskPlacementPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -1529,6 +1603,10 @@ public final class DiskOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(15, blockSize_);
       }
+      if (diskPlacementPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getDiskPlacementPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1573,6 +1651,11 @@ public final class DiskOuterClass {
       result = result && status_ == other.status_;
       result = result && getInstanceIdsList()
           .equals(other.getInstanceIdsList());
+      result = result && (hasDiskPlacementPolicy() == other.hasDiskPlacementPolicy());
+      if (hasDiskPlacementPolicy()) {
+        result = result && getDiskPlacementPolicy()
+            .equals(other.getDiskPlacementPolicy());
+      }
       result = result && getSourceCase().equals(
           other.getSourceCase());
       if (!result) return false;
@@ -1634,6 +1717,10 @@ public final class DiskOuterClass {
       if (getInstanceIdsCount() > 0) {
         hash = (37 * hash) + INSTANCE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getInstanceIdsList().hashCode();
+      }
+      if (hasDiskPlacementPolicy()) {
+        hash = (37 * hash) + DISK_PLACEMENT_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskPlacementPolicy().hashCode();
       }
       switch (sourceCase_) {
         case 12:
@@ -1835,6 +1922,12 @@ public final class DiskOuterClass {
 
         instanceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00004000);
+        if (diskPlacementPolicyBuilder_ == null) {
+          diskPlacementPolicy_ = null;
+        } else {
+          diskPlacementPolicy_ = null;
+          diskPlacementPolicyBuilder_ = null;
+        }
         sourceCase_ = 0;
         source_ = null;
         return this;
@@ -1897,6 +1990,11 @@ public final class DiskOuterClass {
           bitField0_ = (bitField0_ & ~0x00004000);
         }
         result.instanceIds_ = instanceIds_;
+        if (diskPlacementPolicyBuilder_ == null) {
+          result.diskPlacementPolicy_ = diskPlacementPolicy_;
+        } else {
+          result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.sourceCase_ = sourceCase_;
         onBuilt();
@@ -2004,6 +2102,9 @@ public final class DiskOuterClass {
             instanceIds_.addAll(other.instanceIds_);
           }
           onChanged();
+        }
+        if (other.hasDiskPlacementPolicy()) {
+          mergeDiskPlacementPolicy(other.getDiskPlacementPolicy());
         }
         switch (other.getSourceCase()) {
           case SOURCE_IMAGE_ID: {
@@ -3514,6 +3615,159 @@ public final class DiskOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy diskPlacementPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> diskPlacementPolicyBuilder_;
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public boolean hasDiskPlacementPolicy() {
+        return diskPlacementPolicyBuilder_ != null || diskPlacementPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDiskPlacementPolicy() {
+        if (diskPlacementPolicyBuilder_ == null) {
+          return diskPlacementPolicy_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+        } else {
+          return diskPlacementPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public Builder setDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+        if (diskPlacementPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskPlacementPolicy_ = value;
+          onChanged();
+        } else {
+          diskPlacementPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public Builder setDiskPlacementPolicy(
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder builderForValue) {
+        if (diskPlacementPolicyBuilder_ == null) {
+          diskPlacementPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskPlacementPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public Builder mergeDiskPlacementPolicy(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+        if (diskPlacementPolicyBuilder_ == null) {
+          if (diskPlacementPolicy_ != null) {
+            diskPlacementPolicy_ =
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.newBuilder(diskPlacementPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            diskPlacementPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          diskPlacementPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public Builder clearDiskPlacementPolicy() {
+        if (diskPlacementPolicyBuilder_ == null) {
+          diskPlacementPolicy_ = null;
+          onChanged();
+        } else {
+          diskPlacementPolicy_ = null;
+          diskPlacementPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder getDiskPlacementPolicyBuilder() {
+        
+        onChanged();
+        return getDiskPlacementPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder() {
+        if (diskPlacementPolicyBuilder_ != null) {
+          return diskPlacementPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return diskPlacementPolicy_ == null ?
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : diskPlacementPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy disk_placement_policy = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> 
+          getDiskPlacementPolicyFieldBuilder() {
+        if (diskPlacementPolicyBuilder_ == null) {
+          diskPlacementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder>(
+                  getDiskPlacementPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          diskPlacementPolicy_ = null;
+        }
+        return diskPlacementPolicyBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3567,6 +3821,592 @@ public final class DiskOuterClass {
 
   }
 
+  public interface DiskPlacementPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DiskPlacementPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Placement group ID.
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    java.lang.String getPlacementGroupId();
+    /**
+     * <pre>
+     * Placement group ID.
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlacementGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DiskPlacementPolicy}
+   */
+  public  static final class DiskPlacementPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DiskPlacementPolicy)
+      DiskPlacementPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskPlacementPolicy.newBuilder() to construct.
+    private DiskPlacementPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskPlacementPolicy() {
+      placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskPlacementPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              placementGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.DiskOuterClass.internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.DiskOuterClass.internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.class, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder.class);
+    }
+
+    public static final int PLACEMENT_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object placementGroupId_;
+    /**
+     * <pre>
+     * Placement group ID.
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    public java.lang.String getPlacementGroupId() {
+      java.lang.Object ref = placementGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        placementGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Placement group ID.
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlacementGroupIdBytes() {
+      java.lang.Object ref = placementGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        placementGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPlacementGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPlacementGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy other = (yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy) obj;
+
+      boolean result = true;
+      result = result && getPlacementGroupId()
+          .equals(other.getPlacementGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLACEMENT_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPlacementGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DiskPlacementPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DiskPlacementPolicy)
+        yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.DiskOuterClass.internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.DiskOuterClass.internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.class, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        placementGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.DiskOuterClass.internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy build() {
+        yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy buildPartial() {
+        yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy result = new yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy(this);
+        result.placementGroupId_ = placementGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy) {
+          return mergeFrom((yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy other) {
+        if (other == yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance()) return this;
+        if (!other.getPlacementGroupId().isEmpty()) {
+          placementGroupId_ = other.placementGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object placementGroupId_ = "";
+      /**
+       * <pre>
+       * Placement group ID.
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public java.lang.String getPlacementGroupId() {
+        java.lang.Object ref = placementGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          placementGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Placement group ID.
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlacementGroupIdBytes() {
+        java.lang.Object ref = placementGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          placementGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Placement group ID.
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder setPlacementGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        placementGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement group ID.
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder clearPlacementGroupId() {
+        
+        placementGroupId_ = getDefaultInstance().getPlacementGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement group ID.
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder setPlacementGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        placementGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DiskPlacementPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DiskPlacementPolicy)
+    private static final yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy();
+    }
+
+    public static yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskPlacementPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<DiskPlacementPolicy>() {
+      @java.lang.Override
+      public DiskPlacementPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskPlacementPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskPlacementPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskPlacementPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_Disk_descriptor;
   private static final 
@@ -3577,6 +4417,11 @@ public final class DiskOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3588,7 +4433,7 @@ public final class DiskOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"yandex/cloud/compute/v1/disk.proto\022\027ya" +
       "ndex.cloud.compute.v1\032\037google/protobuf/t" +
-      "imestamp.proto\"\236\004\n\004Disk\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
+      "imestamp.proto\"\353\004\n\004Disk\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
       "older_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
       "description\030\005 \001(\t\0229\n\006labels\030\006 \003(\0132).yand" +
@@ -3598,13 +4443,16 @@ public final class DiskOuterClass {
       "\n \003(\t\0224\n\006status\030\013 \001(\0162$.yandex.cloud.com" +
       "pute.v1.Disk.Status\022\031\n\017source_image_id\030\014" +
       " \001(\tH\000\022\034\n\022source_snapshot_id\030\r \001(\tH\000\022\024\n\014" +
-      "instance_ids\030\016 \003(\t\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005REA" +
-      "DY\020\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006sourceB" +
-      "b\n\033yandex.cloud.api.compute.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/compute/v1;computeb\006proto3"
+      "instance_ids\030\016 \003(\t\022K\n\025disk_placement_pol" +
+      "icy\030\020 \001(\0132,.yandex.cloud.compute.v1.Disk" +
+      "PlacementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022STAT" +
+      "US_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020" +
+      "\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006source\"1\n\023" +
+      "DiskPlacementPolicy\022\032\n\022placement_group_i" +
+      "d\030\001 \001(\tBb\n\033yandex.cloud.api.compute.v1ZC" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/compute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3624,13 +4472,19 @@ public final class DiskOuterClass {
     internal_static_yandex_cloud_compute_v1_Disk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Disk_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "BlockSize", "ProductIds", "Status", "SourceImageId", "SourceSnapshotId", "InstanceIds", "Source", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "BlockSize", "ProductIds", "Status", "SourceImageId", "SourceSnapshotId", "InstanceIds", "DiskPlacementPolicy", "Source", });
     internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Disk_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DiskPlacementPolicy_descriptor,
+        new java.lang.String[] { "PlacementGroupId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -6391,7 +6391,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -6400,7 +6400,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6429,7 +6429,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -6438,7 +6438,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -6454,7 +6454,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -6464,7 +6464,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -6476,7 +6476,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -6868,7 +6868,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6888,7 +6888,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6978,7 +6978,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -6999,7 +6999,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -7011,7 +7011,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -7028,7 +7028,7 @@ public final class ClusterServiceOuterClass {
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -8026,7 +8026,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -8046,7 +8046,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -8067,7 +8067,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -8085,7 +8085,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -8099,7 +8099,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -8234,7 +8234,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -8255,7 +8255,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -8267,7 +8267,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -8284,7 +8284,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -8309,7 +8309,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -8333,7 +8333,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -8350,7 +8350,7 @@ public final class ClusterServiceOuterClass {
        * Existing set of `labels` is completely replaced by the provided set.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -10512,7 +10512,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
@@ -10521,7 +10521,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -10549,7 +10549,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -10557,7 +10557,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -10572,7 +10572,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -10581,7 +10581,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -10592,7 +10592,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -11073,7 +11073,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -11093,7 +11093,7 @@ public final class ClusterServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -11182,7 +11182,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -11202,7 +11202,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -11213,7 +11213,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -11229,7 +11229,7 @@ public final class ClusterServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -12304,7 +12304,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -12324,7 +12324,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -12345,7 +12345,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -12363,7 +12363,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
         
@@ -12377,7 +12377,7 @@ public final class ClusterServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -12511,7 +12511,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -12531,7 +12531,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
@@ -12542,7 +12542,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -12558,7 +12558,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -12582,7 +12582,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -12605,7 +12605,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -12621,7 +12621,7 @@ public final class ClusterServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -27105,133 +27105,134 @@ public final class ClusterServiceOuterClass {
       ")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
       "(\t\"/\n\023StartClusterRequest\022\030\n\ncluster_id\030" +
       "\001 \001(\tB\004\350\3071\001\"*\n\024StartClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"\335\004\n\024UpdateClusterRequest" +
+      "luster_id\030\001 \001(\t\"\350\004\n\024UpdateClusterRequest" +
       "\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004n" +
-      "ame\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z" +
-      "0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\206\001\n" +
-      "\006labels\030\005 \003(\01325.yandex.cloud.k8s.v1.Upda" +
-      "teClusterRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
-      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\022(\n\024gateway_ipv4_address\030\006 " +
-      "\001(\tB\010\212\3101\004<=15H\000\022:\n\013master_spec\030\007 \001(\0132%.y" +
-      "andex.cloud.k8s.v1.MasterUpdateSpec\022\032\n\022s" +
-      "ervice_account_id\030\t \001(\t\022\037\n\027node_service_" +
-      "account_id\030\010 \001(\t\022:\n\016network_policy\030\n \001(\013" +
-      "2\".yandex.cloud.k8s.v1.NetworkPolicy\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\022\n\020internet_gateway\"\225\001\n\020MasterUpdate" +
-      "Spec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k8s" +
-      ".v1.UpdateVersionSpec\022H\n\022maintenance_pol" +
-      "icy\030\002 \001(\0132,.yandex.cloud.k8s.v1.MasterMa" +
-      "intenancePolicy\"+\n\025UpdateClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"\204\006\n\024CreateClusterRe" +
-      "quest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002" +
-      " \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022" +
-      "\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labe" +
-      "ls\030\004 \003(\01325.yandex.cloud.k8s.v1.CreateClu" +
-      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013ma" +
-      "ster_spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.Ma" +
-      "sterSpecB\004\350\3071\001\022E\n\024ip_allocation_policy\030\007" +
-      " \001(\0132\'.yandex.cloud.k8s.v1.IPAllocationP" +
-      "olicy\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 \n" +
-      "\022service_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_" +
-      "service_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017releas" +
-      "e_channel\030\013 \001(\0162#.yandex.cloud.k8s.v1.Re" +
-      "leaseChannel\022:\n\016network_policy\030\014 \001(\0132\".y" +
-      "andex.cloud.k8s.v1.NetworkPolicy\0226\n\014kms_" +
-      "provider\030\r \001(\0132 .yandex.cloud.k8s.v1.KMS" +
-      "Provider\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"+\n\025C" +
-      "reateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"/\n\031AutoUpgradeMasterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"\222\001\n\034ListClusterOperationsReque" +
-      "st\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o" +
-      "\n\035ListClusterOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t\"\222\001\n\034List" +
-      "ClusterNodeGroupsRequest\022\030\n\ncluster_id\030\001" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004n" +
+      "ame\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
+      "z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
+      "\216\001\n\006labels\030\005 \003(\01325.yandex.cloud.k8s.v1.U" +
+      "pdateClusterRequest.LabelsEntryBG\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\026\022\024[a-z][-_./\\@0-9a-z]*\022(\n\024gateway_ipv4" +
+      "_address\030\006 \001(\tB\010\212\3101\004<=15H\000\022:\n\013master_spe" +
+      "c\030\007 \001(\0132%.yandex.cloud.k8s.v1.MasterUpda" +
+      "teSpec\022\032\n\022service_account_id\030\t \001(\t\022\037\n\027no" +
+      "de_service_account_id\030\010 \001(\t\022:\n\016network_p" +
+      "olicy\030\n \001(\0132\".yandex.cloud.k8s.v1.Networ" +
+      "kPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"\225\001\n\020M" +
+      "asterUpdateSpec\0227\n\007version\030\001 \001(\0132&.yande" +
+      "x.cloud.k8s.v1.UpdateVersionSpec\022H\n\022main" +
+      "tenance_policy\030\002 \001(\0132,.yandex.cloud.k8s." +
+      "v1.MasterMaintenancePolicy\"+\n\025UpdateClus" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\217\006\n\024Crea" +
+      "teClusterRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
+      "\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.cloud.k8" +
+      "s.v1.CreateClusterRequest.LabelsEntryBG\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\nnetwor" +
+      "k_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037." +
+      "yandex.cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024" +
+      "ip_allocation_policy\030\007 \001(\0132\'.yandex.clou" +
+      "d.k8s.v1.IPAllocationPolicy\022\036\n\024gateway_i" +
+      "pv4_address\030\010 \001(\tH\000\022 \n\022service_account_i" +
+      "d\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_account_id" +
+      "\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162#." +
+      "yandex.cloud.k8s.v1.ReleaseChannel\022:\n\016ne" +
+      "twork_policy\030\014 \001(\0132\".yandex.cloud.k8s.v1" +
+      ".NetworkPolicy\0226\n\014kms_provider\030\r \001(\0132 .y" +
+      "andex.cloud.k8s.v1.KMSProvider\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n" +
+      "\020internet_gateway\"+\n\025CreateClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMas" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034List" +
+      "ClusterOperationsRequest\022\030\n\ncluster_id\030\001" +
       " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
       "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
-      "er\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListClusterNodeG" +
-      "roupsResponse\0223\n\013node_groups\030\001 \003(\0132\036.yan" +
-      "dex.cloud.k8s.v1.NodeGroup\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"q\n\027ListClusterNodesRequest\022\030" +
-      "\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"]\n\030ListClusterNodesResponse\022(\n\005no" +
-      "des\030\001 \003(\0132\031.yandex.cloud.k8s.v1.Node\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\210\002\n\nMasterSpec\022A\n\021" +
-      "zonal_master_spec\030\001 \001(\0132$.yandex.cloud.k" +
-      "8s.v1.ZonalMasterSpecH\000\022G\n\024regional_mast" +
-      "er_spec\030\002 \001(\0132\'.yandex.cloud.k8s.v1.Regi" +
-      "onalMasterSpecH\000\022\017\n\007version\030\003 \001(\t\022H\n\022mai" +
-      "ntenance_policy\030\004 \001(\0132,.yandex.cloud.k8s" +
-      ".v1.MasterMaintenancePolicyB\023\n\013master_ty" +
-      "pe\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030" +
-      "\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAddr" +
-      "essSpec\022J\n\030external_v4_address_spec\030\003 \001(" +
-      "\0132(.yandex.cloud.k8s.v1.ExternalAddressS" +
-      "pec\"\261\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030" +
-      "\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex." +
-      "cloud.k8s.v1.MasterLocation\022J\n\030external_" +
-      "v4_address_spec\030\003 \001(\0132(.yandex.cloud.k8s" +
-      ".v1.ExternalAddressSpec\"(\n\023InternalAddre" +
-      "ssSpec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n\023ExternalAdd" +
-      "ressSpec\"s\n\016MasterLocation\022\025\n\007zone_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 " +
-      "\001(\0132(.yandex.cloud.k8s.v1.InternalAddres" +
-      "sSpec2\306\r\n\016ClusterService\022\201\001\n\003Get\022&.yande" +
-      "x.cloud.k8s.v1.GetClusterRequest\032\034.yande" +
-      "x.cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed" +
-      "-kubernetes/v1/clusters/{cluster_id}\022\204\001\n" +
-      "\004List\022(.yandex.cloud.k8s.v1.ListClusters" +
-      "Request\032).yandex.cloud.k8s.v1.ListCluste" +
-      "rsResponse\"\'\202\323\344\223\002!\022\037/managed-kubernetes/" +
-      "v1/clusters\022\246\001\n\006Create\022).yandex.cloud.k8" +
-      "s.v1.CreateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"N\202\323\344\223\002$\"\037/managed-k" +
-      "ubernetes/v1/clusters:\001*\262\322* \n\025CreateClus" +
-      "terMetadata\022\007Cluster\022\263\001\n\006Update\022).yandex" +
-      ".cloud.k8s.v1.UpdateClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"[\202\323\344\223\00212,/" +
-      "managed-kubernetes/v1/clusters/{cluster_" +
-      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
-      "er\022\276\001\n\006Delete\022).yandex.cloud.k8s.v1.Dele" +
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsR" +
+      "equest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
+      "00\"m\n\035ListClusterNodeGroupsResponse\0223\n\013n" +
+      "ode_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1.N" +
+      "odeGroup\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027Lis" +
+      "tClusterNodesRequest\022\030\n\ncluster_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClus" +
+      "terNodesResponse\022(\n\005nodes\030\001 \003(\0132\031.yandex" +
+      ".cloud.k8s.v1.Node\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"\210\002\n\nMasterSpec\022A\n\021zonal_master_spec\030" +
+      "\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalMasterS" +
+      "pecH\000\022G\n\024regional_master_spec\030\002 \001(\0132\'.ya" +
+      "ndex.cloud.k8s.v1.RegionalMasterSpecH\000\022\017" +
+      "\n\007version\030\003 \001(\t\022H\n\022maintenance_policy\030\004 " +
+      "\001(\0132,.yandex.cloud.k8s.v1.MasterMaintena" +
+      "ncePolicyB\023\n\013master_type\022\004\300\3011\001\"\300\001\n\017Zonal" +
+      "MasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030int" +
+      "ernal_v4_address_spec\030\002 \001(\0132(.yandex.clo" +
+      "ud.k8s.v1.InternalAddressSpec\022J\n\030externa" +
+      "l_v4_address_spec\030\003 \001(\0132(.yandex.cloud.k" +
+      "8s.v1.ExternalAddressSpec\"\261\001\n\022RegionalMa" +
+      "sterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tloc" +
+      "ations\030\002 \003(\0132#.yandex.cloud.k8s.v1.Maste" +
+      "rLocation\022J\n\030external_v4_address_spec\030\003 " +
+      "\001(\0132(.yandex.cloud.k8s.v1.ExternalAddres" +
+      "sSpec\"(\n\023InternalAddressSpec\022\021\n\tsubnet_i" +
+      "d\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"s\n\016Master" +
+      "Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030inter" +
+      "nal_v4_address_spec\030\002 \001(\0132(.yandex.cloud" +
+      ".k8s.v1.InternalAddressSpec2\306\r\n\016ClusterS" +
+      "ervice\022\201\001\n\003Get\022&.yandex.cloud.k8s.v1.Get" +
+      "ClusterRequest\032\034.yandex.cloud.k8s.v1.Clu" +
+      "ster\"4\202\323\344\223\002.\022,/managed-kubernetes/v1/clu" +
+      "sters/{cluster_id}\022\204\001\n\004List\022(.yandex.clo" +
+      "ud.k8s.v1.ListClustersRequest\032).yandex.c" +
+      "loud.k8s.v1.ListClustersResponse\"\'\202\323\344\223\002!" +
+      "\022\037/managed-kubernetes/v1/clusters\022\246\001\n\006Cr" +
+      "eate\022).yandex.cloud.k8s.v1.CreateCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/clust" +
+      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
+      "er\022\263\001\n\006Update\022).yandex.cloud.k8s.v1.Upda" +
       "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"f\202\323\344\223\002.*,/managed-kubernetes" +
-      "/v1/clusters/{cluster_id}\262\322*.\n\025DeleteClu" +
-      "sterMetadata\022\025google.protobuf.Empty\022\262\001\n\004" +
-      "Stop\022\'.yandex.cloud.k8s.v1.StopClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"^\202\323\344\223\0026\"1/managed-kubernetes/v1/cluster" +
-      "s/{cluster_id}:stop:\001*\262\322*\036\n\023StopClusterM" +
-      "etadata\022\007Cluster\022\266\001\n\005Start\022(.yandex.clou" +
-      "d.k8s.v1.StartClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"`\202\323\344\223\0027\"2/manage" +
-      "d-kubernetes/v1/clusters/{cluster_id}:st" +
-      "art:\001*\262\322*\037\n\024StartClusterMetadata\022\007Cluste" +
-      "r\022\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s." +
-      "v1.ListClusterNodeGroupsRequest\0322.yandex" +
-      ".cloud.k8s.v1.ListClusterNodeGroupsRespo" +
-      "nse\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/clus" +
-      "ters/{cluster_id}/nodeGroups\022\270\001\n\016ListOpe" +
-      "rations\0221.yandex.cloud.k8s.v1.ListCluste" +
-      "rOperationsRequest\0322.yandex.cloud.k8s.v1" +
-      ".ListClusterOperationsResponse\"?\202\323\344\223\0029\0227" +
-      "/managed-kubernetes/v1/clusters/{cluster" +
-      "_id}/operations\022\244\001\n\tListNodes\022,.yandex.c" +
-      "loud.k8s.v1.ListClusterNodesRequest\032-.ya" +
-      "ndex.cloud.k8s.v1.ListClusterNodesRespon" +
-      "se\":\202\323\344\223\0024\0222/managed-kubernetes/v1/clust" +
-      "ers/{cluster_id}/nodesBV\n\027yandex.cloud.a" +
-      "pi.k8s.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "n.Operation\"[\202\323\344\223\00212,/managed-kubernetes" +
+      "/v1/clusters/{cluster_id}:\001*\262\322* \n\025Update" +
+      "ClusterMetadata\022\007Cluster\022\276\001\n\006Delete\022).ya" +
+      "ndex.cloud.k8s.v1.DeleteClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"f\202\323\344\223\002" +
+      ".*,/managed-kubernetes/v1/clusters/{clus" +
+      "ter_id}\262\322*.\n\025DeleteClusterMetadata\022\025goog" +
+      "le.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex.clou" +
+      "d.k8s.v1.StopClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"^\202\323\344\223\0026\"1/managed" +
+      "-kubernetes/v1/clusters/{cluster_id}:sto" +
+      "p:\001*\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
+      "\001\n\005Start\022(.yandex.cloud.k8s.v1.StartClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"`\202\323\344\223\0027\"2/managed-kubernetes/v1/cl" +
+      "usters/{cluster_id}:start:\001*\262\322*\037\n\024StartC" +
+      "lusterMetadata\022\007Cluster\022\270\001\n\016ListNodeGrou" +
+      "ps\0221.yandex.cloud.k8s.v1.ListClusterNode" +
+      "GroupsRequest\0322.yandex.cloud.k8s.v1.List" +
+      "ClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/mana" +
+      "ged-kubernetes/v1/clusters/{cluster_id}/" +
+      "nodeGroups\022\270\001\n\016ListOperations\0221.yandex.c" +
+      "loud.k8s.v1.ListClusterOperationsRequest" +
+      "\0322.yandex.cloud.k8s.v1.ListClusterOperat" +
+      "ionsResponse\"?\202\323\344\223\0029\0227/managed-kubernete" +
+      "s/v1/clusters/{cluster_id}/operations\022\244\001" +
+      "\n\tListNodes\022,.yandex.cloud.k8s.v1.ListCl" +
+      "usterNodesRequest\032-.yandex.cloud.k8s.v1." +
+      "ListClusterNodesResponse\":\202\323\344\223\0024\0222/manag" +
+      "ed-kubernetes/v1/clusters/{cluster_id}/n" +
+      "odesBV\n\027yandex.cloud.api.k8s.v1Z;github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

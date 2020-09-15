@@ -305,6 +305,15 @@ public final class SubclusterOuterClass {
      * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
      */
     double getCpuUtilizationTarget();
+
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes during downscaling. In seconds. Default value: 120
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    long getDecommissionTimeout();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.AutoscalingConfig}
@@ -322,6 +331,7 @@ public final class SubclusterOuterClass {
       maxHostsCount_ = 0L;
       preemptible_ = false;
       cpuUtilizationTarget_ = 0D;
+      decommissionTimeout_ = 0L;
     }
 
     @java.lang.Override
@@ -400,6 +410,11 @@ public final class SubclusterOuterClass {
             case 49: {
 
               cpuUtilizationTarget_ = input.readDouble();
+              break;
+            }
+            case 56: {
+
+              decommissionTimeout_ = input.readInt64();
               break;
             }
             default: {
@@ -586,6 +601,19 @@ public final class SubclusterOuterClass {
       return cpuUtilizationTarget_;
     }
 
+    public static final int DECOMMISSION_TIMEOUT_FIELD_NUMBER = 7;
+    private long decommissionTimeout_;
+    /**
+     * <pre>
+     * Timeout to gracefully decommission nodes during downscaling. In seconds. Default value: 120
+     * </pre>
+     *
+     * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public long getDecommissionTimeout() {
+      return decommissionTimeout_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -617,6 +645,9 @@ public final class SubclusterOuterClass {
       }
       if (cpuUtilizationTarget_ != 0D) {
         output.writeDouble(6, cpuUtilizationTarget_);
+      }
+      if (decommissionTimeout_ != 0L) {
+        output.writeInt64(7, decommissionTimeout_);
       }
       unknownFields.writeTo(output);
     }
@@ -650,6 +681,10 @@ public final class SubclusterOuterClass {
       if (cpuUtilizationTarget_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(6, cpuUtilizationTarget_);
+      }
+      if (decommissionTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, decommissionTimeout_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -690,6 +725,8 @@ public final class SubclusterOuterClass {
           java.lang.Double.doubleToLongBits(getCpuUtilizationTarget())
           == java.lang.Double.doubleToLongBits(
               other.getCpuUtilizationTarget()));
+      result = result && (getDecommissionTimeout()
+          == other.getDecommissionTimeout());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -722,6 +759,9 @@ public final class SubclusterOuterClass {
       hash = (37 * hash) + CPU_UTILIZATION_TARGET_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getCpuUtilizationTarget()));
+      hash = (37 * hash) + DECOMMISSION_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecommissionTimeout());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -879,6 +919,8 @@ public final class SubclusterOuterClass {
         }
         cpuUtilizationTarget_ = 0D;
 
+        decommissionTimeout_ = 0L;
+
         return this;
       }
 
@@ -923,6 +965,7 @@ public final class SubclusterOuterClass {
           result.stabilizationDuration_ = stabilizationDurationBuilder_.build();
         }
         result.cpuUtilizationTarget_ = cpuUtilizationTarget_;
+        result.decommissionTimeout_ = decommissionTimeout_;
         onBuilt();
         return result;
       }
@@ -988,6 +1031,9 @@ public final class SubclusterOuterClass {
         }
         if (other.getCpuUtilizationTarget() != 0D) {
           setCpuUtilizationTarget(other.getCpuUtilizationTarget());
+        }
+        if (other.getDecommissionTimeout() != 0L) {
+          setDecommissionTimeout(other.getDecommissionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1629,6 +1675,44 @@ public final class SubclusterOuterClass {
       public Builder clearCpuUtilizationTarget() {
         
         cpuUtilizationTarget_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long decommissionTimeout_ ;
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes during downscaling. In seconds. Default value: 120
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public long getDecommissionTimeout() {
+        return decommissionTimeout_;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes during downscaling. In seconds. Default value: 120
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setDecommissionTimeout(long value) {
+        
+        decommissionTimeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to gracefully decommission nodes during downscaling. In seconds. Default value: 120
+       * </pre>
+       *
+       * <code>int64 decommission_timeout = 7 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearDecommissionTimeout() {
+        
+        decommissionTimeout_ = 0L;
         onChanged();
         return this;
       }
@@ -5194,7 +5278,7 @@ public final class SubclusterOuterClass {
       "otobuf/timestamp.proto\032%yandex/cloud/dat" +
       "aproc/v1/common.proto\032\035yandex/cloud/vali" +
       "dation.proto\032\036google/protobuf/duration.p" +
-      "roto\"\307\002\n\021AutoscalingConfig\022\"\n\017max_hosts_" +
+      "roto\"\362\002\n\021AutoscalingConfig\022\"\n\017max_hosts_" +
       "count\030\001 \001(\003B\t\372\3071\0051-100\022\023\n\013preemptible\030\002 " +
       "\001(\010\022G\n\024measurement_duration\030\003 \001(\0132\031.goog" +
       "le.protobuf.DurationB\016\350\3071\001\372\3071\0061m-10m\022=\n\017" +
@@ -5202,25 +5286,26 @@ public final class SubclusterOuterClass {
       "DurationB\t\372\3071\005<=10m\022E\n\026stabilization_dur" +
       "ation\030\005 \001(\0132\031.google.protobuf.DurationB\n" +
       "\372\3071\0061m-30m\022*\n\026cpu_utilization_target\030\006 \001" +
-      "(\001B\n\372\3071\00610-100\"\354\002\n\nSubcluster\022\n\n\002id\030\001 \001(" +
-      "\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\026\n\004name\030\004 " +
-      "\001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex.clo" +
-      "ud.dataproc.v1.Role\0226\n\tresources\030\006 \001(\0132#" +
-      ".yandex.cloud.dataproc.v1.Resources\022\021\n\ts" +
-      "ubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022G\n\022a" +
-      "utoscaling_config\030\n \001(\0132+.yandex.cloud.d" +
-      "ataproc.v1.AutoscalingConfig\022\031\n\021instance" +
-      "_group_id\030\013 \001(\tJ\004\010\t\020\n\"\250\001\n\004Host\022\014\n\004name\030\001" +
-      " \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\0220\n\006health\030\003 " +
-      "\001(\0162 .yandex.cloud.dataproc.v1.Health\022\033\n" +
-      "\023compute_instance_id\030\004 \001(\t\022,\n\004role\030\005 \001(\016" +
-      "2\036.yandex.cloud.dataproc.v1.Role*K\n\004Role" +
-      "\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMASTERNODE\020\001\022\014" +
-      "\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020\003Be\n\034yandex." +
-      "cloud.api.dataproc.v1ZEgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/dataproc" +
-      "/v1;dataprocb\006proto3"
+      "(\001B\n\372\3071\00610-100\022)\n\024decommission_timeout\030\007" +
+      " \001(\003B\013\372\3071\0070-86400\"\354\002\n\nSubcluster\022\n\n\002id\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\022\026\n\004name" +
+      "\030\004 \001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex." +
+      "cloud.dataproc.v1.Role\0226\n\tresources\030\006 \001(" +
+      "\0132#.yandex.cloud.dataproc.v1.Resources\022\021" +
+      "\n\tsubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022G" +
+      "\n\022autoscaling_config\030\n \001(\0132+.yandex.clou" +
+      "d.dataproc.v1.AutoscalingConfig\022\031\n\021insta" +
+      "nce_group_id\030\013 \001(\tJ\004\010\t\020\n\"\250\001\n\004Host\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\025\n\rsubcluster_id\030\002 \001(\t\0220\n\006health" +
+      "\030\003 \001(\0162 .yandex.cloud.dataproc.v1.Health" +
+      "\022\033\n\023compute_instance_id\030\004 \001(\t\022,\n\004role\030\005 " +
+      "\001(\0162\036.yandex.cloud.dataproc.v1.Role*K\n\004R" +
+      "ole\022\024\n\020ROLE_UNSPECIFIED\020\000\022\016\n\nMASTERNODE\020" +
+      "\001\022\014\n\010DATANODE\020\002\022\017\n\013COMPUTENODE\020\003Be\n\034yand" +
+      "ex.cloud.api.dataproc.v1ZEgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/datap" +
+      "roc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5243,7 +5328,7 @@ public final class SubclusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_AutoscalingConfig_descriptor,
-        new java.lang.String[] { "MaxHostsCount", "Preemptible", "MeasurementDuration", "WarmupDuration", "StabilizationDuration", "CpuUtilizationTarget", });
+        new java.lang.String[] { "MaxHostsCount", "Preemptible", "MeasurementDuration", "WarmupDuration", "StabilizationDuration", "CpuUtilizationTarget", "DecommissionTimeout", });
     internal_static_yandex_cloud_dataproc_v1_Subcluster_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_dataproc_v1_Subcluster_fieldAccessorTable = new

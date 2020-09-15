@@ -10788,29 +10788,36 @@ public final class AddressServiceOuterClass {
       " \001(\003\022\022\n\npage_token\030\003 \001(\t\"o\n\035ListAddressO" +
       "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
       "yandex.cloud.operation.Operation\022\027\n\017next" +
-      "_page_token\030\002 \001(\t2\231\006\n\016AddressService\022K\n\003" +
+      "_page_token\030\002 \001(\t2\240\010\n\016AddressService\022s\n\003" +
       "Get\022&.yandex.cloud.vpc.v1.GetAddressRequ" +
-      "est\032\034.yandex.cloud.vpc.v1.Address\022Y\n\nGet" +
+      "est\032\034.yandex.cloud.vpc.v1.Address\"&\202\323\344\223\002" +
+      " \022\036/vpc/v1/addresses/{address_id}\022|\n\nGet" +
       "ByValue\022-.yandex.cloud.vpc.v1.GetAddress" +
       "ByValueRequest\032\034.yandex.cloud.vpc.v1.Add" +
-      "ress\022]\n\004List\022).yandex.cloud.vpc.v1.ListA" +
-      "ddressesRequest\032*.yandex.cloud.vpc.v1.Li" +
-      "stAddressesResponse\022|\n\006Create\022).yandex.c" +
-      "loud.vpc.v1.CreateAddressRequest\032!.yande" +
-      "x.cloud.operation.Operation\"$\262\322* \n\025Creat" +
-      "eAddressMetadata\022\007Address\022|\n\006Update\022).ya" +
-      "ndex.cloud.vpc.v1.UpdateAddressRequest\032!" +
-      ".yandex.cloud.operation.Operation\"$\262\322* \n" +
-      "\025UpdateAddressMetadata\022\007Address\022\212\001\n\006Dele" +
-      "te\022).yandex.cloud.vpc.v1.DeleteAddressRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"2\262\322*.\n\025DeleteAddressMetadata\022\025google.pr" +
-      "otobuf.Empty\022w\n\016ListOperations\0221.yandex." +
-      "cloud.vpc.v1.ListAddressOperationsReques" +
-      "t\0322.yandex.cloud.vpc.v1.ListAddressOpera" +
-      "tionsResponseBV\n\027yandex.cloud.api.vpc.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/vpc/v1;vpcb\006proto3"
+      "ress\"!\202\323\344\223\002\033\022\031/vpc/v1/addresses:byValue\022" +
+      "x\n\004List\022).yandex.cloud.vpc.v1.ListAddres" +
+      "sesRequest\032*.yandex.cloud.vpc.v1.ListAdd" +
+      "ressesResponse\"\031\202\323\344\223\002\023\022\021/vpc/v1/addresse" +
+      "s\022\230\001\n\006Create\022).yandex.cloud.vpc.v1.Creat" +
+      "eAddressRequest\032!.yandex.cloud.operation" +
+      ".Operation\"@\202\323\344\223\002\026\"\021/vpc/v1/addresses:\001*" +
+      "\262\322* \n\025CreateAddressMetadata\022\007Address\022\245\001\n" +
+      "\006Update\022).yandex.cloud.vpc.v1.UpdateAddr" +
+      "essRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"M\202\323\344\223\002#2\036/vpc/v1/addresses/{addres" +
+      "s_id}:\001*\262\322* \n\025UpdateAddressMetadata\022\007Add" +
+      "ress\022\260\001\n\006Delete\022).yandex.cloud.vpc.v1.De" +
+      "leteAddressRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"X\202\323\344\223\002 *\036/vpc/v1/addresses" +
+      "/{address_id}\262\322*.\n\025DeleteAddressMetadata" +
+      "\022\025google.protobuf.Empty\022\252\001\n\016ListOperatio" +
+      "ns\0221.yandex.cloud.vpc.v1.ListAddressOper" +
+      "ationsRequest\0322.yandex.cloud.vpc.v1.List" +
+      "AddressOperationsResponse\"1\202\323\344\223\002+\022)/vpc/" +
+      "v1/addresses/{address_id}/operationsBV\n\027" +
+      "yandex.cloud.api.vpc.v1Z;github.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/vpc/v1" +
+      ";vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10921,6 +10928,7 @@ public final class AddressServiceOuterClass {
         new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

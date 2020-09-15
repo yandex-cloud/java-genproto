@@ -5300,6 +5300,31 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder();
 
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    boolean hasPerformanceDiagnostics();
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getPerformanceDiagnostics();
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder();
+
     public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.ClusterConfig.PostgresqlConfigCase getPostgresqlConfigCase();
   }
   /**
@@ -5481,6 +5506,19 @@ public final class ClusterOuterClass {
                 postgresqlConfig_ = subBuilder.buildPartial();
               }
               postgresqlConfigCase_ = 11;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder subBuilder = null;
+              if (performanceDiagnostics_ != null) {
+                subBuilder = performanceDiagnostics_.toBuilder();
+              }
+              performanceDiagnostics_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(performanceDiagnostics_);
+                performanceDiagnostics_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5956,6 +5994,39 @@ public final class ClusterOuterClass {
       return getAccess();
     }
 
+    public static final int PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER = 12;
+    private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics performanceDiagnostics_;
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    public boolean hasPerformanceDiagnostics() {
+      return performanceDiagnostics_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getPerformanceDiagnostics() {
+      return performanceDiagnostics_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.getDefaultInstance() : performanceDiagnostics_;
+    }
+    /**
+     * <pre>
+     * Configuration of the performance diagnostics service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder() {
+      return getPerformanceDiagnostics();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6002,6 +6073,9 @@ public final class ClusterOuterClass {
       }
       if (postgresqlConfigCase_ == 11) {
         output.writeMessage(11, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql12.PostgresqlConfigSet12) postgresqlConfig_);
+      }
+      if (performanceDiagnostics_ != null) {
+        output.writeMessage(12, getPerformanceDiagnostics());
       }
       unknownFields.writeTo(output);
     }
@@ -6055,6 +6129,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql12.PostgresqlConfigSet12) postgresqlConfig_);
       }
+      if (performanceDiagnostics_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getPerformanceDiagnostics());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6097,6 +6175,11 @@ public final class ClusterOuterClass {
       if (hasAccess()) {
         result = result && getAccess()
             .equals(other.getAccess());
+      }
+      result = result && (hasPerformanceDiagnostics() == other.hasPerformanceDiagnostics());
+      if (hasPerformanceDiagnostics()) {
+        result = result && getPerformanceDiagnostics()
+            .equals(other.getPerformanceDiagnostics());
       }
       result = result && getPostgresqlConfigCase().equals(
           other.getPostgresqlConfigCase());
@@ -6157,6 +6240,10 @@ public final class ClusterOuterClass {
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
+      }
+      if (hasPerformanceDiagnostics()) {
+        hash = (37 * hash) + PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER;
+        hash = (53 * hash) + getPerformanceDiagnostics().hashCode();
       }
       switch (postgresqlConfigCase_) {
         case 2:
@@ -6347,6 +6434,12 @@ public final class ClusterOuterClass {
           access_ = null;
           accessBuilder_ = null;
         }
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = null;
+        } else {
+          performanceDiagnostics_ = null;
+          performanceDiagnosticsBuilder_ = null;
+        }
         postgresqlConfigCase_ = 0;
         postgresqlConfig_ = null;
         return this;
@@ -6436,6 +6529,11 @@ public final class ClusterOuterClass {
         } else {
           result.access_ = accessBuilder_.build();
         }
+        if (performanceDiagnosticsBuilder_ == null) {
+          result.performanceDiagnostics_ = performanceDiagnostics_;
+        } else {
+          result.performanceDiagnostics_ = performanceDiagnosticsBuilder_.build();
+        }
         result.postgresqlConfigCase_ = postgresqlConfigCase_;
         onBuilt();
         return result;
@@ -6503,6 +6601,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
+        }
+        if (other.hasPerformanceDiagnostics()) {
+          mergePerformanceDiagnostics(other.getPerformanceDiagnostics());
         }
         switch (other.getPostgresqlConfigCase()) {
           case POSTGRESQL_CONFIG_9_6: {
@@ -8285,6 +8386,159 @@ public final class ClusterOuterClass {
           access_ = null;
         }
         return accessBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics performanceDiagnostics_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder> performanceDiagnosticsBuilder_;
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public boolean hasPerformanceDiagnostics() {
+        return performanceDiagnosticsBuilder_ != null || performanceDiagnostics_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getPerformanceDiagnostics() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          return performanceDiagnostics_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.getDefaultInstance() : performanceDiagnostics_;
+        } else {
+          return performanceDiagnosticsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public Builder setPerformanceDiagnostics(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics value) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          performanceDiagnostics_ = value;
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public Builder setPerformanceDiagnostics(
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder builderForValue) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = builderForValue.build();
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public Builder mergePerformanceDiagnostics(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics value) {
+        if (performanceDiagnosticsBuilder_ == null) {
+          if (performanceDiagnostics_ != null) {
+            performanceDiagnostics_ =
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.newBuilder(performanceDiagnostics_).mergeFrom(value).buildPartial();
+          } else {
+            performanceDiagnostics_ = value;
+          }
+          onChanged();
+        } else {
+          performanceDiagnosticsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public Builder clearPerformanceDiagnostics() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnostics_ = null;
+          onChanged();
+        } else {
+          performanceDiagnostics_ = null;
+          performanceDiagnosticsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder getPerformanceDiagnosticsBuilder() {
+        
+        onChanged();
+        return getPerformanceDiagnosticsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder() {
+        if (performanceDiagnosticsBuilder_ != null) {
+          return performanceDiagnosticsBuilder_.getMessageOrBuilder();
+        } else {
+          return performanceDiagnostics_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.getDefaultInstance() : performanceDiagnostics_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of the performance diagnostics service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics performance_diagnostics = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder> 
+          getPerformanceDiagnosticsFieldBuilder() {
+        if (performanceDiagnosticsBuilder_ == null) {
+          performanceDiagnosticsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder>(
+                  getPerformanceDiagnostics(),
+                  getParentForChildren(),
+                  isClean());
+          performanceDiagnostics_ = null;
+        }
+        return performanceDiagnosticsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -16893,6 +17147,671 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface PerformanceDiagnosticsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration setting which enables/disables performance diagnostics service in cluster.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Interval (in seconds) for pg_stat_activity sampling
+     * </pre>
+     *
+     * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
+     */
+    long getSessionsSamplingInterval();
+
+    /**
+     * <pre>
+     * Interval (in seconds) for pg_stat_statements sampling
+     * </pre>
+     *
+     * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
+     */
+    long getStatementsSamplingInterval();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics}
+   */
+  public  static final class PerformanceDiagnostics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics)
+      PerformanceDiagnosticsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PerformanceDiagnostics.newBuilder() to construct.
+    private PerformanceDiagnostics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PerformanceDiagnostics() {
+      enabled_ = false;
+      sessionsSamplingInterval_ = 0L;
+      statementsSamplingInterval_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PerformanceDiagnostics(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              sessionsSamplingInterval_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              statementsSamplingInterval_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.class, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Configuration setting which enables/disables performance diagnostics service in cluster.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int SESSIONS_SAMPLING_INTERVAL_FIELD_NUMBER = 2;
+    private long sessionsSamplingInterval_;
+    /**
+     * <pre>
+     * Interval (in seconds) for pg_stat_activity sampling
+     * </pre>
+     *
+     * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
+     */
+    public long getSessionsSamplingInterval() {
+      return sessionsSamplingInterval_;
+    }
+
+    public static final int STATEMENTS_SAMPLING_INTERVAL_FIELD_NUMBER = 3;
+    private long statementsSamplingInterval_;
+    /**
+     * <pre>
+     * Interval (in seconds) for pg_stat_statements sampling
+     * </pre>
+     *
+     * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
+     */
+    public long getStatementsSamplingInterval() {
+      return statementsSamplingInterval_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (sessionsSamplingInterval_ != 0L) {
+        output.writeInt64(2, sessionsSamplingInterval_);
+      }
+      if (statementsSamplingInterval_ != 0L) {
+        output.writeInt64(3, statementsSamplingInterval_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (sessionsSamplingInterval_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, sessionsSamplingInterval_);
+      }
+      if (statementsSamplingInterval_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, statementsSamplingInterval_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics other = (yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics) obj;
+
+      boolean result = true;
+      result = result && (getEnabled()
+          == other.getEnabled());
+      result = result && (getSessionsSamplingInterval()
+          == other.getSessionsSamplingInterval());
+      result = result && (getStatementsSamplingInterval()
+          == other.getStatementsSamplingInterval());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + SESSIONS_SAMPLING_INTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSessionsSamplingInterval());
+      hash = (37 * hash) + STATEMENTS_SAMPLING_INTERVAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStatementsSamplingInterval());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics)
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.class, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        sessionsSamplingInterval_ = 0L;
+
+        statementsSamplingInterval_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics build() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics buildPartial() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics result = new yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics(this);
+        result.enabled_ = enabled_;
+        result.sessionsSamplingInterval_ = sessionsSamplingInterval_;
+        result.statementsSamplingInterval_ = statementsSamplingInterval_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics) {
+          return mergeFrom((yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics other) {
+        if (other == yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.getSessionsSamplingInterval() != 0L) {
+          setSessionsSamplingInterval(other.getSessionsSamplingInterval());
+        }
+        if (other.getStatementsSamplingInterval() != 0L) {
+          setStatementsSamplingInterval(other.getStatementsSamplingInterval());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration setting which enables/disables performance diagnostics service in cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long sessionsSamplingInterval_ ;
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_activity sampling
+       * </pre>
+       *
+       * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public long getSessionsSamplingInterval() {
+        return sessionsSamplingInterval_;
+      }
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_activity sampling
+       * </pre>
+       *
+       * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public Builder setSessionsSamplingInterval(long value) {
+        
+        sessionsSamplingInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_activity sampling
+       * </pre>
+       *
+       * <code>int64 sessions_sampling_interval = 2 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public Builder clearSessionsSamplingInterval() {
+        
+        sessionsSamplingInterval_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long statementsSamplingInterval_ ;
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_statements sampling
+       * </pre>
+       *
+       * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public long getStatementsSamplingInterval() {
+        return statementsSamplingInterval_;
+      }
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_statements sampling
+       * </pre>
+       *
+       * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public Builder setStatementsSamplingInterval(long value) {
+        
+        statementsSamplingInterval_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Interval (in seconds) for pg_stat_statements sampling
+       * </pre>
+       *
+       * <code>int64 statements_sampling_interval = 3 [(.yandex.cloud.value) = "1-86400"];</code>
+       */
+      public Builder clearStatementsSamplingInterval() {
+        
+        statementsSamplingInterval_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.postgresql.v1.PerformanceDiagnostics)
+    private static final yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics();
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PerformanceDiagnostics>
+        PARSER = new com.google.protobuf.AbstractParser<PerformanceDiagnostics>() {
+      @java.lang.Override
+      public PerformanceDiagnostics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PerformanceDiagnostics(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PerformanceDiagnostics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PerformanceDiagnostics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnostics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor;
   private static final 
@@ -16943,6 +17862,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_postgresql_v1_Access_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16956,69 +17880,72 @@ public final class ClusterOuterClass {
       ".proto\022\036yandex.cloud.mdb.postgresql.v1\032\037" +
       "google/protobuf/timestamp.proto\032\036google/" +
       "protobuf/wrappers.proto\032\033google/type/tim" +
-      "eofday.proto\0329yandex/cloud/mdb/postgresq" +
-      "l/v1/config/postgresql9_6.proto\0328yandex/" +
-      "cloud/mdb/postgresql/v1/config/postgresq" +
-      "l10.proto\032;yandex/cloud/mdb/postgresql/v" +
-      "1/config/postgresql10_1c.proto\0328yandex/c" +
-      "loud/mdb/postgresql/v1/config/postgresql" +
-      "11.proto\0328yandex/cloud/mdb/postgresql/v1" +
-      "/config/postgresql12.proto\0323yandex/cloud" +
-      "/mdb/postgresql/v1/config/host9_6.proto\032" +
-      "2yandex/cloud/mdb/postgresql/v1/config/h" +
-      "ost10.proto\0325yandex/cloud/mdb/postgresql" +
-      "/v1/config/host10_1c.proto\0322yandex/cloud" +
-      "/mdb/postgresql/v1/config/host11.proto\0322" +
-      "yandex/cloud/mdb/postgresql/v1/config/ho" +
-      "st12.proto\0320yandex/cloud/mdb/postgresql/" +
-      "v1/maintenance.proto\"\363\007\n\007Cluster\022\n\n\002id\030\001" +
-      " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030" +
-      "\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006labels\030\006 \003" +
-      "(\01323.yandex.cloud.mdb.postgresql.v1.Clus" +
-      "ter.LabelsEntry\022H\n\013environment\030\007 \001(\01623.y" +
-      "andex.cloud.mdb.postgresql.v1.Cluster.En" +
-      "vironment\022>\n\nmonitoring\030\010 \003(\0132*.yandex.c" +
-      "loud.mdb.postgresql.v1.Monitoring\022=\n\006con" +
-      "fig\030\t \001(\0132-.yandex.cloud.mdb.postgresql." +
-      "v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\022>\n\006" +
-      "health\030\013 \001(\0162..yandex.cloud.mdb.postgres" +
-      "ql.v1.Cluster.Health\022>\n\006status\030\014 \001(\0162..y" +
-      "andex.cloud.mdb.postgresql.v1.Cluster.St" +
-      "atus\022M\n\022maintenance_window\030\r \001(\01321.yande" +
-      "x.cloud.mdb.postgresql.v1.MaintenanceWin" +
-      "dow\022O\n\021planned_operation\030\016 \001(\01324.yandex." +
-      "cloud.mdb.postgresql.v1.MaintenanceOpera" +
-      "tion\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMEN" +
-      "T_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPREST" +
-      "ABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005" +
-      "ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Statu" +
-      "s\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007R" +
-      "UNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STO" +
-      "PPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMo" +
-      "nitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\022\014\n\004link\030\003 \001(\t\"\277\006\n\rClusterConfig\022\017\n\007v" +
-      "ersion\030\001 \001(\t\022^\n\025postgresql_config_9_6\030\002 " +
-      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
-      "fig.PostgresqlConfigSet9_6H\000\022b\n\027postgres" +
-      "ql_config_10_1c\030\n \001(\0132?.yandex.cloud.mdb" +
-      ".postgresql.v1.config.PostgresqlConfigSe" +
-      "t10_1CH\000\022\\\n\024postgresql_config_10\030\003 \001(\0132<" +
-      ".yandex.cloud.mdb.postgresql.v1.config.P" +
-      "ostgresqlConfigSet10H\000\022\\\n\024postgresql_con" +
-      "fig_11\030\010 \001(\0132<.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlConfigSet11H\000\022\\\n\024" +
-      "postgresql_config_12\030\013 \001(\0132<.yandex.clou" +
-      "d.mdb.postgresql.v1.config.PostgresqlCon" +
-      "figSet12H\000\022M\n\rpooler_config\030\004 \001(\01326.yand" +
-      "ex.cloud.mdb.postgresql.v1.ConnectionPoo" +
-      "lerConfig\022<\n\tresources\030\005 \001(\0132).yandex.cl" +
-      "oud.mdb.postgresql.v1.Resources\0220\n\014autof" +
-      "ailover\030\006 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\0223\n\023backup_window_start\030\007 \001(\0132\026.google." +
-      "type.TimeOfDay\0226\n\006access\030\t \001(\0132&.yandex." +
-      "cloud.mdb.postgresql.v1.AccessB\023\n\021postgr" +
+      "eofday.proto\032\035yandex/cloud/validation.pr" +
+      "oto\0329yandex/cloud/mdb/postgresql/v1/conf" +
+      "ig/postgresql9_6.proto\0328yandex/cloud/mdb" +
+      "/postgresql/v1/config/postgresql10.proto" +
+      "\032;yandex/cloud/mdb/postgresql/v1/config/" +
+      "postgresql10_1c.proto\0328yandex/cloud/mdb/" +
+      "postgresql/v1/config/postgresql11.proto\032" +
+      "8yandex/cloud/mdb/postgresql/v1/config/p" +
+      "ostgresql12.proto\0323yandex/cloud/mdb/post" +
+      "gresql/v1/config/host9_6.proto\0322yandex/c" +
+      "loud/mdb/postgresql/v1/config/host10.pro" +
+      "to\0325yandex/cloud/mdb/postgresql/v1/confi" +
+      "g/host10_1c.proto\0322yandex/cloud/mdb/post" +
+      "gresql/v1/config/host11.proto\0322yandex/cl" +
+      "oud/mdb/postgresql/v1/config/host12.prot" +
+      "o\0320yandex/cloud/mdb/postgresql/v1/mainte" +
+      "nance.proto\"\363\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
+      "older_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
+      "description\030\005 \001(\t\022C\n\006labels\030\006 \003(\01323.yand" +
+      "ex.cloud.mdb.postgresql.v1.Cluster.Label" +
+      "sEntry\022H\n\013environment\030\007 \001(\01623.yandex.clo" +
+      "ud.mdb.postgresql.v1.Cluster.Environment" +
+      "\022>\n\nmonitoring\030\010 \003(\0132*.yandex.cloud.mdb." +
+      "postgresql.v1.Monitoring\022=\n\006config\030\t \001(\013" +
+      "2-.yandex.cloud.mdb.postgresql.v1.Cluste" +
+      "rConfig\022\022\n\nnetwork_id\030\n \001(\t\022>\n\006health\030\013 " +
+      "\001(\0162..yandex.cloud.mdb.postgresql.v1.Clu" +
+      "ster.Health\022>\n\006status\030\014 \001(\0162..yandex.clo" +
+      "ud.mdb.postgresql.v1.Cluster.Status\022M\n\022m" +
+      "aintenance_window\030\r \001(\01321.yandex.cloud.m" +
+      "db.postgresql.v1.MaintenanceWindow\022O\n\021pl" +
+      "anned_operation\030\016 \001(\01324.yandex.cloud.mdb" +
+      ".postgresql.v1.MaintenanceOperation\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECI" +
+      "FIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n" +
+      "\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010" +
+      "\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STAT" +
+      "US_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022" +
+      "\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013" +
+      "\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022" +
+      "\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004li" +
+      "nk\030\003 \001(\t\"\230\007\n\rClusterConfig\022\017\n\007version\030\001 " +
+      "\001(\t\022^\n\025postgresql_config_9_6\030\002 \001(\0132=.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfigSet9_6H\000\022b\n\027postgresql_config" +
+      "_10_1c\030\n \001(\0132?.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlConfigSet10_1CH\000\022" +
+      "\\\n\024postgresql_config_10\030\003 \001(\0132<.yandex.c" +
+      "loud.mdb.postgresql.v1.config.Postgresql" +
+      "ConfigSet10H\000\022\\\n\024postgresql_config_11\030\010 " +
+      "\001(\0132<.yandex.cloud.mdb.postgresql.v1.con" +
+      "fig.PostgresqlConfigSet11H\000\022\\\n\024postgresq" +
+      "l_config_12\030\013 \001(\0132<.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlConfigSet12H" +
+      "\000\022M\n\rpooler_config\030\004 \001(\01326.yandex.cloud." +
+      "mdb.postgresql.v1.ConnectionPoolerConfig" +
+      "\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb.p" +
+      "ostgresql.v1.Resources\0220\n\014autofailover\030\006" +
+      " \001(\0132\032.google.protobuf.BoolValue\0223\n\023back" +
+      "up_window_start\030\007 \001(\0132\026.google.type.Time" +
+      "OfDay\0226\n\006access\030\t \001(\0132&.yandex.cloud.mdb" +
+      ".postgresql.v1.Access\022W\n\027performance_dia" +
+      "gnostics\030\014 \001(\01326.yandex.cloud.mdb.postgr" +
+      "esql.v1.PerformanceDiagnosticsB\023\n\021postgr" +
       "esql_config\"\376\001\n\026ConnectionPoolerConfig\022X" +
       "\n\014pooling_mode\030\001 \001(\0162B.yandex.cloud.mdb." +
       "postgresql.v1.ConnectionPoolerConfig.Poo" +
@@ -17066,10 +17993,13 @@ public final class ClusterOuterClass {
       "E\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_p" +
       "reset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014dis" +
       "k_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001" +
-      " \001(\010Bs\n\"yandex.cloud.api.mdb.postgresql." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/postgresql/v1;postgresq" +
-      "lb\006proto3"
+      " \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enabl" +
+      "ed\030\001 \001(\010\022/\n\032sessions_sampling_interval\030\002" +
+      " \001(\003B\013\372\3071\0071-86400\0221\n\034statements_sampling" +
+      "_interval\030\003 \001(\003B\013\372\3071\0071-86400Bs\n\"yandex.c" +
+      "loud.api.mdb.postgresql.v1ZMgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17085,6 +18015,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql96.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.getDescriptor(),
@@ -17120,7 +18051,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig12", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig12", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_fieldAccessorTable = new
@@ -17157,9 +18088,21 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Access_descriptor,
         new java.lang.String[] { "DataLens", });
+    internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor,
+        new java.lang.String[] { "Enabled", "SessionsSamplingInterval", "StatementsSamplingInterval", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql96.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql101C.getDescriptor();
