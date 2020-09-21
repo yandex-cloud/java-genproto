@@ -26815,6 +26815,34 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getRecordTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.StreamClusterLogsRequest}
@@ -26833,6 +26861,7 @@ public final class ClusterServiceOuterClass {
       columnFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       serviceType_ = 0;
       recordToken_ = "";
+      filter_ = "";
     }
 
     @java.lang.Override
@@ -26910,6 +26939,12 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               recordToken_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
               break;
             }
             default: {
@@ -27292,6 +27327,58 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int FILTER_FIELD_NUMBER = 7;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+     * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+     * </pre>
+     *
+     * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -27323,6 +27410,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!getRecordTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, recordToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, filter_);
       }
       unknownFields.writeTo(output);
     }
@@ -27359,6 +27449,9 @@ public final class ClusterServiceOuterClass {
       if (!getRecordTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, recordToken_);
       }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, filter_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -27392,6 +27485,8 @@ public final class ClusterServiceOuterClass {
       }
       result = result && getRecordToken()
           .equals(other.getRecordToken());
+      result = result && getFilter()
+          .equals(other.getFilter());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -27421,6 +27516,8 @@ public final class ClusterServiceOuterClass {
       }
       hash = (37 * hash) + RECORD_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getRecordToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27574,6 +27671,8 @@ public final class ClusterServiceOuterClass {
         }
         recordToken_ = "";
 
+        filter_ = "";
+
         return this;
       }
 
@@ -27620,6 +27719,7 @@ public final class ClusterServiceOuterClass {
           result.toTime_ = toTimeBuilder_.build();
         }
         result.recordToken_ = recordToken_;
+        result.filter_ = filter_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -27694,6 +27794,10 @@ public final class ClusterServiceOuterClass {
         }
         if (!other.getRecordToken().isEmpty()) {
           recordToken_ = other.recordToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -28404,6 +28508,120 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         recordToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [LogRecord.logs.message.hostname], [LogRecord.logs.message.severity] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 1-63 characters long and match the regular expression `^[a-z0-9.-]{1,61}$`.
+       * Examples of a filter: `message.hostname='node1.db.cloud.yandex.net'`, `message.severity IN ('E', 'F')`
+       * </pre>
+       *
+       * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
         onChanged();
         return this;
       }
@@ -77700,328 +77918,329 @@ public final class ClusterServiceOuterClass {
       "d\022\027\n\017next_page_token\030\002 \001(\t\"d\n\017StreamLogR" +
       "ecord\0226\n\006record\030\001 \001(\0132&.yandex.cloud.mdb" +
       ".mongodb.v1.LogRecord\022\031\n\021next_record_tok" +
-      "en\030\002 \001(\t\"\374\002\n\030StreamClusterLogsRequest\022 \n" +
+      "en\030\002 \001(\t\"\230\003\n\030StreamClusterLogsRequest\022 \n" +
       "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolum" +
       "n_filter\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.y" +
       "andex.cloud.mdb.mongodb.v1.StreamCluster" +
       "LogsRequest.ServiceType\022-\n\tfrom_time\030\004 \001" +
       "(\0132\032.google.protobuf.Timestamp\022+\n\007to_tim" +
       "e\030\005 \001(\0132\032.google.protobuf.Timestamp\022\037\n\014r" +
-      "ecord_token\030\006 \001(\tB\t\212\3101\005<=100\"Q\n\013ServiceT" +
-      "ype\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\n\n\006MON" +
-      "GOD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"~\n\034ListC" +
-      "lusterOperationsRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
-      "o\n\035ListClusterOperationsResponse\0225\n\noper" +
-      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
-      "eration\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031List" +
-      "ClusterBackupsRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"k\n" +
-      "\032ListClusterBackupsResponse\0224\n\007backups\030\001" +
-      " \003(\0132#.yandex.cloud.mdb.mongodb.v1.Backu" +
-      "p\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCluste" +
-      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"e\n\030ListClu" +
-      "sterHostsResponse\0220\n\005hosts\030\001 \003(\0132!.yande" +
-      "x.cloud.mdb.mongodb.v1.Host\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"}\n\026AddClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\nhost" +
-      "_specs\030\002 \003(\0132%.yandex.cloud.mdb.mongodb." +
-      "v1.HostSpecB\006\202\3101\002>0\"A\n\027AddClusterHostsMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names" +
-      "\030\002 \003(\t\"b\n\031DeleteClusterHostsRequest\022 \n\nc" +
+      "ecord_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007" +
+      " \001(\tB\n\212\3101\006<=1000\"Q\n\013ServiceType\022\034\n\030SERVI" +
+      "CE_TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MON" +
+      "GOS\020\002\022\014\n\010MONGOCFG\020\003\"~\n\034ListClusterOperat" +
+      "ionsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClust" +
+      "erOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"{\n\031ListClusterBacku" +
+      "psRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"k\n\032ListCluster" +
+      "BackupsResponse\0224\n\007backups\030\001 \003(\0132#.yande" +
+      "x.cloud.mdb.mongodb.v1.Backup\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"y\n\027ListClusterHostsReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"e\n\030ListClusterHostsRes" +
+      "ponse\0220\n\005hosts\030\001 \003(\0132!.yandex.cloud.mdb." +
+      "mongodb.v1.Host\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"}\n\026AddClusterHostsRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\nhost_specs\030\002 \003(\013" +
+      "2%.yandex.cloud.mdb.mongodb.v1.HostSpecB" +
+      "\006\202\3101\002>0\"A\n\027AddClusterHostsMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031De" +
+      "leteClusterHostsRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202" +
+      "\3101\002>0\212\3101\005<=253\"D\n\032DeleteClusterHostsMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002" +
+      " \003(\t\"\354\004\n\034EnableClusterShardingRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022T\n\010mongo" +
+      "cfg\030\002 \001(\0132B.yandex.cloud.mdb.mongodb.v1." +
+      "EnableClusterShardingRequest.MongoCfg\022P\n" +
+      "\006mongos\030\003 \001(\0132@.yandex.cloud.mdb.mongodb" +
+      ".v1.EnableClusterShardingRequest.Mongos\022" +
+      "A\n\nhost_specs\030\004 \003(\0132%.yandex.cloud.mdb.m" +
+      "ongodb.v1.HostSpecB\006\202\3101\002>0\022X\n\nmongoinfra" +
+      "\030\005 \001(\0132D.yandex.cloud.mdb.mongodb.v1.Ena" +
+      "bleClusterShardingRequest.MongoInfra\032K\n\010" +
+      "MongoCfg\022?\n\tresources\030\001 \001(\0132&.yandex.clo" +
+      "ud.mdb.mongodb.v1.ResourcesB\004\350\3071\001\032I\n\006Mon" +
+      "gos\022?\n\tresources\030\001 \001(\0132&.yandex.cloud.md" +
+      "b.mongodb.v1.ResourcesB\004\350\3071\001\032M\n\nMongoInf" +
+      "ra\022?\n\tresources\030\001 \001(\0132&.yandex.cloud.mdb" +
+      ".mongodb.v1.ResourcesB\004\350\3071\001\"3\n\035EnableClu" +
+      "sterShardingMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
+      "\"n\n\026GetClusterShardRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\t" +
+      "B\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"z\n\030List" +
+      "ClusterShardsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"h\n\031" +
+      "ListClusterShardsResponse\0222\n\006shards\030\001 \003(" +
+      "\0132\".yandex.cloud.mdb.mongodb.v1.Shard\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"\261\001\n\026AddClusterSha" +
+      "rdRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
+      "\016[a-zA-Z0-9_-]*\022A\n\nhost_specs\030\003 \003(\0132%.ya" +
+      "ndex.cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002" +
+      ">0\"A\n\027AddClusterShardMetadata\022\022\n\ncluster" +
+      "_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"q\n\031DeleteC" +
+      "lusterShardRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071\001\212\310" +
+      "1\004<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032DeleteCluste" +
+      "rShardMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nsh" +
+      "ard_name\030\002 \001(\t\"\\\n\023ResetupHostsRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_" +
+      "names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024ResetupH" +
+      "ostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost" +
+      "_names\030\002 \003(\t\"\\\n\023RestartHostsRequest\022 \n\nc" +
       "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_na" +
-      "mes\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032DeleteClus" +
-      "terHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\n" +
-      "host_names\030\002 \003(\t\"\354\004\n\034EnableClusterShardi" +
-      "ngRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022T\n\010mongocfg\030\002 \001(\0132B.yandex.cloud.mdb" +
-      ".mongodb.v1.EnableClusterShardingRequest" +
-      ".MongoCfg\022P\n\006mongos\030\003 \001(\0132@.yandex.cloud" +
-      ".mdb.mongodb.v1.EnableClusterShardingReq" +
-      "uest.Mongos\022A\n\nhost_specs\030\004 \003(\0132%.yandex" +
-      ".cloud.mdb.mongodb.v1.HostSpecB\006\202\3101\002>0\022X" +
-      "\n\nmongoinfra\030\005 \001(\0132D.yandex.cloud.mdb.mo" +
-      "ngodb.v1.EnableClusterShardingRequest.Mo" +
-      "ngoInfra\032K\n\010MongoCfg\022?\n\tresources\030\001 \001(\0132" +
-      "&.yandex.cloud.mdb.mongodb.v1.ResourcesB" +
-      "\004\350\3071\001\032I\n\006Mongos\022?\n\tresources\030\001 \001(\0132&.yan" +
-      "dex.cloud.mdb.mongodb.v1.ResourcesB\004\350\3071\001" +
-      "\032M\n\nMongoInfra\022?\n\tresources\030\001 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.ResourcesB\004\350\3071\001\"" +
-      "3\n\035EnableClusterShardingMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\"n\n\026GetClusterShardRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshar" +
-      "d_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\"z\n\030ListClusterShardsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\"h\n\031ListClusterShardsResponse\0222\n" +
-      "\006shards\030\001 \003(\0132\".yandex.cloud.mdb.mongodb" +
-      ".v1.Shard\022\027\n\017next_page_token\030\002 \001(\t\"\261\001\n\026A" +
-      "ddClusterShardRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002 \001(\tB\036\350\3071" +
-      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022A\n\nhost_spec" +
-      "s\030\003 \003(\0132%.yandex.cloud.mdb.mongodb.v1.Ho" +
-      "stSpecB\006\202\3101\002>0\"A\n\027AddClusterShardMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(" +
-      "\t\"q\n\031DeleteClusterShardRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\nshard_name\030\002" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"D\n\032" +
-      "DeleteClusterShardMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\022\022\n\nshard_name\030\002 \001(\t\"\\\n\023ResetupHos" +
-      "tsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253" +
-      "\">\n\024ResetupHostsMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\\\n\023RestartHosts" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">" +
-      "\n\024RestartHostsMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\022\022\n\nhost_names\030\002 \003(\t\"\302\001\n\010HostSpec\022\031\n\007z" +
-      "one_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(" +
-      "\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\003 \001(\010\0224\n" +
-      "\004type\030\004 \001(\0162&.yandex.cloud.mdb.mongodb.v" +
-      "1.Host.Type\022.\n\nshard_name\030\005 \001(\tB\032\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\"\267\007\n\016MongodbSpec3_6\022B" +
-      "\n\006mongod\030\001 \001(\01322.yandex.cloud.mdb.mongod" +
-      "b.v1.MongodbSpec3_6.Mongod\022F\n\010mongocfg\030\002" +
-      " \001(\01324.yandex.cloud.mdb.mongodb.v1.Mongo" +
-      "dbSpec3_6.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yan" +
-      "dex.cloud.mdb.mongodb.v1.MongodbSpec3_6." +
-      "Mongos\022J\n\nmongoinfra\030\004 \001(\01326.yandex.clou" +
-      "d.mdb.mongodb.v1.MongodbSpec3_6.MongoInf" +
-      "ra\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\01323.yandex.c" +
-      "loud.mdb.mongodb.v1.config.MongodConfig3" +
-      "_6\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
-      ".mongodb.v1.Resources\032\214\001\n\010MongoCfg\022E\n\006co" +
-      "nfig\030\001 \001(\01325.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfig3_6\0229\n\tresources\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex" +
-      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
-      "g3_6\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
-      "db.mongodb.v1.Resources\032\343\001\n\nMongoInfra\022J" +
-      "\n\rconfig_mongos\030\001 \001(\01323.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongosConfig3_6\022N\n\017co" +
-      "nfig_mongocfg\030\002 \001(\01325.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongoCfgConfig3_6\0229\n\tre" +
-      "sources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb" +
-      ".v1.Resources\"\267\007\n\016MongodbSpec4_0\022B\n\006mong" +
-      "od\030\001 \001(\01322.yandex.cloud.mdb.mongodb.v1.M" +
-      "ongodbSpec4_0.Mongod\022F\n\010mongocfg\030\002 \001(\01324" +
-      ".yandex.cloud.mdb.mongodb.v1.MongodbSpec" +
-      "4_0.MongoCfg\022B\n\006mongos\030\003 \001(\01322.yandex.cl" +
-      "oud.mdb.mongodb.v1.MongodbSpec4_0.Mongos" +
-      "\022J\n\nmongoinfra\030\004 \001(\01326.yandex.cloud.mdb." +
-      "mongodb.v1.MongodbSpec4_0.MongoInfra\032\210\001\n" +
-      "\006Mongod\022C\n\006config\030\001 \001(\01323.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongodConfig4_0\0229\n\t" +
-      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
-      "db.v1.Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001" +
-      " \001(\01325.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongoCfgConfig4_0\0229\n\tresources\030\002 \001(\0132&" +
-      ".yandex.cloud.mdb.mongodb.v1.Resources\032\210" +
-      "\001\n\006Mongos\022C\n\006config\030\001 \001(\01323.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongosConfig4_0\0229" +
-      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
-      "godb.v1.Resources\032\343\001\n\nMongoInfra\022J\n\rconf" +
-      "ig_mongos\030\001 \001(\01323.yandex.cloud.mdb.mongo" +
-      "db.v1.config.MongosConfig4_0\022N\n\017config_m" +
-      "ongocfg\030\002 \001(\01325.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongoCfgConfig4_0\0229\n\tresource" +
-      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\"\267\007\n\016MongodbSpec4_2\022B\n\006mongod\030\001 \001" +
+      "mes\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\">\n\024RestartHos" +
+      "tsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_n" +
+      "ames\030\002 \003(\t\"\302\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\t" +
+      "B\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022" +
+      "\030\n\020assign_public_ip\030\003 \001(\010\0224\n\004type\030\004 \001(\0162" +
+      "&.yandex.cloud.mdb.mongodb.v1.Host.Type\022" +
+      ".\n\nshard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z" +
+      "0-9_-]*\"\267\007\n\016MongodbSpec3_6\022B\n\006mongod\030\001 \001" +
       "(\01322.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "Spec4_2.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yande" +
-      "x.cloud.mdb.mongodb.v1.MongodbSpec4_2.Mo" +
+      "Spec3_6.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yande" +
+      "x.cloud.mdb.mongodb.v1.MongodbSpec3_6.Mo" +
       "ngoCfg\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.md" +
-      "b.mongodb.v1.MongodbSpec4_2.Mongos\022J\n\nmo" +
+      "b.mongodb.v1.MongodbSpec3_6.Mongos\022J\n\nmo" +
       "ngoinfra\030\004 \001(\01326.yandex.cloud.mdb.mongod" +
-      "b.v1.MongodbSpec4_2.MongoInfra\032\210\001\n\006Mongo" +
+      "b.v1.MongodbSpec3_6.MongoInfra\032\210\001\n\006Mongo" +
       "d\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongodConfig4_2\0229\n\tresour" +
+      "godb.v1.config.MongodConfig3_6\0229\n\tresour" +
       "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
       "Resources\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\01325" +
       ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "oCfgConfig4_2\0229\n\tresources\030\002 \001(\0132&.yande" +
+      "oCfgConfig3_6\0229\n\tresources\030\002 \001(\0132&.yande" +
       "x.cloud.mdb.mongodb.v1.Resources\032\210\001\n\006Mon" +
       "gos\022C\n\006config\030\001 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig4_2\0229\n\treso" +
+      "ongodb.v1.config.MongosConfig3_6\0229\n\treso" +
       "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
       "1.Resources\032\343\001\n\nMongoInfra\022J\n\rconfig_mon" +
       "gos\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfig4_2\022N\n\017config_mongocf" +
+      "config.MongosConfig3_6\022N\n\017config_mongocf" +
       "g\030\002 \001(\01325.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongoCfgConfig4_2\0229\n\tresources\030\003 \001(" +
+      "nfig.MongoCfgConfig3_6\0229\n\tresources\030\003 \001(" +
       "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\"\267\007\n\016MongodbSpec4_4\022B\n\006mongod\030\001 \001(\01322.y" +
+      "s\"\267\007\n\016MongodbSpec4_0\022B\n\006mongod\030\001 \001(\01322.y" +
       "andex.cloud.mdb.mongodb.v1.MongodbSpec4_" +
-      "4.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex.clou" +
-      "d.mdb.mongodb.v1.MongodbSpec4_4.MongoCfg" +
+      "0.Mongod\022F\n\010mongocfg\030\002 \001(\01324.yandex.clou" +
+      "d.mdb.mongodb.v1.MongodbSpec4_0.MongoCfg" +
       "\022B\n\006mongos\030\003 \001(\01322.yandex.cloud.mdb.mong" +
-      "odb.v1.MongodbSpec4_4.Mongos\022J\n\nmongoinf" +
+      "odb.v1.MongodbSpec4_0.Mongos\022J\n\nmongoinf" +
       "ra\030\004 \001(\01326.yandex.cloud.mdb.mongodb.v1.M" +
-      "ongodbSpec4_4.MongoInfra\032\210\001\n\006Mongod\022C\n\006c" +
+      "ongodbSpec4_0.MongoInfra\032\210\001\n\006Mongod\022C\n\006c" +
       "onfig\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongodConfig4_4\0229\n\tresources\030\002 " +
+      "1.config.MongodConfig4_0\0229\n\tresources\030\002 " +
       "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
       "ces\032\214\001\n\010MongoCfg\022E\n\006config\030\001 \001(\01325.yande" +
       "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfig4_4\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
+      "nfig4_0\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
       "d.mdb.mongodb.v1.Resources\032\210\001\n\006Mongos\022C\n" +
       "\006config\030\001 \001(\01323.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongosConfig4_4\0229\n\tresources\030" +
+      ".v1.config.MongosConfig4_0\0229\n\tresources\030" +
       "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
       "urces\032\343\001\n\nMongoInfra\022J\n\rconfig_mongos\030\001 " +
       "\001(\01323.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongosConfig4_4\022N\n\017config_mongocfg\030\002 \001(" +
+      ".MongosConfig4_0\022N\n\017config_mongocfg\030\002 \001(" +
       "\01325.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongoCfgConfig4_4\0229\n\tresources\030\003 \001(\0132&.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Resources\"\360\004\n\n" +
-      "ConfigSpec\022\017\n\007version\030\001 \001(\t\022%\n\035feature_c" +
-      "ompatibility_version\030\005 \001(\t\022X\n\020mongodb_sp" +
-      "ec_3_6\030\002 \001(\0132+.yandex.cloud.mdb.mongodb." +
-      "v1.MongodbSpec3_6H\000R\017mongodbSpec_3_6\022X\n\020" +
-      "mongodb_spec_4_0\030\004 \001(\0132+.yandex.cloud.md" +
-      "b.mongodb.v1.MongodbSpec4_0H\000R\017mongodbSp" +
-      "ec_4_0\022X\n\020mongodb_spec_4_2\030\007 \001(\0132+.yande" +
-      "x.cloud.mdb.mongodb.v1.MongodbSpec4_2H\000R" +
-      "\017mongodbSpec_4_2\022X\n\020mongodb_spec_4_4\030\010 \001" +
-      "(\0132+.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "Spec4_4H\000R\017mongodbSpec_4_4\0223\n\023backup_win" +
-      "dow_start\030\003 \001(\0132\026.google.type.TimeOfDay\022" +
-      "H\n\031backup_retain_period_days\030\t \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\010\372\3071\0047-35\0223\n\006acc" +
-      "ess\030\006 \001(\0132#.yandex.cloud.mdb.mongodb.v1." +
-      "AccessB\016\n\014mongodb_spec2\230&\n\016ClusterServic" +
-      "e\022\216\001\n\003Get\022..yandex.cloud.mdb.mongodb.v1." +
-      "GetClusterRequest\032$.yandex.cloud.mdb.mon" +
-      "godb.v1.Cluster\"1\202\323\344\223\002+\022)/managed-mongod" +
-      "b/v1/clusters/{cluster_id}\022\221\001\n\004List\0220.ya" +
-      "ndex.cloud.mdb.mongodb.v1.ListClustersRe" +
-      "quest\0321.yandex.cloud.mdb.mongodb.v1.List" +
-      "ClustersResponse\"$\202\323\344\223\002\036\022\034/managed-mongo" +
-      "db/v1/clusters\022\253\001\n\006Create\0221.yandex.cloud" +
-      ".mdb.mongodb.v1.CreateClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"K\202\323\344\223\002!\"" +
-      "\034/managed-mongodb/v1/clusters:\001*\262\322* \n\025Cr" +
-      "eateClusterMetadata\022\007Cluster\022\270\001\n\006Update\022" +
-      "1.yandex.cloud.mdb.mongodb.v1.UpdateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"X\202\323\344\223\002.2)/managed-mongodb/v1/clust" +
-      "ers/{cluster_id}:\001*\262\322* \n\025UpdateClusterMe" +
-      "tadata\022\007Cluster\022\303\001\n\006Delete\0221.yandex.clou" +
-      "d.mdb.mongodb.v1.DeleteClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"c\202\323\344\223\002+" +
-      "*)/managed-mongodb/v1/clusters/{cluster_" +
-      "id}\262\322*.\n\025DeleteClusterMetadata\022\025google.p" +
-      "rotobuf.Empty\022\270\001\n\005Start\0220.yandex.cloud.m" +
-      "db.mongodb.v1.StartClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"Z\202\323\344\223\0021\"//m" +
-      "anaged-mongodb/v1/clusters/{cluster_id}:" +
-      "start\262\322*\037\n\024StartClusterMetadata\022\007Cluster" +
-      "\022\264\001\n\004Stop\022/.yandex.cloud.mdb.mongodb.v1." +
-      "StopClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"X\202\323\344\223\0020\"./managed-mongodb/" +
-      "v1/clusters/{cluster_id}:stop\262\322*\036\n\023StopC" +
-      "lusterMetadata\022\007Cluster\022\267\001\n\004Move\022/.yande" +
-      "x.cloud.mdb.mongodb.v1.MoveClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
-      "\344\223\0023\"./managed-mongodb/v1/clusters/{clus" +
-      "ter_id}:move:\001*\262\322*\036\n\023MoveClusterMetadata" +
-      "\022\007Cluster\022\274\001\n\006Backup\0221.yandex.cloud.mdb." +
-      "mongodb.v1.BackupClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\\\202\323\344\223\0022\"0/man" +
-      "aged-mongodb/v1/clusters/{cluster_id}:ba" +
-      "ckup\262\322* \n\025BackupClusterMetadata\022\007Cluster" +
-      "\022\266\001\n\007Restore\0222.yandex.cloud.mdb.mongodb." +
-      "v1.RestoreClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"T\202\323\344\223\002)\"$/managed-mo" +
-      "ngodb/v1/clusters:restore:\001*\262\322*!\n\026Restor" +
-      "eClusterMetadata\022\007Cluster\022\355\001\n\025Reschedule" +
-      "Maintenance\0229.yandex.cloud.mdb.mongodb.v" +
-      "1.RescheduleMaintenanceRequest\032!.yandex." +
-      "cloud.operation.Operation\"v\202\323\344\223\002D\"?/mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:res" +
-      "cheduleMaintenance:\001*\262\322*(\n\035RescheduleMai" +
-      "ntenanceMetadata\022\007Cluster\022\255\001\n\010ListLogs\0223" +
-      ".yandex.cloud.mdb.mongodb.v1.ListCluster" +
-      "LogsRequest\0324.yandex.cloud.mdb.mongodb.v" +
-      "1.ListClusterLogsResponse\"6\202\323\344\223\0020\022./mana" +
-      "ged-mongodb/v1/clusters/{cluster_id}:log" +
-      "s\022\262\001\n\nStreamLogs\0225.yandex.cloud.mdb.mong" +
-      "odb.v1.StreamClusterLogsRequest\032,.yandex" +
-      ".cloud.mdb.mongodb.v1.StreamLogRecord\"=\202" +
-      "\323\344\223\0027\0225/managed-mongodb/v1/clusters/{clu" +
-      "ster_id}:stream_logs0\001\022\305\001\n\016ListOperation" +
-      "s\0229.yandex.cloud.mdb.mongodb.v1.ListClus" +
-      "terOperationsRequest\032:.yandex.cloud.mdb." +
-      "mongodb.v1.ListClusterOperationsResponse" +
-      "\"<\202\323\344\223\0026\0224/managed-mongodb/v1/clusters/{" +
-      "cluster_id}/operations\022\271\001\n\013ListBackups\0226" +
-      ".yandex.cloud.mdb.mongodb.v1.ListCluster" +
-      "BackupsRequest\0327.yandex.cloud.mdb.mongod" +
-      "b.v1.ListClusterBackupsResponse\"9\202\323\344\223\0023\022" +
-      "1/managed-mongodb/v1/clusters/{cluster_i" +
-      "d}/backups\022\261\001\n\tListHosts\0224.yandex.cloud." +
-      "mdb.mongodb.v1.ListClusterHostsRequest\0325" +
-      ".yandex.cloud.mdb.mongodb.v1.ListCluster" +
-      "HostsResponse\"7\202\323\344\223\0021\022//managed-mongodb/" +
-      "v1/clusters/{cluster_id}/hosts\022\336\001\n\010AddHo" +
-      "sts\0223.yandex.cloud.mdb.mongodb.v1.AddClu" +
-      "sterHostsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"z\202\323\344\223\002@\";/managed-mongodb/v1",
-      "/clusters/{cluster_id}/hosts:batchCreate" +
-      ":\001*\262\322*0\n\027AddClusterHostsMetadata\022\025google" +
-      ".protobuf.Empty\022\347\001\n\013DeleteHosts\0226.yandex" +
-      ".cloud.mdb.mongodb.v1.DeleteClusterHosts" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"}\202\323\344\223\002@\";/managed-mongodb/v1/clusters" +
-      "/{cluster_id}/hosts:batchDelete:\001*\262\322*3\n\032" +
-      "DeleteClusterHostsMetadata\022\025google.proto" +
-      "buf.Empty\022\355\001\n\016EnableSharding\0229.yandex.cl" +
-      "oud.mdb.mongodb.v1.EnableClusterSharding" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"}\202\323\344\223\002=\"8/managed-mongodb/v1/clusters" +
-      "/{cluster_id}:enableSharding:\001*\262\322*6\n\035Ena" +
-      "bleClusterShardingMetadata\022\025google.proto" +
-      "buf.Empty\022\252\001\n\010GetShard\0223.yandex.cloud.md" +
-      "b.mongodb.v1.GetClusterShardRequest\032\".ya" +
-      "ndex.cloud.mdb.mongodb.v1.Shard\"E\202\323\344\223\002?\022" +
-      "=/managed-mongodb/v1/clusters/{cluster_i" +
-      "d}/shards/{shard_name}\022\265\001\n\nListShards\0225." +
-      "yandex.cloud.mdb.mongodb.v1.ListClusterS" +
-      "hardsRequest\0326.yandex.cloud.mdb.mongodb." +
-      "v1.ListClusterShardsResponse\"8\202\323\344\223\0022\0220/m" +
+      "ongoCfgConfig4_0\0229\n\tresources\030\003 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\"\267\007\n\016" +
+      "MongodbSpec4_2\022B\n\006mongod\030\001 \001(\01322.yandex." +
+      "cloud.mdb.mongodb.v1.MongodbSpec4_2.Mong" +
+      "od\022F\n\010mongocfg\030\002 \001(\01324.yandex.cloud.mdb." +
+      "mongodb.v1.MongodbSpec4_2.MongoCfg\022B\n\006mo" +
+      "ngos\030\003 \001(\01322.yandex.cloud.mdb.mongodb.v1" +
+      ".MongodbSpec4_2.Mongos\022J\n\nmongoinfra\030\004 \001" +
+      "(\01326.yandex.cloud.mdb.mongodb.v1.Mongodb" +
+      "Spec4_2.MongoInfra\032\210\001\n\006Mongod\022C\n\006config\030" +
+      "\001 \001(\01323.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongodConfig4_2\0229\n\tresources\030\002 \001(\0132&." +
+      "yandex.cloud.mdb.mongodb.v1.Resources\032\214\001" +
+      "\n\010MongoCfg\022E\n\006config\030\001 \001(\01325.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongoCfgConfig4_" +
+      "2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb." +
+      "mongodb.v1.Resources\032\210\001\n\006Mongos\022C\n\006confi" +
+      "g\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1.co" +
+      "nfig.MongosConfig4_2\0229\n\tresources\030\002 \001(\0132" +
+      "&.yandex.cloud.mdb.mongodb.v1.Resources\032" +
+      "\343\001\n\nMongoInfra\022J\n\rconfig_mongos\030\001 \001(\01323." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "sConfig4_2\022N\n\017config_mongocfg\030\002 \001(\01325.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfig4_2\0229\n\tresources\030\003 \001(\0132&.yandex.c" +
+      "loud.mdb.mongodb.v1.Resources\"\267\007\n\016Mongod" +
+      "bSpec4_4\022B\n\006mongod\030\001 \001(\01322.yandex.cloud." +
+      "mdb.mongodb.v1.MongodbSpec4_4.Mongod\022F\n\010" +
+      "mongocfg\030\002 \001(\01324.yandex.cloud.mdb.mongod" +
+      "b.v1.MongodbSpec4_4.MongoCfg\022B\n\006mongos\030\003" +
+      " \001(\01322.yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "dbSpec4_4.Mongos\022J\n\nmongoinfra\030\004 \001(\01326.y" +
+      "andex.cloud.mdb.mongodb.v1.MongodbSpec4_" +
+      "4.MongoInfra\032\210\001\n\006Mongod\022C\n\006config\030\001 \001(\0132" +
+      "3.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "godConfig4_4\0229\n\tresources\030\002 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\032\214\001\n\010Mong" +
+      "oCfg\022E\n\006config\030\001 \001(\01325.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongoCfgConfig4_4\0229\n\tr" +
+      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
+      "b.v1.Resources\032\210\001\n\006Mongos\022C\n\006config\030\001 \001(" +
+      "\01323.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongosConfig4_4\0229\n\tresources\030\002 \001(\0132&.yand" +
+      "ex.cloud.mdb.mongodb.v1.Resources\032\343\001\n\nMo" +
+      "ngoInfra\022J\n\rconfig_mongos\030\001 \001(\01323.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
+      "g4_4\022N\n\017config_mongocfg\030\002 \001(\01325.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongoCfgConfi" +
+      "g4_4\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.m" +
+      "db.mongodb.v1.Resources\"\360\004\n\nConfigSpec\022\017" +
+      "\n\007version\030\001 \001(\t\022%\n\035feature_compatibility" +
+      "_version\030\005 \001(\t\022X\n\020mongodb_spec_3_6\030\002 \001(\013" +
+      "2+.yandex.cloud.mdb.mongodb.v1.MongodbSp" +
+      "ec3_6H\000R\017mongodbSpec_3_6\022X\n\020mongodb_spec" +
+      "_4_0\030\004 \001(\0132+.yandex.cloud.mdb.mongodb.v1" +
+      ".MongodbSpec4_0H\000R\017mongodbSpec_4_0\022X\n\020mo" +
+      "ngodb_spec_4_2\030\007 \001(\0132+.yandex.cloud.mdb." +
+      "mongodb.v1.MongodbSpec4_2H\000R\017mongodbSpec" +
+      "_4_2\022X\n\020mongodb_spec_4_4\030\010 \001(\0132+.yandex." +
+      "cloud.mdb.mongodb.v1.MongodbSpec4_4H\000R\017m" +
+      "ongodbSpec_4_4\0223\n\023backup_window_start\030\003 " +
+      "\001(\0132\026.google.type.TimeOfDay\022H\n\031backup_re" +
+      "tain_period_days\030\t \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\010\372\3071\0047-35\0223\n\006access\030\006 \001(\0132#." +
+      "yandex.cloud.mdb.mongodb.v1.AccessB\016\n\014mo" +
+      "ngodb_spec2\230&\n\016ClusterService\022\216\001\n\003Get\022.." +
+      "yandex.cloud.mdb.mongodb.v1.GetClusterRe" +
+      "quest\032$.yandex.cloud.mdb.mongodb.v1.Clus" +
+      "ter\"1\202\323\344\223\002+\022)/managed-mongodb/v1/cluster" +
+      "s/{cluster_id}\022\221\001\n\004List\0220.yandex.cloud.m" +
+      "db.mongodb.v1.ListClustersRequest\0321.yand" +
+      "ex.cloud.mdb.mongodb.v1.ListClustersResp" +
+      "onse\"$\202\323\344\223\002\036\022\034/managed-mongodb/v1/cluste" +
+      "rs\022\253\001\n\006Create\0221.yandex.cloud.mdb.mongodb" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"K\202\323\344\223\002!\"\034/managed-mo" +
+      "ngodb/v1/clusters:\001*\262\322* \n\025CreateClusterM" +
+      "etadata\022\007Cluster\022\270\001\n\006Update\0221.yandex.clo" +
+      "ud.mdb.mongodb.v1.UpdateClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
+      ".2)/managed-mongodb/v1/clusters/{cluster" +
+      "_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clus" +
+      "ter\022\303\001\n\006Delete\0221.yandex.cloud.mdb.mongod" +
+      "b.v1.DeleteClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"c\202\323\344\223\002+*)/managed-m" +
+      "ongodb/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
+      "eteClusterMetadata\022\025google.protobuf.Empt" +
+      "y\022\270\001\n\005Start\0220.yandex.cloud.mdb.mongodb.v" +
+      "1.StartClusterRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"Z\202\323\344\223\0021\"//managed-mongo" +
+      "db/v1/clusters/{cluster_id}:start\262\322*\037\n\024S" +
+      "tartClusterMetadata\022\007Cluster\022\264\001\n\004Stop\022/." +
+      "yandex.cloud.mdb.mongodb.v1.StopClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"X\202\323\344\223\0020\"./managed-mongodb/v1/clusters/" +
+      "{cluster_id}:stop\262\322*\036\n\023StopClusterMetada" +
+      "ta\022\007Cluster\022\267\001\n\004Move\022/.yandex.cloud.mdb." +
+      "mongodb.v1.MoveClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"[\202\323\344\223\0023\"./manag" +
+      "ed-mongodb/v1/clusters/{cluster_id}:move" +
+      ":\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\274\001" +
+      "\n\006Backup\0221.yandex.cloud.mdb.mongodb.v1.B" +
+      "ackupClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\\\202\323\344\223\0022\"0/managed-mongodb" +
+      "/v1/clusters/{cluster_id}:backup\262\322* \n\025Ba" +
+      "ckupClusterMetadata\022\007Cluster\022\266\001\n\007Restore" +
+      "\0222.yandex.cloud.mdb.mongodb.v1.RestoreCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"T\202\323\344\223\002)\"$/managed-mongodb/v1/clu" +
+      "sters:restore:\001*\262\322*!\n\026RestoreClusterMeta" +
+      "data\022\007Cluster\022\355\001\n\025RescheduleMaintenance\022" +
+      "9.yandex.cloud.mdb.mongodb.v1.Reschedule" +
+      "MaintenanceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"v\202\323\344\223\002D\"?/managed-mongodb/" +
+      "v1/clusters/{cluster_id}:rescheduleMaint" +
+      "enance:\001*\262\322*(\n\035RescheduleMaintenanceMeta" +
+      "data\022\007Cluster\022\255\001\n\010ListLogs\0223.yandex.clou" +
+      "d.mdb.mongodb.v1.ListClusterLogsRequest\032" +
+      "4.yandex.cloud.mdb.mongodb.v1.ListCluste" +
+      "rLogsResponse\"6\202\323\344\223\0020\022./managed-mongodb/" +
+      "v1/clusters/{cluster_id}:logs\022\262\001\n\nStream" +
+      "Logs\0225.yandex.cloud.mdb.mongodb.v1.Strea" +
+      "mClusterLogsRequest\032,.yandex.cloud.mdb.m" +
+      "ongodb.v1.StreamLogRecord\"=\202\323\344\223\0027\0225/mana" +
+      "ged-mongodb/v1/clusters/{cluster_id}:str" +
+      "eam_logs0\001\022\305\001\n\016ListOperations\0229.yandex.c" +
+      "loud.mdb.mongodb.v1.ListClusterOperation" +
+      "sRequest\032:.yandex.cloud.mdb.mongodb.v1.L" +
+      "istClusterOperationsResponse\"<\202\323\344\223\0026\0224/m" +
       "anaged-mongodb/v1/clusters/{cluster_id}/" +
-      "shards\022\303\001\n\010AddShard\0223.yandex.cloud.mdb.m" +
-      "ongodb.v1.AddClusterShardRequest\032!.yande" +
-      "x.cloud.operation.Operation\"_\202\323\344\223\0025\"0/ma" +
-      "naged-mongodb/v1/clusters/{cluster_id}/s" +
-      "hards:\001*\262\322* \n\027AddClusterShardMetadata\022\005S" +
-      "hard\022\346\001\n\013DeleteShard\0226.yandex.cloud.mdb." +
-      "mongodb.v1.DeleteClusterShardRequest\032!.y" +
-      "andex.cloud.operation.Operation\"|\202\323\344\223\002?*" +
-      "=/managed-mongodb/v1/clusters/{cluster_i" +
-      "d}/shards/{shard_name}\262\322*3\n\032DeleteCluste" +
-      "rShardMetadata\022\025google.protobuf.Empty\022\327\001" +
-      "\n\014ResetupHosts\0220.yandex.cloud.mdb.mongod" +
-      "b.v1.ResetupHostsRequest\032!.yandex.cloud." +
-      "operation.Operation\"r\202\323\344\223\002;\"6/managed-mo" +
-      "ngodb/v1/clusters/{cluster_id}:resetupHo" +
-      "sts:\001*\262\322*-\n\024ResetupHostsMetadata\022\025google" +
-      ".protobuf.Empty\022\327\001\n\014RestartHosts\0220.yande" +
-      "x.cloud.mdb.mongodb.v1.RestartHostsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"r\202" +
-      "\323\344\223\002;\"6/managed-mongodb/v1/clusters/{clu" +
-      "ster_id}:restartHosts:\001*\262\322*-\n\024RestartHos" +
-      "tsMetadata\022\025google.protobuf.EmptyBj\n\037yan" +
-      "dex.cloud.api.mdb.mongodb.v1ZGgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/mongodb/v1;mongodbb\006proto3"
+      "operations\022\271\001\n\013ListBackups\0226.yandex.clou" +
+      "d.mdb.mongodb.v1.ListClusterBackupsReque" +
+      "st\0327.yandex.cloud.mdb.mongodb.v1.ListClu" +
+      "sterBackupsResponse\"9\202\323\344\223\0023\0221/managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}/backups\022\261" +
+      "\001\n\tListHosts\0224.yandex.cloud.mdb.mongodb." +
+      "v1.ListClusterHostsRequest\0325.yandex.clou" +
+      "d.mdb.mongodb.v1.ListClusterHostsRespons" +
+      "e\"7\202\323\344\223\0021\022//managed-mongodb/v1/clusters/" +
+      "{cluster_id}/hosts\022\336\001\n\010AddHosts\0223.yandex" +
+      ".cloud.mdb.mongodb.v1.AddClusterHostsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"",
+      "z\202\323\344\223\002@\";/managed-mongodb/v1/clusters/{c" +
+      "luster_id}/hosts:batchCreate:\001*\262\322*0\n\027Add" +
+      "ClusterHostsMetadata\022\025google.protobuf.Em" +
+      "pty\022\347\001\n\013DeleteHosts\0226.yandex.cloud.mdb.m" +
+      "ongodb.v1.DeleteClusterHostsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"}\202\323\344\223\002@\";" +
+      "/managed-mongodb/v1/clusters/{cluster_id" +
+      "}/hosts:batchDelete:\001*\262\322*3\n\032DeleteCluste" +
+      "rHostsMetadata\022\025google.protobuf.Empty\022\355\001" +
+      "\n\016EnableSharding\0229.yandex.cloud.mdb.mong" +
+      "odb.v1.EnableClusterShardingRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"}\202\323\344\223\002=\"8" +
+      "/managed-mongodb/v1/clusters/{cluster_id" +
+      "}:enableSharding:\001*\262\322*6\n\035EnableClusterSh" +
+      "ardingMetadata\022\025google.protobuf.Empty\022\252\001" +
+      "\n\010GetShard\0223.yandex.cloud.mdb.mongodb.v1" +
+      ".GetClusterShardRequest\032\".yandex.cloud.m" +
+      "db.mongodb.v1.Shard\"E\202\323\344\223\002?\022=/managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}/shards/{s" +
+      "hard_name}\022\265\001\n\nListShards\0225.yandex.cloud" +
+      ".mdb.mongodb.v1.ListClusterShardsRequest" +
+      "\0326.yandex.cloud.mdb.mongodb.v1.ListClust" +
+      "erShardsResponse\"8\202\323\344\223\0022\0220/managed-mongo" +
+      "db/v1/clusters/{cluster_id}/shards\022\303\001\n\010A" +
+      "ddShard\0223.yandex.cloud.mdb.mongodb.v1.Ad" +
+      "dClusterShardRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"_\202\323\344\223\0025\"0/managed-mongod" +
+      "b/v1/clusters/{cluster_id}/shards:\001*\262\322* " +
+      "\n\027AddClusterShardMetadata\022\005Shard\022\346\001\n\013Del" +
+      "eteShard\0226.yandex.cloud.mdb.mongodb.v1.D" +
+      "eleteClusterShardRequest\032!.yandex.cloud." +
+      "operation.Operation\"|\202\323\344\223\002?*=/managed-mo" +
+      "ngodb/v1/clusters/{cluster_id}/shards/{s" +
+      "hard_name}\262\322*3\n\032DeleteClusterShardMetada" +
+      "ta\022\025google.protobuf.Empty\022\327\001\n\014ResetupHos" +
+      "ts\0220.yandex.cloud.mdb.mongodb.v1.Resetup" +
+      "HostsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"r\202\323\344\223\002;\"6/managed-mongodb/v1/clu" +
+      "sters/{cluster_id}:resetupHosts:\001*\262\322*-\n\024" +
+      "ResetupHostsMetadata\022\025google.protobuf.Em" +
+      "pty\022\327\001\n\014RestartHosts\0220.yandex.cloud.mdb." +
+      "mongodb.v1.RestartHostsRequest\032!.yandex." +
+      "cloud.operation.Operation\"r\202\323\344\223\002;\"6/mana" +
+      "ged-mongodb/v1/clusters/{cluster_id}:res" +
+      "tartHosts:\001*\262\322*-\n\024RestartHostsMetadata\022\025" +
+      "google.protobuf.EmptyBj\n\037yandex.cloud.ap" +
+      "i.mdb.mongodb.v1ZGgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/mongodb/v" +
+      "1;mongodbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -78237,7 +78456,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_StreamClusterLogsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_StreamClusterLogsRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", });
+        new java.lang.String[] { "ClusterId", "ColumnFilter", "ServiceType", "FromTime", "ToTime", "RecordToken", "Filter", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_mdb_mongodb_v1_ListClusterOperationsRequest_fieldAccessorTable = new
