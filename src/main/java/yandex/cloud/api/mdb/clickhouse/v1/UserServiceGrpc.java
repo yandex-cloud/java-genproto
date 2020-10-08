@@ -18,6 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A set of methods for managing ClickHouse User resources.
+ * NOTE: these methods are available only if user management through SQL is disabled.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -280,6 +281,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse User resources.
+   * NOTE: these methods are available only if user management through SQL is disabled.
    * </pre>
    */
   public static abstract class UserServiceImplBase implements io.grpc.BindableService {
@@ -413,6 +415,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse User resources.
+   * NOTE: these methods are available only if user management through SQL is disabled.
    * </pre>
    */
   public static final class UserServiceStub extends io.grpc.stub.AbstractStub<UserServiceStub> {
@@ -513,6 +516,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse User resources.
+   * NOTE: these methods are available only if user management through SQL is disabled.
    * </pre>
    */
   public static final class UserServiceBlockingStub extends io.grpc.stub.AbstractStub<UserServiceBlockingStub> {
@@ -606,6 +610,7 @@ public final class UserServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse User resources.
+   * NOTE: these methods are available only if user management through SQL is disabled.
    * </pre>
    */
   public static final class UserServiceFutureStub extends io.grpc.stub.AbstractStub<UserServiceFutureStub> {

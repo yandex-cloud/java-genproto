@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing certificates.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -371,13 +374,16 @@ public final class CertificateServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificates.
+   * </pre>
    */
   public static abstract class CertificateServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Returns the specified certificate.
-     *  To get the list of available certificates, make a [CertificateService.List] request.
+     * To get the list of available certificates, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.GetCertificateRequest request,
@@ -552,6 +558,9 @@ public final class CertificateServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificates.
+   * </pre>
    */
   public static final class CertificateServiceStub extends io.grpc.stub.AbstractStub<CertificateServiceStub> {
     private CertificateServiceStub(io.grpc.Channel channel) {
@@ -572,7 +581,7 @@ public final class CertificateServiceGrpc {
     /**
      * <pre>
      * Returns the specified certificate.
-     *  To get the list of available certificates, make a [CertificateService.List] request.
+     * To get the list of available certificates, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.GetCertificateRequest request,
@@ -682,6 +691,9 @@ public final class CertificateServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificates.
+   * </pre>
    */
   public static final class CertificateServiceBlockingStub extends io.grpc.stub.AbstractStub<CertificateServiceBlockingStub> {
     private CertificateServiceBlockingStub(io.grpc.Channel channel) {
@@ -702,7 +714,7 @@ public final class CertificateServiceGrpc {
     /**
      * <pre>
      * Returns the specified certificate.
-     *  To get the list of available certificates, make a [CertificateService.List] request.
+     * To get the list of available certificates, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate get(yandex.cloud.api.certificatemanager.v1.CertificateServiceOuterClass.GetCertificateRequest request) {
@@ -802,6 +814,9 @@ public final class CertificateServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificates.
+   * </pre>
    */
   public static final class CertificateServiceFutureStub extends io.grpc.stub.AbstractStub<CertificateServiceFutureStub> {
     private CertificateServiceFutureStub(io.grpc.Channel channel) {
@@ -822,7 +837,7 @@ public final class CertificateServiceGrpc {
     /**
      * <pre>
      * Returns the specified certificate.
-     *  To get the list of available certificates, make a [CertificateService.List] request.
+     * To get the list of available certificates, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Certificate> get(

@@ -20,10 +20,18 @@ public final class CertificateServiceOuterClass {
   public enum CertificateView
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Output basic information about the certificate.
+     * </pre>
+     *
      * <code>BASIC = 0;</code>
      */
     BASIC(0),
     /**
+     * <pre>
+     * Output full information about the certificate including domain challenges.
+     * </pre>
+     *
      * <code>FULL = 1;</code>
      */
     FULL(1),
@@ -31,10 +39,18 @@ public final class CertificateServiceOuterClass {
     ;
 
     /**
+     * <pre>
+     * Output basic information about the certificate.
+     * </pre>
+     *
      * <code>BASIC = 0;</code>
      */
     public static final int BASIC_VALUE = 0;
     /**
+     * <pre>
+     * Output full information about the certificate including domain challenges.
+     * </pre>
+     *
      * <code>FULL = 1;</code>
      */
     public static final int FULL_VALUE = 1;
@@ -138,6 +154,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -145,6 +162,7 @@ public final class CertificateServiceOuterClass {
     int getViewValue();
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -284,6 +302,7 @@ public final class CertificateServiceOuterClass {
     private int view_;
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -293,6 +312,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -719,6 +739,7 @@ public final class CertificateServiceOuterClass {
       private int view_ = 0;
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -728,6 +749,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -739,6 +761,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -750,6 +773,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -765,6 +789,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 2;</code>
@@ -853,7 +878,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListCertificatesResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListCertificatesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * Default value: 100.
      * </pre>
@@ -864,7 +889,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificatesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -873,7 +898,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificatesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -884,6 +909,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -891,6 +917,7 @@ public final class CertificateServiceOuterClass {
     int getViewValue();
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1042,7 +1069,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListCertificatesResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListCertificatesResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * Default value: 100.
      * </pre>
@@ -1057,7 +1084,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificatesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1077,7 +1104,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificatesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1101,6 +1128,7 @@ public final class CertificateServiceOuterClass {
     private int view_;
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1110,6 +1138,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
+     * The output type of the certificate.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1567,7 +1596,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificatesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificatesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -1580,7 +1609,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificatesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificatesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -1596,7 +1625,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificatesResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificatesResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -1613,7 +1642,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificatesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1633,7 +1662,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificatesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1654,7 +1683,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificatesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1672,7 +1701,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificatesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1686,7 +1715,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificatesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1707,6 +1736,7 @@ public final class CertificateServiceOuterClass {
       private int view_ = 0;
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1716,6 +1746,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1727,6 +1758,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1738,6 +1770,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1753,6 +1786,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
+       * The output type of the certificate.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.CertificateView view = 6;</code>
@@ -1868,7 +1902,7 @@ public final class CertificateServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number
      * of results is greater than the specified [ListCertificatesRequest.page_size], use
-     * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
      * [next_page_token] to continue paging through the results.
      * </pre>
@@ -1880,7 +1914,7 @@ public final class CertificateServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number
      * of results is greater than the specified [ListCertificatesRequest.page_size], use
-     * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
      * [next_page_token] to continue paging through the results.
      * </pre>
@@ -2043,7 +2077,7 @@ public final class CertificateServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number
      * of results is greater than the specified [ListCertificatesRequest.page_size], use
-     * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
      * [next_page_token] to continue paging through the results.
      * </pre>
@@ -2066,7 +2100,7 @@ public final class CertificateServiceOuterClass {
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number
      * of results is greater than the specified [ListCertificatesRequest.page_size], use
-     * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+     * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
      * in the next list request. Each subsequent list request will have its own
      * [next_page_token] to continue paging through the results.
      * </pre>
@@ -2766,7 +2800,7 @@ public final class CertificateServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number
        * of results is greater than the specified [ListCertificatesRequest.page_size], use
-       * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
        * [next_page_token] to continue paging through the results.
        * </pre>
@@ -2789,7 +2823,7 @@ public final class CertificateServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number
        * of results is greater than the specified [ListCertificatesRequest.page_size], use
-       * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
        * [next_page_token] to continue paging through the results.
        * </pre>
@@ -2813,7 +2847,7 @@ public final class CertificateServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number
        * of results is greater than the specified [ListCertificatesRequest.page_size], use
-       * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
        * [next_page_token] to continue paging through the results.
        * </pre>
@@ -2834,7 +2868,7 @@ public final class CertificateServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number
        * of results is greater than the specified [ListCertificatesRequest.page_size], use
-       * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
        * [next_page_token] to continue paging through the results.
        * </pre>
@@ -2851,7 +2885,7 @@ public final class CertificateServiceOuterClass {
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number
        * of results is greater than the specified [ListCertificatesRequest.page_size], use
-       * the [next_page_token] as the value for the [ListCertificatesRequest.page_token] query parameter
+       * the `next_page_token` as the value for the [ListCertificatesRequest.page_token] query parameter
        * in the next list request. Each subsequent list request will have its own
        * [next_page_token] to continue paging through the results.
        * </pre>
@@ -2947,6 +2981,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -2955,6 +2990,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -2982,7 +3018,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2990,7 +3026,7 @@ public final class CertificateServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3005,7 +3041,7 @@ public final class CertificateServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3014,7 +3050,7 @@ public final class CertificateServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3025,7 +3061,7 @@ public final class CertificateServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3274,6 +3310,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -3293,6 +3330,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -3381,7 +3419,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3401,7 +3439,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3412,7 +3450,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3428,7 +3466,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4105,6 +4143,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4124,6 +4163,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4144,6 +4184,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4161,6 +4202,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4174,6 +4216,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4307,7 +4350,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4327,7 +4370,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4338,7 +4381,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4354,7 +4397,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4378,7 +4421,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4401,7 +4444,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4417,7 +4460,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5422,7 +5465,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5430,7 +5473,7 @@ public final class CertificateServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5445,7 +5488,7 @@ public final class CertificateServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5454,7 +5497,7 @@ public final class CertificateServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5465,7 +5508,7 @@ public final class CertificateServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5476,7 +5519,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -5484,7 +5527,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getCertificate();
     /**
      * <pre>
-     * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -5494,7 +5537,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -5502,7 +5545,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getChain();
     /**
      * <pre>
-     * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -5512,7 +5555,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded private key content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -5520,7 +5563,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getPrivateKey();
     /**
      * <pre>
-     * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded private key content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -5869,7 +5912,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5889,7 +5932,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5900,7 +5943,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5916,7 +5959,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * New labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5937,7 +5980,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object certificate_;
     /**
      * <pre>
-     * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -5956,7 +5999,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -5979,7 +6022,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object chain_;
     /**
      * <pre>
-     * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -5998,7 +6041,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -6021,7 +6064,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object privateKey_;
     /**
      * <pre>
-     * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded private key content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -6040,7 +6083,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+     * New PEM-encoded private key content for the certificate. Used only for imported certificates.
      * </pre>
      *
      * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -6983,7 +7026,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7003,7 +7046,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7014,7 +7057,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7030,7 +7073,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7054,7 +7097,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7077,7 +7120,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7093,7 +7136,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * New labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -7109,7 +7152,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object certificate_ = "";
       /**
        * <pre>
-       * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -7128,7 +7171,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -7148,7 +7191,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -7165,7 +7208,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -7178,7 +7221,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string certificate = 6 [(.yandex.cloud.length) = "&lt;=32768"];</code>
@@ -7198,7 +7241,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object chain_ = "";
       /**
        * <pre>
-       * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -7217,7 +7260,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -7237,7 +7280,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -7254,7 +7297,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -7267,7 +7310,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded certificate chain content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded certificate chain content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string chain = 7 [(.yandex.cloud.length) = "&lt;=2097152"];</code>
@@ -7287,7 +7330,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object privateKey_ = "";
       /**
        * <pre>
-       * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded private key content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -7306,7 +7349,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded private key content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -7326,7 +7369,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded private key content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -7343,7 +7386,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded private key content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -7356,7 +7399,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * New PEM-encoded private key content for the certificate. Used only for IMPORTED certificates.
+       * New PEM-encoded private key content for the certificate. Used only for imported certificates.
        * </pre>
        *
        * <code>string private_key = 8 [(.yandex.cloud.length) = "&lt;=524288"];</code>
@@ -9243,7 +9286,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9251,7 +9294,7 @@ public final class CertificateServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9266,7 +9309,7 @@ public final class CertificateServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9275,7 +9318,7 @@ public final class CertificateServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9286,7 +9329,7 @@ public final class CertificateServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9639,7 +9682,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9659,7 +9702,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9670,7 +9713,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -9686,7 +9729,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+     * Labels for the certificate as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10508,7 +10551,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10528,7 +10571,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10539,7 +10582,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10555,7 +10598,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10579,7 +10622,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10602,7 +10645,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10618,7 +10661,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Labels for the certificate as `key:value` pairs. Maximum 64 per certificate.
+       * Labels for the certificate as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -10884,7 +10927,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the certificate being requested.
+     * ID of the certificate that is being requested.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -10892,7 +10935,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getCertificateId();
     /**
      * <pre>
-     * ID of the certificate being requested.
+     * ID of the certificate that is being requested.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -10982,7 +11025,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object certificateId_;
     /**
      * <pre>
-     * ID of the certificate being requested.
+     * ID of the certificate that is being requested.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -11001,7 +11044,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the certificate being requested.
+     * ID of the certificate that is being requested.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -11326,7 +11369,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object certificateId_ = "";
       /**
        * <pre>
-       * ID of the certificate being requested.
+       * ID of the certificate that is being requested.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -11345,7 +11388,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate being requested.
+       * ID of the certificate that is being requested.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -11365,7 +11408,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate being requested.
+       * ID of the certificate that is being requested.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -11382,7 +11425,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate being requested.
+       * ID of the certificate that is being requested.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -11395,7 +11438,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate being requested.
+       * ID of the certificate that is being requested.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -11470,7 +11513,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the certificate to get operations for.
+     * ID of the certificate to list operations for.
      * To get the certificate ID, use a [CertificateService.List] request.
      * </pre>
      *
@@ -11479,7 +11522,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getCertificateId();
     /**
      * <pre>
-     * ID of the certificate to get operations for.
+     * ID of the certificate to list operations for.
      * To get the certificate ID, use a [CertificateService.List] request.
      * </pre>
      *
@@ -11491,7 +11534,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than [page_size], the service returns a [ListCertificateOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListCertificateOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * Default value: 100.
      * </pre>
@@ -11502,7 +11545,7 @@ public final class CertificateServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11511,7 +11554,7 @@ public final class CertificateServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11615,7 +11658,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object certificateId_;
     /**
      * <pre>
-     * ID of the certificate to get operations for.
+     * ID of the certificate to list operations for.
      * To get the certificate ID, use a [CertificateService.List] request.
      * </pre>
      *
@@ -11635,7 +11678,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the certificate to get operations for.
+     * ID of the certificate to list operations for.
      * To get the certificate ID, use a [CertificateService.List] request.
      * </pre>
      *
@@ -11660,7 +11703,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than [page_size], the service returns a [ListCertificateOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListCertificateOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * Default value: 100.
      * </pre>
@@ -11675,7 +11718,7 @@ public final class CertificateServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -11695,7 +11738,7 @@ public final class CertificateServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -12056,7 +12099,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object certificateId_ = "";
       /**
        * <pre>
-       * ID of the certificate to get operations for.
+       * ID of the certificate to list operations for.
        * To get the certificate ID, use a [CertificateService.List] request.
        * </pre>
        *
@@ -12076,7 +12119,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate to get operations for.
+       * ID of the certificate to list operations for.
        * To get the certificate ID, use a [CertificateService.List] request.
        * </pre>
        *
@@ -12097,7 +12140,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate to get operations for.
+       * ID of the certificate to list operations for.
        * To get the certificate ID, use a [CertificateService.List] request.
        * </pre>
        *
@@ -12115,7 +12158,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate to get operations for.
+       * ID of the certificate to list operations for.
        * To get the certificate ID, use a [CertificateService.List] request.
        * </pre>
        *
@@ -12129,7 +12172,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate to get operations for.
+       * ID of the certificate to list operations for.
        * To get the certificate ID, use a [CertificateService.List] request.
        * </pre>
        *
@@ -12151,7 +12194,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificateOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificateOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -12164,7 +12207,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificateOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificateOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -12180,7 +12223,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than [page_size], the service returns a [ListCertificateOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListCertificateOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * Default value: 100.
        * </pre>
@@ -12197,7 +12240,7 @@ public final class CertificateServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12217,7 +12260,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12238,7 +12281,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12256,7 +12299,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12270,7 +12313,7 @@ public final class CertificateServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListCertificateOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -12391,7 +12434,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -12402,7 +12445,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -12564,7 +12607,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -12586,7 +12629,7 @@ public final class CertificateServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+     * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
      * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
      * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
@@ -13285,7 +13328,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -13307,7 +13350,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -13330,7 +13373,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -13350,7 +13393,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
@@ -13366,7 +13409,7 @@ public final class CertificateServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListCertificateOperationsRequest.page_size], use the [next_page_token] as the value
+       * is larger than [ListCertificateOperationsRequest.page_size], use the `next_page_token` as the value
        * for the [ListCertificateOperationsRequest.page_token] query parameter in the next list request.
        * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>

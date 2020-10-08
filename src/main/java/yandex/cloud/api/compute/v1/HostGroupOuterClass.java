@@ -25,7 +25,7 @@ public final class HostGroupOuterClass {
     MAINTENANCE_POLICY_UNSPECIFIED(0),
     /**
      * <pre>
-     * Restart instances on the same host after maintenance event
+     * Restart instances on the same host after maintenance event.
      * </pre>
      *
      * <code>RESTART = 1;</code>
@@ -33,7 +33,7 @@ public final class HostGroupOuterClass {
     RESTART(1),
     /**
      * <pre>
-     * Migrate instances to another host before maintenance event
+     * Migrate instances to another host before maintenance event.
      * </pre>
      *
      * <code>MIGRATE = 2;</code>
@@ -48,7 +48,7 @@ public final class HostGroupOuterClass {
     public static final int MAINTENANCE_POLICY_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * Restart instances on the same host after maintenance event
+     * Restart instances on the same host after maintenance event.
      * </pre>
      *
      * <code>RESTART = 1;</code>
@@ -56,7 +56,7 @@ public final class HostGroupOuterClass {
     public static final int RESTART_VALUE = 1;
     /**
      * <pre>
-     * Migrate instances to another host before maintenance event
+     * Migrate instances to another host before maintenance event.
      * </pre>
      *
      * <code>MIGRATE = 2;</code>
@@ -143,7 +143,7 @@ public final class HostGroupOuterClass {
 
     /**
      * <pre>
-     * ID of the group
+     * ID of the group.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -151,7 +151,7 @@ public final class HostGroupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the group
+     * ID of the group.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -294,7 +294,7 @@ public final class HostGroupOuterClass {
 
     /**
      * <pre>
-     * Availability zone where all dedicated hosts are allocated
+     * Availability zone where all dedicated hosts are allocated.
      * </pre>
      *
      * <code>string zone_id = 7;</code>
@@ -302,7 +302,7 @@ public final class HostGroupOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * Availability zone where all dedicated hosts are allocated
+     * Availability zone where all dedicated hosts are allocated.
      * </pre>
      *
      * <code>string zone_id = 7;</code>
@@ -312,7 +312,7 @@ public final class HostGroupOuterClass {
 
     /**
      * <pre>
-     * Status of the group
+     * Status of the group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -320,7 +320,7 @@ public final class HostGroupOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Status of the group
+     * Status of the group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -329,7 +329,7 @@ public final class HostGroupOuterClass {
 
     /**
      * <pre>
-     * ID  of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 9;</code>
@@ -337,7 +337,7 @@ public final class HostGroupOuterClass {
     java.lang.String getTypeId();
     /**
      * <pre>
-     * ID  of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 9;</code>
@@ -347,7 +347,7 @@ public final class HostGroupOuterClass {
 
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -355,7 +355,7 @@ public final class HostGroupOuterClass {
     int getMaintenancePolicyValue();
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -699,7 +699,7 @@ public final class HostGroupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the group
+     * ID of the group.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -718,7 +718,7 @@ public final class HostGroupOuterClass {
     }
     /**
      * <pre>
-     * ID of the group
+     * ID of the group.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -992,7 +992,7 @@ public final class HostGroupOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * Availability zone where all dedicated hosts are allocated
+     * Availability zone where all dedicated hosts are allocated.
      * </pre>
      *
      * <code>string zone_id = 7;</code>
@@ -1011,7 +1011,7 @@ public final class HostGroupOuterClass {
     }
     /**
      * <pre>
-     * Availability zone where all dedicated hosts are allocated
+     * Availability zone where all dedicated hosts are allocated.
      * </pre>
      *
      * <code>string zone_id = 7;</code>
@@ -1034,7 +1034,7 @@ public final class HostGroupOuterClass {
     private int status_;
     /**
      * <pre>
-     * Status of the group
+     * Status of the group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -1044,7 +1044,7 @@ public final class HostGroupOuterClass {
     }
     /**
      * <pre>
-     * Status of the group
+     * Status of the group.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -1059,7 +1059,7 @@ public final class HostGroupOuterClass {
     private volatile java.lang.Object typeId_;
     /**
      * <pre>
-     * ID  of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 9;</code>
@@ -1078,7 +1078,7 @@ public final class HostGroupOuterClass {
     }
     /**
      * <pre>
-     * ID  of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 9;</code>
@@ -1101,7 +1101,7 @@ public final class HostGroupOuterClass {
     private int maintenancePolicy_;
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -1111,7 +1111,7 @@ public final class HostGroupOuterClass {
     }
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -1695,7 +1695,7 @@ public final class HostGroupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the group
+       * ID of the group.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1714,7 +1714,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the group
+       * ID of the group.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1734,7 +1734,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the group
+       * ID of the group.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1751,7 +1751,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the group
+       * ID of the group.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1764,7 +1764,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the group
+       * ID of the group.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2355,7 +2355,7 @@ public final class HostGroupOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * Availability zone where all dedicated hosts are allocated
+       * Availability zone where all dedicated hosts are allocated.
        * </pre>
        *
        * <code>string zone_id = 7;</code>
@@ -2374,7 +2374,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts are allocated
+       * Availability zone where all dedicated hosts are allocated.
        * </pre>
        *
        * <code>string zone_id = 7;</code>
@@ -2394,7 +2394,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts are allocated
+       * Availability zone where all dedicated hosts are allocated.
        * </pre>
        *
        * <code>string zone_id = 7;</code>
@@ -2411,7 +2411,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts are allocated
+       * Availability zone where all dedicated hosts are allocated.
        * </pre>
        *
        * <code>string zone_id = 7;</code>
@@ -2424,7 +2424,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts are allocated
+       * Availability zone where all dedicated hosts are allocated.
        * </pre>
        *
        * <code>string zone_id = 7;</code>
@@ -2444,7 +2444,7 @@ public final class HostGroupOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Status of the group
+       * Status of the group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -2454,7 +2454,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Status of the group
+       * Status of the group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -2466,7 +2466,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Status of the group
+       * Status of the group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -2478,7 +2478,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Status of the group
+       * Status of the group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -2494,7 +2494,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Status of the group
+       * Status of the group.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.HostGroup.Status status = 8;</code>
@@ -2509,7 +2509,7 @@ public final class HostGroupOuterClass {
       private java.lang.Object typeId_ = "";
       /**
        * <pre>
-       * ID  of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 9;</code>
@@ -2528,7 +2528,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID  of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 9;</code>
@@ -2548,7 +2548,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID  of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 9;</code>
@@ -2565,7 +2565,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID  of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 9;</code>
@@ -2578,7 +2578,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * ID  of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 9;</code>
@@ -2598,7 +2598,7 @@ public final class HostGroupOuterClass {
       private int maintenancePolicy_ = 0;
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -2608,7 +2608,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -2620,7 +2620,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -2632,7 +2632,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
@@ -2648,7 +2648,7 @@ public final class HostGroupOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>

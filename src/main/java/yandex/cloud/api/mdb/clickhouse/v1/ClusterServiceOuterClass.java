@@ -61235,6 +61235,74 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.clickhouse.v1.CloudStorage cloud_storage = 6;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder();
+
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    boolean hasSqlDatabaseManagement();
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    com.google.protobuf.BoolValue getSqlDatabaseManagement();
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSqlDatabaseManagementOrBuilder();
+
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    boolean hasSqlUserManagement();
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    com.google.protobuf.BoolValue getSqlUserManagement();
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSqlUserManagementOrBuilder();
+
+    /**
+     * <pre>
+     * Password for user 'admin' that has SQL user management access.
+     * </pre>
+     *
+     * <code>string admin_password = 9;</code>
+     */
+    java.lang.String getAdminPassword();
+    /**
+     * <pre>
+     * Password for user 'admin' that has SQL user management access.
+     * </pre>
+     *
+     * <code>string admin_password = 9;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdminPasswordBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ConfigSpec}
@@ -61250,6 +61318,7 @@ public final class ClusterServiceOuterClass {
     }
     private ConfigSpec() {
       version_ = "";
+      adminPassword_ = "";
     }
 
     @java.lang.Override
@@ -61345,6 +61414,38 @@ public final class ClusterServiceOuterClass {
                 cloudStorage_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (sqlDatabaseManagement_ != null) {
+                subBuilder = sqlDatabaseManagement_.toBuilder();
+              }
+              sqlDatabaseManagement_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sqlDatabaseManagement_);
+                sqlDatabaseManagement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (sqlUserManagement_ != null) {
+                subBuilder = sqlUserManagement_.toBuilder();
+              }
+              sqlUserManagement_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sqlUserManagement_);
+                sqlUserManagement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              adminPassword_ = s;
               break;
             }
             default: {
@@ -63180,6 +63281,114 @@ public final class ClusterServiceOuterClass {
       return getCloudStorage();
     }
 
+    public static final int SQL_DATABASE_MANAGEMENT_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue sqlDatabaseManagement_;
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    public boolean hasSqlDatabaseManagement() {
+      return sqlDatabaseManagement_ != null;
+    }
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    public com.google.protobuf.BoolValue getSqlDatabaseManagement() {
+      return sqlDatabaseManagement_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sqlDatabaseManagement_;
+    }
+    /**
+     * <pre>
+     * Whether database management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getSqlDatabaseManagementOrBuilder() {
+      return getSqlDatabaseManagement();
+    }
+
+    public static final int SQL_USER_MANAGEMENT_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue sqlUserManagement_;
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    public boolean hasSqlUserManagement() {
+      return sqlUserManagement_ != null;
+    }
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    public com.google.protobuf.BoolValue getSqlUserManagement() {
+      return sqlUserManagement_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sqlUserManagement_;
+    }
+    /**
+     * <pre>
+     * Whether user management through SQL commands is enabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getSqlUserManagementOrBuilder() {
+      return getSqlUserManagement();
+    }
+
+    public static final int ADMIN_PASSWORD_FIELD_NUMBER = 9;
+    private volatile java.lang.Object adminPassword_;
+    /**
+     * <pre>
+     * Password for user 'admin' that has SQL user management access.
+     * </pre>
+     *
+     * <code>string admin_password = 9;</code>
+     */
+    public java.lang.String getAdminPassword() {
+      java.lang.Object ref = adminPassword_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adminPassword_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Password for user 'admin' that has SQL user management access.
+     * </pre>
+     *
+     * <code>string admin_password = 9;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdminPasswordBytes() {
+      java.lang.Object ref = adminPassword_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adminPassword_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -63212,6 +63421,15 @@ public final class ClusterServiceOuterClass {
       if (cloudStorage_ != null) {
         output.writeMessage(6, getCloudStorage());
       }
+      if (sqlDatabaseManagement_ != null) {
+        output.writeMessage(7, getSqlDatabaseManagement());
+      }
+      if (sqlUserManagement_ != null) {
+        output.writeMessage(8, getSqlUserManagement());
+      }
+      if (!getAdminPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, adminPassword_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -63243,6 +63461,17 @@ public final class ClusterServiceOuterClass {
       if (cloudStorage_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getCloudStorage());
+      }
+      if (sqlDatabaseManagement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getSqlDatabaseManagement());
+      }
+      if (sqlUserManagement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getSqlUserManagement());
+      }
+      if (!getAdminPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, adminPassword_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -63287,6 +63516,18 @@ public final class ClusterServiceOuterClass {
         result = result && getCloudStorage()
             .equals(other.getCloudStorage());
       }
+      result = result && (hasSqlDatabaseManagement() == other.hasSqlDatabaseManagement());
+      if (hasSqlDatabaseManagement()) {
+        result = result && getSqlDatabaseManagement()
+            .equals(other.getSqlDatabaseManagement());
+      }
+      result = result && (hasSqlUserManagement() == other.hasSqlUserManagement());
+      if (hasSqlUserManagement()) {
+        result = result && getSqlUserManagement()
+            .equals(other.getSqlUserManagement());
+      }
+      result = result && getAdminPassword()
+          .equals(other.getAdminPassword());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -63320,6 +63561,16 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + CLOUD_STORAGE_FIELD_NUMBER;
         hash = (53 * hash) + getCloudStorage().hashCode();
       }
+      if (hasSqlDatabaseManagement()) {
+        hash = (37 * hash) + SQL_DATABASE_MANAGEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getSqlDatabaseManagement().hashCode();
+      }
+      if (hasSqlUserManagement()) {
+        hash = (37 * hash) + SQL_USER_MANAGEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getSqlUserManagement().hashCode();
+      }
+      hash = (37 * hash) + ADMIN_PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getAdminPassword().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -63485,6 +63736,20 @@ public final class ClusterServiceOuterClass {
           cloudStorage_ = null;
           cloudStorageBuilder_ = null;
         }
+        if (sqlDatabaseManagementBuilder_ == null) {
+          sqlDatabaseManagement_ = null;
+        } else {
+          sqlDatabaseManagement_ = null;
+          sqlDatabaseManagementBuilder_ = null;
+        }
+        if (sqlUserManagementBuilder_ == null) {
+          sqlUserManagement_ = null;
+        } else {
+          sqlUserManagement_ = null;
+          sqlUserManagementBuilder_ = null;
+        }
+        adminPassword_ = "";
+
         return this;
       }
 
@@ -63537,6 +63802,17 @@ public final class ClusterServiceOuterClass {
         } else {
           result.cloudStorage_ = cloudStorageBuilder_.build();
         }
+        if (sqlDatabaseManagementBuilder_ == null) {
+          result.sqlDatabaseManagement_ = sqlDatabaseManagement_;
+        } else {
+          result.sqlDatabaseManagement_ = sqlDatabaseManagementBuilder_.build();
+        }
+        if (sqlUserManagementBuilder_ == null) {
+          result.sqlUserManagement_ = sqlUserManagement_;
+        } else {
+          result.sqlUserManagement_ = sqlUserManagementBuilder_.build();
+        }
+        result.adminPassword_ = adminPassword_;
         onBuilt();
         return result;
       }
@@ -63603,6 +63879,16 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasCloudStorage()) {
           mergeCloudStorage(other.getCloudStorage());
+        }
+        if (other.hasSqlDatabaseManagement()) {
+          mergeSqlDatabaseManagement(other.getSqlDatabaseManagement());
+        }
+        if (other.hasSqlUserManagement()) {
+          mergeSqlUserManagement(other.getSqlUserManagement());
+        }
+        if (!other.getAdminPassword().isEmpty()) {
+          adminPassword_ = other.adminPassword_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -64458,6 +64744,401 @@ public final class ClusterServiceOuterClass {
           cloudStorage_ = null;
         }
         return cloudStorageBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue sqlDatabaseManagement_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sqlDatabaseManagementBuilder_;
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public boolean hasSqlDatabaseManagement() {
+        return sqlDatabaseManagementBuilder_ != null || sqlDatabaseManagement_ != null;
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public com.google.protobuf.BoolValue getSqlDatabaseManagement() {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          return sqlDatabaseManagement_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sqlDatabaseManagement_;
+        } else {
+          return sqlDatabaseManagementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public Builder setSqlDatabaseManagement(com.google.protobuf.BoolValue value) {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlDatabaseManagement_ = value;
+          onChanged();
+        } else {
+          sqlDatabaseManagementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public Builder setSqlDatabaseManagement(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          sqlDatabaseManagement_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlDatabaseManagementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public Builder mergeSqlDatabaseManagement(com.google.protobuf.BoolValue value) {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          if (sqlDatabaseManagement_ != null) {
+            sqlDatabaseManagement_ =
+              com.google.protobuf.BoolValue.newBuilder(sqlDatabaseManagement_).mergeFrom(value).buildPartial();
+          } else {
+            sqlDatabaseManagement_ = value;
+          }
+          onChanged();
+        } else {
+          sqlDatabaseManagementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public Builder clearSqlDatabaseManagement() {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          sqlDatabaseManagement_ = null;
+          onChanged();
+        } else {
+          sqlDatabaseManagement_ = null;
+          sqlDatabaseManagementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSqlDatabaseManagementBuilder() {
+        
+        onChanged();
+        return getSqlDatabaseManagementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSqlDatabaseManagementOrBuilder() {
+        if (sqlDatabaseManagementBuilder_ != null) {
+          return sqlDatabaseManagementBuilder_.getMessageOrBuilder();
+        } else {
+          return sqlDatabaseManagement_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : sqlDatabaseManagement_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether database management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_database_management = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSqlDatabaseManagementFieldBuilder() {
+        if (sqlDatabaseManagementBuilder_ == null) {
+          sqlDatabaseManagementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSqlDatabaseManagement(),
+                  getParentForChildren(),
+                  isClean());
+          sqlDatabaseManagement_ = null;
+        }
+        return sqlDatabaseManagementBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue sqlUserManagement_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sqlUserManagementBuilder_;
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public boolean hasSqlUserManagement() {
+        return sqlUserManagementBuilder_ != null || sqlUserManagement_ != null;
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public com.google.protobuf.BoolValue getSqlUserManagement() {
+        if (sqlUserManagementBuilder_ == null) {
+          return sqlUserManagement_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sqlUserManagement_;
+        } else {
+          return sqlUserManagementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public Builder setSqlUserManagement(com.google.protobuf.BoolValue value) {
+        if (sqlUserManagementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sqlUserManagement_ = value;
+          onChanged();
+        } else {
+          sqlUserManagementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public Builder setSqlUserManagement(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (sqlUserManagementBuilder_ == null) {
+          sqlUserManagement_ = builderForValue.build();
+          onChanged();
+        } else {
+          sqlUserManagementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public Builder mergeSqlUserManagement(com.google.protobuf.BoolValue value) {
+        if (sqlUserManagementBuilder_ == null) {
+          if (sqlUserManagement_ != null) {
+            sqlUserManagement_ =
+              com.google.protobuf.BoolValue.newBuilder(sqlUserManagement_).mergeFrom(value).buildPartial();
+          } else {
+            sqlUserManagement_ = value;
+          }
+          onChanged();
+        } else {
+          sqlUserManagementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public Builder clearSqlUserManagement() {
+        if (sqlUserManagementBuilder_ == null) {
+          sqlUserManagement_ = null;
+          onChanged();
+        } else {
+          sqlUserManagement_ = null;
+          sqlUserManagementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSqlUserManagementBuilder() {
+        
+        onChanged();
+        return getSqlUserManagementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSqlUserManagementOrBuilder() {
+        if (sqlUserManagementBuilder_ != null) {
+          return sqlUserManagementBuilder_.getMessageOrBuilder();
+        } else {
+          return sqlUserManagement_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : sqlUserManagement_;
+        }
+      }
+      /**
+       * <pre>
+       * Whether user management through SQL commands is enabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue sql_user_management = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSqlUserManagementFieldBuilder() {
+        if (sqlUserManagementBuilder_ == null) {
+          sqlUserManagementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSqlUserManagement(),
+                  getParentForChildren(),
+                  isClean());
+          sqlUserManagement_ = null;
+        }
+        return sqlUserManagementBuilder_;
+      }
+
+      private java.lang.Object adminPassword_ = "";
+      /**
+       * <pre>
+       * Password for user 'admin' that has SQL user management access.
+       * </pre>
+       *
+       * <code>string admin_password = 9;</code>
+       */
+      public java.lang.String getAdminPassword() {
+        java.lang.Object ref = adminPassword_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          adminPassword_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password for user 'admin' that has SQL user management access.
+       * </pre>
+       *
+       * <code>string admin_password = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdminPasswordBytes() {
+        java.lang.Object ref = adminPassword_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          adminPassword_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password for user 'admin' that has SQL user management access.
+       * </pre>
+       *
+       * <code>string admin_password = 9;</code>
+       */
+      public Builder setAdminPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        adminPassword_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password for user 'admin' that has SQL user management access.
+       * </pre>
+       *
+       * <code>string admin_password = 9;</code>
+       */
+      public Builder clearAdminPassword() {
+        
+        adminPassword_ = getDefaultInstance().getAdminPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password for user 'admin' that has SQL user management access.
+       * </pre>
+       *
+       * <code>string admin_password = 9;</code>
+       */
+      public Builder setAdminPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        adminPassword_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -66966,7 +67647,7 @@ public final class ClusterServiceOuterClass {
       ".yandex.cloud.mdb.clickhouse.v1.Host.Typ" +
       "eB\004\350\3071\001\022\033\n\tsubnet_id\030\003 \001(\tB\010\212\3101\004<=50\022\030\n\020" +
       "assign_public_ip\030\004 \001(\010\022.\n\nshard_name\030\005 \001" +
-      "(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\304\004\n\nConfi" +
+      "(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\322\005\n\nConfi" +
       "gSpec\022\017\n\007version\030\003 \001(\t\022I\n\nclickhouse\030\001 \001" +
       "(\01325.yandex.cloud.mdb.clickhouse.v1.Conf" +
       "igSpec.Clickhouse\022G\n\tzookeeper\030\002 \001(\01324.y" +
@@ -66975,187 +67656,191 @@ public final class ClusterServiceOuterClass {
       "\026.google.type.TimeOfDay\0226\n\006access\030\005 \001(\0132" +
       "&.yandex.cloud.mdb.clickhouse.v1.Access\022" +
       "C\n\rcloud_storage\030\006 \001(\0132,.yandex.cloud.md" +
-      "b.clickhouse.v1.CloudStorage\032\223\001\n\nClickho" +
-      "use\022G\n\006config\030\001 \001(\01327.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig\022<\n\t" +
-      "resources\030\002 \001(\0132).yandex.cloud.mdb.click" +
-      "house.v1.Resources\032I\n\tZookeeper\022<\n\tresou" +
-      "rces\030\001 \001(\0132).yandex.cloud.mdb.clickhouse" +
-      ".v1.Resources\"\244\002\n\017ShardConfigSpec\022N\n\ncli" +
-      "ckhouse\030\001 \001(\0132:.yandex.cloud.mdb.clickho" +
-      "use.v1.ShardConfigSpec.Clickhouse\032\300\001\n\nCl" +
-      "ickhouse\022G\n\006config\030\001 \001(\01327.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb." +
-      "clickhouse.v1.Resources\022+\n\006weight\030\003 \001(\0132" +
-      "\033.google.protobuf.Int64Value2\2273\n\016Cluster" +
-      "Service\022\227\001\n\003Get\0221.yandex.cloud.mdb.click" +
-      "house.v1.GetClusterRequest\032\'.yandex.clou" +
-      "d.mdb.clickhouse.v1.Cluster\"4\202\323\344\223\002.\022,/ma" +
-      "naged-clickhouse/v1/clusters/{cluster_id" +
-      "}\022\232\001\n\004List\0223.yandex.cloud.mdb.clickhouse" +
-      ".v1.ListClustersRequest\0324.yandex.cloud.m" +
-      "db.clickhouse.v1.ListClustersResponse\"\'\202" +
-      "\323\344\223\002!\022\037/managed-clickhouse/v1/clusters\022\261" +
-      "\001\n\006Create\0224.yandex.cloud.mdb.clickhouse." +
-      "v1.CreateClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"N\202\323\344\223\002$\"\037/managed-cli" +
-      "ckhouse/v1/clusters:\001*\262\322* \n\025CreateCluste" +
-      "rMetadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.c" +
-      "loud.mdb.clickhouse.v1.UpdateClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"[" +
-      "\202\323\344\223\00212,/managed-clickhouse/v1/clusters/" +
-      "{cluster_id}:\001*\262\322* \n\025UpdateClusterMetada" +
-      "ta\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.md" +
-      "b.clickhouse.v1.DeleteClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"f\202\323\344\223\002.*" +
-      ",/managed-clickhouse/v1/clusters/{cluste" +
-      "r_id}\262\322*.\n\025DeleteClusterMetadata\022\025google" +
-      ".protobuf.Empty\022\276\001\n\005Start\0223.yandex.cloud" +
-      ".mdb.clickhouse.v1.StartClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"]\202\323\344\223\002" +
-      "4\"2/managed-clickhouse/v1/clusters/{clus" +
-      "ter_id}:start\262\322*\037\n\024StartClusterMetadata\022" +
-      "\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.StopClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"[\202\323\344\223\0023\"1/manag" +
-      "ed-clickhouse/v1/clusters/{cluster_id}:s" +
-      "top\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\275\001" +
-      "\n\004Move\0222.yandex.cloud.mdb.clickhouse.v1." +
-      "MoveClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\0026\"1/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}:move:\001*\262\322*\036\n" +
-      "\023MoveClusterMetadata\022\007Cluster\022\335\001\n\014AddZoo" +
-      "keeper\022:.yandex.cloud.mdb.clickhouse.v1." +
-      "AddClusterZookeeperRequest\032!.yandex.clou" +
-      "d.operation.Operation\"n\202\323\344\223\002>\"9/managed-" +
-      "clickhouse/v1/clusters/{cluster_id}:addZ" +
-      "ookeeper:\001*\262\322*&\n\033AddClusterZookeeperMeta" +
-      "data\022\007Cluster\022\302\001\n\006Backup\0224.yandex.cloud." +
-      "mdb.clickhouse.v1.BackupClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"_\202\323\344\223\002" +
-      "5\"3/managed-clickhouse/v1/clusters/{clus" +
-      "ter_id}:backup\262\322* \n\025BackupClusterMetadat" +
-      "a\022\007Cluster\022\274\001\n\007Restore\0225.yandex.cloud.md" +
-      "b.clickhouse.v1.RestoreClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"W\202\323\344\223\002," +
-      "\"\'/managed-clickhouse/v1/clusters:restor" +
-      "e:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluste" +
-      "r\022\363\001\n\025RescheduleMaintenance\022<.yandex.clo" +
-      "ud.mdb.clickhouse.v1.RescheduleMaintenan" +
-      "ceRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"y\202\323\344\223\002G\"B/managed-clickhouse/v1/clu" +
-      "sters/{cluster_id}:rescheduleMaintenance" +
-      ":\001*\262\322*(\n\035RescheduleMaintenanceMetadata\022\007" +
-      "Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb." +
-      "clickhouse.v1.ListClusterLogsRequest\0327.y" +
-      "andex.cloud.mdb.clickhouse.v1.ListCluste" +
-      "rLogsResponse\"9\202\323\344\223\0023\0221/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}:logs\022\273\001\n\nStr" +
-      "eamLogs\0228.yandex.cloud.mdb.clickhouse.v1" +
-      ".StreamClusterLogsRequest\032/.yandex.cloud" +
-      ".mdb.clickhouse.v1.StreamLogRecord\"@\202\323\344\223" +
-      "\002:\0228/managed-clickhouse/v1/clusters/{clu" +
-      "ster_id}:stream_logs0\001\022\316\001\n\016ListOperation" +
-      "s\022<.yandex.cloud.mdb.clickhouse.v1.ListC" +
-      "lusterOperationsRequest\032=.yandex.cloud.m" +
+      "b.clickhouse.v1.CloudStorage\022;\n\027sql_data" +
+      "base_management\030\007 \001(\0132\032.google.protobuf." +
+      "BoolValue\0227\n\023sql_user_management\030\010 \001(\0132\032" +
+      ".google.protobuf.BoolValue\022\026\n\016admin_pass" +
+      "word\030\t \001(\t\032\223\001\n\nClickhouse\022G\n\006config\030\001 \001(" +
+      "\01327.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig\022<\n\tresources\030\002 \001(\0132)." +
+      "yandex.cloud.mdb.clickhouse.v1.Resources" +
+      "\032I\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yande" +
+      "x.cloud.mdb.clickhouse.v1.Resources\"\244\002\n\017" +
+      "ShardConfigSpec\022N\n\nclickhouse\030\001 \001(\0132:.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.ShardConfig" +
+      "Spec.Clickhouse\032\300\001\n\nClickhouse\022G\n\006config" +
+      "\030\001 \001(\01327.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig\022<\n\tresources\030\002 \001" +
+      "(\0132).yandex.cloud.mdb.clickhouse.v1.Reso" +
+      "urces\022+\n\006weight\030\003 \001(\0132\033.google.protobuf." +
+      "Int64Value2\2273\n\016ClusterService\022\227\001\n\003Get\0221." +
+      "yandex.cloud.mdb.clickhouse.v1.GetCluste" +
+      "rRequest\032\'.yandex.cloud.mdb.clickhouse.v" +
+      "1.Cluster\"4\202\323\344\223\002.\022,/managed-clickhouse/v" +
+      "1/clusters/{cluster_id}\022\232\001\n\004List\0223.yande" +
+      "x.cloud.mdb.clickhouse.v1.ListClustersRe" +
+      "quest\0324.yandex.cloud.mdb.clickhouse.v1.L" +
+      "istClustersResponse\"\'\202\323\344\223\002!\022\037/managed-cl" +
+      "ickhouse/v1/clusters\022\261\001\n\006Create\0224.yandex" +
+      ".cloud.mdb.clickhouse.v1.CreateClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"N\202\323\344\223\002$\"\037/managed-clickhouse/v1/cluster" +
+      "s:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster" +
+      "\022\276\001\n\006Update\0224.yandex.cloud.mdb.clickhous" +
+      "e.v1.UpdateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"[\202\323\344\223\00212,/managed-c" +
+      "lickhouse/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\311\001\n\006De" +
+      "lete\0224.yandex.cloud.mdb.clickhouse.v1.De" +
+      "leteClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"f\202\323\344\223\002.*,/managed-clickhou" +
+      "se/v1/clusters/{cluster_id}\262\322*.\n\025DeleteC" +
+      "lusterMetadata\022\025google.protobuf.Empty\022\276\001" +
+      "\n\005Start\0223.yandex.cloud.mdb.clickhouse.v1" +
+      ".StartClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"]\202\323\344\223\0024\"2/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}:start\262\322*\037\n" +
+      "\024StartClusterMetadata\022\007Cluster\022\272\001\n\004Stop\022" +
+      "2.yandex.cloud.mdb.clickhouse.v1.StopClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"[\202\323\344\223\0023\"1/managed-clickhouse/v1/c" +
+      "lusters/{cluster_id}:stop\262\322*\036\n\023StopClust" +
+      "erMetadata\022\007Cluster\022\275\001\n\004Move\0222.yandex.cl" +
+      "oud.mdb.clickhouse.v1.MoveClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
+      "\223\0026\"1/managed-clickhouse/v1/clusters/{cl" +
+      "uster_id}:move:\001*\262\322*\036\n\023MoveClusterMetada" +
+      "ta\022\007Cluster\022\335\001\n\014AddZookeeper\022:.yandex.cl" +
+      "oud.mdb.clickhouse.v1.AddClusterZookeepe" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"n\202\323\344\223\002>\"9/managed-clickhouse/v1/clus" +
+      "ters/{cluster_id}:addZookeeper:\001*\262\322*&\n\033A" +
+      "ddClusterZookeeperMetadata\022\007Cluster\022\302\001\n\006" +
+      "Backup\0224.yandex.cloud.mdb.clickhouse.v1." +
+      "BackupClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"_\202\323\344\223\0025\"3/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}:backup\262\322* " +
+      "\n\025BackupClusterMetadata\022\007Cluster\022\274\001\n\007Res" +
+      "tore\0225.yandex.cloud.mdb.clickhouse.v1.Re" +
+      "storeClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"W\202\323\344\223\002,\"\'/managed-clickho" +
+      "use/v1/clusters:restore:\001*\262\322*!\n\026RestoreC" +
+      "lusterMetadata\022\007Cluster\022\363\001\n\025RescheduleMa" +
+      "intenance\022<.yandex.cloud.mdb.clickhouse." +
+      "v1.RescheduleMaintenanceRequest\032!.yandex" +
+      ".cloud.operation.Operation\"y\202\323\344\223\002G\"B/man" +
+      "aged-clickhouse/v1/clusters/{cluster_id}" +
+      ":rescheduleMaintenance:\001*\262\322*(\n\035Reschedul" +
+      "eMaintenanceMetadata\022\007Cluster\022\266\001\n\010ListLo" +
+      "gs\0226.yandex.cloud.mdb.clickhouse.v1.List" +
+      "ClusterLogsRequest\0327.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.ListClusterLogsResponse\"9\202\323\344" +
+      "\223\0023\0221/managed-clickhouse/v1/clusters/{cl" +
+      "uster_id}:logs\022\273\001\n\nStreamLogs\0228.yandex.c" +
+      "loud.mdb.clickhouse.v1.StreamClusterLogs" +
+      "Request\032/.yandex.cloud.mdb.clickhouse.v1" +
+      ".StreamLogRecord\"@\202\323\344\223\002:\0228/managed-click" +
+      "house/v1/clusters/{cluster_id}:stream_lo" +
+      "gs0\001\022\316\001\n\016ListOperations\022<.yandex.cloud.m" +
       "db.clickhouse.v1.ListClusterOperationsRe" +
-      "sponse\"?\202\323\344\223\0029\0227/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}/operations\022\302\001\n\013List" +
-      "Backups\0229.yandex.cloud.mdb.clickhouse.v1" +
-      ".ListClusterBackupsRequest\032:.yandex.clou" +
-      "d.mdb.clickhouse.v1.ListClusterBackupsRe" +
-      "sponse\"<\202\323\344\223\0026\0224/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}/backups\022\272\001\n\tListHos" +
-      "ts\0227.yandex.cloud.mdb.clickhouse.v1.List" +
-      "ClusterHostsRequest\0328.yandex.cloud.mdb.c" +
-      "lickhouse.v1.ListClusterHostsResponse\":\202" +
-      "\323\344\223\0024\0222/managed-clickhouse/v1/clusters/{" +
-      "cluster_id}/hosts\022\344\001\n\010AddHosts\0226.yandex." +
-      "cloud.mdb.clickhouse.v1.AddClusterHostsR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"}\202\323\344\223\002C\">/managed-clickhouse/v1/cluste" +
-      "rs/{cluster_id}/hosts:batchCreate:\001*\262\322*0" +
-      "\n\027AddClusterHostsMetadata\022\025google.protob" +
-      "uf.Empty\022\356\001\n\013DeleteHosts\0229.yandex.cloud." +
-      "mdb.clickhouse.v1.DeleteClusterHostsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\200" +
-      "\001\202\323\344\223\002C\">/managed-clickhouse/v1/clusters" +
-      "/{cluster_id}/hosts:batchDelete:\001*\262\322*3\n\032" +
-      "DeleteClusterHostsMetadata\022\025google.proto" +
-      "buf.Empty\022\263\001\n\010GetShard\0226.yandex.cloud.md" +
-      "b.clickhouse.v1.GetClusterShardRequest\032%" +
-      ".yandex.cloud.mdb.clickhouse.v1.Shard\"H\202" +
-      "\323\344\223\002B\022@/managed-clickhouse/v1/clusters/{" +
-      "cluster_id}/shards/{shard_name}\022\276\001\n\nList" +
-      "Shards\0228.yandex.cloud.mdb.clickhouse.v1." +
-      "ListClusterShardsRequest\0329.yandex.cloud." +
-      "mdb.clickhouse.v1.ListClusterShardsRespo" +
-      "nse\";\202\323\344\223\0025\0223/managed-clickhouse/v1/clus" +
-      "ters/{cluster_id}/shards\022\311\001\n\010AddShard\0226." +
-      "yandex.cloud.mdb.clickhouse.v1.AddCluste" +
-      "rShardRequest\032!.yandex.cloud.operation.O" +
-      "peration\"b\202\323\344\223\0028\"3/managed-clickhouse/v1" +
-      "/clusters/{cluster_id}/shards:\001*\262\322* \n\027Ad" +
-      "dClusterShardMetadata\022\005Shard\022\337\001\n\013UpdateS" +
-      "hard\0229.yandex.cloud.mdb.clickhouse.v1.Up" +
-      "dateClusterShardRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"r\202\323\344\223\002E2@/managed-cli" +
-      "ckhouse/v1/clusters/{cluster_id}/shards/" +
-      "{shard_name}:\001*\262\322*#\n\032UpdateClusterShardM" +
-      "etadata\022\005Shard\022\354\001\n\013DeleteShard\0229.yandex." +
-      "cloud.mdb.clickhouse.v1.DeleteClusterSha" +
-      "rdRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\177\202\323\344\223\002B*@/managed-clickhouse/v1/clu" +
-      "sters/{cluster_id}/shards/{shard_name}\262\322" +
-      "*3\n\032DeleteClusterShardMetadata\022\025google.p" +
-      "rotobuf.Empty\022\315\001\n\rGetShardGroup\022;.yandex" +
-      ".cloud.mdb.clickhouse.v1.GetClusterShard" +
-      "GroupRequest\032*.yandex.cloud.mdb.clickhou" +
-      "se.v1.ShardGroup\"S\202\323\344\223\002M\022K/managed-click" +
-      "house/v1/clusters/{cluster_id}/shardGrou" +
-      "ps/{shard_group_name}\022\322\001\n\017ListShardGroup" +
-      "s\022=.yandex.cloud.mdb.clickhouse.v1.ListC" +
-      "lusterShardGroupsRequest\032>.yandex.cloud." +
-      "mdb.clickhouse.v1.ListClusterShardGroups" +
-      "Response\"@\202\323\344\223\002:\0228/managed-clickhouse/v1" +
-      "/clusters/{cluster_id}/shardGroups\022\353\001\n\020C" +
-      "reateShardGroup\022>.yandex.cloud.mdb.click" +
-      "house.v1.CreateClusterShardGroupRequest\032" +
-      "!.yandex.cloud.operation.Operation\"t\202\323\344\223" +
-      "\002=\"8/managed-clickhouse/v1/clusters/{clu" +
-      "ster_id}/shardGroups:\001*\262\322*-\n\037CreateClust" +
-      "erShardGroupMetadata\022\nShardGroup\022\377\001\n\020Upd" +
-      "ateShardGroup\022>.yandex.cloud.mdb.clickho" +
-      "use.v1.UpdateClusterShardGroupRequest\032!.",
-      "yandex.cloud.operation.Operation\"\207\001\202\323\344\223\002" +
-      "P2K/managed-clickhouse/v1/clusters/{clus" +
-      "ter_id}/shardGroups/{shard_group_name}:\001" +
-      "*\262\322*-\n\037UpdateClusterShardGroupMetadata\022\n" +
-      "ShardGroup\022\207\002\n\020DeleteShardGroup\022>.yandex" +
-      ".cloud.mdb.clickhouse.v1.DeleteClusterSh" +
-      "ardGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\217\001\202\323\344\223\002M*K/managed-clickhouse" +
-      "/v1/clusters/{cluster_id}/shardGroups/{s" +
-      "hard_group_name}\262\322*8\n\037DeleteClusterShard" +
-      "GroupMetadata\022\025google.protobuf.Empty\022\216\002\n" +
-      "\030CreateExternalDictionary\022F.yandex.cloud" +
-      ".mdb.clickhouse.v1.CreateClusterExternal" +
-      "DictionaryRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\206\001\202\323\344\223\002J\"E/managed-clickhou" +
-      "se/v1/clusters/{cluster_id}:createExtern" +
-      "alDictionary:\001*\262\322*2\n\'CreateClusterExtern" +
-      "alDictionaryMetadata\022\007Cluster\022\216\002\n\030Delete" +
-      "ExternalDictionary\022F.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.DeleteClusterExternalDiction" +
-      "aryRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\206\001\202\323\344\223\002J\"E/managed-clickhouse/v1/c" +
-      "lusters/{cluster_id}:deleteExternalDicti" +
-      "onary:\001*\262\322*2\n\'DeleteClusterExternalDicti" +
-      "onaryMetadata\022\007ClusterBs\n\"yandex.cloud.a" +
-      "pi.mdb.clickhouse.v1ZMgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/click" +
-      "house/v1;clickhouseb\006proto3"
+      "quest\032=.yandex.cloud.mdb.clickhouse.v1.L" +
+      "istClusterOperationsResponse\"?\202\323\344\223\0029\0227/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}/operations\022\302\001\n\013ListBackups\0229.yandex.c" +
+      "loud.mdb.clickhouse.v1.ListClusterBackup" +
+      "sRequest\032:.yandex.cloud.mdb.clickhouse.v" +
+      "1.ListClusterBackupsResponse\"<\202\323\344\223\0026\0224/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}/backups\022\272\001\n\tListHosts\0227.yandex.cloud." +
+      "mdb.clickhouse.v1.ListClusterHostsReques" +
+      "t\0328.yandex.cloud.mdb.clickhouse.v1.ListC" +
+      "lusterHostsResponse\":\202\323\344\223\0024\0222/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}/hosts\022" +
+      "\344\001\n\010AddHosts\0226.yandex.cloud.mdb.clickhou" +
+      "se.v1.AddClusterHostsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"}\202\323\344\223\002C\">/manage" +
+      "d-clickhouse/v1/clusters/{cluster_id}/ho" +
+      "sts:batchCreate:\001*\262\322*0\n\027AddClusterHostsM" +
+      "etadata\022\025google.protobuf.Empty\022\356\001\n\013Delet" +
+      "eHosts\0229.yandex.cloud.mdb.clickhouse.v1." +
+      "DeleteClusterHostsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\200\001\202\323\344\223\002C\">/managed-" +
+      "clickhouse/v1/clusters/{cluster_id}/host" +
+      "s:batchDelete:\001*\262\322*3\n\032DeleteClusterHosts" +
+      "Metadata\022\025google.protobuf.Empty\022\263\001\n\010GetS" +
+      "hard\0226.yandex.cloud.mdb.clickhouse.v1.Ge" +
+      "tClusterShardRequest\032%.yandex.cloud.mdb." +
+      "clickhouse.v1.Shard\"H\202\323\344\223\002B\022@/managed-cl" +
+      "ickhouse/v1/clusters/{cluster_id}/shards" +
+      "/{shard_name}\022\276\001\n\nListShards\0228.yandex.cl" +
+      "oud.mdb.clickhouse.v1.ListClusterShardsR" +
+      "equest\0329.yandex.cloud.mdb.clickhouse.v1." +
+      "ListClusterShardsResponse\";\202\323\344\223\0025\0223/mana" +
+      "ged-clickhouse/v1/clusters/{cluster_id}/" +
+      "shards\022\311\001\n\010AddShard\0226.yandex.cloud.mdb.c" +
+      "lickhouse.v1.AddClusterShardRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"b\202\323\344\223\0028\"3" +
+      "/managed-clickhouse/v1/clusters/{cluster" +
+      "_id}/shards:\001*\262\322* \n\027AddClusterShardMetad" +
+      "ata\022\005Shard\022\337\001\n\013UpdateShard\0229.yandex.clou" +
+      "d.mdb.clickhouse.v1.UpdateClusterShardRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"r\202\323\344\223\002E2@/managed-clickhouse/v1/cluster" +
+      "s/{cluster_id}/shards/{shard_name}:\001*\262\322*" +
+      "#\n\032UpdateClusterShardMetadata\022\005Shard\022\354\001\n" +
+      "\013DeleteShard\0229.yandex.cloud.mdb.clickhou" +
+      "se.v1.DeleteClusterShardRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\177\202\323\344\223\002B*@/man" +
+      "aged-clickhouse/v1/clusters/{cluster_id}" +
+      "/shards/{shard_name}\262\322*3\n\032DeleteClusterS" +
+      "hardMetadata\022\025google.protobuf.Empty\022\315\001\n\r" +
+      "GetShardGroup\022;.yandex.cloud.mdb.clickho" +
+      "use.v1.GetClusterShardGroupRequest\032*.yan" +
+      "dex.cloud.mdb.clickhouse.v1.ShardGroup\"S" +
+      "\202\323\344\223\002M\022K/managed-clickhouse/v1/clusters/" +
+      "{cluster_id}/shardGroups/{shard_group_na" +
+      "me}\022\322\001\n\017ListShardGroups\022=.yandex.cloud.m" +
+      "db.clickhouse.v1.ListClusterShardGroupsR" +
+      "equest\032>.yandex.cloud.mdb.clickhouse.v1." +
+      "ListClusterShardGroupsResponse\"@\202\323\344\223\002:\0228" +
+      "/managed-clickhouse/v1/clusters/{cluster" +
+      "_id}/shardGroups\022\353\001\n\020CreateShardGroup\022>." +
+      "yandex.cloud.mdb.clickhouse.v1.CreateClu" +
+      "sterShardGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"t\202\323\344\223\002=\"8/managed-click" +
+      "house/v1/clusters/{cluster_id}/shardGrou",
+      "ps:\001*\262\322*-\n\037CreateClusterShardGroupMetada" +
+      "ta\022\nShardGroup\022\377\001\n\020UpdateShardGroup\022>.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.UpdateClust" +
+      "erShardGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\207\001\202\323\344\223\002P2K/managed-clickh" +
+      "ouse/v1/clusters/{cluster_id}/shardGroup" +
+      "s/{shard_group_name}:\001*\262\322*-\n\037UpdateClust" +
+      "erShardGroupMetadata\022\nShardGroup\022\207\002\n\020Del" +
+      "eteShardGroup\022>.yandex.cloud.mdb.clickho" +
+      "use.v1.DeleteClusterShardGroupRequest\032!." +
+      "yandex.cloud.operation.Operation\"\217\001\202\323\344\223\002" +
+      "M*K/managed-clickhouse/v1/clusters/{clus" +
+      "ter_id}/shardGroups/{shard_group_name}\262\322" +
+      "*8\n\037DeleteClusterShardGroupMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\216\002\n\030CreateExternalDic" +
+      "tionary\022F.yandex.cloud.mdb.clickhouse.v1" +
+      ".CreateClusterExternalDictionaryRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\206\001\202\323\344" +
+      "\223\002J\"E/managed-clickhouse/v1/clusters/{cl" +
+      "uster_id}:createExternalDictionary:\001*\262\322*" +
+      "2\n\'CreateClusterExternalDictionaryMetada" +
+      "ta\022\007Cluster\022\216\002\n\030DeleteExternalDictionary" +
+      "\022F.yandex.cloud.mdb.clickhouse.v1.Delete" +
+      "ClusterExternalDictionaryRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\206\001\202\323\344\223\002J\"E/m" +
+      "anaged-clickhouse/v1/clusters/{cluster_i" +
+      "d}:deleteExternalDictionary:\001*\262\322*2\n\'Dele" +
+      "teClusterExternalDictionaryMetadata\022\007Clu" +
+      "sterBs\n\"yandex.cloud.api.mdb.clickhouse." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67578,7 +68263,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", });
+        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "AdminPassword", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_Clickhouse_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ConfigSpec_Clickhouse_fieldAccessorTable = new

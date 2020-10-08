@@ -20,7 +20,7 @@ public final class CertificateContentServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the certificate
+     * ID of the certificate.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -28,7 +28,7 @@ public final class CertificateContentServiceOuterClass {
     java.lang.String getCertificateId();
     /**
      * <pre>
-     * ID of the certificate
+     * ID of the certificate.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -192,7 +192,7 @@ public final class CertificateContentServiceOuterClass {
     private volatile java.lang.Object certificateId_;
     /**
      * <pre>
-     * ID of the certificate
+     * ID of the certificate.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -211,7 +211,7 @@ public final class CertificateContentServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the certificate
+     * ID of the certificate.
      * </pre>
      *
      * <code>string certificate_id = 1;</code>
@@ -678,7 +678,7 @@ public final class CertificateContentServiceOuterClass {
       private java.lang.Object certificateId_ = "";
       /**
        * <pre>
-       * ID of the certificate
+       * ID of the certificate.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -697,7 +697,7 @@ public final class CertificateContentServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate
+       * ID of the certificate.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -717,7 +717,7 @@ public final class CertificateContentServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate
+       * ID of the certificate.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -734,7 +734,7 @@ public final class CertificateContentServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate
+       * ID of the certificate.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>
@@ -747,7 +747,7 @@ public final class CertificateContentServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate
+       * ID of the certificate.
        * </pre>
        *
        * <code>string certificate_id = 1;</code>

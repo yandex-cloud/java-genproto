@@ -175,6 +175,15 @@ public final class SymmetricKeyServiceOuterClass {
      * <code>.google.protobuf.Duration rotation_period = 6;</code>
      */
     com.google.protobuf.DurationOrBuilder getRotationPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the symmetric KMS key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.CreateSymmetricKeyRequest}
@@ -193,6 +202,7 @@ public final class SymmetricKeyServiceOuterClass {
       name_ = "";
       description_ = "";
       defaultAlgorithm_ = 0;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -267,6 +277,11 @@ public final class SymmetricKeyServiceOuterClass {
                 rotationPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 56: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -597,6 +612,19 @@ public final class SymmetricKeyServiceOuterClass {
       return getRotationPeriod();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 7;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the symmetric KMS key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 7;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -631,6 +659,9 @@ public final class SymmetricKeyServiceOuterClass {
       }
       if (rotationPeriod_ != null) {
         output.writeMessage(6, getRotationPeriod());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(7, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -668,6 +699,10 @@ public final class SymmetricKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getRotationPeriod());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -698,6 +733,8 @@ public final class SymmetricKeyServiceOuterClass {
         result = result && getRotationPeriod()
             .equals(other.getRotationPeriod());
       }
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -725,6 +762,9 @@ public final class SymmetricKeyServiceOuterClass {
         hash = (37 * hash) + ROTATION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRotationPeriod().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -895,6 +935,8 @@ public final class SymmetricKeyServiceOuterClass {
           rotationPeriod_ = null;
           rotationPeriodBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -934,6 +976,7 @@ public final class SymmetricKeyServiceOuterClass {
         } else {
           result.rotationPeriod_ = rotationPeriodBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1002,6 +1045,9 @@ public final class SymmetricKeyServiceOuterClass {
         }
         if (other.hasRotationPeriod()) {
           mergeRotationPeriod(other.getRotationPeriod());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1683,6 +1729,44 @@ public final class SymmetricKeyServiceOuterClass {
           rotationPeriod_ = null;
         }
         return rotationPeriodBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 7;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7236,6 +7320,15 @@ public final class SymmetricKeyServiceOuterClass {
      * <code>.google.protobuf.Duration rotation_period = 8;</code>
      */
     com.google.protobuf.DurationOrBuilder getRotationPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the symmetric KMS key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 9;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.kms.v1.UpdateSymmetricKeyRequest}
@@ -7255,6 +7348,7 @@ public final class SymmetricKeyServiceOuterClass {
       description_ = "";
       status_ = 0;
       defaultAlgorithm_ = 0;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -7348,6 +7442,11 @@ public final class SymmetricKeyServiceOuterClass {
                 rotationPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 72: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -7733,6 +7832,19 @@ public final class SymmetricKeyServiceOuterClass {
       return getRotationPeriod();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 9;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the symmetric KMS key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 9;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7773,6 +7885,9 @@ public final class SymmetricKeyServiceOuterClass {
       }
       if (rotationPeriod_ != null) {
         output.writeMessage(8, getRotationPeriod());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(9, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -7818,6 +7933,10 @@ public final class SymmetricKeyServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRotationPeriod());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7854,6 +7973,8 @@ public final class SymmetricKeyServiceOuterClass {
         result = result && getRotationPeriod()
             .equals(other.getRotationPeriod());
       }
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7887,6 +8008,9 @@ public final class SymmetricKeyServiceOuterClass {
         hash = (37 * hash) + ROTATION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRotationPeriod().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8065,6 +8189,8 @@ public final class SymmetricKeyServiceOuterClass {
           rotationPeriod_ = null;
           rotationPeriodBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -8110,6 +8236,7 @@ public final class SymmetricKeyServiceOuterClass {
         } else {
           result.rotationPeriod_ = rotationPeriodBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8184,6 +8311,9 @@ public final class SymmetricKeyServiceOuterClass {
         }
         if (other.hasRotationPeriod()) {
           mergeRotationPeriod(other.getRotationPeriod());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9077,6 +9207,44 @@ public final class SymmetricKeyServiceOuterClass {
           rotationPeriod_ = null;
         }
         return rotationPeriodBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the symmetric KMS key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 9;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19417,7 +19585,7 @@ public final class SymmetricKeyServiceOuterClass {
       "x/cloud/api/operation.proto\032&yandex/clou" +
       "d/operation/operation.proto\032\035yandex/clou" +
       "d/validation.proto\032\'yandex/cloud/kms/v1/" +
-      "symmetric_key.proto\"\253\003\n\031CreateSymmetricK" +
+      "symmetric_key.proto\"\310\003\n\031CreateSymmetricK" +
       "eyRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037\n\013descripti" +
       "on\030\003 \001(\tB\n\212\3101\006<=1024\022\213\001\n\006labels\030\004 \003(\0132:." +
@@ -19427,136 +19595,138 @@ public final class SymmetricKeyServiceOuterClass {
       "]*\022B\n\021default_algorithm\030\005 \001(\0162\'.yandex.c" +
       "loud.kms.v1.SymmetricAlgorithm\0222\n\017rotati" +
       "on_period\030\006 \001(\0132\031.google.protobuf.Durati" +
-      "on\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"H\n\032CreateSymmetricKeyMetadata\022" +
-      "\016\n\006key_id\030\001 \001(\t\022\032\n\022primary_version_id\030\002 " +
-      "\001(\t\"6\n\026GetSymmetricKeyRequest\022\034\n\006key_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"y\n\030ListSymmetricKeys" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"e\n\031ListSymmetricK" +
-      "eysResponse\022/\n\004keys\030\001 \003(\0132!.yandex.cloud" +
-      ".kms.v1.SymmetricKey\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"}\n\037ListSymmetricKeyVersionsRequest" +
-      "\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"{\n ListSymmetricKeyVersions" +
-      "Response\022>\n\014key_versions\030\001 \003(\0132(.yandex." +
-      "cloud.kms.v1.SymmetricKeyVersion\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"\231\004\n\031UpdateSymmetricKey" +
-      "Request\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005<=100\022\037\n" +
-      "\013description\030\004 \001(\tB\n\212\3101\006<=1024\0228\n\006status" +
-      "\030\005 \001(\0162(.yandex.cloud.kms.v1.SymmetricKe" +
-      "y.Status\022\213\001\n\006labels\030\006 \003(\0132:.yandex.cloud" +
-      ".kms.v1.UpdateSymmetricKeyRequest.Labels" +
-      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
-      "1\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022B\n\021defaul" +
-      "t_algorithm\030\007 \001(\0162\'.yandex.cloud.kms.v1." +
-      "SymmetricAlgorithm\0222\n\017rotation_period\030\010 " +
-      "\001(\0132\031.google.protobuf.Duration\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n" +
-      "\032UpdateSymmetricKeyMetadata\022\016\n\006key_id\030\001 " +
-      "\001(\t\"9\n\031DeleteSymmetricKeyRequest\022\034\n\006key_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\",\n\032DeleteSymmetri" +
-      "cKeyMetadata\022\016\n\006key_id\030\001 \001(\t\"f\n$SetPrima" +
-      "rySymmetricKeyVersionRequest\022\034\n\006key_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"K\n%SetPrimarySymmetricKeyVe" +
-      "rsionMetadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion" +
-      "_id\030\002 \001(\t\"9\n\031RotateSymmetricKeyRequest\022\034" +
-      "\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"L\n\032RotateSy" +
-      "mmetricKeyMetadata\022\016\n\006key_id\030\001 \001(\t\022\036\n\026ne" +
-      "w_primary_version_id\030\002 \001(\t\"\242\001\n-ScheduleS" +
-      "ymmetricKeyVersionDestructionRequest\022\034\n\006" +
-      "key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id" +
-      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003" +
-      " \001(\0132\031.google.protobuf.Duration\"\204\001\n.Sche" +
+      "on\022\033\n\023deletion_protection\030\007 \001(\010\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H" +
+      "\n\032CreateSymmetricKeyMetadata\022\016\n\006key_id\030\001" +
+      " \001(\t\022\032\n\022primary_version_id\030\002 \001(\t\"6\n\026GetS" +
+      "ymmetricKeyRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"y\n\030ListSymmetricKeysRequest\022\037\n\t" +
+      "folder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\"e\n\031ListSymmetricKeysResponse" +
+      "\022/\n\004keys\030\001 \003(\0132!.yandex.cloud.kms.v1.Sym" +
+      "metricKey\022\027\n\017next_page_token\030\002 \001(\t\"}\n\037Li" +
+      "stSymmetricKeyVersionsRequest\022\034\n\006key_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
+      "0\"{\n ListSymmetricKeyVersionsResponse\022>\n" +
+      "\014key_versions\030\001 \003(\0132(.yandex.cloud.kms.v" +
+      "1.SymmetricKeyVersion\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\266\004\n\031UpdateSymmetricKeyRequest\022\034\n\006" +
+      "key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350\3071" +
+      "\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005<=100\022\037\n\013descriptio" +
+      "n\030\004 \001(\tB\n\212\3101\006<=1024\0228\n\006status\030\005 \001(\0162(.ya" +
+      "ndex.cloud.kms.v1.SymmetricKey.Status\022\213\001" +
+      "\n\006labels\030\006 \003(\0132:.yandex.cloud.kms.v1.Upd" +
+      "ateSymmetricKeyRequest.LabelsEntryB?\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101" +
+      "\022\022\020[a-z][-_0-9a-z]*\022B\n\021default_algorithm" +
+      "\030\007 \001(\0162\'.yandex.cloud.kms.v1.SymmetricAl" +
+      "gorithm\0222\n\017rotation_period\030\010 \001(\0132\031.googl" +
+      "e.protobuf.Duration\022\033\n\023deletion_protecti" +
+      "on\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\",\n\032UpdateSymmetricKeyMet" +
+      "adata\022\016\n\006key_id\030\001 \001(\t\"9\n\031DeleteSymmetric" +
+      "KeyRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\",\n\032DeleteSymmetricKeyMetadata\022\016\n\006key_id" +
+      "\030\001 \001(\t\"f\n$SetPrimarySymmetricKeyVersionR" +
+      "equest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\n" +
+      "version_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"K\n%SetPri" +
+      "marySymmetricKeyVersionMetadata\022\016\n\006key_i" +
+      "d\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"9\n\031RotateSym" +
+      "metricKeyRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"L\n\032RotateSymmetricKeyMetadata\022\016\n\006" +
+      "key_id\030\001 \001(\t\022\036\n\026new_primary_version_id\030\002" +
+      " \001(\t\"\242\001\n-ScheduleSymmetricKeyVersionDest" +
+      "ructionRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0221" +
+      "\n\016pending_period\030\003 \001(\0132\031.google.protobuf" +
+      ".Duration\"\204\001\n.ScheduleSymmetricKeyVersio" +
+      "nDestructionMetadata\022\016\n\006key_id\030\001 \001(\t\022\022\n\n" +
+      "version_id\030\002 \001(\t\022.\n\ndestroy_at\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"m\n+CancelSymmet" +
+      "ricKeyVersionDestructionRequest\022\034\n\006key_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"R\n,CancelSymmetricKeyVer" +
+      "sionDestructionMetadata\022\016\n\006key_id\030\001 \001(\t\022" +
+      "\022\n\nversion_id\030\002 \001(\t\"\177\n!ListSymmetricKeyO" +
+      "perationsRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"ListSymm" +
+      "etricKeyOperationsResponse\0225\n\noperations" +
+      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
+      "n\022\027\n\017next_page_token\030\002 \001(\t2\366\024\n\023Symmetric" +
+      "KeyService\022\242\001\n\006Create\022..yandex.cloud.kms" +
+      ".v1.CreateSymmetricKeyRequest\032!.yandex.c" +
+      "loud.operation.Operation\"E\202\323\344\223\002\021\"\014/kms/v" +
+      "1/keys:\001*\262\322**\n\032CreateSymmetricKeyMetadat" +
+      "a\022\014SymmetricKey\022t\n\003Get\022+.yandex.cloud.km" +
+      "s.v1.GetSymmetricKeyRequest\032!.yandex.clo" +
+      "ud.kms.v1.SymmetricKey\"\035\202\323\344\223\002\027\022\025/kms/v1/" +
+      "keys/{key_id}\022{\n\004List\022-.yandex.cloud.kms" +
+      ".v1.ListSymmetricKeysRequest\032..yandex.cl" +
+      "oud.kms.v1.ListSymmetricKeysResponse\"\024\202\323" +
+      "\344\223\002\016\022\014/kms/v1/keys\022\243\001\n\014ListVersions\0224.ya" +
+      "ndex.cloud.kms.v1.ListSymmetricKeyVersio" +
+      "nsRequest\0325.yandex.cloud.kms.v1.ListSymm" +
+      "etricKeyVersionsResponse\"&\202\323\344\223\002 \022\036/kms/v" +
+      "1/keys/{key_id}/versions\022\253\001\n\006Update\022..ya" +
+      "ndex.cloud.kms.v1.UpdateSymmetricKeyRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"N" +
+      "\202\323\344\223\002\0322\025/kms/v1/keys/{key_id}:\001*\262\322**\n\032Up" +
+      "dateSymmetricKeyMetadata\022\014SymmetricKey\022\250" +
+      "\001\n\006Delete\022..yandex.cloud.kms.v1.DeleteSy" +
+      "mmetricKeyRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"K\202\323\344\223\002\027*\025/kms/v1/keys/{key_" +
+      "id}\262\322**\n\032DeleteSymmetricKeyMetadata\022\014Sym" +
+      "metricKey\022\336\001\n\021SetPrimaryVersion\0229.yandex" +
+      ".cloud.kms.v1.SetPrimarySymmetricKeyVers" +
+      "ionRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"k\202\323\344\223\002,\"\'/kms/v1/keys/{key_id}:set" +
+      "PrimaryVersion:\001*\262\322*5\n%SetPrimarySymmetr" +
+      "icKeyVersionMetadata\022\014SymmetricKey\022\212\002\n\032S" +
+      "cheduleVersionDestruction\022B.yandex.cloud" +
+      ".kms.v1.ScheduleSymmetricKeyVersionDestr" +
+      "uctionRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\204\001\202\323\344\223\0025\"0/kms/v1/keys/{key_id}" +
+      ":scheduleVersionDestruction:\001*\262\322*E\n.Sche" +
       "duleSymmetricKeyVersionDestructionMetada" +
-      "ta\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022." +
-      "\n\ndestroy_at\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"m\n+CancelSymmetricKeyVersionDestr" +
-      "uctionRequest\022\034\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"R\n" +
-      ",CancelSymmetricKeyVersionDestructionMet" +
-      "adata\022\016\n\006key_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(" +
-      "\t\"\177\n!ListSymmetricKeyOperationsRequest\022\034" +
-      "\n\006key_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
-      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"t\n\"ListSymmetricKeyOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\366\024\n\023SymmetricKeyService\022\242\001\n\006Cre" +
-      "ate\022..yandex.cloud.kms.v1.CreateSymmetri" +
-      "cKeyRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"E\202\323\344\223\002\021\"\014/kms/v1/keys:\001*\262\322**\n\032Cre" +
-      "ateSymmetricKeyMetadata\022\014SymmetricKey\022t\n" +
-      "\003Get\022+.yandex.cloud.kms.v1.GetSymmetricK" +
-      "eyRequest\032!.yandex.cloud.kms.v1.Symmetri" +
-      "cKey\"\035\202\323\344\223\002\027\022\025/kms/v1/keys/{key_id}\022{\n\004L" +
-      "ist\022-.yandex.cloud.kms.v1.ListSymmetricK" +
-      "eysRequest\032..yandex.cloud.kms.v1.ListSym" +
-      "metricKeysResponse\"\024\202\323\344\223\002\016\022\014/kms/v1/keys" +
-      "\022\243\001\n\014ListVersions\0224.yandex.cloud.kms.v1." +
-      "ListSymmetricKeyVersionsRequest\0325.yandex" +
-      ".cloud.kms.v1.ListSymmetricKeyVersionsRe" +
-      "sponse\"&\202\323\344\223\002 \022\036/kms/v1/keys/{key_id}/ve" +
-      "rsions\022\253\001\n\006Update\022..yandex.cloud.kms.v1." +
-      "UpdateSymmetricKeyRequest\032!.yandex.cloud" +
-      ".operation.Operation\"N\202\323\344\223\002\0322\025/kms/v1/ke" +
-      "ys/{key_id}:\001*\262\322**\n\032UpdateSymmetricKeyMe" +
-      "tadata\022\014SymmetricKey\022\250\001\n\006Delete\022..yandex" +
-      ".cloud.kms.v1.DeleteSymmetricKeyRequest\032" +
-      "!.yandex.cloud.operation.Operation\"K\202\323\344\223" +
-      "\002\027*\025/kms/v1/keys/{key_id}\262\322**\n\032DeleteSym" +
-      "metricKeyMetadata\022\014SymmetricKey\022\336\001\n\021SetP" +
-      "rimaryVersion\0229.yandex.cloud.kms.v1.SetP" +
-      "rimarySymmetricKeyVersionRequest\032!.yande" +
-      "x.cloud.operation.Operation\"k\202\323\344\223\002,\"\'/km" +
-      "s/v1/keys/{key_id}:setPrimaryVersion:\001*\262" +
-      "\322*5\n%SetPrimarySymmetricKeyVersionMetada" +
-      "ta\022\014SymmetricKey\022\212\002\n\032ScheduleVersionDest" +
-      "ruction\022B.yandex.cloud.kms.v1.ScheduleSy" +
-      "mmetricKeyVersionDestructionRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\204\001\202\323\344\223\0025\"" +
-      "0/kms/v1/keys/{key_id}:scheduleVersionDe" +
-      "struction:\001*\262\322*E\n.ScheduleSymmetricKeyVe" +
-      "rsionDestructionMetadata\022\023SymmetricKeyVe" +
-      "rsion\022\202\002\n\030CancelVersionDestruction\022@.yan" +
-      "dex.cloud.kms.v1.CancelSymmetricKeyVersi" +
-      "onDestructionRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\200\001\202\323\344\223\0023\"./kms/v1/keys/{" +
-      "key_id}:cancelVersionDestruction:\001*\262\322*C\n" +
-      ",CancelSymmetricKeyVersionDestructionMet" +
-      "adata\022\023SymmetricKeyVersion\022\257\001\n\006Rotate\022.." +
-      "yandex.cloud.kms.v1.RotateSymmetricKeyRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"R\202\323\344\223\002\036\"\034/kms/v1/keys/{key_id}:rotate\262\322" +
-      "**\n\032RotateSymmetricKeyMetadata\022\014Symmetri" +
-      "cKey\022\253\001\n\016ListOperations\0226.yandex.cloud.k" +
-      "ms.v1.ListSymmetricKeyOperationsRequest\032" +
-      "7.yandex.cloud.kms.v1.ListSymmetricKeyOp" +
-      "erationsResponse\"(\202\323\344\223\002\"\022 /kms/v1/keys/{" +
-      "key_id}/operations\022\254\001\n\022ListAccessBinding" +
-      "s\022..yandex.cloud.access.ListAccessBindin" +
-      "gsRequest\032/.yandex.cloud.access.ListAcce" +
-      "ssBindingsResponse\"5\202\323\344\223\002/\022-/kms/v1/keys" +
-      "/{resource_id}:listAccessBindings\022\333\001\n\021Se" +
-      "tAccessBindings\022-.yandex.cloud.access.Se" +
-      "tAccessBindingsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"t\202\323\344\223\0021\",/kms/v1/keys/" +
-      "{resource_id}:setAccessBindings:\001*\262\322*9\n " +
-      "access.SetAccessBindingsMetadata\022\025google" +
-      ".protobuf.Empty\022\347\001\n\024UpdateAccessBindings" +
-      "\0220.yandex.cloud.access.UpdateAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"z\202\323\344\223\0024\"//kms/v1/keys/{resource_id" +
-      "}:updateAccessBindings:\001*\262\322*<\n#access.Up" +
-      "dateAccessBindingsMetadata\022\025google.proto" +
-      "buf.EmptyBV\n\027yandex.cloud.api.kms.v1Z;gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/kms/v1;kmsb\006proto3"
+      "ta\022\023SymmetricKeyVersion\022\202\002\n\030CancelVersio" +
+      "nDestruction\022@.yandex.cloud.kms.v1.Cance" +
+      "lSymmetricKeyVersionDestructionRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\200\001\202\323\344\223" +
+      "\0023\"./kms/v1/keys/{key_id}:cancelVersionD" +
+      "estruction:\001*\262\322*C\n,CancelSymmetricKeyVer" +
+      "sionDestructionMetadata\022\023SymmetricKeyVer" +
+      "sion\022\257\001\n\006Rotate\022..yandex.cloud.kms.v1.Ro" +
+      "tateSymmetricKeyRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"R\202\323\344\223\002\036\"\034/kms/v1/keys" +
+      "/{key_id}:rotate\262\322**\n\032RotateSymmetricKey" +
+      "Metadata\022\014SymmetricKey\022\253\001\n\016ListOperation" +
+      "s\0226.yandex.cloud.kms.v1.ListSymmetricKey" +
+      "OperationsRequest\0327.yandex.cloud.kms.v1." +
+      "ListSymmetricKeyOperationsResponse\"(\202\323\344\223" +
+      "\002\"\022 /kms/v1/keys/{key_id}/operations\022\254\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\"5\202\323" +
+      "\344\223\002/\022-/kms/v1/keys/{resource_id}:listAcc" +
+      "essBindings\022\333\001\n\021SetAccessBindings\022-.yand" +
+      "ex.cloud.access.SetAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"t\202\323\344" +
+      "\223\0021\",/kms/v1/keys/{resource_id}:setAcces" +
+      "sBindings:\001*\262\322*9\n access.SetAccessBindin" +
+      "gsMetadata\022\025google.protobuf.Empty\022\347\001\n\024Up" +
+      "dateAccessBindings\0220.yandex.cloud.access" +
+      ".UpdateAccessBindingsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"z\202\323\344\223\0024\"//kms/v1" +
+      "/keys/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.EmptyBV\n\027yandex.cl" +
+      "oud.api.kms.v1Z;github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/kms/v1;kmsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19584,7 +19754,7 @@ public final class SymmetricKeyServiceOuterClass {
     internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "DefaultAlgorithm", "RotationPeriod", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "DefaultAlgorithm", "RotationPeriod", "DeletionProtection", });
     internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_kms_v1_CreateSymmetricKeyRequest_LabelsEntry_fieldAccessorTable = new
@@ -19632,7 +19802,7 @@ public final class SymmetricKeyServiceOuterClass {
     internal_static_yandex_cloud_kms_v1_UpdateSymmetricKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_kms_v1_UpdateSymmetricKeyRequest_descriptor,
-        new java.lang.String[] { "KeyId", "UpdateMask", "Name", "Description", "Status", "Labels", "DefaultAlgorithm", "RotationPeriod", });
+        new java.lang.String[] { "KeyId", "UpdateMask", "Name", "Description", "Status", "Labels", "DefaultAlgorithm", "RotationPeriod", "DeletionProtection", });
     internal_static_yandex_cloud_kms_v1_UpdateSymmetricKeyRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_kms_v1_UpdateSymmetricKeyRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_kms_v1_UpdateSymmetricKeyRequest_LabelsEntry_fieldAccessorTable = new

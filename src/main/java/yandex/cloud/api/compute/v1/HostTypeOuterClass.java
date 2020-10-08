@@ -20,7 +20,7 @@ public final class HostTypeOuterClass {
 
     /**
      * <pre>
-     * Unique type identifier
+     * Unique type identifier.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class HostTypeOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Unique type identifier
+     * Unique type identifier.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -38,7 +38,7 @@ public final class HostTypeOuterClass {
 
     /**
      * <pre>
-     * Total number of cores available for instances
+     * Total number of cores available for instances.
      * </pre>
      *
      * <code>int64 cores = 2;</code>
@@ -47,7 +47,7 @@ public final class HostTypeOuterClass {
 
     /**
      * <pre>
-     * Ammount of memory available for instances
+     * Ammount of memory available for instances.
      * </pre>
      *
      * <code>int64 memory = 3;</code>
@@ -56,8 +56,8 @@ public final class HostTypeOuterClass {
   }
   /**
    * <pre>
-   * Represents host resources
-   * Note: Platform can use hosts with different number of memory and cores
+   * Represents host resources.
+   * Note: Platform can use hosts with different number of memory and cores.
    * TODO: Do we need sockets here?
    * </pre>
    *
@@ -154,7 +154,7 @@ public final class HostTypeOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Unique type identifier
+     * Unique type identifier.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -173,7 +173,7 @@ public final class HostTypeOuterClass {
     }
     /**
      * <pre>
-     * Unique type identifier
+     * Unique type identifier.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -196,7 +196,7 @@ public final class HostTypeOuterClass {
     private long cores_;
     /**
      * <pre>
-     * Total number of cores available for instances
+     * Total number of cores available for instances.
      * </pre>
      *
      * <code>int64 cores = 2;</code>
@@ -209,7 +209,7 @@ public final class HostTypeOuterClass {
     private long memory_;
     /**
      * <pre>
-     * Ammount of memory available for instances
+     * Ammount of memory available for instances.
      * </pre>
      *
      * <code>int64 memory = 3;</code>
@@ -399,8 +399,8 @@ public final class HostTypeOuterClass {
     }
     /**
      * <pre>
-     * Represents host resources
-     * Note: Platform can use hosts with different number of memory and cores
+     * Represents host resources.
+     * Note: Platform can use hosts with different number of memory and cores.
      * TODO: Do we need sockets here?
      * </pre>
      *
@@ -566,7 +566,7 @@ public final class HostTypeOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Unique type identifier
+       * Unique type identifier.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -585,7 +585,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Unique type identifier
+       * Unique type identifier.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -605,7 +605,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Unique type identifier
+       * Unique type identifier.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -622,7 +622,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Unique type identifier
+       * Unique type identifier.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -635,7 +635,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Unique type identifier
+       * Unique type identifier.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -655,7 +655,7 @@ public final class HostTypeOuterClass {
       private long cores_ ;
       /**
        * <pre>
-       * Total number of cores available for instances
+       * Total number of cores available for instances.
        * </pre>
        *
        * <code>int64 cores = 2;</code>
@@ -665,7 +665,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Total number of cores available for instances
+       * Total number of cores available for instances.
        * </pre>
        *
        * <code>int64 cores = 2;</code>
@@ -678,7 +678,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Total number of cores available for instances
+       * Total number of cores available for instances.
        * </pre>
        *
        * <code>int64 cores = 2;</code>
@@ -693,7 +693,7 @@ public final class HostTypeOuterClass {
       private long memory_ ;
       /**
        * <pre>
-       * Ammount of memory available for instances
+       * Ammount of memory available for instances.
        * </pre>
        *
        * <code>int64 memory = 3;</code>
@@ -703,7 +703,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Ammount of memory available for instances
+       * Ammount of memory available for instances.
        * </pre>
        *
        * <code>int64 memory = 3;</code>
@@ -716,7 +716,7 @@ public final class HostTypeOuterClass {
       }
       /**
        * <pre>
-       * Ammount of memory available for instances
+       * Ammount of memory available for instances.
        * </pre>
        *
        * <code>int64 memory = 3;</code>

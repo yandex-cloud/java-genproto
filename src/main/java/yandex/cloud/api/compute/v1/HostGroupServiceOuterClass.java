@@ -2907,7 +2907,7 @@ public final class HostGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Availability zone where all dedicated hosts will be allocated
+     * Availability zone where all dedicated hosts will be allocated.
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2915,7 +2915,7 @@ public final class HostGroupServiceOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * Availability zone where all dedicated hosts will be allocated
+     * Availability zone where all dedicated hosts will be allocated.
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2925,7 +2925,7 @@ public final class HostGroupServiceOuterClass {
 
     /**
      * <pre>
-     * ID of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2933,7 +2933,7 @@ public final class HostGroupServiceOuterClass {
     java.lang.String getTypeId();
     /**
      * <pre>
-     * ID of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2943,7 +2943,7 @@ public final class HostGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -2951,7 +2951,7 @@ public final class HostGroupServiceOuterClass {
     int getMaintenancePolicyValue();
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -3359,7 +3359,7 @@ public final class HostGroupServiceOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * Availability zone where all dedicated hosts will be allocated
+     * Availability zone where all dedicated hosts will be allocated.
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3378,7 +3378,7 @@ public final class HostGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Availability zone where all dedicated hosts will be allocated
+     * Availability zone where all dedicated hosts will be allocated.
      * </pre>
      *
      * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3401,7 +3401,7 @@ public final class HostGroupServiceOuterClass {
     private volatile java.lang.Object typeId_;
     /**
      * <pre>
-     * ID of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3420,7 +3420,7 @@ public final class HostGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of host type. Resources provided by each host of the group
+     * ID of host type. Resources provided by each host of the group.
      * </pre>
      *
      * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3443,7 +3443,7 @@ public final class HostGroupServiceOuterClass {
     private int maintenancePolicy_;
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -3453,7 +3453,7 @@ public final class HostGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Behaviour on maintenance events
+     * Behaviour on maintenance events.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -4393,7 +4393,7 @@ public final class HostGroupServiceOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * Availability zone where all dedicated hosts will be allocated
+       * Availability zone where all dedicated hosts will be allocated.
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4412,7 +4412,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts will be allocated
+       * Availability zone where all dedicated hosts will be allocated.
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4432,7 +4432,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts will be allocated
+       * Availability zone where all dedicated hosts will be allocated.
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4449,7 +4449,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts will be allocated
+       * Availability zone where all dedicated hosts will be allocated.
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4462,7 +4462,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Availability zone where all dedicated hosts will be allocated
+       * Availability zone where all dedicated hosts will be allocated.
        * </pre>
        *
        * <code>string zone_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4482,7 +4482,7 @@ public final class HostGroupServiceOuterClass {
       private java.lang.Object typeId_ = "";
       /**
        * <pre>
-       * ID of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4501,7 +4501,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4521,7 +4521,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4538,7 +4538,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4551,7 +4551,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of host type. Resources provided by each host of the group
+       * ID of host type. Resources provided by each host of the group.
        * </pre>
        *
        * <code>string type_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4571,7 +4571,7 @@ public final class HostGroupServiceOuterClass {
       private int maintenancePolicy_ = 0;
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -4581,7 +4581,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -4593,7 +4593,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -4605,7 +4605,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
@@ -4621,7 +4621,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Behaviour on maintenance events
+       * Behaviour on maintenance events.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>

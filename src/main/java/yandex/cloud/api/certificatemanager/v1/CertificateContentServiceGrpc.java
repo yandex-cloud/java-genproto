@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing certificate content.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -83,12 +86,15 @@ public final class CertificateContentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificate content.
+   * </pre>
    */
   public static abstract class CertificateContentServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns chain and private key of the specified certificate
+     * Returns chain and private key of the specified certificate.
      * </pre>
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request,
@@ -110,6 +116,9 @@ public final class CertificateContentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificate content.
+   * </pre>
    */
   public static final class CertificateContentServiceStub extends io.grpc.stub.AbstractStub<CertificateContentServiceStub> {
     private CertificateContentServiceStub(io.grpc.Channel channel) {
@@ -129,7 +138,7 @@ public final class CertificateContentServiceGrpc {
 
     /**
      * <pre>
-     * Returns chain and private key of the specified certificate
+     * Returns chain and private key of the specified certificate.
      * </pre>
      */
     public void get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request,
@@ -140,6 +149,9 @@ public final class CertificateContentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificate content.
+   * </pre>
    */
   public static final class CertificateContentServiceBlockingStub extends io.grpc.stub.AbstractStub<CertificateContentServiceBlockingStub> {
     private CertificateContentServiceBlockingStub(io.grpc.Channel channel) {
@@ -159,7 +171,7 @@ public final class CertificateContentServiceGrpc {
 
     /**
      * <pre>
-     * Returns chain and private key of the specified certificate
+     * Returns chain and private key of the specified certificate.
      * </pre>
      */
     public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request) {
@@ -169,6 +181,9 @@ public final class CertificateContentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing certificate content.
+   * </pre>
    */
   public static final class CertificateContentServiceFutureStub extends io.grpc.stub.AbstractStub<CertificateContentServiceFutureStub> {
     private CertificateContentServiceFutureStub(io.grpc.Channel channel) {
@@ -188,7 +203,7 @@ public final class CertificateContentServiceGrpc {
 
     /**
      * <pre>
-     * Returns chain and private key of the specified certificate
+     * Returns chain and private key of the specified certificate.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse> get(

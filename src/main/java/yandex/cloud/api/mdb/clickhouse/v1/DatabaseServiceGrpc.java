@@ -18,6 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A set of methods for managing ClickHouse Database resources.
+ * NOTE: these methods are available only if database management through SQL is disabled.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -184,6 +185,7 @@ public final class DatabaseServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse Database resources.
+   * NOTE: these methods are available only if database management through SQL is disabled.
    * </pre>
    */
   public static abstract class DatabaseServiceImplBase implements io.grpc.BindableService {
@@ -266,6 +268,7 @@ public final class DatabaseServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse Database resources.
+   * NOTE: these methods are available only if database management through SQL is disabled.
    * </pre>
    */
   public static final class DatabaseServiceStub extends io.grpc.stub.AbstractStub<DatabaseServiceStub> {
@@ -333,6 +336,7 @@ public final class DatabaseServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse Database resources.
+   * NOTE: these methods are available only if database management through SQL is disabled.
    * </pre>
    */
   public static final class DatabaseServiceBlockingStub extends io.grpc.stub.AbstractStub<DatabaseServiceBlockingStub> {
@@ -396,6 +400,7 @@ public final class DatabaseServiceGrpc {
   /**
    * <pre>
    * A set of methods for managing ClickHouse Database resources.
+   * NOTE: these methods are available only if database management through SQL is disabled.
    * </pre>
    */
   public static final class DatabaseServiceFutureStub extends io.grpc.stub.AbstractStub<DatabaseServiceFutureStub> {

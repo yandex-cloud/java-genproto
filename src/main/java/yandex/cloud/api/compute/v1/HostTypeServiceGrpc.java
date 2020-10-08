@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Set of methods to view possible host configurations
+ * Set of methods to view possible host configurations.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -119,14 +119,14 @@ public final class HostTypeServiceGrpc {
 
   /**
    * <pre>
-   * Set of methods to view possible host configurations
+   * Set of methods to view possible host configurations.
    * </pre>
    */
   public static abstract class HostTypeServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns information about specified host type
+     * Returns information about specified host type.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.GetHostTypeRequest request,
@@ -136,7 +136,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * List avaliable host types
+     * List avaliable host types.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.ListHostTypesRequest request,
@@ -166,7 +166,7 @@ public final class HostTypeServiceGrpc {
 
   /**
    * <pre>
-   * Set of methods to view possible host configurations
+   * Set of methods to view possible host configurations.
    * </pre>
    */
   public static final class HostTypeServiceStub extends io.grpc.stub.AbstractStub<HostTypeServiceStub> {
@@ -187,7 +187,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * Returns information about specified host type
+     * Returns information about specified host type.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.GetHostTypeRequest request,
@@ -198,7 +198,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * List avaliable host types
+     * List avaliable host types.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.ListHostTypesRequest request,
@@ -210,7 +210,7 @@ public final class HostTypeServiceGrpc {
 
   /**
    * <pre>
-   * Set of methods to view possible host configurations
+   * Set of methods to view possible host configurations.
    * </pre>
    */
   public static final class HostTypeServiceBlockingStub extends io.grpc.stub.AbstractStub<HostTypeServiceBlockingStub> {
@@ -231,7 +231,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * Returns information about specified host type
+     * Returns information about specified host type.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostTypeOuterClass.HostType get(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.GetHostTypeRequest request) {
@@ -241,7 +241,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * List avaliable host types
+     * List avaliable host types.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.ListHostTypesResponse list(yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.ListHostTypesRequest request) {
@@ -252,7 +252,7 @@ public final class HostTypeServiceGrpc {
 
   /**
    * <pre>
-   * Set of methods to view possible host configurations
+   * Set of methods to view possible host configurations.
    * </pre>
    */
   public static final class HostTypeServiceFutureStub extends io.grpc.stub.AbstractStub<HostTypeServiceFutureStub> {
@@ -273,7 +273,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * Returns information about specified host type
+     * Returns information about specified host type.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostTypeOuterClass.HostType> get(
@@ -284,7 +284,7 @@ public final class HostTypeServiceGrpc {
 
     /**
      * <pre>
-     * List avaliable host types
+     * List avaliable host types.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostTypeServiceOuterClass.ListHostTypesResponse> list(

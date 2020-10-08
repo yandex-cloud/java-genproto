@@ -427,6 +427,15 @@ public final class SymmetricKeyOuterClass {
      * <code>.google.protobuf.Duration rotation_period = 11;</code>
      */
     com.google.protobuf.DurationOrBuilder getRotationPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 12;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * <pre>
@@ -451,6 +460,7 @@ public final class SymmetricKeyOuterClass {
       description_ = "";
       status_ = 0;
       defaultAlgorithm_ = 0;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -576,6 +586,11 @@ public final class SymmetricKeyOuterClass {
                 rotationPeriod_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -1215,6 +1230,19 @@ public final class SymmetricKeyOuterClass {
       return getRotationPeriod();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 12;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Flag that inhibits deletion of the key
+     * </pre>
+     *
+     * <code>bool deletion_protection = 12;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1264,6 +1292,9 @@ public final class SymmetricKeyOuterClass {
       }
       if (rotationPeriod_ != null) {
         output.writeMessage(11, getRotationPeriod());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(12, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -1320,6 +1351,10 @@ public final class SymmetricKeyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getRotationPeriod());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1368,6 +1403,8 @@ public final class SymmetricKeyOuterClass {
         result = result && getRotationPeriod()
             .equals(other.getRotationPeriod());
       }
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1411,6 +1448,9 @@ public final class SymmetricKeyOuterClass {
         hash = (37 * hash) + ROTATION_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getRotationPeriod().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1607,6 +1647,8 @@ public final class SymmetricKeyOuterClass {
           rotationPeriod_ = null;
           rotationPeriodBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -1663,6 +1705,7 @@ public final class SymmetricKeyOuterClass {
         } else {
           result.rotationPeriod_ = rotationPeriodBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1747,6 +1790,9 @@ public final class SymmetricKeyOuterClass {
         }
         if (other.hasRotationPeriod()) {
           mergeRotationPeriod(other.getRotationPeriod());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3043,6 +3089,44 @@ public final class SymmetricKeyOuterClass {
           rotationPeriod_ = null;
         }
         return rotationPeriodBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag that inhibits deletion of the key
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4909,7 +4993,7 @@ public final class SymmetricKeyOuterClass {
       "\n\'yandex/cloud/kms/v1/symmetric_key.prot" +
       "o\022\023yandex.cloud.kms.v1\032\037google/protobuf/" +
       "timestamp.proto\032\036google/protobuf/duratio" +
-      "n.proto\"\335\004\n\014SymmetricKey\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
+      "n.proto\"\372\004\n\014SymmetricKey\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
       "folder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
       "ogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n" +
       "\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(\0132-.yan" +
@@ -4921,24 +5005,25 @@ public final class SymmetricKeyOuterClass {
       "ex.cloud.kms.v1.SymmetricAlgorithm\022.\n\nro" +
       "tated_at\030\n \001(\0132\032.google.protobuf.Timesta" +
       "mp\0222\n\017rotation_period\030\013 \001(\0132\031.google.pro" +
-      "tobuf.Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATU" +
-      "S_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020" +
-      "\002\022\014\n\010INACTIVE\020\003\"\373\002\n\023SymmetricKeyVersion\022" +
-      "\n\n\002id\030\001 \001(\t\022\016\n\006key_id\030\002 \001(\t\022?\n\006status\030\003 " +
-      "\001(\0162/.yandex.cloud.kms.v1.SymmetricKeyVe" +
-      "rsion.Status\022:\n\talgorithm\030\004 \001(\0162\'.yandex" +
-      ".cloud.kms.v1.SymmetricAlgorithm\022.\n\ncrea" +
-      "ted_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\017\n\007primary\030\006 \001(\010\022.\n\ndestroy_at\030\007 \001(\0132\032." +
-      "google.protobuf.Timestamp\"Z\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\035\n\031SCHED" +
-      "ULED_FOR_DESTRUCTION\020\002\022\r\n\tDESTROYED\020\003*`\n" +
-      "\022SymmetricAlgorithm\022#\n\037SYMMETRIC_ALGORIT" +
-      "HM_UNSPECIFIED\020\000\022\013\n\007AES_128\020\001\022\013\n\007AES_192" +
-      "\020\002\022\013\n\007AES_256\020\003BV\n\027yandex.cloud.api.kms." +
-      "v1Z;github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/kms/v1;kmsb\006proto3"
+      "tobuf.Duration\022\033\n\023deletion_protection\030\014 " +
+      "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010INACTI" +
+      "VE\020\003\"\373\002\n\023SymmetricKeyVersion\022\n\n\002id\030\001 \001(\t" +
+      "\022\016\n\006key_id\030\002 \001(\t\022?\n\006status\030\003 \001(\0162/.yande" +
+      "x.cloud.kms.v1.SymmetricKeyVersion.Statu" +
+      "s\022:\n\talgorithm\030\004 \001(\0162\'.yandex.cloud.kms." +
+      "v1.SymmetricAlgorithm\022.\n\ncreated_at\030\005 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\017\n\007primary" +
+      "\030\006 \001(\010\022.\n\ndestroy_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\"Z\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\n\n\006ACTIVE\020\001\022\035\n\031SCHEDULED_FOR_DE" +
+      "STRUCTION\020\002\022\r\n\tDESTROYED\020\003*`\n\022SymmetricA" +
+      "lgorithm\022#\n\037SYMMETRIC_ALGORITHM_UNSPECIF" +
+      "IED\020\000\022\013\n\007AES_128\020\001\022\013\n\007AES_192\020\002\022\013\n\007AES_2" +
+      "56\020\003BV\n\027yandex.cloud.api.kms.v1Z;github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/kms/v1;kmsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4959,7 +5044,7 @@ public final class SymmetricKeyOuterClass {
     internal_static_yandex_cloud_kms_v1_SymmetricKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_kms_v1_SymmetricKey_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "PrimaryVersion", "DefaultAlgorithm", "RotatedAt", "RotationPeriod", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "PrimaryVersion", "DefaultAlgorithm", "RotatedAt", "RotationPeriod", "DeletionProtection", });
     internal_static_yandex_cloud_kms_v1_SymmetricKey_LabelsEntry_descriptor =
       internal_static_yandex_cloud_kms_v1_SymmetricKey_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_kms_v1_SymmetricKey_LabelsEntry_fieldAccessorTable = new

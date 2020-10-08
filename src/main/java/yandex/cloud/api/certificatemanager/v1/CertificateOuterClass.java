@@ -29,7 +29,7 @@ public final class CertificateOuterClass {
     CERTIFICATE_TYPE_UNSPECIFIED(0),
     /**
      * <pre>
-     * The certificate was imported by user
+     * The certificate is imported by user.
      * </pre>
      *
      * <code>IMPORTED = 1;</code>
@@ -37,7 +37,7 @@ public final class CertificateOuterClass {
     IMPORTED(1),
     /**
      * <pre>
-     * The certificate was created by service
+     * The certificate is created by service.
      * </pre>
      *
      * <code>MANAGED = 2;</code>
@@ -52,7 +52,7 @@ public final class CertificateOuterClass {
     public static final int CERTIFICATE_TYPE_UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * The certificate was imported by user
+     * The certificate is imported by user.
      * </pre>
      *
      * <code>IMPORTED = 1;</code>
@@ -60,7 +60,7 @@ public final class CertificateOuterClass {
     public static final int IMPORTED_VALUE = 1;
     /**
      * <pre>
-     * The certificate was created by service
+     * The certificate is created by service.
      * </pre>
      *
      * <code>MANAGED = 2;</code>
@@ -274,7 +274,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * ID of the certificate.
+     * ID of the certificate. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -282,7 +282,7 @@ public final class CertificateOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the certificate.
+     * ID of the certificate. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -310,7 +310,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -318,7 +318,7 @@ public final class CertificateOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -326,7 +326,7 @@ public final class CertificateOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -336,6 +336,7 @@ public final class CertificateOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -344,6 +345,7 @@ public final class CertificateOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -371,7 +373,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -379,7 +381,7 @@ public final class CertificateOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -394,7 +396,7 @@ public final class CertificateOuterClass {
     getLabels();
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -403,7 +405,7 @@ public final class CertificateOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -414,7 +416,7 @@ public final class CertificateOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -494,7 +496,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Name of the certificate authority that issued the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
      * </pre>
      *
      * <code>string issuer = 10;</code>
@@ -502,7 +504,7 @@ public final class CertificateOuterClass {
     java.lang.String getIssuer();
     /**
      * <pre>
-     * Name of the certificate authority that issued the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
      * </pre>
      *
      * <code>string issuer = 10;</code>
@@ -512,7 +514,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Name of the entity that is associated with the public key contained in the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
      * </pre>
      *
      * <code>string subject = 11;</code>
@@ -520,7 +522,7 @@ public final class CertificateOuterClass {
     java.lang.String getSubject();
     /**
      * <pre>
-     * Name of the entity that is associated with the public key contained in the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
      * </pre>
      *
      * <code>string subject = 11;</code>
@@ -530,7 +532,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Serial number of the certificate
+     * Serial number of the certificate.
      * </pre>
      *
      * <code>string serial = 12;</code>
@@ -538,7 +540,7 @@ public final class CertificateOuterClass {
     java.lang.String getSerial();
     /**
      * <pre>
-     * Serial number of the certificate
+     * Serial number of the certificate.
      * </pre>
      *
      * <code>string serial = 12;</code>
@@ -548,7 +550,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -556,7 +558,7 @@ public final class CertificateOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -564,7 +566,7 @@ public final class CertificateOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -573,7 +575,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -581,7 +583,7 @@ public final class CertificateOuterClass {
     boolean hasIssuedAt();
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -589,7 +591,7 @@ public final class CertificateOuterClass {
     com.google.protobuf.Timestamp getIssuedAt();
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -648,7 +650,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -657,7 +659,7 @@ public final class CertificateOuterClass {
         getChallengesList();
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -665,7 +667,7 @@ public final class CertificateOuterClass {
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge getChallenges(int index);
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -673,7 +675,7 @@ public final class CertificateOuterClass {
     int getChallengesCount();
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -682,7 +684,7 @@ public final class CertificateOuterClass {
         getChallengesOrBuilderList();
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -692,7 +694,7 @@ public final class CertificateOuterClass {
   }
   /**
    * <pre>
-   * A certificate.
+   * A certificate. For details about the concept, see [documentation](docs/certificate-manager/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.certificatemanager.v1.Certificate}
@@ -955,7 +957,7 @@ public final class CertificateOuterClass {
       STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * The certificate domains validation are required. Used only for MANAGED certificates.
+       * The certificate domains validation are required. Used only for managed certificates.
        * </pre>
        *
        * <code>VALIDATING = 1;</code>
@@ -963,7 +965,7 @@ public final class CertificateOuterClass {
       VALIDATING(1),
       /**
        * <pre>
-       * The certificate issuance was failed. Used only for MANAGED certificates.
+       * The certificate issuance is failed. Used only for managed certificates.
        * </pre>
        *
        * <code>INVALID = 2;</code>
@@ -971,7 +973,7 @@ public final class CertificateOuterClass {
       INVALID(2),
       /**
        * <pre>
-       * The certificate was issued.
+       * The certificate is issued.
        * </pre>
        *
        * <code>ISSUED = 3;</code>
@@ -979,7 +981,7 @@ public final class CertificateOuterClass {
       ISSUED(3),
       /**
        * <pre>
-       * The certificate was revoked.
+       * The certificate is revoked.
        * </pre>
        *
        * <code>REVOKED = 4;</code>
@@ -987,7 +989,7 @@ public final class CertificateOuterClass {
       REVOKED(4),
       /**
        * <pre>
-       * The certificate renewal was started. Used only for MANAGED certificates.
+       * The certificate renewal is started. Used only for managed certificates.
        * </pre>
        *
        * <code>RENEWING = 5;</code>
@@ -995,7 +997,7 @@ public final class CertificateOuterClass {
       RENEWING(5),
       /**
        * <pre>
-       * The certificate renewal was failed. Used only for MANAGED certificates.
+       * The certificate renewal is failed. Used only for managed certificates.
        * </pre>
        *
        * <code>RENEWAL_FAILED = 6;</code>
@@ -1010,7 +1012,7 @@ public final class CertificateOuterClass {
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * The certificate domains validation are required. Used only for MANAGED certificates.
+       * The certificate domains validation are required. Used only for managed certificates.
        * </pre>
        *
        * <code>VALIDATING = 1;</code>
@@ -1018,7 +1020,7 @@ public final class CertificateOuterClass {
       public static final int VALIDATING_VALUE = 1;
       /**
        * <pre>
-       * The certificate issuance was failed. Used only for MANAGED certificates.
+       * The certificate issuance is failed. Used only for managed certificates.
        * </pre>
        *
        * <code>INVALID = 2;</code>
@@ -1026,7 +1028,7 @@ public final class CertificateOuterClass {
       public static final int INVALID_VALUE = 2;
       /**
        * <pre>
-       * The certificate was issued.
+       * The certificate is issued.
        * </pre>
        *
        * <code>ISSUED = 3;</code>
@@ -1034,7 +1036,7 @@ public final class CertificateOuterClass {
       public static final int ISSUED_VALUE = 3;
       /**
        * <pre>
-       * The certificate was revoked.
+       * The certificate is revoked.
        * </pre>
        *
        * <code>REVOKED = 4;</code>
@@ -1042,7 +1044,7 @@ public final class CertificateOuterClass {
       public static final int REVOKED_VALUE = 4;
       /**
        * <pre>
-       * The certificate renewal was started. Used only for MANAGED certificates.
+       * The certificate renewal is started. Used only for managed certificates.
        * </pre>
        *
        * <code>RENEWING = 5;</code>
@@ -1050,7 +1052,7 @@ public final class CertificateOuterClass {
       public static final int RENEWING_VALUE = 5;
       /**
        * <pre>
-       * The certificate renewal was failed. Used only for MANAGED certificates.
+       * The certificate renewal is failed. Used only for managed certificates.
        * </pre>
        *
        * <code>RENEWAL_FAILED = 6;</code>
@@ -1140,7 +1142,7 @@ public final class CertificateOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the certificate.
+     * ID of the certificate. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1159,7 +1161,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * ID of the certificate.
+     * ID of the certificate. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -1224,7 +1226,7 @@ public final class CertificateOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1234,7 +1236,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1244,7 +1246,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was created.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -1258,6 +1260,7 @@ public final class CertificateOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1277,6 +1280,7 @@ public final class CertificateOuterClass {
     /**
      * <pre>
      * Name of the certificate.
+     * The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1365,7 +1369,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1385,7 +1389,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1396,7 +1400,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1412,7 +1416,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+     * Certificate labels as `key:value` pairs.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1528,7 +1532,7 @@ public final class CertificateOuterClass {
     private volatile java.lang.Object issuer_;
     /**
      * <pre>
-     * Name of the certificate authority that issued the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
      * </pre>
      *
      * <code>string issuer = 10;</code>
@@ -1547,7 +1551,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Name of the certificate authority that issued the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
      * </pre>
      *
      * <code>string issuer = 10;</code>
@@ -1570,7 +1574,7 @@ public final class CertificateOuterClass {
     private volatile java.lang.Object subject_;
     /**
      * <pre>
-     * Name of the entity that is associated with the public key contained in the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
      * </pre>
      *
      * <code>string subject = 11;</code>
@@ -1589,7 +1593,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Name of the entity that is associated with the public key contained in the certificate.
+     * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
      * </pre>
      *
      * <code>string subject = 11;</code>
@@ -1612,7 +1616,7 @@ public final class CertificateOuterClass {
     private volatile java.lang.Object serial_;
     /**
      * <pre>
-     * Serial number of the certificate
+     * Serial number of the certificate.
      * </pre>
      *
      * <code>string serial = 12;</code>
@@ -1631,7 +1635,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Serial number of the certificate
+     * Serial number of the certificate.
      * </pre>
      *
      * <code>string serial = 12;</code>
@@ -1654,7 +1658,7 @@ public final class CertificateOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -1664,7 +1668,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -1674,7 +1678,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was updated
+     * Time when the certificate is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -1687,7 +1691,7 @@ public final class CertificateOuterClass {
     private com.google.protobuf.Timestamp issuedAt_;
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -1697,7 +1701,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -1707,7 +1711,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the certificate was issued
+     * Time when the certificate is issued.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -1786,7 +1790,7 @@ public final class CertificateOuterClass {
     private java.util.List<yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge> challenges_;
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -1796,7 +1800,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -1807,7 +1811,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -1817,7 +1821,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -1827,7 +1831,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+     * Domains validation challenges of the certificate. Used only for managed certificates.
      * </pre>
      *
      * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -2206,7 +2210,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * A certificate.
+     * A certificate. For details about the concept, see [documentation](docs/certificate-manager/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.certificatemanager.v1.Certificate}
@@ -2573,7 +2577,7 @@ public final class CertificateOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the certificate.
+       * ID of the certificate. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2592,7 +2596,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate.
+       * ID of the certificate. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2612,7 +2616,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate.
+       * ID of the certificate. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2629,7 +2633,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate.
+       * ID of the certificate. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2642,7 +2646,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * ID of the certificate.
+       * ID of the certificate. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2753,7 +2757,7 @@ public final class CertificateOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2763,7 +2767,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2777,7 +2781,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2797,7 +2801,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2815,7 +2819,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2837,7 +2841,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2855,7 +2859,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2867,7 +2871,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2882,7 +2886,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was created.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2905,6 +2909,7 @@ public final class CertificateOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2924,6 +2929,7 @@ public final class CertificateOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2944,6 +2950,7 @@ public final class CertificateOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2961,6 +2968,7 @@ public final class CertificateOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2974,6 +2982,7 @@ public final class CertificateOuterClass {
       /**
        * <pre>
        * Name of the certificate.
+       * The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -3107,7 +3116,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3127,7 +3136,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3138,7 +3147,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3154,7 +3163,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3178,7 +3187,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3201,7 +3210,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3217,7 +3226,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Certificate labels as `key:value` pairs. Maximum 64 per certificate.
+       * Certificate labels as `key:value` pairs.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3493,7 +3502,7 @@ public final class CertificateOuterClass {
       private java.lang.Object issuer_ = "";
       /**
        * <pre>
-       * Name of the certificate authority that issued the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
        * </pre>
        *
        * <code>string issuer = 10;</code>
@@ -3512,7 +3521,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the certificate authority that issued the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
        * </pre>
        *
        * <code>string issuer = 10;</code>
@@ -3532,7 +3541,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the certificate authority that issued the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
        * </pre>
        *
        * <code>string issuer = 10;</code>
@@ -3549,7 +3558,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the certificate authority that issued the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
        * </pre>
        *
        * <code>string issuer = 10;</code>
@@ -3562,7 +3571,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the certificate authority that issued the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the certificate authority that issued the certificate.
        * </pre>
        *
        * <code>string issuer = 10;</code>
@@ -3582,7 +3591,7 @@ public final class CertificateOuterClass {
       private java.lang.Object subject_ = "";
       /**
        * <pre>
-       * Name of the entity that is associated with the public key contained in the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
        * </pre>
        *
        * <code>string subject = 11;</code>
@@ -3601,7 +3610,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the entity that is associated with the public key contained in the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
        * </pre>
        *
        * <code>string subject = 11;</code>
@@ -3621,7 +3630,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the entity that is associated with the public key contained in the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
        * </pre>
        *
        * <code>string subject = 11;</code>
@@ -3638,7 +3647,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the entity that is associated with the public key contained in the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
        * </pre>
        *
        * <code>string subject = 11;</code>
@@ -3651,7 +3660,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Name of the entity that is associated with the public key contained in the certificate.
+       * [Distinguished Name](https://tools.ietf.org/html/rfc1779) of the entity that is associated with the public key contained in the certificate.
        * </pre>
        *
        * <code>string subject = 11;</code>
@@ -3671,7 +3680,7 @@ public final class CertificateOuterClass {
       private java.lang.Object serial_ = "";
       /**
        * <pre>
-       * Serial number of the certificate
+       * Serial number of the certificate.
        * </pre>
        *
        * <code>string serial = 12;</code>
@@ -3690,7 +3699,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Serial number of the certificate
+       * Serial number of the certificate.
        * </pre>
        *
        * <code>string serial = 12;</code>
@@ -3710,7 +3719,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Serial number of the certificate
+       * Serial number of the certificate.
        * </pre>
        *
        * <code>string serial = 12;</code>
@@ -3727,7 +3736,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Serial number of the certificate
+       * Serial number of the certificate.
        * </pre>
        *
        * <code>string serial = 12;</code>
@@ -3740,7 +3749,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Serial number of the certificate
+       * Serial number of the certificate.
        * </pre>
        *
        * <code>string serial = 12;</code>
@@ -3762,7 +3771,7 @@ public final class CertificateOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3772,7 +3781,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3786,7 +3795,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3806,7 +3815,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3824,7 +3833,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3846,7 +3855,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3864,7 +3873,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3876,7 +3885,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3891,7 +3900,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was updated
+       * Time when the certificate is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 13;</code>
@@ -3915,7 +3924,7 @@ public final class CertificateOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issuedAtBuilder_;
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -3925,7 +3934,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -3939,7 +3948,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -3959,7 +3968,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -3977,7 +3986,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -3999,7 +4008,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -4017,7 +4026,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -4029,7 +4038,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -4044,7 +4053,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the certificate was issued
+       * Time when the certificate is issued.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp issued_at = 14;</code>
@@ -4383,7 +4392,7 @@ public final class CertificateOuterClass {
 
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4397,7 +4406,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4411,7 +4420,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4425,7 +4434,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4446,7 +4455,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4464,7 +4473,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4484,7 +4493,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4505,7 +4514,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4523,7 +4532,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4541,7 +4550,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4560,7 +4569,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4577,7 +4586,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4594,7 +4603,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4605,7 +4614,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4619,7 +4628,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4634,7 +4643,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4645,7 +4654,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4657,7 +4666,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Domains validation challenges of the certificate. Used only for MANAGED certificates.
+       * Domains validation challenges of the certificate. Used only for managed certificates.
        * </pre>
        *
        * <code>repeated .yandex.cloud.certificatemanager.v1.Challenge challenges = 17;</code>
@@ -4774,7 +4783,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -4782,7 +4791,7 @@ public final class CertificateOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -4790,7 +4799,7 @@ public final class CertificateOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -4799,7 +4808,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -4807,7 +4816,7 @@ public final class CertificateOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -4815,7 +4824,7 @@ public final class CertificateOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -4877,7 +4886,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -4885,7 +4894,7 @@ public final class CertificateOuterClass {
     boolean hasDnsChallenge();
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -4893,7 +4902,7 @@ public final class CertificateOuterClass {
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord getDnsChallenge();
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -4902,7 +4911,7 @@ public final class CertificateOuterClass {
 
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -4910,7 +4919,7 @@ public final class CertificateOuterClass {
     boolean hasHttpChallenge();
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -4918,7 +4927,7 @@ public final class CertificateOuterClass {
     yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile getHttpChallenge();
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -5101,18 +5110,34 @@ public final class CertificateOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * The challenge is waiting to be completed.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       PENDING(1),
       /**
+       * <pre>
+       * The challenge is awaiting approval from Let's Encrypt.
+       * </pre>
+       *
        * <code>PROCESSING = 2;</code>
        */
       PROCESSING(2),
       /**
+       * <pre>
+       * The challenge is complete.
+       * </pre>
+       *
        * <code>VALID = 3;</code>
        */
       VALID(3),
       /**
+       * <pre>
+       * The rights check for a specific domain failed or the one-week period allocated for the check expired.
+       * </pre>
+       *
        * <code>INVALID = 4;</code>
        */
       INVALID(4),
@@ -5124,18 +5149,34 @@ public final class CertificateOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * The challenge is waiting to be completed.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       public static final int PENDING_VALUE = 1;
       /**
+       * <pre>
+       * The challenge is awaiting approval from Let's Encrypt.
+       * </pre>
+       *
        * <code>PROCESSING = 2;</code>
        */
       public static final int PROCESSING_VALUE = 2;
       /**
+       * <pre>
+       * The challenge is complete.
+       * </pre>
+       *
        * <code>VALID = 3;</code>
        */
       public static final int VALID_VALUE = 3;
       /**
+       * <pre>
+       * The rights check for a specific domain failed or the one-week period allocated for the check expired.
+       * </pre>
+       *
        * <code>INVALID = 4;</code>
        */
       public static final int INVALID_VALUE = 4;
@@ -5240,7 +5281,7 @@ public final class CertificateOuterClass {
 
       /**
        * <pre>
-       * Type of the DNS record.
+       * Type of the DNS-record.
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -5248,7 +5289,7 @@ public final class CertificateOuterClass {
       java.lang.String getType();
       /**
        * <pre>
-       * Type of the DNS record.
+       * Type of the DNS-record.
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -5258,7 +5299,7 @@ public final class CertificateOuterClass {
 
       /**
        * <pre>
-       * Value of the DNS record.
+       * Value of the DNS-record.
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -5266,7 +5307,7 @@ public final class CertificateOuterClass {
       java.lang.String getValue();
       /**
        * <pre>
-       * Value of the DNS record.
+       * Value of the DNS-record.
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -5412,7 +5453,7 @@ public final class CertificateOuterClass {
       private volatile java.lang.Object type_;
       /**
        * <pre>
-       * Type of the DNS record.
+       * Type of the DNS-record.
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -5431,7 +5472,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Type of the DNS record.
+       * Type of the DNS-record.
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -5454,7 +5495,7 @@ public final class CertificateOuterClass {
       private volatile java.lang.Object value_;
       /**
        * <pre>
-       * Value of the DNS record.
+       * Value of the DNS-record.
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -5473,7 +5514,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Value of the DNS record.
+       * Value of the DNS-record.
        * </pre>
        *
        * <code>string value = 3;</code>
@@ -5921,7 +5962,7 @@ public final class CertificateOuterClass {
         private java.lang.Object type_ = "";
         /**
          * <pre>
-         * Type of the DNS record.
+         * Type of the DNS-record.
          * </pre>
          *
          * <code>string type = 2;</code>
@@ -5940,7 +5981,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Type of the DNS record.
+         * Type of the DNS-record.
          * </pre>
          *
          * <code>string type = 2;</code>
@@ -5960,7 +6001,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Type of the DNS record.
+         * Type of the DNS-record.
          * </pre>
          *
          * <code>string type = 2;</code>
@@ -5977,7 +6018,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Type of the DNS record.
+         * Type of the DNS-record.
          * </pre>
          *
          * <code>string type = 2;</code>
@@ -5990,7 +6031,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Type of the DNS record.
+         * Type of the DNS-record.
          * </pre>
          *
          * <code>string type = 2;</code>
@@ -6010,7 +6051,7 @@ public final class CertificateOuterClass {
         private java.lang.Object value_ = "";
         /**
          * <pre>
-         * Value of the DNS record.
+         * Value of the DNS-record.
          * </pre>
          *
          * <code>string value = 3;</code>
@@ -6029,7 +6070,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Value of the DNS record.
+         * Value of the DNS-record.
          * </pre>
          *
          * <code>string value = 3;</code>
@@ -6049,7 +6090,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Value of the DNS record.
+         * Value of the DNS-record.
          * </pre>
          *
          * <code>string value = 3;</code>
@@ -6066,7 +6107,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Value of the DNS record.
+         * Value of the DNS-record.
          * </pre>
          *
          * <code>string value = 3;</code>
@@ -6079,7 +6120,7 @@ public final class CertificateOuterClass {
         }
         /**
          * <pre>
-         * Value of the DNS record.
+         * Value of the DNS-record.
          * </pre>
          *
          * <code>string value = 3;</code>
@@ -7016,7 +7057,7 @@ public final class CertificateOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7026,7 +7067,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7036,7 +7077,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the challenge was created.
+     * Time when the challenge is created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7049,7 +7090,7 @@ public final class CertificateOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -7059,7 +7100,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -7069,7 +7110,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * Time when the challenge was updated.
+     * Time when the challenge is updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -7190,7 +7231,7 @@ public final class CertificateOuterClass {
     public static final int DNS_CHALLENGE_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -7200,7 +7241,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -7213,7 +7254,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * DNS record.
+     * DNS-record.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -7228,7 +7269,7 @@ public final class CertificateOuterClass {
     public static final int HTTP_CHALLENGE_FIELD_NUMBER = 9;
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -7238,7 +7279,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -7251,7 +7292,7 @@ public final class CertificateOuterClass {
     }
     /**
      * <pre>
-     * HTTP file.
+     * HTTP-file.
      * </pre>
      *
      * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -7941,7 +7982,7 @@ public final class CertificateOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7951,7 +7992,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7965,7 +8006,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -7985,7 +8026,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8003,7 +8044,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8025,7 +8066,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8043,7 +8084,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8055,7 +8096,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8070,7 +8111,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was created.
+       * Time when the challenge is created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -8094,7 +8135,7 @@ public final class CertificateOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8104,7 +8145,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8118,7 +8159,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8138,7 +8179,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8156,7 +8197,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8178,7 +8219,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8196,7 +8237,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8208,7 +8249,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8223,7 +8264,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * Time when the challenge was updated.
+       * Time when the challenge is updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 4;</code>
@@ -8489,7 +8530,7 @@ public final class CertificateOuterClass {
           yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecord.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.DnsRecordOrBuilder> dnsChallengeBuilder_;
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8499,7 +8540,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8519,7 +8560,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8539,7 +8580,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8557,7 +8598,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8583,7 +8624,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8606,7 +8647,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8616,7 +8657,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8633,7 +8674,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * DNS record.
+       * DNS-record.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.DnsRecord dns_challenge = 8;</code>
@@ -8661,7 +8702,7 @@ public final class CertificateOuterClass {
           yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFile.Builder, yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.Challenge.HttpFileOrBuilder> httpChallengeBuilder_;
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8671,7 +8712,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8691,7 +8732,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8711,7 +8752,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8729,7 +8770,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8755,7 +8796,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8778,7 +8819,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8788,7 +8829,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>
@@ -8805,7 +8846,7 @@ public final class CertificateOuterClass {
       }
       /**
        * <pre>
-       * HTTP file.
+       * HTTP-file.
        * </pre>
        *
        * <code>.yandex.cloud.certificatemanager.v1.Challenge.HttpFile http_challenge = 9;</code>

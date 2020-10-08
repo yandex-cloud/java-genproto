@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing groups of dedicated hosts
+ * A set of methods for managing groups of dedicated hosts.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -311,14 +311,14 @@ public final class HostGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing groups of dedicated hosts
+   * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
   public static abstract class HostGroupServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified host group
+     * Returns the specified host group.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request,
@@ -328,7 +328,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of host groups in the specified folder
+     * Retrieves the list of host groups in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request,
@@ -368,7 +368,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified host group
+     * Lists operations for the specified host group.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request,
@@ -378,7 +378,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists instances that belongs to the specified host group
+     * Lists instances that belongs to the specified host group.
      * </pre>
      */
     public void listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request,
@@ -388,7 +388,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists hosts that belongs to the specified host group
+     * Lists hosts that belongs to the specified host group.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request,
@@ -460,7 +460,7 @@ public final class HostGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing groups of dedicated hosts
+   * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
   public static final class HostGroupServiceStub extends io.grpc.stub.AbstractStub<HostGroupServiceStub> {
@@ -481,7 +481,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified host group
+     * Returns the specified host group.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request,
@@ -492,7 +492,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of host groups in the specified folder
+     * Retrieves the list of host groups in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request,
@@ -536,7 +536,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified host group
+     * Lists operations for the specified host group.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request,
@@ -547,7 +547,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists instances that belongs to the specified host group
+     * Lists instances that belongs to the specified host group.
      * </pre>
      */
     public void listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request,
@@ -558,7 +558,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists hosts that belongs to the specified host group
+     * Lists hosts that belongs to the specified host group.
      * </pre>
      */
     public void listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request,
@@ -570,7 +570,7 @@ public final class HostGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing groups of dedicated hosts
+   * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
   public static final class HostGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<HostGroupServiceBlockingStub> {
@@ -591,7 +591,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified host group
+     * Returns the specified host group.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup get(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.GetHostGroupRequest request) {
@@ -601,7 +601,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of host groups in the specified folder
+     * Retrieves the list of host groups in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse list(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsRequest request) {
@@ -641,7 +641,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified host group
+     * Lists operations for the specified host group.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse listOperations(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsRequest request) {
@@ -651,7 +651,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists instances that belongs to the specified host group
+     * Lists instances that belongs to the specified host group.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse listInstances(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesRequest request) {
@@ -661,7 +661,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists hosts that belongs to the specified host group
+     * Lists hosts that belongs to the specified host group.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse listHosts(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsRequest request) {
@@ -672,7 +672,7 @@ public final class HostGroupServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing groups of dedicated hosts
+   * A set of methods for managing groups of dedicated hosts.
    * </pre>
    */
   public static final class HostGroupServiceFutureStub extends io.grpc.stub.AbstractStub<HostGroupServiceFutureStub> {
@@ -693,7 +693,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified host group
+     * Returns the specified host group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupOuterClass.HostGroup> get(
@@ -704,7 +704,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of host groups in the specified folder
+     * Retrieves the list of host groups in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupsResponse> list(
@@ -748,7 +748,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified host group
+     * Lists operations for the specified host group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupOperationsResponse> listOperations(
@@ -759,7 +759,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists instances that belongs to the specified host group
+     * Lists instances that belongs to the specified host group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupInstancesResponse> listInstances(
@@ -770,7 +770,7 @@ public final class HostGroupServiceGrpc {
 
     /**
      * <pre>
-     * Lists hosts that belongs to the specified host group
+     * Lists hosts that belongs to the specified host group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.ListHostGroupHostsResponse> listHosts(
