@@ -21,9 +21,9 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+     * results is larger than [page_size], the service returns a [ListVersionsResponse.next_page_token] that can be used
      * to get the next page of results in subsequent ListVersions requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -32,7 +32,7 @@ public final class VersionsServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+     * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
      * request to get the next page of results.
      * </pre>
      *
@@ -41,7 +41,7 @@ public final class VersionsServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+     * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
      * request to get the next page of results.
      * </pre>
      *
@@ -139,9 +139,9 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page that should be returned. If the number of available
-     * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+     * results is larger than [page_size], the service returns a [ListVersionsResponse.next_page_token] that can be used
      * to get the next page of results in subsequent ListVersions requests.
-     * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -154,7 +154,7 @@ public final class VersionsServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+     * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
      * request to get the next page of results.
      * </pre>
      *
@@ -174,7 +174,7 @@ public final class VersionsServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+     * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
      * request to get the next page of results.
      * </pre>
      *
@@ -519,9 +519,9 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * results is larger than [page_size], the service returns a [ListVersionsResponse.next_page_token] that can be used
        * to get the next page of results in subsequent ListVersions requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -532,9 +532,9 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * results is larger than [page_size], the service returns a [ListVersionsResponse.next_page_token] that can be used
        * to get the next page of results in subsequent ListVersions requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -548,9 +548,9 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than `page_size`, the service returns a `next_page_token` that can be used
+       * results is larger than [page_size], the service returns a [ListVersionsResponse.next_page_token] that can be used
        * to get the next page of results in subsequent ListVersions requests.
-       * Acceptable values are 0 to 1000, inclusive. Default value: 100.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -565,7 +565,7 @@ public final class VersionsServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+       * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
        * request to get the next page of results.
        * </pre>
        *
@@ -585,7 +585,7 @@ public final class VersionsServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+       * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
        * request to get the next page of results.
        * </pre>
        *
@@ -606,7 +606,7 @@ public final class VersionsServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+       * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
        * request to get the next page of results.
        * </pre>
        *
@@ -624,7 +624,7 @@ public final class VersionsServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+       * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
        * request to get the next page of results.
        * </pre>
        *
@@ -638,7 +638,7 @@ public final class VersionsServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. Set `page_token` to the `next_page_token` returned by a previous ListVersions
+       * Page token. Set [page_token] to the [ListVersionsResponse.next_page_token] returned by a previous ListVersions
        * request to get the next page of results.
        * </pre>
        *
@@ -759,10 +759,10 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for ListVersions requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+     * To get the next page, specify the value of [next_page_token] as a value for
+     * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+     * requests will have their own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -771,10 +771,10 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for ListVersions requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+     * To get the next page, specify the value of [next_page_token] as a value for
+     * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+     * requests will have their own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -934,10 +934,10 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for ListVersions requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+     * To get the next page, specify the value of [next_page_token] as a value for
+     * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+     * requests will have their own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -957,10 +957,10 @@ public final class VersionsServiceOuterClass {
     /**
      * <pre>
      * This token allows you to get the next page of results for ListVersions requests,
-     * if the number of results is larger than `page_size` specified in the request.
-     * To get the next page, specify the value of `next_page_token` as a value for
-     * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-     * requests will have their own `next_page_token` to continue paging through the results.
+     * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+     * To get the next page, specify the value of [next_page_token] as a value for
+     * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+     * requests will have their own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1657,10 +1657,10 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for ListVersions requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+       * To get the next page, specify the value of [next_page_token] as a value for
+       * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+       * requests will have their own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -1680,10 +1680,10 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for ListVersions requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+       * To get the next page, specify the value of [next_page_token] as a value for
+       * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+       * requests will have their own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -1704,10 +1704,10 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for ListVersions requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+       * To get the next page, specify the value of [next_page_token] as a value for
+       * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+       * requests will have their own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -1725,10 +1725,10 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for ListVersions requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+       * To get the next page, specify the value of [next_page_token] as a value for
+       * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+       * requests will have their own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -1742,10 +1742,10 @@ public final class VersionsServiceOuterClass {
       /**
        * <pre>
        * This token allows you to get the next page of results for ListVersions requests,
-       * if the number of results is larger than `page_size` specified in the request.
-       * To get the next page, specify the value of `next_page_token` as a value for
-       * the `page_token` parameter in the next ListVerions request. Subsequent ListVersions
-       * requests will have their own `next_page_token` to continue paging through the results.
+       * if the number of results is larger than [ListVersionsRequest.page_size] specified in the request.
+       * To get the next page, specify the value of [next_page_token] as a value for
+       * the [ListVersionsRequest.page_token] parameter in the next ListVerions request. Subsequent ListVersions
+       * requests will have their own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

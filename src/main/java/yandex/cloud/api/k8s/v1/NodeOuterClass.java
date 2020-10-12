@@ -12062,7 +12062,7 @@ public final class NodeOuterClass {
      * Amount of memory available to the node, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     long getMemory();
 
@@ -12071,7 +12071,7 @@ public final class NodeOuterClass {
      * Number of cores available to the node.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0,1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,44,48,52,56,60,64"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     long getCores();
 
@@ -12081,7 +12081,7 @@ public final class NodeOuterClass {
      * This field sets baseline performance for each core.
      * </pre>
      *
-     * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
+     * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      */
     long getCoreFraction();
 
@@ -12090,7 +12090,7 @@ public final class NodeOuterClass {
      * Number of GPUs available to the node.
      * </pre>
      *
-     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     long getGpus();
   }
@@ -12196,7 +12196,7 @@ public final class NodeOuterClass {
      * Amount of memory available to the node, specified in bytes.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     public long getMemory() {
       return memory_;
@@ -12209,7 +12209,7 @@ public final class NodeOuterClass {
      * Number of cores available to the node.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0,1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,44,48,52,56,60,64"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     public long getCores() {
       return cores_;
@@ -12223,7 +12223,7 @@ public final class NodeOuterClass {
      * This field sets baseline performance for each core.
      * </pre>
      *
-     * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
+     * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
      */
     public long getCoreFraction() {
       return coreFraction_;
@@ -12236,7 +12236,7 @@ public final class NodeOuterClass {
      * Number of GPUs available to the node.
      * </pre>
      *
-     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+     * <code>int64 gpus = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     public long getGpus() {
       return gpus_;
@@ -12606,7 +12606,7 @@ public final class NodeOuterClass {
        * Amount of memory available to the node, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public long getMemory() {
         return memory_;
@@ -12616,7 +12616,7 @@ public final class NodeOuterClass {
        * Amount of memory available to the node, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setMemory(long value) {
         
@@ -12629,7 +12629,7 @@ public final class NodeOuterClass {
        * Amount of memory available to the node, specified in bytes.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&lt;=824633720832"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder clearMemory() {
         
@@ -12644,7 +12644,7 @@ public final class NodeOuterClass {
        * Number of cores available to the node.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0,1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,44,48,52,56,60,64"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public long getCores() {
         return cores_;
@@ -12654,7 +12654,7 @@ public final class NodeOuterClass {
        * Number of cores available to the node.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0,1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,44,48,52,56,60,64"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setCores(long value) {
         
@@ -12667,7 +12667,7 @@ public final class NodeOuterClass {
        * Number of cores available to the node.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0,1,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,44,48,52,56,60,64"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder clearCores() {
         
@@ -12683,7 +12683,7 @@ public final class NodeOuterClass {
        * This field sets baseline performance for each core.
        * </pre>
        *
-       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
+       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public long getCoreFraction() {
         return coreFraction_;
@@ -12694,7 +12694,7 @@ public final class NodeOuterClass {
        * This field sets baseline performance for each core.
        * </pre>
        *
-       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
+       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder setCoreFraction(long value) {
         
@@ -12708,7 +12708,7 @@ public final class NodeOuterClass {
        * This field sets baseline performance for each core.
        * </pre>
        *
-       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0,5,20,50,100"];</code>
+       * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
        */
       public Builder clearCoreFraction() {
         
@@ -12723,7 +12723,7 @@ public final class NodeOuterClass {
        * Number of GPUs available to the node.
        * </pre>
        *
-       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public long getGpus() {
         return gpus_;
@@ -12733,7 +12733,7 @@ public final class NodeOuterClass {
        * Number of GPUs available to the node.
        * </pre>
        *
-       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setGpus(long value) {
         
@@ -12746,7 +12746,7 @@ public final class NodeOuterClass {
        * Number of GPUs available to the node.
        * </pre>
        *
-       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "0,1,2,4"];</code>
+       * <code>int64 gpus = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder clearGpus() {
         
@@ -14109,20 +14109,18 @@ public final class NodeOuterClass {
       "\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex.c" +
       "loud.k8s.v1.OneToOneNatSpec\"E\n\017OneToOneN" +
       "atSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.clou" +
-      "d.k8s.v1.IpVersion\"\327\001\n\rResourcesSpec\022\"\n\006" +
-      "memory\030\001 \001(\003B\022\372\3071\016<=824633720832\022]\n\005core" +
-      "s\030\002 \001(\003BN\372\3071J0,1,2,4,6,8,10,12,14,16,18," +
-      "20,22,24,26,28,30,32,34,36,40,44,48,52,5" +
-      "6,60,64\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5," +
-      "20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"f\n\010" +
-      "DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\3071\030|net" +
-      "work-ssd|network-hdd\022&\n\tdisk_size\030\002 \001(\003B" +
-      "\023\372\3071\0170-4398046511104\"\'\n\020SchedulingPolicy" +
-      "\022\023\n\013preemptible\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP" +
-      "_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6" +
-      "\020\002BV\n\027yandex.cloud.api.k8s.v1Z;github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "k8s/v1;k8sb\006proto3"
+      "d.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n\006m" +
+      "emory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\3071" +
+      "\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100\022\025" +
+      "\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010DiskSpec\0222\n\014dis" +
+      "k_type_id\030\001 \001(\tB\034\362\3071\030|network-ssd|networ" +
+      "k-hdd\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-43980465" +
+      "11104\"\'\n\020SchedulingPolicy\022\023\n\013preemptible" +
+      "\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPEC" +
+      "IFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cl" +
+      "oud.api.k8s.v1Z;github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/k8s/v1;k8sb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

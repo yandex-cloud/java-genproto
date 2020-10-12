@@ -20,7 +20,7 @@ public final class VersionOuterClass {
 
     /**
      * <pre>
-     * Version ID
+     * ID of the version.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class VersionOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Version ID
+     * ID of the version.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -38,7 +38,7 @@ public final class VersionOuterClass {
 
     /**
      * <pre>
-     * Version name
+     * Name of the version.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -46,7 +46,7 @@ public final class VersionOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Version name
+     * Name of the version.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -56,7 +56,7 @@ public final class VersionOuterClass {
 
     /**
      * <pre>
-     * Is version deprecated
+     * Whether version is deprecated.
      * </pre>
      *
      * <code>bool deprecated = 3;</code>
@@ -65,7 +65,7 @@ public final class VersionOuterClass {
 
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -74,7 +74,7 @@ public final class VersionOuterClass {
         getUpdatableToList();
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -82,7 +82,7 @@ public final class VersionOuterClass {
     int getUpdatableToCount();
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -90,7 +90,7 @@ public final class VersionOuterClass {
     java.lang.String getUpdatableTo(int index);
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -207,7 +207,7 @@ public final class VersionOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Version ID
+     * ID of the version.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -226,7 +226,7 @@ public final class VersionOuterClass {
     }
     /**
      * <pre>
-     * Version ID
+     * ID of the version.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -249,7 +249,7 @@ public final class VersionOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Version name
+     * Name of the version.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -268,7 +268,7 @@ public final class VersionOuterClass {
     }
     /**
      * <pre>
-     * Version name
+     * Name of the version.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -291,7 +291,7 @@ public final class VersionOuterClass {
     private boolean deprecated_;
     /**
      * <pre>
-     * Is version deprecated
+     * Whether version is deprecated.
      * </pre>
      *
      * <code>bool deprecated = 3;</code>
@@ -304,7 +304,7 @@ public final class VersionOuterClass {
     private com.google.protobuf.LazyStringList updatableTo_;
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -315,7 +315,7 @@ public final class VersionOuterClass {
     }
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -325,7 +325,7 @@ public final class VersionOuterClass {
     }
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -335,7 +335,7 @@ public final class VersionOuterClass {
     }
     /**
      * <pre>
-     * List of versions that can be updated from current
+     * List of versions that can be updated from current.
      * </pre>
      *
      * <code>repeated string updatable_to = 4;</code>
@@ -724,7 +724,7 @@ public final class VersionOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Version ID
+       * ID of the version.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -743,7 +743,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version ID
+       * ID of the version.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -763,7 +763,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version ID
+       * ID of the version.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -780,7 +780,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version ID
+       * ID of the version.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -793,7 +793,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version ID
+       * ID of the version.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -813,7 +813,7 @@ public final class VersionOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Version name
+       * Name of the version.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -832,7 +832,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version name
+       * Name of the version.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -852,7 +852,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version name
+       * Name of the version.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -869,7 +869,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version name
+       * Name of the version.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -882,7 +882,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Version name
+       * Name of the version.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -902,7 +902,7 @@ public final class VersionOuterClass {
       private boolean deprecated_ ;
       /**
        * <pre>
-       * Is version deprecated
+       * Whether version is deprecated.
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
@@ -912,7 +912,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Is version deprecated
+       * Whether version is deprecated.
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
@@ -925,7 +925,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * Is version deprecated
+       * Whether version is deprecated.
        * </pre>
        *
        * <code>bool deprecated = 3;</code>
@@ -946,7 +946,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -957,7 +957,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -967,7 +967,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -977,7 +977,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -988,7 +988,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -1005,7 +1005,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -1022,7 +1022,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -1037,7 +1037,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
@@ -1050,7 +1050,7 @@ public final class VersionOuterClass {
       }
       /**
        * <pre>
-       * List of versions that can be updated from current
+       * List of versions that can be updated from current.
        * </pre>
        *
        * <code>repeated string updatable_to = 4;</code>
