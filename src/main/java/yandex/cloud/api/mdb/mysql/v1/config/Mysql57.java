@@ -554,6 +554,800 @@ public final class Mysql57 {
      */
     com.google.protobuf.ByteString
         getCollationServerBytes();
+
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    boolean hasInnodbAdaptiveHashIndex();
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex();
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInnodbAdaptiveHashIndexOrBuilder();
+
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    boolean hasInnodbNumaInterleave();
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    com.google.protobuf.BoolValue getInnodbNumaInterleave();
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInnodbNumaInterleaveOrBuilder();
+
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    boolean hasInnodbLogBufferSize();
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbLogBufferSize();
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbLogBufferSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    boolean hasInnodbLogFileSize();
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbLogFileSize();
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbLogFileSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    boolean hasInnodbIoCapacity();
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbIoCapacity();
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityOrBuilder();
+
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    boolean hasInnodbIoCapacityMax();
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbIoCapacityMax();
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityMaxOrBuilder();
+
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    boolean hasInnodbReadIoThreads();
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbReadIoThreads();
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbReadIoThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    boolean hasInnodbWriteIoThreads();
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbWriteIoThreads();
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbWriteIoThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    boolean hasInnodbPurgeThreads();
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbPurgeThreads();
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbPurgeThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    boolean hasInnodbThreadConcurrency();
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbThreadConcurrency();
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbThreadConcurrencyOrBuilder();
+
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    boolean hasInnodbTempDataFileMaxSize();
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize();
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbTempDataFileMaxSizeOrBuilder();
+
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    boolean hasThreadCacheSize();
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    com.google.protobuf.Int64Value getThreadCacheSize();
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getThreadCacheSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    boolean hasThreadStack();
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    com.google.protobuf.Int64Value getThreadStack();
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getThreadStackOrBuilder();
+
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    boolean hasJoinBufferSize();
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    com.google.protobuf.Int64Value getJoinBufferSize();
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getJoinBufferSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    boolean hasSortBufferSize();
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    com.google.protobuf.Int64Value getSortBufferSize();
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSortBufferSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    boolean hasTableDefinitionCache();
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    com.google.protobuf.Int64Value getTableDefinitionCache();
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTableDefinitionCacheOrBuilder();
+
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    boolean hasTableOpenCache();
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    com.google.protobuf.Int64Value getTableOpenCache();
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheOrBuilder();
+
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    boolean hasTableOpenCacheInstances();
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    com.google.protobuf.Int64Value getTableOpenCacheInstances();
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheInstancesOrBuilder();
+
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    boolean hasExplicitDefaultsForTimestamp();
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp();
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getExplicitDefaultsForTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    boolean hasAutoIncrementIncrement();
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    com.google.protobuf.Int64Value getAutoIncrementIncrement();
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAutoIncrementIncrementOrBuilder();
+
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    boolean hasAutoIncrementOffset();
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    com.google.protobuf.Int64Value getAutoIncrementOffset();
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAutoIncrementOffsetOrBuilder();
+
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    boolean hasSyncBinlog();
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    com.google.protobuf.Int64Value getSyncBinlog();
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSyncBinlogOrBuilder();
+
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    boolean hasBinlogCacheSize();
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    com.google.protobuf.Int64Value getBinlogCacheSize();
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBinlogCacheSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    boolean hasBinlogGroupCommitSyncDelay();
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay();
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder();
+
+    /**
+     * <pre>
+     * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+     */
+    int getBinlogRowImageValue();
+    /**
+     * <pre>
+     * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage getBinlogRowImage();
+
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    boolean hasBinlogRowsQueryLogEvents();
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents();
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getBinlogRowsQueryLogEventsOrBuilder();
+
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    boolean hasRplSemiSyncMasterWaitForSlaveCount();
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount();
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRplSemiSyncMasterWaitForSlaveCountOrBuilder();
+
+    /**
+     * <pre>
+     * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+     */
+    int getSlaveParallelTypeValue();
+    /**
+     * <pre>
+     * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType getSlaveParallelType();
+
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    boolean hasSlaveParallelWorkers();
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    com.google.protobuf.Int64Value getSlaveParallelWorkers();
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder();
   }
   /**
    * <pre>
@@ -578,6 +1372,8 @@ public final class Mysql57 {
       defaultTimeZone_ = "";
       characterSetServer_ = "";
       collationServer_ = "";
+      binlogRowImage_ = 0;
+      slaveParallelType_ = 0;
     }
 
     @java.lang.Override
@@ -594,6 +1390,7 @@ public final class Mysql57 {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -839,6 +1636,369 @@ public final class Mysql57 {
               collationServer_ = s;
               break;
             }
+            case 170: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (innodbAdaptiveHashIndex_ != null) {
+                subBuilder = innodbAdaptiveHashIndex_.toBuilder();
+              }
+              innodbAdaptiveHashIndex_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbAdaptiveHashIndex_);
+                innodbAdaptiveHashIndex_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 178: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (innodbNumaInterleave_ != null) {
+                subBuilder = innodbNumaInterleave_.toBuilder();
+              }
+              innodbNumaInterleave_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbNumaInterleave_);
+                innodbNumaInterleave_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 186: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbLogBufferSize_ != null) {
+                subBuilder = innodbLogBufferSize_.toBuilder();
+              }
+              innodbLogBufferSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbLogBufferSize_);
+                innodbLogBufferSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 194: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbLogFileSize_ != null) {
+                subBuilder = innodbLogFileSize_.toBuilder();
+              }
+              innodbLogFileSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbLogFileSize_);
+                innodbLogFileSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 202: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbIoCapacity_ != null) {
+                subBuilder = innodbIoCapacity_.toBuilder();
+              }
+              innodbIoCapacity_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbIoCapacity_);
+                innodbIoCapacity_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbIoCapacityMax_ != null) {
+                subBuilder = innodbIoCapacityMax_.toBuilder();
+              }
+              innodbIoCapacityMax_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbIoCapacityMax_);
+                innodbIoCapacityMax_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 218: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbReadIoThreads_ != null) {
+                subBuilder = innodbReadIoThreads_.toBuilder();
+              }
+              innodbReadIoThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbReadIoThreads_);
+                innodbReadIoThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 226: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbWriteIoThreads_ != null) {
+                subBuilder = innodbWriteIoThreads_.toBuilder();
+              }
+              innodbWriteIoThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbWriteIoThreads_);
+                innodbWriteIoThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 234: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbPurgeThreads_ != null) {
+                subBuilder = innodbPurgeThreads_.toBuilder();
+              }
+              innodbPurgeThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbPurgeThreads_);
+                innodbPurgeThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 242: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbThreadConcurrency_ != null) {
+                subBuilder = innodbThreadConcurrency_.toBuilder();
+              }
+              innodbThreadConcurrency_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbThreadConcurrency_);
+                innodbThreadConcurrency_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 250: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbTempDataFileMaxSize_ != null) {
+                subBuilder = innodbTempDataFileMaxSize_.toBuilder();
+              }
+              innodbTempDataFileMaxSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbTempDataFileMaxSize_);
+                innodbTempDataFileMaxSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 258: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (threadCacheSize_ != null) {
+                subBuilder = threadCacheSize_.toBuilder();
+              }
+              threadCacheSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(threadCacheSize_);
+                threadCacheSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 266: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (threadStack_ != null) {
+                subBuilder = threadStack_.toBuilder();
+              }
+              threadStack_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(threadStack_);
+                threadStack_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 274: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (joinBufferSize_ != null) {
+                subBuilder = joinBufferSize_.toBuilder();
+              }
+              joinBufferSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(joinBufferSize_);
+                joinBufferSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 282: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (sortBufferSize_ != null) {
+                subBuilder = sortBufferSize_.toBuilder();
+              }
+              sortBufferSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sortBufferSize_);
+                sortBufferSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 290: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tableDefinitionCache_ != null) {
+                subBuilder = tableDefinitionCache_.toBuilder();
+              }
+              tableDefinitionCache_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tableDefinitionCache_);
+                tableDefinitionCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 298: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tableOpenCache_ != null) {
+                subBuilder = tableOpenCache_.toBuilder();
+              }
+              tableOpenCache_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tableOpenCache_);
+                tableOpenCache_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 306: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (tableOpenCacheInstances_ != null) {
+                subBuilder = tableOpenCacheInstances_.toBuilder();
+              }
+              tableOpenCacheInstances_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tableOpenCacheInstances_);
+                tableOpenCacheInstances_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 314: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (explicitDefaultsForTimestamp_ != null) {
+                subBuilder = explicitDefaultsForTimestamp_.toBuilder();
+              }
+              explicitDefaultsForTimestamp_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(explicitDefaultsForTimestamp_);
+                explicitDefaultsForTimestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 322: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (autoIncrementIncrement_ != null) {
+                subBuilder = autoIncrementIncrement_.toBuilder();
+              }
+              autoIncrementIncrement_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoIncrementIncrement_);
+                autoIncrementIncrement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 330: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (autoIncrementOffset_ != null) {
+                subBuilder = autoIncrementOffset_.toBuilder();
+              }
+              autoIncrementOffset_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoIncrementOffset_);
+                autoIncrementOffset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 338: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (syncBinlog_ != null) {
+                subBuilder = syncBinlog_.toBuilder();
+              }
+              syncBinlog_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(syncBinlog_);
+                syncBinlog_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 346: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (binlogCacheSize_ != null) {
+                subBuilder = binlogCacheSize_.toBuilder();
+              }
+              binlogCacheSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(binlogCacheSize_);
+                binlogCacheSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 354: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (binlogGroupCommitSyncDelay_ != null) {
+                subBuilder = binlogGroupCommitSyncDelay_.toBuilder();
+              }
+              binlogGroupCommitSyncDelay_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(binlogGroupCommitSyncDelay_);
+                binlogGroupCommitSyncDelay_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 360: {
+              int rawValue = input.readEnum();
+
+              binlogRowImage_ = rawValue;
+              break;
+            }
+            case 370: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (binlogRowsQueryLogEvents_ != null) {
+                subBuilder = binlogRowsQueryLogEvents_.toBuilder();
+              }
+              binlogRowsQueryLogEvents_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(binlogRowsQueryLogEvents_);
+                binlogRowsQueryLogEvents_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 378: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (rplSemiSyncMasterWaitForSlaveCount_ != null) {
+                subBuilder = rplSemiSyncMasterWaitForSlaveCount_.toBuilder();
+              }
+              rplSemiSyncMasterWaitForSlaveCount_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rplSemiSyncMasterWaitForSlaveCount_);
+                rplSemiSyncMasterWaitForSlaveCount_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 384: {
+              int rawValue = input.readEnum();
+
+              slaveParallelType_ = rawValue;
+              break;
+            }
+            case 394: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (slaveParallelWorkers_ != null) {
+                subBuilder = slaveParallelWorkers_.toBuilder();
+              }
+              slaveParallelWorkers_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(slaveParallelWorkers_);
+                slaveParallelWorkers_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -999,6 +2159,14 @@ public final class Mysql57 {
        * <code>POSTGRESQL = 29;</code>
        */
       POSTGRESQL(29),
+      /**
+       * <code>NO_AUTO_CREATE_USER = 30;</code>
+       */
+      NO_AUTO_CREATE_USER(30),
+      /**
+       * <code>NO_DIR_IN_CREATE = 31;</code>
+       */
+      NO_DIR_IN_CREATE(31),
       UNRECOGNIZED(-1),
       ;
 
@@ -1122,6 +2290,14 @@ public final class Mysql57 {
        * <code>POSTGRESQL = 29;</code>
        */
       public static final int POSTGRESQL_VALUE = 29;
+      /**
+       * <code>NO_AUTO_CREATE_USER = 30;</code>
+       */
+      public static final int NO_AUTO_CREATE_USER_VALUE = 30;
+      /**
+       * <code>NO_DIR_IN_CREATE = 31;</code>
+       */
+      public static final int NO_DIR_IN_CREATE_VALUE = 31;
 
 
       public final int getNumber() {
@@ -1172,6 +2348,8 @@ public final class Mysql57 {
           case 27: return MYSQL40;
           case 28: return ORACLE;
           case 29: return POSTGRESQL;
+          case 30: return NO_AUTO_CREATE_USER;
+          case 31: return NO_DIR_IN_CREATE;
           default: return null;
         }
       }
@@ -1473,7 +2651,231 @@ public final class Mysql57 {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.TransactionIsolation)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage}
+     */
+    public enum BinlogRowImage
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BINLOG_ROW_IMAGE_UNSPECIFIED = 0;</code>
+       */
+      BINLOG_ROW_IMAGE_UNSPECIFIED(0),
+      /**
+       * <code>FULL = 1;</code>
+       */
+      FULL(1),
+      /**
+       * <code>MINIMAL = 2;</code>
+       */
+      MINIMAL(2),
+      /**
+       * <code>NOBLOB = 3;</code>
+       */
+      NOBLOB(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BINLOG_ROW_IMAGE_UNSPECIFIED = 0;</code>
+       */
+      public static final int BINLOG_ROW_IMAGE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>FULL = 1;</code>
+       */
+      public static final int FULL_VALUE = 1;
+      /**
+       * <code>MINIMAL = 2;</code>
+       */
+      public static final int MINIMAL_VALUE = 2;
+      /**
+       * <code>NOBLOB = 3;</code>
+       */
+      public static final int NOBLOB_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BinlogRowImage valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static BinlogRowImage forNumber(int value) {
+        switch (value) {
+          case 0: return BINLOG_ROW_IMAGE_UNSPECIFIED;
+          case 1: return FULL;
+          case 2: return MINIMAL;
+          case 3: return NOBLOB;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BinlogRowImage>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BinlogRowImage> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BinlogRowImage>() {
+              public BinlogRowImage findValueByNumber(int number) {
+                return BinlogRowImage.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final BinlogRowImage[] VALUES = values();
+
+      public static BinlogRowImage valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BinlogRowImage(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType}
+     */
+    public enum SlaveParallelType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SLAVE_PARALLEL_TYPE_UNSPECIFIED = 0;</code>
+       */
+      SLAVE_PARALLEL_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>DATABASE = 1;</code>
+       */
+      DATABASE(1),
+      /**
+       * <code>LOGICAL_CLOCK = 2;</code>
+       */
+      LOGICAL_CLOCK(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SLAVE_PARALLEL_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int SLAVE_PARALLEL_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>DATABASE = 1;</code>
+       */
+      public static final int DATABASE_VALUE = 1;
+      /**
+       * <code>LOGICAL_CLOCK = 2;</code>
+       */
+      public static final int LOGICAL_CLOCK_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SlaveParallelType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SlaveParallelType forNumber(int value) {
+        switch (value) {
+          case 0: return SLAVE_PARALLEL_TYPE_UNSPECIFIED;
+          case 1: return DATABASE;
+          case 2: return LOGICAL_CLOCK;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SlaveParallelType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SlaveParallelType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SlaveParallelType>() {
+              public SlaveParallelType findValueByNumber(int number) {
+                return SlaveParallelType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final SlaveParallelType[] VALUES = values();
+
+      public static SlaveParallelType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SlaveParallelType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType)
+    }
+
     private int bitField0_;
+    private int bitField1_;
     public static final int INNODB_BUFFER_POOL_SIZE_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value innodbBufferPoolSize_;
     /**
@@ -2235,6 +3637,1032 @@ public final class Mysql57 {
       }
     }
 
+    public static final int INNODB_ADAPTIVE_HASH_INDEX_FIELD_NUMBER = 21;
+    private com.google.protobuf.BoolValue innodbAdaptiveHashIndex_;
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    public boolean hasInnodbAdaptiveHashIndex() {
+      return innodbAdaptiveHashIndex_ != null;
+    }
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    public com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex() {
+      return innodbAdaptiveHashIndex_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbAdaptiveHashIndex_;
+    }
+    /**
+     * <pre>
+     * Enables Innodb adaptive hash index
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getInnodbAdaptiveHashIndexOrBuilder() {
+      return getInnodbAdaptiveHashIndex();
+    }
+
+    public static final int INNODB_NUMA_INTERLEAVE_FIELD_NUMBER = 22;
+    private com.google.protobuf.BoolValue innodbNumaInterleave_;
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    public boolean hasInnodbNumaInterleave() {
+      return innodbNumaInterleave_ != null;
+    }
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    public com.google.protobuf.BoolValue getInnodbNumaInterleave() {
+      return innodbNumaInterleave_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbNumaInterleave_;
+    }
+    /**
+     * <pre>
+     * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getInnodbNumaInterleaveOrBuilder() {
+      return getInnodbNumaInterleave();
+    }
+
+    public static final int INNODB_LOG_BUFFER_SIZE_FIELD_NUMBER = 23;
+    private com.google.protobuf.Int64Value innodbLogBufferSize_;
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public boolean hasInnodbLogBufferSize() {
+      return innodbLogBufferSize_ != null;
+    }
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbLogBufferSize() {
+      return innodbLogBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogBufferSize_;
+    }
+    /**
+     * <pre>
+     * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbLogBufferSizeOrBuilder() {
+      return getInnodbLogBufferSize();
+    }
+
+    public static final int INNODB_LOG_FILE_SIZE_FIELD_NUMBER = 24;
+    private com.google.protobuf.Int64Value innodbLogFileSize_;
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    public boolean hasInnodbLogFileSize() {
+      return innodbLogFileSize_ != null;
+    }
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbLogFileSize() {
+      return innodbLogFileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogFileSize_;
+    }
+    /**
+     * <pre>
+     * The size in bytes of the single Innodb Redo log file.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbLogFileSizeOrBuilder() {
+      return getInnodbLogFileSize();
+    }
+
+    public static final int INNODB_IO_CAPACITY_FIELD_NUMBER = 25;
+    private com.google.protobuf.Int64Value innodbIoCapacity_;
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public boolean hasInnodbIoCapacity() {
+      return innodbIoCapacity_ != null;
+    }
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbIoCapacity() {
+      return innodbIoCapacity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacity_;
+    }
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityOrBuilder() {
+      return getInnodbIoCapacity();
+    }
+
+    public static final int INNODB_IO_CAPACITY_MAX_FIELD_NUMBER = 26;
+    private com.google.protobuf.Int64Value innodbIoCapacityMax_;
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public boolean hasInnodbIoCapacityMax() {
+      return innodbIoCapacityMax_ != null;
+    }
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbIoCapacityMax() {
+      return innodbIoCapacityMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacityMax_;
+    }
+    /**
+     * <pre>
+     * Limits IO available for InnoDB background tasks
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityMaxOrBuilder() {
+      return getInnodbIoCapacityMax();
+    }
+
+    public static final int INNODB_READ_IO_THREADS_FIELD_NUMBER = 27;
+    private com.google.protobuf.Int64Value innodbReadIoThreads_;
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public boolean hasInnodbReadIoThreads() {
+      return innodbReadIoThreads_ != null;
+    }
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbReadIoThreads() {
+      return innodbReadIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbReadIoThreads_;
+    }
+    /**
+     * <pre>
+     * The number of I/O threads for read operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbReadIoThreadsOrBuilder() {
+      return getInnodbReadIoThreads();
+    }
+
+    public static final int INNODB_WRITE_IO_THREADS_FIELD_NUMBER = 28;
+    private com.google.protobuf.Int64Value innodbWriteIoThreads_;
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public boolean hasInnodbWriteIoThreads() {
+      return innodbWriteIoThreads_ != null;
+    }
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbWriteIoThreads() {
+      return innodbWriteIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbWriteIoThreads_;
+    }
+    /**
+     * <pre>
+     * The number of I/O threads for write operations in InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbWriteIoThreadsOrBuilder() {
+      return getInnodbWriteIoThreads();
+    }
+
+    public static final int INNODB_PURGE_THREADS_FIELD_NUMBER = 29;
+    private com.google.protobuf.Int64Value innodbPurgeThreads_;
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public boolean hasInnodbPurgeThreads() {
+      return innodbPurgeThreads_ != null;
+    }
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbPurgeThreads() {
+      return innodbPurgeThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPurgeThreads_;
+    }
+    /**
+     * <pre>
+     * The number of background threads devoted to the InnoDB purge operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbPurgeThreadsOrBuilder() {
+      return getInnodbPurgeThreads();
+    }
+
+    public static final int INNODB_THREAD_CONCURRENCY_FIELD_NUMBER = 30;
+    private com.google.protobuf.Int64Value innodbThreadConcurrency_;
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public boolean hasInnodbThreadConcurrency() {
+      return innodbThreadConcurrency_ != null;
+    }
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbThreadConcurrency() {
+      return innodbThreadConcurrency_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbThreadConcurrency_;
+    }
+    /**
+     * <pre>
+     * Defines the maximum number of threads permitted inside of InnoDB.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbThreadConcurrencyOrBuilder() {
+      return getInnodbThreadConcurrency();
+    }
+
+    public static final int INNODB_TEMP_DATA_FILE_MAX_SIZE_FIELD_NUMBER = 31;
+    private com.google.protobuf.Int64Value innodbTempDataFileMaxSize_;
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    public boolean hasInnodbTempDataFileMaxSize() {
+      return innodbTempDataFileMaxSize_ != null;
+    }
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize() {
+      return innodbTempDataFileMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbTempDataFileMaxSize_;
+    }
+    /**
+     * <pre>
+     * Limits the max size of InnoDB temp tablespace
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbTempDataFileMaxSizeOrBuilder() {
+      return getInnodbTempDataFileMaxSize();
+    }
+
+    public static final int THREAD_CACHE_SIZE_FIELD_NUMBER = 32;
+    private com.google.protobuf.Int64Value threadCacheSize_;
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    public boolean hasThreadCacheSize() {
+      return threadCacheSize_ != null;
+    }
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    public com.google.protobuf.Int64Value getThreadCacheSize() {
+      return threadCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadCacheSize_;
+    }
+    /**
+     * <pre>
+     * How many threads the server should cache for reuse.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getThreadCacheSizeOrBuilder() {
+      return getThreadCacheSize();
+    }
+
+    public static final int THREAD_STACK_FIELD_NUMBER = 33;
+    private com.google.protobuf.Int64Value threadStack_;
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    public boolean hasThreadStack() {
+      return threadStack_ != null;
+    }
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    public com.google.protobuf.Int64Value getThreadStack() {
+      return threadStack_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadStack_;
+    }
+    /**
+     * <pre>
+     * The stack size for each thread. The default is large enough for normal operation.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getThreadStackOrBuilder() {
+      return getThreadStack();
+    }
+
+    public static final int JOIN_BUFFER_SIZE_FIELD_NUMBER = 34;
+    private com.google.protobuf.Int64Value joinBufferSize_;
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public boolean hasJoinBufferSize() {
+      return joinBufferSize_ != null;
+    }
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public com.google.protobuf.Int64Value getJoinBufferSize() {
+      return joinBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : joinBufferSize_;
+    }
+    /**
+     * <pre>
+     * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getJoinBufferSizeOrBuilder() {
+      return getJoinBufferSize();
+    }
+
+    public static final int SORT_BUFFER_SIZE_FIELD_NUMBER = 35;
+    private com.google.protobuf.Int64Value sortBufferSize_;
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public boolean hasSortBufferSize() {
+      return sortBufferSize_ != null;
+    }
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public com.google.protobuf.Int64Value getSortBufferSize() {
+      return sortBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sortBufferSize_;
+    }
+    /**
+     * <pre>
+     * Each session that must perform a sort allocates a buffer of this size.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSortBufferSizeOrBuilder() {
+      return getSortBufferSize();
+    }
+
+    public static final int TABLE_DEFINITION_CACHE_FIELD_NUMBER = 36;
+    private com.google.protobuf.Int64Value tableDefinitionCache_;
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public boolean hasTableDefinitionCache() {
+      return tableDefinitionCache_ != null;
+    }
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public com.google.protobuf.Int64Value getTableDefinitionCache() {
+      return tableDefinitionCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableDefinitionCache_;
+    }
+    /**
+     * <pre>
+     * The number of table definitions that can be stored in the definition cache.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTableDefinitionCacheOrBuilder() {
+      return getTableDefinitionCache();
+    }
+
+    public static final int TABLE_OPEN_CACHE_FIELD_NUMBER = 37;
+    private com.google.protobuf.Int64Value tableOpenCache_;
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public boolean hasTableOpenCache() {
+      return tableOpenCache_ != null;
+    }
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public com.google.protobuf.Int64Value getTableOpenCache() {
+      return tableOpenCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCache_;
+    }
+    /**
+     * <pre>
+     * The number of open tables for all threads.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheOrBuilder() {
+      return getTableOpenCache();
+    }
+
+    public static final int TABLE_OPEN_CACHE_INSTANCES_FIELD_NUMBER = 38;
+    private com.google.protobuf.Int64Value tableOpenCacheInstances_;
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    public boolean hasTableOpenCacheInstances() {
+      return tableOpenCacheInstances_ != null;
+    }
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    public com.google.protobuf.Int64Value getTableOpenCacheInstances() {
+      return tableOpenCacheInstances_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCacheInstances_;
+    }
+    /**
+     * <pre>
+     * The number of open tables cache instances.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheInstancesOrBuilder() {
+      return getTableOpenCacheInstances();
+    }
+
+    public static final int EXPLICIT_DEFAULTS_FOR_TIMESTAMP_FIELD_NUMBER = 39;
+    private com.google.protobuf.BoolValue explicitDefaultsForTimestamp_;
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    public boolean hasExplicitDefaultsForTimestamp() {
+      return explicitDefaultsForTimestamp_ != null;
+    }
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    public com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp() {
+      return explicitDefaultsForTimestamp_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : explicitDefaultsForTimestamp_;
+    }
+    /**
+     * <pre>
+     * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getExplicitDefaultsForTimestampOrBuilder() {
+      return getExplicitDefaultsForTimestamp();
+    }
+
+    public static final int AUTO_INCREMENT_INCREMENT_FIELD_NUMBER = 40;
+    private com.google.protobuf.Int64Value autoIncrementIncrement_;
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public boolean hasAutoIncrementIncrement() {
+      return autoIncrementIncrement_ != null;
+    }
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public com.google.protobuf.Int64Value getAutoIncrementIncrement() {
+      return autoIncrementIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementIncrement_;
+    }
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementIncrementOrBuilder() {
+      return getAutoIncrementIncrement();
+    }
+
+    public static final int AUTO_INCREMENT_OFFSET_FIELD_NUMBER = 41;
+    private com.google.protobuf.Int64Value autoIncrementOffset_;
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public boolean hasAutoIncrementOffset() {
+      return autoIncrementOffset_ != null;
+    }
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public com.google.protobuf.Int64Value getAutoIncrementOffset() {
+      return autoIncrementOffset_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementOffset_;
+    }
+    /**
+     * <pre>
+     * Can be used to control the operation of AUTO_INCREMENT columns.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementOffsetOrBuilder() {
+      return getAutoIncrementOffset();
+    }
+
+    public static final int SYNC_BINLOG_FIELD_NUMBER = 42;
+    private com.google.protobuf.Int64Value syncBinlog_;
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    public boolean hasSyncBinlog() {
+      return syncBinlog_ != null;
+    }
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    public com.google.protobuf.Int64Value getSyncBinlog() {
+      return syncBinlog_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : syncBinlog_;
+    }
+    /**
+     * <pre>
+     * Controls how often the MySQL server synchronizes the binary log to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSyncBinlogOrBuilder() {
+      return getSyncBinlog();
+    }
+
+    public static final int BINLOG_CACHE_SIZE_FIELD_NUMBER = 43;
+    private com.google.protobuf.Int64Value binlogCacheSize_;
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    public boolean hasBinlogCacheSize() {
+      return binlogCacheSize_ != null;
+    }
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    public com.google.protobuf.Int64Value getBinlogCacheSize() {
+      return binlogCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogCacheSize_;
+    }
+    /**
+     * <pre>
+     * The size of the cache to hold changes to the binary log during a transaction.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBinlogCacheSizeOrBuilder() {
+      return getBinlogCacheSize();
+    }
+
+    public static final int BINLOG_GROUP_COMMIT_SYNC_DELAY_FIELD_NUMBER = 44;
+    private com.google.protobuf.Int64Value binlogGroupCommitSyncDelay_;
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    public boolean hasBinlogGroupCommitSyncDelay() {
+      return binlogGroupCommitSyncDelay_ != null;
+    }
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
+      return binlogGroupCommitSyncDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogGroupCommitSyncDelay_;
+    }
+    /**
+     * <pre>
+     * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder() {
+      return getBinlogGroupCommitSyncDelay();
+    }
+
+    public static final int BINLOG_ROW_IMAGE_FIELD_NUMBER = 45;
+    private int binlogRowImage_;
+    /**
+     * <pre>
+     * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+     */
+    public int getBinlogRowImageValue() {
+      return binlogRowImage_;
+    }
+    /**
+     * <pre>
+     * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage getBinlogRowImage() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.valueOf(binlogRowImage_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.UNRECOGNIZED : result;
+    }
+
+    public static final int BINLOG_ROWS_QUERY_LOG_EVENTS_FIELD_NUMBER = 46;
+    private com.google.protobuf.BoolValue binlogRowsQueryLogEvents_;
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    public boolean hasBinlogRowsQueryLogEvents() {
+      return binlogRowsQueryLogEvents_ != null;
+    }
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    public com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents() {
+      return binlogRowsQueryLogEvents_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : binlogRowsQueryLogEvents_;
+    }
+    /**
+     * <pre>
+     * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getBinlogRowsQueryLogEventsOrBuilder() {
+      return getBinlogRowsQueryLogEvents();
+    }
+
+    public static final int RPL_SEMI_SYNC_MASTER_WAIT_FOR_SLAVE_COUNT_FIELD_NUMBER = 47;
+    private com.google.protobuf.Int64Value rplSemiSyncMasterWaitForSlaveCount_;
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    public boolean hasRplSemiSyncMasterWaitForSlaveCount() {
+      return rplSemiSyncMasterWaitForSlaveCount_ != null;
+    }
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    public com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount() {
+      return rplSemiSyncMasterWaitForSlaveCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rplSemiSyncMasterWaitForSlaveCount_;
+    }
+    /**
+     * <pre>
+     * The number of replica acknowledgments the source must receive per transaction before proceeding.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRplSemiSyncMasterWaitForSlaveCountOrBuilder() {
+      return getRplSemiSyncMasterWaitForSlaveCount();
+    }
+
+    public static final int SLAVE_PARALLEL_TYPE_FIELD_NUMBER = 48;
+    private int slaveParallelType_;
+    /**
+     * <pre>
+     * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+     */
+    public int getSlaveParallelTypeValue() {
+      return slaveParallelType_;
+    }
+    /**
+     * <pre>
+     * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+     */
+    public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType getSlaveParallelType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.valueOf(slaveParallelType_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.UNRECOGNIZED : result;
+    }
+
+    public static final int SLAVE_PARALLEL_WORKERS_FIELD_NUMBER = 49;
+    private com.google.protobuf.Int64Value slaveParallelWorkers_;
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    public boolean hasSlaveParallelWorkers() {
+      return slaveParallelWorkers_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    public com.google.protobuf.Int64Value getSlaveParallelWorkers() {
+      return slaveParallelWorkers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slaveParallelWorkers_;
+    }
+    /**
+     * <pre>
+     * Sets the number of applier threads for executing replication transactions in parallel.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder() {
+      return getSlaveParallelWorkers();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2313,6 +4741,93 @@ public final class Mysql57 {
       }
       if (!getCollationServerBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 20, collationServer_);
+      }
+      if (innodbAdaptiveHashIndex_ != null) {
+        output.writeMessage(21, getInnodbAdaptiveHashIndex());
+      }
+      if (innodbNumaInterleave_ != null) {
+        output.writeMessage(22, getInnodbNumaInterleave());
+      }
+      if (innodbLogBufferSize_ != null) {
+        output.writeMessage(23, getInnodbLogBufferSize());
+      }
+      if (innodbLogFileSize_ != null) {
+        output.writeMessage(24, getInnodbLogFileSize());
+      }
+      if (innodbIoCapacity_ != null) {
+        output.writeMessage(25, getInnodbIoCapacity());
+      }
+      if (innodbIoCapacityMax_ != null) {
+        output.writeMessage(26, getInnodbIoCapacityMax());
+      }
+      if (innodbReadIoThreads_ != null) {
+        output.writeMessage(27, getInnodbReadIoThreads());
+      }
+      if (innodbWriteIoThreads_ != null) {
+        output.writeMessage(28, getInnodbWriteIoThreads());
+      }
+      if (innodbPurgeThreads_ != null) {
+        output.writeMessage(29, getInnodbPurgeThreads());
+      }
+      if (innodbThreadConcurrency_ != null) {
+        output.writeMessage(30, getInnodbThreadConcurrency());
+      }
+      if (innodbTempDataFileMaxSize_ != null) {
+        output.writeMessage(31, getInnodbTempDataFileMaxSize());
+      }
+      if (threadCacheSize_ != null) {
+        output.writeMessage(32, getThreadCacheSize());
+      }
+      if (threadStack_ != null) {
+        output.writeMessage(33, getThreadStack());
+      }
+      if (joinBufferSize_ != null) {
+        output.writeMessage(34, getJoinBufferSize());
+      }
+      if (sortBufferSize_ != null) {
+        output.writeMessage(35, getSortBufferSize());
+      }
+      if (tableDefinitionCache_ != null) {
+        output.writeMessage(36, getTableDefinitionCache());
+      }
+      if (tableOpenCache_ != null) {
+        output.writeMessage(37, getTableOpenCache());
+      }
+      if (tableOpenCacheInstances_ != null) {
+        output.writeMessage(38, getTableOpenCacheInstances());
+      }
+      if (explicitDefaultsForTimestamp_ != null) {
+        output.writeMessage(39, getExplicitDefaultsForTimestamp());
+      }
+      if (autoIncrementIncrement_ != null) {
+        output.writeMessage(40, getAutoIncrementIncrement());
+      }
+      if (autoIncrementOffset_ != null) {
+        output.writeMessage(41, getAutoIncrementOffset());
+      }
+      if (syncBinlog_ != null) {
+        output.writeMessage(42, getSyncBinlog());
+      }
+      if (binlogCacheSize_ != null) {
+        output.writeMessage(43, getBinlogCacheSize());
+      }
+      if (binlogGroupCommitSyncDelay_ != null) {
+        output.writeMessage(44, getBinlogGroupCommitSyncDelay());
+      }
+      if (binlogRowImage_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.BINLOG_ROW_IMAGE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(45, binlogRowImage_);
+      }
+      if (binlogRowsQueryLogEvents_ != null) {
+        output.writeMessage(46, getBinlogRowsQueryLogEvents());
+      }
+      if (rplSemiSyncMasterWaitForSlaveCount_ != null) {
+        output.writeMessage(47, getRplSemiSyncMasterWaitForSlaveCount());
+      }
+      if (slaveParallelType_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.SLAVE_PARALLEL_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(48, slaveParallelType_);
+      }
+      if (slaveParallelWorkers_ != null) {
+        output.writeMessage(49, getSlaveParallelWorkers());
       }
       unknownFields.writeTo(output);
     }
@@ -2407,6 +4922,122 @@ public final class Mysql57 {
       }
       if (!getCollationServerBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, collationServer_);
+      }
+      if (innodbAdaptiveHashIndex_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, getInnodbAdaptiveHashIndex());
+      }
+      if (innodbNumaInterleave_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, getInnodbNumaInterleave());
+      }
+      if (innodbLogBufferSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getInnodbLogBufferSize());
+      }
+      if (innodbLogFileSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getInnodbLogFileSize());
+      }
+      if (innodbIoCapacity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, getInnodbIoCapacity());
+      }
+      if (innodbIoCapacityMax_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getInnodbIoCapacityMax());
+      }
+      if (innodbReadIoThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(27, getInnodbReadIoThreads());
+      }
+      if (innodbWriteIoThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(28, getInnodbWriteIoThreads());
+      }
+      if (innodbPurgeThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, getInnodbPurgeThreads());
+      }
+      if (innodbThreadConcurrency_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, getInnodbThreadConcurrency());
+      }
+      if (innodbTempDataFileMaxSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, getInnodbTempDataFileMaxSize());
+      }
+      if (threadCacheSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, getThreadCacheSize());
+      }
+      if (threadStack_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(33, getThreadStack());
+      }
+      if (joinBufferSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getJoinBufferSize());
+      }
+      if (sortBufferSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(35, getSortBufferSize());
+      }
+      if (tableDefinitionCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(36, getTableDefinitionCache());
+      }
+      if (tableOpenCache_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, getTableOpenCache());
+      }
+      if (tableOpenCacheInstances_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(38, getTableOpenCacheInstances());
+      }
+      if (explicitDefaultsForTimestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(39, getExplicitDefaultsForTimestamp());
+      }
+      if (autoIncrementIncrement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(40, getAutoIncrementIncrement());
+      }
+      if (autoIncrementOffset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(41, getAutoIncrementOffset());
+      }
+      if (syncBinlog_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(42, getSyncBinlog());
+      }
+      if (binlogCacheSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(43, getBinlogCacheSize());
+      }
+      if (binlogGroupCommitSyncDelay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(44, getBinlogGroupCommitSyncDelay());
+      }
+      if (binlogRowImage_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.BINLOG_ROW_IMAGE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(45, binlogRowImage_);
+      }
+      if (binlogRowsQueryLogEvents_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(46, getBinlogRowsQueryLogEvents());
+      }
+      if (rplSemiSyncMasterWaitForSlaveCount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(47, getRplSemiSyncMasterWaitForSlaveCount());
+      }
+      if (slaveParallelType_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.SLAVE_PARALLEL_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(48, slaveParallelType_);
+      }
+      if (slaveParallelWorkers_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(49, getSlaveParallelWorkers());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2503,6 +5134,143 @@ public final class Mysql57 {
           .equals(other.getCharacterSetServer());
       result = result && getCollationServer()
           .equals(other.getCollationServer());
+      result = result && (hasInnodbAdaptiveHashIndex() == other.hasInnodbAdaptiveHashIndex());
+      if (hasInnodbAdaptiveHashIndex()) {
+        result = result && getInnodbAdaptiveHashIndex()
+            .equals(other.getInnodbAdaptiveHashIndex());
+      }
+      result = result && (hasInnodbNumaInterleave() == other.hasInnodbNumaInterleave());
+      if (hasInnodbNumaInterleave()) {
+        result = result && getInnodbNumaInterleave()
+            .equals(other.getInnodbNumaInterleave());
+      }
+      result = result && (hasInnodbLogBufferSize() == other.hasInnodbLogBufferSize());
+      if (hasInnodbLogBufferSize()) {
+        result = result && getInnodbLogBufferSize()
+            .equals(other.getInnodbLogBufferSize());
+      }
+      result = result && (hasInnodbLogFileSize() == other.hasInnodbLogFileSize());
+      if (hasInnodbLogFileSize()) {
+        result = result && getInnodbLogFileSize()
+            .equals(other.getInnodbLogFileSize());
+      }
+      result = result && (hasInnodbIoCapacity() == other.hasInnodbIoCapacity());
+      if (hasInnodbIoCapacity()) {
+        result = result && getInnodbIoCapacity()
+            .equals(other.getInnodbIoCapacity());
+      }
+      result = result && (hasInnodbIoCapacityMax() == other.hasInnodbIoCapacityMax());
+      if (hasInnodbIoCapacityMax()) {
+        result = result && getInnodbIoCapacityMax()
+            .equals(other.getInnodbIoCapacityMax());
+      }
+      result = result && (hasInnodbReadIoThreads() == other.hasInnodbReadIoThreads());
+      if (hasInnodbReadIoThreads()) {
+        result = result && getInnodbReadIoThreads()
+            .equals(other.getInnodbReadIoThreads());
+      }
+      result = result && (hasInnodbWriteIoThreads() == other.hasInnodbWriteIoThreads());
+      if (hasInnodbWriteIoThreads()) {
+        result = result && getInnodbWriteIoThreads()
+            .equals(other.getInnodbWriteIoThreads());
+      }
+      result = result && (hasInnodbPurgeThreads() == other.hasInnodbPurgeThreads());
+      if (hasInnodbPurgeThreads()) {
+        result = result && getInnodbPurgeThreads()
+            .equals(other.getInnodbPurgeThreads());
+      }
+      result = result && (hasInnodbThreadConcurrency() == other.hasInnodbThreadConcurrency());
+      if (hasInnodbThreadConcurrency()) {
+        result = result && getInnodbThreadConcurrency()
+            .equals(other.getInnodbThreadConcurrency());
+      }
+      result = result && (hasInnodbTempDataFileMaxSize() == other.hasInnodbTempDataFileMaxSize());
+      if (hasInnodbTempDataFileMaxSize()) {
+        result = result && getInnodbTempDataFileMaxSize()
+            .equals(other.getInnodbTempDataFileMaxSize());
+      }
+      result = result && (hasThreadCacheSize() == other.hasThreadCacheSize());
+      if (hasThreadCacheSize()) {
+        result = result && getThreadCacheSize()
+            .equals(other.getThreadCacheSize());
+      }
+      result = result && (hasThreadStack() == other.hasThreadStack());
+      if (hasThreadStack()) {
+        result = result && getThreadStack()
+            .equals(other.getThreadStack());
+      }
+      result = result && (hasJoinBufferSize() == other.hasJoinBufferSize());
+      if (hasJoinBufferSize()) {
+        result = result && getJoinBufferSize()
+            .equals(other.getJoinBufferSize());
+      }
+      result = result && (hasSortBufferSize() == other.hasSortBufferSize());
+      if (hasSortBufferSize()) {
+        result = result && getSortBufferSize()
+            .equals(other.getSortBufferSize());
+      }
+      result = result && (hasTableDefinitionCache() == other.hasTableDefinitionCache());
+      if (hasTableDefinitionCache()) {
+        result = result && getTableDefinitionCache()
+            .equals(other.getTableDefinitionCache());
+      }
+      result = result && (hasTableOpenCache() == other.hasTableOpenCache());
+      if (hasTableOpenCache()) {
+        result = result && getTableOpenCache()
+            .equals(other.getTableOpenCache());
+      }
+      result = result && (hasTableOpenCacheInstances() == other.hasTableOpenCacheInstances());
+      if (hasTableOpenCacheInstances()) {
+        result = result && getTableOpenCacheInstances()
+            .equals(other.getTableOpenCacheInstances());
+      }
+      result = result && (hasExplicitDefaultsForTimestamp() == other.hasExplicitDefaultsForTimestamp());
+      if (hasExplicitDefaultsForTimestamp()) {
+        result = result && getExplicitDefaultsForTimestamp()
+            .equals(other.getExplicitDefaultsForTimestamp());
+      }
+      result = result && (hasAutoIncrementIncrement() == other.hasAutoIncrementIncrement());
+      if (hasAutoIncrementIncrement()) {
+        result = result && getAutoIncrementIncrement()
+            .equals(other.getAutoIncrementIncrement());
+      }
+      result = result && (hasAutoIncrementOffset() == other.hasAutoIncrementOffset());
+      if (hasAutoIncrementOffset()) {
+        result = result && getAutoIncrementOffset()
+            .equals(other.getAutoIncrementOffset());
+      }
+      result = result && (hasSyncBinlog() == other.hasSyncBinlog());
+      if (hasSyncBinlog()) {
+        result = result && getSyncBinlog()
+            .equals(other.getSyncBinlog());
+      }
+      result = result && (hasBinlogCacheSize() == other.hasBinlogCacheSize());
+      if (hasBinlogCacheSize()) {
+        result = result && getBinlogCacheSize()
+            .equals(other.getBinlogCacheSize());
+      }
+      result = result && (hasBinlogGroupCommitSyncDelay() == other.hasBinlogGroupCommitSyncDelay());
+      if (hasBinlogGroupCommitSyncDelay()) {
+        result = result && getBinlogGroupCommitSyncDelay()
+            .equals(other.getBinlogGroupCommitSyncDelay());
+      }
+      result = result && binlogRowImage_ == other.binlogRowImage_;
+      result = result && (hasBinlogRowsQueryLogEvents() == other.hasBinlogRowsQueryLogEvents());
+      if (hasBinlogRowsQueryLogEvents()) {
+        result = result && getBinlogRowsQueryLogEvents()
+            .equals(other.getBinlogRowsQueryLogEvents());
+      }
+      result = result && (hasRplSemiSyncMasterWaitForSlaveCount() == other.hasRplSemiSyncMasterWaitForSlaveCount());
+      if (hasRplSemiSyncMasterWaitForSlaveCount()) {
+        result = result && getRplSemiSyncMasterWaitForSlaveCount()
+            .equals(other.getRplSemiSyncMasterWaitForSlaveCount());
+      }
+      result = result && slaveParallelType_ == other.slaveParallelType_;
+      result = result && (hasSlaveParallelWorkers() == other.hasSlaveParallelWorkers());
+      if (hasSlaveParallelWorkers()) {
+        result = result && getSlaveParallelWorkers()
+            .equals(other.getSlaveParallelWorkers());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2584,6 +5352,118 @@ public final class Mysql57 {
       hash = (53 * hash) + getCharacterSetServer().hashCode();
       hash = (37 * hash) + COLLATION_SERVER_FIELD_NUMBER;
       hash = (53 * hash) + getCollationServer().hashCode();
+      if (hasInnodbAdaptiveHashIndex()) {
+        hash = (37 * hash) + INNODB_ADAPTIVE_HASH_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbAdaptiveHashIndex().hashCode();
+      }
+      if (hasInnodbNumaInterleave()) {
+        hash = (37 * hash) + INNODB_NUMA_INTERLEAVE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbNumaInterleave().hashCode();
+      }
+      if (hasInnodbLogBufferSize()) {
+        hash = (37 * hash) + INNODB_LOG_BUFFER_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbLogBufferSize().hashCode();
+      }
+      if (hasInnodbLogFileSize()) {
+        hash = (37 * hash) + INNODB_LOG_FILE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbLogFileSize().hashCode();
+      }
+      if (hasInnodbIoCapacity()) {
+        hash = (37 * hash) + INNODB_IO_CAPACITY_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbIoCapacity().hashCode();
+      }
+      if (hasInnodbIoCapacityMax()) {
+        hash = (37 * hash) + INNODB_IO_CAPACITY_MAX_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbIoCapacityMax().hashCode();
+      }
+      if (hasInnodbReadIoThreads()) {
+        hash = (37 * hash) + INNODB_READ_IO_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbReadIoThreads().hashCode();
+      }
+      if (hasInnodbWriteIoThreads()) {
+        hash = (37 * hash) + INNODB_WRITE_IO_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbWriteIoThreads().hashCode();
+      }
+      if (hasInnodbPurgeThreads()) {
+        hash = (37 * hash) + INNODB_PURGE_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbPurgeThreads().hashCode();
+      }
+      if (hasInnodbThreadConcurrency()) {
+        hash = (37 * hash) + INNODB_THREAD_CONCURRENCY_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbThreadConcurrency().hashCode();
+      }
+      if (hasInnodbTempDataFileMaxSize()) {
+        hash = (37 * hash) + INNODB_TEMP_DATA_FILE_MAX_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbTempDataFileMaxSize().hashCode();
+      }
+      if (hasThreadCacheSize()) {
+        hash = (37 * hash) + THREAD_CACHE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getThreadCacheSize().hashCode();
+      }
+      if (hasThreadStack()) {
+        hash = (37 * hash) + THREAD_STACK_FIELD_NUMBER;
+        hash = (53 * hash) + getThreadStack().hashCode();
+      }
+      if (hasJoinBufferSize()) {
+        hash = (37 * hash) + JOIN_BUFFER_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinBufferSize().hashCode();
+      }
+      if (hasSortBufferSize()) {
+        hash = (37 * hash) + SORT_BUFFER_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getSortBufferSize().hashCode();
+      }
+      if (hasTableDefinitionCache()) {
+        hash = (37 * hash) + TABLE_DEFINITION_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getTableDefinitionCache().hashCode();
+      }
+      if (hasTableOpenCache()) {
+        hash = (37 * hash) + TABLE_OPEN_CACHE_FIELD_NUMBER;
+        hash = (53 * hash) + getTableOpenCache().hashCode();
+      }
+      if (hasTableOpenCacheInstances()) {
+        hash = (37 * hash) + TABLE_OPEN_CACHE_INSTANCES_FIELD_NUMBER;
+        hash = (53 * hash) + getTableOpenCacheInstances().hashCode();
+      }
+      if (hasExplicitDefaultsForTimestamp()) {
+        hash = (37 * hash) + EXPLICIT_DEFAULTS_FOR_TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getExplicitDefaultsForTimestamp().hashCode();
+      }
+      if (hasAutoIncrementIncrement()) {
+        hash = (37 * hash) + AUTO_INCREMENT_INCREMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoIncrementIncrement().hashCode();
+      }
+      if (hasAutoIncrementOffset()) {
+        hash = (37 * hash) + AUTO_INCREMENT_OFFSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoIncrementOffset().hashCode();
+      }
+      if (hasSyncBinlog()) {
+        hash = (37 * hash) + SYNC_BINLOG_FIELD_NUMBER;
+        hash = (53 * hash) + getSyncBinlog().hashCode();
+      }
+      if (hasBinlogCacheSize()) {
+        hash = (37 * hash) + BINLOG_CACHE_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBinlogCacheSize().hashCode();
+      }
+      if (hasBinlogGroupCommitSyncDelay()) {
+        hash = (37 * hash) + BINLOG_GROUP_COMMIT_SYNC_DELAY_FIELD_NUMBER;
+        hash = (53 * hash) + getBinlogGroupCommitSyncDelay().hashCode();
+      }
+      hash = (37 * hash) + BINLOG_ROW_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + binlogRowImage_;
+      if (hasBinlogRowsQueryLogEvents()) {
+        hash = (37 * hash) + BINLOG_ROWS_QUERY_LOG_EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getBinlogRowsQueryLogEvents().hashCode();
+      }
+      if (hasRplSemiSyncMasterWaitForSlaveCount()) {
+        hash = (37 * hash) + RPL_SEMI_SYNC_MASTER_WAIT_FOR_SLAVE_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getRplSemiSyncMasterWaitForSlaveCount().hashCode();
+      }
+      hash = (37 * hash) + SLAVE_PARALLEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + slaveParallelType_;
+      if (hasSlaveParallelWorkers()) {
+        hash = (37 * hash) + SLAVE_PARALLEL_WORKERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSlaveParallelWorkers().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2817,6 +5697,172 @@ public final class Mysql57 {
 
         collationServer_ = "";
 
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          innodbAdaptiveHashIndex_ = null;
+        } else {
+          innodbAdaptiveHashIndex_ = null;
+          innodbAdaptiveHashIndexBuilder_ = null;
+        }
+        if (innodbNumaInterleaveBuilder_ == null) {
+          innodbNumaInterleave_ = null;
+        } else {
+          innodbNumaInterleave_ = null;
+          innodbNumaInterleaveBuilder_ = null;
+        }
+        if (innodbLogBufferSizeBuilder_ == null) {
+          innodbLogBufferSize_ = null;
+        } else {
+          innodbLogBufferSize_ = null;
+          innodbLogBufferSizeBuilder_ = null;
+        }
+        if (innodbLogFileSizeBuilder_ == null) {
+          innodbLogFileSize_ = null;
+        } else {
+          innodbLogFileSize_ = null;
+          innodbLogFileSizeBuilder_ = null;
+        }
+        if (innodbIoCapacityBuilder_ == null) {
+          innodbIoCapacity_ = null;
+        } else {
+          innodbIoCapacity_ = null;
+          innodbIoCapacityBuilder_ = null;
+        }
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          innodbIoCapacityMax_ = null;
+        } else {
+          innodbIoCapacityMax_ = null;
+          innodbIoCapacityMaxBuilder_ = null;
+        }
+        if (innodbReadIoThreadsBuilder_ == null) {
+          innodbReadIoThreads_ = null;
+        } else {
+          innodbReadIoThreads_ = null;
+          innodbReadIoThreadsBuilder_ = null;
+        }
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          innodbWriteIoThreads_ = null;
+        } else {
+          innodbWriteIoThreads_ = null;
+          innodbWriteIoThreadsBuilder_ = null;
+        }
+        if (innodbPurgeThreadsBuilder_ == null) {
+          innodbPurgeThreads_ = null;
+        } else {
+          innodbPurgeThreads_ = null;
+          innodbPurgeThreadsBuilder_ = null;
+        }
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          innodbThreadConcurrency_ = null;
+        } else {
+          innodbThreadConcurrency_ = null;
+          innodbThreadConcurrencyBuilder_ = null;
+        }
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          innodbTempDataFileMaxSize_ = null;
+        } else {
+          innodbTempDataFileMaxSize_ = null;
+          innodbTempDataFileMaxSizeBuilder_ = null;
+        }
+        if (threadCacheSizeBuilder_ == null) {
+          threadCacheSize_ = null;
+        } else {
+          threadCacheSize_ = null;
+          threadCacheSizeBuilder_ = null;
+        }
+        if (threadStackBuilder_ == null) {
+          threadStack_ = null;
+        } else {
+          threadStack_ = null;
+          threadStackBuilder_ = null;
+        }
+        if (joinBufferSizeBuilder_ == null) {
+          joinBufferSize_ = null;
+        } else {
+          joinBufferSize_ = null;
+          joinBufferSizeBuilder_ = null;
+        }
+        if (sortBufferSizeBuilder_ == null) {
+          sortBufferSize_ = null;
+        } else {
+          sortBufferSize_ = null;
+          sortBufferSizeBuilder_ = null;
+        }
+        if (tableDefinitionCacheBuilder_ == null) {
+          tableDefinitionCache_ = null;
+        } else {
+          tableDefinitionCache_ = null;
+          tableDefinitionCacheBuilder_ = null;
+        }
+        if (tableOpenCacheBuilder_ == null) {
+          tableOpenCache_ = null;
+        } else {
+          tableOpenCache_ = null;
+          tableOpenCacheBuilder_ = null;
+        }
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          tableOpenCacheInstances_ = null;
+        } else {
+          tableOpenCacheInstances_ = null;
+          tableOpenCacheInstancesBuilder_ = null;
+        }
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          explicitDefaultsForTimestamp_ = null;
+        } else {
+          explicitDefaultsForTimestamp_ = null;
+          explicitDefaultsForTimestampBuilder_ = null;
+        }
+        if (autoIncrementIncrementBuilder_ == null) {
+          autoIncrementIncrement_ = null;
+        } else {
+          autoIncrementIncrement_ = null;
+          autoIncrementIncrementBuilder_ = null;
+        }
+        if (autoIncrementOffsetBuilder_ == null) {
+          autoIncrementOffset_ = null;
+        } else {
+          autoIncrementOffset_ = null;
+          autoIncrementOffsetBuilder_ = null;
+        }
+        if (syncBinlogBuilder_ == null) {
+          syncBinlog_ = null;
+        } else {
+          syncBinlog_ = null;
+          syncBinlogBuilder_ = null;
+        }
+        if (binlogCacheSizeBuilder_ == null) {
+          binlogCacheSize_ = null;
+        } else {
+          binlogCacheSize_ = null;
+          binlogCacheSizeBuilder_ = null;
+        }
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          binlogGroupCommitSyncDelay_ = null;
+        } else {
+          binlogGroupCommitSyncDelay_ = null;
+          binlogGroupCommitSyncDelayBuilder_ = null;
+        }
+        binlogRowImage_ = 0;
+
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          binlogRowsQueryLogEvents_ = null;
+        } else {
+          binlogRowsQueryLogEvents_ = null;
+          binlogRowsQueryLogEventsBuilder_ = null;
+        }
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          rplSemiSyncMasterWaitForSlaveCount_ = null;
+        } else {
+          rplSemiSyncMasterWaitForSlaveCount_ = null;
+          rplSemiSyncMasterWaitForSlaveCountBuilder_ = null;
+        }
+        slaveParallelType_ = 0;
+
+        if (slaveParallelWorkersBuilder_ == null) {
+          slaveParallelWorkers_ = null;
+        } else {
+          slaveParallelWorkers_ = null;
+          slaveParallelWorkersBuilder_ = null;
+        }
         return this;
       }
 
@@ -2844,7 +5890,9 @@ public final class Mysql57 {
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7 buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7 result = new yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         if (innodbBufferPoolSizeBuilder_ == null) {
           result.innodbBufferPoolSize_ = innodbBufferPoolSize_;
         } else {
@@ -2925,7 +5973,145 @@ public final class Mysql57 {
         result.defaultTimeZone_ = defaultTimeZone_;
         result.characterSetServer_ = characterSetServer_;
         result.collationServer_ = collationServer_;
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          result.innodbAdaptiveHashIndex_ = innodbAdaptiveHashIndex_;
+        } else {
+          result.innodbAdaptiveHashIndex_ = innodbAdaptiveHashIndexBuilder_.build();
+        }
+        if (innodbNumaInterleaveBuilder_ == null) {
+          result.innodbNumaInterleave_ = innodbNumaInterleave_;
+        } else {
+          result.innodbNumaInterleave_ = innodbNumaInterleaveBuilder_.build();
+        }
+        if (innodbLogBufferSizeBuilder_ == null) {
+          result.innodbLogBufferSize_ = innodbLogBufferSize_;
+        } else {
+          result.innodbLogBufferSize_ = innodbLogBufferSizeBuilder_.build();
+        }
+        if (innodbLogFileSizeBuilder_ == null) {
+          result.innodbLogFileSize_ = innodbLogFileSize_;
+        } else {
+          result.innodbLogFileSize_ = innodbLogFileSizeBuilder_.build();
+        }
+        if (innodbIoCapacityBuilder_ == null) {
+          result.innodbIoCapacity_ = innodbIoCapacity_;
+        } else {
+          result.innodbIoCapacity_ = innodbIoCapacityBuilder_.build();
+        }
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          result.innodbIoCapacityMax_ = innodbIoCapacityMax_;
+        } else {
+          result.innodbIoCapacityMax_ = innodbIoCapacityMaxBuilder_.build();
+        }
+        if (innodbReadIoThreadsBuilder_ == null) {
+          result.innodbReadIoThreads_ = innodbReadIoThreads_;
+        } else {
+          result.innodbReadIoThreads_ = innodbReadIoThreadsBuilder_.build();
+        }
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          result.innodbWriteIoThreads_ = innodbWriteIoThreads_;
+        } else {
+          result.innodbWriteIoThreads_ = innodbWriteIoThreadsBuilder_.build();
+        }
+        if (innodbPurgeThreadsBuilder_ == null) {
+          result.innodbPurgeThreads_ = innodbPurgeThreads_;
+        } else {
+          result.innodbPurgeThreads_ = innodbPurgeThreadsBuilder_.build();
+        }
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          result.innodbThreadConcurrency_ = innodbThreadConcurrency_;
+        } else {
+          result.innodbThreadConcurrency_ = innodbThreadConcurrencyBuilder_.build();
+        }
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          result.innodbTempDataFileMaxSize_ = innodbTempDataFileMaxSize_;
+        } else {
+          result.innodbTempDataFileMaxSize_ = innodbTempDataFileMaxSizeBuilder_.build();
+        }
+        if (threadCacheSizeBuilder_ == null) {
+          result.threadCacheSize_ = threadCacheSize_;
+        } else {
+          result.threadCacheSize_ = threadCacheSizeBuilder_.build();
+        }
+        if (threadStackBuilder_ == null) {
+          result.threadStack_ = threadStack_;
+        } else {
+          result.threadStack_ = threadStackBuilder_.build();
+        }
+        if (joinBufferSizeBuilder_ == null) {
+          result.joinBufferSize_ = joinBufferSize_;
+        } else {
+          result.joinBufferSize_ = joinBufferSizeBuilder_.build();
+        }
+        if (sortBufferSizeBuilder_ == null) {
+          result.sortBufferSize_ = sortBufferSize_;
+        } else {
+          result.sortBufferSize_ = sortBufferSizeBuilder_.build();
+        }
+        if (tableDefinitionCacheBuilder_ == null) {
+          result.tableDefinitionCache_ = tableDefinitionCache_;
+        } else {
+          result.tableDefinitionCache_ = tableDefinitionCacheBuilder_.build();
+        }
+        if (tableOpenCacheBuilder_ == null) {
+          result.tableOpenCache_ = tableOpenCache_;
+        } else {
+          result.tableOpenCache_ = tableOpenCacheBuilder_.build();
+        }
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          result.tableOpenCacheInstances_ = tableOpenCacheInstances_;
+        } else {
+          result.tableOpenCacheInstances_ = tableOpenCacheInstancesBuilder_.build();
+        }
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          result.explicitDefaultsForTimestamp_ = explicitDefaultsForTimestamp_;
+        } else {
+          result.explicitDefaultsForTimestamp_ = explicitDefaultsForTimestampBuilder_.build();
+        }
+        if (autoIncrementIncrementBuilder_ == null) {
+          result.autoIncrementIncrement_ = autoIncrementIncrement_;
+        } else {
+          result.autoIncrementIncrement_ = autoIncrementIncrementBuilder_.build();
+        }
+        if (autoIncrementOffsetBuilder_ == null) {
+          result.autoIncrementOffset_ = autoIncrementOffset_;
+        } else {
+          result.autoIncrementOffset_ = autoIncrementOffsetBuilder_.build();
+        }
+        if (syncBinlogBuilder_ == null) {
+          result.syncBinlog_ = syncBinlog_;
+        } else {
+          result.syncBinlog_ = syncBinlogBuilder_.build();
+        }
+        if (binlogCacheSizeBuilder_ == null) {
+          result.binlogCacheSize_ = binlogCacheSize_;
+        } else {
+          result.binlogCacheSize_ = binlogCacheSizeBuilder_.build();
+        }
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          result.binlogGroupCommitSyncDelay_ = binlogGroupCommitSyncDelay_;
+        } else {
+          result.binlogGroupCommitSyncDelay_ = binlogGroupCommitSyncDelayBuilder_.build();
+        }
+        result.binlogRowImage_ = binlogRowImage_;
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          result.binlogRowsQueryLogEvents_ = binlogRowsQueryLogEvents_;
+        } else {
+          result.binlogRowsQueryLogEvents_ = binlogRowsQueryLogEventsBuilder_.build();
+        }
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          result.rplSemiSyncMasterWaitForSlaveCount_ = rplSemiSyncMasterWaitForSlaveCount_;
+        } else {
+          result.rplSemiSyncMasterWaitForSlaveCount_ = rplSemiSyncMasterWaitForSlaveCountBuilder_.build();
+        }
+        result.slaveParallelType_ = slaveParallelType_;
+        if (slaveParallelWorkersBuilder_ == null) {
+          result.slaveParallelWorkers_ = slaveParallelWorkers_;
+        } else {
+          result.slaveParallelWorkers_ = slaveParallelWorkersBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -3044,6 +6230,93 @@ public final class Mysql57 {
           collationServer_ = other.collationServer_;
           onChanged();
         }
+        if (other.hasInnodbAdaptiveHashIndex()) {
+          mergeInnodbAdaptiveHashIndex(other.getInnodbAdaptiveHashIndex());
+        }
+        if (other.hasInnodbNumaInterleave()) {
+          mergeInnodbNumaInterleave(other.getInnodbNumaInterleave());
+        }
+        if (other.hasInnodbLogBufferSize()) {
+          mergeInnodbLogBufferSize(other.getInnodbLogBufferSize());
+        }
+        if (other.hasInnodbLogFileSize()) {
+          mergeInnodbLogFileSize(other.getInnodbLogFileSize());
+        }
+        if (other.hasInnodbIoCapacity()) {
+          mergeInnodbIoCapacity(other.getInnodbIoCapacity());
+        }
+        if (other.hasInnodbIoCapacityMax()) {
+          mergeInnodbIoCapacityMax(other.getInnodbIoCapacityMax());
+        }
+        if (other.hasInnodbReadIoThreads()) {
+          mergeInnodbReadIoThreads(other.getInnodbReadIoThreads());
+        }
+        if (other.hasInnodbWriteIoThreads()) {
+          mergeInnodbWriteIoThreads(other.getInnodbWriteIoThreads());
+        }
+        if (other.hasInnodbPurgeThreads()) {
+          mergeInnodbPurgeThreads(other.getInnodbPurgeThreads());
+        }
+        if (other.hasInnodbThreadConcurrency()) {
+          mergeInnodbThreadConcurrency(other.getInnodbThreadConcurrency());
+        }
+        if (other.hasInnodbTempDataFileMaxSize()) {
+          mergeInnodbTempDataFileMaxSize(other.getInnodbTempDataFileMaxSize());
+        }
+        if (other.hasThreadCacheSize()) {
+          mergeThreadCacheSize(other.getThreadCacheSize());
+        }
+        if (other.hasThreadStack()) {
+          mergeThreadStack(other.getThreadStack());
+        }
+        if (other.hasJoinBufferSize()) {
+          mergeJoinBufferSize(other.getJoinBufferSize());
+        }
+        if (other.hasSortBufferSize()) {
+          mergeSortBufferSize(other.getSortBufferSize());
+        }
+        if (other.hasTableDefinitionCache()) {
+          mergeTableDefinitionCache(other.getTableDefinitionCache());
+        }
+        if (other.hasTableOpenCache()) {
+          mergeTableOpenCache(other.getTableOpenCache());
+        }
+        if (other.hasTableOpenCacheInstances()) {
+          mergeTableOpenCacheInstances(other.getTableOpenCacheInstances());
+        }
+        if (other.hasExplicitDefaultsForTimestamp()) {
+          mergeExplicitDefaultsForTimestamp(other.getExplicitDefaultsForTimestamp());
+        }
+        if (other.hasAutoIncrementIncrement()) {
+          mergeAutoIncrementIncrement(other.getAutoIncrementIncrement());
+        }
+        if (other.hasAutoIncrementOffset()) {
+          mergeAutoIncrementOffset(other.getAutoIncrementOffset());
+        }
+        if (other.hasSyncBinlog()) {
+          mergeSyncBinlog(other.getSyncBinlog());
+        }
+        if (other.hasBinlogCacheSize()) {
+          mergeBinlogCacheSize(other.getBinlogCacheSize());
+        }
+        if (other.hasBinlogGroupCommitSyncDelay()) {
+          mergeBinlogGroupCommitSyncDelay(other.getBinlogGroupCommitSyncDelay());
+        }
+        if (other.binlogRowImage_ != 0) {
+          setBinlogRowImageValue(other.getBinlogRowImageValue());
+        }
+        if (other.hasBinlogRowsQueryLogEvents()) {
+          mergeBinlogRowsQueryLogEvents(other.getBinlogRowsQueryLogEvents());
+        }
+        if (other.hasRplSemiSyncMasterWaitForSlaveCount()) {
+          mergeRplSemiSyncMasterWaitForSlaveCount(other.getRplSemiSyncMasterWaitForSlaveCount());
+        }
+        if (other.slaveParallelType_ != 0) {
+          setSlaveParallelTypeValue(other.getSlaveParallelTypeValue());
+        }
+        if (other.hasSlaveParallelWorkers()) {
+          mergeSlaveParallelWorkers(other.getSlaveParallelWorkers());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3073,6 +6346,7 @@ public final class Mysql57 {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private com.google.protobuf.Int64Value innodbBufferPoolSize_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5941,6 +9215,4520 @@ public final class Mysql57 {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.BoolValue innodbAdaptiveHashIndex_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbAdaptiveHashIndexBuilder_;
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public boolean hasInnodbAdaptiveHashIndex() {
+        return innodbAdaptiveHashIndexBuilder_ != null || innodbAdaptiveHashIndex_ != null;
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public com.google.protobuf.BoolValue getInnodbAdaptiveHashIndex() {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          return innodbAdaptiveHashIndex_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbAdaptiveHashIndex_;
+        } else {
+          return innodbAdaptiveHashIndexBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public Builder setInnodbAdaptiveHashIndex(com.google.protobuf.BoolValue value) {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbAdaptiveHashIndex_ = value;
+          onChanged();
+        } else {
+          innodbAdaptiveHashIndexBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public Builder setInnodbAdaptiveHashIndex(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          innodbAdaptiveHashIndex_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbAdaptiveHashIndexBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public Builder mergeInnodbAdaptiveHashIndex(com.google.protobuf.BoolValue value) {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          if (innodbAdaptiveHashIndex_ != null) {
+            innodbAdaptiveHashIndex_ =
+              com.google.protobuf.BoolValue.newBuilder(innodbAdaptiveHashIndex_).mergeFrom(value).buildPartial();
+          } else {
+            innodbAdaptiveHashIndex_ = value;
+          }
+          onChanged();
+        } else {
+          innodbAdaptiveHashIndexBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public Builder clearInnodbAdaptiveHashIndex() {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          innodbAdaptiveHashIndex_ = null;
+          onChanged();
+        } else {
+          innodbAdaptiveHashIndex_ = null;
+          innodbAdaptiveHashIndexBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInnodbAdaptiveHashIndexBuilder() {
+        
+        onChanged();
+        return getInnodbAdaptiveHashIndexFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInnodbAdaptiveHashIndexOrBuilder() {
+        if (innodbAdaptiveHashIndexBuilder_ != null) {
+          return innodbAdaptiveHashIndexBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbAdaptiveHashIndex_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : innodbAdaptiveHashIndex_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables Innodb adaptive hash index
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInnodbAdaptiveHashIndexFieldBuilder() {
+        if (innodbAdaptiveHashIndexBuilder_ == null) {
+          innodbAdaptiveHashIndexBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInnodbAdaptiveHashIndex(),
+                  getParentForChildren(),
+                  isClean());
+          innodbAdaptiveHashIndex_ = null;
+        }
+        return innodbAdaptiveHashIndexBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue innodbNumaInterleave_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> innodbNumaInterleaveBuilder_;
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public boolean hasInnodbNumaInterleave() {
+        return innodbNumaInterleaveBuilder_ != null || innodbNumaInterleave_ != null;
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public com.google.protobuf.BoolValue getInnodbNumaInterleave() {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          return innodbNumaInterleave_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : innodbNumaInterleave_;
+        } else {
+          return innodbNumaInterleaveBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public Builder setInnodbNumaInterleave(com.google.protobuf.BoolValue value) {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbNumaInterleave_ = value;
+          onChanged();
+        } else {
+          innodbNumaInterleaveBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public Builder setInnodbNumaInterleave(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          innodbNumaInterleave_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbNumaInterleaveBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public Builder mergeInnodbNumaInterleave(com.google.protobuf.BoolValue value) {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          if (innodbNumaInterleave_ != null) {
+            innodbNumaInterleave_ =
+              com.google.protobuf.BoolValue.newBuilder(innodbNumaInterleave_).mergeFrom(value).buildPartial();
+          } else {
+            innodbNumaInterleave_ = value;
+          }
+          onChanged();
+        } else {
+          innodbNumaInterleaveBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public Builder clearInnodbNumaInterleave() {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          innodbNumaInterleave_ = null;
+          onChanged();
+        } else {
+          innodbNumaInterleave_ = null;
+          innodbNumaInterleaveBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInnodbNumaInterleaveBuilder() {
+        
+        onChanged();
+        return getInnodbNumaInterleaveFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInnodbNumaInterleaveOrBuilder() {
+        if (innodbNumaInterleaveBuilder_ != null) {
+          return innodbNumaInterleaveBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbNumaInterleave_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : innodbNumaInterleave_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_numa_interleave)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInnodbNumaInterleaveFieldBuilder() {
+        if (innodbNumaInterleaveBuilder_ == null) {
+          innodbNumaInterleaveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInnodbNumaInterleave(),
+                  getParentForChildren(),
+                  isClean());
+          innodbNumaInterleave_ = null;
+        }
+        return innodbNumaInterleaveBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbLogBufferSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLogBufferSizeBuilder_;
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public boolean hasInnodbLogBufferSize() {
+        return innodbLogBufferSizeBuilder_ != null || innodbLogBufferSize_ != null;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbLogBufferSize() {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          return innodbLogBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogBufferSize_;
+        } else {
+          return innodbLogBufferSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder setInnodbLogBufferSize(com.google.protobuf.Int64Value value) {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbLogBufferSize_ = value;
+          onChanged();
+        } else {
+          innodbLogBufferSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder setInnodbLogBufferSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          innodbLogBufferSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbLogBufferSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder mergeInnodbLogBufferSize(com.google.protobuf.Int64Value value) {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          if (innodbLogBufferSize_ != null) {
+            innodbLogBufferSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbLogBufferSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbLogBufferSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbLogBufferSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder clearInnodbLogBufferSize() {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          innodbLogBufferSize_ = null;
+          onChanged();
+        } else {
+          innodbLogBufferSize_ = null;
+          innodbLogBufferSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbLogBufferSizeBuilder() {
+        
+        onChanged();
+        return getInnodbLogBufferSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbLogBufferSizeOrBuilder() {
+        if (innodbLogBufferSizeBuilder_ != null) {
+          return innodbLogBufferSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbLogBufferSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogBufferSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbLogBufferSizeFieldBuilder() {
+        if (innodbLogBufferSizeBuilder_ == null) {
+          innodbLogBufferSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbLogBufferSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbLogBufferSize_ = null;
+        }
+        return innodbLogBufferSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbLogFileSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLogFileSizeBuilder_;
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public boolean hasInnodbLogFileSize() {
+        return innodbLogFileSizeBuilder_ != null || innodbLogFileSize_ != null;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbLogFileSize() {
+        if (innodbLogFileSizeBuilder_ == null) {
+          return innodbLogFileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogFileSize_;
+        } else {
+          return innodbLogFileSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public Builder setInnodbLogFileSize(com.google.protobuf.Int64Value value) {
+        if (innodbLogFileSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbLogFileSize_ = value;
+          onChanged();
+        } else {
+          innodbLogFileSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public Builder setInnodbLogFileSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbLogFileSizeBuilder_ == null) {
+          innodbLogFileSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbLogFileSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public Builder mergeInnodbLogFileSize(com.google.protobuf.Int64Value value) {
+        if (innodbLogFileSizeBuilder_ == null) {
+          if (innodbLogFileSize_ != null) {
+            innodbLogFileSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbLogFileSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbLogFileSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbLogFileSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public Builder clearInnodbLogFileSize() {
+        if (innodbLogFileSizeBuilder_ == null) {
+          innodbLogFileSize_ = null;
+          onChanged();
+        } else {
+          innodbLogFileSize_ = null;
+          innodbLogFileSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbLogFileSizeBuilder() {
+        
+        onChanged();
+        return getInnodbLogFileSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbLogFileSizeOrBuilder() {
+        if (innodbLogFileSizeBuilder_ != null) {
+          return innodbLogFileSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbLogFileSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbLogFileSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The size in bytes of the single Innodb Redo log file.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_log_file_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbLogFileSizeFieldBuilder() {
+        if (innodbLogFileSizeBuilder_ == null) {
+          innodbLogFileSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbLogFileSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbLogFileSize_ = null;
+        }
+        return innodbLogFileSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbIoCapacity_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbIoCapacityBuilder_;
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public boolean hasInnodbIoCapacity() {
+        return innodbIoCapacityBuilder_ != null || innodbIoCapacity_ != null;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbIoCapacity() {
+        if (innodbIoCapacityBuilder_ == null) {
+          return innodbIoCapacity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacity_;
+        } else {
+          return innodbIoCapacityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder setInnodbIoCapacity(com.google.protobuf.Int64Value value) {
+        if (innodbIoCapacityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbIoCapacity_ = value;
+          onChanged();
+        } else {
+          innodbIoCapacityBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder setInnodbIoCapacity(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbIoCapacityBuilder_ == null) {
+          innodbIoCapacity_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbIoCapacityBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder mergeInnodbIoCapacity(com.google.protobuf.Int64Value value) {
+        if (innodbIoCapacityBuilder_ == null) {
+          if (innodbIoCapacity_ != null) {
+            innodbIoCapacity_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbIoCapacity_).mergeFrom(value).buildPartial();
+          } else {
+            innodbIoCapacity_ = value;
+          }
+          onChanged();
+        } else {
+          innodbIoCapacityBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder clearInnodbIoCapacity() {
+        if (innodbIoCapacityBuilder_ == null) {
+          innodbIoCapacity_ = null;
+          onChanged();
+        } else {
+          innodbIoCapacity_ = null;
+          innodbIoCapacityBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbIoCapacityBuilder() {
+        
+        onChanged();
+        return getInnodbIoCapacityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityOrBuilder() {
+        if (innodbIoCapacityBuilder_ != null) {
+          return innodbIoCapacityBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbIoCapacity_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacity_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbIoCapacityFieldBuilder() {
+        if (innodbIoCapacityBuilder_ == null) {
+          innodbIoCapacityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbIoCapacity(),
+                  getParentForChildren(),
+                  isClean());
+          innodbIoCapacity_ = null;
+        }
+        return innodbIoCapacityBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbIoCapacityMax_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbIoCapacityMaxBuilder_;
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public boolean hasInnodbIoCapacityMax() {
+        return innodbIoCapacityMaxBuilder_ != null || innodbIoCapacityMax_ != null;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbIoCapacityMax() {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          return innodbIoCapacityMax_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacityMax_;
+        } else {
+          return innodbIoCapacityMaxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder setInnodbIoCapacityMax(com.google.protobuf.Int64Value value) {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbIoCapacityMax_ = value;
+          onChanged();
+        } else {
+          innodbIoCapacityMaxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder setInnodbIoCapacityMax(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          innodbIoCapacityMax_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbIoCapacityMaxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder mergeInnodbIoCapacityMax(com.google.protobuf.Int64Value value) {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          if (innodbIoCapacityMax_ != null) {
+            innodbIoCapacityMax_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbIoCapacityMax_).mergeFrom(value).buildPartial();
+          } else {
+            innodbIoCapacityMax_ = value;
+          }
+          onChanged();
+        } else {
+          innodbIoCapacityMaxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public Builder clearInnodbIoCapacityMax() {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          innodbIoCapacityMax_ = null;
+          onChanged();
+        } else {
+          innodbIoCapacityMax_ = null;
+          innodbIoCapacityMaxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbIoCapacityMaxBuilder() {
+        
+        onChanged();
+        return getInnodbIoCapacityMaxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbIoCapacityMaxOrBuilder() {
+        if (innodbIoCapacityMaxBuilder_ != null) {
+          return innodbIoCapacityMaxBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbIoCapacityMax_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbIoCapacityMax_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits IO available for InnoDB background tasks
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_io_capacity_max)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbIoCapacityMaxFieldBuilder() {
+        if (innodbIoCapacityMaxBuilder_ == null) {
+          innodbIoCapacityMaxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbIoCapacityMax(),
+                  getParentForChildren(),
+                  isClean());
+          innodbIoCapacityMax_ = null;
+        }
+        return innodbIoCapacityMaxBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbReadIoThreads_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbReadIoThreadsBuilder_;
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public boolean hasInnodbReadIoThreads() {
+        return innodbReadIoThreadsBuilder_ != null || innodbReadIoThreads_ != null;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbReadIoThreads() {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          return innodbReadIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbReadIoThreads_;
+        } else {
+          return innodbReadIoThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbReadIoThreads(com.google.protobuf.Int64Value value) {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbReadIoThreads_ = value;
+          onChanged();
+        } else {
+          innodbReadIoThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbReadIoThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          innodbReadIoThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbReadIoThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder mergeInnodbReadIoThreads(com.google.protobuf.Int64Value value) {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          if (innodbReadIoThreads_ != null) {
+            innodbReadIoThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbReadIoThreads_).mergeFrom(value).buildPartial();
+          } else {
+            innodbReadIoThreads_ = value;
+          }
+          onChanged();
+        } else {
+          innodbReadIoThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder clearInnodbReadIoThreads() {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          innodbReadIoThreads_ = null;
+          onChanged();
+        } else {
+          innodbReadIoThreads_ = null;
+          innodbReadIoThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbReadIoThreadsBuilder() {
+        
+        onChanged();
+        return getInnodbReadIoThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbReadIoThreadsOrBuilder() {
+        if (innodbReadIoThreadsBuilder_ != null) {
+          return innodbReadIoThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbReadIoThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbReadIoThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for read operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_read_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbReadIoThreadsFieldBuilder() {
+        if (innodbReadIoThreadsBuilder_ == null) {
+          innodbReadIoThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbReadIoThreads(),
+                  getParentForChildren(),
+                  isClean());
+          innodbReadIoThreads_ = null;
+        }
+        return innodbReadIoThreadsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbWriteIoThreads_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbWriteIoThreadsBuilder_;
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public boolean hasInnodbWriteIoThreads() {
+        return innodbWriteIoThreadsBuilder_ != null || innodbWriteIoThreads_ != null;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbWriteIoThreads() {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          return innodbWriteIoThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbWriteIoThreads_;
+        } else {
+          return innodbWriteIoThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbWriteIoThreads(com.google.protobuf.Int64Value value) {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbWriteIoThreads_ = value;
+          onChanged();
+        } else {
+          innodbWriteIoThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbWriteIoThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          innodbWriteIoThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbWriteIoThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder mergeInnodbWriteIoThreads(com.google.protobuf.Int64Value value) {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          if (innodbWriteIoThreads_ != null) {
+            innodbWriteIoThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbWriteIoThreads_).mergeFrom(value).buildPartial();
+          } else {
+            innodbWriteIoThreads_ = value;
+          }
+          onChanged();
+        } else {
+          innodbWriteIoThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder clearInnodbWriteIoThreads() {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          innodbWriteIoThreads_ = null;
+          onChanged();
+        } else {
+          innodbWriteIoThreads_ = null;
+          innodbWriteIoThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbWriteIoThreadsBuilder() {
+        
+        onChanged();
+        return getInnodbWriteIoThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbWriteIoThreadsOrBuilder() {
+        if (innodbWriteIoThreadsBuilder_ != null) {
+          return innodbWriteIoThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbWriteIoThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbWriteIoThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of I/O threads for write operations in InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_write_io_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbWriteIoThreadsFieldBuilder() {
+        if (innodbWriteIoThreadsBuilder_ == null) {
+          innodbWriteIoThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbWriteIoThreads(),
+                  getParentForChildren(),
+                  isClean());
+          innodbWriteIoThreads_ = null;
+        }
+        return innodbWriteIoThreadsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbPurgeThreads_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbPurgeThreadsBuilder_;
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public boolean hasInnodbPurgeThreads() {
+        return innodbPurgeThreadsBuilder_ != null || innodbPurgeThreads_ != null;
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbPurgeThreads() {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          return innodbPurgeThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbPurgeThreads_;
+        } else {
+          return innodbPurgeThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbPurgeThreads(com.google.protobuf.Int64Value value) {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbPurgeThreads_ = value;
+          onChanged();
+        } else {
+          innodbPurgeThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder setInnodbPurgeThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          innodbPurgeThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbPurgeThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder mergeInnodbPurgeThreads(com.google.protobuf.Int64Value value) {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          if (innodbPurgeThreads_ != null) {
+            innodbPurgeThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbPurgeThreads_).mergeFrom(value).buildPartial();
+          } else {
+            innodbPurgeThreads_ = value;
+          }
+          onChanged();
+        } else {
+          innodbPurgeThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public Builder clearInnodbPurgeThreads() {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          innodbPurgeThreads_ = null;
+          onChanged();
+        } else {
+          innodbPurgeThreads_ = null;
+          innodbPurgeThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbPurgeThreadsBuilder() {
+        
+        onChanged();
+        return getInnodbPurgeThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbPurgeThreadsOrBuilder() {
+        if (innodbPurgeThreadsBuilder_ != null) {
+          return innodbPurgeThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbPurgeThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbPurgeThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of background threads devoted to the InnoDB purge operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_purge_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbPurgeThreadsFieldBuilder() {
+        if (innodbPurgeThreadsBuilder_ == null) {
+          innodbPurgeThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbPurgeThreads(),
+                  getParentForChildren(),
+                  isClean());
+          innodbPurgeThreads_ = null;
+        }
+        return innodbPurgeThreadsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbThreadConcurrency_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbThreadConcurrencyBuilder_;
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public boolean hasInnodbThreadConcurrency() {
+        return innodbThreadConcurrencyBuilder_ != null || innodbThreadConcurrency_ != null;
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbThreadConcurrency() {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          return innodbThreadConcurrency_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbThreadConcurrency_;
+        } else {
+          return innodbThreadConcurrencyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder setInnodbThreadConcurrency(com.google.protobuf.Int64Value value) {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbThreadConcurrency_ = value;
+          onChanged();
+        } else {
+          innodbThreadConcurrencyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder setInnodbThreadConcurrency(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          innodbThreadConcurrency_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbThreadConcurrencyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder mergeInnodbThreadConcurrency(com.google.protobuf.Int64Value value) {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          if (innodbThreadConcurrency_ != null) {
+            innodbThreadConcurrency_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbThreadConcurrency_).mergeFrom(value).buildPartial();
+          } else {
+            innodbThreadConcurrency_ = value;
+          }
+          onChanged();
+        } else {
+          innodbThreadConcurrencyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public Builder clearInnodbThreadConcurrency() {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          innodbThreadConcurrency_ = null;
+          onChanged();
+        } else {
+          innodbThreadConcurrency_ = null;
+          innodbThreadConcurrencyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbThreadConcurrencyBuilder() {
+        
+        onChanged();
+        return getInnodbThreadConcurrencyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbThreadConcurrencyOrBuilder() {
+        if (innodbThreadConcurrencyBuilder_ != null) {
+          return innodbThreadConcurrencyBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbThreadConcurrency_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbThreadConcurrency_;
+        }
+      }
+      /**
+       * <pre>
+       * Defines the maximum number of threads permitted inside of InnoDB.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_thread_concurrency)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbThreadConcurrencyFieldBuilder() {
+        if (innodbThreadConcurrencyBuilder_ == null) {
+          innodbThreadConcurrencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbThreadConcurrency(),
+                  getParentForChildren(),
+                  isClean());
+          innodbThreadConcurrency_ = null;
+        }
+        return innodbThreadConcurrencyBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value innodbTempDataFileMaxSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbTempDataFileMaxSizeBuilder_;
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public boolean hasInnodbTempDataFileMaxSize() {
+        return innodbTempDataFileMaxSizeBuilder_ != null || innodbTempDataFileMaxSize_ != null;
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value getInnodbTempDataFileMaxSize() {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          return innodbTempDataFileMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbTempDataFileMaxSize_;
+        } else {
+          return innodbTempDataFileMaxSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public Builder setInnodbTempDataFileMaxSize(com.google.protobuf.Int64Value value) {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbTempDataFileMaxSize_ = value;
+          onChanged();
+        } else {
+          innodbTempDataFileMaxSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public Builder setInnodbTempDataFileMaxSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          innodbTempDataFileMaxSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbTempDataFileMaxSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public Builder mergeInnodbTempDataFileMaxSize(com.google.protobuf.Int64Value value) {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          if (innodbTempDataFileMaxSize_ != null) {
+            innodbTempDataFileMaxSize_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbTempDataFileMaxSize_).mergeFrom(value).buildPartial();
+          } else {
+            innodbTempDataFileMaxSize_ = value;
+          }
+          onChanged();
+        } else {
+          innodbTempDataFileMaxSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public Builder clearInnodbTempDataFileMaxSize() {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          innodbTempDataFileMaxSize_ = null;
+          onChanged();
+        } else {
+          innodbTempDataFileMaxSize_ = null;
+          innodbTempDataFileMaxSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbTempDataFileMaxSizeBuilder() {
+        
+        onChanged();
+        return getInnodbTempDataFileMaxSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbTempDataFileMaxSizeOrBuilder() {
+        if (innodbTempDataFileMaxSizeBuilder_ != null) {
+          return innodbTempDataFileMaxSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbTempDataFileMaxSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbTempDataFileMaxSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits the max size of InnoDB temp tablespace
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbTempDataFileMaxSizeFieldBuilder() {
+        if (innodbTempDataFileMaxSizeBuilder_ == null) {
+          innodbTempDataFileMaxSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbTempDataFileMaxSize(),
+                  getParentForChildren(),
+                  isClean());
+          innodbTempDataFileMaxSize_ = null;
+        }
+        return innodbTempDataFileMaxSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value threadCacheSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> threadCacheSizeBuilder_;
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public boolean hasThreadCacheSize() {
+        return threadCacheSizeBuilder_ != null || threadCacheSize_ != null;
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public com.google.protobuf.Int64Value getThreadCacheSize() {
+        if (threadCacheSizeBuilder_ == null) {
+          return threadCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadCacheSize_;
+        } else {
+          return threadCacheSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public Builder setThreadCacheSize(com.google.protobuf.Int64Value value) {
+        if (threadCacheSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          threadCacheSize_ = value;
+          onChanged();
+        } else {
+          threadCacheSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public Builder setThreadCacheSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (threadCacheSizeBuilder_ == null) {
+          threadCacheSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          threadCacheSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public Builder mergeThreadCacheSize(com.google.protobuf.Int64Value value) {
+        if (threadCacheSizeBuilder_ == null) {
+          if (threadCacheSize_ != null) {
+            threadCacheSize_ =
+              com.google.protobuf.Int64Value.newBuilder(threadCacheSize_).mergeFrom(value).buildPartial();
+          } else {
+            threadCacheSize_ = value;
+          }
+          onChanged();
+        } else {
+          threadCacheSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public Builder clearThreadCacheSize() {
+        if (threadCacheSizeBuilder_ == null) {
+          threadCacheSize_ = null;
+          onChanged();
+        } else {
+          threadCacheSize_ = null;
+          threadCacheSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getThreadCacheSizeBuilder() {
+        
+        onChanged();
+        return getThreadCacheSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getThreadCacheSizeOrBuilder() {
+        if (threadCacheSizeBuilder_ != null) {
+          return threadCacheSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return threadCacheSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : threadCacheSize_;
+        }
+      }
+      /**
+       * <pre>
+       * How many threads the server should cache for reuse.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_cache_size = 32 [(.yandex.cloud.value) = "10-10000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getThreadCacheSizeFieldBuilder() {
+        if (threadCacheSizeBuilder_ == null) {
+          threadCacheSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getThreadCacheSize(),
+                  getParentForChildren(),
+                  isClean());
+          threadCacheSize_ = null;
+        }
+        return threadCacheSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value threadStack_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> threadStackBuilder_;
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public boolean hasThreadStack() {
+        return threadStackBuilder_ != null || threadStack_ != null;
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value getThreadStack() {
+        if (threadStackBuilder_ == null) {
+          return threadStack_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : threadStack_;
+        } else {
+          return threadStackBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public Builder setThreadStack(com.google.protobuf.Int64Value value) {
+        if (threadStackBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          threadStack_ = value;
+          onChanged();
+        } else {
+          threadStackBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public Builder setThreadStack(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (threadStackBuilder_ == null) {
+          threadStack_ = builderForValue.build();
+          onChanged();
+        } else {
+          threadStackBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public Builder mergeThreadStack(com.google.protobuf.Int64Value value) {
+        if (threadStackBuilder_ == null) {
+          if (threadStack_ != null) {
+            threadStack_ =
+              com.google.protobuf.Int64Value.newBuilder(threadStack_).mergeFrom(value).buildPartial();
+          } else {
+            threadStack_ = value;
+          }
+          onChanged();
+        } else {
+          threadStackBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public Builder clearThreadStack() {
+        if (threadStackBuilder_ == null) {
+          threadStack_ = null;
+          onChanged();
+        } else {
+          threadStack_ = null;
+          threadStackBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getThreadStackBuilder() {
+        
+        onChanged();
+        return getThreadStackFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getThreadStackOrBuilder() {
+        if (threadStackBuilder_ != null) {
+          return threadStackBuilder_.getMessageOrBuilder();
+        } else {
+          return threadStack_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : threadStack_;
+        }
+      }
+      /**
+       * <pre>
+       * The stack size for each thread. The default is large enough for normal operation.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_thread_stack).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value thread_stack = 33 [(.yandex.cloud.value) = "131072-16777216"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getThreadStackFieldBuilder() {
+        if (threadStackBuilder_ == null) {
+          threadStackBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getThreadStack(),
+                  getParentForChildren(),
+                  isClean());
+          threadStack_ = null;
+        }
+        return threadStackBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value joinBufferSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> joinBufferSizeBuilder_;
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public boolean hasJoinBufferSize() {
+        return joinBufferSizeBuilder_ != null || joinBufferSize_ != null;
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value getJoinBufferSize() {
+        if (joinBufferSizeBuilder_ == null) {
+          return joinBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : joinBufferSize_;
+        } else {
+          return joinBufferSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder setJoinBufferSize(com.google.protobuf.Int64Value value) {
+        if (joinBufferSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          joinBufferSize_ = value;
+          onChanged();
+        } else {
+          joinBufferSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder setJoinBufferSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (joinBufferSizeBuilder_ == null) {
+          joinBufferSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          joinBufferSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder mergeJoinBufferSize(com.google.protobuf.Int64Value value) {
+        if (joinBufferSizeBuilder_ == null) {
+          if (joinBufferSize_ != null) {
+            joinBufferSize_ =
+              com.google.protobuf.Int64Value.newBuilder(joinBufferSize_).mergeFrom(value).buildPartial();
+          } else {
+            joinBufferSize_ = value;
+          }
+          onChanged();
+        } else {
+          joinBufferSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder clearJoinBufferSize() {
+        if (joinBufferSizeBuilder_ == null) {
+          joinBufferSize_ = null;
+          onChanged();
+        } else {
+          joinBufferSize_ = null;
+          joinBufferSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getJoinBufferSizeBuilder() {
+        
+        onChanged();
+        return getJoinBufferSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getJoinBufferSizeOrBuilder() {
+        if (joinBufferSizeBuilder_ != null) {
+          return joinBufferSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return joinBufferSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : joinBufferSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The minimum size of the buffer that is used for plain index scans, range index scans, and joins that do not use indexes and thus perform full table scans.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_join_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value join_buffer_size = 34 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getJoinBufferSizeFieldBuilder() {
+        if (joinBufferSizeBuilder_ == null) {
+          joinBufferSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getJoinBufferSize(),
+                  getParentForChildren(),
+                  isClean());
+          joinBufferSize_ = null;
+        }
+        return joinBufferSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value sortBufferSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sortBufferSizeBuilder_;
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public boolean hasSortBufferSize() {
+        return sortBufferSizeBuilder_ != null || sortBufferSize_ != null;
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value getSortBufferSize() {
+        if (sortBufferSizeBuilder_ == null) {
+          return sortBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sortBufferSize_;
+        } else {
+          return sortBufferSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder setSortBufferSize(com.google.protobuf.Int64Value value) {
+        if (sortBufferSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sortBufferSize_ = value;
+          onChanged();
+        } else {
+          sortBufferSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder setSortBufferSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sortBufferSizeBuilder_ == null) {
+          sortBufferSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          sortBufferSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder mergeSortBufferSize(com.google.protobuf.Int64Value value) {
+        if (sortBufferSizeBuilder_ == null) {
+          if (sortBufferSize_ != null) {
+            sortBufferSize_ =
+              com.google.protobuf.Int64Value.newBuilder(sortBufferSize_).mergeFrom(value).buildPartial();
+          } else {
+            sortBufferSize_ = value;
+          }
+          onChanged();
+        } else {
+          sortBufferSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public Builder clearSortBufferSize() {
+        if (sortBufferSizeBuilder_ == null) {
+          sortBufferSize_ = null;
+          onChanged();
+        } else {
+          sortBufferSize_ = null;
+          sortBufferSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSortBufferSizeBuilder() {
+        
+        onChanged();
+        return getSortBufferSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSortBufferSizeOrBuilder() {
+        if (sortBufferSizeBuilder_ != null) {
+          return sortBufferSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return sortBufferSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sortBufferSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Each session that must perform a sort allocates a buffer of this size.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_sort_buffer_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sort_buffer_size = 35 [(.yandex.cloud.value) = "1024-16777216"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSortBufferSizeFieldBuilder() {
+        if (sortBufferSizeBuilder_ == null) {
+          sortBufferSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSortBufferSize(),
+                  getParentForChildren(),
+                  isClean());
+          sortBufferSize_ = null;
+        }
+        return sortBufferSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value tableDefinitionCache_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableDefinitionCacheBuilder_;
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public boolean hasTableDefinitionCache() {
+        return tableDefinitionCacheBuilder_ != null || tableDefinitionCache_ != null;
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64Value getTableDefinitionCache() {
+        if (tableDefinitionCacheBuilder_ == null) {
+          return tableDefinitionCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableDefinitionCache_;
+        } else {
+          return tableDefinitionCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder setTableDefinitionCache(com.google.protobuf.Int64Value value) {
+        if (tableDefinitionCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableDefinitionCache_ = value;
+          onChanged();
+        } else {
+          tableDefinitionCacheBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder setTableDefinitionCache(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tableDefinitionCacheBuilder_ == null) {
+          tableDefinitionCache_ = builderForValue.build();
+          onChanged();
+        } else {
+          tableDefinitionCacheBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder mergeTableDefinitionCache(com.google.protobuf.Int64Value value) {
+        if (tableDefinitionCacheBuilder_ == null) {
+          if (tableDefinitionCache_ != null) {
+            tableDefinitionCache_ =
+              com.google.protobuf.Int64Value.newBuilder(tableDefinitionCache_).mergeFrom(value).buildPartial();
+          } else {
+            tableDefinitionCache_ = value;
+          }
+          onChanged();
+        } else {
+          tableDefinitionCacheBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder clearTableDefinitionCache() {
+        if (tableDefinitionCacheBuilder_ == null) {
+          tableDefinitionCache_ = null;
+          onChanged();
+        } else {
+          tableDefinitionCache_ = null;
+          tableDefinitionCacheBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTableDefinitionCacheBuilder() {
+        
+        onChanged();
+        return getTableDefinitionCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTableDefinitionCacheOrBuilder() {
+        if (tableDefinitionCacheBuilder_ != null) {
+          return tableDefinitionCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return tableDefinitionCache_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tableDefinitionCache_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of table definitions that can be stored in the definition cache.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_definition_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_definition_cache = 36 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTableDefinitionCacheFieldBuilder() {
+        if (tableDefinitionCacheBuilder_ == null) {
+          tableDefinitionCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTableDefinitionCache(),
+                  getParentForChildren(),
+                  isClean());
+          tableDefinitionCache_ = null;
+        }
+        return tableDefinitionCacheBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value tableOpenCache_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableOpenCacheBuilder_;
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public boolean hasTableOpenCache() {
+        return tableOpenCacheBuilder_ != null || tableOpenCache_ != null;
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64Value getTableOpenCache() {
+        if (tableOpenCacheBuilder_ == null) {
+          return tableOpenCache_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCache_;
+        } else {
+          return tableOpenCacheBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder setTableOpenCache(com.google.protobuf.Int64Value value) {
+        if (tableOpenCacheBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableOpenCache_ = value;
+          onChanged();
+        } else {
+          tableOpenCacheBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder setTableOpenCache(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tableOpenCacheBuilder_ == null) {
+          tableOpenCache_ = builderForValue.build();
+          onChanged();
+        } else {
+          tableOpenCacheBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder mergeTableOpenCache(com.google.protobuf.Int64Value value) {
+        if (tableOpenCacheBuilder_ == null) {
+          if (tableOpenCache_ != null) {
+            tableOpenCache_ =
+              com.google.protobuf.Int64Value.newBuilder(tableOpenCache_).mergeFrom(value).buildPartial();
+          } else {
+            tableOpenCache_ = value;
+          }
+          onChanged();
+        } else {
+          tableOpenCacheBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public Builder clearTableOpenCache() {
+        if (tableOpenCacheBuilder_ == null) {
+          tableOpenCache_ = null;
+          onChanged();
+        } else {
+          tableOpenCache_ = null;
+          tableOpenCacheBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTableOpenCacheBuilder() {
+        
+        onChanged();
+        return getTableOpenCacheFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheOrBuilder() {
+        if (tableOpenCacheBuilder_ != null) {
+          return tableOpenCacheBuilder_.getMessageOrBuilder();
+        } else {
+          return tableOpenCache_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCache_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of open tables for all threads.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache = 37 [(.yandex.cloud.value) = "400-524288"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTableOpenCacheFieldBuilder() {
+        if (tableOpenCacheBuilder_ == null) {
+          tableOpenCacheBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTableOpenCache(),
+                  getParentForChildren(),
+                  isClean());
+          tableOpenCache_ = null;
+        }
+        return tableOpenCacheBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value tableOpenCacheInstances_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> tableOpenCacheInstancesBuilder_;
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public boolean hasTableOpenCacheInstances() {
+        return tableOpenCacheInstancesBuilder_ != null || tableOpenCacheInstances_ != null;
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public com.google.protobuf.Int64Value getTableOpenCacheInstances() {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          return tableOpenCacheInstances_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCacheInstances_;
+        } else {
+          return tableOpenCacheInstancesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public Builder setTableOpenCacheInstances(com.google.protobuf.Int64Value value) {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableOpenCacheInstances_ = value;
+          onChanged();
+        } else {
+          tableOpenCacheInstancesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public Builder setTableOpenCacheInstances(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          tableOpenCacheInstances_ = builderForValue.build();
+          onChanged();
+        } else {
+          tableOpenCacheInstancesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public Builder mergeTableOpenCacheInstances(com.google.protobuf.Int64Value value) {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          if (tableOpenCacheInstances_ != null) {
+            tableOpenCacheInstances_ =
+              com.google.protobuf.Int64Value.newBuilder(tableOpenCacheInstances_).mergeFrom(value).buildPartial();
+          } else {
+            tableOpenCacheInstances_ = value;
+          }
+          onChanged();
+        } else {
+          tableOpenCacheInstancesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public Builder clearTableOpenCacheInstances() {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          tableOpenCacheInstances_ = null;
+          onChanged();
+        } else {
+          tableOpenCacheInstances_ = null;
+          tableOpenCacheInstancesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getTableOpenCacheInstancesBuilder() {
+        
+        onChanged();
+        return getTableOpenCacheInstancesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getTableOpenCacheInstancesOrBuilder() {
+        if (tableOpenCacheInstancesBuilder_ != null) {
+          return tableOpenCacheInstancesBuilder_.getMessageOrBuilder();
+        } else {
+          return tableOpenCacheInstances_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : tableOpenCacheInstances_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of open tables cache instances.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_table_open_cache_instances).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value table_open_cache_instances = 38 [(.yandex.cloud.value) = "1-32"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getTableOpenCacheInstancesFieldBuilder() {
+        if (tableOpenCacheInstancesBuilder_ == null) {
+          tableOpenCacheInstancesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getTableOpenCacheInstances(),
+                  getParentForChildren(),
+                  isClean());
+          tableOpenCacheInstances_ = null;
+        }
+        return tableOpenCacheInstancesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue explicitDefaultsForTimestamp_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> explicitDefaultsForTimestampBuilder_;
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public boolean hasExplicitDefaultsForTimestamp() {
+        return explicitDefaultsForTimestampBuilder_ != null || explicitDefaultsForTimestamp_ != null;
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public com.google.protobuf.BoolValue getExplicitDefaultsForTimestamp() {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          return explicitDefaultsForTimestamp_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : explicitDefaultsForTimestamp_;
+        } else {
+          return explicitDefaultsForTimestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public Builder setExplicitDefaultsForTimestamp(com.google.protobuf.BoolValue value) {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          explicitDefaultsForTimestamp_ = value;
+          onChanged();
+        } else {
+          explicitDefaultsForTimestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public Builder setExplicitDefaultsForTimestamp(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          explicitDefaultsForTimestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          explicitDefaultsForTimestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public Builder mergeExplicitDefaultsForTimestamp(com.google.protobuf.BoolValue value) {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          if (explicitDefaultsForTimestamp_ != null) {
+            explicitDefaultsForTimestamp_ =
+              com.google.protobuf.BoolValue.newBuilder(explicitDefaultsForTimestamp_).mergeFrom(value).buildPartial();
+          } else {
+            explicitDefaultsForTimestamp_ = value;
+          }
+          onChanged();
+        } else {
+          explicitDefaultsForTimestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public Builder clearExplicitDefaultsForTimestamp() {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          explicitDefaultsForTimestamp_ = null;
+          onChanged();
+        } else {
+          explicitDefaultsForTimestamp_ = null;
+          explicitDefaultsForTimestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getExplicitDefaultsForTimestampBuilder() {
+        
+        onChanged();
+        return getExplicitDefaultsForTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getExplicitDefaultsForTimestampOrBuilder() {
+        if (explicitDefaultsForTimestampBuilder_ != null) {
+          return explicitDefaultsForTimestampBuilder_.getMessageOrBuilder();
+        } else {
+          return explicitDefaultsForTimestamp_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : explicitDefaultsForTimestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * This system variable determines whether the server enables certain nonstandard behaviors for default values and NULL-value handling in TIMESTAMP columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue explicit_defaults_for_timestamp = 39;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getExplicitDefaultsForTimestampFieldBuilder() {
+        if (explicitDefaultsForTimestampBuilder_ == null) {
+          explicitDefaultsForTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getExplicitDefaultsForTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          explicitDefaultsForTimestamp_ = null;
+        }
+        return explicitDefaultsForTimestampBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value autoIncrementIncrement_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> autoIncrementIncrementBuilder_;
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public boolean hasAutoIncrementIncrement() {
+        return autoIncrementIncrementBuilder_ != null || autoIncrementIncrement_ != null;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64Value getAutoIncrementIncrement() {
+        if (autoIncrementIncrementBuilder_ == null) {
+          return autoIncrementIncrement_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementIncrement_;
+        } else {
+          return autoIncrementIncrementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder setAutoIncrementIncrement(com.google.protobuf.Int64Value value) {
+        if (autoIncrementIncrementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoIncrementIncrement_ = value;
+          onChanged();
+        } else {
+          autoIncrementIncrementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder setAutoIncrementIncrement(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (autoIncrementIncrementBuilder_ == null) {
+          autoIncrementIncrement_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoIncrementIncrementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder mergeAutoIncrementIncrement(com.google.protobuf.Int64Value value) {
+        if (autoIncrementIncrementBuilder_ == null) {
+          if (autoIncrementIncrement_ != null) {
+            autoIncrementIncrement_ =
+              com.google.protobuf.Int64Value.newBuilder(autoIncrementIncrement_).mergeFrom(value).buildPartial();
+          } else {
+            autoIncrementIncrement_ = value;
+          }
+          onChanged();
+        } else {
+          autoIncrementIncrementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder clearAutoIncrementIncrement() {
+        if (autoIncrementIncrementBuilder_ == null) {
+          autoIncrementIncrement_ = null;
+          onChanged();
+        } else {
+          autoIncrementIncrement_ = null;
+          autoIncrementIncrementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAutoIncrementIncrementBuilder() {
+        
+        onChanged();
+        return getAutoIncrementIncrementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementIncrementOrBuilder() {
+        if (autoIncrementIncrementBuilder_ != null) {
+          return autoIncrementIncrementBuilder_.getMessageOrBuilder();
+        } else {
+          return autoIncrementIncrement_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementIncrement_;
+        }
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_increment).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAutoIncrementIncrementFieldBuilder() {
+        if (autoIncrementIncrementBuilder_ == null) {
+          autoIncrementIncrementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAutoIncrementIncrement(),
+                  getParentForChildren(),
+                  isClean());
+          autoIncrementIncrement_ = null;
+        }
+        return autoIncrementIncrementBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value autoIncrementOffset_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> autoIncrementOffsetBuilder_;
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public boolean hasAutoIncrementOffset() {
+        return autoIncrementOffsetBuilder_ != null || autoIncrementOffset_ != null;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64Value getAutoIncrementOffset() {
+        if (autoIncrementOffsetBuilder_ == null) {
+          return autoIncrementOffset_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementOffset_;
+        } else {
+          return autoIncrementOffsetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder setAutoIncrementOffset(com.google.protobuf.Int64Value value) {
+        if (autoIncrementOffsetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoIncrementOffset_ = value;
+          onChanged();
+        } else {
+          autoIncrementOffsetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder setAutoIncrementOffset(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (autoIncrementOffsetBuilder_ == null) {
+          autoIncrementOffset_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoIncrementOffsetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder mergeAutoIncrementOffset(com.google.protobuf.Int64Value value) {
+        if (autoIncrementOffsetBuilder_ == null) {
+          if (autoIncrementOffset_ != null) {
+            autoIncrementOffset_ =
+              com.google.protobuf.Int64Value.newBuilder(autoIncrementOffset_).mergeFrom(value).buildPartial();
+          } else {
+            autoIncrementOffset_ = value;
+          }
+          onChanged();
+        } else {
+          autoIncrementOffsetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public Builder clearAutoIncrementOffset() {
+        if (autoIncrementOffsetBuilder_ == null) {
+          autoIncrementOffset_ = null;
+          onChanged();
+        } else {
+          autoIncrementOffset_ = null;
+          autoIncrementOffsetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAutoIncrementOffsetBuilder() {
+        
+        onChanged();
+        return getAutoIncrementOffsetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAutoIncrementOffsetOrBuilder() {
+        if (autoIncrementOffsetBuilder_ != null) {
+          return autoIncrementOffsetBuilder_.getMessageOrBuilder();
+        } else {
+          return autoIncrementOffset_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : autoIncrementOffset_;
+        }
+      }
+      /**
+       * <pre>
+       * Can be used to control the operation of AUTO_INCREMENT columns.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_auto_increment_offset).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAutoIncrementOffsetFieldBuilder() {
+        if (autoIncrementOffsetBuilder_ == null) {
+          autoIncrementOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAutoIncrementOffset(),
+                  getParentForChildren(),
+                  isClean());
+          autoIncrementOffset_ = null;
+        }
+        return autoIncrementOffsetBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value syncBinlog_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> syncBinlogBuilder_;
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public boolean hasSyncBinlog() {
+        return syncBinlogBuilder_ != null || syncBinlog_ != null;
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public com.google.protobuf.Int64Value getSyncBinlog() {
+        if (syncBinlogBuilder_ == null) {
+          return syncBinlog_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : syncBinlog_;
+        } else {
+          return syncBinlogBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public Builder setSyncBinlog(com.google.protobuf.Int64Value value) {
+        if (syncBinlogBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          syncBinlog_ = value;
+          onChanged();
+        } else {
+          syncBinlogBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public Builder setSyncBinlog(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (syncBinlogBuilder_ == null) {
+          syncBinlog_ = builderForValue.build();
+          onChanged();
+        } else {
+          syncBinlogBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public Builder mergeSyncBinlog(com.google.protobuf.Int64Value value) {
+        if (syncBinlogBuilder_ == null) {
+          if (syncBinlog_ != null) {
+            syncBinlog_ =
+              com.google.protobuf.Int64Value.newBuilder(syncBinlog_).mergeFrom(value).buildPartial();
+          } else {
+            syncBinlog_ = value;
+          }
+          onChanged();
+        } else {
+          syncBinlogBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public Builder clearSyncBinlog() {
+        if (syncBinlogBuilder_ == null) {
+          syncBinlog_ = null;
+          onChanged();
+        } else {
+          syncBinlog_ = null;
+          syncBinlogBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSyncBinlogBuilder() {
+        
+        onChanged();
+        return getSyncBinlogFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSyncBinlogOrBuilder() {
+        if (syncBinlogBuilder_ != null) {
+          return syncBinlogBuilder_.getMessageOrBuilder();
+        } else {
+          return syncBinlog_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : syncBinlog_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls how often the MySQL server synchronizes the binary log to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_sync_binlog).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value sync_binlog = 42 [(.yandex.cloud.value) = "0-4096"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSyncBinlogFieldBuilder() {
+        if (syncBinlogBuilder_ == null) {
+          syncBinlogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSyncBinlog(),
+                  getParentForChildren(),
+                  isClean());
+          syncBinlog_ = null;
+        }
+        return syncBinlogBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value binlogCacheSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> binlogCacheSizeBuilder_;
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public boolean hasBinlogCacheSize() {
+        return binlogCacheSizeBuilder_ != null || binlogCacheSize_ != null;
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public com.google.protobuf.Int64Value getBinlogCacheSize() {
+        if (binlogCacheSizeBuilder_ == null) {
+          return binlogCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogCacheSize_;
+        } else {
+          return binlogCacheSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public Builder setBinlogCacheSize(com.google.protobuf.Int64Value value) {
+        if (binlogCacheSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          binlogCacheSize_ = value;
+          onChanged();
+        } else {
+          binlogCacheSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public Builder setBinlogCacheSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (binlogCacheSizeBuilder_ == null) {
+          binlogCacheSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          binlogCacheSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public Builder mergeBinlogCacheSize(com.google.protobuf.Int64Value value) {
+        if (binlogCacheSizeBuilder_ == null) {
+          if (binlogCacheSize_ != null) {
+            binlogCacheSize_ =
+              com.google.protobuf.Int64Value.newBuilder(binlogCacheSize_).mergeFrom(value).buildPartial();
+          } else {
+            binlogCacheSize_ = value;
+          }
+          onChanged();
+        } else {
+          binlogCacheSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public Builder clearBinlogCacheSize() {
+        if (binlogCacheSizeBuilder_ == null) {
+          binlogCacheSize_ = null;
+          onChanged();
+        } else {
+          binlogCacheSize_ = null;
+          binlogCacheSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBinlogCacheSizeBuilder() {
+        
+        onChanged();
+        return getBinlogCacheSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBinlogCacheSizeOrBuilder() {
+        if (binlogCacheSizeBuilder_ != null) {
+          return binlogCacheSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return binlogCacheSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : binlogCacheSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The size of the cache to hold changes to the binary log during a transaction.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_cache_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_cache_size = 43 [(.yandex.cloud.value) = "4096-67108864"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBinlogCacheSizeFieldBuilder() {
+        if (binlogCacheSizeBuilder_ == null) {
+          binlogCacheSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBinlogCacheSize(),
+                  getParentForChildren(),
+                  isClean());
+          binlogCacheSize_ = null;
+        }
+        return binlogCacheSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value binlogGroupCommitSyncDelay_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> binlogGroupCommitSyncDelayBuilder_;
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public boolean hasBinlogGroupCommitSyncDelay() {
+        return binlogGroupCommitSyncDelayBuilder_ != null || binlogGroupCommitSyncDelay_ != null;
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public com.google.protobuf.Int64Value getBinlogGroupCommitSyncDelay() {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          return binlogGroupCommitSyncDelay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : binlogGroupCommitSyncDelay_;
+        } else {
+          return binlogGroupCommitSyncDelayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public Builder setBinlogGroupCommitSyncDelay(com.google.protobuf.Int64Value value) {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          binlogGroupCommitSyncDelay_ = value;
+          onChanged();
+        } else {
+          binlogGroupCommitSyncDelayBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public Builder setBinlogGroupCommitSyncDelay(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          binlogGroupCommitSyncDelay_ = builderForValue.build();
+          onChanged();
+        } else {
+          binlogGroupCommitSyncDelayBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public Builder mergeBinlogGroupCommitSyncDelay(com.google.protobuf.Int64Value value) {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          if (binlogGroupCommitSyncDelay_ != null) {
+            binlogGroupCommitSyncDelay_ =
+              com.google.protobuf.Int64Value.newBuilder(binlogGroupCommitSyncDelay_).mergeFrom(value).buildPartial();
+          } else {
+            binlogGroupCommitSyncDelay_ = value;
+          }
+          onChanged();
+        } else {
+          binlogGroupCommitSyncDelayBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public Builder clearBinlogGroupCommitSyncDelay() {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          binlogGroupCommitSyncDelay_ = null;
+          onChanged();
+        } else {
+          binlogGroupCommitSyncDelay_ = null;
+          binlogGroupCommitSyncDelayBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBinlogGroupCommitSyncDelayBuilder() {
+        
+        onChanged();
+        return getBinlogGroupCommitSyncDelayFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBinlogGroupCommitSyncDelayOrBuilder() {
+        if (binlogGroupCommitSyncDelayBuilder_ != null) {
+          return binlogGroupCommitSyncDelayBuilder_.getMessageOrBuilder();
+        } else {
+          return binlogGroupCommitSyncDelay_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : binlogGroupCommitSyncDelay_;
+        }
+      }
+      /**
+       * <pre>
+       * Controls how many microseconds the binary log commit waits before synchronizing the binary log file to disk.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_group_commit_sync_delay).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value binlog_group_commit_sync_delay = 44 [(.yandex.cloud.value) = "0-1000000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBinlogGroupCommitSyncDelayFieldBuilder() {
+        if (binlogGroupCommitSyncDelayBuilder_ == null) {
+          binlogGroupCommitSyncDelayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBinlogGroupCommitSyncDelay(),
+                  getParentForChildren(),
+                  isClean());
+          binlogGroupCommitSyncDelay_ = null;
+        }
+        return binlogGroupCommitSyncDelayBuilder_;
+      }
+
+      private int binlogRowImage_ = 0;
+      /**
+       * <pre>
+       * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+       */
+      public int getBinlogRowImageValue() {
+        return binlogRowImage_;
+      }
+      /**
+       * <pre>
+       * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+       */
+      public Builder setBinlogRowImageValue(int value) {
+        binlogRowImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage getBinlogRowImage() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.valueOf(binlogRowImage_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+       */
+      public Builder setBinlogRowImage(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.BinlogRowImage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        binlogRowImage_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * For MySQL row-based replication, this variable determines how row images are written to the binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_row_image).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogRowImage binlog_row_image = 45;</code>
+       */
+      public Builder clearBinlogRowImage() {
+        
+        binlogRowImage_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue binlogRowsQueryLogEvents_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> binlogRowsQueryLogEventsBuilder_;
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public boolean hasBinlogRowsQueryLogEvents() {
+        return binlogRowsQueryLogEventsBuilder_ != null || binlogRowsQueryLogEvents_ != null;
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public com.google.protobuf.BoolValue getBinlogRowsQueryLogEvents() {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          return binlogRowsQueryLogEvents_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : binlogRowsQueryLogEvents_;
+        } else {
+          return binlogRowsQueryLogEventsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public Builder setBinlogRowsQueryLogEvents(com.google.protobuf.BoolValue value) {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          binlogRowsQueryLogEvents_ = value;
+          onChanged();
+        } else {
+          binlogRowsQueryLogEventsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public Builder setBinlogRowsQueryLogEvents(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          binlogRowsQueryLogEvents_ = builderForValue.build();
+          onChanged();
+        } else {
+          binlogRowsQueryLogEventsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public Builder mergeBinlogRowsQueryLogEvents(com.google.protobuf.BoolValue value) {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          if (binlogRowsQueryLogEvents_ != null) {
+            binlogRowsQueryLogEvents_ =
+              com.google.protobuf.BoolValue.newBuilder(binlogRowsQueryLogEvents_).mergeFrom(value).buildPartial();
+          } else {
+            binlogRowsQueryLogEvents_ = value;
+          }
+          onChanged();
+        } else {
+          binlogRowsQueryLogEventsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public Builder clearBinlogRowsQueryLogEvents() {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          binlogRowsQueryLogEvents_ = null;
+          onChanged();
+        } else {
+          binlogRowsQueryLogEvents_ = null;
+          binlogRowsQueryLogEventsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getBinlogRowsQueryLogEventsBuilder() {
+        
+        onChanged();
+        return getBinlogRowsQueryLogEventsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getBinlogRowsQueryLogEventsOrBuilder() {
+        if (binlogRowsQueryLogEventsBuilder_ != null) {
+          return binlogRowsQueryLogEventsBuilder_.getMessageOrBuilder();
+        } else {
+          return binlogRowsQueryLogEvents_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : binlogRowsQueryLogEvents_;
+        }
+      }
+      /**
+       * <pre>
+       * When enabled, it causes the server to write informational log events such as row query log events into its binary log.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_rows_query_log_events).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue binlog_rows_query_log_events = 46;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getBinlogRowsQueryLogEventsFieldBuilder() {
+        if (binlogRowsQueryLogEventsBuilder_ == null) {
+          binlogRowsQueryLogEventsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getBinlogRowsQueryLogEvents(),
+                  getParentForChildren(),
+                  isClean());
+          binlogRowsQueryLogEvents_ = null;
+        }
+        return binlogRowsQueryLogEventsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value rplSemiSyncMasterWaitForSlaveCount_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rplSemiSyncMasterWaitForSlaveCountBuilder_;
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public boolean hasRplSemiSyncMasterWaitForSlaveCount() {
+        return rplSemiSyncMasterWaitForSlaveCountBuilder_ != null || rplSemiSyncMasterWaitForSlaveCount_ != null;
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public com.google.protobuf.Int64Value getRplSemiSyncMasterWaitForSlaveCount() {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          return rplSemiSyncMasterWaitForSlaveCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rplSemiSyncMasterWaitForSlaveCount_;
+        } else {
+          return rplSemiSyncMasterWaitForSlaveCountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public Builder setRplSemiSyncMasterWaitForSlaveCount(com.google.protobuf.Int64Value value) {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rplSemiSyncMasterWaitForSlaveCount_ = value;
+          onChanged();
+        } else {
+          rplSemiSyncMasterWaitForSlaveCountBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public Builder setRplSemiSyncMasterWaitForSlaveCount(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          rplSemiSyncMasterWaitForSlaveCount_ = builderForValue.build();
+          onChanged();
+        } else {
+          rplSemiSyncMasterWaitForSlaveCountBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public Builder mergeRplSemiSyncMasterWaitForSlaveCount(com.google.protobuf.Int64Value value) {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          if (rplSemiSyncMasterWaitForSlaveCount_ != null) {
+            rplSemiSyncMasterWaitForSlaveCount_ =
+              com.google.protobuf.Int64Value.newBuilder(rplSemiSyncMasterWaitForSlaveCount_).mergeFrom(value).buildPartial();
+          } else {
+            rplSemiSyncMasterWaitForSlaveCount_ = value;
+          }
+          onChanged();
+        } else {
+          rplSemiSyncMasterWaitForSlaveCountBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public Builder clearRplSemiSyncMasterWaitForSlaveCount() {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          rplSemiSyncMasterWaitForSlaveCount_ = null;
+          onChanged();
+        } else {
+          rplSemiSyncMasterWaitForSlaveCount_ = null;
+          rplSemiSyncMasterWaitForSlaveCountBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRplSemiSyncMasterWaitForSlaveCountBuilder() {
+        
+        onChanged();
+        return getRplSemiSyncMasterWaitForSlaveCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRplSemiSyncMasterWaitForSlaveCountOrBuilder() {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ != null) {
+          return rplSemiSyncMasterWaitForSlaveCountBuilder_.getMessageOrBuilder();
+        } else {
+          return rplSemiSyncMasterWaitForSlaveCount_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : rplSemiSyncMasterWaitForSlaveCount_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of replica acknowledgments the source must receive per transaction before proceeding.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRplSemiSyncMasterWaitForSlaveCountFieldBuilder() {
+        if (rplSemiSyncMasterWaitForSlaveCountBuilder_ == null) {
+          rplSemiSyncMasterWaitForSlaveCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRplSemiSyncMasterWaitForSlaveCount(),
+                  getParentForChildren(),
+                  isClean());
+          rplSemiSyncMasterWaitForSlaveCount_ = null;
+        }
+        return rplSemiSyncMasterWaitForSlaveCountBuilder_;
+      }
+
+      private int slaveParallelType_ = 0;
+      /**
+       * <pre>
+       * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+       */
+      public int getSlaveParallelTypeValue() {
+        return slaveParallelType_;
+      }
+      /**
+       * <pre>
+       * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+       */
+      public Builder setSlaveParallelTypeValue(int value) {
+        slaveParallelType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType getSlaveParallelType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.valueOf(slaveParallelType_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+       */
+      public Builder setSlaveParallelType(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.SlaveParallelType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        slaveParallelType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When using a multithreaded replica, this variable specifies the policy used to decide which transactions are allowed to execute in parallel on the replica.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_type).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.SlaveParallelType slave_parallel_type = 48;</code>
+       */
+      public Builder clearSlaveParallelType() {
+        
+        slaveParallelType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value slaveParallelWorkers_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slaveParallelWorkersBuilder_;
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public boolean hasSlaveParallelWorkers() {
+        return slaveParallelWorkersBuilder_ != null || slaveParallelWorkers_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public com.google.protobuf.Int64Value getSlaveParallelWorkers() {
+        if (slaveParallelWorkersBuilder_ == null) {
+          return slaveParallelWorkers_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slaveParallelWorkers_;
+        } else {
+          return slaveParallelWorkersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public Builder setSlaveParallelWorkers(com.google.protobuf.Int64Value value) {
+        if (slaveParallelWorkersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slaveParallelWorkers_ = value;
+          onChanged();
+        } else {
+          slaveParallelWorkersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public Builder setSlaveParallelWorkers(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (slaveParallelWorkersBuilder_ == null) {
+          slaveParallelWorkers_ = builderForValue.build();
+          onChanged();
+        } else {
+          slaveParallelWorkersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public Builder mergeSlaveParallelWorkers(com.google.protobuf.Int64Value value) {
+        if (slaveParallelWorkersBuilder_ == null) {
+          if (slaveParallelWorkers_ != null) {
+            slaveParallelWorkers_ =
+              com.google.protobuf.Int64Value.newBuilder(slaveParallelWorkers_).mergeFrom(value).buildPartial();
+          } else {
+            slaveParallelWorkers_ = value;
+          }
+          onChanged();
+        } else {
+          slaveParallelWorkersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public Builder clearSlaveParallelWorkers() {
+        if (slaveParallelWorkersBuilder_ == null) {
+          slaveParallelWorkers_ = null;
+          onChanged();
+        } else {
+          slaveParallelWorkers_ = null;
+          slaveParallelWorkersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSlaveParallelWorkersBuilder() {
+        
+        onChanged();
+        return getSlaveParallelWorkersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder() {
+        if (slaveParallelWorkersBuilder_ != null) {
+          return slaveParallelWorkersBuilder_.getMessageOrBuilder();
+        } else {
+          return slaveParallelWorkers_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : slaveParallelWorkers_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the number of applier threads for executing replication transactions in parallel.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/replication-options-replica.html#sysvar_slave_parallel_workers).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSlaveParallelWorkersFieldBuilder() {
+        if (slaveParallelWorkersBuilder_ == null) {
+          slaveParallelWorkersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSlaveParallelWorkers(),
+                  getParentForChildren(),
+                  isClean());
+          slaveParallelWorkers_ = null;
+        }
+        return slaveParallelWorkersBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7206,7 +14994,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\222\021\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\375#\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -7239,38 +15027,99 @@ public final class Mysql57 {
       "\023max_heap_table_size\030\021 \001(\0132\033.google.prot" +
       "obuf.Int64ValueB\022\372\3071\0161024-134217728\022\031\n\021d" +
       "efault_time_zone\030\022 \001(\t\022\034\n\024character_set_" +
-      "server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\"\352" +
-      "\004\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023A" +
-      "LLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n" +
-      "\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NO" +
-      "T_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_A" +
-      "UTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCA" +
-      "PES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_" +
-      "UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n" +
-      "\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_OPTION" +
-      "S\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTI" +
-      "ONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHA" +
-      "R_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022" +
-      "\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020" +
-      "\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013" +
-      "TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSS" +
-      "QL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACL" +
-      "E\020\034\022\016\n\nPOSTGRESQL\020\035\"x\n\nAuthPlugin\022\033\n\027AUT" +
-      "H_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_P" +
-      "ASSWORD\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001" +
-      "\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIsol" +
-      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
-      "ED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_R" +
-      "EAD\020\002\022\020\n\014SERIALIZABLE\020\003\"\360\001\n\021MysqlConfigS" +
-      "et5_7\022J\n\020effective_config\030\001 \001(\01320.yandex" +
-      ".cloud.mdb.mysql.v1.config.MysqlConfig5_" +
-      "7\022E\n\013user_config\030\002 \001(\01320.yandex.cloud.md" +
-      "b.mysql.v1.config.MysqlConfig5_7\022H\n\016defa" +
-      "ult_config\030\003 \001(\01320.yandex.cloud.mdb.mysq" +
-      "l.v1.config.MysqlConfig5_7Br\n$yandex.clo" +
-      "ud.api.mdb.mysql.v1.configZJgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/mysql/v1/config;mysqlb\006proto3"
+      "server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022>" +
+      "\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022:\n\026innodb_numa_in" +
+      "terleave\030\026 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\025\372\3071\0211048576-268" +
+      "435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\030\372\3071\024268435456" +
+      "-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\016\372\3071\n100-10" +
+      "0000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\016\372\3071\n100-10000" +
+      "0\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inno" +
+      "db_write_io_threads\030\034 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purge" +
+      "_threads\030\035 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurren" +
+      "cy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
+      "\3071\0060-1000\022W\n\036innodb_temp_data_file_max_s" +
+      "ize\030\037 \001(\0132\033.google.protobuf.Int64ValueB\022" +
+      "\372\3071\0160-107374182400\022D\n\021thread_cache_size\030" +
+      "  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\010" +
+      "10-10000\022F\n\014thread_stack\030! \001(\0132\033.google." +
+      "protobuf.Int64ValueB\023\372\3071\017131072-16777216" +
+      "\022H\n\020join_buffer_size\030\" \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020so" +
+      "rt_buffer_size\030# \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\021\372\3071\r1024-16777216\022K\n\026table_de" +
+      "finition_cache\030$ \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\016\372\3071\n400-524288\022E\n\020table_open_" +
+      "cache\030% \001(\0132\033.google.protobuf.Int64Value" +
+      "B\016\372\3071\n400-524288\022I\n\032table_open_cache_ins" +
+      "tances\030& \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_tim" +
+      "estamp\030\' \001(\0132\032.google.protobuf.BoolValue" +
+      "\022J\n\030auto_increment_increment\030( \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n\025" +
+      "auto_increment_offset\030) \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_bi" +
+      "nlog\030* \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\021\372\3071\r4096-67" +
+      "108864\022R\n\036binlog_group_commit_sync_delay" +
+      "\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071" +
+      "\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?.y" +
+      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
+      "fig5_7.BinlogRowImage\022@\n\034binlog_rows_que" +
+      "ry_log_events\030. \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022W\n)rpl_semi_sync_master_wait_for" +
+      "_slave_count\030/ \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type\030" +
+      "0 \001(\0162B.yandex.cloud.mdb.mysql.v1.config" +
+      ".MysqlConfig5_7.SlaveParallelType\022E\n\026sla" +
+      "ve_parallel_workers\0301 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\010\372\3071\0040-64\"\231\005\n\007SQLMode\022\027\n\023" +
+      "SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_D" +
+      "ATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIV" +
+      "ISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004" +
+      "\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_Z" +
+      "ERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_EN" +
+      "GINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTR" +
+      "ACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN" +
+      "_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_" +
+      "OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY_" +
+      "FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENG" +
+      "TH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLO" +
+      "AT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TR" +
+      "ANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022" +
+      "\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL3" +
+      "23\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRE" +
+      "SQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DIR" +
+      "_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUGI" +
+      "N_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD" +
+      "\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA" +
+      "256_PASSWORD\020\003\"x\n\024TransactionIsolation\022%" +
+      "\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022\n" +
+      "\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020" +
+      "\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BI" +
+      "NLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013" +
+      "\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallel" +
+      "Type\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED\020" +
+      "\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001\n\021M" +
+      "ysqlConfigSet5_7\022J\n\020effective_config\030\001 \001" +
+      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
+      "sqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yand" +
+      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
+      "5_7\022H\n\016default_config\030\003 \001(\01320.yandex.clo" +
+      "ud.mdb.mysql.v1.config.MysqlConfig5_7Br\n" +
+      "$yandex.cloud.api.mdb.mysql.v1.configZJg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/mysql/v1/config;mysqlb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7291,7 +15140,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

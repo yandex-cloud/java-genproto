@@ -150,7 +150,7 @@ public final class Access {
      * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-     *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+     *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -165,7 +165,7 @@ public final class Access {
      * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-     *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+     *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -299,7 +299,7 @@ public final class Access {
      * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-     *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+     *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -325,7 +325,7 @@ public final class Access {
      * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-     *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+     *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -728,7 +728,7 @@ public final class Access {
        * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-       *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+       *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -754,7 +754,7 @@ public final class Access {
        * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-       *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+       *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -781,7 +781,7 @@ public final class Access {
        * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-       *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+       *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -805,7 +805,7 @@ public final class Access {
        * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-       *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+       *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -825,7 +825,7 @@ public final class Access {
        * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
-       *    It can be used only if the [type] is `userAccount` or `serviceAccount`.
+       *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>

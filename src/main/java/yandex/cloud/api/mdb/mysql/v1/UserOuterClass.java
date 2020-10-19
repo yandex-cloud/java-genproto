@@ -2607,6 +2607,14 @@ public final class UserOuterClass {
        * <code>UPDATE = 18;</code>
        */
       UPDATE(18),
+      /**
+       * <pre>
+       * Creation of a foreign key constraint for the parent table.
+       * </pre>
+       *
+       * <code>REFERENCES = 19;</code>
+       */
+      REFERENCES(19),
       UNRECOGNIZED(-1),
       ;
 
@@ -2761,6 +2769,14 @@ public final class UserOuterClass {
        * <code>UPDATE = 18;</code>
        */
       public static final int UPDATE_VALUE = 18;
+      /**
+       * <pre>
+       * Creation of a foreign key constraint for the parent table.
+       * </pre>
+       *
+       * <code>REFERENCES = 19;</code>
+       */
+      public static final int REFERENCES_VALUE = 19;
 
 
       public final int getNumber() {
@@ -2800,6 +2816,7 @@ public final class UserOuterClass {
           case 16: return SHOW_VIEW;
           case 17: return TRIGGER;
           case 18: return UPDATE;
+          case 19: return REFERENCES;
           default: return null;
         }
       }
@@ -7056,9 +7073,9 @@ public final class UserOuterClass {
       "imits\030\005 \001(\0132+.yandex.cloud.mdb.mysql.v1." +
       "ConnectionLimits\022D\n\025authentication_plugi" +
       "n\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.Auth" +
-      "Plugin\"\237\003\n\nPermission\022\025\n\rdatabase_name\030\001" +
+      "Plugin\"\257\003\n\nPermission\022\025\n\rdatabase_name\030\001" +
       " \001(\t\022G\n\005roles\030\002 \003(\0162/.yandex.cloud.mdb.m" +
-      "ysql.v1.Permission.PrivilegeB\007\202\3101\003>=1\"\260\002" +
+      "ysql.v1.Permission.PrivilegeB\007\202\3101\003>=1\"\300\002" +
       "\n\tPrivilege\022\031\n\025PRIVILEGE_UNSPECIFIED\020\000\022\022" +
       "\n\016ALL_PRIVILEGES\020\001\022\t\n\005ALTER\020\002\022\021\n\rALTER_R" +
       "OUTINE\020\003\022\n\n\006CREATE\020\004\022\022\n\016CREATE_ROUTINE\020\005" +
@@ -7066,32 +7083,33 @@ public final class UserOuterClass {
       "VIEW\020\007\022\n\n\006DELETE\020\010\022\010\n\004DROP\020\t\022\t\n\005EVENT\020\n\022" +
       "\013\n\007EXECUTE\020\013\022\t\n\005INDEX\020\014\022\n\n\006INSERT\020\r\022\017\n\013L" +
       "OCK_TABLES\020\016\022\n\n\006SELECT\020\017\022\r\n\tSHOW_VIEW\020\020\022" +
-      "\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\"\250\002\n\020ConnectionL" +
-      "imits\022D\n\026max_questions_per_hour\030\001 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024m" +
-      "ax_updates_per_hour\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\007\372\3071\003>=0\022F\n\030max_connectio" +
-      "ns_per_hour\030\003 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022B\n\024max_user_connections\030" +
-      "\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\"\353\002\n\010UserSpec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004" +
-      "<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB" +
-      "\r\350\3071\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.ya" +
-      "ndex.cloud.mdb.mysql.v1.Permission\022G\n\022gl" +
-      "obal_permissions\030\004 \003(\0162+.yandex.cloud.md" +
-      "b.mysql.v1.GlobalPermission\022F\n\021connectio" +
-      "n_limits\030\005 \001(\0132+.yandex.cloud.mdb.mysql." +
-      "v1.ConnectionLimits\022D\n\025authentication_pl" +
-      "ugin\030\006 \001(\0162%.yandex.cloud.mdb.mysql.v1.A" +
-      "uthPlugin*q\n\020GlobalPermission\022!\n\035GLOBAL_" +
-      "PERMISSION_UNSPECIFIED\020\000\022\026\n\022REPLICATION_" +
-      "CLIENT\020\001\022\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCE" +
-      "SS\020\003*t\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPEC" +
-      "IFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CA" +
-      "CHING_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD" +
-      "\020\003Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/mysql/v1;mysqlb\006proto3"
+      "\013\n\007TRIGGER\020\021\022\n\n\006UPDATE\020\022\022\016\n\nREFERENCES\020\023" +
+      "\"\250\002\n\020ConnectionLimits\022D\n\026max_questions_p" +
+      "er_hour\030\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\007\372\3071\003>=0\022B\n\024max_updates_per_hour\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "F\n\030max_connections_per_hour\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_u" +
+      "ser_connections\030\004 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\"\353\002\n\010UserSpec\022+\n\004name" +
+      "\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n" +
+      "\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permis" +
+      "sions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1." +
+      "Permission\022G\n\022global_permissions\030\004 \003(\0162+" +
+      ".yandex.cloud.mdb.mysql.v1.GlobalPermiss" +
+      "ion\022F\n\021connection_limits\030\005 \001(\0132+.yandex." +
+      "cloud.mdb.mysql.v1.ConnectionLimits\022D\n\025a" +
+      "uthentication_plugin\030\006 \001(\0162%.yandex.clou" +
+      "d.mdb.mysql.v1.AuthPlugin*q\n\020GlobalPermi" +
+      "ssion\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED\020\000" +
+      "\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATION_" +
+      "SLAVE\020\002\022\013\n\007PROCESS\020\003*t\n\nAuthPlugin\022\033\n\027AU" +
+      "TH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_" +
+      "PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n" +
+      "\017SHA256_PASSWORD\020\003Bd\n\035yandex.cloud.api.m" +
+      "db.mysql.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/mysql/v1;mysql" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
