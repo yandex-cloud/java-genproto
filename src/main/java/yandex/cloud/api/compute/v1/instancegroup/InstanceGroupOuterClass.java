@@ -297,7 +297,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -306,7 +306,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -315,7 +315,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -1330,7 +1330,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -1341,7 +1341,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -1352,7 +1352,7 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * Instance template for creating the instance group.
-     * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+     * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3165,7 +3165,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3176,7 +3176,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3191,7 +3191,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3212,7 +3212,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3231,7 +3231,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3254,7 +3254,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3273,7 +3273,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3286,7 +3286,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -3302,7 +3302,7 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance template for creating the instance group.
-       * For more information, see [Instance Templates](/docs/compute/concepts/ig-instance-templates).
+       * For more information, see [Instance Templates](/docs/compute/concepts/instance-groups/instance-template).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.InstanceTemplate instance_template = 7;</code>
@@ -29096,7 +29096,7 @@ public final class InstanceGroupOuterClass {
 
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29104,7 +29104,7 @@ public final class InstanceGroupOuterClass {
     boolean hasTargetGroupSpec();
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29112,7 +29112,7 @@ public final class InstanceGroupOuterClass {
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpec getTargetGroupSpec();
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29207,7 +29207,7 @@ public final class InstanceGroupOuterClass {
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpec targetGroupSpec_;
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29217,7 +29217,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29227,7 +29227,7 @@ public final class InstanceGroupOuterClass {
     }
     /**
      * <pre>
-     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+     * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29557,7 +29557,7 @@ public final class InstanceGroupOuterClass {
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpecOrBuilder> targetGroupSpecBuilder_;
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29567,7 +29567,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29581,7 +29581,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29601,7 +29601,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29619,7 +29619,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29641,7 +29641,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29659,7 +29659,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29671,7 +29671,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
@@ -29686,7 +29686,7 @@ public final class InstanceGroupOuterClass {
       }
       /**
        * <pre>
-       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/target-resources).
+       * Specification of the target group that the instance group will be added to. For more information, see [Target groups and resources](/docs/load-balancer/concepts/target-resources).
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
