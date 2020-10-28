@@ -9028,6 +9028,41 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.k8s.v1.MasterMaintenancePolicy maintenance_policy = 2;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterUpdateSpec}
@@ -9042,6 +9077,7 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private MasterUpdateSpec() {
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -9094,6 +9130,15 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9109,6 +9154,9 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -9126,6 +9174,7 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
     private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_;
     /**
@@ -9192,6 +9241,51 @@ public final class ClusterServiceOuterClass {
       return getMaintenancePolicy();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9212,6 +9306,9 @@ public final class ClusterServiceOuterClass {
       if (maintenancePolicy_ != null) {
         output.writeMessage(2, getMaintenancePolicy());
       }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, securityGroupIds_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9228,6 +9325,14 @@ public final class ClusterServiceOuterClass {
       if (maintenancePolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMaintenancePolicy());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9255,6 +9360,8 @@ public final class ClusterServiceOuterClass {
         result = result && getMaintenancePolicy()
             .equals(other.getMaintenancePolicy());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9273,6 +9380,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenancePolicy()) {
         hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenancePolicy().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9419,6 +9530,8 @@ public final class ClusterServiceOuterClass {
           maintenancePolicy_ = null;
           maintenancePolicyBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -9445,6 +9558,8 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterUpdateSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (versionBuilder_ == null) {
           result.version_ = version_;
         } else {
@@ -9455,6 +9570,12 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -9509,6 +9630,16 @@ public final class ClusterServiceOuterClass {
         if (other.hasMaintenancePolicy()) {
           mergeMaintenancePolicy(other.getMaintenancePolicy());
         }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9537,6 +9668,7 @@ public final class ClusterServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.k8s.v1.Version.UpdateVersionSpec version_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9842,6 +9974,136 @@ public final class ClusterServiceOuterClass {
           maintenancePolicy_ = null;
         }
         return maintenancePolicyBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 3;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21290,6 +21552,41 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+
     public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.MasterTypeCase getMasterTypeCase();
   }
   /**
@@ -21306,6 +21603,7 @@ public final class ClusterServiceOuterClass {
     }
     private MasterSpec() {
       version_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -21379,6 +21677,15 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -21394,6 +21701,9 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -21411,6 +21721,7 @@ public final class ClusterServiceOuterClass {
               yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.Builder.class);
     }
 
+    private int bitField0_;
     private int masterTypeCase_ = 0;
     private java.lang.Object masterType_;
     public enum MasterTypeCase
@@ -21600,6 +21911,51 @@ public final class ClusterServiceOuterClass {
       return getMaintenancePolicy();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21626,6 +21982,9 @@ public final class ClusterServiceOuterClass {
       if (maintenancePolicy_ != null) {
         output.writeMessage(4, getMaintenancePolicy());
       }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityGroupIds_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21650,6 +22009,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMaintenancePolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21673,6 +22040,8 @@ public final class ClusterServiceOuterClass {
         result = result && getMaintenancePolicy()
             .equals(other.getMaintenancePolicy());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && getMasterTypeCase().equals(
           other.getMasterTypeCase());
       if (!result) return false;
@@ -21704,6 +22073,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenancePolicy()) {
         hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenancePolicy().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       switch (masterTypeCase_) {
         case 1:
@@ -21858,6 +22231,8 @@ public final class ClusterServiceOuterClass {
           maintenancePolicy_ = null;
           maintenancePolicyBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         masterTypeCase_ = 0;
         masterType_ = null;
         return this;
@@ -21886,6 +22261,8 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (masterTypeCase_ == 1) {
           if (zonalMasterSpecBuilder_ == null) {
             result.masterType_ = masterType_;
@@ -21906,6 +22283,12 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.bitField0_ = to_bitField0_;
         result.masterTypeCase_ = masterTypeCase_;
         onBuilt();
         return result;
@@ -21961,6 +22344,16 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenancePolicy()) {
           mergeMaintenancePolicy(other.getMaintenancePolicy());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
         }
         switch (other.getMasterTypeCase()) {
           case ZONAL_MASTER_SPEC: {
@@ -22018,6 +22411,7 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.ZonalMasterSpecOrBuilder> zonalMasterSpecBuilder_;
@@ -22603,6 +22997,136 @@ public final class ClusterServiceOuterClass {
           maintenancePolicy_ = null;
         }
         return maintenancePolicyBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27120,119 +27644,120 @@ public final class ClusterServiceOuterClass {
       "de_service_account_id\030\010 \001(\t\022:\n\016network_p" +
       "olicy\030\n \001(\0132\".yandex.cloud.k8s.v1.Networ" +
       "kPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"\225\001\n\020M" +
+      "alue\030\002 \001(\t:\0028\001B\022\n\020internet_gateway\"\261\001\n\020M" +
       "asterUpdateSpec\0227\n\007version\030\001 \001(\0132&.yande" +
       "x.cloud.k8s.v1.UpdateVersionSpec\022H\n\022main" +
       "tenance_policy\030\002 \001(\0132,.yandex.cloud.k8s." +
-      "v1.MasterMaintenancePolicy\"+\n\025UpdateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\217\006\n\024Crea" +
-      "teClusterRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
-      "\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
-      "<=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.cloud.k8" +
-      "s.v1.CreateClusterRequest.LabelsEntryBG\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\nnetwor" +
-      "k_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037." +
-      "yandex.cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024" +
-      "ip_allocation_policy\030\007 \001(\0132\'.yandex.clou" +
-      "d.k8s.v1.IPAllocationPolicy\022\036\n\024gateway_i" +
-      "pv4_address\030\010 \001(\tH\000\022 \n\022service_account_i" +
-      "d\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_account_id" +
-      "\030\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162#." +
-      "yandex.cloud.k8s.v1.ReleaseChannel\022:\n\016ne" +
-      "twork_policy\030\014 \001(\0132\".yandex.cloud.k8s.v1" +
-      ".NetworkPolicy\0226\n\014kms_provider\030\r \001(\0132 .y" +
-      "andex.cloud.k8s.v1.KMSProvider\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n" +
-      "\020internet_gateway\"+\n\025CreateClusterMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgradeMas" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034List" +
-      "ClusterOperationsRequest\022\030\n\ncluster_id\030\001" +
-      " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
-      "er\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListClusterOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsR" +
-      "equest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
-      "00\"m\n\035ListClusterNodeGroupsResponse\0223\n\013n" +
-      "ode_groups\030\001 \003(\0132\036.yandex.cloud.k8s.v1.N" +
-      "odeGroup\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027Lis" +
-      "tClusterNodesRequest\022\030\n\ncluster_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClus" +
-      "terNodesResponse\022(\n\005nodes\030\001 \003(\0132\031.yandex" +
-      ".cloud.k8s.v1.Node\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\210\002\n\nMasterSpec\022A\n\021zonal_master_spec\030" +
-      "\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalMasterS" +
-      "pecH\000\022G\n\024regional_master_spec\030\002 \001(\0132\'.ya" +
-      "ndex.cloud.k8s.v1.RegionalMasterSpecH\000\022\017" +
-      "\n\007version\030\003 \001(\t\022H\n\022maintenance_policy\030\004 " +
-      "\001(\0132,.yandex.cloud.k8s.v1.MasterMaintena" +
-      "ncePolicyB\023\n\013master_type\022\004\300\3011\001\"\300\001\n\017Zonal" +
-      "MasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030int" +
-      "ernal_v4_address_spec\030\002 \001(\0132(.yandex.clo" +
-      "ud.k8s.v1.InternalAddressSpec\022J\n\030externa" +
-      "l_v4_address_spec\030\003 \001(\0132(.yandex.cloud.k" +
-      "8s.v1.ExternalAddressSpec\"\261\001\n\022RegionalMa" +
-      "sterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tloc" +
-      "ations\030\002 \003(\0132#.yandex.cloud.k8s.v1.Maste" +
-      "rLocation\022J\n\030external_v4_address_spec\030\003 " +
-      "\001(\0132(.yandex.cloud.k8s.v1.ExternalAddres" +
-      "sSpec\"(\n\023InternalAddressSpec\022\021\n\tsubnet_i" +
-      "d\030\002 \001(\t\"\025\n\023ExternalAddressSpec\"s\n\016Master" +
-      "Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030inter" +
-      "nal_v4_address_spec\030\002 \001(\0132(.yandex.cloud" +
-      ".k8s.v1.InternalAddressSpec2\306\r\n\016ClusterS" +
-      "ervice\022\201\001\n\003Get\022&.yandex.cloud.k8s.v1.Get" +
-      "ClusterRequest\032\034.yandex.cloud.k8s.v1.Clu" +
-      "ster\"4\202\323\344\223\002.\022,/managed-kubernetes/v1/clu" +
-      "sters/{cluster_id}\022\204\001\n\004List\022(.yandex.clo" +
-      "ud.k8s.v1.ListClustersRequest\032).yandex.c" +
-      "loud.k8s.v1.ListClustersResponse\"\'\202\323\344\223\002!" +
-      "\022\037/managed-kubernetes/v1/clusters\022\246\001\n\006Cr" +
-      "eate\022).yandex.cloud.k8s.v1.CreateCluster" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/clust" +
-      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
-      "er\022\263\001\n\006Update\022).yandex.cloud.k8s.v1.Upda" +
-      "teClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"[\202\323\344\223\00212,/managed-kubernetes" +
-      "/v1/clusters/{cluster_id}:\001*\262\322* \n\025Update" +
-      "ClusterMetadata\022\007Cluster\022\276\001\n\006Delete\022).ya" +
-      "ndex.cloud.k8s.v1.DeleteClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"f\202\323\344\223\002" +
-      ".*,/managed-kubernetes/v1/clusters/{clus" +
-      "ter_id}\262\322*.\n\025DeleteClusterMetadata\022\025goog" +
-      "le.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex.clou" +
-      "d.k8s.v1.StopClusterRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"^\202\323\344\223\0026\"1/managed" +
-      "-kubernetes/v1/clusters/{cluster_id}:sto" +
-      "p:\001*\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
-      "\001\n\005Start\022(.yandex.cloud.k8s.v1.StartClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"`\202\323\344\223\0027\"2/managed-kubernetes/v1/cl" +
-      "usters/{cluster_id}:start:\001*\262\322*\037\n\024StartC" +
-      "lusterMetadata\022\007Cluster\022\270\001\n\016ListNodeGrou" +
-      "ps\0221.yandex.cloud.k8s.v1.ListClusterNode" +
-      "GroupsRequest\0322.yandex.cloud.k8s.v1.List" +
-      "ClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/mana" +
-      "ged-kubernetes/v1/clusters/{cluster_id}/" +
-      "nodeGroups\022\270\001\n\016ListOperations\0221.yandex.c" +
-      "loud.k8s.v1.ListClusterOperationsRequest" +
-      "\0322.yandex.cloud.k8s.v1.ListClusterOperat" +
-      "ionsResponse\"?\202\323\344\223\0029\0227/managed-kubernete" +
-      "s/v1/clusters/{cluster_id}/operations\022\244\001" +
-      "\n\tListNodes\022,.yandex.cloud.k8s.v1.ListCl" +
-      "usterNodesRequest\032-.yandex.cloud.k8s.v1." +
-      "ListClusterNodesResponse\":\202\323\344\223\0024\0222/manag" +
-      "ed-kubernetes/v1/clusters/{cluster_id}/n" +
-      "odesBV\n\027yandex.cloud.api.k8s.v1Z;github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/k8s/v1;k8sb\006proto3"
+      "v1.MasterMaintenancePolicy\022\032\n\022security_g" +
+      "roup_ids\030\003 \003(\t\"+\n\025UpdateClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"\217\006\n\024CreateClusterReq" +
+      "uest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 " +
+      "\001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
+      "?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006la" +
+      "bels\030\004 \003(\01325.yandex.cloud.k8s.v1.CreateC" +
+      "lusterRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
+      "-z][-_./\\@0-9a-z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004" +
+      "\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037.yandex.cloud" +
+      ".k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024ip_allocatio" +
+      "n_policy\030\007 \001(\0132\'.yandex.cloud.k8s.v1.IPA" +
+      "llocationPolicy\022\036\n\024gateway_ipv4_address\030" +
+      "\010 \001(\tH\000\022 \n\022service_account_id\030\t \001(\tB\004\350\3071" +
+      "\001\022%\n\027node_service_account_id\030\n \001(\tB\004\350\3071\001" +
+      "\022<\n\017release_channel\030\013 \001(\0162#.yandex.cloud" +
+      ".k8s.v1.ReleaseChannel\022:\n\016network_policy" +
+      "\030\014 \001(\0132\".yandex.cloud.k8s.v1.NetworkPoli" +
+      "cy\0226\n\014kms_provider\030\r \001(\0132 .yandex.cloud." +
+      "k8s.v1.KMSProvider\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_ga" +
+      "teway\"+\n\025CreateClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"/\n\031AutoUpgradeMasterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClusterOpera" +
+      "tionsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\"o\n\035ListClusterOperationsRespons" +
+      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
+      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\222\001\n\034ListClusterNodeGroupsRequest\022\030\n\ncl" +
+      "uster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListCl" +
+      "usterNodeGroupsResponse\0223\n\013node_groups\030\001" +
+      " \003(\0132\036.yandex.cloud.k8s.v1.NodeGroup\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"q\n\027ListClusterNode" +
+      "sRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClusterNodesResp" +
+      "onse\022(\n\005nodes\030\001 \003(\0132\031.yandex.cloud.k8s.v" +
+      "1.Node\022\027\n\017next_page_token\030\002 \001(\t\"\244\002\n\nMast" +
+      "erSpec\022A\n\021zonal_master_spec\030\001 \001(\0132$.yand" +
+      "ex.cloud.k8s.v1.ZonalMasterSpecH\000\022G\n\024reg" +
+      "ional_master_spec\030\002 \001(\0132\'.yandex.cloud.k" +
+      "8s.v1.RegionalMasterSpecH\000\022\017\n\007version\030\003 " +
+      "\001(\t\022H\n\022maintenance_policy\030\004 \001(\0132,.yandex" +
+      ".cloud.k8s.v1.MasterMaintenancePolicy\022\032\n" +
+      "\022security_group_ids\030\006 \003(\tB\023\n\013master_type" +
+      "\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 " +
+      "\001(\0132(.yandex.cloud.k8s.v1.InternalAddres" +
+      "sSpec\022J\n\030external_v4_address_spec\030\003 \001(\0132" +
+      "(.yandex.cloud.k8s.v1.ExternalAddressSpe" +
+      "c\"\261\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030\001 " +
+      "\001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex.cl" +
+      "oud.k8s.v1.MasterLocation\022J\n\030external_v4" +
+      "_address_spec\030\003 \001(\0132(.yandex.cloud.k8s.v" +
+      "1.ExternalAddressSpec\"(\n\023InternalAddress" +
+      "Spec\022\021\n\tsubnet_id\030\002 \001(\t\"\025\n\023ExternalAddre" +
+      "ssSpec\"s\n\016MasterLocation\022\025\n\007zone_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(" +
+      "\0132(.yandex.cloud.k8s.v1.InternalAddressS" +
+      "pec2\306\r\n\016ClusterService\022\201\001\n\003Get\022&.yandex." +
+      "cloud.k8s.v1.GetClusterRequest\032\034.yandex." +
+      "cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-k" +
+      "ubernetes/v1/clusters/{cluster_id}\022\204\001\n\004L" +
+      "ist\022(.yandex.cloud.k8s.v1.ListClustersRe" +
+      "quest\032).yandex.cloud.k8s.v1.ListClusters" +
+      "Response\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v1" +
+      "/clusters\022\246\001\n\006Create\022).yandex.cloud.k8s." +
+      "v1.CreateClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"N\202\323\344\223\002$\"\037/managed-kub" +
+      "ernetes/v1/clusters:\001*\262\322* \n\025CreateCluste" +
+      "rMetadata\022\007Cluster\022\263\001\n\006Update\022).yandex.c" +
+      "loud.k8s.v1.UpdateClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"[\202\323\344\223\00212,/ma" +
+      "naged-kubernetes/v1/clusters/{cluster_id" +
+      "}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster" +
+      "\022\276\001\n\006Delete\022).yandex.cloud.k8s.v1.Delete" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"f\202\323\344\223\002.*,/managed-kubernetes/v" +
+      "1/clusters/{cluster_id}\262\322*.\n\025DeleteClust" +
+      "erMetadata\022\025google.protobuf.Empty\022\262\001\n\004St" +
+      "op\022\'.yandex.cloud.k8s.v1.StopClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"^" +
+      "\202\323\344\223\0026\"1/managed-kubernetes/v1/clusters/" +
+      "{cluster_id}:stop:\001*\262\322*\036\n\023StopClusterMet" +
+      "adata\022\007Cluster\022\266\001\n\005Start\022(.yandex.cloud." +
+      "k8s.v1.StartClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"`\202\323\344\223\0027\"2/managed-" +
+      "kubernetes/v1/clusters/{cluster_id}:star" +
+      "t:\001*\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022" +
+      "\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s.v1" +
+      ".ListClusterNodeGroupsRequest\0322.yandex.c" +
+      "loud.k8s.v1.ListClusterNodeGroupsRespons" +
+      "e\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/cluste" +
+      "rs/{cluster_id}/nodeGroups\022\270\001\n\016ListOpera" +
+      "tions\0221.yandex.cloud.k8s.v1.ListClusterO" +
+      "perationsRequest\0322.yandex.cloud.k8s.v1.L" +
+      "istClusterOperationsResponse\"?\202\323\344\223\0029\0227/m" +
+      "anaged-kubernetes/v1/clusters/{cluster_i" +
+      "d}/operations\022\244\001\n\tListNodes\022,.yandex.clo" +
+      "ud.k8s.v1.ListClusterNodesRequest\032-.yand" +
+      "ex.cloud.k8s.v1.ListClusterNodesResponse" +
+      "\":\202\323\344\223\0024\0222/managed-kubernetes/v1/cluster" +
+      "s/{cluster_id}/nodesBV\n\027yandex.cloud.api" +
+      ".k8s.v1Z;github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27326,7 +27851,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_descriptor,
-        new java.lang.String[] { "Version", "MaintenancePolicy", });
+        new java.lang.String[] { "Version", "MaintenancePolicy", "SecurityGroupIds", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_fieldAccessorTable = new
@@ -27398,7 +27923,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterSpec_descriptor,
-        new java.lang.String[] { "ZonalMasterSpec", "RegionalMasterSpec", "Version", "MaintenancePolicy", "MasterType", });
+        new java.lang.String[] { "ZonalMasterSpec", "RegionalMasterSpec", "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_fieldAccessorTable = new

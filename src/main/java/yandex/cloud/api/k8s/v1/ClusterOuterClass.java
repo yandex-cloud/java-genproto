@@ -4567,6 +4567,41 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterMaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Master.MasterTypeCase getMasterTypeCase();
   }
   /**
@@ -4583,6 +4618,7 @@ public final class ClusterOuterClass {
     }
     private Master() {
       version_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -4695,6 +4731,15 @@ public final class ClusterOuterClass {
               masterTypeCase_ = 7;
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4710,6 +4755,9 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -4727,6 +4775,7 @@ public final class ClusterOuterClass {
               yandex.cloud.api.k8s.v1.ClusterOuterClass.Master.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.Master.Builder.class);
     }
 
+    private int bitField0_;
     private int masterTypeCase_ = 0;
     private java.lang.Object masterType_;
     public enum MasterTypeCase
@@ -5018,6 +5067,51 @@ public final class ClusterOuterClass {
       return getMaintenancePolicy();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Master security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5052,6 +5146,9 @@ public final class ClusterOuterClass {
       }
       if (masterTypeCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.k8s.v1.ClusterOuterClass.RegionalMaster) masterType_);
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, securityGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5088,6 +5185,14 @@ public final class ClusterOuterClass {
       if (masterTypeCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.k8s.v1.ClusterOuterClass.RegionalMaster) masterType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5127,6 +5232,8 @@ public final class ClusterOuterClass {
         result = result && getMaintenancePolicy()
             .equals(other.getMaintenancePolicy());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && getMasterTypeCase().equals(
           other.getMasterTypeCase());
       if (!result) return false;
@@ -5170,6 +5277,10 @@ public final class ClusterOuterClass {
       if (hasMaintenancePolicy()) {
         hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenancePolicy().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       switch (masterTypeCase_) {
         case 1:
@@ -5342,6 +5453,8 @@ public final class ClusterOuterClass {
           maintenancePolicy_ = null;
           maintenancePolicyBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
         masterTypeCase_ = 0;
         masterType_ = null;
         return this;
@@ -5370,6 +5483,8 @@ public final class ClusterOuterClass {
       @java.lang.Override
       public yandex.cloud.api.k8s.v1.ClusterOuterClass.Master buildPartial() {
         yandex.cloud.api.k8s.v1.ClusterOuterClass.Master result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.Master(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (masterTypeCase_ == 1) {
           if (zonalMasterBuilder_ == null) {
             result.masterType_ = masterType_;
@@ -5405,6 +5520,12 @@ public final class ClusterOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.bitField0_ = to_bitField0_;
         result.masterTypeCase_ = masterTypeCase_;
         onBuilt();
         return result;
@@ -5470,6 +5591,16 @@ public final class ClusterOuterClass {
         if (other.hasMaintenancePolicy()) {
           mergeMaintenancePolicy(other.getMaintenancePolicy());
         }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
         switch (other.getMasterTypeCase()) {
           case ZONAL_MASTER: {
             mergeZonalMaster(other.getZonalMaster());
@@ -5526,6 +5657,7 @@ public final class ClusterOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.ClusterOuterClass.ZonalMaster, yandex.cloud.api.k8s.v1.ClusterOuterClass.ZonalMaster.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.ZonalMasterOrBuilder> zonalMasterBuilder_;
@@ -6579,6 +6711,136 @@ public final class ClusterOuterClass {
           maintenancePolicy_ = null;
         }
         return maintenancePolicyBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Master security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 8;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9897,6 +10159,42 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceIpv4CidrBlockBytes();
+
+    /**
+     * <pre>
+     * IPv6 range for allocating pod IP addresses.
+     * </pre>
+     *
+     * <code>string cluster_ipv6_cidr_block = 6;</code>
+     */
+    java.lang.String getClusterIpv6CidrBlock();
+    /**
+     * <pre>
+     * IPv6 range for allocating pod IP addresses.
+     * </pre>
+     *
+     * <code>string cluster_ipv6_cidr_block = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIpv6CidrBlockBytes();
+
+    /**
+     * <pre>
+     * IPv6 range for allocating Kubernetes service IP addresses
+     * </pre>
+     *
+     * <code>string service_ipv6_cidr_block = 7;</code>
+     */
+    java.lang.String getServiceIpv6CidrBlock();
+    /**
+     * <pre>
+     * IPv6 range for allocating Kubernetes service IP addresses
+     * </pre>
+     *
+     * <code>string service_ipv6_cidr_block = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceIpv6CidrBlockBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.IPAllocationPolicy}
@@ -9914,6 +10212,8 @@ public final class ClusterOuterClass {
       clusterIpv4CidrBlock_ = "";
       nodeIpv4CidrMaskSize_ = 0L;
       serviceIpv4CidrBlock_ = "";
+      clusterIpv6CidrBlock_ = "";
+      serviceIpv6CidrBlock_ = "";
     }
 
     @java.lang.Override
@@ -9955,6 +10255,18 @@ public final class ClusterOuterClass {
             case 40: {
 
               nodeIpv4CidrMaskSize_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterIpv6CidrBlock_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceIpv6CidrBlock_ = s;
               break;
             }
             default: {
@@ -10093,6 +10405,90 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int CLUSTER_IPV6_CIDR_BLOCK_FIELD_NUMBER = 6;
+    private volatile java.lang.Object clusterIpv6CidrBlock_;
+    /**
+     * <pre>
+     * IPv6 range for allocating pod IP addresses.
+     * </pre>
+     *
+     * <code>string cluster_ipv6_cidr_block = 6;</code>
+     */
+    public java.lang.String getClusterIpv6CidrBlock() {
+      java.lang.Object ref = clusterIpv6CidrBlock_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterIpv6CidrBlock_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv6 range for allocating pod IP addresses.
+     * </pre>
+     *
+     * <code>string cluster_ipv6_cidr_block = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIpv6CidrBlockBytes() {
+      java.lang.Object ref = clusterIpv6CidrBlock_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterIpv6CidrBlock_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_IPV6_CIDR_BLOCK_FIELD_NUMBER = 7;
+    private volatile java.lang.Object serviceIpv6CidrBlock_;
+    /**
+     * <pre>
+     * IPv6 range for allocating Kubernetes service IP addresses
+     * </pre>
+     *
+     * <code>string service_ipv6_cidr_block = 7;</code>
+     */
+    public java.lang.String getServiceIpv6CidrBlock() {
+      java.lang.Object ref = serviceIpv6CidrBlock_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceIpv6CidrBlock_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * IPv6 range for allocating Kubernetes service IP addresses
+     * </pre>
+     *
+     * <code>string service_ipv6_cidr_block = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceIpv6CidrBlockBytes() {
+      java.lang.Object ref = serviceIpv6CidrBlock_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceIpv6CidrBlock_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10116,6 +10512,12 @@ public final class ClusterOuterClass {
       if (nodeIpv4CidrMaskSize_ != 0L) {
         output.writeInt64(5, nodeIpv4CidrMaskSize_);
       }
+      if (!getClusterIpv6CidrBlockBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clusterIpv6CidrBlock_);
+      }
+      if (!getServiceIpv6CidrBlockBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, serviceIpv6CidrBlock_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10134,6 +10536,12 @@ public final class ClusterOuterClass {
       if (nodeIpv4CidrMaskSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, nodeIpv4CidrMaskSize_);
+      }
+      if (!getClusterIpv6CidrBlockBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clusterIpv6CidrBlock_);
+      }
+      if (!getServiceIpv6CidrBlockBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serviceIpv6CidrBlock_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10157,6 +10565,10 @@ public final class ClusterOuterClass {
           == other.getNodeIpv4CidrMaskSize());
       result = result && getServiceIpv4CidrBlock()
           .equals(other.getServiceIpv4CidrBlock());
+      result = result && getClusterIpv6CidrBlock()
+          .equals(other.getClusterIpv6CidrBlock());
+      result = result && getServiceIpv6CidrBlock()
+          .equals(other.getServiceIpv6CidrBlock());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10175,6 +10587,10 @@ public final class ClusterOuterClass {
           getNodeIpv4CidrMaskSize());
       hash = (37 * hash) + SERVICE_IPV4_CIDR_BLOCK_FIELD_NUMBER;
       hash = (53 * hash) + getServiceIpv4CidrBlock().hashCode();
+      hash = (37 * hash) + CLUSTER_IPV6_CIDR_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterIpv6CidrBlock().hashCode();
+      hash = (37 * hash) + SERVICE_IPV6_CIDR_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceIpv6CidrBlock().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10314,6 +10730,10 @@ public final class ClusterOuterClass {
 
         serviceIpv4CidrBlock_ = "";
 
+        clusterIpv6CidrBlock_ = "";
+
+        serviceIpv6CidrBlock_ = "";
+
         return this;
       }
 
@@ -10343,6 +10763,8 @@ public final class ClusterOuterClass {
         result.clusterIpv4CidrBlock_ = clusterIpv4CidrBlock_;
         result.nodeIpv4CidrMaskSize_ = nodeIpv4CidrMaskSize_;
         result.serviceIpv4CidrBlock_ = serviceIpv4CidrBlock_;
+        result.clusterIpv6CidrBlock_ = clusterIpv6CidrBlock_;
+        result.serviceIpv6CidrBlock_ = serviceIpv6CidrBlock_;
         onBuilt();
         return result;
       }
@@ -10400,6 +10822,14 @@ public final class ClusterOuterClass {
         }
         if (!other.getServiceIpv4CidrBlock().isEmpty()) {
           serviceIpv4CidrBlock_ = other.serviceIpv4CidrBlock_;
+          onChanged();
+        }
+        if (!other.getClusterIpv6CidrBlock().isEmpty()) {
+          clusterIpv6CidrBlock_ = other.clusterIpv6CidrBlock_;
+          onChanged();
+        }
+        if (!other.getServiceIpv6CidrBlock().isEmpty()) {
+          serviceIpv6CidrBlock_ = other.serviceIpv6CidrBlock_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -10661,6 +11091,184 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         
         serviceIpv4CidrBlock_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clusterIpv6CidrBlock_ = "";
+      /**
+       * <pre>
+       * IPv6 range for allocating pod IP addresses.
+       * </pre>
+       *
+       * <code>string cluster_ipv6_cidr_block = 6;</code>
+       */
+      public java.lang.String getClusterIpv6CidrBlock() {
+        java.lang.Object ref = clusterIpv6CidrBlock_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterIpv6CidrBlock_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating pod IP addresses.
+       * </pre>
+       *
+       * <code>string cluster_ipv6_cidr_block = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIpv6CidrBlockBytes() {
+        java.lang.Object ref = clusterIpv6CidrBlock_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterIpv6CidrBlock_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating pod IP addresses.
+       * </pre>
+       *
+       * <code>string cluster_ipv6_cidr_block = 6;</code>
+       */
+      public Builder setClusterIpv6CidrBlock(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterIpv6CidrBlock_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating pod IP addresses.
+       * </pre>
+       *
+       * <code>string cluster_ipv6_cidr_block = 6;</code>
+       */
+      public Builder clearClusterIpv6CidrBlock() {
+        
+        clusterIpv6CidrBlock_ = getDefaultInstance().getClusterIpv6CidrBlock();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating pod IP addresses.
+       * </pre>
+       *
+       * <code>string cluster_ipv6_cidr_block = 6;</code>
+       */
+      public Builder setClusterIpv6CidrBlockBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterIpv6CidrBlock_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceIpv6CidrBlock_ = "";
+      /**
+       * <pre>
+       * IPv6 range for allocating Kubernetes service IP addresses
+       * </pre>
+       *
+       * <code>string service_ipv6_cidr_block = 7;</code>
+       */
+      public java.lang.String getServiceIpv6CidrBlock() {
+        java.lang.Object ref = serviceIpv6CidrBlock_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceIpv6CidrBlock_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating Kubernetes service IP addresses
+       * </pre>
+       *
+       * <code>string service_ipv6_cidr_block = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceIpv6CidrBlockBytes() {
+        java.lang.Object ref = serviceIpv6CidrBlock_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceIpv6CidrBlock_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating Kubernetes service IP addresses
+       * </pre>
+       *
+       * <code>string service_ipv6_cidr_block = 7;</code>
+       */
+      public Builder setServiceIpv6CidrBlock(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceIpv6CidrBlock_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating Kubernetes service IP addresses
+       * </pre>
+       *
+       * <code>string service_ipv6_cidr_block = 7;</code>
+       */
+      public Builder clearServiceIpv6CidrBlock() {
+        
+        serviceIpv6CidrBlock_ = getDefaultInstance().getServiceIpv6CidrBlock();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IPv6 range for allocating Kubernetes service IP addresses
+       * </pre>
+       *
+       * <code>string service_ipv6_cidr_block = 7;</code>
+       */
+      public Builder setServiceIpv6CidrBlockBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceIpv6CidrBlock_ = value;
         onChanged();
         return this;
       }
@@ -12781,7 +13389,7 @@ public final class ClusterOuterClass {
       "ING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STAR" +
       "TING\020\007\"<\n\006Health\022\026\n\022HEALTH_UNSPECIFIED\020\000" +
       "\022\013\n\007HEALTHY\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet" +
-      "_gateway\"\223\003\n\006Master\0228\n\014zonal_master\030\001 \001(" +
+      "_gateway\"\257\003\n\006Master\0228\n\014zonal_master\030\001 \001(" +
       "\0132 .yandex.cloud.k8s.v1.ZonalMasterH\000\022>\n" +
       "\017regional_master\030\007 \001(\0132#.yandex.cloud.k8" +
       "s.v1.RegionalMasterH\000\022\017\n\007version\030\002 \001(\t\0227" +
@@ -12790,31 +13398,33 @@ public final class ClusterOuterClass {
       "andex.cloud.k8s.v1.MasterAuth\0226\n\014version" +
       "_info\030\005 \001(\0132 .yandex.cloud.k8s.v1.Versio" +
       "nInfo\022H\n\022maintenance_policy\030\006 \001(\0132,.yand" +
-      "ex.cloud.k8s.v1.MasterMaintenancePolicyB" +
-      "\r\n\013master_type\",\n\nMasterAuth\022\036\n\026cluster_" +
-      "ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022\017\n\007z" +
-      "one_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(" +
-      "\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Region" +
-      "alMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023internal_" +
-      "v4_address\030\002 \001(\t\022\033\n\023external_v4_address\030" +
-      "\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024internal_v4_" +
-      "endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoint\030\002" +
-      " \001(\t\"\216\001\n\022IPAllocationPolicy\022\037\n\027cluster_i" +
-      "pv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cidr_m" +
-      "ask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027" +
-      "service_ipv4_cidr_block\030\002 \001(\t\"s\n\027MasterM" +
-      "aintenancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B" +
-      "\n\022maintenance_window\030\002 \001(\0132&.yandex.clou" +
-      "d.k8s.v1.MaintenanceWindow\"\200\001\n\rNetworkPo" +
-      "licy\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8" +
-      "s.v1.NetworkPolicy.Provider\"0\n\010Provider\022" +
-      "\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n" +
-      "\013KMSProvider\022\016\n\006key_id\030\001 \001(\t*U\n\016ReleaseC" +
-      "hannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022" +
-      "\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027y" +
-      "andex.cloud.api.k8s.v1Z;github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/k8s/v1;" +
-      "k8sb\006proto3"
+      "ex.cloud.k8s.v1.MasterMaintenancePolicy\022" +
+      "\032\n\022security_group_ids\030\010 \003(\tB\r\n\013master_ty" +
+      "pe\",\n\nMasterAuth\022\036\n\026cluster_ca_certifica" +
+      "te\030\001 \001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t" +
+      "\022\033\n\023internal_v4_address\030\002 \001(\t\022\033\n\023externa" +
+      "l_v4_address\030\003 \001(\t\"]\n\016RegionalMaster\022\021\n\t" +
+      "region_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002" +
+      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"M\n\017Mas" +
+      "terEndpoints\022\034\n\024internal_v4_endpoint\030\001 \001" +
+      "(\t\022\034\n\024external_v4_endpoint\030\002 \001(\t\"\320\001\n\022IPA" +
+      "llocationPolicy\022\037\n\027cluster_ipv4_cidr_blo" +
+      "ck\030\001 \001(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001" +
+      "(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027service_ipv4" +
+      "_cidr_block\030\002 \001(\t\022\037\n\027cluster_ipv6_cidr_b" +
+      "lock\030\006 \001(\t\022\037\n\027service_ipv6_cidr_block\030\007 " +
+      "\001(\t\"s\n\027MasterMaintenancePolicy\022\024\n\014auto_u" +
+      "pgrade\030\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\013" +
+      "2&.yandex.cloud.k8s.v1.MaintenanceWindow" +
+      "\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(\0162+.y" +
+      "andex.cloud.k8s.v1.NetworkPolicy.Provide" +
+      "r\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022" +
+      "\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001" +
+      "(\t*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNEL_" +
+      "UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n" +
+      "\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12849,7 +13459,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Master_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Master_descriptor,
-        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "MasterType", });
+        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "SecurityGroupIds", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_MasterAuth_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_k8s_v1_MasterAuth_fieldAccessorTable = new
@@ -12879,7 +13489,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_descriptor,
-        new java.lang.String[] { "ClusterIpv4CidrBlock", "NodeIpv4CidrMaskSize", "ServiceIpv4CidrBlock", });
+        new java.lang.String[] { "ClusterIpv4CidrBlock", "NodeIpv4CidrMaskSize", "ServiceIpv4CidrBlock", "ClusterIpv6CidrBlock", "ServiceIpv6CidrBlock", });
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_fieldAccessorTable = new

@@ -32684,7 +32684,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     boolean hasMysqlConfig57();
     /**
@@ -32692,7 +32692,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getMysqlConfig57();
     /**
@@ -32700,7 +32700,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getMysqlConfig57OrBuilder();
 
@@ -32962,7 +32962,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public boolean hasMysqlConfig57() {
       return mysqlConfigCase_ == 2;
@@ -32972,7 +32972,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getMysqlConfig57() {
       if (mysqlConfigCase_ == 2) {
@@ -32985,7 +32985,7 @@ public final class ClusterServiceOuterClass {
      * Configuration for a MySQL 5.7 cluster.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getMysqlConfig57OrBuilder() {
       if (mysqlConfigCase_ == 2) {
@@ -33589,7 +33589,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public boolean hasMysqlConfig57() {
         return mysqlConfigCase_ == 2;
@@ -33599,7 +33599,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 getMysqlConfig57() {
         if (mysqlConfig57Builder_ == null) {
@@ -33619,7 +33619,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder setMysqlConfig57(yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 value) {
         if (mysqlConfig57Builder_ == null) {
@@ -33639,7 +33639,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder setMysqlConfig57(
           yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder builderForValue) {
@@ -33657,7 +33657,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder mergeMysqlConfig57(yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7 value) {
         if (mysqlConfig57Builder_ == null) {
@@ -33683,7 +33683,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder clearMysqlConfig57() {
         if (mysqlConfig57Builder_ == null) {
@@ -33706,7 +33706,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder getMysqlConfig57Builder() {
         return getMysqlConfig57FieldBuilder().getBuilder();
@@ -33716,7 +33716,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder getMysqlConfig57OrBuilder() {
         if ((mysqlConfigCase_ == 2) && (mysqlConfig57Builder_ != null)) {
@@ -33733,7 +33733,7 @@ public final class ClusterServiceOuterClass {
        * Configuration for a MySQL 5.7 cluster.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1alpha.config.MysqlConfig5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7.Builder, yandex.cloud.api.mdb.mysql.v1alpha.config.Mysql57.MysqlConfig5_7OrBuilder> 
@@ -34433,89 +34433,90 @@ public final class ClusterServiceOuterClass {
       "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_name" +
       "s\030\002 \003(\t\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\310" +
       "1\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020a" +
-      "ssign_public_ip\030\003 \001(\010\"\363\001\n\nConfigSpec\022\017\n\007" +
-      "version\030\001 \001(\t\022Q\n\020mysql_config_5_7\030\002 \001(\0132" +
+      "ssign_public_ip\030\003 \001(\010\"\204\002\n\nConfigSpec\022\017\n\007" +
+      "version\030\001 \001(\t\022b\n\020mysql_config_5_7\030\002 \001(\0132" +
       "5.yandex.cloud.mdb.mysql.v1alpha.config." +
-      "MysqlConfig5_7H\000\022<\n\tresources\030\003 \001(\0132).ya" +
-      "ndex.cloud.mdb.mysql.v1alpha.Resources\0223" +
-      "\n\023backup_window_start\030\004 \001(\0132\026.google.typ" +
-      "e.TimeOfDayB\016\n\014mysql_config2\356\026\n\016ClusterS" +
-      "ervice\022\227\001\n\003Get\0221.yandex.cloud.mdb.mysql." +
-      "v1alpha.GetClusterRequest\032\'.yandex.cloud" +
-      ".mdb.mysql.v1alpha.Cluster\"4\202\323\344\223\002.\022,/man" +
-      "aged-mysql/v1alpha/clusters/{cluster_id}" +
-      "\022\232\001\n\004List\0223.yandex.cloud.mdb.mysql.v1alp" +
-      "ha.ListClustersRequest\0324.yandex.cloud.md" +
-      "b.mysql.v1alpha.ListClustersResponse\"\'\202\323" +
-      "\344\223\002!\022\037/managed-mysql/v1alpha/clusters\022\261\001" +
-      "\n\006Create\0224.yandex.cloud.mdb.mysql.v1alph" +
-      "a.CreateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"N\202\323\344\223\002$\"\037/managed-mysq" +
-      "l/v1alpha/clusters:\001*\262\322* \n\025CreateCluster" +
-      "Metadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.cl" +
-      "oud.mdb.mysql.v1alpha.UpdateClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"[\202" +
-      "\323\344\223\00212,/managed-mysql/v1alpha/clusters/{" +
-      "cluster_id}:\001*\262\322* \n\025UpdateClusterMetadat" +
-      "a\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb" +
-      ".mysql.v1alpha.DeleteClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"f\202\323\344\223\002.*," +
-      "/managed-mysql/v1alpha/clusters/{cluster" +
-      "_id}\262\322*.\n\025DeleteClusterMetadata\022\025google." +
-      "protobuf.Empty\022\276\001\n\005Start\0223.yandex.cloud." +
-      "mdb.mysql.v1alpha.StartClusterRequest\032!." +
-      "yandex.cloud.operation.Operation\"]\202\323\344\223\0024" +
-      "\"2/managed-mysql/v1alpha/clusters/{clust" +
-      "er_id}:start\262\322*\037\n\024StartClusterMetadata\022\007" +
-      "Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.mysq" +
-      "l.v1alpha.StopClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"[\202\323\344\223\0023\"1/manage" +
-      "d-mysql/v1alpha/clusters/{cluster_id}:st" +
-      "op\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\302\001\n" +
-      "\006Backup\0224.yandex.cloud.mdb.mysql.v1alpha" +
-      ".BackupClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"_\202\323\344\223\0025\"3/managed-mysql" +
-      "/v1alpha/clusters/{cluster_id}:backup\262\322*" +
-      " \n\025BackupClusterMetadata\022\007Cluster\022\274\001\n\007Re" +
-      "store\0225.yandex.cloud.mdb.mysql.v1alpha.R" +
-      "estoreClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"W\202\323\344\223\002,\"\'/managed-mysql/" +
-      "v1alpha/clusters:restore:\001*\262\322*!\n\026Restore" +
-      "ClusterMetadata\022\007Cluster\022\266\001\n\010ListLogs\0226." +
-      "yandex.cloud.mdb.mysql.v1alpha.ListClust" +
-      "erLogsRequest\0327.yandex.cloud.mdb.mysql.v" +
-      "1alpha.ListClusterLogsResponse\"9\202\323\344\223\0023\0221" +
-      "/managed-mysql/v1alpha/clusters/{cluster" +
-      "_id}:logs\022\316\001\n\016ListOperations\022<.yandex.cl" +
-      "oud.mdb.mysql.v1alpha.ListClusterOperati" +
-      "onsRequest\032=.yandex.cloud.mdb.mysql.v1al" +
-      "pha.ListClusterOperationsResponse\"?\202\323\344\223\002" +
-      "9\0227/managed-mysql/v1alpha/clusters/{clus" +
-      "ter_id}/operations\022\302\001\n\013ListBackups\0229.yan" +
-      "dex.cloud.mdb.mysql.v1alpha.ListClusterB" +
-      "ackupsRequest\032:.yandex.cloud.mdb.mysql.v" +
-      "1alpha.ListClusterBackupsResponse\"<\202\323\344\223\002" +
-      "6\0224/managed-mysql/v1alpha/clusters/{clus" +
-      "ter_id}/backups\022\272\001\n\tListHosts\0227.yandex.c" +
-      "loud.mdb.mysql.v1alpha.ListClusterHostsR" +
-      "equest\0328.yandex.cloud.mdb.mysql.v1alpha." +
-      "ListClusterHostsResponse\":\202\323\344\223\0024\0222/manag" +
-      "ed-mysql/v1alpha/clusters/{cluster_id}/h" +
-      "osts\022\344\001\n\010AddHosts\0226.yandex.cloud.mdb.mys" +
-      "ql.v1alpha.AddClusterHostsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"}\202\323\344\223\002C\">/m" +
-      "anaged-mysql/v1alpha/clusters/{cluster_i" +
-      "d}/hosts:batchCreate:\001*\262\322*0\n\027AddClusterH" +
-      "ostsMetadata\022\025google.protobuf.Empty\022\356\001\n\013" +
-      "DeleteHosts\0229.yandex.cloud.mdb.mysql.v1a" +
-      "lpha.DeleteClusterHostsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\200\001\202\323\344\223\002C\">/man" +
-      "aged-mysql/v1alpha/clusters/{cluster_id}" +
-      "/hosts:batchDelete:\001*\262\322*3\n\032DeleteCluster" +
-      "HostsMetadata\022\025google.protobuf.EmptyBn\n\"" +
-      "yandex.cloud.api.mdb.mysql.v1alphaZHgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/mysql/v1alpha;mysqlb\006proto3"
+      "MysqlConfig5_7H\000R\017mysqlConfig_5_7\022<\n\tres" +
+      "ources\030\003 \001(\0132).yandex.cloud.mdb.mysql.v1" +
+      "alpha.Resources\0223\n\023backup_window_start\030\004" +
+      " \001(\0132\026.google.type.TimeOfDayB\016\n\014mysql_co" +
+      "nfig2\356\026\n\016ClusterService\022\227\001\n\003Get\0221.yandex" +
+      ".cloud.mdb.mysql.v1alpha.GetClusterReque" +
+      "st\032\'.yandex.cloud.mdb.mysql.v1alpha.Clus" +
+      "ter\"4\202\323\344\223\002.\022,/managed-mysql/v1alpha/clus" +
+      "ters/{cluster_id}\022\232\001\n\004List\0223.yandex.clou" +
+      "d.mdb.mysql.v1alpha.ListClustersRequest\032" +
+      "4.yandex.cloud.mdb.mysql.v1alpha.ListClu" +
+      "stersResponse\"\'\202\323\344\223\002!\022\037/managed-mysql/v1" +
+      "alpha/clusters\022\261\001\n\006Create\0224.yandex.cloud" +
+      ".mdb.mysql.v1alpha.CreateClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"N\202\323\344\223" +
+      "\002$\"\037/managed-mysql/v1alpha/clusters:\001*\262\322" +
+      "* \n\025CreateClusterMetadata\022\007Cluster\022\276\001\n\006U" +
+      "pdate\0224.yandex.cloud.mdb.mysql.v1alpha.U" +
+      "pdateClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"[\202\323\344\223\00212,/managed-mysql/v" +
+      "1alpha/clusters/{cluster_id}:\001*\262\322* \n\025Upd" +
+      "ateClusterMetadata\022\007Cluster\022\311\001\n\006Delete\0224" +
+      ".yandex.cloud.mdb.mysql.v1alpha.DeleteCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"f\202\323\344\223\002.*,/managed-mysql/v1alpha/" +
+      "clusters/{cluster_id}\262\322*.\n\025DeleteCluster" +
+      "Metadata\022\025google.protobuf.Empty\022\276\001\n\005Star" +
+      "t\0223.yandex.cloud.mdb.mysql.v1alpha.Start" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"]\202\323\344\223\0024\"2/managed-mysql/v1alph" +
+      "a/clusters/{cluster_id}:start\262\322*\037\n\024Start" +
+      "ClusterMetadata\022\007Cluster\022\272\001\n\004Stop\0222.yand" +
+      "ex.cloud.mdb.mysql.v1alpha.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"[\202\323\344\223\0023\"1/managed-mysql/v1alpha/cluster" +
+      "s/{cluster_id}:stop\262\322*\036\n\023StopClusterMeta" +
+      "data\022\007Cluster\022\302\001\n\006Backup\0224.yandex.cloud." +
+      "mdb.mysql.v1alpha.BackupClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"_\202\323\344\223\002" +
+      "5\"3/managed-mysql/v1alpha/clusters/{clus" +
+      "ter_id}:backup\262\322* \n\025BackupClusterMetadat" +
+      "a\022\007Cluster\022\274\001\n\007Restore\0225.yandex.cloud.md" +
+      "b.mysql.v1alpha.RestoreClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"W\202\323\344\223\002," +
+      "\"\'/managed-mysql/v1alpha/clusters:restor" +
+      "e:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluste" +
+      "r\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.mysql." +
+      "v1alpha.ListClusterLogsRequest\0327.yandex." +
+      "cloud.mdb.mysql.v1alpha.ListClusterLogsR" +
+      "esponse\"9\202\323\344\223\0023\0221/managed-mysql/v1alpha/" +
+      "clusters/{cluster_id}:logs\022\316\001\n\016ListOpera" +
+      "tions\022<.yandex.cloud.mdb.mysql.v1alpha.L" +
+      "istClusterOperationsRequest\032=.yandex.clo" +
+      "ud.mdb.mysql.v1alpha.ListClusterOperatio" +
+      "nsResponse\"?\202\323\344\223\0029\0227/managed-mysql/v1alp" +
+      "ha/clusters/{cluster_id}/operations\022\302\001\n\013" +
+      "ListBackups\0229.yandex.cloud.mdb.mysql.v1a" +
+      "lpha.ListClusterBackupsRequest\032:.yandex." +
+      "cloud.mdb.mysql.v1alpha.ListClusterBacku" +
+      "psResponse\"<\202\323\344\223\0026\0224/managed-mysql/v1alp" +
+      "ha/clusters/{cluster_id}/backups\022\272\001\n\tLis" +
+      "tHosts\0227.yandex.cloud.mdb.mysql.v1alpha." +
+      "ListClusterHostsRequest\0328.yandex.cloud.m" +
+      "db.mysql.v1alpha.ListClusterHostsRespons" +
+      "e\":\202\323\344\223\0024\0222/managed-mysql/v1alpha/cluste" +
+      "rs/{cluster_id}/hosts\022\344\001\n\010AddHosts\0226.yan" +
+      "dex.cloud.mdb.mysql.v1alpha.AddClusterHo" +
+      "stsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"}\202\323\344\223\002C\">/managed-mysql/v1alpha/cl" +
+      "usters/{cluster_id}/hosts:batchCreate:\001*" +
+      "\262\322*0\n\027AddClusterHostsMetadata\022\025google.pr" +
+      "otobuf.Empty\022\356\001\n\013DeleteHosts\0229.yandex.cl" +
+      "oud.mdb.mysql.v1alpha.DeleteClusterHosts" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\200\001\202\323\344\223\002C\">/managed-mysql/v1alpha/clus" +
+      "ters/{cluster_id}/hosts:batchDelete:\001*\262\322" +
+      "*3\n\032DeleteClusterHostsMetadata\022\025google.p" +
+      "rotobuf.EmptyBn\n\"yandex.cloud.api.mdb.my" +
+      "sql.v1alphaZHgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/mysql/v1alpha;" +
+      "mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -8972,27 +8972,30 @@ public final class NodeOuterClass {
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    boolean hasV4AddressSpec();
+    @java.lang.Deprecated boolean hasV4AddressSpec();
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec();
+    @java.lang.Deprecated yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec();
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder();
 
     /**
      * <pre>
@@ -9018,6 +9021,55 @@ public final class NodeOuterClass {
      * <code>.yandex.cloud.k8s.v1.SchedulingPolicy scheduling_policy = 6;</code>
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.SchedulingPolicyOrBuilder getSchedulingPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> 
+        getNetworkInterfaceSpecsList();
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index);
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    int getNetworkInterfaceSpecsCount();
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder> 
+        getNetworkInterfaceSpecsOrBuilderList();
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate}
@@ -9033,6 +9085,7 @@ public final class NodeOuterClass {
     }
     private NodeTemplate() {
       platformId_ = "";
+      networkInterfaceSpecs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9130,6 +9183,15 @@ public final class NodeOuterClass {
 
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              networkInterfaceSpecs_.add(
+                  input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9145,6 +9207,9 @@ public final class NodeOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -9388,31 +9453,34 @@ public final class NodeOuterClass {
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    public boolean hasV4AddressSpec() {
+    @java.lang.Deprecated public boolean hasV4AddressSpec() {
       return v4AddressSpec_ != null;
     }
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec() {
+    @java.lang.Deprecated public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec() {
       return v4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : v4AddressSpec_;
     }
     /**
      * <pre>
      * Specification for the create network interfaces for the node group compute instances.
+     * Deprecated, please use network_interface_specs.
      * </pre>
      *
-     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
      */
-    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder() {
       return getV4AddressSpec();
     }
 
@@ -9449,6 +9517,66 @@ public final class NodeOuterClass {
       return getSchedulingPolicy();
     }
 
+    public static final int NETWORK_INTERFACE_SPECS_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_;
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    public java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> getNetworkInterfaceSpecsList() {
+      return networkInterfaceSpecs_;
+    }
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder> 
+        getNetworkInterfaceSpecsOrBuilderList() {
+      return networkInterfaceSpecs_;
+    }
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    public int getNetworkInterfaceSpecsCount() {
+      return networkInterfaceSpecs_.size();
+    }
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index) {
+      return networkInterfaceSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * New api, to specify network interfaces for the node group compute instances.
+     * Can not be used together with 'v4_address_spec'
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
+        int index) {
+      return networkInterfaceSpecs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9483,6 +9611,9 @@ public final class NodeOuterClass {
       }
       if (schedulingPolicy_ != null) {
         output.writeMessage(6, getSchedulingPolicy());
+      }
+      for (int i = 0; i < networkInterfaceSpecs_.size(); i++) {
+        output.writeMessage(7, networkInterfaceSpecs_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -9521,6 +9652,10 @@ public final class NodeOuterClass {
       if (schedulingPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSchedulingPolicy());
+      }
+      for (int i = 0; i < networkInterfaceSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, networkInterfaceSpecs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9562,6 +9697,8 @@ public final class NodeOuterClass {
         result = result && getSchedulingPolicy()
             .equals(other.getSchedulingPolicy());
       }
+      result = result && getNetworkInterfaceSpecsList()
+          .equals(other.getNetworkInterfaceSpecsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9594,6 +9731,10 @@ public final class NodeOuterClass {
       if (hasSchedulingPolicy()) {
         hash = (37 * hash) + SCHEDULING_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getSchedulingPolicy().hashCode();
+      }
+      if (getNetworkInterfaceSpecsCount() > 0) {
+        hash = (37 * hash) + NETWORK_INTERFACE_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getNetworkInterfaceSpecsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9745,6 +9886,7 @@ public final class NodeOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getNetworkInterfaceSpecsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -9776,6 +9918,12 @@ public final class NodeOuterClass {
         } else {
           schedulingPolicy_ = null;
           schedulingPolicyBuilder_ = null;
+        }
+        if (networkInterfaceSpecsBuilder_ == null) {
+          networkInterfaceSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          networkInterfaceSpecsBuilder_.clear();
         }
         return this;
       }
@@ -9827,6 +9975,15 @@ public final class NodeOuterClass {
           result.schedulingPolicy_ = schedulingPolicy_;
         } else {
           result.schedulingPolicy_ = schedulingPolicyBuilder_.build();
+        }
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
+        } else {
+          result.networkInterfaceSpecs_ = networkInterfaceSpecsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -9894,6 +10051,32 @@ public final class NodeOuterClass {
         }
         if (other.hasSchedulingPolicy()) {
           mergeSchedulingPolicy(other.getSchedulingPolicy());
+        }
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (!other.networkInterfaceSpecs_.isEmpty()) {
+            if (networkInterfaceSpecs_.isEmpty()) {
+              networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureNetworkInterfaceSpecsIsMutable();
+              networkInterfaceSpecs_.addAll(other.networkInterfaceSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.networkInterfaceSpecs_.isEmpty()) {
+            if (networkInterfaceSpecsBuilder_.isEmpty()) {
+              networkInterfaceSpecsBuilder_.dispose();
+              networkInterfaceSpecsBuilder_ = null;
+              networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              networkInterfaceSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNetworkInterfaceSpecsFieldBuilder() : null;
+            } else {
+              networkInterfaceSpecsBuilder_.addAllMessages(other.networkInterfaceSpecs_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10491,21 +10674,23 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public boolean hasV4AddressSpec() {
+      @java.lang.Deprecated public boolean hasV4AddressSpec() {
         return v4AddressSpecBuilder_ != null || v4AddressSpec_ != null;
       }
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec() {
+      @java.lang.Deprecated public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getV4AddressSpec() {
         if (v4AddressSpecBuilder_ == null) {
           return v4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : v4AddressSpec_;
         } else {
@@ -10515,11 +10700,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public Builder setV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+      @java.lang.Deprecated public Builder setV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
         if (v4AddressSpecBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10535,11 +10721,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public Builder setV4AddressSpec(
+      @java.lang.Deprecated public Builder setV4AddressSpec(
           yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder builderForValue) {
         if (v4AddressSpecBuilder_ == null) {
           v4AddressSpec_ = builderForValue.build();
@@ -10553,11 +10740,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public Builder mergeV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+      @java.lang.Deprecated public Builder mergeV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
         if (v4AddressSpecBuilder_ == null) {
           if (v4AddressSpec_ != null) {
             v4AddressSpec_ =
@@ -10575,11 +10763,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public Builder clearV4AddressSpec() {
+      @java.lang.Deprecated public Builder clearV4AddressSpec() {
         if (v4AddressSpecBuilder_ == null) {
           v4AddressSpec_ = null;
           onChanged();
@@ -10593,11 +10782,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder getV4AddressSpecBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder getV4AddressSpecBuilder() {
         
         onChanged();
         return getV4AddressSpecFieldBuilder().getBuilder();
@@ -10605,11 +10795,12 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
-      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getV4AddressSpecOrBuilder() {
         if (v4AddressSpecBuilder_ != null) {
           return v4AddressSpecBuilder_.getMessageOrBuilder();
         } else {
@@ -10620,9 +10811,10 @@ public final class NodeOuterClass {
       /**
        * <pre>
        * Specification for the create network interfaces for the node group compute instances.
+       * Deprecated, please use network_interface_specs.
        * </pre>
        *
-       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5;</code>
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec v4_address_spec = 5 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder> 
@@ -10790,6 +10982,336 @@ public final class NodeOuterClass {
         }
         return schedulingPolicyBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureNetworkInterfaceSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec>(networkInterfaceSpecs_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder> networkInterfaceSpecsBuilder_;
+
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> getNetworkInterfaceSpecsList() {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+        } else {
+          return networkInterfaceSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public int getNetworkInterfaceSpecsCount() {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          return networkInterfaceSpecs_.size();
+        } else {
+          return networkInterfaceSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          return networkInterfaceSpecs_.get(index);
+        } else {
+          return networkInterfaceSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder setNetworkInterfaceSpecs(
+          int index, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec value) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.set(index, value);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder setNetworkInterfaceSpecs(
+          int index, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder addNetworkInterfaceSpecs(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec value) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.add(value);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder addNetworkInterfaceSpecs(
+          int index, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec value) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.add(index, value);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder addNetworkInterfaceSpecs(
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder addNetworkInterfaceSpecs(
+          int index, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder addAllNetworkInterfaceSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec> values) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          ensureNetworkInterfaceSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, networkInterfaceSpecs_);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder clearNetworkInterfaceSpecs() {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          networkInterfaceSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public Builder removeNetworkInterfaceSpecs(int index) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          ensureNetworkInterfaceSpecsIsMutable();
+          networkInterfaceSpecs_.remove(index);
+          onChanged();
+        } else {
+          networkInterfaceSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder getNetworkInterfaceSpecsBuilder(
+          int index) {
+        return getNetworkInterfaceSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
+          int index) {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          return networkInterfaceSpecs_.get(index);  } else {
+          return networkInterfaceSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder> 
+           getNetworkInterfaceSpecsOrBuilderList() {
+        if (networkInterfaceSpecsBuilder_ != null) {
+          return networkInterfaceSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder addNetworkInterfaceSpecsBuilder() {
+        return getNetworkInterfaceSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder addNetworkInterfaceSpecsBuilder(
+          int index) {
+        return getNetworkInterfaceSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * New api, to specify network interfaces for the node group compute instances.
+       * Can not be used together with 'v4_address_spec'
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.NetworkInterfaceSpec network_interface_specs = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder> 
+           getNetworkInterfaceSpecsBuilderList() {
+        return getNetworkInterfaceSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder> 
+          getNetworkInterfaceSpecsFieldBuilder() {
+        if (networkInterfaceSpecsBuilder_ == null) {
+          networkInterfaceSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder>(
+                  networkInterfaceSpecs_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          networkInterfaceSpecs_ = null;
+        }
+        return networkInterfaceSpecsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10838,6 +11360,1446 @@ public final class NodeOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeTemplate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NetworkInterfaceSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.NetworkInterfaceSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getSubnetIdsList();
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    int getSubnetIdsCount();
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    java.lang.String getSubnetIds(int index);
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    boolean hasPrimaryV4AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV4AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    boolean hasPrimaryV6AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV6AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder();
+
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.NetworkInterfaceSpec}
+   */
+  public  static final class NetworkInterfaceSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.NetworkInterfaceSpec)
+      NetworkInterfaceSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NetworkInterfaceSpec.newBuilder() to construct.
+    private NetworkInterfaceSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NetworkInterfaceSpec() {
+      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NetworkInterfaceSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              subnetIds_.add(s);
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder subBuilder = null;
+              if (primaryV4AddressSpec_ != null) {
+                subBuilder = primaryV4AddressSpec_.toBuilder();
+              }
+              primaryV4AddressSpec_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(primaryV4AddressSpec_);
+                primaryV4AddressSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder subBuilder = null;
+              if (primaryV6AddressSpec_ != null) {
+                subBuilder = primaryV6AddressSpec_.toBuilder();
+              }
+              primaryV6AddressSpec_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(primaryV6AddressSpec_);
+                primaryV6AddressSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.class, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SUBNET_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList subnetIds_;
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubnetIdsList() {
+      return subnetIds_;
+    }
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public int getSubnetIdsCount() {
+      return subnetIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public java.lang.String getSubnetIds(int index) {
+      return subnetIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of the subnets.
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index) {
+      return subnetIds_.getByteString(index);
+    }
+
+    public static final int PRIMARY_V4_ADDRESS_SPEC_FIELD_NUMBER = 3;
+    private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec primaryV4AddressSpec_;
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    public boolean hasPrimaryV4AddressSpec() {
+      return primaryV4AddressSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV4AddressSpec() {
+      return primaryV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+    }
+    /**
+     * <pre>
+     * Primary IPv4 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
+      return getPrimaryV4AddressSpec();
+    }
+
+    public static final int PRIMARY_V6_ADDRESS_SPEC_FIELD_NUMBER = 4;
+    private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec primaryV6AddressSpec_;
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    public boolean hasPrimaryV6AddressSpec() {
+      return primaryV6AddressSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV6AddressSpec() {
+      return primaryV6AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV6AddressSpec_;
+    }
+    /**
+     * <pre>
+     * Primary IPv6 address that is assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder() {
+      return getPrimaryV6AddressSpec();
+    }
+
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of security groups.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subnetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetIds_.getRaw(i));
+      }
+      if (primaryV4AddressSpec_ != null) {
+        output.writeMessage(3, getPrimaryV4AddressSpec());
+      }
+      if (primaryV6AddressSpec_ != null) {
+        output.writeMessage(4, getPrimaryV6AddressSpec());
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityGroupIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subnetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubnetIdsList().size();
+      }
+      if (primaryV4AddressSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPrimaryV4AddressSpec());
+      }
+      if (primaryV6AddressSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPrimaryV6AddressSpec());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec other = (yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec) obj;
+
+      boolean result = true;
+      result = result && getSubnetIdsList()
+          .equals(other.getSubnetIdsList());
+      result = result && (hasPrimaryV4AddressSpec() == other.hasPrimaryV4AddressSpec());
+      if (hasPrimaryV4AddressSpec()) {
+        result = result && getPrimaryV4AddressSpec()
+            .equals(other.getPrimaryV4AddressSpec());
+      }
+      result = result && (hasPrimaryV6AddressSpec() == other.hasPrimaryV6AddressSpec());
+      if (hasPrimaryV6AddressSpec()) {
+        result = result && getPrimaryV6AddressSpec()
+            .equals(other.getPrimaryV6AddressSpec());
+      }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubnetIdsCount() > 0) {
+        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetIdsList().hashCode();
+      }
+      if (hasPrimaryV4AddressSpec()) {
+        hash = (37 * hash) + PRIMARY_V4_ADDRESS_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryV4AddressSpec().hashCode();
+      }
+      if (hasPrimaryV6AddressSpec()) {
+        hash = (37 * hash) + PRIMARY_V6_ADDRESS_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryV6AddressSpec().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.NetworkInterfaceSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.NetworkInterfaceSpec)
+        yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.class, yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = null;
+        } else {
+          primaryV4AddressSpec_ = null;
+          primaryV4AddressSpecBuilder_ = null;
+        }
+        if (primaryV6AddressSpecBuilder_ == null) {
+          primaryV6AddressSpec_ = null;
+        } else {
+          primaryV6AddressSpec_ = null;
+          primaryV6AddressSpecBuilder_ = null;
+        }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec build() {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec buildPartial() {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec result = new yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.subnetIds_ = subnetIds_;
+        if (primaryV4AddressSpecBuilder_ == null) {
+          result.primaryV4AddressSpec_ = primaryV4AddressSpec_;
+        } else {
+          result.primaryV4AddressSpec_ = primaryV4AddressSpecBuilder_.build();
+        }
+        if (primaryV6AddressSpecBuilder_ == null) {
+          result.primaryV6AddressSpec_ = primaryV6AddressSpec_;
+        } else {
+          result.primaryV6AddressSpec_ = primaryV6AddressSpecBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec other) {
+        if (other == yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.getDefaultInstance()) return this;
+        if (!other.subnetIds_.isEmpty()) {
+          if (subnetIds_.isEmpty()) {
+            subnetIds_ = other.subnetIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSubnetIdsIsMutable();
+            subnetIds_.addAll(other.subnetIds_);
+          }
+          onChanged();
+        }
+        if (other.hasPrimaryV4AddressSpec()) {
+          mergePrimaryV4AddressSpec(other.getPrimaryV4AddressSpec());
+        }
+        if (other.hasPrimaryV6AddressSpec()) {
+          mergePrimaryV6AddressSpec(other.getPrimaryV6AddressSpec());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubnetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubnetIdsList() {
+        return subnetIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public int getSubnetIdsCount() {
+        return subnetIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public java.lang.String getSubnetIds(int index) {
+        return subnetIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdsBytes(int index) {
+        return subnetIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder setSubnetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addSubnetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addAllSubnetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubnetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subnetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder clearSubnetIds() {
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets.
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 2;</code>
+       */
+      public Builder addSubnetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec primaryV4AddressSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder> primaryV4AddressSpecBuilder_;
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public boolean hasPrimaryV4AddressSpec() {
+        return primaryV4AddressSpecBuilder_ != null || primaryV4AddressSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV4AddressSpec() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          return primaryV4AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+        } else {
+          return primaryV4AddressSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public Builder setPrimaryV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          primaryV4AddressSpec_ = value;
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public Builder setPrimaryV4AddressSpec(
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder builderForValue) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public Builder mergePrimaryV4AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          if (primaryV4AddressSpec_ != null) {
+            primaryV4AddressSpec_ =
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.newBuilder(primaryV4AddressSpec_).mergeFrom(value).buildPartial();
+          } else {
+            primaryV4AddressSpec_ = value;
+          }
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public Builder clearPrimaryV4AddressSpec() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = null;
+          onChanged();
+        } else {
+          primaryV4AddressSpec_ = null;
+          primaryV4AddressSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder getPrimaryV4AddressSpecBuilder() {
+        
+        onChanged();
+        return getPrimaryV4AddressSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
+        if (primaryV4AddressSpecBuilder_ != null) {
+          return primaryV4AddressSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return primaryV4AddressSpec_ == null ?
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v4_address_spec = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder> 
+          getPrimaryV4AddressSpecFieldBuilder() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder>(
+                  getPrimaryV4AddressSpec(),
+                  getParentForChildren(),
+                  isClean());
+          primaryV4AddressSpec_ = null;
+        }
+        return primaryV4AddressSpecBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec primaryV6AddressSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder> primaryV6AddressSpecBuilder_;
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public boolean hasPrimaryV6AddressSpec() {
+        return primaryV6AddressSpecBuilder_ != null || primaryV6AddressSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec getPrimaryV6AddressSpec() {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          return primaryV6AddressSpec_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV6AddressSpec_;
+        } else {
+          return primaryV6AddressSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public Builder setPrimaryV6AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          primaryV6AddressSpec_ = value;
+          onChanged();
+        } else {
+          primaryV6AddressSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public Builder setPrimaryV6AddressSpec(
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder builderForValue) {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          primaryV6AddressSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          primaryV6AddressSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public Builder mergePrimaryV6AddressSpec(yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec value) {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          if (primaryV6AddressSpec_ != null) {
+            primaryV6AddressSpec_ =
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.newBuilder(primaryV6AddressSpec_).mergeFrom(value).buildPartial();
+          } else {
+            primaryV6AddressSpec_ = value;
+          }
+          onChanged();
+        } else {
+          primaryV6AddressSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public Builder clearPrimaryV6AddressSpec() {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          primaryV6AddressSpec_ = null;
+          onChanged();
+        } else {
+          primaryV6AddressSpec_ = null;
+          primaryV6AddressSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder getPrimaryV6AddressSpecBuilder() {
+        
+        onChanged();
+        return getPrimaryV6AddressSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder() {
+        if (primaryV6AddressSpecBuilder_ != null) {
+          return primaryV6AddressSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return primaryV6AddressSpec_ == null ?
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.getDefaultInstance() : primaryV6AddressSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv6 address that is assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.NodeAddressSpec primary_v6_address_spec = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder> 
+          getPrimaryV6AddressSpecFieldBuilder() {
+        if (primaryV6AddressSpecBuilder_ == null) {
+          primaryV6AddressSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpec.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.NodeAddressSpecOrBuilder>(
+                  getPrimaryV6AddressSpec(),
+                  getParentForChildren(),
+                  isClean());
+          primaryV6AddressSpec_ = null;
+        }
+        return primaryV6AddressSpecBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of security groups.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 5;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.NetworkInterfaceSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.NetworkInterfaceSpec)
+    private static final yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec();
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NetworkInterfaceSpec>
+        PARSER = new com.google.protobuf.AbstractParser<NetworkInterfaceSpec>() {
+      @java.lang.Override
+      public NetworkInterfaceSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NetworkInterfaceSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NetworkInterfaceSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NetworkInterfaceSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14030,6 +15992,11 @@ public final class NodeOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_NodeAddressSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14094,33 +16061,40 @@ public final class NodeOuterClass {
       "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
       "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
       "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\301\003\n\014NodeTemplate\022\023\n\013platform_i" +
+      "dle\030\002 \001(\t\"\221\004\n\014NodeTemplate\022\023\n\013platform_i" +
       "d\030\001 \001(\t\022:\n\016resources_spec\030\002 \001(\0132\".yandex" +
       ".cloud.k8s.v1.ResourcesSpec\0225\n\016boot_disk" +
       "_spec\030\003 \001(\0132\035.yandex.cloud.k8s.v1.DiskSp" +
       "ec\022w\n\010metadata\030\004 \003(\0132/.yandex.cloud.k8s." +
       "v1.NodeTemplate.MetadataEntryB4\202\3101\004<=64\212" +
       "\3101\010<=131072\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022=\n\017v4_address_spec\030\005 \001(\0132$.yandex.cl" +
-      "oud.k8s.v1.NodeAddressSpec\022@\n\021scheduling" +
-      "_policy\030\006 \001(\0132%.yandex.cloud.k8s.v1.Sche" +
-      "dulingPolicy\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"T\n\017NodeAddressSpec" +
-      "\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex.c" +
-      "loud.k8s.v1.OneToOneNatSpec\"E\n\017OneToOneN" +
-      "atSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.clou" +
-      "d.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n\006m" +
-      "emory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\3071" +
-      "\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100\022\025" +
-      "\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010DiskSpec\0222\n\014dis" +
-      "k_type_id\030\001 \001(\tB\034\362\3071\030|network-ssd|networ" +
-      "k-hdd\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-43980465" +
-      "11104\"\'\n\020SchedulingPolicy\022\023\n\013preemptible" +
-      "\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPEC" +
-      "IFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cl" +
-      "oud.api.k8s.v1Z;github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/k8s/v1;k8sb\006pro" +
-      "to3"
+      "z]*\022A\n\017v4_address_spec\030\005 \001(\0132$.yandex.cl" +
+      "oud.k8s.v1.NodeAddressSpecB\002\030\001\022@\n\021schedu" +
+      "ling_policy\030\006 \001(\0132%.yandex.cloud.k8s.v1." +
+      "SchedulingPolicy\022J\n\027network_interface_sp" +
+      "ecs\030\007 \003(\0132).yandex.cloud.k8s.v1.NetworkI" +
+      "nterfaceSpec\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\324\001\n\024NetworkInterfa" +
+      "ceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027primary_v4" +
+      "_address_spec\030\003 \001(\0132$.yandex.cloud.k8s.v" +
+      "1.NodeAddressSpec\022E\n\027primary_v6_address_" +
+      "spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.NodeAdd" +
+      "ressSpec\022\032\n\022security_group_ids\030\005 \003(\t\"T\n\017" +
+      "NodeAddressSpec\022A\n\023one_to_one_nat_spec\030\001" +
+      " \001(\0132$.yandex.cloud.k8s.v1.OneToOneNatSp" +
+      "ec\"E\n\017OneToOneNatSpec\0222\n\nip_version\030\001 \001(" +
+      "\0162\036.yandex.cloud.k8s.v1.IpVersion\"y\n\rRes" +
+      "ourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005c" +
+      "ores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fraction\030\003 \001" +
+      "(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010" +
+      "DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\3071\030|net" +
+      "work-ssd|network-hdd\022&\n\tdisk_size\030\002 \001(\003B" +
+      "\023\372\3071\0170-4398046511104\"\'\n\020SchedulingPolicy" +
+      "\022\023\n\013preemptible\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP" +
+      "_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6" +
+      "\020\002BV\n\027yandex.cloud.api.k8s.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14183,39 +16157,45 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", });
+        new java.lang.String[] { "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_k8s_v1_NodeAddressSpec_descriptor =
+    internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor,
+        new java.lang.String[] { "SubnetIds", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
+    internal_static_yandex_cloud_k8s_v1_NodeAddressSpec_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_k8s_v1_NodeAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeAddressSpec_descriptor,
         new java.lang.String[] { "OneToOneNatSpec", });
     internal_static_yandex_cloud_k8s_v1_OneToOneNatSpec_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_k8s_v1_OneToOneNatSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_OneToOneNatSpec_descriptor,
         new java.lang.String[] { "IpVersion", });
     internal_static_yandex_cloud_k8s_v1_ResourcesSpec_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_k8s_v1_ResourcesSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_ResourcesSpec_descriptor,
         new java.lang.String[] { "Memory", "Cores", "CoreFraction", "Gpus", });
     internal_static_yandex_cloud_k8s_v1_DiskSpec_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_k8s_v1_DiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_DiskSpec_descriptor,
         new java.lang.String[] { "DiskTypeId", "DiskSize", });
     internal_static_yandex_cloud_k8s_v1_SchedulingPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_k8s_v1_SchedulingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_SchedulingPolicy_descriptor,

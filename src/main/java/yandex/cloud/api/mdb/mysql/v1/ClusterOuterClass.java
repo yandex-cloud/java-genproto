@@ -4996,7 +4996,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     boolean hasMysqlConfig57();
     /**
@@ -5004,7 +5004,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7 getMysqlConfig57();
     /**
@@ -5012,7 +5012,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7OrBuilder getMysqlConfig57OrBuilder();
 
@@ -5021,7 +5021,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     boolean hasMysqlConfig80();
     /**
@@ -5029,7 +5029,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 getMysqlConfig80();
     /**
@@ -5037,7 +5037,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0OrBuilder getMysqlConfig80OrBuilder();
 
@@ -5349,7 +5349,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public boolean hasMysqlConfig57() {
       return mysqlConfigCase_ == 2;
@@ -5359,7 +5359,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7 getMysqlConfig57() {
       if (mysqlConfigCase_ == 2) {
@@ -5372,7 +5372,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 5.7 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7OrBuilder getMysqlConfig57OrBuilder() {
       if (mysqlConfigCase_ == 2) {
@@ -5387,7 +5387,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     public boolean hasMysqlConfig80() {
       return mysqlConfigCase_ == 6;
@@ -5397,7 +5397,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 getMysqlConfig80() {
       if (mysqlConfigCase_ == 6) {
@@ -5410,7 +5410,7 @@ public final class ClusterOuterClass {
      * Configuration of a MySQL 8.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
      */
     public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0OrBuilder getMysqlConfig80OrBuilder() {
       if (mysqlConfigCase_ == 6) {
@@ -6093,7 +6093,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public boolean hasMysqlConfig57() {
         return mysqlConfigCase_ == 2;
@@ -6103,7 +6103,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7 getMysqlConfig57() {
         if (mysqlConfig57Builder_ == null) {
@@ -6123,7 +6123,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder setMysqlConfig57(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7 value) {
         if (mysqlConfig57Builder_ == null) {
@@ -6143,7 +6143,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder setMysqlConfig57(
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7.Builder builderForValue) {
@@ -6161,7 +6161,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder mergeMysqlConfig57(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7 value) {
         if (mysqlConfig57Builder_ == null) {
@@ -6187,7 +6187,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public Builder clearMysqlConfig57() {
         if (mysqlConfig57Builder_ == null) {
@@ -6210,7 +6210,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7.Builder getMysqlConfig57Builder() {
         return getMysqlConfig57FieldBuilder().getBuilder();
@@ -6220,7 +6220,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7OrBuilder getMysqlConfig57OrBuilder() {
         if ((mysqlConfigCase_ == 2) && (mysqlConfig57Builder_ != null)) {
@@ -6237,7 +6237,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 5.7 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet5_7 mysql_config_5_7 = 2[json_name = "mysqlConfig_5_7"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7, yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfigSet5_7OrBuilder> 
@@ -6265,7 +6265,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public boolean hasMysqlConfig80() {
         return mysqlConfigCase_ == 6;
@@ -6275,7 +6275,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 getMysqlConfig80() {
         if (mysqlConfig80Builder_ == null) {
@@ -6295,7 +6295,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public Builder setMysqlConfig80(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 value) {
         if (mysqlConfig80Builder_ == null) {
@@ -6315,7 +6315,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public Builder setMysqlConfig80(
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0.Builder builderForValue) {
@@ -6333,7 +6333,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public Builder mergeMysqlConfig80(yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0 value) {
         if (mysqlConfig80Builder_ == null) {
@@ -6359,7 +6359,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public Builder clearMysqlConfig80() {
         if (mysqlConfig80Builder_ == null) {
@@ -6382,7 +6382,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0.Builder getMysqlConfig80Builder() {
         return getMysqlConfig80FieldBuilder().getBuilder();
@@ -6392,7 +6392,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       public yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0OrBuilder getMysqlConfig80OrBuilder() {
         if ((mysqlConfigCase_ == 6) && (mysqlConfig80Builder_ != null)) {
@@ -6409,7 +6409,7 @@ public final class ClusterOuterClass {
        * Configuration of a MySQL 8.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6;</code>
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfigSet8_0 mysql_config_8_0 = 6[json_name = "mysqlConfig_8_0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0.Builder, yandex.cloud.api.mdb.mysql.v1.config.Mysql80.MysqlConfigSet8_0OrBuilder> 
@@ -11244,6 +11244,16 @@ public final class ClusterOuterClass {
      * <code>bool data_lens = 1;</code>
      */
     boolean getDataLens();
+
+    /**
+     * <pre>
+     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+     * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     */
+    boolean getWebSql();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Access}
@@ -11259,6 +11269,7 @@ public final class ClusterOuterClass {
     }
     private Access() {
       dataLens_ = false;
+      webSql_ = false;
     }
 
     @java.lang.Override
@@ -11288,6 +11299,11 @@ public final class ClusterOuterClass {
             case 8: {
 
               dataLens_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              webSql_ = input.readBool();
               break;
             }
             default: {
@@ -11335,6 +11351,20 @@ public final class ClusterOuterClass {
       return dataLens_;
     }
 
+    public static final int WEB_SQL_FIELD_NUMBER = 2;
+    private boolean webSql_;
+    /**
+     * <pre>
+     * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+     * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     */
+    public boolean getWebSql() {
+      return webSql_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11352,6 +11382,9 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         output.writeBool(1, dataLens_);
       }
+      if (webSql_ != false) {
+        output.writeBool(2, webSql_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11364,6 +11397,10 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, dataLens_);
+      }
+      if (webSql_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, webSql_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11383,6 +11420,8 @@ public final class ClusterOuterClass {
       boolean result = true;
       result = result && (getDataLens()
           == other.getDataLens());
+      result = result && (getWebSql()
+          == other.getWebSql());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11397,6 +11436,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataLens());
+      hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWebSql());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11532,6 +11574,8 @@ public final class ClusterOuterClass {
         super.clear();
         dataLens_ = false;
 
+        webSql_ = false;
+
         return this;
       }
 
@@ -11559,6 +11603,7 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access buildPartial() {
         yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
+        result.webSql_ = webSql_;
         onBuilt();
         return result;
       }
@@ -11609,6 +11654,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.mdb.mysql.v1.ClusterOuterClass.Access.getDefaultInstance()) return this;
         if (other.getDataLens() != false) {
           setDataLens(other.getDataLens());
+        }
+        if (other.getWebSql() != false) {
+          setWebSql(other.getWebSql());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11673,6 +11721,47 @@ public final class ClusterOuterClass {
       public Builder clearDataLens() {
         
         dataLens_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean webSql_ ;
+      /**
+       * <pre>
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public boolean getWebSql() {
+        return webSql_;
+      }
+      /**
+       * <pre>
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public Builder setWebSql(boolean value) {
+        
+        webSql_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow SQL queries to the cluster databases from the Yandex.Cloud management console.
+       * See [SQL queries in the management console](/docs/managed-mysql/operations/web-sql-query) for more details.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       */
+      public Builder clearWebSql() {
+        
+        webSql_ = false;
         onChanged();
         return this;
       }
@@ -11810,39 +11899,40 @@ public final class ClusterOuterClass {
       "EATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDA" +
       "TING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STA" +
       "RTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013d" +
-      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\363\002\n\rClust" +
-      "erConfig\022\017\n\007version\030\001 \001(\t\022O\n\020mysql_confi" +
+      "escription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\225\003\n\rClust" +
+      "erConfig\022\017\n\007version\030\001 \001(\t\022`\n\020mysql_confi" +
       "g_5_7\030\002 \001(\01323.yandex.cloud.mdb.mysql.v1." +
-      "config.MysqlConfigSet5_7H\000\022O\n\020mysql_conf" +
-      "ig_8_0\030\006 \001(\01323.yandex.cloud.mdb.mysql.v1" +
-      ".config.MysqlConfigSet8_0H\000\0227\n\tresources" +
-      "\030\003 \001(\0132$.yandex.cloud.mdb.mysql.v1.Resou" +
-      "rces\0223\n\023backup_window_start\030\004 \001(\0132\026.goog" +
-      "le.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yand" +
-      "ex.cloud.mdb.mysql.v1.AccessB\016\n\014mysql_co" +
-      "nfig\"\265\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
-      "d\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources\030\004 " +
-      "\001(\0132$.yandex.cloud.mdb.mysql.v1.Resource" +
-      "s\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb.mysql" +
-      ".v1.Host.Role\0226\n\006health\030\006 \001(\0162&.yandex.c" +
-      "loud.mdb.mysql.v1.Host.Health\0224\n\010service" +
-      "s\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1.Serv" +
-      "ice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_" +
-      "ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MA" +
-      "STER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_" +
-      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
-      "ED\020\003\"\327\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex." +
-      "cloud.mdb.mysql.v1.Service.Type\0229\n\006healt" +
-      "h\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.Serv" +
-      "ice.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000" +
-      "\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020" +
-      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022r" +
-      "esource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001" +
-      "(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tda" +
-      "ta_lens\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.my" +
-      "sql.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/mysql/v1;mysqlb\006pro" +
-      "to3"
+      "config.MysqlConfigSet5_7H\000R\017mysqlConfig_" +
+      "5_7\022`\n\020mysql_config_8_0\030\006 \001(\01323.yandex.c" +
+      "loud.mdb.mysql.v1.config.MysqlConfigSet8" +
+      "_0H\000R\017mysqlConfig_8_0\0227\n\tresources\030\003 \001(\013" +
+      "2$.yandex.cloud.mdb.mysql.v1.Resources\0223" +
+      "\n\023backup_window_start\030\004 \001(\0132\026.google.typ" +
+      "e.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.clo" +
+      "ud.mdb.mysql.v1.AccessB\016\n\014mysql_config\"\265" +
+      "\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(" +
+      "\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources\030\004 \001(\0132$." +
+      "yandex.cloud.mdb.mysql.v1.Resources\0222\n\004r" +
+      "ole\030\005 \001(\0162$.yandex.cloud.mdb.mysql.v1.Ho" +
+      "st.Role\0226\n\006health\030\006 \001(\0162&.yandex.cloud.m" +
+      "db.mysql.v1.Host.Health\0224\n\010services\030\007 \003(" +
+      "\0132\".yandex.cloud.mdb.mysql.v1.Service\022\021\n" +
+      "\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001" +
+      "(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001" +
+      "\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOW" +
+      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\327" +
+      "\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud." +
+      "mdb.mysql.v1.Service.Type\0229\n\006health\030\002 \001(" +
+      "\0162).yandex.cloud.mdb.mysql.v1.Service.He" +
+      "alth\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MY" +
+      "SQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005A" +
+      "LIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resourc" +
+      "e_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014" +
+      "disk_type_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_len" +
+      "s\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010Bd\n\035yandex.cloud" +
+      ".api.mdb.mysql.v1ZCgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/mdb/mysql/v1" +
+      ";mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11908,7 +11998,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", });
+        new java.lang.String[] { "DataLens", "WebSql", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.config.Mysql57.getDescriptor();
